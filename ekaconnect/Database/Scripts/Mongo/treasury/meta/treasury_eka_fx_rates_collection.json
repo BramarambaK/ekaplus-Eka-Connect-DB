@@ -1,0 +1,15 @@
+{
+    "_id" : "FX_RATES_COLLECTION",
+    "name" : "FX_RATES_COLLECTION",
+    "label" : "FX_RATES_COLLECTION",
+    "dataType" : "String",
+    "length" : 100,
+    "defaultValue" : "FX Rates",
+    "description" : "FX_RATES_COLLECTION",
+    "editSupportedInUI" : true,
+    "fieldtype" : "textbox",
+    "propertyLevel" : "tenant,app",
+    "type" : "property",
+    "refTypeId" : "allApps",
+    "sys__UUID" : "2e7d84c0-57f5-4f81-8ffd-8d223e9601fe"
+}

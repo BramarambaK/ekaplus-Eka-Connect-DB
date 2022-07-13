@@ -1,0 +1,35 @@
+{
+    "_id" : "treasury_update_eka_format_task",
+    "componentType" : "UserTask",
+    "labelKey" : "treasury_update_eka_format_task",
+    "label" : "treasury_update_eka_format_task",
+    "object" : "608b3583-d387-4cea-8acd-cc97f397cc8e",
+    "objectAction" : "UPDATE",
+    "version" : "V2",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "treasury_update_eka_format_task",
+            "outcomes" : [ 
+                {
+                    "data" : "output.treasury_update_eka_format_task",
+                    "name" : "_TREASURY_DATA_UPDATE_TO_EKA_FORMAT",
+                    "appendMsg" : false
+                },
+				{
+				"data":"output._TREASURY_DATA_UPDATE_TO_EKA_FORMAT",
+				"name":"treasury_update_eka_format_task"
+				}
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "treasury_update_eka_format_task",
+    "sys__UUID" : "406fe0a4-9faa-4ce0-abb6-2e2597292404"
+}

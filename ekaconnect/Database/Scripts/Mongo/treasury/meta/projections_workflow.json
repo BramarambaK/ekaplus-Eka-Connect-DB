@@ -1,0 +1,369 @@
+{
+    "_id" : "projections_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "projections",
+    "label" : "List of Projections",
+    "object" : "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35",
+    "type" : "workflow",
+    "payLoad" : "selected.datefilterforprojections",
+    "processorInfo" : {
+        "processorId" : "ca5e8ea8-b3b1-4b7a-8f62-48c990657918"
+    },
+    "template" : [ 
+        {
+            "deviceType" : "web",
+            "template" : "cargill-web",
+            "config" : {
+                "aside" : ""
+            }
+        }, 
+        {
+            "deviceType" : "mobile",
+            "template" : "cargill-mobile",
+            "config" : {
+                "aside" : ""
+            }
+        }
+    ],
+    "lazyLoading" : false,
+    "rows" : 20,
+    "header" : {
+        "label" : "List of Projections",
+        "style" : {
+            "font-size" : "18px"
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "getInitialData" : true,
+        "showCheckbox" : true,
+        "dropdownDecisions" : true,
+        "preserveSelectedData" : true,
+        "selectionMode" : "multiple",
+        "selectAll" : true,
+        "showCheckbox" : true,
+        "rows" : 20,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : true,
+            "export" : false,
+            "showFilterHeader" : true
+        },
+        "layoutProcessor" : {
+            "processorId" : "4123e2ab-8dc2-4205-bcba-6e7dee535e9b"
+        },
+        "lazyLoading" : false,
+        "theme" : "theme-grid-white"
+    },
+    "fields" : [ 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Projection ID",
+            "key" : "projectionId",
+            "task" : "custom-link",
+            "category" : "link"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Linked Projection Id",
+            "key" : "LinkedProjectionId"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Entity",
+            "key" : "entity"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Bank Name",
+            "key" : "bankName"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Bank Account",
+            "key" : "bankAccount"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Projection Date",
+            "key" : "projectionDate"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Amount",
+            "align" : "right",
+            "key" : "amount"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Currency",
+            "key" : "currency"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Direction",
+            "key" : "Direction"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Classification",
+            "key" : "classification"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "External Ref No",
+            "key" : "externalProjectionId"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Profit Center",
+            "key" : "profileCenter"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Strategy",
+            "key" : "strategy"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Status",
+            "key" : "status"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Source",
+            "key" : "source"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Source Name",
+            "key" : "sourceId"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "key" : "tags"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Updated By",
+            "key" : "updatedBy"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Updated Date",
+            "key" : "updatedDate"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "treasurymodal",
+                    "name" : "addnewprojection"
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "CREATE",
+            "position" : "top",
+            "task" : "addprojection",
+            "outsideOperations" : true
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass1" : "cr-edit-icon-treasury",
+            "position" : "top",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.projections",
+                    "displayType" : "popup",
+                    "popupClass" : "treasurymodal",
+                    "name" : "ediprojection"
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "disabled" : "var arrData = record\r\nvar flag = true;\r\nif((Array.isArray(arrData) && arrData.length ==1 )&& (arrData[0].status == 'ACT')){\r\n flag=true   \r\n      }\r\n\t  else if (Array.isArray(arrData) && arrData.length !=1){\r\n\t\t  flag=false\r\n\t  }else {\r\n\t\tflag=false  \r\n\t  }\r\n\t  flag===false",
+            "label" : "Edit",
+            "task" : "ediprojection"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass1" : "cr-roll-icon-treasury",
+            "position" : "top",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.projections",
+                    "popupClass" : "treasurymodal",
+                    "name" : "rolloverprojection"
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "disabled" : "var arrData = record\r\nvar flag = true;\r\nif((Array.isArray(arrData) && arrData.length ==1 )&& (arrData[0].status == 'ACT')){\r\n flag=true   \r\n      }\r\n\t  else if (Array.isArray(arrData) && arrData.length !=1){\r\n\t\t  flag=false\r\n\t  }else {\r\n\t\tflag=false  \r\n\t  }\r\n\t  flag===false",
+            "label" : "Rollover",
+            "task" : "rolloverprojection"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass1" : "cr-delete-icon-treasury",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.projections",
+                    "popupClass" : "treasurymodal custom-eka-modal",
+                    "name" : "deleteProjection"
+                }
+            ],
+            "disabled" : "var arrData = record\r\nvar flag = false;\r\nif (Array.isArray(arrData)){\r\n\tvar insideFlag = false;\r\n\tfor(let i=0;i < arrData.length;i++) {\r\n\t\tif(arrData[i].status != 'ROL' && arrData[i].status != 'INA' && arrData[i].status != 'MAT') {\r\n\t\t\tinsideFlag=true\r\n\t\t} else {\r\n\t\t\tinsideFlag=false\r\n\t\t\tbreak;\r\n\t\t}\r\n\t}\r\n\tflag=insideFlag\r\n\r\n}\r\n\t  flag===false\r\n\r\n\r\n\r\n",
+            "position" : "top",
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "Mark Inactivate",
+            "task" : "deleteProjection"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass1" : "cr-delete-icon-treasury",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.projections",
+                    "popupClass" : "treasurymodal custom-eka-modal",
+                    "name" : "markActiveProjection"
+                }
+            ],
+            "disabled" : "var arrData = record\r\nvar flag = true;\r\nif((arrData.length > 0 && Array.isArray(arrData) && arrData.length ==1 ) && arrData[0].status != 'ROL' && arrData[0].status != 'ACT' && arrData[0].status != 'MAT' && ((new Date()).setHours(0,0,0,0) <= (new Date(field.projectionDate)).setHours(0,0,0,0) ? false : true)){\r\n flag=true   \r\n      }\r\n\t  else if (arrData.length > 0 && Array.isArray(arrData) && arrData.length !=1 && arrData[0].status != 'ROL' && arrData[0].status != 'ACT' && arrData[0].status != 'MAT'){\r\n\t\t    flag=true\r\n\t\t    var insideFlag = true;\r\n\t\t    for(let i=0;i < arrData.length;i++) {\r\n  \t\t\t\tif(arrData[i].status != 'ROL' && arrData[i].status != 'ACT' && arrData[i].status != 'MAT') {\r\n                    insideFlag=true\r\n  \t\t\t\t} else {\r\n  \t\t\t\t\tinsideFlag=false\r\n  \t\t\t\t\tbreak;\r\n  \t\t\t\t}\r\n\t\t    }\r\n\t\t    if(!insideFlag)\r\n\t\t       flag=false\r\n\t\t    \r\n\t  }else {\r\n\t\tflag=false  \r\n\t  }\r\n\t  flag===false",
+            "position" : "top",
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "Mark Active",
+            "task" : "markActiveProjection"
+        }, 
+        {
+            "btnClass" : "link p-0 treasury-order-first",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "labelExpression" : "return '${datefilterforprojections}'!='' && '${datefilterforprojections}'!='{}' ? ((JSON.parse('${datefilterforprojections.formcheckbox}') || []).join(', ') || 'No Entity') : 'All Entities'",
+            "label" : "All Entities",
+            "position" : "top",
+            "style" : {
+                "pointer-events" : "none",
+                "border-left" : "1px solid  #CCCCCC",
+                "border-top" : "1px solid  #CCCCCC",
+                "border-bottom" : "1px solid  #CCCCCC",
+                "border-top-left-radius" : "3px",
+                "border-bottom-left-radius" : "3px",
+                "padding" : "0 5px",
+                "height" : "35px"
+            },
+            "task" : "text",
+            "outsideOperations" : true
+        }, 
+        {
+            "btnClass" : "link p-0 treasury-order-second",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "labelExpression" : "return '${datefilterforprojections}' && moment('${datefilterforprojections.filterDate}').isValid() && moment('${datefilterforprojections.toDate}').isValid() ? (moment('${datefilterforprojections.filterDate}').format('DD-MMM-YYYY') +' '+'to'+' '+  moment('${datefilterforprojections.toDate}').format('DD-MMM-YYYY')) : moment(new Date()).format('DD-MMM-YYYY') + ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')",
+            "label" : "Unselected",
+            "style" : {
+                "margin-right" : "auto",
+                "pointer-events" : "none",
+                "border-left" : "1px solid  #CCCCCC",
+                "border-top" : "1px solid  #CCCCCC",
+                "border-bottom" : "1px solid  #CCCCCC",
+                "padding" : "0 5px",
+                "height" : "35px"
+            },
+            "position" : "top",
+            "task" : "text",
+            "outsideOperations" : true
+        }, 
+        {
+            "btnClass" : "cr-edi-icon-treasury treasury-order-third",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "globalfilter",
+                    "name" : "datefilterforprojections"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto",
+                "border-right" : "1px solid  #CCCCCC",
+                "border-top" : "1px solid  #CCCCCC",
+                "border-left" : "1px solid  #CCCCCC",
+                "border-bottom" : "1px solid  #CCCCCC",
+                "border-top-right-radius" : "3px",
+                "border-bottom-right-radius" : "3px",
+                "padding" : "0 5px",
+                "height" : "35px",
+                "width" : "30px"
+            },
+            "label" : " ",
+            "position" : "top",
+            "task" : "text",
+            "outsideOperations" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "selection" : "custom-link",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.projections",
+                    "popupClass" : "treasurymodal",
+                    "name" : "viewprojections"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "LIST"
+}

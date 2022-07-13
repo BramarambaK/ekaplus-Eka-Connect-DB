@@ -1,0 +1,15 @@
+{
+    "_id" : "EKA_ERROR_COLLECTION",
+    "name" : "EKA_ERROR_COLLECTION",
+    "label" : "EKA_ERROR_COLLECTION",
+    "dataType" : "String",
+    "length" : 100,
+    "defaultValue" : "Eka_Error_Collection",
+    "description" : "EKA_ERROR_COLLECTION",
+    "editSupportedInUI" : true,
+    "fieldtype" : "textbox",
+    "propertyLevel" : "tenant,app",
+    "type" : "property",
+    "refTypeId" : "allApps",
+    "sys__UUID" : "68230d9c-b4b8-4f7e-8dbe-e2caec0c320e"
+}

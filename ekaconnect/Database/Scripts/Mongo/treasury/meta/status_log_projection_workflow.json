@@ -1,0 +1,78 @@
+{
+    "_id" : "status_log_projection_workflow",
+    "taskId" : "projectionstatuslogs",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-outline-dark custom-btn-liquidity-app-cancel",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "projections"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn-liquidity-app-confirm",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "UPDATE",
+            "task" : "projectionstatuslogs",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Bulk processing of the Projection has been done successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "appendMsg" : true,
+                    "name" : "_ST_BULKPROCESS_PROJECTION"
+                }, 
+                {
+                    "name" : "projectionStatusLog",
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CONFIRM",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "projectionStatusLog"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "UPDATE",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to bulk process the Projections?",
+            "headerMessage" : "Confirmation"
+        }
+    },
+    "object" : "3b99ce3f-d6e4-4308-9602-bc6ffc783e22",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow"
+}

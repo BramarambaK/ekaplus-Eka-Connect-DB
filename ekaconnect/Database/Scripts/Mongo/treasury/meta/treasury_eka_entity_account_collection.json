@@ -1,0 +1,15 @@
+{
+    "_id" : "ENTITY_ACCOUNT_COLLECTION",
+    "name" : "ENTITY_ACCOUNT_COLLECTION",
+    "label" : "ENTITY_ACCOUNT_COLLECTION",
+    "dataType" : "String",
+    "length" : 100,
+    "defaultValue" : "Eka Bank Account",
+    "description" : "ENTITY_ACCOUNT_COLLECTION",
+    "editSupportedInUI" : true,
+    "fieldtype" : "textbox",
+    "propertyLevel" : "tenant,app",
+    "type" : "property",
+    "refTypeId" : "allApps",
+    "sys__UUID" : "376b93b6-3990-4d8e-a506-4946b2207cb0"
+}

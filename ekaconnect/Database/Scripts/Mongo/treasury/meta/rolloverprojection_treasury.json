@@ -1,0 +1,325 @@
+{
+    "_id" : "rolloverprojection_treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "projections",
+                    "clearSelected" : [ 
+                        "selected.rolloverprojection", 
+                        "selected.projections"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "rolloverprojection",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.rolloverprojection",
+                    "name" : "_ST_VALIDATE_ROLLOVER",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.rolloverprojection",
+                    "result" : {
+                        "success" : {
+                            "message" : "Status"
+                        },
+                        "failure" : {
+                            "message" : "Status"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "name" : "rolloverprojectionprocessor",
+                    "clearSelected" : [ 
+                        "selected.rolloverprojection", 
+                        "selected.projections"
+                    ],
+                    "appendMsg" : false
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "name" : "projections"
+                }
+            ],
+            "label" : "SAVE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "projections",
+                    "clearSelected" : [ 
+                        "selected.rolloverprojection", 
+                        "selected.projections"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "class" : "separator",
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "key" : "classification",
+                "type" : "readOnly"
+            }, 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "class" : "separator",
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "key" : "bankName",
+                "type" : "readOnly"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "class" : "separator",
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "key" : "bankAccount",
+                "type" : "readOnly"
+            }, 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "class" : "separator",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "key" : "projectionDate",
+                "type" : "readOnly"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "class" : "separator",
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "key" : "amount",
+                "type" : "readOnly"
+            }, 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "class" : "separator",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "key" : "Direction",
+                "type" : "readOnly"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "class" : "separator",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "key" : "tags",
+                "type" : "readOnly"
+            }, 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "class" : "separator",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formLabelStyle" : {
+                    "width" : "50%",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "27px",
+                    "margin-right" : "0px"
+                },
+                "key" : "entity",
+                "type" : "readOnly"
+            }
+        ], 
+        [ 
+            {
+                "key" : "rolloverType",
+                "autoDisplayFirst" : true,
+                "removeEmptyOption1" : true,
+                "formItemStyle" : {
+                    "margin-right" : "30px",
+                    "margin-top" : "20px",
+                    "width" : "180px"
+                }
+            }, 
+            {
+                "key" : "rolloverAmount",
+                "formItemStyle" : {
+                    "margin-right" : "0px",
+                    "margin-bottom" : "20px",
+                    "margin-top" : "20px",
+                    "width" : "115px"
+                }
+            }, 
+            {
+                "key" : "currency",
+                "disabled" : true,
+                "formItemStyle" : {
+                    "margin-right" : "30px",
+                    "margin-bottom" : "20px",
+                    "margin-top" : "20px",
+                    "width" : "65px"
+                }
+            }, 
+            {
+                "key" : "rolloverDate",
+                "class": "treasury-date",
+                "formItemStyle" : {
+                    "margin-right" : "0px",
+                    "margin-bottom" : "20px",
+                    "margin-top" : "20px",
+                    "width" : "180px"
+                }
+            }, 
+            {
+                "key" : "projectionId",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }
+        ]
+    ],
+    "label" : "Rollover: ${projections[0].projectionId}",
+    "processorInfo" : {
+        "processorId" : "9fca9f4a-31a1-43df-b1a7-03f052c2063e"
+    },
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "type" : "row"
+    },
+    "object" : "3faf590c-d172-42e7-82ff-3c63863c1f98",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "rolloverprojection",
+    "type" : "workflow"
+}

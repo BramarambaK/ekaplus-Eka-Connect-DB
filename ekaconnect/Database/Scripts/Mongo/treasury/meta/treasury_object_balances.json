@@ -1,0 +1,122 @@
+{
+    "_id" : "treasury_object_balances",
+    "name" : "treasury_object_balances",
+    "label" : "Treasury Object Balances",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : ["Account Number"],
+    "fields" : {
+        "Source" : {
+            "Source" : "Source",
+            "labelKey" : "Source",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "Source ID" : {
+            "Source ID" : "Source ID",
+            "labelKey" : "Source ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Statement Format" : {
+            "Statement Format" : "Statement Format",
+            "labelKey" : "Statement Format",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "File Date & Time Stamp" : {
+            "File Date & Time Stamp" : "File Date & Time Stamp",
+            "labelKey" : "File Date & Time Stamp",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+		"Bank ID":{
+            "Bank ID" : "Bank ID",
+            "labelKey" : "Bank ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+		"Currency Code":{
+            "Currency Code" : "Currency Code",
+            "labelKey" : "Currency Code",
+            "type" : "true",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+		"Account Number":{
+            "Account Number" : "Account Number",
+            "labelKey" : "Account Number",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+		"Opening Ledger Balance":{
+            "Opening Ledger Balance" : "Opening Ledger Balance",
+            "labelKey" : "Opening Ledger Balance",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+		"Closing Ledger Balance":{
+            "Closing Ledger Balance" : "Closing Ledger Balance",
+            "labelKey" : "Closing Ledger Balance",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+		"Opening Available Balance":{
+            "Opening Available Balance" : "Opening Available Balance",
+            "labelKey" : "Opening Available Balance",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Closing Available Balance" : {
+            "Closing Available Balance" : "Closing Available Balance",
+            "labelKey" : "Closing Available Balance",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Total Credits" : {
+            "Total Credits" : "Total Credits",
+            "labelKey" : "Total Credits",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Total Debits" : {
+            "Total Debits" : "Total Debits",
+            "labelKey" : "Total Debits",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        }
+
+
+
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "0d7bc6cb-b976-4522-8c26-234df4b4d1c6"
+}	

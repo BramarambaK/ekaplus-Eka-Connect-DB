@@ -1,0 +1,10 @@
+{
+    "_id" : "_TREASURY_UPDATE_ITEM_DETAILS",
+    "componentType" : "SystemTask",
+    "object" : "58a41093-cee2-4a4a-9ed6-9b9d1b76cf4d",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "_TREASURY_UPDATE_ITEM_DETAILS",
+    "type" : "workflow"
+}

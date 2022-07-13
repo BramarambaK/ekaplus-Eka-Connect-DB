@@ -1,0 +1,64 @@
+{
+    "_id" : "summaryofcash_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "label" : "Transaction",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "summary-tile",
+        "getInitialData" : false,
+        "theme" : "treasury"
+    },
+    "decisions" : [],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "totalTransaction",
+                "aggregateFunction" : "value",
+                "numberformatwithcomma" : 2,
+                "suffix" : "'${currencyCode}'",
+                "label" : "return 'Total Transactions Value'"
+            }, 
+            {
+                "key" : "matched",
+                "aggregateFunction" : "value",
+                "suffix" : "'${currencyCode}'",
+                "numberformatwithcomma" : 2,
+                "label" : "return 'Matched Transactions Value'"
+            }, 
+            {
+                "key" : "unmatched",
+                "aggregateFunction" : "value",
+                "suffix" : "'${currencyCode}'",
+                "numberformatwithcomma" : 2,
+                "label" : "return 'Unmatched Transactions Value'"
+            }, 
+            {
+                "key" : "totalProjection",
+                "label" : "return 'Total Projections Value'",
+                "numberformatwithcomma" : 2,
+                "suffix" : "'${currencyCode}'",
+                "aggregateFunction" : "value"
+            }, 
+            {
+                "key" : "rollOverTRN",
+                "aggregateFunction" : "value",
+                "suffix" : "'${currencyCode}'",
+                "numberformatwithcomma" : 2,
+                "label" : "return 'Rollover Projections Value'"
+            }, 
+            {
+                "key" : "unmatchedprojectionsvalue",
+                "aggregateFunction" : "value",
+                "suffix" : "'${currencyCode}'",
+                "numberformatwithcomma" : 2,
+                "label" : "return 'Unmatched Projections Value'"
+            }
+        ]
+    ],
+    "labelKey" : "Cash Summary",
+    "taskId" : "summaryofcash",
+    "object" : "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35"
+}

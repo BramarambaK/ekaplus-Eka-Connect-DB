@@ -1,0 +1,76 @@
+{
+  "_id": "treasury_summary_tiles",
+  "name": "treasury_summary_tiles",
+  "label": "Treasury Summary Tiles",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["Entity"],
+  "fields": {
+    "ngrFilter": {
+      "ngrFilter": "Filter",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey"
+    },
+    "Entity": {
+      "Entity": "Entity",
+      "labelKey": "Entity",
+      "type": "textbox",
+      "dataType": "String",
+      "length": "50"
+    },
+    "Currency Code": {
+      "Currency Code": "Currency Code",
+      "labelKey": "Currency Code",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "TotalTransactionValue": {
+      "TotalTransactionValue": "TotalTransactionValue",
+      "labelKey": "TotalTransactionValue",
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "TotalProjectionValue": {
+      "TotalProjectionValue": "TotalProjectionValue",
+      "labelKey": "TotalProjectionValue",
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "MacthedValue": {
+      "MacthedValue": "MacthedValue",
+      "labelKey": "MacthedValue",
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "RollOverTransactionValue": {
+      "RollOverTransactionValue": "RollOverTransactionValue",
+      "labelKey": "RollOverTransactionValue",
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "Date":{
+      "Date": "Date",
+      "labelKey": "Date",
+      "type": "textbox",
+      "dateType": "Date"
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "58a41093-cee2-4a4a-9ed6-9b9d1b76cf4d"
+}

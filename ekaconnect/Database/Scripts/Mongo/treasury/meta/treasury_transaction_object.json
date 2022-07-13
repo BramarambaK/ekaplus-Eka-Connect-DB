@@ -1,0 +1,133 @@
+{
+    "_id" : "treasury_object_transactions",
+    "name" : "treasury_object_transactions",
+    "label" : "Treasury Object Transactions",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : ["Transaction Ref No"],
+    "fields" : {
+        "Source" : {
+            "Source" : "Source",
+            "labelKey" : "Source",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "Source ID" : {
+            "Source ID" : "Source ID",
+            "labelKey" : "Source ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Statement Format" : {
+            "Statement Format" : "Statement Format",
+            "labelKey" : "Statement Format",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Entry Date" : {
+            "Entry Date" : "Entry Date",
+            "labelKey" : "Entry Date",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+        "Bank ID" : {
+            "Bank ID" : "Bank ID",
+            "labelKey" : "Bank ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Currency Code" : {
+            "Currency Code" : "Currency Code",
+            "labelKey" : "Currency Code",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Account Number" : {
+            "Account Number" : "Account Number",
+            "labelKey" : "Account Number",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Transaction Type" : {
+            "Transaction Type" : "Transaction Type",
+            "labelKey" : "Transaction Type",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Transaction Amount" : {
+            "Transaction Amount" : "Transaction Amount",
+            "labelKey" : "Transaction Amount",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Value Date" : {
+            "Value Date" : "Value Date",
+            "labelKey" : "Value Date",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+        "Transaction Ref No" : {
+            "Transaction Ref No" : "Transaction Ref No",
+            "labelKey" : "Transaction Ref No",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Customer Ref No" : {
+            "Customer Ref No." : "Customer Ref No.",
+            "labelKey" : "Customer Ref No.",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Comments" : {
+            "Comments" : "Comments",
+            "labelKey" : "Comments",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Direction" : {
+            "Direction" : "Direction",
+            "labelKey" : "Direction",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Status" : {
+            "Status" : "Status",
+            "labelKey" : "Status",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "8610bde2-3cf8-4309-88b6-184037dec0f8"
+}

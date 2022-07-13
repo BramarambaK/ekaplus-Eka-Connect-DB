@@ -1,0 +1,15 @@
+{
+    "_id" : "EKA_FORMAT_COLLECTION",
+    "name" : "EKA_FORMAT_COLLECTION",
+    "label" : "EKA_FORMAT_COLLECTION",
+    "dataType" : "String",
+    "length" : 100,
+    "defaultValue" : "EKA_FORMAT_COLLECTION",
+    "description" : "EKA_FORMAT_COLLECTION",
+    "editSupportedInUI" : true,
+    "fieldtype" : "textbox",
+    "propertyLevel" : "tenant,app",
+    "type" : "property",
+    "refTypeId" : "allApps",
+    "sys__UUID" : "4d2e33d1-0c82-4d91-9402-85508b66ba3e"
+}

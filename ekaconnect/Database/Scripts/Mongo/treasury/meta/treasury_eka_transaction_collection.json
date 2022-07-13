@@ -1,0 +1,15 @@
+{
+    "_id" : "EKA_TRANSACTION_COLLECTION",
+    "name" : "EKA_TRANSACTION_COLLECTION",
+    "label" : "EKA_TRANSACTION_COLLECTION",
+    "dataType" : "String",
+    "length" : 100,
+    "defaultValue" : "EKA_TRANSACTION_COLLECTION",
+    "description" : "EKA_TRANSACTION_COLLECTION",
+    "editSupportedInUI" : true,
+    "fieldtype" : "textbox",
+    "propertyLevel" : "tenant,app",
+    "type" : "property",
+    "refTypeId" : "allApps",
+    "sys__UUID" : "16fa67b2-fa33-4303-a1f1-81d596f30d96"
+}

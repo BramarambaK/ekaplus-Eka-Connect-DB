@@ -1,0 +1,22 @@
+{
+    "_id" : "transactionoption_type_treasury",
+    "type" : "property",
+    "name" : "transactionoption",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Transaction Type",
+    "defaultValue" : [ 
+	    {
+            "key" : "Un-Matched",
+            "value" : "Un-Matched"
+        },
+        {
+            "key" : "Matched",
+            "value" : "Matched"
+        } 
+    ],
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "description" : "Values available for Transaction Type"
+}

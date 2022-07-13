@@ -1,0 +1,35 @@
+{
+    "_id" : "treasury_transactions_update_task_workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "treasury_transactions_update_task_workflow",
+    "label" : "treasury_transactions_update_task_workflow",
+    "object" : "8610bde2-3cf8-4309-88b6-184037dec0f8",
+    "objectAction" : "UPDATE",
+    "version" : "V2",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "treasury_transactions_update_task_workflow",
+            "outcomes" : [ 
+                {
+                    "data" : "output.treasury_transactions_update_task_workflow",
+                    "name" : "_TREASURY_DATA_UPDATE_TO_TRANSACTIONS",
+                    "appendMsg" : false
+                },
+				{
+				"data":"output._TREASURY_DATA_UPDATE_TO_TRANSACTIONS",
+				"name":"treasury_transactions_update_task_workflow"
+				}
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "treasury_transactions_update_task_workflow",
+    "sys__UUID" : "0bbcb186-07ea-455d-a86a-13bf8906487e"
+}

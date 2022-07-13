@@ -1,0 +1,45 @@
+{
+    "_id" : "treasury_summary_details_update",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "itemDetails_update",
+            "outcomes" : [ 
+                {
+                    "data" : "output.treasury_summary_details_update",
+                    "name" : "_TREASURY_UPDATE_ITEM_DETAILS",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Summary Object is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Error while saving the Object to Connect"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Summary Object is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._TREASURY_UPDATE_ITEM_DETAILS",
+                    "name" : "treasury_summary_details_update"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "treasury_summary_details_update",
+    "labelKey" : "treasury_summary_details_update",
+    "layout" : {},
+    "object" : "58a41093-cee2-4a4a-9ed6-9b9d1b76cf4d",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "treasury_summary_details_update",
+    "type" : "workflow",
+    "sys__UUID":"22f01cfe-fa59-47fd-9771-60ea612bbd7d"
+}

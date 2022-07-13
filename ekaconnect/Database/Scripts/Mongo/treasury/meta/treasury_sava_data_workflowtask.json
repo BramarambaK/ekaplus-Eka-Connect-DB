@@ -1,0 +1,11 @@
+{
+    "_id" : "treasury_sava_data_workflowtask",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_TREASURY_DATA_SAVE_TO_EKA_FORMAT",
+    "object" : "608b3583-d387-4cea-8acd-cc97f397cc8e",
+    "sys__UUID" : "64030636-2909-46b0-b666-67b7e208c4d2"
+}

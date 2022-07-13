@@ -1,0 +1,11 @@
+{
+    "_id" : "treasury_balances_sava_data_workflowtask",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_TREASURY_DATA_SAVE_TO_BALANCES",
+    "object" : "0d7bc6cb-b976-4522-8c26-234df4b4d1c6",
+    "sys__UUID" : "0312a361-350a-439d-a14f-7af64843e350"
+}

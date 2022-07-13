@@ -1,0 +1,15 @@
+{
+    "_id" : "ENTITY_COLLECTION",
+    "name" : "ENTITY_COLLECTION",
+    "label" : "ENTITY_COLLECTION",
+    "dataType" : "String",
+    "length" : 40,
+    "defaultValue" : "Eka Entity",
+    "description" : "Eka Entity",
+    "editSupportedInUI" : true,
+    "fieldtype" : "textbox",
+    "propertyLevel" : "tenant,app",
+    "type" : "property",
+    "refTypeId" : "allApps",
+    "sys__UUID" : "0b8f1c48-06b6-4b41-bed8-33f85d17b6a2"
+}

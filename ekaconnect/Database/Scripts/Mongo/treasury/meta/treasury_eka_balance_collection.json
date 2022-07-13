@@ -1,0 +1,15 @@
+{
+    "_id" : "EKA_BALANCES_COLLECTION",
+    "name" : "EKA_BALANCES_COLLECTION",
+    "label" : "EKA_BALANCES_COLLECTION",
+    "dataType" : "String",
+    "length" : 100,
+    "defaultValue" : "EKA_BALANCES_COLLECTION",
+    "description" : "EKA_BALANCES_COLLECTION",
+    "editSupportedInUI" : true,
+    "fieldtype" : "textbox",
+    "propertyLevel" : "tenant,app",
+    "type" : "property",
+    "refTypeId" : "allApps",
+    "sys__UUID" : "ec6aade7-9497-4b62-8b3b-c5c4abce2b65"
+}

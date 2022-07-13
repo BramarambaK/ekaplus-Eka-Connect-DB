@@ -1,0 +1,31 @@
+{
+    "_id" : "treasury_projections_save_task",
+    "componentType" : "UserTask",
+    "labelKey" : "save_treasury_projections_format",
+    "label" : "save_treasury_projections_format",
+    "object" : "5eaaa310-e939-46f0-8992-b02062343719",
+    "objectAction" : "UPDATE",
+    "version" : "V2",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "treasury_projections_save_task",
+            "outcomes" : [ 
+                {
+                    "data" : "output.treasury_projections_save_task",
+                    "name" : "_TREASURY_DATA_SAVE_TO_PROJECTIONS",
+                    "appendMsg" : false
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "treasury_projections_save_task",
+    "sys__UUID" : "e13e8b30-af14-4573-93ab-b1ac19053d4b"
+}

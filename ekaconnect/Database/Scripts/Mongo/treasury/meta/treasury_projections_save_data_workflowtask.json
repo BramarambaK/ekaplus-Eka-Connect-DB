@@ -1,0 +1,11 @@
+{
+    "_id" : "treasury_projections_sava_data_workflowtask",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_TREASURY_DATA_SAVE_TO_PROJECTIONS",
+    "object" : "5eaaa310-e939-46f0-8992-b02062343719",
+    "sys__UUID" : "4a0debe7-3b09-4726-a834-90e24958805f"
+}

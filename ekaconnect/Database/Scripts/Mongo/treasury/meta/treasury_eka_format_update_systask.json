@@ -1,0 +1,11 @@
+{
+    "_id" : "_TREASURY_DATA_UPDATE_TO_EKA_FORMAT",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_TREASURY_DATA_UPDATE_TO_EKA_FORMAT",
+    "object" : "608b3583-d387-4cea-8acd-cc97f397cc8e",
+    "sys__UUID" : "021e4b0e-9a00-4a7e-bac6-4046d35d1642"
+}

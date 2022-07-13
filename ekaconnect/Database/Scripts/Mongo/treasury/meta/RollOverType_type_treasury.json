@@ -1,0 +1,22 @@
+{
+    "_id" : "RollOverType_type_treasury",
+    "type" : "property",
+    "name" : "rolloverType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "rolloverType",
+    "defaultValue" : [ 
+        {
+            "key" : "Full",
+            "value" : "Full"
+        }, 
+        {
+            "key" : "Partial",
+            "value" : "Partial"
+        }
+    ],
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "description" : "Values available for rolloverType"
+}

@@ -1,0 +1,19 @@
+{
+    "_id" : "triggertreasuryswift",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "608b3583-d387-4cea-8acd-cc97f397cc8e",
+    "objectAction" : "CREATE",
+    "taskId" : "triggertreasuryswift",
+    "refType" : "app",
+    "tags" : "listener,Swift_Transactions",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "chainedTasks" : [
+        {
+            "name" : "_SWIFT_EXT_CALL_TREASURY_API",
+            "data" : "output.triggertreasuryswift"
+        }
+    ],
+	"sys_UUID":"44177536-22a7-401b-ad95-e3a50485f391"
+}

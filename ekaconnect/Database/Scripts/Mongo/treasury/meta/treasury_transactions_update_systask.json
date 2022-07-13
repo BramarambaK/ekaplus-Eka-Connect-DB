@@ -1,0 +1,11 @@
+{
+    "_id" : "_TREASURY_DATA_UPDATE_TO_TRANSACTIONS",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_TREASURY_DATA_UPDATE_TO_TRANSACTIONS",
+    "object" : "8610bde2-3cf8-4309-88b6-184037dec0f8",
+    "sys__UUID" : "804b85ca-0049-4aba-a6dc-501a0d59ed4d"
+}

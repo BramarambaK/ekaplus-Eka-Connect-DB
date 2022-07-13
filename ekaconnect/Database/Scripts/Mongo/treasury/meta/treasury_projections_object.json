@@ -1,0 +1,168 @@
+{
+    "_id" : "treasury_projections_object",
+    "name" : "treasury_projections_object",
+    "label" : "Treasury Projections Object",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [],
+    "fields" : {
+        "Source" : {
+            "Source" : "Source",
+            "labelKey" : "Source",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "Source ID" : {
+            "Source ID" : "Source ID",
+            "labelKey" : "Source ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "External Ref No" : {
+            "External Ref No" : "External Ref No",
+            "labelKey" : "External Ref No",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Created Date": {
+            "Created Date": "Created Date",
+            "labelKey" : "Created Date",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+        "Projection Date" : {
+            "Projection Date" : "Projection Date",
+            "labelKey" : "Projection Date",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+        "Bank ID" : {
+            "Bank ID" : "Bank ID",
+            "labelKey" : "Bank ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Currency Code" : {
+            "Currency Code" : "Currency Code",
+            "labelKey" : "Currency Code",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Account Number" : {
+            "Account Number" : "Account Number",
+            "labelKey" : "Account Number",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Amount" : {
+            "Amount" : "Amount",
+            "labelKey" : "Amount",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Comments" : {
+            "Comments" : "Comments",
+            "labelKey" : "Comments",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Status" : {
+            "Status" : "Status",
+            "labelKey" : "Status",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Direction" : {
+            "Direction" : "Direction",
+            "labelKey" : "Direction",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Projection ID" : {
+            "Projection ID" : "Projection ID",
+            "labelKey" : "Projection ID",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Classification" : {
+            "Classification" : "Classification",
+            "labelKey" : "Classification",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "GL Code" : {
+            "GL Code" : "GL Code",
+            "labelKey" : "GL Code",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "User" : {
+            "User" : "User",
+            "labelKey" : "User",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Linked Projection ID" : {
+            "Linked Projection ID" : "Linked Projection ID",
+            "labelKey" : "Linked Projection ID",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Rolled Over Amount" : {
+            "Rolled Over Amount" : "Rolled Over Amount",
+            "labelKey" : "Rolled Over Amount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Rolled Over from Date" : {
+            "Rolled Over from Date" : "Rolled Over from Date",
+            "labelKey" : "Rolled Over from Date",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Date"
+        },
+        "Rollover Type" : {
+            "Rollover Type" : "Rollover Type",
+            "labelKey" : "Rollover Type",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "5eaaa310-e939-46f0-8992-b02062343719"
+}

@@ -1,0 +1,31 @@
+{
+    "_id" : "treasury_balances_save_task",
+    "componentType" : "UserTask",
+    "labelKey" : "save_treasury_balances_format",
+    "label" : "save_treasury_balances_format",
+     "object" : "0d7bc6cb-b976-4522-8c26-234df4b4d1c6",
+    "objectAction" : "UPDATE",
+    "version" : "V2",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "treasury_balances_save_task",
+            "outcomes" : [ 
+                {
+                    "data" : "output.treasury_balances_save_task",
+                    "name" : "_TREASURY_DATA_SAVE_TO_BALANCES",
+                    "appendMsg" : false
+                }
+                
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+   "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "treasury_balances_save_task"
+}

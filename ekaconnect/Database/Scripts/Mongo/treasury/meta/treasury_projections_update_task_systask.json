@@ -1,0 +1,14 @@
+{
+    "_id" : "_TREASURY_DATA_UPDATE_TO_PROJECTIONS",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_TREASURY_DATA_UPDATE_TO_PROJECTIONS",
+    "object" : "5eaaa310-e939-46f0-8992-b02062343719",
+    "sys__UUID" : "796afb6a-4ecd-4506-b7da-7a5797ca9d2b"
+}
+
+
+

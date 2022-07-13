@@ -1,0 +1,171 @@
+{
+    "_id" : "view_bank_transaction_workflow",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "listingtransactions",
+                    "clearSelected" : [ 
+                        "selected.viewtransactions"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "entity",
+				"type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "accountNumber",
+				"type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }
+        ], 
+        [ 
+            {
+                "key" : "transactionRefNo",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "valueDate",
+				"type" : "textbox",
+                "class" : "treasury-date",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "transactionAmount",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "0px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                },
+                "isRequired" : true,
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "currencyCode",
+				"type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                },
+                "isRequired" : false
+            }
+        ], 
+        [ 
+            {
+                "key" : "direction",
+				"type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "classification",
+				"type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "comments",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "bankID",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "currencyhidden",
+                "type" : "textbox",
+                "event" : "if(value){data.currencyCode =  {value:value,disable:true}} else {data.currencyCode =  {value:data.c7,disable:true}}",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "transactionRefNo",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "status",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }
+        ]
+    ],
+    "label" : "${transactionRefNo}",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "178px",
+            "margin-right" : "24px",
+            "margin-bottom" : "6px"
+        },
+        "processorInfo" : {
+            "processorId" : "e5b22971-e0e1-4907-8116-6eb73a3e9eff"
+        },
+        "name" : "create",
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "1064d9f3-395a-46d3-967b-8c2bcec15363",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "viewtransactions",
+    "type" : "workflow"
+}

@@ -1,0 +1,16 @@
+{
+    "_id" : "treasury_app_error_en_US",
+    "title" : "Cash Management App Level Error",
+    "name" : "treasury",
+    "tenantID" : "",
+    "type" : "error",
+    "locale" : "en",
+    "T-131" : "Please fill the Rollover Projection Amount less than the Projection Amount",
+    "T-132" : "Please fill the Rollover Projection Amount",
+    "T-133" : "Please fill the Rollover Amount",
+    "T-100" : "Please enter the %s (mandatory)",
+    "T-101" : "Please fill the positive Amount",
+    "004" : "Please select the %s (mandatory)",    
+    "022" : "Please enter values for all the mandatory fields",
+    "018" : "Invalid %s"
+}

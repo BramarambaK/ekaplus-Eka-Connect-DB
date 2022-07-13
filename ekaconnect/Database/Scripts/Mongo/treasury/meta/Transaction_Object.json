@@ -1,0 +1,292 @@
+{
+  "_id": "Transaction_Object",
+  "name": "transaction",
+  "label": "transaction Data",
+  "type": "object",
+  "version": "3",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "totalTransaction": {
+      "totalTransaction": "Total Transaction Value ",
+      "labelKey": "totalTransaction",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "filterDate": {
+      "labelKey": "filterDate",
+      "filterDate": "Date Range",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "maximumDate": " if('${toDate}') {return '${toDate}'} else{return new Date(8640000000000000)} ",
+      "yearNavigator": true,
+      "class": "treasury-date",
+      "monthNavigator": true,
+      "yearRange": "2000:2030",
+      "showButtonBar": true,
+      "readonlyInput": true
+    },
+    "toDate": {
+      "labelKey": "toDate",
+      "toDate": " ",
+      "isRequired": false,
+      "readonlyInput": true,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "class": "treasury-date",
+      "dataType": "date",
+      "minimumDate": " if('${filterDate}')  {return '${filterDate}'}  else{return true}",
+      "yearNavigator": true,
+      "monthNavigator": true,
+      "yearRange": "2000:2030",
+      "showButtonBar": true
+    },
+    "projectionDate": {
+      "labelKey": "projectionDate",
+      "projectionDate": " ",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date"
+    },
+    "totalProjection": {
+      "labelKey": "totalProjection",
+      "totalProjection": "Total Projection Value",
+      "isRequired": false,
+      "type": "String"
+    },
+    "entity": {
+      "labelKey": "entity",
+      "entity": "Entity",
+      "isRequired": false,
+      "type": "String"
+    },
+    "tags": {
+      "labelKey": "tags",
+      "tags": "Remarks",
+      "isRequired": false,
+      "type": "String"
+    },
+    "matched": {
+      "labelKey": "matched",
+      "matched": "Matched Value",
+      "isRequired": false,
+      "type": "String"
+    },
+    "unmatchedprojectionsvalue": {
+      "labelKey": "unmatchedprojectionsvalue",
+      "unmatchedprojectionsvalue": "Unmatched Projections Value",
+      "isRequired": false,
+      "type": "String"
+    },
+    "rollOverTRN": {
+      "labelKey": "rollOverTRN",
+      "rollOverTRN": "Rollover TRN Value",
+      "isRequired": false,
+      "type": "String"
+    },
+    "unmatched": {
+      "labelKey": "unmatched",
+      "unmatched": "Total Unmatched Transaction Value",
+      "isRequired": false,
+      "type": "String"
+    },
+    "bankName": {
+      "labelKey": "bankName",
+      "bankName": "Bank Name",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "bankAccount": {
+      "labelKey": "bankAccount",
+      "bankAccount": "Bank Account",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "transactionId": {
+      "labelKey": "transactionId",
+      "transactionId": "Transaction ID",
+      "isRequired": false,
+      "type": "multiselect",
+      "serviceKey": "transactions"
+    },
+    "classification": {
+      "labelKey": "classification",
+      "classification": "Classiﬁcation",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "currency": {
+      "labelKey": "currency",
+      "currency": "Currency",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Direction": {
+      "labelKey": "Direction",
+      "Direction": "Direction",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "amount": {
+      "labelKey": "amount",
+      "amount": "Amount",
+      "isRequired": false,
+      "type": "textbox",
+      "UIupdates": {
+        "listValue": "return Number('${amount}').toLocaleString('en-US', {maximumFractionDigits:2})"
+      },
+      "dataType": "dataType"
+    },
+    "projectionId": {
+      "projectionId": "Projection ID",
+      "labelKey": "projectionId",
+      "type": "String",
+      "isRequired": false
+    },
+    "matchingType": {
+      "matchingType": "Matching Type",
+      "labelKey": "matchingType",
+      "type": "String",
+      "isRequired": false
+    },
+    "variance": {
+      "variance": "Variance",
+      "labelKey": "variance",
+      "type": "String",
+      "isRequired": false,
+      "UIupdates": {
+        "listValue": "return Number('${variance}').toLocaleString('en-US', {maximumFractionDigits:2})"
+      }
+    },
+    "transactionStatus": {
+      "transactionStatus": " ",
+      "labelKey": "transactionStatus",
+      "type": "dropdown",
+      "serviceKey": "transactions",
+      "isRequired": false
+    },
+    "ngrFilter": {
+      "ngrFilter": " ",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": false
+    },
+    "ProjectionList": {
+      "ProjectionList": " ",
+      "labelKey": "ProjectionList",
+      "type": "textbox",
+      "propertyKey": "transactionoption",
+      "isRequired": false
+    },
+    "tabsView": {
+      "tabsView": " ",
+      "labelKey": "tabsView",
+      "type": "textbox",
+      "propertyKey": "transactionoption",
+      "isRequired": false
+    },
+    "add": {
+      "add": "Add",
+      "labelKey": "add",
+      "type": "button",
+      "isRequired": false
+    },
+    "mappingType": {
+      "mappingType": "",
+      "labelKey": "mappingType",
+      "type": "dropdown",
+      "propertyKey": "mappingType",
+      "isRequired": false
+    },
+    "matchingId": {
+      "matchingId": "Matching ID",
+      "labelKey": "matchingId",
+      "type": "textbox",
+      "propertyKey": "mappingType",
+      "isRequired": false
+    },
+    "formcheckbox": {
+      "formcheckbox": "Entity",
+      "labelKey": "formcheckbox",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "ngrFilterKey"
+    },
+    "engine": {
+      "formcheckbox": "Engine:",
+      "labelKey": "engine",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "engine"
+    },
+    "externalProjectionId": {
+      "externalProjectionId": "External Ref No",
+      "labelKey": "externalProjectionId",
+      "type": "String",
+      "isRequired": false
+    },
+    "LinkedProjectionId": {
+      "LinkedProjectionId": "Linked Projection Id",
+      "labelKey": "LinkedProjectionId",
+      "type": "String",
+      "isRequired": false
+    },
+    "profileCenter": {
+      "profileCenter": "Profit Center",
+      "labelKey": "profileCenter",
+      "dataType": "String",
+      "isRequired": true,
+      "type": "dropdown",
+      "serviceKey": "profitCenter"
+    },
+    "strategy": {
+      "labelKey": "strategy",
+      "strategy": "Strategy",
+      "isRequired": true,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "strategy"
+    },
+    "remarks": {
+      "labelKey": "remarks",
+      "remarks": "Remarks",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35"
+}

@@ -1,0 +1,180 @@
+{
+    "_id" : "view_projection_treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "style" : {
+                "margin-right" : "auto"
+            }
+        }, 
+        {
+            "btnClass" : "close-icon btn rounded-0",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "projections",
+                    "clearSelected" : [ 
+                        "selected.viewprojections"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "entity",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "bankAccount",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "projectionDate",
+                "type" : "textbox",
+                "class" : "treasury-date",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "amount",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "0px",
+                    "margin-bottom" : "16px",
+                    "width" : "18%"
+                }
+            }, 
+            {
+                "key" : "currency",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "22px",
+                    "margin-bottom" : "16px",
+                    "width" : "11.5%"
+                }
+            }, 
+            {
+                "key" : "classification",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "Direction",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "strategy",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "profileCenter",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "bankId",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "projectionId",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "currencyhidden",
+                "type" : "hidden",
+                "event" : "if(value){data.currency =  {value:value,disable:true}} else {data.currency =  {value:data.c9,disable:true}}",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "status",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "tags",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }
+        ]
+    ],
+    "label" : "${projectionId}",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "29%",
+            "margin-right" : "26px",
+            "margin-bottom" : "16px"
+        },
+        "processorInfo" : {
+            "processorId" : "b4d72471-d9b2-4efc-a8e8-7270aec001d2"
+        },
+        "name" : "create",
+        "type" : "row"
+    },
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "viewprojections",
+    "type" : "workflow"
+}

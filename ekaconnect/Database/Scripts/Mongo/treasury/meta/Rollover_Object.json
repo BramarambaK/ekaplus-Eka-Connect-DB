@@ -1,0 +1,147 @@
+{
+  "_id": "Rollover_Object",
+  "name": "Rollover",
+  "label": "Rollover",
+  "type": "object",
+  "version": "3",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "projectionDate": {
+      "labelKey": "projectionDate",
+      "projectionDate": "Projection Date",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date"
+    },
+    "bankName": {
+      "labelKey": "bankName",
+      "bankName": "Bank Name",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "bankId": {
+      "labelKey": "bankId",
+      "bankId": "Bank Name",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "bankAccount": {
+      "labelKey": "bankAccount",
+      "bankAccount": "Bank Account",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "classification": {
+      "labelKey": "classification",
+      "classification": "Classiﬁcation",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "currency": {
+      "labelKey": "currency",
+      "currency": "",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Direction": {
+      "labelKey": "Direction",
+      "Direction": "Direction",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "amount": {
+      "labelKey": "amount",
+      "amount": "Amount",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "projectionId": {
+      "projectionId": "Projectionr ID",
+      "labelKey": "projectionId",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "tags": {
+      "tags": "Tags",
+      "labelKey": "tags",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "entity": {
+      "entity": "Entity",
+      "labelKey": "entity",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "rolloverType": {
+      "rolloverType": "Rollover Type",
+      "labelKey": "rolloverType",
+      "type": "dropdown",
+      "propertyKey": "rolloverType",
+      "isRequired": true,
+      "children": ["rolloverAmount", "rolloverDate"]
+    },
+    "rolloverAmount": {
+      "rolloverAmount": "Rollover Amount",
+      "labelKey": "rolloverAmount",
+      "type": "textbox",
+      "propertyKey": "rolloverType",
+      "parent": ["rolloverType"],
+      "valueCheck" : "if(${rolloverAmount}==0 ) {return 'T-132'}else if('${rolloverType}' == 'Partial' && ${rolloverAmount} >= ${amount}  ) { return 'T-131'} else if(${rolloverAmount}==null) {return 'T-133'} else { return true}",
+      "UIupdates": {
+        "value": "if('${rolloverType}' =='Full') return '${amount}'",
+        "disability": "return '${rolloverType}'=='Full' ? true : false"
+      },
+      "isRequired": true
+    },
+    "rolloverDate": {
+      "labelKey": "rolloverDate",
+      "rolloverDate": "Rollover Date",
+      "isRequired": true,
+      "propertyKey" : "rolloverType",
+      "parent": ["rolloverType"],
+      "valueCheck": "if(new Date('${rolloverDate}').getTime()== new Date('${projectionDate}').getTime()){return false} else if( new Date('${rolloverDate}').getTime() >  new Date().getTime()){return true} else {return false}",
+      "minimumDate": "return moment().add(1,'days').format('DD-MMM-YYYY')",
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date"
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "3faf590c-d172-42e7-82ff-3c63863c1f98"
+}

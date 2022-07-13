@@ -1,0 +1,36 @@
+{
+    "_id": "_SWIFT_EXT_CALL_TREASURY_API",
+    "componentType": "ExtSystemTask",
+    "object": "608b3583-d387-4cea-8acd-cc97f397cc8e",
+    "objectAction": "UPDATE",
+    "apiInfo": {
+        "host": "${properties.eka_connect_host}",
+        "path": "/lambdagatewayapi",
+        "method": "POST",
+        "mergePayload": true,
+        "body": {
+            "appId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+            "method": "POST",
+            "collectionName": "swifttoeka",
+            "property": "${properties.swifttoeka}",
+            "fx_rates_collection": "${properties.FX_RATES_COLLECTION}",
+            "entity_collection": "${properties.ENTITY_COLLECTION}",
+            "entity_account_collection": "${properties.ENTITY_ACCOUNT_COLLECTION}",
+            "EKA_TRANSACTION_COLLECTION": "${properties.EKA_TRANSACTION_COLLECTION}",
+            "EKA_FORMAT_COLLECTION": "${properties.EKA_FORMAT_COLLECTION}",
+            "EKA_BALANCES_COLLECTION": "${properties.EKA_BALANCES_COLLECTION}",
+            "EKA_ERROR_COLLECTION": "${properties.EKA_ERROR_COLLECTION}"
+        },
+        "inputMapping": {},
+        "headers": {
+            "X-Locale": "en-US",
+            "Content-Type": "application/json",
+            "endPoint": "/treasury_mapping/"
+        }
+    },
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId": "_SWIFT_EXT_CALL_TREASURY_API",
+    "sys_UUID": "0c7284c2-4bd7-4da0-99e5-c1bf9e327989"
+}

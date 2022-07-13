@@ -1,0 +1,31 @@
+{
+    "_id": "_PROJECTIONS_EXT_CALL_TREASURY_API",
+    "componentType": "ExtSystemTask",
+    "object": "5eaaa310-e939-46f0-8992-b02062343719",
+    "objectAction": "UPDATE",
+    "apiInfo": {
+        "host": "${properties.eka_connect_host}",
+        "path": "/lambdagatewayapi",
+        "method": "POST",
+        "mergePayload": true,
+        "body": {
+            "appId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+            "method": "POST",
+            "workflowname": "projections",
+            "fx_rates_collection": "${properties.FX_RATES_COLLECTION}",
+            "entity_collection": "${properties.ENTITY_COLLECTION}",
+            "entity_account_collection": "${properties.ENTITY_ACCOUNT_COLLECTION}"
+        },
+        "inputMapping": {},
+        "headers": {
+            "X-Locale": "en-US",
+            "Content-Type": "application/json",
+            "endPoint": "/treasury_mapping/"
+        }
+    },
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId": "_PROJECTIONS_EXT_CALL_TREASURY_API",
+    "sys__UUID": "f85a537e-0907-4731-af6a-0b45d9633e40"
+}

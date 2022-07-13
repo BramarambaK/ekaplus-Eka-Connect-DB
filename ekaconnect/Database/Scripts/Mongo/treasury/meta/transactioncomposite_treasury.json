@@ -1,0 +1,171 @@
+{
+  "_id": "transactionlistingcomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "payLoad": "selected.datefilters",
+  "processorInfo": {
+    "processorId": "eb5e324c-fcc8-4d8f-b76e-1512793b980f"
+  },
+  "refTypeId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row bg-white",
+      "workflows": [
+        {
+          "style": {
+            "width": "100%"
+          },
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 1rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "summaryofcash",
+                  "data": "selected.transactionlistingcompositev1.summaryofcash"
+                }
+              ]
+            },
+            {
+              "workflows": [
+                {
+                  "style1": {
+                    "margin": "22px 0 55px"
+                  },
+                  "workflows": [
+                    {
+                      "name": "transactionlistdynamic",
+                      "data": "selected.transactionlistingcompositev1.data"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "label": "Bank Reconciliation",
+  "layout": {
+    "name": "customv2",
+    "customScrollBar": true,
+    "ignoreUserInfo": true
+  },
+  "decisions": [
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "return '${datefilters}'!='' && '${datefilters}'!='{}' ? ((JSON.parse('${datefilters.formcheckbox}') || []).join(', ') || 'No Entity') : 'All Entities'",
+      "label": "All Entities",
+      "position": "top",
+      "style": {
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-left-radius": "3px",
+        "border-bottom-left-radius": "3px",
+        "padding": "0 5px",
+        "height": "33px"
+      },
+      "task": "text"
+    },
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "if('${datefilters}' ) return moment('${datefilters.filterDate}').format('DD-MMM-YYYY') ; else return moment(new Date()).format('DD-MMM-YYYY')",
+      "label": "Unselected",
+      "style": {
+        "margin-right": "auto",
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "padding": "0 5px",
+        "height": "33px"
+      },
+      "position": "top",
+      "task": "text"
+    },
+    {
+      "btnClass": "cr-edi-icon-treasury",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "globalfilter",
+          "name": "datefilterform"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "border-right": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-left": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-right-radius": "3px",
+        "border-bottom-right-radius": "3px",
+        "padding": "0 5px",
+        "height": "33px",
+        "width": "30px"
+      },
+      "label": " ",
+      "position": "top",
+      "task": "text"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "transactionlistdynamic",
+      "type": "submit",
+      "position": "bottom",
+      "disabled": "!(Array.isArray(selected.transactionlistingcompositev1.transactionlistdynamic)) || selected.transactionlistingcompositev1.transactionlistdynamic.length == 0",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "data got replaced with some errors"
+            }
+          },
+          "appendMsg": true,
+          "name": "projectionlistingcompositev1"
+        }
+      ],
+      "label": "PROCEED TO PROJECTION",
+      "iconClass": "cr-edit-icon"
+    }
+  ],
+  "taskId": "transactionlistingcompositev1",
+  "object": "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35"
+}

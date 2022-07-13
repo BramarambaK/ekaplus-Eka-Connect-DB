@@ -1,0 +1,196 @@
+{
+    "_id" : "treasury_object_format",
+    "name" : "treasury_object",
+    "label" : "Treasury Object",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : ["Transaction Ref No"],
+    "fields" : {
+        "Source" : {
+            "Source" : "Source",
+            "labelKey" : "Source",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "Source ID" : {
+            "Source ID" : "Source ID",
+            "labelKey" : "Source ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Statement Format" : {
+            "Statement Format" : "Statement Format",
+            "labelKey" : "Statement Format",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "File Date & Time Stamp" : {
+            "File Date & Time Stamp" : "File Date & Time Stamp",
+            "labelKey" : "File Date & Time Stamp",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+		"As of Date & Time Stamp":{
+            "As of Date & Time Stamp" : "As of Date & Time Stamp",
+            "labelKey" : "As of Date & Time Stamp",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+		"Bank ID":{
+            "Bank ID" : "Bank ID",
+            "labelKey" : "Bank ID",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+		"Currency Code":{
+            "Currency Code" : "Currency Code",
+            "labelKey" : "Currency Code",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+		"Account Number":{
+            "Account Number" : "Account Number",
+            "labelKey" : "Account Number",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+		"Opening Ledger Balance":{
+            "Opening Ledger Balance" : "Opening Ledger Balance",
+            "labelKey" : "Opening Ledger Balance",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+		"Closing Ledger Balance":{
+            "Closing Ledger Balance" : "Closing Ledger Balance",
+            "labelKey" : "Closing Ledger Balance",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+		"Opening Available Balance":{
+            "Opening Available Balance" : "Opening Available Balance",
+            "labelKey" : "Opening Available Balance",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Closing Available Balance" : {
+            "Closing Available Balance" : "Closing Available Balance",
+            "labelKey" : "Closing Available Balance",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Total Credits" : {
+            "Total Credits" : "Total Credits",
+            "labelKey" : "Total Credits",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Total Debits" : {
+            "Total Debits" : "Total Debits",
+            "labelKey" : "Total Debits",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Transaction Type" : {
+            "Transaction Type" : "Transaction Type",
+            "labelKey" : "Transaction Type",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Transaction Amount" : {
+            "Transaction Amount" : "Transaction Amount",
+            "labelKey" : "Transaction Amount",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Value Date" : {
+            "Value Date" : "Value Date",
+            "labelKey" : "Value Date",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+        "Entry Date" : {
+            "Entry Date" : "Entry Date",
+            "labelKey" : "Entry Date",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Date"
+        },
+        "Transaction Ref No" : {
+            "Transaction Ref No" : "Transaction Ref No",
+            "labelKey" : "Transaction Ref No",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Customer Ref No" : {
+            "Customer Ref No" : "Customer Ref No",
+            "labelKey" : "Customer Ref No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Comments" : {
+            "Comments" : "Comments",
+            "labelKey" : "Comments",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Status" : {
+            "Status" : "Status",
+            "labelKey" : "Status",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "Direction" : {
+            "Direction" : "Direction",
+            "labelKey" : "Direction",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Supplementary Details" : {
+            "Supplementary Details" : "Supplementary Details",
+            "labelKey" : "Supplementary Details",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "608b3583-d387-4cea-8acd-cc97f397cc8e"
+}	

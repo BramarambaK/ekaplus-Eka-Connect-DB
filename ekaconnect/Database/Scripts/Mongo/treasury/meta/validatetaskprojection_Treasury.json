@@ -1,0 +1,11 @@
+{
+    "_id" : "validatetaskprojection_Treasury",
+    "componentType" : "ValidateTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_ST_VALIDATE_PROJECTION",
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d",
+    "label" : "System Validate Task"
+}
