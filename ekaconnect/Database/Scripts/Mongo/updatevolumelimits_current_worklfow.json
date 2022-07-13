@@ -1,0 +1,106 @@
+{
+  "_id": "updatevolumelimits_current_worklfow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Update tonnage limits",
+    "errorContext": "tonnagelimits"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "data": "output.updatevolumelimitcurrent",
+          "name": "_ST_PROCESS_VALIDATE_VOLUME_LIMITS"
+        },
+        {
+          "data": "output._ST_PROCESS_VALIDATE_VOLUME_LIMITS",
+          "name": "confirmupdatecurrentvolumelimits"
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "label": "Next",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": false,
+      "key": "region",
+      "label": "Port zone"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "product",
+      "label": "Commodity"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "site",
+      "label": "Site"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quality",
+      "label": "Grade"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedDailypurchased",
+      "label": "Daily purchased (MT)",
+      "UIupdates": {
+        "listValue": "return '${dailypurchased}' == '' ? '-' : Number('${dailypurchased}').toFixed(2)"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedOldDailylimit",
+      "label": "Current daily limit (MT)",
+      "UIupdates": {
+        "listValue": "return '${formattedOldDailylimit}'.length != 0 ? '${formattedOldDailylimit}' : '${oldDailylimit}' == '' ? '-' : '${oldDailylimit}'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "oldDailylimit",
+      "type": "hidden",
+      "label": "Current daily limit (MT)",
+      "UIupdates": {
+        "listValue": "return '${oldDailylimit}'.length != 0 ? '${oldDailylimit}' : ${dailyLimit}"
+      }
+    },
+    {
+      "edit": true,
+      "sort": false,
+      "key": "dailyLimit",
+      "label": "New limit (MT)",
+      "cellClass": "cell-icon-class",
+      "placeholder": "0"
+    }
+  ],
+  "taskId": "updatevolumelimitcurrent",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "09ef3080-da0d-4b92-9f6f-e7bf0576ba16"
+}

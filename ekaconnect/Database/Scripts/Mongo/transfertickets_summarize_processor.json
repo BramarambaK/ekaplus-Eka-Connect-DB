@@ -1,0 +1,9 @@
+{
+  "_id": "transfertickets_summarize_processor",
+  "name": "transfertickets_summarize_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const selectedTickets = req.body.tickettransfercomposite.selectedtickets;\r\n    const transferMethod = req.body.tickettransfercomposite.transfermethod;\r\n    const bpRefNo = selectedTickets[0].bpRefNo;\r\n    const bpName = selectedTickets[0].bpName;\r\n    const totalQuantity = selectedTickets.reduce((acc, curr) => {\r\n      acc += curr.quantity;\r\n      return acc;\r\n    }, 0);\r\n    const updatedTickets = selectedTickets.map(i => {\r\n      return {\r\n        ...i,\r\n        totalQuantity: totalQuantity.toFixed(2),\r\n        transferMethod: transferMethod.transferpercentage\r\n      };\r\n    });\r\n    let dataObj = {\r\n      bpRefNo: bpRefNo,\r\n      bpName: bpName,\r\n      transfermethod: transferMethod,\r\n      selectedtickets: updatedTickets\r\n    };\r\n    res.status(200).send(dataObj);",
+  "sys__UUID": "0a2914c3-c8a4-497c-b24c-bf2cb99e0b08"
+}

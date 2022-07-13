@@ -1,0 +1,10 @@
+{
+  "_id": "validatefilecomposite_processor",
+  "name": "validatefilecomposite_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "\r\n    var fileID = req.body.selectedData.downloadlogs.id;\r\n    var response = {};\r\n    response.downloadlogs = { id: fileID }\r\n    res.status(200).send(response);\r\n ",
+  "sys__UUID": "47711629-2c6c-4417-85c2-4c4516c14d4d",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

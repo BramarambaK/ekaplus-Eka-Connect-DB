@@ -1,0 +1,122 @@
+{
+  "_id": "updatepricelimits_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "rowGroup": false,
+    "showErrorInToastr": true,
+    "class": "update-price-table edit-update-price",
+    "errorContext": "pricelimits"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "data": "output.updatepricelimits",
+          "name": "_ST_PROCESS_VALIDATE_UPDATE_PRICE_LIMITS"
+        },
+        {
+          "data": "output._ST_PROCESS_VALIDATE_UPDATE_PRICE_LIMITS",
+          "name": "updatesubmitpricelimitscomposite"
+        }
+      ],
+      "style": { "margin-right": "15px" },
+      "label": "Next",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    { "edit": false, "sort": false, "key": "priceId", "type": "hidden" },
+    { "edit": false, "sort": false, "key": "bpExternalCode", "type": "hidden" },
+    { "edit": false, "sort": false, "key": "bpExternalName", "type": "hidden" },
+    { "edit": false, "sort": false, "key": "marketType", "type": "hidden" },
+    { "edit": false, "sort": false, "key": "quality", "label": "Grade" },
+    { "edit": false, "sort": false, "key": "site", "label": "Site" },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "pricingOption",
+      "label": "Pricing option"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedSustainable",
+      "label": "Sustainable",
+      "UIupdates": {
+        "listValue": "return '${sustainable}' == 'true' ? 'Yes' : '-'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "price",
+      "label": "Price (/MT)",
+      "cellClass": "cell-icon-class",
+      "UIupdates": {
+        "listValue": "return Number('${price}').toFixed(2)"
+      },
+      "placeholder": "$0.00"
+    },
+    {
+      "edit": false,
+      "label": "Start date",
+      "sort": true,
+      "key": "formattedStartdate",
+      "UIupdates": {
+        "listValue": "return moment('${startDateTime}').format('DD/MM/YYYY')"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "startTime",
+      "label": "Start time",
+      "UIupdates": {
+        "listValue": "return moment('${startDateTime}').format('HH:mm')"
+      }
+    },
+    {
+      "edit": false,
+      "label": "End date",
+      "sort": false,
+      "key": "endDate",
+      "contentClass": "editable-date",
+      "cellClass": "date-cell",
+      "headerClass": "date-cell",
+      "UIupdates": {
+        "listValue": "return new Date('${endDateTime}')"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "endTime",
+      "label": "End time",
+      "contentClass": "editable-time-dropdown",
+      "cellClass": "time-dropdown-cell",
+      "filter": true,
+      "filterMatchMode": "contains",
+      "editable": true,
+      "UIupdates": {
+        "listValue": "return moment('${endDateTime}').format('HH:mm')"
+      }
+    }
+  ],
+  "taskId": "updatepricelimits",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "67c62014-31eb-47bb-acef-3b141f998d73"
+}

@@ -1,0 +1,134 @@
+{
+  "_id": "updatepricelimitscomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Update prices",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "updatetopmenuprice"
+    },
+    {
+      "style": {
+        "padding": "5px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "-10px 10px"
+      },
+      "workflows": [
+        {
+          "name": "updatepricelimits",
+          "data": "selected.updatepricelimitscomposite.updatepricelimits"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Update prices"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Manage prices",
+        "type": "string",
+        "task": "pricelist"
+      },
+      {
+        "label": "Update prices",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "pricelist",
+      "outcomes": [
+        {
+          "name": "pricelistingcomposite",
+          "clearSelected": ["selected.pricelistingcomposite"]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "cancelpopup_priceActive2",
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px",
+        "margin-top": "7px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatepricelimitsformcomposite",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "15px",
+        "margin-top": "7px"
+      },
+      "label": "Previous",
+      "disabled": "selected.updatepricelimitscomposite.updatepricelimits.length == '1' ",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "updatesubmitpricelimitscomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "32px",
+        "margin-top": "7px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "updatepricelimitscomposite",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "daa5e48e-cc01-46c8-a339-d28e82a40fd3",
+  "deviceType": "mobile"
+}

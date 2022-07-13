@@ -1,0 +1,48 @@
+{
+  "_id": "updatetopmenuprice_CST",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Left Menu",
+  "type": "workflow",
+  "layout": {
+    "name": "menu",
+    "type": "layout1",
+    "saveInSession": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatepricelimitsformcomposite"
+        }
+      ],
+      "label": "Select update type",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatepricelimitscomposite"
+        }
+      ],
+      "label": "Update prices",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatesubmitpricelimitscomposite"
+        }
+      ],
+      "label": "Submit prices",
+      "position": "leftMenu"
+    }
+  ],
+  "taskId": "updatetopmenuprice",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40"
+}

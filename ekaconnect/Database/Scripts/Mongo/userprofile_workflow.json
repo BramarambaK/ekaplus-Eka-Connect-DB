@@ -1,0 +1,45 @@
+{
+  "_id": "userprofile_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "User Profile",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "a6a76a72-78e3-4f4c-9ff9-45f81478c9d5"
+  },
+  "layout": {
+    "getInitialData": true,
+    "name": "user-profile"
+  },
+  "addLater": {
+    "version1": "V2",
+    "inputData1": {
+      "type": "externalApi",
+      "config": {
+        "path": "/appswitcherendpoint",
+        "headers": {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        "inputMapping": {},
+        "method": "POST",
+        "useInputMapping": false,
+        "host": "cargill_host",
+        "body": {
+          "appId": "12325a98-a959-4939-9005-4158d136afcd",
+          "workFlowTask": "appswitcher",
+          "qP": {}
+        },
+        "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+        "responseDataKey": "data"
+      }
+    }
+  },
+  "fields": [],
+  "decisions": [],
+  "labelKey": "USER PROFILE",
+  "taskId": "userprofile",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

@@ -1,0 +1,119 @@
+{
+  "_id": "updatevolumelimitsummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Summary",
+    "descriptionExpression": "return 'Review and submit daily tonnage limits entered for <b>${bpName} - ${bpRefNo}' + ('${bpExternalName}' ? (' - ' + '${bpExternalName}') : '') + '</b> ,season <b>${season}</b>'",
+    "rowGroup": true,
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Tonnage limits have been successfully updated"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.updatevolumelimitsummary",
+          "appendMsg": true,
+          "name": "_ST_PROCESSOR_ELASTIC_UPDATE_VOLUMELIMIT_DATA_INTERNAL"
+        },
+        {
+          "name": "volumelistingcomposite",
+          "showToaster": true,
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "disableButtonTime": 3000,
+      "label": "Submit requests",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": false,
+      "key": "region",
+      "label": "Port zone",
+      "group": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "product",
+      "label": "Commodity",
+      "group": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "site",
+      "label": "Site"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quality",
+      "label": "Grade"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedDailypurchased",
+      "label": "Daily purchased (MT)",
+      "UIupdates": {
+        "listValue": "return '${dailypurchased}' == '' ? '-' : Number('${dailypurchased}').toFixed(2)"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedOldDailylimit",
+      "label": "Current daily limit (MT)"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "oldDailylimit",
+      "label": "Current daily limit (MT)",
+      "type": "hidden",
+      "UIupdates": {
+        "listValue": "return '${dailyLimit}' == '' ? '-' : ${dailyLimit}"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "dailyLimit",
+      "label": "New limit (MT)"
+    }
+  ],
+  "taskId": "updatevolumelimitsummary",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "67c62014-31eb-47bb-acef-3b141f998d73"
+}
