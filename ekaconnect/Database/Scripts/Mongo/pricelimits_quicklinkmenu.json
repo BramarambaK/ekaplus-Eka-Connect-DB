@@ -1,0 +1,33 @@
+{
+  "_id": "pricelimits_quicklinkmenu",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "sys__UUID": "ebab5078-8b77-40b9-acfc-8f60e5aff548",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "label": "Add tonnage limits",
+              "handler": "volumelimitscomposite"
+            },
+            {
+              "label": "Manage tonnage limits",
+              "handler": "volumelistingcomposite"
+            },
+            {
+              "label": "Upload prices",
+              "handler": "pricelimitsbulkcomposite"
+            },
+            {
+              "label": "Manage prices",
+              "handler": "pricelistingcomposite"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

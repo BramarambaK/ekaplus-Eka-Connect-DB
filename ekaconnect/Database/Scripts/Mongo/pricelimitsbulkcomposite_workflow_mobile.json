@@ -1,0 +1,98 @@
+{
+  "_id": "pricelimitsbulkcomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Add prices",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "uploadfile"
+    },
+    {
+      "name": "createfileupload"
+    }
+  ],
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "af4ba42e-0663-4a6c-ad33-218d6fda6b79",
+    "isProceesorOnly": true
+  },
+  "layout": {
+    "header": {
+      "title": "Add price limits"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "clearSelected": "selected.pricelimitsbulkcomposite.createfileupload.id",
+    "breadcrumbs": [
+      {
+        "label": "Price and Limits",
+        "type": "string",
+        "task": "priceandlimitshome"
+      },
+      {
+        "label": "Add prices",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "priceandlimitshome",
+      "outcomes": [
+        {
+          "name": "pricelimitsdomaincomposite",
+          "clearSelected": ["selected.pricelimitsdomaincomposite"]
+        }
+      ]
+    },
+    {
+      "type": "reload",
+      "objectAction": "READ",
+      "btnClass": "cargil-tab-btn",
+      "outcomes": [
+        {
+          "name": "pricelimitscomposite"
+        }
+      ],
+      "position": "tab",
+      "label": "MANUAL ENTRY"
+    },
+    {
+      "type": "reload",
+      "objectAction": "READ",
+      "btnClass": "cargil-tab-btn  active-tab",
+      "outcomes": [
+        {
+          "name": "pricelimitsbulkcomposite"
+        }
+      ],
+      "position": "tab",
+      "label": "BULK UPLOAD"
+    }
+  ],
+  "taskId": "pricelimitsbulkcomposite",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "993053af-58d2-4df5-961f-9a07db193905",
+  "deviceType": "mobile"
+}

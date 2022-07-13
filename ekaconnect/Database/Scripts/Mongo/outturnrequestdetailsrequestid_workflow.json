@@ -1,0 +1,102 @@
+{
+  "_id": "outturnrequestdetailsrequestid_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Amend request Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card",
+    "theme": "cargill-contract-details-card contract-details-padding-32 amend-request-details-requestid"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Request ID :' + ' ' +'${requestId}'"
+      },
+      {
+        "key": "approvalStatus",
+        "type": "heading",
+        "valueExpression": "return '${requestStatus}'",
+        "config": {
+          "classExpression": "return '${requestStatus}'.toLowerCase().includes('action') ? 'contract-status status-action' : '${requestStatus}'.toLowerCase().includes('approved') ? 'contract-status status-approved' : '${requestStatus}'.toLowerCase().includes('rejected') ? 'contract-status status-reject' : '${requestStatus}'.toLowerCase().includes('awaiting') ? 'contract-status status-awaiting' :'${requestStatus}'.toLowerCase().includes('expired') ? 'contract-status status-expired' : 'contract-status status-withdrawn' "
+        }
+      }
+    ],
+    [
+      {
+        "label": "Request type",
+        "type": "detailsFlex",
+        "key": "requestType",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${requestType}' ? '${requestType}' : '-'"
+      },
+      {
+        "label": "Requested by",
+        "type": "detailsFlex",
+        "key": "requestBy",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${requestBy}' ? '${requestBy}' : '-' "
+      },
+      {
+        "label": "Requested date",
+        "type": "detailsFlex",
+        "key": "requestDate",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${requestDate}' ? moment('${requestDate}').format('DD/MM/YYYY') : '-'"
+      },
+      {
+        "label": "Ticket Number",
+        "type": "detailsFlex",
+        "key": "ticketRefNo",
+        "visibility": "return '${requestStatus}'.toLowerCase() == 'approved'",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "decisionName": "download-link",
+        "class": "col-flex mobile-full-width details-item-highlight-value",
+        "valueExpression": "return '${ticketRefNo.length}' =='1' ? '-' :'${ticketRefNo}'"
+      },
+      {
+        "label": "Ticket Number",
+        "type": "detailsFlex",
+        "key": "ticketRefNo",
+        "visibility": "return '${requestStatus}'.toLowerCase() != 'approved'",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${ticketRefNo}' == '' ? '-' :'${ticketRefNo}'"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "outturnrequestdetailsrequestid",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

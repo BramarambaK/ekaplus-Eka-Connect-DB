@@ -1,0 +1,47 @@
+{
+    "_id" : "pricelimitConfig_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "pricelimitConfig",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "label" : "pricelimitConfig",
+    "type" : "workflow",
+    "tag" : "config",
+    "layout" : {
+        "header" : {
+            "label" : "Tickets",
+            "style" : {
+                "font-size" : "22px"
+            }
+        },
+        "name" : "pricelimitConfig"
+    },
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+		"defaultBody" : {
+			"payLoadData" : {
+				"pagination" : {
+					"start" : "@requestBody.qP.from",
+					"limit" : "@requestBody.qP.size"
+				}
+			}
+		},
+        "config" : {
+            "id" : "push_pricelimitData",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : true,
+            "statusFlagWorklowTask" : "pricelimitConfig",
+			"hasStatusFlag" : true,
+			"backupIndex" : false,
+			"reIndex" : false
+        }
+    },
+    "fields" : [],
+    "decisions" : [],
+    "labelKey" : "pricelimitConfig",
+	"description" : "Execute to Crawl price limits Data"
+}

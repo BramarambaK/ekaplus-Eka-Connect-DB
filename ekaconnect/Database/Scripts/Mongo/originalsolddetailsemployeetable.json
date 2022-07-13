@@ -1,0 +1,61 @@
+{
+  "_id": "originalsolddetailsemployeetable_worklfow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Original sold ticket details",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "header": "Original sold ticket details",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "rowGroup": true,
+    "class": "submitamend-detailtickettable"
+  },
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo",
+      "hidden": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Variety",
+      "sort": true,
+      "key": "varietyName",
+      "primaryFilter": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Paddock location",
+      "sort": true,
+      "key": "paddockLocation",
+      "UIupdates": {
+        "listValue": "return '${paddockLocation}' ? '${paddockLocation}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Truck registration",
+      "sort": true,
+      "key": "truckRegistration",
+      "primaryFilter": false,
+      "UIupdates": {
+        "listValue": "return '${truckRegistration}' ? '${truckRegistration}' : '-'"
+      }
+    }
+  ],
+  "decisions": [],
+  "labelKey": "EDITABLETABLE",
+  "taskId": "originalsolddetailsemployeetable",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "8f957a44-5374-4a11-bd56-b2e210836b55"
+}

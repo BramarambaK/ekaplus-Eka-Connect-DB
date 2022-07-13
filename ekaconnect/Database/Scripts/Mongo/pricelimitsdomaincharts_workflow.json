@@ -1,0 +1,125 @@
+{
+  "_id": "pricelimitsdomaincharts_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Prices and limits charts",
+  "type": "workflow",
+  "layout": {
+    "emptyText": {
+      "message": [
+        "You currently have no limits published.",
+        "Limits published will be displayed here."
+      ]
+    },
+    "header": {
+      "label": "Daily tonnage purchased against limit",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "getInitialData": false,
+    "name": "chart",
+    "type": "horizontalBar",
+    "xAxesTick": {
+      "display": false
+    },
+    "xAxisMax": true,
+    "legend": {
+      "display": false,
+      "position": "top"
+    },
+    "yAxesTick": {
+      "fontFamily": "\"Helvetica Neue LT W05 65 Medium\"",
+      "fontSize": 14
+    },
+    "toolTipHover": {
+      "enable": true,
+      "valueExpression": "let dailypurchased,remaining;  if(!isNaN(${dailypurchased})&& !isNaN(${dailyLimit})){dailypurchased = Math.round(100*${dailypurchased}/${dailyLimit})}else{dailypurchased=0}if(!isNaN(${dailypurchased})&& !isNaN(${dailyLimit})){remaining = Math.round(100*(${dailyLimit}-${dailypurchased})/${dailyLimit})}else{remaining=0} ; return dailypurchased+\"% Daily purchased\"+\", \"+ remaining+\"% Remaining\""
+    },
+    "chartLayout": {
+      "padding": {
+        "bottom": 0
+      }
+    }
+  },
+  "fields": [
+    {
+      "label": "Product",
+      "key": "product",
+      "type": "label",
+      "sortBy": "descending"
+    },
+    {
+      "label": "Daily Purchased",
+      "key": "dailypurchased",
+      "backgroundColor": [
+        "#9E2A2F",
+        "#BE531C",
+        "#CF7F00",
+        "#DAAA00",
+        "#ABAD25",
+        "#658D1B",
+        "#279989",
+        "#007681",
+        "#005F86"
+      ],
+      "fontColor": "#FFFFFF",
+      "type": "value",
+      "suffix": "'${quantityUnit}'"
+    },
+    {
+      "label": "Open quantity",
+      "key": "openQuantity",
+      "backgroundColor": "#EEF2F5",
+      "fontColor": "#5D646F",
+      "type": "value",
+      "suffix": "'${quantityUnit}'",
+      "valueExpression": "let dl = isNaN(Number(${dailyLimit})) ? 0 : Number(${dailyLimit});let dp = isNaN(Number(${dailypurchased})) ? 0 : Number(${dailypurchased});return Math.max(dl - dp, 0);"
+    },
+    {
+      "label": "Daily Limit",
+      "key": "dailyLimit",
+      "type": "value",
+      "hidden": true
+    },
+    {
+      "key": "region",
+      "filterType": "dropdown",
+      "filterBy": "region",
+      "placeholder": "Select portzone",
+      "selectedAll": "All port zones",
+      "multiple": true,
+      "sortBy": "descendingString"
+    },
+
+    {
+      "key": "pricelimitsdomainFilterStatus",
+      "filterType": "filterData",
+      "filterExpression": "return '${type}' === 'tonnage' ? true : false"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "",
+      "objectAction": "READ",
+      "labelkey": "reset",
+      "decisionName": "reset",
+      "selection": "chart-label",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": "pricelimitsdomaincardview"
+        }
+      ],
+      "label": ""
+    }
+  ],
+  "labelKey": "CHARTS",
+  "taskId": "pricelimitsdomaincharts",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "203cce3f-3b1e-4f95-997b-303b370c7048"
+}

@@ -1,0 +1,246 @@
+{
+  "_id": "reportcardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer connect report rard view",
+  "type": "workflow",
+  "version": "V2",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "inputData": {
+    "type": "SystemTask",
+    "config": {
+      "id": "crawler_chainedReportList",
+      "userSpecificData": true,
+      "ttl": 0,
+      "isAsynchCallRequired": "Y",
+      "isElasticCumSystemTask": true,
+      "defaultOptions": {
+        "sort": [
+          {
+            "column": "name.raw",
+            "order": "asc"
+          }
+        ]
+      }
+    }
+  },
+  "listingDataOptions": {
+    "filterOptions": {
+      "type": "elasticSearch"
+    }
+  },
+  "layout": {
+    "fallback": "You have no favourited reports \n To add reports to this section select the favourite icon on a report",
+    "getInitialData": true,
+    "header": {
+      "label": "Reports"
+    },
+    "name": "cards-view",
+    "queryParams": {
+      "tab": "title"
+    },
+    "cardsListClass": "cargil-reports",
+    "theme": "cargil-report",
+    "cardClassExpression": [
+      "return ${isFeatured} ? 'featured' : ''",
+      "return ${isFavourite} ? 'favourite' : ''"
+    ],
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string",
+        "value": "/home"
+      },
+      {
+        "labelExpression": "switch('${title}') { case 'contracts': return 'Contracts'; case 'tickets': return 'Tickets'; case 'finances': return 'Finances'; default: return null; }",
+        "type": "queryParam",
+        "valueExpression": "switch('${title}') { case 'contracts': return 'contractdomaincomposite'; case 'tickets': return 'ticketscomposite'; case 'finances': return 'accountscomposite'; default: return null; }"
+      },
+      {
+        "label": "Reports",
+        "type": "string",
+        "value": null
+      }
+    ],
+    "pagination": {
+      "rowCount": 10000
+    }
+  },
+  "fields": [
+    [
+      {
+        "label": "Category",
+        "key": "allFilters",
+        "type": "hidden",
+        "filterType": "tabs",
+        "filterBy": "allFilters",
+        "displayCount": true,
+        "class": "font-weight-bold tabs",
+        "prependOptions": ["Favourites"],
+        "valueExpression": "return ${isFavourite} ? ['Favourites', '${functionalCategory}'] : ['${functionalCategory}']",
+        "sortBy": [
+          "Favourite",
+          "Pricing",
+          "Inventory",
+          "Contracts",
+          "Movement orders",
+          "Tickets",
+          "Finances"
+        ]
+      },
+      {
+        "label": "Featured",
+        "key": "isFeatured",
+        "type": "hidden",
+        "config": {
+          "labelExpression": "return ${isFeatured} ? 'Featured': ' '"
+        }
+      }
+    ],
+    [
+      {
+        "key": "isFeaturedLabel",
+        "type": "heading",
+        "style": { "padding": "8px 8px 0 8px" }
+      },
+      {
+        "label": "Name",
+        "key": "name",
+        "type": "heading",
+        "filterType": "search",
+        "filterBy": "name",
+        "placeholder": "Search report name",
+        "style": {
+          "font-size": "36px",
+          "flex": 1,
+          "padding": "0 8px 9px 8px",
+          "height": "245px",
+          "text-align": "left",
+          "font-family": "\"Helvetica Neue LT W05 45 Light\"",
+          "margin-top": "0px",
+          "line-height": "48px"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Description",
+        "key": "description",
+        "type": "description",
+        "filterBy": "description",
+        "style": {
+          "padding": "0 9px",
+          "font-size": "15px",
+          "height": "70px",
+          "display": "-webkit-box",
+          "overflow": "hidden",
+          "line-height": "24px",
+          "-webkit-line-clamp": "3",
+          "-webkit-box-orient": "vertical"
+        }
+      }
+    ],
+    [
+      {
+        "key": "functionalCategory",
+        "type": "hidden",
+        "class": "font-weight-bold tabs",
+        "style": {
+          "text-transform": "uppercase"
+        },
+        "filterBy": "functionalCategory",
+        "displayCount": true
+      }
+    ],
+    [
+      {
+        "key": "chartType",
+        "type": "footer2",
+        "style": {
+          "padding": "0",
+          "display": "flex",
+          "align-items": "center"
+        },
+        "config": {
+          "iconClassExpression": "switch('${chartType}') { case 'Pie': return 'pie-chart-icon prepend'; case 'Table': return 'bar-chart-icon prepend'; case 'Column3D': return 'bar-chart-icon prepend'; default: return 'not-found'; }"
+        }
+      },
+      {
+        "key": "viewType",
+        "type": "footer2",
+        "class": "font-weight-bold",
+        "style": {
+          "flex": "1",
+          "padding": "0",
+          "color": "#005F86",
+          "display": "flex",
+          "align-items": "center"
+        },
+        "config": { "labelExpression": "return '${viewType}';" }
+      },
+      {
+        "key": "favourite",
+        "type": "footer2",
+        "decisionName": "favourite",
+        "iconClass": "bookmark-icon pointer",
+        "style": {
+          "padding": "0",
+          "display": "flex",
+          "align-items": "center"
+        }
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-link",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "favourite",
+      "outcomes": [
+        {
+          "name": "FAVOURITEACTION",
+          "action": "favourite",
+          "type": "submit"
+        }
+      ],
+      "label": "FAVOURITE",
+      "position": "card"
+    },
+    {
+      "btnClass": "",
+      "objectAction": "UPDATE",
+      "labelkey": "VIEW",
+      "task": "viewReport",
+      "decisionName": "viewReport",
+      "selection": "card",
+      "outcomes": [
+        {
+          "name": "insights"
+        }
+      ],
+      "label": "VIEW"
+    }
+  ],
+  "labelKey": "Reports View",
+  "taskId": "reportcardview",
+  "object": "5058fd57-6ff8-4be8-8598-27250a75f029"
+}

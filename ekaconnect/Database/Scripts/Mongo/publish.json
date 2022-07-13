@@ -1,0 +1,22 @@
+{
+  "_id": "publish_propertyKey",
+  "type": "property",
+  "name": "publishIorSFP",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldType": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Publish immediately",
+      "value": "Publish immediately"
+    },
+    {
+      "key": "Schedule future date and time",
+      "value": "Schedule future date and time"
+    }
+  ],
+  "label": "Publish",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Publish immediately or SFP"
+}

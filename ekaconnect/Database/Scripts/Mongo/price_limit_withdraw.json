@@ -1,0 +1,99 @@
+{
+  "_id": "price_limit_withdraw",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Withdraw prices",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to withdraw ${priceId}\\?",
+      "headerMessage": "Withdraw price",
+      "information": "This will no longer be available.",
+      "config": {
+        "bodyMessageExpression": "return ${selectedCount} > 1 ? 'Are you sure you want to withdraw ${selectedCount} prices\\?' : 'Are you sure you want to withdraw ${priceId}\\?';",
+        "headerMessageExpression": "return ${selectedCount} > 1 ? 'Withdraw ${selectedCount} prices' : 'Withdraw price'",
+        "informationExpression": "return ${selectedCount} > 1 ?'These will no longer be available.':'This will no longer be available.'"
+      }
+    },
+    "showErrorInToastr": true
+  },
+  "input": ["region", "product", "site", "quality"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "pricelistingcomposite",
+          "restoreState": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn cargill-btn",
+      "objectAction": "DELETE",
+      "labelkey": "UPDATE",
+      "task": "price_limit_withdraw",
+      "outcomes": [
+        {
+          "data": "output.price_limit_withdraw",
+          "name": "_ST_PROCESS_PRICE_WITHDRAW",
+          "appendMsg": true
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Withdraw price successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Withdraw price with some errors"
+            }
+          },
+          "data": "output._ST_PROCESS_PRICE_WITHDRAW",
+          "appendMsg": true,
+          "name": "_ST_PROCESSOR_ELASTIC_UPDATE_PRICE_DATA_INTERNAL"
+        },
+        {
+          "name": "pricelistingcomposite",
+          "showToaster": true,
+          "restoreState": true
+        }
+      ],
+      "label": "Withdraw price",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "pricelistingcomposite",
+          "restoreState": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "WITHDRAW_PRICE_LIMIT",
+  "fields": [
+    {
+      "heading": "product"
+    }
+  ],
+  "taskId": "price_limit_withdraw",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "d24682f0-ef56-4872-8a9c-6add2b4f771a"
+}

@@ -1,0 +1,81 @@
+{
+    "_id" : "outturnticketquantitysummary_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Oututrn quantity Summary",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "summary-tile",
+        "getInitialData" : false,
+        "theme" : "allocate-summary"
+    },
+    "decisions" : [],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "quantity",
+                "aggregateFunction" : "sum",
+                "filterExpression" : "return '${quantity}'",
+                "roundOff" : "0.2-2",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "outturnQty",
+                "aggregateFunction" : "sum",
+                "filterExpression" : "return '${outturnQty}'",
+                "roundOff" : "0.2-2",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "outturnTransferQty",
+                "label" : "return 'Total outturn quantity, including shrink'",
+                "aggregateFunction" : "sum",
+                "filterExpression" : "return '${outturnTransferQty}'",
+                "roundOff" : "0.2-2",
+                "suffix" : "'MT'",
+                "widgets" : [ 
+                    "progressBar"
+                ],
+                "progressBar" : {
+                    "aggregateFunction" : "sum",
+                    "depends" : [ 
+                        "outturnTransferQty", 
+                        "quantity", 
+                        "outturnQty"
+                    ],
+                    "valueExpression" : "return '${outturnTransferQty}' === '-' ? 0 : parseFloat('${outturnTransferQty}'.split(',').join(''))",
+                    "totalExpression" : "return parseFloat('${quantity}' === '-' ? 0 : '${quantity}')",
+                    "footerExpresion" : "return (parseFloat('${outturnTransferQty}') > '${quantity}') ? 'Total transfer quantity exceeds max qty permitted':'${outturnQty} MT of ${quantity} MT outturned'  ",
+                    "tooltipExpression" : "return '${outturnTransferQty}' === '-' ? 'Within tolerance level' : '${outturnTransferQty}' <= '${quantity}'? 'Within tolerance level':'Reduce quantity to '+' ${quantity}'+' MT or below'"
+                },
+                "style" : {
+                    "display" : "flex",
+                    "flex-grow" : "1",
+                    "flex" : "0 0 50%",
+                    "align-content" : "center",
+                    "justify-content" : "center"
+                }
+            }, 
+            {
+                "key" : "formattedEstimatedOutturnFee",
+                "label" : "return 'Total estimated outturn fee, excluding GST'",
+                "prefix" : "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+                "aggregateFunction" : "sum",
+                "filterExpression" : "return '${formattedEstimatedOutturnFee}'",
+                "roundOff" : "0.2-2",
+                "style" : {
+                    "display" : "flex",
+                    "flex-grow" : "1",
+                    "flex" : "1 1 50%",
+                    "align-content" : "center",
+                    "justify-content" : "center"
+                }
+            }
+        ]
+    ],
+    "labelKey" : "ACCOUNT_QUANTITY_SUMMARY",
+    "taskId" : "outturnticketquantitysummary",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

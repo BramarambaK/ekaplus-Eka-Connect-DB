@@ -1,0 +1,98 @@
+{
+    "_id" : "outturnapproverequestpopup",
+    "name" : "outturnapproverequestpopup",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Approve request details",
+    "type" : "workflow",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cargillcancelpopup",
+        "option" : {
+            "bodyMessage" : "Please indicate whether the grower is required to make a pre-payment prior to outturning their grain. If not, they will be invoiced after month-end on their outturn.",
+            "headerMessage" : "Approve request"
+        },
+        "showErrorInToastr" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-cargill btn-empty",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "type" : "popup",
+                    "close" : true
+                }
+            ],
+            "label" : "Cancel",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-cargill btn-primary",
+            "objectAction" : "READ",
+            "type" : "submit",
+            "task" : "outturnapproverequestpopup",
+            "executeDecision" : false,
+            "outcomes" : [ 
+                {
+                    "data" : "output.outturnapproverequestpopup",
+                    "appendMsg" : true,
+                    "name" : "_ST_PROCESS_APPROVE_AMEND_TICKETS"
+                }, 
+                {
+                    "data" : "output._ST_PROCESS_APPROVE_AMEND_TICKETS",
+                    "name" : "outturnrequestdetailscomposite",
+                    "restoreState" : true,
+                    "showToaster" : true,
+                    "appendMsg" : true,
+                    "condition" : "return '${isAllSuccess}'? true : false"
+                }, 
+                {
+                    "data" : "output._ST_PROCESS_APPROVE_AMEND_TICKETS",
+                    "name" : "outturnrequestdetailscomposite",
+                    "restoreState" : true,
+                    "showToaster" : true,
+                    "appendMsg" : true,
+                    "condition" : "return '${isPartialSuccess}'? true : false"
+                }, 
+                {
+                    "data" : "output._ST_PROCESS_APPROVE_AMEND_TICKETS",
+                    "name" : "enterpriselistingcomposite",
+                    "restoreState" : true,
+                    "showToaster" : true,
+                    "appendMsg" : true,
+                    "condition" : "return '${isAllFailed}'? true : false"
+                }
+            ],
+            "label" : "Approve details",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "type" : "popup",
+                    "close" : true
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Cancel",
+    "fields" : [ 
+        {
+            "style" : {
+                "display" : "none"
+            },
+            "key" : "shipmentPeriodFrom"
+        }
+    ],
+    "taskId" : "outturnapproverequestpopup"
+}

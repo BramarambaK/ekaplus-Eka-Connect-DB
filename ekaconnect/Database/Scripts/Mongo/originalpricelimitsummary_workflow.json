@@ -1,0 +1,167 @@
+{
+  "_id": "originalpricelimitsummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Summary",
+    "descriptionExpression": "return 'Review ${length} price' + (${length} > 1 ? 's' : '') + ' entered for <b>${bpName} - ${bpRefNo}' + ('${bpExternalName}' ? (' - ' + '${bpExternalName}') : '') + '</b>'",
+    "rowGroup": true,
+    "class": "price-limit-composite",
+    "errorContext": "pricelimits"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "CREATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "data": "output.originalpricelimitsummary",
+          "name": "_ST_PROCESS_ADD_PRICE_SUBMITTEDBY"
+        },
+        {
+          "data": "output._ST_PROCESS_ADD_PRICE_SUBMITTEDBY",
+          "name": "_ST_PROCESS_VALIDATE_SUBMIT_PRICE"
+        },
+        {
+          "data": "output._ST_PROCESS_VALIDATE_SUBMIT_PRICE",
+          "name": "_ST_PROCESS_EXIST_PRICES_UPDATE"
+        },
+        {
+          "data": "output._ST_PROCESS_EXIST_PRICES_UPDATE",
+          "result": {
+            "success": {
+              "message": "Prices have been successfully added"
+            },
+            "failure": { "message": "Please fix errors in ext" },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "appendMsg": true,
+          "name": "_ST_PROCESSOR_ELASTIC_UPDATE_PRICE_DATA_INTERNAL"
+        },
+        {
+          "name": "pricelistingcomposite",
+          "showToaster": true,
+          "restoreState": true,
+          "clearSelected": ["menuDetails", "selected.pricelimitscomposite"]
+        }
+      ],
+      "style": { "margin-right": "15px" },
+      "disableButtonTime": 3000,
+      "label": "Submit",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quality",
+      "label": "Grade",
+      "group": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "site",
+      "label": "Site",
+      "group": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "pricingOption",
+      "label": "Pricing option"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedPrices",
+      "label": "Price ($/MT)",
+      "UIupdates": {
+        "listValue": "return '$'+'${price}' "
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedSustainable",
+      "label": "Sustainable",
+      "UIupdates": {
+        "listValue": "return '${sustainable}' == 'true' ? 'Yes' : '-'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "label": "Start date",
+      "key": "formattedStartDate",
+      "UIupdates": {
+        "listValue": "return '${startDate}' ? moment('${startDate}').format('DD/MM/YYYY') : '-'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedStartTime",
+      "label": "Start time",
+      "cellClass": "cell-icon-class",
+      "UIupdates": {
+        "listValue": "return '${publishImmediately}' !== 'false' ? 'Now' : '${startTime}'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedEnddate",
+      "label": "End date",
+      "UIupdates": {
+        "listValue": "return '${endDate}' ? moment('${endDate}').format('DD/MM/YYYY') : '-'"
+      }
+    },
+    { "edit": false, "sort": false, "key": "endTime", "label": "End time" },
+    {
+      "key": "clientTimezoneOffset",
+      "type": "hidden",
+      "UIupdates": {
+        "listValue": "return new Date().getTimezoneOffset()"
+      }
+    },
+    {
+      "key": "startDateTime",
+      "type": "hidden",
+      "UIupdates": {
+        "listValue": "return moment('${startDate}' + 'T' + '${startTime}' + ':00').utc().format().substring(0, 19) + 'Z'"
+      }
+    },
+    {
+      "key": "endDateTime",
+      "type": "hidden",
+      "UIupdates": {
+        "listValue": "return moment('${endDate}' + 'T' + '${endTime}' + ':00').utc().format().substring(0, 19) + 'Z'"
+      }
+    },
+    {
+      "key": "price",
+      "type": "hidden",
+      "UIupdates": {
+        "listValue": "return Number('${price}').toFixed(2)"
+      }
+    }
+  ],
+  "taskId": "originalpricelimitsummary",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "4f54e0d6-0c3f-45b7-a383-e33fc79d9d07"
+}

@@ -1,0 +1,116 @@
+{
+  "_id": "offerforcontractdetailscomposite_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Offer for contract details page",
+  "version": "V2",
+  "payLoad": "selected.offerforcontractdetailscomposite.data",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "style": {
+        "display": "grid",
+        "margin-left": "10px",
+        "margin-right": "-6px"
+      },
+      "class": "card-ticket-details",
+      "workflows": [
+        {
+          "name": "offerforcontractrequestid",
+          "data": "selected.offerforcontractdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "style": {
+        "display": "grid",
+        "width": "100%",
+        "margin-top": "-15px"
+      },
+      "workflows": [
+        {
+          "name": "offerforcontractoriginalcontactdetail",
+          "data": "selected.offerforcontractdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "style": {
+        "display": "grid",
+        "grid-template-columns": "50%",
+        "margin-top": "-9px"
+      },
+      "workflows": [
+        {
+          "name": "offerforcontractofferdetail",
+          "data": "selected.offerforcontractdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "style": {
+        "display": "grid",
+        "grid-template-columns": "50%",
+        "margin-top": "-9px"
+      },
+      "workflows": [
+        {
+          "name": "offerforcontractrequestordetail",
+          "data": "selected.offerforcontractdetailscomposite.data"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "breadcrumbs": [
+      {
+        "label": "Manage requests",
+        "type": "string",
+        "task": "enterprise"
+      },
+      {
+        "label": "Offer for contract",
+        "type": "string",
+        "value": null
+      }
+    ],
+    "name": "customv2",
+    "menu": false,
+    "customScrollBar": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "enterprise",
+      "outcomes": [
+        {
+          "name": "enterpriselistingcomposite",
+          "clearSelected": ["selected.enterpriselistingcomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "offerforcontractdetailscomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys_UUID": "e320bba2-e4ee-42fe-92af-583a3ca10ada",
+  "deviceType": "mobile"
+}

@@ -1,0 +1,132 @@
+{
+  "_id": "offerforcontractcomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Offer for contract",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "workflows": [
+        {
+          "name": "topmenu_contract"
+        },
+        {
+          "name": "entercontracts"
+        },
+        {
+          "name": "offerforcontractbanner"
+        }
+      ],
+      "style": {
+        "padding-top": "1px"
+      }
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Offer for contract"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "class": "info-banner",
+    "breadcrumbs": [
+      {
+        "label": "Contracts",
+        "type": "string",
+        "task": "contractshome"
+      },
+      {
+        "label": "Offer for contract",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "name": "cancelpopup_offercontract",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px",
+        "margin-top": "5px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "submitoffercontractcomposite"
+        }
+      ],
+      "formLoader": {
+        "text": "Submitting Offer for contract",
+        "secondaryText": "Please do not close or refresh your browser as this may take a few minutes"
+      },
+      "style": {
+        "margin-right": "32px",
+        "margin-top": "5px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    },
+    {
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "validateForm",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "entercontracts"
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "contractshome",
+      "outcomes": [
+        {
+          "name": "contractdomaincomposite",
+          "clearSelected": ["selected.contractdomaincomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "offerforcontractcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "da8064d5-425c-49d2-92e4-9950765c2f6d",
+  "deviceType": "mobile"
+}

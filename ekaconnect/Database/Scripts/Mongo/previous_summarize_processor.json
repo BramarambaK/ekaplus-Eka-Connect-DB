@@ -1,0 +1,9 @@
+{
+  "_id": "previous_summarize_processor",
+  "name": "previous_summarize_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const data = req.body.pricelimitscomposite;\r\n    res.status(200).send({\r\n      bpRefNo: data.enterpricelimits.bpRefNo,\r\n      clientTimezoneOffset: data.enterpricelimits.clientTimezoneOffset,\r\n      publishI: data.enterpricelimits.publishI,\r\n      publishImmediately: data.enterpricelimits.publishImmediately,\r\n      season: data.enterpricelimits.season,\r\n      pricelimits: data.enterpricelimits.pricelimits\r\n    });",
+  "sys__UUID": "c48a5569-8081-4c42-a2f8-c54e25ddbb72"
+}

@@ -1,0 +1,23 @@
+{
+    "_id" : "push_tonnageData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "objectAction" : "CREATE",
+    "taskId" : "push_tonnageData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",       
+    "chainedTasks" : [ 
+        {
+            "name" : "ST_GET_TONNAGEDATA",
+            "appendMsg" : false,
+            "data" : "output.push_tonnageData"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_TONNAGE",
+            "appendMsg" : false,
+            "data" : "output.ST_GET_TONNAGEDATA"
+        }
+    ]
+}

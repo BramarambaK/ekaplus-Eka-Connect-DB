@@ -1,0 +1,147 @@
+{
+  "_id": "offerforcontractoriginalcontactdetail_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract details Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card contract-details-padding-32 original-card-details"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Contract details'"
+      }
+    ],
+    [
+      {
+        "label": "Contract type",
+        "type": "detailsFlex",
+        "key": "contractType",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${contractType}'.length==0?'-':'${contractType}'"
+      },
+      {
+        "label": "Port zone/Delivery region",
+        "type": "detailsFlex",
+        "key": "dischargeLocationCity",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${dischargeLocationCity}'.length==0?'-':'${dischargeLocationCity}'"
+      },
+      {
+        "label": "Commodity",
+        "type": "detailsFlex",
+        "key": "product",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${product}'.length==0?'-':'${product}'"
+      },
+      {
+        "label": "Site",
+        "type": "detailsFlex",
+        "key": "dischargeLocationCity",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${dischargeLocationCity}'.length==0?'-':'${dischargeLocationCity}'"
+      },
+      {
+        "label": "Grade",
+        "type": "detailsFlex",
+        "key": "quality",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${quality}'.length==0 ? '-' : ('${isMultiGrade}'.toLowerCase()== 'y' && !'${quality}'.includes('MG')  ? '${quality}' + ' MG' : '${quality}')"
+      },
+      {
+        "label": "Delivery term",
+        "type": "detailsFlex",
+        "key": "INCOTerm",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${INCOTerm}'.length==0?'-':'${INCOTerm}'"
+      },
+      {
+        "label": "Season",
+        "type": "detailsFlex",
+        "key": "cropYear",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${cropYear}'.length==0?'-':'${cropYear}'"
+      },
+      {
+        "label": "Delivery start",
+        "type": "detailsFlex",
+        "key": "shipmentPeriodFrom",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${shipmentPeriodFrom}'.length==0?'-':moment('${shipmentPeriodFrom}').format('MMM YYYY')"
+      },
+      {
+        "label": "Port zone/Delivery region",
+        "type": "detailsFlex",
+        "key": "dischargeLocationCity",
+        "style": {
+          "width": "50%",
+          "font-size": "15px",
+          "visibility": "hidden"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${dischargeLocationCity}'.length==0?'-':'${dischargeLocationCity}'"
+      },
+      {
+        "label": "Delivery end",
+        "type": "detailsFlex",
+        "key": "shipmentPeriodTo",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${shipmentPeriodTo}'.length==0?'-':moment('${shipmentPeriodTo}').format('MMM YYYY')"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "offerforcontractoriginalcontactdetail",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

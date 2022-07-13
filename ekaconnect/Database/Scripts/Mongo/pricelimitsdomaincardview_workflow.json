@@ -1,0 +1,163 @@
+{
+  "_id": "pricelimitsdomaincardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Prices and limits Card View",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "bfb21563-8521-41be-81a6-9b1d3d615f5d",
+    "isProcessorOnly": true
+  },
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "bfb21563-8521-41be-81a6-9b1d3d615f5d"
+    }
+  },
+  "layout": {
+    "fallback": "You currently have no prices published. \n Prices published today will be displayed here",
+    "header": {
+      "headerExpression": "var sum = ${data}.reduce((a, v) => a + parseInt(v.dailypurchased), 0); return '${data.length} price'; "
+    },
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 10,
+      "type": "showMoreLess"
+    },
+    "cardsListClass": "card-view"
+  },
+  "fields": [
+    [
+      {
+        "key": "commodityHeading",
+        "type": "heading",
+        "class": "header",
+        "valueExpression": "return '${product} - ${quality}'"
+      },
+      {
+        "key": "isActive",
+        "type": "heading",
+        "valueExpression": "return '${status}' === 'Active' ? 'Active' : '${status}' === 'Scheduled' ? 'Scheduled' : 'Expired'",
+        "config": {
+          "classExpression": "return '${status}' === 'Active' ? 'pricelimit-status active': '${status}' === 'Scheduled' ? 'pricelimit-status scheduled':'pricelimit-status expired'"
+        }
+      },
+      {
+        "key": "locationHeading",
+        "type": "heading",
+        "iconClass": "location-icon",
+        "valueExpression": "return '${site}'"
+      },
+      {
+        "key": "quality",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "tabFilter",
+        "filterType": "filterData",
+        "filterExpression": "let selectedProduct = data.data[0] ? data.data[0].product : [];\r\nlet bpExternalCode = data.data[0] ? data.data[0].bpExternalCode : '';\r\nlet selectedPortZones = data.data && data.data.length ? [...new Set(data.data.map(i=>i.region))] : [];\r\nreturn selectedProduct === '${product}' && bpExternalCode === '${bpExternalCode}' && selectedPortZones.includes('${region}') ? true : false;",
+        "type": "hidden"
+      }
+    ],
+    [
+      {
+        "label": "Price",
+        "key": "price",
+        "type": "details",
+        "prefix": "'${price}' ? 'AU$' :'$'",
+        "suffix": " '/'+'${quantityUnit}'",
+        "roundOff": "1.2-2",
+        "format": "Number"
+      },
+      {
+        "label": "Purchased",
+        "key": "purchased",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "roundOff": "1.2-2",
+        "format": "Number"
+      }
+    ],
+    [
+      {
+        "label": "Manage price",
+        "type": "footer",
+        "iconClass": "rightGreen-arrow-icon",
+        "decisionName": "manageprices"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "chart",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": ["costestimatelistplatform"]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    },
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "manageprices",
+      "outcomes": [
+        {
+          "name": "pricelistingcomposite",
+          "setSelected": [
+            "selected.pricelistingcomposite.pricelimitsdomaincardview"
+          ],
+          "restoreStateQuery": "pricelistingcomposite",
+          "restoreQueryExpression": "return { 'tabIndex': ${data}['isActive'] == 'Active' ? 0 : ${data}['isActive'] == 'Expired' ? 2 : 1, 'product': ${data}.product, 'quality': ${data}.quality, 'region': ${data}.region ,'site': ${data}.site, 'status': ${data}.status }",
+          "restoreState": true,
+          "setListingState": [
+            {
+              "setStateQuery": "pricelistingcomposite.pricelistingactive",
+              "applyStateIf": "return ${data}.status == 'Active'",
+              "applyState": {
+                "filter": ["product", "quality", "region", "site"]
+              }
+            },
+            {
+              "setStateQuery": "pricelistingcomposite.pricelistingexpired",
+              "applyStateIf": "return ${data}.status == 'Expired'",
+              "applyState": {
+                "filter": ["product", "quality", "region", "site"]
+              }
+            }
+          ]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "Price and limits Card View",
+  "taskId": "pricelimitsdomaincardview",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "26c8b8c8-70c5-45f1-9867-87fec0efbca3"
+}
