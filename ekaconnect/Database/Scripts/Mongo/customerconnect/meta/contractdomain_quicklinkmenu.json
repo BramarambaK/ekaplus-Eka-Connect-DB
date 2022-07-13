@@ -1,0 +1,42 @@
+{
+  "_id": "contractdomain_quicklinkmenu",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "sys__UUID": "dfacafcc-461c-4d06-8e72-39fa74ad7c56",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "label": "Manage contracts",
+              "handler": "contractlistingcomposite",
+              "visibility": "return '${userInfo.customerType}' === 'Demand Customer' ? false : true"
+            },
+            {
+              "label": "Manage buying contracts",
+              "handler": "contractbuyerlistingcomposite",
+              "visibility": "return '${userInfo.customerType}' === 'Demand Customer' ? true : false"
+            },
+            {
+              "label": "Manage selling contracts",
+              "handler": "contractsellerlistingcomposite",
+              "visibility": "return '${userInfo.customerType}' === 'Demand Customer' ? true : false"
+            },
+            {
+              "label": "Manage tickets",
+              "handler": "buyersellerticketscomposite",
+              "visibility": "return '${userInfo.customerType}' === 'Demand Customer' ? false : true"
+            },
+            {
+              "label": "Make an offer",
+              "handler": "offerforcontractcomposite",
+              "visibility": "return '${userInfo.customerType}' === 'Demand Customer' ? false : true"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

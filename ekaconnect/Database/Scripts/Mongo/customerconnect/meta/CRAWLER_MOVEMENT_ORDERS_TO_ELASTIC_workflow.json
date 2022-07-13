@@ -1,0 +1,25 @@
+{
+  "_id": "CRAWLER_MOVEMENT_ORDERS_TO_ELASTIC",
+  "componentType": "ChainedSystemTask",
+  "version": "V2",
+  "objectAction": "CREATE",
+  "taskId": "CRAWLER_MOVEMENT_ORDERS_TO_ELASTIC",
+  "refType": "app",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "isScheduled": true,
+  "type": "workflow",
+  "chainedTasks": [
+		{
+          "name": "ST_GET_MOVEMENTDATA",
+          "data": "output.CRAWLER_MOVEMENT_ORDERS_TO_ELASTIC",
+          "returnData" : "Y"
+        },
+        {
+          "name": "ELASTIC_BULK_UPLOAD_MOVEMENT_ORDERS",
+          "appendMsg": false,
+          "data": "output.ST_GET_MOVEMENTDATA"
+        }
+  ],
+  "sys__UUID": "c1ebcaf6-6fc1-4519-9e19-eb1668fec473"
+}

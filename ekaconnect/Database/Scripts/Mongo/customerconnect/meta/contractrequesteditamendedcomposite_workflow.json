@@ -1,0 +1,160 @@
+{
+  "_id": "contractrequesteditamendedcomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request contract",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "style": {
+        "display": "grid"
+      },
+      "class": "card-ticket-details",
+      "workflows": [
+        {
+          "name": "contractrequestdetailsrequestid",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "style": {
+        "display": "grid",
+        "grid-template-columns": "50%"
+      },
+      "workflows": [
+        {
+          "name": "contractrequesteditamended",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "style": {
+        "display": "grid",
+        "width": "100%",
+        "margin-top": "22px"
+      },
+      "workflows": [
+        {
+          "name": "contractrequestdetailsoriginalcontactdetail",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "visibility": "return ('${contractrequestdetailscomposite.data.isMultiGrade}' == 'Y') ? true : false",
+      "workflows": [
+        {
+          "name": "contractrequestdetailsspread",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "style": {
+        "display": "grid",
+        "grid-template-columns": "50% 50%"
+      },
+      "visibility": "return ('${contractrequestdetailscomposite.data.requestType}'.toLowerCase() == 'amendment') && ('${contractrequestdetailscomposite.data.INCOTerm}'.toLowerCase() == 'ex-farm') && ('${contractrequestdetailscomposite.data.amendedFreightOrganise}'.toLowerCase().includes('cargill'))",
+      "workflows": [
+        {
+          "name": "contractrequestdetailsamendedfarm",
+          "data": "selected.contractrequestdetailscomposite.data"
+        },
+        {
+          "name": "contractrequestdetailsoriginalfarm",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "visibility": "return ('${contractrequestdetailscomposite.data.requestType}'.toLowerCase() == 'amendment') && ('${contractrequestdetailscomposite.data.INCOTerm}'.toLowerCase() == 'ex-farm') && ('${contractrequestdetailscomposite.data.amendedFreightOrganise}'.toLowerCase().includes('cargill'))",
+      "workflows": [
+        {
+          "style": {
+            "display": "grid",
+            "grid-template-columns": "50% 50%"
+          },
+          "workflows": [
+            {
+              "name": "contractrequestdetails_amendmentpickup",
+              "data": "selected.contractrequestdetailscomposite.data"
+            },
+            {
+              "name": "contractrequestdetails_originalpickup",
+              "data": "selected.contractrequestdetailscomposite.data"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "style": {
+        "display": "grid",
+        "grid-template-columns": "50%"
+      },
+      "workflows": [
+        {
+          "name": "contractrequestdetailsrequestordetail",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Manage requests",
+        "type": "string",
+        "task": "enterprise"
+      },
+      {
+        "label": "Contract request details",
+        "type": "string",
+        "value": null
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "enterprise",
+      "outcomes": [
+        {
+          "name": "enterpriselistingcomposite",
+          "clearSelected": ["selected.enterpriselistingcomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "contractrequesteditamendedcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys_UUID": "a92b7291-0ded-410f-b18f-dbff450ec2b4"
+}

@@ -1,0 +1,25 @@
+{
+    "_id" : "CRAWLER_PAYMENTS_TO_ELASTIC",
+    "componentType" : "ChainedSystemTask",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "taskId" : "CRAWLER_PAYMENTS_TO_ELASTIC",
+    "refType" : "app",
+    "object" : "967db9f1-f006-400f-8dee-e81692973390",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "EXTERNAL_GRAIN_PRICING_REMITTANCE_DATA",
+            "data" : "output.CRAWLER_PAYMENTS_TO_ELASTIC",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_PAYMENT_RECEIPT",
+            "appendMsg" : false,
+            "data" : "output.EXTERNAL_GRAIN_PRICING_REMITTANCE_DATA"
+        }
+    ],
+    "sys__UUID" : "c87148cb-c4fd-485f-a7ea-89f6489da745"
+}

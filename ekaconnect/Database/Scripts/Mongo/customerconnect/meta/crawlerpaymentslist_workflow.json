@@ -1,0 +1,177 @@
+{
+  "_id": "crawlerpaymentslist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "paymentslisting",
+  "object": "4465c36c-84ab-403b-a61e-cf73a37705fe",
+  "label": "Remittance Data",
+  "type": "workflow",
+  "lazyLoading": true,
+  "layout": {
+    "header": {
+      "label": "Payments",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "name": "list",
+    "getInitialData": true,
+    "searchPlaceHolder" : "Search Payments ID",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "serverSearch": true,
+      "columnFilter": true,
+      "serverFilter": true,
+      "sortFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true
+    },
+    "lazyLoading": true,
+    "theme": "theme-grid-white"
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "eka"
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "userType",
+      "sort": true,
+      "key": "userType",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "BPRefNo",
+      "sort": true,
+      "key": "BPRefNo",
+      "align": "right",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "bpName",
+      "sort": true,
+      "key": "bpName",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "payeeID",
+      "sort": true,
+      "key": "payeeID",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "payeeName",
+      "sort": true,
+      "key": "payeeName",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "type",
+      "sort": true,
+      "key": "type",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "paymentreceiptNo",
+      "sort": true,
+      "key": "paymentreceiptNo",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "documentNo",
+      "sort": true,
+      "key": "documentNo",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "documentDate",
+      "sort": true,
+      "key": "documentDate",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "documentCount",
+      "sort": true,
+      "key": "documentCount",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "currency",
+      "sort": true,
+      "key": "currency",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "totalAmount",
+      "sort": true,
+      "key": "totalAmount",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "totalAmountInForeignCurrency",
+      "sort": true,
+      "key": "totalAmountInForeignCurrency",
+      "showColumn": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "fileId",
+      "sort": true,
+      "key": "fileId",
+      "showColumn": true
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST",
+  "version": "V2",
+  "inputData": {
+    "type": "SystemTask",
+    "config": {
+      "id": "CRAWLER_PAYMENTS_TO_ELASTIC",
+      "ttl": 0,
+      "isAsynchCallRequired": "Y",
+      "isElasticCumSystemTask": true
+    }
+  }
+}

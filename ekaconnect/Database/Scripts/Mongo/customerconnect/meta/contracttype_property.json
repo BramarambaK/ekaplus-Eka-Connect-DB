@@ -1,0 +1,22 @@
+{
+  "_id": "contracttype_property",
+  "type": "property",
+  "name": "contracttype",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "150",
+  "defaultValue": [
+    {
+      "key": "Fixed grade",
+      "value": "Fixed grade"
+    },
+    {
+      "key": "Multi-grade",
+      "value": "Multi-grade"
+    }
+  ],
+  "label": "Request Contract type",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Property is used to display dropdown of contract type"
+}

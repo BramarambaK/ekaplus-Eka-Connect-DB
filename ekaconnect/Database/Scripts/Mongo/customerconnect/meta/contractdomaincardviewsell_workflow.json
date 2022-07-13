@@ -1,0 +1,145 @@
+{
+  "_id": "contractdomaincardviewsell_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract Domain Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "var sum = ${data}.reduce((a, v) => a + parseInt(v.contractItemQuantityInBase), 0); return '${data.length} contracts'; "
+    },
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 10,
+      "type": "showMoreLess"
+    },
+    "lastUpdatedPosition": {
+      "padding-bottom": "9px"
+    },
+    "cardsListClass": "card-view"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "class": "header",
+        "valueExpression": "return '${product} - ${quality}'"
+      },
+      {},
+      {
+        "key": "dischargeLocationCity",
+        "type": "heading",
+        "filterType": "groups",
+        "iconClass": "location-icon"
+      },
+      {
+        "key": "cropYear",
+        "type": "heading",
+        "filterType": "groups"
+      },
+      {
+        "key": "quality",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "style": {
+          "display": "none"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Contracts",
+        "key": "contractCount",
+        "aggregateFunction": "count",
+        "type": "details"
+      },
+      {
+        "label": "Total quantity",
+        "key": "contractItemQuantityInBase",
+        "type": "details",
+        "aggregateFunction": "sum",
+        "suffix": "'${contractItemQuantityUnitInBase}'",
+        "roundOff": "round"
+      },
+      {
+        "label": "Open quantity",
+        "key": "itemOpenQuantityInBase",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "suffix": "'${contractItemQuantityUnitInBase}'",
+        "roundOff": "round"
+      }
+    ],
+    [
+      {
+        "label": "Manage selling contracts",
+        "type": "footer",
+        "iconClass": "rightGreen-arrow-icon"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "chart",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": ["costestimatelistplatform"]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    },
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "listing",
+      "outcomes": [
+        {
+          "name": "contractsellerlistingcomposite",
+          "setSelected": [
+            "selected.contractsellerlistingcomposite.contractdomaincardviewsell"
+          ],
+          "setListingState": {
+            "setStateQuery": "contractsellerlistingcomposite.contractopen_demandsell",
+            "applyState": {
+              "filter": [
+                "product",
+                "quality",
+                "cropYear",
+                "dischargeLocationCity"
+              ]
+            }
+          },
+          "restoreStateQuery": "contractsellerlistingcomposite.contractsellerlistingquery",
+          "restoreState": true
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "contractdomaincardviewsell",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

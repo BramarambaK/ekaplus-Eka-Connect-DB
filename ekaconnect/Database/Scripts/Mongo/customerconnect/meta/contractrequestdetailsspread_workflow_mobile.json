@@ -1,0 +1,57 @@
+{
+  "_id": "contractrequestdetailsspread_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request Contract spread  Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "return 'Review you allocation summary for '"
+    },
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card multi-grade contract-details-padding-32 card-spread-floating"
+  },
+  "version": "V2",
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Multi-grade spreads'  + ('${spread}'.toLowerCase().includes('floating') ? '': '${ekaCCSpreadFixed}' ? ' fixed as at ' + '${ekaCCSpreadFixed}' : ' fixed')"
+      }
+    ],
+    [
+      {
+        "key": "floating",
+        "type": "details",
+        "class": "floating-text",
+        "valueExpression": "return 'Floating'",
+        "visibility": "return ('${spread}'.toLowerCase().includes('floating'))? true:false"
+      }
+    ],
+    [
+      {
+        "key": "multiGradeDifferentialDetails",
+        "type": "detailsArray",
+        "class": "multi-grade-details",
+        "valueExpression": "return ${multiGradeDifferentialDetails}.multiGradeDifferentialDetail.map(i => ( { label: i.qualityName, value: i.multiGradeDifferential == null || i.multiGradeDifferential == '' ? '-' : (i.multiGradeDifferential + '').toLowerCase()  == 'base' ? i.multiGradeDifferential : (i.multiGradeDifferential + '').includes('-') ?  '-$' + (-i.multiGradeDifferential).toFixed(2) :  (i.multiGradeDifferential + '').includes('+')  ? '+$' + (+i.multiGradeDifferential).toFixed(2):  '+$' + (+i.multiGradeDifferential).toFixed(2),  class: (i.multiGradeDifferential + '').toLowerCase() == 'base' ? 'base-value' : ''  }))",
+        "visibility": "return ('${spread}'.toLowerCase().includes('floating'))? false:true"
+      }
+    ]
+  ],
+  "labelKey": "Cards View",
+  "taskId": "contractrequestdetailsspread",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "deviceType": "mobile"
+}

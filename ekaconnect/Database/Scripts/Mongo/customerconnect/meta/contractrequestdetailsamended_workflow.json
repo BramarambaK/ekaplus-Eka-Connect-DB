@@ -1,0 +1,111 @@
+{
+  "_id": "contractrequestdetailsamended_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Freight details card view",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card contract-details-padding-32 original-card-details"
+  },
+  "fields": [
+    [
+      {
+        "label": "Amended contract details",
+        "key": "amendmentHeading",
+        "type": "detailsFlex",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header original-details-card-edit",
+        "visibility": "return '${approvalStatus}'.toLowerCase() != 'awaiting review'"
+      },
+      {
+        "label": "Amended contract details",
+        "key": "newHeading",
+        "type": "detailsFlex",
+        "class": "header original-details-card-edit",
+        "valueExpression": "return 'Edit'",
+        "visibility": "return '${approvalStatus}'.toLowerCase() == 'awaiting review'",
+        "decisionName": "edit"
+      }
+    ],
+    [
+      {
+        "label": "Delivery location",
+        "type": "detailsFlex",
+        "key": "amendedCity",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": "return ('${amendedCity}' && ('${amendedCity}'== '${dischargeLocationCity}' || '${amendedCity}'== '${deliveryLocationGroupName}')) ? '-': '${amendedCity}'"
+      },
+      {
+        "label": "Delivery start",
+        "type": "detailsFlex",
+        "key": "amendedShipmentFrom",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": "return ('${amendedShipmentFrom}' && moment('${amendedShipmentFrom}').format('DD-MM-YYYY') != moment('${shipmentPeriodFrom}').format('DD-MM-YYYY')) ? moment('${amendedShipmentFrom}').format('MMM YYYY') : '-'"
+      },
+      {
+        "label": "Delivery end",
+        "type": "detailsFlex",
+        "key": "amendedShipmentTo",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": "return ('${amendedShipmentTo}' && moment('${amendedShipmentTo}').format('MMM YYYY') != moment('${shipmentPeriodTo}').format('MMM YYYY')) ? moment('${amendedShipmentTo}').format('MMM YYYY') : '-'"
+      },
+      {
+        "label": "Price (/MT)",
+        "type": "detailsFlex",
+        "key": "amendedPrice",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": "return ('${amendedPrice}' && '${amendedPrice}' != '${contractPrice}') ? '$'+ Number('${amendedPrice}').toFixed(2) : '-'"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "UPDATE",
+      "decisionName": "edit",
+      "task": "edit",
+      "outcomes": [
+        {
+          "data": "selected.contractrequestdetailscomposite",
+          "name": "contractrequesteditamendedcomposite"
+        }
+      ]
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "contractrequestdetailsamended",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "01d05798-cd33-42c3-ae2e-cdb8b4de053a"
+}

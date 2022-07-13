@@ -1,0 +1,184 @@
+{
+    "_id": "crawlermovementorderslist_workflow",
+    "componentType": "UserTask",
+    "objectAction": "LISTVIEW",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId": "movementorderslisting",
+    "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+    "label": "crawlermovementorderslist",
+    "type": "workflow",
+    "lazyLoading": true,
+    "layout": {
+      "header": {
+        "label": "Movements",
+        "style": {
+          "font-size": "22px"
+        }
+      },
+      "name": "list",
+      "getInitialData": true,
+      "searchPlaceHolder" : "Search Movement Order ID",
+      "options" : {
+        "filter": true,
+        "lastUpdated": false,
+        "serverSearch": true,
+        "columnFilter": true,
+        "serverFilter": true,
+        "sortFilter": true,
+        "search": true,
+        "reload": true,
+        "reset": true,
+        "export": true
+    },
+      "theme": "theme-grid-white"
+    },
+    "template": [
+      {
+        "deviceType": "web",
+        "template": "eka"
+      },
+      {
+        "deviceType": "mobile",
+        "template": "cargill-mobile",
+        "config": {
+          "aside": ""
+        }
+      }
+    ],
+    "fields": [
+      {
+        "filter": true,
+        "edit": false,
+        "label": "deliveryDateTo",
+        "sort": true,
+        "key": "deliveryDateTo"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "product",
+        "sort": true,
+        "key": "product"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "orderedQuantity",
+        "sort": true,
+        "key": "orderedQuantity"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "movementOrder",
+        "sort": true,
+        "key": "movementOrder",
+        "align": "right"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "movementRefNo",
+        "sort": true,
+        "key": "movementRefNo"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "quantityUnit",
+        "sort": true,
+        "key": "quantityUnit"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "openQuantity",
+        "sort": true,
+        "key": "openQuantity"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "dispatchedQuantity",
+        "sort": true,
+        "key": "dispatchedQuantity"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "quality",
+        "sort": true,
+        "key": "quality"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "bpRefNo",
+        "sort": true,
+        "key": "bpRefNo"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "bpName",
+        "sort": true,
+        "key": "bpName"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "cropYear",
+        "sort": true,
+        "key": "cropYear"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "transportMode",
+        "sort": true,
+        "key": "transportMode"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "location",
+        "sort": true,
+        "key": "location"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "userType",
+        "sort": true,
+        "key": "userType"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "deliveryFromDate",
+        "sort": true,
+        "key": "deliveryFromDate"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "status",
+        "sort": true,
+        "key": "status"
+      }
+    ],
+    "decisions": [],
+    "labelKey": "LIST",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "CRAWLER_MOVEMENT_ORDERS_TO_ELASTIC",
+            "ttl" : 0,
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true
+        }
+    }
+  }
+  

@@ -1,0 +1,109 @@
+{
+  "_id": "connectticketslist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "connectticketslist",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "label": "connectticketslist",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Tickets",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "name": "connectticketslist"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "product",
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "quantity",
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "ticketRefNo",
+      "sort": true,
+      "key": "ticketRefNo",
+      "align": "right"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "origin",
+      "sort": true,
+      "key": "origin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "quantityUnit",
+      "sort": true,
+      "key": "quantityUnit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "quality",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "bpRefNo",
+      "sort": true,
+      "key": "bpRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "site",
+      "sort": true,
+      "key": "site"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "bpName",
+      "sort": true,
+      "key": "bpName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "cropYear",
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "ticketStatus",
+      "sort": true,
+      "key": "ticketStatus"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "userType",
+      "sort": true,
+      "key": "userType"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

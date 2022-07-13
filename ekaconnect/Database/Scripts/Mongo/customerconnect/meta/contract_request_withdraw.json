@@ -1,0 +1,95 @@
+{
+  "_id": "contract_request_withdraw",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Withdraw request",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to withdraw ${requestId}\\?",
+      "headerMessage": "Withdraw request",
+      "information": "This will no longer be available.",
+      "config": {
+        "bodyMessageExpression": "return ${selectedCount} > 1 ? 'Are you sure you want to withdraw ${selectedCount} request\\?' : 'Are you sure you want to withdraw ${requestId}\\?';",
+        "headerMessageExpression": "return ${selectedCount} > 1 ? 'Withdraw ${selectedCount} request' : 'Withdraw request'"
+      }
+    },
+    "showErrorInToastr": true
+  },
+  "input": ["approvalStatus,requestId"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "contractlistingcomposite",
+          "restoreState": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn cargill-btn",
+      "objectAction": "DELETE",
+      "labelkey": "UPDATE",
+      "task": "contract_request_withdraw",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Withdraw request successfully",
+              "messageExpression": "return '${requestId} has been successfully withdrawn.'"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Withdraw request with some errors"
+            }
+          },
+          "data": "output.contract_request_withdraw",
+          "appendMsg": true,
+          "name": "_ST_PROCESS_CONTRACT_WITHDRAW"
+        },
+        {
+          "name": "contractlistingcomposite",
+          "showToaster": true,
+          "restoreState": true,
+          "isDelay": true
+        }
+      ],
+      "label": "Withdraw request",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "contractlistingcomposite",
+          "restoreState": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "WITHDRAW_PRICE_LIMIT",
+  "fields": [
+    {
+      "heading": "requestId"
+    }
+  ],
+  "taskId": "contract_request_withdraw",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "2de465ec-bf56-428b-b605-92bb2a5d45fb"
+}

@@ -1,0 +1,24 @@
+{
+    "_id" : "CRAWLER_ACCOUNTSQUERY_TO_ELASTIC",
+    "componentType" : "ChainedSystemTask",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "taskId" : "CRAWLER_ACCOUNTSQUERY_TO_ELASTIC",
+    "refType" : "app",
+    "object" : "967db9f1-f006-400f-8dee-e81692973390",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "MULTI_API_ACCOUNTS",
+            "data" : "output.CRAWLER_ACCOUNTSQUERY_TO_ELASTIC",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_ACCOUNTS",
+            "data" : "output.MULTI_API_ACCOUNTS"
+        }
+    ],
+    "sys__UUID" : "f3df9a08-afc7-4d0e-998f-333f627e0394"
+}

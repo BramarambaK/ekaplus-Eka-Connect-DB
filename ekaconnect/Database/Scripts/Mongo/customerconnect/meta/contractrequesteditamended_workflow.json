@@ -1,0 +1,315 @@
+{
+  "_id": "contractrequesteditamended_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Amended contract details",
+  "type": "workflow",
+  "version": "V2",
+  "processorInfo": {
+    "processorId": "07708387-480b-419a-ad77-1ff1470afbaa",
+    "isProcessorOnly": true
+  },
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "07708387-480b-419a-ad77-1ff1470afbaa"
+    }
+  },
+  "layout": {
+    "mdmPayload": {
+      "data": "selected.contractrequestdetailscomposite.data"
+    },
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+      "width": "100%"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "7px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "name": "create",
+    "formStyle": {
+      "margin": "10px",
+      "max-width": "100%",
+      "padding-left": "15px"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "cardClass": "cargill-form amended-edit-card amended-contract-details",
+    "processorInfo": {
+      "processorId": "2f707092-6494-418c-9c96-c05bada6a18a"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty cancel-button-primary",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "contractrequestdetailscomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "13px",
+        "position": "absolute",
+        "top": "0",
+        "right": "0",
+        "margin-top": "29px",
+        "font-size": "12px",
+        "font-weight": "bold",
+        "line-height": "16px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "label": "Save",
+      "decisionName": "compositeSave",
+      "type": "submit",
+      "position": "bottom",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "data": "selected.contractrequesteditamendedcomposite.contractrequesteditamended",
+          "name": "contract_amendededit_request"
+        }
+      ]
+    }
+  ],
+  "labelKey": "ENTER_LIMITS",
+  "fields": [
+    [
+      {
+        "style": {
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-top": "5px",
+          "margin-right": "25px"
+        },
+        "formLabelStyle": {
+          "margin-bottom": "6px"
+        },
+        "suffix": "",
+        "key": "amendedCity"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "287px",
+          "margin": "0"
+        },
+        "formItemStyle": {
+          "margin-top": "5px",
+          "margin-right": "25px"
+        },
+        "formLabelStyle": {
+          "margin-bottom": "6px"
+        },
+        "suffix": "",
+        "key": "amendedCity"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "287px",
+          "margin": "0"
+        },
+        "formItemStyle": {
+          "margin-top": "5px",
+          "margin-right": "25px"
+        },
+        "formLabelStyle": {
+          "margin-bottom": "6px"
+        },
+        "suffix": "",
+        "key": "editAmendedShipmentFrom"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "287px",
+          "margin": "0"
+        },
+        "formItemStyle": {
+          "margin-top": "5px",
+          "margin-right": "25px"
+        },
+        "formLabelStyle": {
+          "margin-bottom": "6px"
+        },
+        "suffix": "",
+        "key": "editAmendedShipmentTo"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "295px",
+          "margin": "0"
+        },
+        "formLabelStyle": {
+          "margin-bottom": "6px"
+        },
+        "formItemStyle": {
+          "margin-top": "5px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "amendedPrice",
+        "class": ["amended-edit-price-value"]
+      }
+    ],
+    [
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "requestedBy"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "disableDelivery"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "BPRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "requestId"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractItemRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "requestIdUnique"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "modifiedUser"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "employeeOperatorUser"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "employeeCreatedByUser"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "employeeOperatorModifiedUser"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "employeeCreatedByModifiedUser"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "growerCreatedBy"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "growerOperator"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedShipmentFrom"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedShipmentTo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "approvalStatus"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "brokerRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "brokerBPRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedBrokerRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedBrokerBPRefNo"
+      }
+    ]
+  ],
+  "taskId": "contractrequesteditamended",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "54e3699a-1d89-421a-8df9-aa89d454e28e"
+}

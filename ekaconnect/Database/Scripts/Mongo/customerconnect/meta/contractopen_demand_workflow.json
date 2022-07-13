@@ -1,0 +1,231 @@
+{
+  "_id": "contractopen_demand_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "contractopen_demand",
+  "label": "Manage Contracts",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "8b6983ff-0de6-4c63-9590-a7789e1a8f7b",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. Contract ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "tableEditing": false,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract ID",
+      "sort": true,
+      "key": "contractRefNo",
+      "hidden": false,
+      "category": "link",
+      "task": "download-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear",
+      "primaryFilter": true
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract quantity (MT)",
+      "sort": true,
+      "key": "contractItemQuantityInBase",
+      "width": "170px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Open quantity (MT)",
+      "sort": true,
+      "key": "itemOpenQuantityInBase",
+      "width": "160px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Price (/MT)",
+      "sort": true,
+      "key": "priceDetails",
+      "UIupdates": {
+        "listValue": "if('${priceType}'=='Fixed'){if(Number(Number('${priceDetails}'.split(' ')[0]. replace(/'|,|/g, '')).toFixed(2)).toLocaleString().indexOf('.')>0){return '$'+Number(Number('${priceDetails}'.split(' ')[0]. replace(/'|,|/g, '')).toFixed(2)).toLocaleString()}else{ return '$'+Number(Number('${priceDetails}'.split(' ')[0]. replace(/'|,|/g, '')).toFixed(2)).toLocaleString()+'.00'}}"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery location",
+      "sort": true,
+      "key": "dischargeLocationCity",
+      "primaryFilter": true,
+      "width": "160px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Delivery term",
+      "sort": true,
+      "key": "INCOTerm"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery start",
+      "sort": true,
+      "key": "shipmentPeriodFrom",
+      "dateformat": "DD/MM/YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery end",
+      "sort": true,
+      "key": "shipmentPeriodTo",
+      "dateformat": "DD/MM/YYYY"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "label": "Signature",
+      "sort": true,
+      "key": "sign"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "label": "Customer ref",
+      "sort": true,
+      "key": "customerRef",
+      "maxcharlength": "100"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.contractbuyerlistingcomposite.contractopen_demand",
+          "name": "viewcontractdemandbuyingcomposite"
+        }
+      ],
+      "position": "top",
+      "label": "View request details",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "task": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+      "workflowTaskName": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+      "outcomes": [
+        {
+          "name": "viewcontractdemandbuyingcomposite",
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+          "setSelected": [
+            "selected.contractbuyerlistingcomposite.contractopen_demand"
+          ]
+        }
+      ]
+    },
+    {
+      "customActionIcon": true,
+      "hideActionHeader": true,
+      "objectAction": "UPDATE",
+      "selection": "row",
+      "task": "update_contractDomainData",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Contract data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Contract data got replaced with some errors"
+            }
+          },
+          "displayType": "inlineEdit"
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST"
+}

@@ -1,0 +1,24 @@
+{
+  "_id": "CRAWLER_INVENTORY_TO_ELASTIC_workflow",
+  "componentType": "ChainedSystemTask",
+  "version": "V2",
+  "objectAction": "CREATE",
+  "taskId": "CRAWLER_INVENTORY_TO_ELASTIC",
+  "refType": "app",
+  "object": "f895de3c-5f05-4671-b70d-4c180078fc07",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "isScheduled": true,
+  "type": "workflow",
+  "chainedTasks": [
+    {
+      "name": "ST_GET_INVENTORYDATA",
+      "data": "output.CRAWLER_INVENTORY_TO_ELASTIC",
+      "returnData" : "Y"
+    },
+    {
+      "name": "ELASTIC_BULK_UPLOAD_INVENTORY",
+      "appendMsg": false,
+      "data": "output.ST_GET_INVENTORYDATA"
+    }
+  ]
+}

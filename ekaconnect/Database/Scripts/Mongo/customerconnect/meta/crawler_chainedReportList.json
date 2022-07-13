@@ -1,0 +1,22 @@
+{
+    "_id" : "crawler_chainedReportList",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "5058fd57-6ff8-4be8-8598-27250a75f029",
+    "objectAction" : "LISTVIEW",
+    "taskId" : "crawler_chainedReportList",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "MULTI_API_FAVOURITE",
+            "data" : "output.crawler_chainedReportList",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_REPORTS",
+            "data" : "output.MULTI_API_FAVOURITE"
+        }
+    ]
+}

@@ -1,0 +1,196 @@
+{
+  "_id": "contractlistingcomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "style": {
+            "width": "100%"
+          },
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "contractlistingquery"
+                }
+              ]
+            },
+            {
+              "display": "tabs",
+              "styleClass": "tabview-1",
+              "workflows": [
+                {
+                  "tabHeader": "OPEN",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no open contracts",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "contractlistingcomposite.contractlistingquery.Open",
+                    "tabHeader": "return 'OPEN (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractopen",
+                          "data": "selected.contractlistingcomposite.contractlistingquery.Open"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.contractlistingcomposite.contractlistingquery.Open"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "COMPLETE",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no complete contracts",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "contractlistingcomposite.contractlistingquery.Complete",
+                    "tabHeader": "return 'COMPLETE (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractcomplete",
+                          "data": "selected.contractlistingcomposite.contractlistingquery.Complete"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.contractlistingcomposite.contractlistingquery.Complete"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "REQUESTS",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no contract requests",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "contractlistingcomposite.contractlistingquery.Requests",
+                    "tabHeader": "return 'REQUESTS (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractrequests",
+                          "data": "selected.contractlistingcomposite.contractlistingquery.Requests"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.contractlistingcomposite.contractlistingquery.Requests"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Contracts",
+        "type": "string",
+        "task": "contractshome"
+      },
+      {
+        "label": "Manage contracts",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "menu": false,
+    "supportCustomization": true,
+    "customScrollBar": true,
+    "queryParam": true,
+    "clearSelected": ["selected", "menuDetails"]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "contractshome",
+      "outcomes": [
+        {
+          "name": "contractdomaincomposite",
+          "clearSelected": ["selected.contractdomaincomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "contractlistingcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "a9d30f48-57c5-47c2-9e12-982e7808c508"
+}

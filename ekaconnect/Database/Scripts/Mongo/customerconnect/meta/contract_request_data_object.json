@@ -1,0 +1,251 @@
+{
+  "_id": "contract_request_data_object",
+  "name": "contract_request_data_object",
+  "label": "Contract Request Data Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["requestId"],
+  "fields": {
+    "requestId": {
+      "requestId": "Request id",
+      "labelKey": "requestId",
+      "serialNumber" : {
+        "startsWith" : "1",
+        "prefix" : "REQ",
+        "fieldNumericLength" : "7"
+      }
+    },
+    "requestType": {
+      "requestType": "Request type",
+      "labelKey": "requestType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "requestedDate": {
+      "requestedDate": "Requested date",
+      "labelKey": "requestedDate",
+      "type": "date",
+      "sourceDateFormat": "dd-MM-yyyy",
+      "isRequired": false,
+      "dataType": "Date"
+    },
+    "requestedBy": {
+      "requestedBy": "Requested by",
+      "labelKey": "requestedBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "requestPayload" : {
+      "requestPayload" : "CTRM Request Payload",
+      "labelKey" : "requestPayload",
+      "type" : "textbox",
+      "isRequired" : false,
+      "dataType" : "object"
+    },
+    "contractRefNo" : {
+      "contractRefNo" : "Contract Ref No",
+      "labelKey" : "contractRefNo",
+      "type" : "textbox",
+      "isRequired" : false,
+      "dataType" : "String"
+    },
+    "contractItemRefNo" : {
+      "contractItemRefNo" : "contract Item Ref No",
+      "labelKey" : "contractItemRefNo",
+      "type" : "textbox",
+      "isRequired" : false,
+      "dataType" : "String"
+    },
+    "isRequestActive": {
+      "isRequestActive": "Is Request Active",
+      "labelKey": "isRequestActive",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "boolean"
+    },
+	"spread": {
+      "spread": "Would you like to fix the spreads?",
+      "labelKey": "spread",
+      "type": "radio",
+      "dataType": "String",
+      "propertyKey": "requestcontractspreadquestion"
+    },
+    "freightOrganise": {
+      "freightOrganise": "Who would you like to organise freight and logistics?",
+      "labelKey": "freightOrganise",
+      "type": "radio",
+      "dataType": "String",
+      "propertyKey": "freightorganisequestion"
+    },
+    "fullname": {
+      "fullname": "Full name",
+      "labelKey": "fullname",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "phonenumber": {
+      "phonenumber": "Phone number",
+      "labelKey": "phonenumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "validationRegex": "^[0-9]*$"
+    },
+    "email": {
+      "email": "Email",
+      "labelKey": "email",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "pickuplocation": {
+      "pickuplocation": "Pickup Location",
+      "labelKey": "pickuplocation",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "object"
+    },
+	"programName": {
+      "programName": "Program Name/Template Name",
+      "labelKey": "programName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+	"markettype": {
+      "markettype": "Market Type",
+      "labelKey": "markettype",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "issustainable": {
+      "issustainable": "Is Sustainable",
+      "labelKey": "issustainable",
+      "type": "textbox",
+      "sourceTextFormat": {
+        "textFormatLabel": "Y/N",
+        "textFormat": "^$|\\s*$|Y|N"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bidid": {
+      "bidid": "Bid ID",
+      "labelKey": "bidid",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "portzone": {
+      "portzone": "Port Zone",
+      "labelKey": "portzone",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "deliveryLocationGroupName": {
+      "deliveryLocationGroupName": "Delivery Location Group Name",
+      "labelKey": "deliveryLocationGroupName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bulkHandler": {
+      "bulkHandler": "Bulk Handler",
+      "labelKey": "bulkHandler",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dischargeLocationState": {
+      "dischargeLocationState": "Discharge Location State",
+      "labelKey": "dischargeLocationState",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "profitCentre": {
+      "profitCentre": "Profit Centre",
+      "labelKey": "profitCentre",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+	    "modifiedUser": {
+      "modifiedUser": "Request Contract Modified User",
+      "labelKey": "modifiedUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeOperatorUser": {
+      "employeeOperatorUser": "Request Contract Employee Operator User",
+      "labelKey": "employeeOperatorUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeCreatedByUser": {
+      "employeeCreatedByUser": "Request Contract Employee Created By User",
+      "labelKey": "employeeCreatedByUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeOperatorModifiedUser": {
+      "employeeOperatorModifiedUser": "Request Contract Employee Modified Operator User",
+      "labelKey": "employeeOperatorModifiedUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeCreatedByModifiedUser": {
+      "employeeCreatedByModifiedUser": "Request Contract Employee Modified Created By User",
+      "labelKey": "employeeCreatedByModifiedUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "growerCreatedBy": {
+      "growerCreatedBy": "Request Contract Grower Created By User",
+      "labelKey": "growerCreatedBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "growerOperator": {
+      "growerOperator": "Request Contract Grower Operator User",
+      "labelKey": "growerOperator",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "multiGradeDifferentialDetails": {
+      "multiGradeDifferentialDetails": "Multi Grade Differential Details",
+      "labelKey": "multiGradeDifferentialDetails",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "object"
+    },
+    "ekaCCSpreadFixed": {
+      "ekaCCSpreadFixed": "Spread Fixed By Eka CC",
+      "labelKey": "ekaCCSpreadFixed",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "3725efac-7f2a-462b-8af0-5462e33cf544"
+}

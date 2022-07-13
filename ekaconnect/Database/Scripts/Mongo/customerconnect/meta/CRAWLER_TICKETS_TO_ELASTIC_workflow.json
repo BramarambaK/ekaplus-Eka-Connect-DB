@@ -1,0 +1,24 @@
+{
+  "_id": "CRAWLER_TICKETS_TO_ELASTIC_workflow",
+  "componentType": "ChainedSystemTask",
+  "version": "V2",
+  "objectAction": "CREATE",
+  "taskId": "CRAWLER_TICKETS_TO_ELASTIC",
+  "refType": "app",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "isScheduled": true,
+  "type": "workflow",
+  "chainedTasks": [
+		{
+          "name": "ST_GET_TICKETDATA",
+          "data": "output.CRAWLER_TICKETS_TO_ELASTIC",
+          "returnData" : "Y"
+        },
+        {
+          "name": "ELASTIC_BULK_UPLOAD_TICKETS",
+          "appendMsg": false,
+          "data": "output.ST_GET_TICKETDATA"
+        }
+  ]
+}

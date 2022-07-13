@@ -1,0 +1,259 @@
+{
+  "_id": "contractopen_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "contractopen",
+  "label": "Manage Contracts",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "6efbc55d-2393-436f-8378-de0c6a46c076",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "mdmPayload": {},
+    "name": "list",
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. Contract ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": false,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "single",
+    "resetSelection": true,
+    "tableEditing": false,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true,
+    "dropdownDecisions": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract ID",
+      "sort": true,
+      "key": "contractRefNo",
+      "hidden": false,
+      "task": "download-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract quantity (MT)",
+      "sort": true,
+      "key": "contractItemQuantityInBase",
+      "width": "170px",
+      "UIupdates": {
+        "listValue": "return '${contractItemQuantityInBase}' ? Number('${contractItemQuantityInBase}').toFixed(2) : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Open quantity (MT)",
+      "sort": true,
+      "key": "itemOpenQuantityInBase",
+      "width": "160px",
+      "UIupdates": {
+        "listValue": "return '${itemOpenQuantityInBase}' ? Number('${itemOpenQuantityInBase}').toFixed(2) : '-'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Price (/MT)",
+      "sort": true,
+      "key": "contractPrice",
+      "UIupdates": {
+        "listValue": "if('${priceType}'=='Fixed'){if(Number(Number('${priceDetails}'.split(' ')[0]. replace(/'|,|/g, '')).toFixed(2)).toLocaleString().indexOf('.')>0){return '$'+Number(Number('${priceDetails}'.split(' ')[0]. replace(/'|,|/g, '')).toFixed(2)).toLocaleString()}else{ return '$'+Number(Number('${priceDetails}'.split(' ')[0]. replace(/'|,|/g, '')).toFixed(2)).toLocaleString()+'.00'}}"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery location",
+      "sort": true,
+      "key": "dischargeLocationCity",
+      "width": "160px",
+      "UIupdates": {
+        "listValue": "if('${dischargeLocationCity}'){return '${dischargeLocationCity}'} else {if('${deliveryLocationGroupName}'){return '${deliveryLocationGroupName}'} else {return '-'}}"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Delivery term",
+      "sort": true,
+      "key": "INCOTerm"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery start",
+      "sort": true,
+      "key": "shipmentPeriodFrom",
+      "dateformat": "DD/MM/YYYY",
+      "sourceDateFormat": "YYYY-MM-DD"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery end",
+      "sort": true,
+      "key": "shipmentPeriodTo",
+      "dateformat": "DD/MM/YYYY",
+      "sourceDateFormat": "YYYY-MM-DD"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "label": "Broker ref",
+      "sort": true,
+      "key": "brokerRefNo",
+      "maxcharlength": "100"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "task": "requestDetails",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.contractopen",
+          "name": "_ST_PROCESS_OPEN_TAB_REQUEST_DETAILS"
+        },
+        {
+          "data": "output._ST_PROCESS_OPEN_TAB_REQUEST_DETAILS",
+          "name": "viewrequesteddetails",
+          "setSelected": ["selected.contractlistingcomposite.contractrequests"]
+        }
+      ],
+      "position": "top",
+      "label": "View request details",
+      "iconClass": "createicon",
+      "disabled": "(selected.contractlistingcomposite.contractopen.requestId && selected.contractlistingcomposite.contractopen.requestId != '-' || (selected.contractlistingcomposite.contractopen.approvalStatus.toLowerCase() == 'awaiting review')) ? false : true"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "task": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+      "workflowTaskName": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+      "outcomes": [
+        {
+          "name": "viewcontractdetailscomposite",
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+          "setSelected": ["selected.contractlistingcomposite.contractopen"]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.contractlistingcomposite.contractopen",
+          "name": "amendment_requestcontractcomposite",
+          "setSelected": [
+            "selected.amendment_requestcontractcomposite.queryParams",
+            "selected.amendment_requestcontractcomposite.amendment_requestcontractdetailsform",
+            "selected.amendment_requestcontractspreadcomposite.amendment_requestcontractspreadquestion",
+            "selected.amendment_requestcontractfreightcomposite.amendment_requestcontractfreightdetails",
+            "selected.amendment_submitrequestcontractcomposite.data",
+            "selected.requesteddetails.data"
+          ]
+        }
+      ],
+      "position": "top",
+      "label": "Request contract amendment",
+      "disabled": "((selected.contractlistingcomposite.contractopen.length>=2) || (selected.contractlistingcomposite.contractopen.approvalStatus.toLowerCase() == 'awaiting review') || (selected.contractlistingcomposite.contractopen.approvalStatus.toLowerCase() == 'action required'))",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "selection": "allocation",
+      "task": "compositeSave",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.contractopen",
+          "appendMsg": false,
+          "name": "_ST_ALLOCATE_FROM_CONTRACT"
+        },
+        {
+          "data": "output._ST_ALLOCATE_FROM_CONTRACT",
+          "name": "allocateticketcontractcomposite",
+          "dirtyCheckFulfilled": true,
+          "setSelected": ["selected.allocateticketcontractcomposite"]
+        }
+      ],
+      "position": "top",
+      "label": "Allocate tickets",
+      "iconClass": "createicon"
+    }
+  ],
+  "labelKey": "LIST",
+  "deviceType": "mobile"
+}

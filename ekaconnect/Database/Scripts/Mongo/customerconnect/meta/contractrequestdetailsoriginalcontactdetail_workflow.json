@@ -1,0 +1,179 @@
+{
+  "_id": "contractrequestdetailsoriginalcontactdetail_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract details Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card contract-details-padding-32 original-card-details"
+  },
+  "fields": [
+    [
+      {
+        "label": "Contract details",
+        "key": "amendmentHeading",
+        "type": "detailsFlex",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header original-details-card-edit",
+        "visibility": "return '${requestType}'.toLowerCase() != 'new contract' || '${approvalStatus}'.toLowerCase() != 'awaiting review'"
+      },
+      {
+        "label": "Contract details",
+        "key": "newHeading",
+        "type": "detailsFlex",
+        "class": "header original-details-card-edit",
+        "valueExpression": "return 'Edit'",
+        "visibility": "return '${requestType}'.toLowerCase() == 'new contract' && '${approvalStatus}'.toLowerCase() == 'awaiting review'",
+        "decisionName": "edit"
+      }
+    ],
+    [
+      {
+        "label": "Contract type",
+        "type": "detailsFlex",
+        "key": "contractType",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return ('${isMultiGrade}' && '${isMultiGrade}'.toLowerCase()== 'y')?'Multi-grade':('${isMultiGrade}' && '${isMultiGrade}'.toLowerCase()== 'n')? 'Fixed grade':'-'"
+      },
+      {
+        "label": "Payment term",
+        "type": "detailsFlex",
+        "key": "paymentTerms",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${paymentTerms}'.length==0?'-':'${paymentTerms}'"
+      },
+      {
+        "label": "Commodity",
+        "type": "detailsFlex",
+        "key": "product",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${product}'.length==0?'-':'${product}'"
+      },
+      {
+        "label": "Delivery term",
+        "type": "detailsFlex",
+        "key": "INCOTerm",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${INCOTerm}'.length==0?'-':'${INCOTerm}'"
+      },
+      {
+        "label": "Grade",
+        "type": "detailsFlex",
+        "key": "quality",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${quality}'.length==0 ? '-' : ('${isMultiGrade}'.toLowerCase()== 'y' && !'${quality}'.includes('MG')  ? '${quality}' + ' MG' : '${quality}')"
+      },
+      {
+        "label": "Delivery location",
+        "type": "detailsFlex",
+        "key": "dischargeLocationCity",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${locationGroupType}'.toLowerCase() == 'specific location' ? '${dischargeLocationCity}': '${locationGroupType}'.toLowerCase() != 'specific location' ? '${deliveryLocationGroupName}' || '${dischargeLocationCountry}'.split('_')[1]  : ('${dischargeLocationCountry}' && '${dischargeLocationCountry}'.split('_').length >1) ? '${dischargeLocationCountry}'.split('_')[1]: '-'"
+      },
+      {
+        "label": "Season",
+        "type": "detailsFlex",
+        "key": "cropYear",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${cropYear}'.length==0?'-':'${cropYear}'"
+      },
+      {
+        "label": "Delivery start",
+        "type": "detailsFlex",
+        "key": "shipmentPeriodFrom",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${shipmentPeriodFrom}'.length==0?'-':moment('${shipmentPeriodFrom}').format('MMM YYYY')"
+      },
+      {
+        "label": "Quantity (MT)",
+        "type": "detailsFlex",
+        "key": "contractItemQuantityInBase",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${contractItemQuantity}'.length==0?'-':'${contractItemQuantity}'+' MT'"
+      },
+      {
+        "label": "Delivery end",
+        "type": "detailsFlex",
+        "key": "shipmentPeriodTo",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${shipmentPeriodTo}'.length==0?'-':moment('${shipmentPeriodTo}').format('MMM YYYY')"
+      },
+      {
+        "label": "Price (/MT)",
+        "type": "detailsFlex",
+        "key": "contractPrice",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": "return '$'+ Number(${contractPrice}).toFixed(2)"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "UPDATE",
+      "decisionName": "edit",
+      "task": "edit",
+      "outcomes": [
+        {
+          "data": "selected.contractrequestdetailscomposite",
+          "name": "contractrequesteditoriginalcomposite"
+        }
+      ]
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "contractrequestdetailsoriginalcontactdetail",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

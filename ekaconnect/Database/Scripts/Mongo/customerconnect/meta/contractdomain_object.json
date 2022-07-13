@@ -1,0 +1,1155 @@
+{
+  "_id": "contractdomain_object",
+  "name": "contractdomain_object",
+  "label": "Contract Domain Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["contractRefNo", "contractItemRefNo", "requestIdUnique"],
+  "fields": {
+    "contractType": {
+      "contractType": "CP Contract Type",
+      "labelKey": "contractType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractSubType": {
+      "contractSubType": "Contract Sub Type",
+      "labelKey": "contractSubType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "userType": {
+      "userType": "User Type",
+      "labelKey": "userType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "BPRefNo": {
+      "BPRefNo": "BP Ref No",
+      "labelKey": "BPRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "brokerRefNo": {
+      "brokerRefNo": "Broker Ref No",
+      "labelKey": "brokerRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "INCOTerm": {
+      "INCOTerm": "Delivery term",
+      "labelKey": "INCOTerm",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterPartyName": {
+      "counterPartyName": "NGR",
+      "labelKey": "counterPartyName",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "counterpartynamekey"
+    },
+    "contractRefNo": {
+      "contractRefNo": "Contract Ref No",
+      "labelKey": "contractRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractItemRefNo": {
+      "contractItemRefNo": "Contract Item Ref No",
+      "labelKey": "contractItemRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Commodity",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "origin": {
+      "origin": "Origin",
+      "labelKey": "origin",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Grade",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "cropYear": {
+      "cropYear": "Season",
+      "labelKey": "cropYear",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "customerRef": {
+      "customerRef": "Customer ref",
+      "labelKey": "customerRef",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractItemQuantity": {
+      "contractItemQuantity": "Quantity (MT)",
+      "labelKey": "contractItemQuantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "UIupdates": {
+        "value": "return '${contractItemQuantity}'.toFixed(2)"
+      },
+      "validationRegex": "^\\d+\\.?\\d{0,2}$",
+      "inputMode": "decimal"
+    },
+    "itemExecutedQty": {
+      "itemExecutedQty": "Executed Quantity",
+      "labelKey": "itemExecutedQty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number"
+    },
+    "itemOpenQuantity": {
+      "itemOpenQuantity": "Open Quantity",
+      "labelKey": "itemOpenQuantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number"
+    },
+    "contractItemQuantityUnit": {
+      "contractItemQuantityUnit": "Quantity Unit",
+      "labelKey": "contractItemQuantityUnit",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractItemQuantityInBase": {
+      "contractItemQuantityInBase": "Contract quantity(MT)",
+      "labelKey": "contractItemQuantityInBase",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number"
+    },
+    "itemExecutedQtyInBase": {
+      "itemExecutedQtyInBase": "Executed Quantity",
+      "labelKey": "itemExecutedQtyInBase",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number"
+    },
+    "itemOpenQuantityInBase": {
+      "itemOpenQuantityInBase": "Open Quantity(MT)",
+      "labelKey": "itemOpenQuantityInBase",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number"
+    },
+    "contractItemQuantityUnitInBase": {
+      "contractItemQuantityUnitInBase": "Quantity Unit",
+      "labelKey": "contractItemQuantityUnitInBase",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "priceDetails": {
+      "priceDetails": "Price Details",
+      "labelKey": "priceDetails",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "positionStatus": {
+      "positionStatus": "Contract Status",
+      "labelKey": "positionStatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "location": {
+      "location": "Location",
+      "labelKey": "location",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "loadingLocationType": {
+      "loadingLocationType": "Loading Location Type",
+      "labelKey": "loadingLocationType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "loadingLocationCountry": {
+      "loadingLocationCountry": "Loading Location Country",
+      "labelKey": "loadingLocationCountry",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "loadingLocationCity": {
+      "loadingLocationCity": "Loading Location City",
+      "labelKey": "loadingLocationCity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dischargeLocationType": {
+      "dischargeLocationType": "Delivery term",
+      "labelKey": "dischargeLocationType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dischargeLocationCountry": {
+      "dischargeLocationCountry": "Discharge Location Country",
+      "labelKey": "dischargeLocationCountry",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "children": ["dischargeLocationCity"]
+    },
+    "dischargeLocationCity": {
+      "dischargeLocationCity": "Delivery location",
+      "labelKey": "dischargeLocationCity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "parent": ["dischargeLocationCountry"],
+      "UIupdates": {
+        "value": " return '${locationGroupType}'.toLowerCase() == 'specific location' ? '${dischargeLocationCity}': '${locationGroupType}'.toLowerCase() != 'specific location' ? '${amendedCity}' || '${deliveryLocationGroupName}' || '${dischargeLocationCountry}'.split('_')[1]  : ('${dischargeLocationCountry}' && '${dischargeLocationCountry}'.split('_').length >1) ? '${dischargeLocationCountry}'.split('_')[1]: '-'"
+      }
+    },
+    "dischargeLocationCityCombined": {
+      "dischargeLocationCityCombined": "Multiple dischargeLocationCity combined in an array of string",
+      "labelKey": "dischargeLocationCityCombined",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "optionalDischargeDetails": {
+      "optionalDischargeDetails": "Optional Discharge Details",
+      "labelKey": "optionalDischargeDetails",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "object"
+    },
+    "deliveryTerm": {
+      "deliveryTerm": "Delivery Term",
+      "labelKey": "deliveryTerm",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "modificationDate": {
+      "modificationDate": "Update Time",
+      "labelKey": "modificationDate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ngrFilter": {
+      "ngrFilter": "Filter",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey"
+    },
+    "ngrCTRMFilter": {
+      "ngrCTRMFilter": "Filter",
+      "labelKey": "ngrCTRMFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrCTRMFilterKey"
+    },
+    "contractStatus": {
+      "contractStatus": "Contract Status",
+      "labelKey": "contractStatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipmentPeriodFrom": {
+      "shipmentPeriodFrom": "Delivery start",
+      "labelKey": "shipmentPeriodFrom",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Date",
+      "customDateFilter": "datefilter"
+    },
+    "shipmentPeriodTo": {
+      "shipmentPeriodTo": "Delivery end",
+      "labelKey": "shipmentPeriodTo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Date",
+      "customDateFilter": "datefilter"
+    },
+    "dateFilter": {
+      "dateFilter": "dateFilter",
+      "labelKey": "dateFilter",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "rangeFilter": {
+      "rangeFilter": "rangeFilter",
+      "labelKey": "rangeFilter",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "fulfillmentStatus": {
+      "fulfillmentStatus": "Fulfillment Status",
+      "labelKey": "fulfillmentStatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractPrice": {
+      "contractPrice": "Price (/MT)",
+      "labelKey": "contractPrice",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "inputMode": "decimal"
+    },
+    "contractPriceUnit": {
+      "contractPriceUnit": "Contract Price Unit",
+      "labelKey": "contractPriceUnit",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isMultiGrade": {
+      "isMultiGrade": "isMultiGrade",
+      "labelKey": "isMultiGrade",
+      "type": "textbox",
+      "sourceTextFormat": {
+        "textFormatLabel": "Y/N",
+        "textFormat": "^$|\\s*$|Y|N"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "multiGradeDifferentialDetails": {
+      "multiGradeDifferentialDetails": "Multi Grade Differential Details",
+      "labelKey": "multiGradeDifferentialDetails",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "object"
+    },
+    "gradeCombined": {
+      "gradeCombined": "Multiple Grades combined in an array of string",
+      "labelKey": "gradeCombined",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "toleranceLowerQty": {
+      "toleranceLowerQty": "Tolerance Lower Qty",
+      "labelKey": "toleranceLowerQty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "toleranceUpperQty": {
+      "toleranceUpperQty": "Tolerance Upper Qty",
+      "labelKey": "toleranceUpperQty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "priceType": {
+      "priceType": "Price Type",
+      "labelKey": "priceType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "paymentTerms": {
+      "paymentTerms": "Payment term",
+      "labelKey": "paymentTerms",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "tnc": {
+      "tnc": "Please read and accept the following terms and conditions to authorise this transaction: ",
+      "labelKey": "tnc",
+      "type": "checkbox",
+      "dataType": "String",
+      "propertyKey": "requestcontracttnc"
+    },
+    "offertnc": {
+      "offertnc": "Please read and accept the following terms and conditions to authorise submitting this offer",
+      "labelKey": "offertnc",
+      "type": "checkbox",
+      "dataType": "String",
+      "propertyKey": "submitoffercontracttnc"
+    },
+    "corporate": {
+      "corporate": "Corporate",
+      "labelKey": "corporate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "approvalStatus": {
+      "approvalStatus": "Approval Status",
+      "labelKey": "approvalStatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "spread": {
+      "spread": "Would you like to fix the spreads?",
+      "labelKey": "spread",
+      "type": "radio",
+      "dataType": "String",
+      "propertyKey": "requestcontractspreadquestion",
+      "children": ["amendedSpread"]
+    },
+    "amendedSpread": {
+      "spread": "Would you like to fix the spreads?",
+      "labelKey": "spread",
+      "type": "radio",
+      "dataType": "String",
+      "propertyKey": "requestcontractspreadquestion",
+      "parent": ["spread"],
+      "UIupdates": {
+        "disability": "return ('${spread}'.toLowerCase().includes('fix')) ? true : false"
+      }
+    },
+    "freightOrganise": {
+      "freightOrganise": "Who would you like to organise freight and logistics?",
+      "labelKey": "freightOrganise",
+      "type": "radio",
+      "dataType": "String",
+      "propertyKey": "freightorganisequestion",
+      "children": ["amendedFreightOrganise"]
+    },
+    "fullname": {
+      "fullname": "Full name",
+      "labelKey": "fullname",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "phonenumber": {
+      "phonenumber": "Phone number",
+      "labelKey": "phonenumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "validationRegex": "^[0-9]*$",
+      "inputMode": "decimal"
+    },
+    "email": {
+      "email": "Email",
+      "labelKey": "email",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "pickuplocation": {
+      "pickuplocation": "Pickup Location",
+      "labelKey": "pickuplocation",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "object",
+      "UIupdates": {
+        "visibility": "return '${freightOrganise}'.includes('I will organise my own freight') ? false : true"
+      }
+    },
+    "longandlat": {
+      "longandlat": "Longitude and latitude",
+      "labelKey": "longandlat",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "storagetype": {
+      "storagetype": "Storage type",
+      "labelKey": "storagetype",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "storageTypes"
+    },
+    "deliveryinstruction": {
+      "deliveryinstruction": "Pick-up and delivery instructions",
+      "labelKey": "deliveryinstruction",
+      "type": "textarea",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "freightFormHeader": {
+      "freightFormHeader": "Farm contact person",
+      "labelKey": "freightFormHeader",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false,
+      "UIupdates": {
+        "visibility": "return '${freightOrganise}'.includes('I will organise my own freight') ? false : true"
+      }
+    },
+    "contractFormHeader": {
+      "contractFormHeader": "Enter Contract details",
+      "labelKey": "contractFormHeader",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "submitrequestcontractcardview": {
+      "submitrequestcontractcardview": "Card view",
+      "labelKey": "submitrequestcontractcardview",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "object"
+    },
+    "contractspreadnote": {
+      "contractspreadnote": "Please note: Floating spreads will be fixed by AWB as per your contract confirmation, unless notified by you prior to the Fix Price Date. Refer to your contract confirmation for more details.",
+      "labelKey": "contractspreadnote",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "googlemaps": {
+      "googlemaps": "Google Maps",
+      "labelKey": "googlemaps",
+      "type": "textbox"
+    },
+    "freightLocationHeader": {
+      "freightLocationHeader": "Pick-up location(s)",
+      "labelKey": "freightLocationHeader",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "requestId": {
+      "requestId": "Request id",
+      "labelKey": "requestId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "requestIdUnique": {
+      "requestIdUnique": "Unique Request id",
+      "labelKey": "requestIdUnique",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "requestType": {
+      "requestType": "Request type",
+      "labelKey": "requestType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "requestedDate": {
+      "requestedDate": "Requested date",
+      "labelKey": "requestedDate",
+      "type": "textbox",
+      "sourceDateFormat": "dd-MM-yyyy",
+      "isRequired": false,
+      "dataType": "Date"
+    },
+    "requestedBy": {
+      "requestedBy": "Requested by",
+      "labelKey": "requestedBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "brokerReferenceNo": {
+      "brokerReferenceNo": "Broker reference (optional)",
+      "labelKey": "brokerReferenceNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "validationRegex": "^[A-Za-z0-9_]*$",
+      "UIupdates": {
+        "visibility": "return ('${userRole}'.toLowerCase().includes('dxp_cacp_broker')) ? true : false"
+      }
+    },
+    "spreadQuestionHeader": {
+      "spreadQuestionHeader": "Would you like to fix the spreads?",
+      "labelKey": "spreadQuestionHeader",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "locationGroupType": {
+      "locationGroupType": "Delivery location",
+      "labelKey": "locationGroupType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "ngrHeader": {
+      "ngrHeader": "Select NGR",
+      "labelKey": "ngrHeader",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "dischargeLocationState": {
+      "dischargeLocationState": "Discharge Location State",
+      "labelKey": "dischargeLocationState",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dischargeLocationCountryCity": {
+      "dischargeLocationCountryCity": "Delivery location",
+      "labelKey": "dischargeLocationCountryCity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipmentPeriodFromDate": {
+      "shipmentPeriodFromDate": "Delivery start",
+      "labelKey": "shipmentPeriodFromDate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "customDateFilter": "datefilter"
+    },
+    "shipmentPeriodToDate": {
+      "shipmentPeriodToDate": "Delivery end",
+      "labelKey": "shipmentPeriodToDate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "customDateFilter": "datefilter"
+    },
+    "isRequestedByEkaCCSystem": {
+      "isRequestedByEkaSystem": "Is Requested By Eka CC System",
+      "labelKey": "isRequestedByEkaSystem",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "boolean"
+    },
+    "isRequestActive": {
+      "isRequestActive": "Is Request Active",
+      "labelKey": "isRequestActive",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "boolean"
+    },
+    "PRIMARY_ID": {
+      "PRIMARY_ID": "PRIMARY ID",
+      "labelKey": "PRIMARY_ID",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amendedShipmentFrom": {
+      "amendedShipmentFrom": "Delivery start",
+      "labelKey": "amendedShipmentFrom",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "spFromAmendKey",
+      "UIupdates": {
+        "disability": "return '${disableDelivery}' === 'true' ? true : false"
+      }
+    },
+    "editAmendedShipmentFrom": {
+      "amendedShipmentFrom": "Delivery start",
+      "labelKey": "editAmendedShipmentFrom",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "spEditFromAmendKey",
+      "UIupdates": {
+        "disability": "return '${disableDelivery}' === 'true' ? true : false"
+      }
+    },
+    "amendedShipmentTo": {
+      "amendedShipmentTo": "Delivery end",
+      "labelKey": "amendedShipmentTo",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "spToAmendKey"
+    },
+    "editAmendedShipmentTo": {
+      "amendedShipmentTo": "Delivery end",
+      "labelKey": "editAmendedShipmentTo",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "spEditToAmendKey"
+    },
+    "amendmentCounterPartyName": {
+      "amendmentCounterPartyName": "NGR",
+      "labelKey": "amendmentCounterPartyName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "disability": "return true"
+      }
+    },
+    "amendedCity": {
+      "amendedCity": "Delivery location",
+      "labelKey": "amendedCity",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "cityNamesKey"
+    },
+    "disableDelivery": {
+      "disableDeliveryStartKey": "Disable check",
+      "labelKey": "disableDelivery",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "disableDeliveryKey",
+      "UIupdates": {
+        "visibility": "return false"
+      },
+      "children": [
+        "shipmentPeriodFromMonthYear",
+        "shipmentPeriodToMonthYear",
+        "amendedShipmentFrom",
+        "amendedShipmentTo",
+        "editAmendedShipmentFrom"
+      ]
+    },
+    "profitCentre": {
+      "profitCentre": "Profit Centre",
+      "labelKey": "profitCentre",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bulkHandler": {
+      "bulkHandler": "Bulk Handler",
+      "labelKey": "bulkHandler",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amendedQuality": {
+      "amendedQuality": "Grade",
+      "labelKey": "amendedQuality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amendedPrice": {
+      "amendedPrice": "Price (/MT)",
+      "labelKey": "amendedPrice",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "inputMode": "decimal"
+    },
+    "amendedFreightOrganise": {
+      "amendedFreightOrganise": "Who would you like to organise freight and logistics?",
+      "labelKey": "amendedFreightOrganise",
+      "type": "radio",
+      "dataType": "String",
+      "propertyKey": "freightorganisequestion",
+      "parent": ["freightOrganise"],
+      "UIupdates": {
+        "disability": "return '${freightOrganise}'.includes('Cargill') ? true : false"
+      }
+    },
+    "amendedFullname": {
+      "amendedFullname": "Name",
+      "labelKey": "amendedFullname",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amendedPhonenumber": {
+      "amendedPhonenumber": "Contact number",
+      "labelKey": "amendedPhonenumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "validationRegex": "^[0-9]*$",
+      "inputMode": "decimal"
+    },
+    "amendedEmail": {
+      "amendedEmail": "Email",
+      "labelKey": "amendedEmail",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amendedPickuplocation": {
+      "amendedPickuplocation": "Amended Pickup Location",
+      "labelKey": "amendedPickuplocation",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "object",
+      "UIupdates": {
+        "visibility": "return '${amendedFreightOrganise}'.includes('I will organise my own freight') ? false : true"
+      }
+    },
+    "programName": {
+      "programName": "Program Name",
+      "labelKey": "programName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "editShipmentFrom": {
+      "editShipmentFrom": "Delivery start",
+      "labelKey": "editShipmentFrom",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "spFromMonthKey",
+      "UIupdates": {
+        "disability": "return '${disableDelivery}' === 'true' ? true : false"
+      }
+    },
+    "editShipmentTo": {
+      "editShipmentTo": "Delivery end",
+      "labelKey": "editShipmentTo",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "spToMonthKey",
+      "UIupdates": {
+        "disability": "return '${disableDelivery}' === 'true' ? true : false"
+      }
+    },
+    "amendedBrokerRefNo": {
+      "amendedBrokerRefNo": "Broker reference (optional)",
+      "labelKey": "amendedBrokerRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return ('${userRole}'.toLowerCase().includes('dxp_cacp_broker')) ? true : false"
+      }
+    },
+    "appHome": {
+      "appHome": "App Home link",
+      "labelKey": "appHome",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "offerbpdetails": {
+      "offerbpdetails": "NGR",
+      "labelKey": "offerbpdetails",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "bpRefDetailsKey"
+    },
+    "offercontracts": {
+      "offercontracts": "Contract details",
+      "labelKey": "offercontracts",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "offerregion": {
+      "offerregion": "Port zone/Delivery zone",
+      "labelKey": "offerregion",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "regionKey",
+      "children": ["offersite", "offerdeliverterm"]
+    },
+    "offersite": {
+      "offersite": "Site",
+      "labelKey": "offersite",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "siteKey",
+      "parent": ["offerregion"]
+    },
+    "offercontracttype": {
+      "offercontracttype": "Contract type",
+      "labelKey": "offercontracttype",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "contracttype"
+    },
+    "offerproduct": {
+      "offerproduct": "Commodity",
+      "labelKey": "offerproduct",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "productKey",
+      "children": ["offerquality"]
+    },
+    "offerquality": {
+      "offerquality": "Grade",
+      "labelKey": "offerquality",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "qualityKey",
+      "parent": ["offerproduct"]
+    },
+    "offerseason": {
+      "offerseason": "Season",
+      "labelKey": "offerseason",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "seasonKey"
+    },
+    "offerdeliverterm": {
+      "offerdeliverterm": "Delivery term",
+      "labelKey": "offerdeliverterm",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "contractdeliveryterm",
+      "serviceKey": "delivertermKey",
+      "parent": ["offerregion"],
+      "children": ["offerdeliveryperiod"]
+    },
+    "offerdeliveryperiod": {
+      "offerdeliveryperiod": "Delivery period",
+      "labelKey": "offerdeliveryperiod",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "deliveryperiodKey",
+      "parent": ["offerdeliverterm"],
+      "UIupdates": {
+        "visibility": "return '${item.offerdeliverterm}' == 'null' || '${item.offerdeliverterm}' == '' || '${item.offerdeliverterm}' == 'DB' ? true : false"
+      }
+    },
+    "offerquantity": {
+      "offerquantity": "Offer quantity (/MT)",
+      "labelKey": "offerquantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "validationRegex": "^[0-9]*\\.?[0-9]{0,2}$"
+    },
+    "offerprice": {
+      "offerprice": "Offer price (/MT)",
+      "labelKey": "offerprice",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "validationRegex": "^[0-9]*\\.?[0-9]{0,2}$"
+    },
+    "offerExpiryDate": {
+      "offerExpiryDate": "Offer Expiry Date",
+      "labelKey": "offerExpiryDate",
+      "type": "date",
+      "sourceDateFormat": "yyyy-MM-dd'T'HH:mm:ss'Z'",
+      "isRequired": false,
+      "dataType": "Date"
+    },
+    "offerexpiry": {
+      "offerexpiry": "Offer expiry",
+      "labelKey": "offerexpiry",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "Number",
+      "minimumDate": "return new Date()",
+      "maximumDate": "var today = new Date(); return new Date(today.setMonth(today.getMonth()+1))"
+    },
+    "offersustainable": {
+      "offersustainable": "Sustainable",
+      "labelKey": "offersustainable",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "boolean",
+      "propertyKey": "contractsustainable"
+    },
+    "issustainable": {
+      "issustainable": "Is Sustainable",
+      "labelKey": "issustainable",
+      "type": "textbox",
+      "sourceTextFormat": {
+        "textFormatLabel": "Y/N",
+        "textFormat": "^$|\\s*$|Y|N"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "markettype": {
+      "markettype": "Market Type",
+      "labelKey": "markettype",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "requestDateUTC": {
+      "requestDateUTC": "Requested Date in UTC",
+      "labelKey": "requestDateUTC",
+      "type": "date",
+      "sourceDateFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+      "isRequired": false,
+      "dataType": "Date"
+    },
+    "bidid": {
+      "bidid": "Bid ID",
+      "labelKey": "bidid",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "portzone": {
+      "portzone": "Port Zone",
+      "labelKey": "portzone",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "deliveryLocationGroupName": {
+      "deliveryLocationGroupName": "Delivery Location Group Name",
+      "labelKey": "deliveryLocationGroupName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "modifiedUser": {
+      "modifiedUser": "Request Contract Modified User",
+      "labelKey": "modifiedUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeOperatorUser": {
+      "employeeOperatorUser": "Request Contract Employee Operator User",
+      "labelKey": "employeeOperatorUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeCreatedByUser": {
+      "employeeCreatedByUser": "Request Contract Employee Created By User",
+      "labelKey": "employeeCreatedByUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeOperatorModifiedUser": {
+      "employeeOperatorModifiedUser": "Request Contract Employee Modified Operator User",
+      "labelKey": "employeeOperatorModifiedUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "employeeCreatedByModifiedUser": {
+      "employeeCreatedByModifiedUser": "Request Contract Employee Modified Created By User",
+      "labelKey": "employeeCreatedByModifiedUser",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "growerCreatedBy": {
+      "growerCreatedBy": "Request Contract Grower Created By User",
+      "labelKey": "growerCreatedBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "growerOperator": {
+      "growerOperator": "Request Contract Grower Operator User",
+      "labelKey": "growerOperator",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "offerExecutionTrackRecord": {
+      "offerExecutionTrackRecord": "Track Record of offer execution",
+      "labelKey": "offerExecutionTrackRecord",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractIssueDate": {
+      "contractIssueDate": "Contract Issue Date",
+      "labelKey": "contractIssueDate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ekaCCSpreadFixed": {
+      "ekaCCSpreadFixed": "Spread Fixed By Eka CC",
+      "labelKey": "ekaCCSpreadFixed",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "userRole": {
+      "userRole": "User Roles",
+      "labelKey": "userRole",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "children": ["brokerReferenceNo", "amendedBrokerRefNo"]
+    },
+    "refNo": {
+      "refNo": "Ref Number",
+      "labelKey": "refNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amendedRefNo": {
+      "amendedRefNo": "Amendment Ref number",
+      "labelKey": "amendedRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "brokerBPRefNo": {
+      "brokerBPRefNo": "Broker BP Ref No",
+      "labelKey": "brokerBPRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amendedBrokerBPRefNo": {
+      "amendedBrokerBPRefNo": "Amendment Broker BP Ref No",
+      "labelKey": "amendedBrokerBPRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipmentFrom": {
+      "shipmentFrom": "Delivery start",
+      "labelKey": "shipmentFrom",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Date",
+      "customDateFilter": "datefilter"
+    },
+    "shipmentTo": {
+      "shipmentTo": "Delivery start",
+      "labelKey": "shipmentTo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Date",
+      "customDateFilter": "datefilter"
+    }
+  },
+  "sys__UUID": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

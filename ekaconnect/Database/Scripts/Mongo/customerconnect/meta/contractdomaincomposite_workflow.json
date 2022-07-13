@@ -1,0 +1,221 @@
+{
+  "_id": "contractdomaincomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Contract Domain Composite",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": "contractdomainquicklink"
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": "contractdomainquicklink"
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "style": {
+            "width": "100%"
+          },
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "contractdomainquery"
+                }
+              ]
+            },
+            {
+              "display": "tabs",
+              "styleClass": "tabview-1",
+              "visibility": "return '${userInfo.customerType}' === 'Demand Customer' ? true : false",
+              "show": false,
+              "workflows": [
+                {
+                  "tabHeader": "BUYING",
+                  "showMainContent": true,
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractdomainsummarysell",
+                          "data": "selected.contractdomaincomposite.contractdomainquery.Sell"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "margin": "1.5rem 0"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractdomainchartssell",
+                          "data": "selected.contractdomaincomposite.contractdomainquery.Sell"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "margin": "1.5rem 0"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractdomaincardviewbuy",
+                          "data": "selected.contractdomaincomposite.contractdomainchartssell"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.contractdomaincomposite.contractdomainquery.Sell"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "SELLING",
+                  "showMainContent": true,
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 49px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractdomainsummary",
+                          "data": "selected.contractdomaincomposite.contractdomainquery.Buy"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "margin": "1.5rem 0"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractdomaincharts",
+                          "data": "selected.contractdomaincomposite.contractdomainquery.Buy"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "margin": "1.5rem 0"
+                      },
+                      "workflows": [
+                        {
+                          "name": "contractdomaincardviewsell",
+                          "data": "selected.contractdomaincomposite.contractdomaincharts"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.contractdomaincomposite.contractdomainquery.Buy"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "visibility": "return '${userInfo.customerType}' !== 'Demand Customer' ? true : false",
+              "show": false,
+              "workflows": [
+                {
+                  "style": {
+                    "margin": "2rem 0 49px"
+                  },
+                  "workflows": [
+                    {
+                      "name": "contractdomainsummary",
+                      "data": "selected.contractdomaincomposite.contractdomainquery.data"
+                    }
+                  ]
+                },
+                {
+                  "style": {
+                    "margin": "1.5rem 0"
+                  },
+                  "workflows": [
+                    {
+                      "name": "contractdomaincharts",
+                      "data": "selected.contractdomaincomposite.contractdomainquery.data"
+                    }
+                  ]
+                },
+                {
+                  "style": {
+                    "margin": "1.5rem 0"
+                  },
+                  "workflows": [
+                    {
+                      "name": "contractdomaincardview",
+                      "data": "selected.contractdomaincomposite.contractdomaincharts"
+                    }
+                  ]
+                },
+                {
+                  "style": {
+                    "display": "flex"
+                  },
+                  "workflows": [
+                    {
+                      "name": "lastUpdated",
+                      "data": "selected.contractdomaincomposite.contractdomainquery.data"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Open contracts"
+    },
+    "name": "customv2",
+    "menu": false,
+    "customScrollBar": true,
+    "clearSelected": ["selected"]
+  },
+  "decisions": [],
+  "taskId": "contractdomaincomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

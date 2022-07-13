@@ -1,0 +1,169 @@
+{
+    "_id": "crawleraccountslist_workflow",
+    "componentType": "UserTask",
+    "objectAction": "LISTVIEW",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId": "accountslisting",
+    "object": "967db9f1-f006-400f-8dee-e81692973390",
+    "label": "Payable and receivable data",
+    "type": "workflow",
+    "layout": {
+        "header": {
+            "label": "Accounts",
+            "style": {
+                "font-size": "22px"
+            }
+        },
+        "name": "list",
+        "getInitialData": true,
+        "searchPlaceHolder" : "Search Accounts ID",
+        "options": {
+            "filter": true,
+            "lastUpdated": false,
+            "serverSearch": true,
+            "columnFilter": true,
+            "serverFilter": true,
+            "sortFilter": true,
+            "search": true,
+            "reload": true,
+            "reset": true,
+            "export": true
+        },
+        "lazyLoading": true,
+        "theme": "theme-grid-white"
+    },
+    "template": [
+        {
+            "deviceType": "web",
+            "template": "eka"
+        },
+        {
+            "deviceType": "mobile",
+            "template": "cargill-mobile",
+            "config": {
+                "aside": ""
+            }
+        }
+    ],
+    "fields": [
+        {
+            "filter": true,
+            "edit": false,
+            "label": "userType",
+            "sort": true,
+            "key": "userType"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "BPRefNo",
+            "sort": true,
+            "key": "bpRefNo",
+            "align": "right"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "bpName",
+            "sort": true,
+            "key": "bpName"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "payeeID",
+            "sort": true,
+            "key": "payeeId"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "payeeName",
+            "sort": true,
+            "key": "payeeName"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "type",
+            "sort": true,
+            "key": "type"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "monthAndYear",
+            "sort": true,
+            "key": "monthAndYear"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "financialYearAndQuarter",
+            "sort": true,
+            "key": "financialYearAndQuarter"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "currency",
+            "sort": true,
+            "key": "currency"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "Total Amount",
+            "sort": true,
+            "key": "totalAmount"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "Open Amount",
+            "sort": true,
+            "key": "openAmount"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "Document Count",
+            "sort": true,
+            "key": "documentCount"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "Total Amount In Foreign Currency",
+            "sort": true,
+            "key": "totalAmountInForeignCurrency"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "Open Amount In Foreign Currency",
+            "sort": true,
+            "key": "openAmountInForeignCurrency"
+        },
+        {
+            "filter": true,
+            "edit": false,
+            "label": "ngrFilter",
+            "sort": true,
+            "key": "ngrFilter"
+        }
+    ],
+    "decisions": [],
+    "labelKey": "LIST",
+    "version": "V2",
+    "inputData": {
+        "type": "SystemTask",
+        "config": {
+            "id": "CRAWLER_ACCOUNTSQUERY_TO_ELASTIC",
+            "ttl": 0,
+            "isAsynchCallRequired": "Y",
+            "isElasticCumSystemTask": true
+        }
+    }
+}

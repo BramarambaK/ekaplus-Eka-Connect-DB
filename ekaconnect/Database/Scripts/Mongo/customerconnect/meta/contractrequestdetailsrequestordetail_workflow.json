@@ -1,0 +1,84 @@
+{
+  "_id": "contractrequestdetailsrequestordetail_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Freight details card view",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Requester details'"
+      }
+    ],
+    [
+      {
+        "label": "Name",
+        "type": "detailsFlex",
+        "key": "requestedBy",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width"
+      },
+      {
+        "label": "NGR",
+        "type": "detailsFlex",
+        "key": "BPRefNo",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width"
+      },
+      {
+        "label": "NGR Trading name",
+        "type": "detailsFlex",
+        "key": "counterPartyName",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width"
+      },
+      {
+        "label": "Payee name(s)",
+        "type": "detailsFlex",
+        "key": "counterPartyName",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "contractrequestdetailsrequestordetail",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

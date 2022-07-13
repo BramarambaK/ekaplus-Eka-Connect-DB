@@ -1,0 +1,41 @@
+{
+  "_id": "contractdomainquicklink_workflow",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "inputData": {
+    "type": "menuObject",
+    "config": {
+      "menuId": "dfacafcc-461c-4d06-8e72-39fa74ad7c56"
+    }
+  },
+  "label": "Quick Link",
+  "labelKey": "Quick Link",
+  "layout": {
+    "name": "flexible-menu",
+    "component": "FlexibleMenuComponent",
+    "header": {
+      "label": "Quick links",
+      "style": {
+        "color": "#3B4047",
+        "font-size": "18px",
+        "font-weight": "600",
+        "padding": "0px 10px 10px 20px",
+        "margin": "0 5px",
+        "border-bottom": "solid 1px #DBE1EB"
+      }
+    },
+    "quickLinkMenuStyle": {
+      "style": {
+        "margin-bottom": "-4px"
+      }
+    }
+  },
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "contractdomainquicklink",
+  "type": "workflow"
+}

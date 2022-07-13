@@ -1,0 +1,9 @@
+{
+  "_id": "contractrequestdetailsedit_processor",
+  "name": "contractrequestdetailsedit_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const data = req.body.selectedData;\r\n    const formObj = {\r\n      contractPrice: Number(data.contractPrice).toFixed(2),\r\n      amendedPrice: Number(data.amendedPrice).toFixed(2),\r\n      editShipmentFrom: moment(data.shipmentPeriodFrom).format('MMM YYYY'),\r\n      editShipmentTo: moment(data.shipmentPeriodTo).format('MMM YYYY'),\r\n      editAmendedShipmentFrom: data.amendedShipmentFrom ? moment(data.amendedShipmentFrom).format('MMM YYYY') : '',\r\n      editAmendedShipmentTo: data.amendedShipmentTo ? moment(data.amendedShipmentTo).format('MMM YYYY') : '',\r\n      dischargeLocationCity: data.dischargeLocationCity\r\n    };\r\n    res.status(200).send(formObj);",
+  "sys__UUID": "07708387-480b-419a-ad77-1ff1470afbaa"
+}

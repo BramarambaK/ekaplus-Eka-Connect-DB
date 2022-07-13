@@ -1,0 +1,50 @@
+{
+  "_id": "contractbuyerlistingquery_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "sys__UUID": "041d5361-be26-4345-8784-6186587e4681",
+  "type": "workflow",
+  "rows": 10000,
+  "processorInfo": {
+    "processorId": "3168c378-d13a-432f-b3c6-7323b3530185",
+    "isProceesorOnly": true
+  },
+  "layout": {
+    "header": {
+      "label": "Manage buying contracts",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "processorInfo": {
+      "processorId": "248783d1-1167-4d08-808a-43dde17b6100",
+      "isProceesorOnly": true
+    },
+    "getInitialData": true,
+    "name": "query",
+    "mdmPayload": {},
+    "dataPayload": {}
+  },
+  "fields": [
+    {
+      "key": "ngrCTRMFilter",
+      "filterBy": "BPRefNo",
+      "filterType": "dropdown",
+      "multiple": false,
+      "selectedAll": "return '${userInfo.customerType}' !== 'Grower' ? 'All ABNs' : 'All NGRs'",
+      "placeholder": "return '${userInfo.customerType}' !== 'Grower' ? 'Select a ABN' : 'Select a NGR'"
+    },
+    {
+      "key": "tabsView",
+      "filterBy": "contractStatus",
+      "filterType": "tabs"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "contractbuyerlistingquery",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "contractdomainsummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract Domain Summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false
+  },
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "contractSubType",
+        "label": "return 'Open contracts'",
+        "aggregateFunction": "count",
+        "filterExpression": "return '${fulfillmentStatus}'.toLowerCase() != 'fulfilled' && '${isRequestedByEkaCCSystem}' != 'true' && '${positionStatus}'.toLowerCase() != 'cancelled'? true: false"
+      },
+      {
+        "key": "itemOpenQuantityInBase",
+        "label": "return 'Open quantity'",
+        "suffix": "'${contractItemQuantityUnitInBase}'",
+        "aggregateFunction": "sum",
+        "roundOff": "round"
+      },
+      {
+        "key": "requestType",
+        "label": "return 'Requested contracts'",
+        "aggregateFunction": "count",
+        "filterExpression": "return ('${requestType}'.toLowerCase() == 'new contract' && '${isRequestedByEkaCCSystem}') ? true : false"
+      },
+      {
+        "key": "contractItemQuantity",
+        "label": "return 'Requested contract quantity'",
+        "suffix": "'${contractItemQuantityUnitInBase}'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return ('${requestType}'.toLowerCase() == 'new contract' && '${isRequestedByEkaCCSystem}') ? true : false",
+        "roundOff": "round"
+      }
+    ]
+  ],
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "contractdomainsummary",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

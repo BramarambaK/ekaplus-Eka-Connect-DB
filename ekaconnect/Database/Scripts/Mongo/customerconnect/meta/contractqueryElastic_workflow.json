@@ -1,0 +1,23 @@
+{
+  "_id": "contractqueryElastic_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "sys__UUID": "7cf30c32-f742-466e-90bb-25b588d08629",
+  "type": "workflow",
+  "rows": 10000,
+  "layout": {
+    "name": "query"
+  },
+  "version": "V2",
+  "inputData": {
+    "type": "elasticSearch"
+  },
+  "fields": [],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "contractqueryElastic",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

@@ -1,0 +1,102 @@
+{
+  "_id": "contractrequestdetailsresponerequest_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request to respone",
+  "type": "workflow",
+  "version": "V2",
+  "payLoad": "selected.contractrequestdetailscomposite.data",
+  "layout": {
+    "name": "create",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "type": "row",
+    "cardClass": "allocate-banner contract-request-details-banner contract-request-banner-details",
+    "theme": "horizontal-details contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "style": {
+          "display": "flex",
+          "margin": 0
+        },
+        "key": "allocateHeader",
+        "type": "hidden",
+        "class": "banner-card-dropdown request-response-header",
+        "label": "Joe Bloggs has sent you a contract amendment request. Review the request details and approve if no modifications are required or reject. Alternatively, edit the contract details for customer review.",
+        "formLabelStyle": {
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "15px",
+          "width": "755px",
+          "white-space": "normal",
+          "flex": "0 0 755px",
+          "margin-top": "16px",
+          "height": "48px"
+        },
+        "labelExpression" : "return '${requestedBy} has sent you a ' + ('${requestType}'.toLowerCase() == 'new contract'? 'new contract':'contract amendment') + ' request. Review the request details and approve if no modifications are required or reject. Alternatively, edit the contract details for customer review.'"
+      },
+      {
+        "class": "banner-card-button",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {},
+        "key": "rejectButton",
+        "type": "button",
+        "label": "Reject",
+        "btnClass": "allocate-banner-button allocate-banner-button-reject",
+        "decision": "rejectrequesttask"
+      },
+      {
+        "class": "banner-card-button",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {},
+        "key": "applyButton",
+        "type": "button",
+        "label": "Approve",
+        "btnClass": "allocate-banner-button",
+        "decision": "approverequesttask"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "CREATE",
+      "task": "approverequesttask",
+      "decisionName": "approverequesttask",
+      "outcomes": [
+        {
+          "name": "cancelpopup_contractdetails_approverequest",
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    },
+    {
+      "objectAction": "CREATE",
+      "task": "rejectrequesttask",
+      "decisionName": "rejectrequesttask",
+      "outcomes": [
+        {
+          "name": "cancelpopup_contractdetails_rejectrequest",
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup",
+          "data": "selected.contractrequestdetailscomposite.data"
+        }
+      ]
+    }
+  ],
+  "taskId": "contractrequestdetailsresponerequest",
+  "labelKey": "Cards View",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

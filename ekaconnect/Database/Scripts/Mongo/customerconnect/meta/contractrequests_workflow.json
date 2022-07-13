@@ -1,0 +1,303 @@
+{
+  "_id": "contractrequests_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "contractrequests",
+  "label": "Manage Contracts",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "da52c22a-2054-477e-a582-717c0072df3e",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "mdmPayload": {},
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. Contract ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true,
+    "suppressMdmError": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Request ID",
+      "sort": true,
+      "key": "requestId",
+      "hidden": false,
+      "category": "link",
+      "task": "custom-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "highlight": {
+        "Approved": "cargill-table-listing-status-btn-green",
+        "Action required": "cargill-table-listing-status-btn-orange",
+        "Rejected": "cargill-table-listing-status-btn-red",
+        "Awaiting review": "cargill-table-listing-status-btn-blue",
+        "Withdrawn": "cargill-table-listing-status-btn-grey",
+        "Expired": "cargill-table-listing-status-btn-grey",
+        "Pending Approval": "cargill-table-listing-status-btn-blue"
+      },
+      "edit": true,
+      "label": "Request status",
+      "sort": true,
+      "key": "approvalStatus",
+      "width": "160px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract ID",
+      "sort": true,
+      "key": "contractRefNo",
+      "hidden": false,
+      "task": "download-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product",
+      "align": "left",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality",
+      "primaryFilter": true,
+      "UIupdates": {
+        "listValue": "return ((('${isMultiGrade}' + '').toLowerCase() == 'y' || ('${isMultiGrade}' + '').toLowerCase() == 'true') && '${quality}'.includes('MG'))  ? '${quality}' : (('${isMultiGrade}' + '').toLowerCase() == 'n' || ('${isMultiGrade}' + '').toLowerCase() == 'false') ? '${quality}'.replace(' MG', '') : '${quality}' + ' MG'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear",
+      "primaryFilter": true
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract quantity (MT)",
+      "sort": true,
+      "key": "contractItemQuantity",
+      "width": "170px",
+      "UIupdates": {
+        "listValue": "return '${contractItemQuantity}' ? Number('${contractItemQuantity}').toFixed(2) : '-'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Price (/MT)",
+      "sort": true,
+      "key": "contractPrice",
+      "UIupdates": {
+        "listValue": "return '${requestType}'.toLowerCase()=='amendment' && '${amendedPrice}' ? '$'+Number('${amendedPrice}').toFixed(2): '${contractPrice}' ? '$'+Number('${contractPrice}').toFixed(2): '$0.00'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery location",
+      "sort": true,
+      "key": "dischargeLocationCity",
+      "primaryFilter": true,
+      "width": "160px",
+      "UIupdates": {
+        "listValue": "if ('${locationGroupType}' == 'Any location within a group' && '${requestType}'.toLowerCase() == 'new contract') { if ('${dischargeLocationCountry}'.split('_').length > 1) { return '${dischargeLocationCountry}'.split('_')[1] } else return '-' } else { if ('${requestType}'.toLowerCase() == 'amendment') { return '${amendedCity}' ? '${amendedCity}' : '${dischargeLocationCity}' ? '${dischargeLocationCity}' : '${deliveryLocationGroupName}' } else { return '${dischargeLocationCity}' } }"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Delivery term",
+      "sort": true,
+      "key": "INCOTerm"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery start",
+      "sort": true,
+      "key": "shipmentFrom"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery end",
+      "sort": true,
+      "key": "shipmentTo"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Broker ref",
+      "sort": true,
+      "key": "brokerRefNo",
+      "maxcharlength": "100",
+      "UIupdates": {
+        "listValue": "return '${amendedBrokerRefNo}' ? '${amendedBrokerRefNo}' : '${brokerRefNo}' ? '${brokerRefNo}' : '-'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Request type",
+      "sort": true,
+      "key": "requestType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Requested date",
+      "sort": true,
+      "key": "requestedDate",
+      "dateformat": "DD/MM/YYYY",
+      "sourceDateFormat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Requested by",
+      "sort": true,
+      "key": "requestedBy"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.contractlistingcomposite.contractrequests",
+          "name": "viewcontractdetailsrequestcomposite"
+        }
+      ],
+      "position": "top",
+      "label": "View request details",
+      "hideButtonExpression": "return (${contractlistingcomposite.contractrequests}.length > 1 || ${contractlistingcomposite.contractrequests}[0]['requestType'].toLowerCase() == 'offer to sell')",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.contractlistingcomposite.contractrequests",
+          "name": "offercontractdetailscomposite"
+        }
+      ],
+      "position": "top",
+      "label": "View request details",
+      "hideButtonExpression": "return (${contractlistingcomposite.contractrequests}.length > 1 || ${contractlistingcomposite.contractrequests}[0]['requestType'].toLowerCase() != 'offer to sell')",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "task": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+      "workflowTaskName": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+      "outcomes": [
+        {
+          "name": "viewcontractdetailsrequestcomposite",
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_CONTRACT_DOWNLOADDOC",
+          "setSelected": ["selected.contractlistingcomposite.contractrequests"]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "data": "selected.contractlistingcomposite.contractrequests",
+          "name": "contract_request_withdraw"
+        }
+      ],
+      "position": "top",
+      "label": "Withdraw request",
+      "labelExpression": "return ${contractlistingcomposite.contractrequests.length} > 1 ? 'Withdraw requests' : 'Withdraw request' ",
+      "hideButtonExpression": "return ${contractlistingcomposite.contractrequests}.find(ele=>{if(ele['approvalStatus'].toLowerCase()!='awaiting review') return ele })",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "name": "viewcontractdetailsrequestcomposite",
+          "setSelected": [
+            "selected.contractlistingcomposite.contractrequests[0]"
+          ]
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST"
+}

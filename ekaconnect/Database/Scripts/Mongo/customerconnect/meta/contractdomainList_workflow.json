@@ -1,0 +1,159 @@
+{
+    "_id" : "contractdomainList_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+	"taskId" : "contractdomainList",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+	"sys__UUID": "1f0465b2-e322-48b1-bc1f-c1ecedd9b619",
+    "label" : "contractdomainList",
+    "type" : "workflow",
+    "layout" : {
+        "header" : {
+            "label" : "Contracts",
+            "style" : {
+                "font-size" : "22px"
+            }
+        },       
+        "name" : "contractdomainList"
+    },
+    "version" : "V2",
+	"listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "inputData" : {
+        "type" : "elasticSearch",        
+		"config" : {		
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : true,
+            "statusFlagWorklowTask" : "contractdomainList"            
+            }               
+    },
+    "fields" : [ 
+       {
+            "filter" : true,
+            "edit" : false,
+            "label" : "CP Contract Type",
+            "sort" : true,
+            "key" : "contractType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "contractSubType",
+            "sort" : true,
+            "key" : "contractSubType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "userType",
+            "sort" : true,
+            "key" : "userType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "BPRefNo",
+            "sort" : true,
+            "key" : "BPRefNo",
+			"align" : "right"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "counterPartyName",
+            "sort" : true,
+            "key" : "counterPartyName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "contractRefNo",
+            "sort" : true,
+            "key" : "contractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "itemExecutedQty",
+            "sort" : true,
+            "key" : "itemExecutedQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "product",
+            "sort" : true,
+            "key" : "product"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "contractItemQuantity",
+            "sort" : true,
+            "key" : "contractItemQuantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "positionStatus",
+            "sort" : true,
+            "key" : "positionStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "deliveryTerm",
+            "sort" : true,
+            "key" : "deliveryTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "origin",
+            "sort" : true,
+            "key" : "origin"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "contractItemQuantityUnit",
+            "sort" : true,
+            "key" : "contractItemQuantityUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "itemOpenQuantity",
+            "sort" : true,
+            "key" : "itemOpenQuantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "quality",
+            "sort" : true,
+            "key" : "quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "cropYear",
+            "sort" : true,
+            "key" : "cropYear"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "location",
+            "sort" : true,
+            "key" : "location"
+        }
+    ],
+    "decisions" : [],
+    "labelKey" : "QUERY"    
+}

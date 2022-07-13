@@ -1,0 +1,107 @@
+{
+  "_id": "contractdomainchartssell_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract Domain Charts",
+  "type": "workflow",
+  "layout": {
+    "emptyText": {
+      "message": [
+        "You currently have no open contracts.",
+        "All contracts that are open and yet to be fulfilled will display here."
+      ]
+    },
+    "header": {
+      "label": "Quantity fulfilled against open contracted quantity",
+      "style": {
+        "font-size": "22px",
+        "margin-top": "-4px"
+      }
+    },
+    "getInitialData": false,
+    "name": "chart",
+    "type": "horizontalBar",
+    "xAxesTick": {
+      "display": false
+    },
+    "xAxisMax": true,
+    "legend": {
+      "display": false,
+      "position": "top"
+    },
+    "yAxesTick": {
+      "fontFamily": "\"Helvetica Neue LT W05 65 Medium\"",
+      "fontSize": 14
+    },
+    "toolTipHover": {
+      "enable": true,
+      "valueExpression": "let fulfilled, unfullfilled, sum; if('${itemExecutedQtyInBase}'){ sum = ${itemExecutedQtyInBase}+${itemOpenQuantityInBase}; fulfilled = Math.round((${itemExecutedQtyInBase} * 100) / sum); } else { fulfilled = 0; unfulfilled = 100; } unfulfilled = 100 - fulfilled;  return fulfilled + '% fulfilled' + ', ' + unfulfilled + '% unfulfilled' ;"
+    }
+  },
+  "fields": [
+    {
+      "label": "Product",
+      "key": "product",
+      "type": "label",
+      "sortBy": "descending"
+    },
+    {
+      "key": "cropYear",
+      "filterType": "dropdown",
+      "filterBy": "cropYear",
+      "multiple": true,
+      "sortBy": "descendingString",
+      "placeholder": "Select a season",
+      "selectedAll": "All seasons"
+    },
+    {
+      "label": "Executed Quantity",
+      "key": "itemExecutedQtyInBase",
+      "backgroundColor": [
+        "#9E2A2F",
+        "#BE531C",
+        "#CF7F00",
+        "#DAAA00",
+        "#ABAD25",
+        "#658D1B",
+        "#279989",
+        "#007681",
+        "#005F86"
+      ],
+      "fontColor": "#FFFFFF",
+      "type": "value",
+      "suffix": "'${contractItemQuantityUnitInBase}'"
+    },
+    {
+      "label": "Open Quantity",
+      "key": "itemOpenQuantityInBase",
+      "backgroundColor": "#EEF2F5",
+      "fontColor": "#5D646F",
+      "type": "value",
+      "suffix": "'${contractItemQuantityUnitInBase}'"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "",
+      "objectAction": "READ",
+      "labelkey": "reset",
+      "decisionName": "reset",
+      "selection": "chart-label",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": "contractdomaincardviewsell"
+        }
+      ],
+      "label": ""
+    }
+  ],
+  "labelKey": "CHARTS",
+  "taskId": "contractdomainchartssell",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}
