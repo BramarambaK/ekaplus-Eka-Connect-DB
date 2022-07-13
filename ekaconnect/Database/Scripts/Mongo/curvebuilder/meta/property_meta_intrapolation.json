@@ -1,0 +1,19 @@
+{
+    "_id":"intrapolation_CB",
+    "type" : "property",
+    "name" : "intrapolation",
+    "propertyLevel" : "tenant, app, user",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Daily",
+            "value" : "Daily"
+        }
+    ],
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "label": "Intrapolation",
+    "description": "Dropdown value for Intrapolation",
+    "editSupportedInUI" : false
+}

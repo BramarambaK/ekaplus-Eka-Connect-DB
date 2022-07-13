@@ -1,0 +1,33 @@
+{
+  "_id": "customerconnectdemoquery_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "label": "Query",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Tickets",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "getInitialData": true,
+    "name": "query"
+  },
+  "fields": [
+    {
+      "key": "deliveryDestination",
+      "filterType": "dropdown",
+      "multiple": true,
+      "placeholder": "Location",
+      "maxSelectedLabels": 1
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "customerconnectdemoquery",
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928",
+  "sys__UUID": "14dedbdf-b757-4ebc-bd16-7d8d0d82d8a0"
+}

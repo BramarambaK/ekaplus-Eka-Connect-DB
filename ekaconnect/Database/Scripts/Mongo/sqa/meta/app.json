@@ -1,0 +1,51 @@
+{
+    "_id" : ObjectId("5d79d829ea8a3b34e8368457"),
+    "title" : "Supplier Quote Analysis",
+    "name" : "sqa",
+    "tenantID" : "",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "platform_id" : "42",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60,
+                "height" : 20,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "assets/img/brand/ultimate.png",
+                "width" : 60,
+                "height" : 20,
+                "alt" : "Boliden"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "menu" : [ 
+                            {
+                                "handler" : "/app/sqa/listing",
+                                "text" : "Pre Deal List",
+                                "iconCls" : ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "380a23ff-2ec1-42d2-b973-5af329899c6b"
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "documentdownload_documentsapp",
+  "action": "downloadLink",
+  "componentType": "client",
+  "object": "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "taskId": "documentdownload",
+  "type": "workflow",
+  "sys__UUID": "d474cd07-6388-4129-8a75-8f35ee92fe52"
+}

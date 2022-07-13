@@ -1,0 +1,59 @@
+{
+    
+    "title" : "Hello World 123",
+    "name" : "hello",
+    "tenantID" : "",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "platform_id" : "-1",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60,
+                "height" : 20,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "assets/img/brand/boliden-logo.svg",
+                "width" : 60,
+                "height" : 20,
+                "alt" : "Boliden"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "label" : "Hello World",
+                        "iconCls" : "insights-icon",
+                        "menuItems" : [ 
+                            {
+                                "text" : "List",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/hello/listing/list",
+                                        "text" : "List",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "29a2660b-78a2-498a-9b94-75cdacd5f471"
+}

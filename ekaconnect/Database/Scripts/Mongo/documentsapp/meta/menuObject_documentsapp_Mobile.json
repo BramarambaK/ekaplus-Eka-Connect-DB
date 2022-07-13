@@ -1,0 +1,60 @@
+{
+    "_id" : "menuObject_documentsapp_mobile",
+    "type" : "menuObject",
+    "refType" : "app",
+    "refTypeId" : "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+    "sys__UUID" : "7eec366d-b04c-4d49-ba24-02709bfd26ec",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Documents App",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "documentlisting",
+                                    "text" : "Document Listing",
+                                    "iconCls" : "app-menu-icon"
+                                }, 
+                                {
+                                    "handler" : "querydocuments",
+                                    "text" : "Query Document",
+                                    "iconCls" : "app-menu-icon"
+                                }
+                            ]
+                        }, 
+                        {
+                            "text" : "Filter By",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "documentlisting",
+                                    "queryParams" : "{\n\t\"query\": {\n\t\t\"bool\": {\n\t\t\t\"must\": [{\n\t\t\t\t\"multi_match\": {\n\t\t\t\t\t\"query\": \"Invoice\",\n\t\t\t\t\t\"type\": \"phrase_prefix\",\n\t\t\t\t\t\"fields\": [\"documentType\"]\n\t\t\t\t}\n\t\t\t}]\n\t\t}\n\t}\n}",
+                                    "text" : "Invoice Documents",
+                                    "iconCls" : "app-menu-icon"
+                                }, 
+                                {
+                                    "handler" : "documentlisting",
+                                    "queryParams" : "{\"query\": {\n    \"bool\": {\n        \"must\": [{\n            \"bool\": {\n                \"should\": [{\n                    \"bool\": {\n                        \"must\": [{\n                            \"multi_match\": {\n                                \"query\": \"Contract\",\n                                \"type\": \"phrase_prefix\",\n                                \"fields\": [\"documentType\"]\n                            }\n                        }]\n                    }\n                }]\n            }\n        }]\n    }\n}}",
+                                    "text" : "Contract Documents",
+                                    "iconCls" : "app-menu-icon"
+                                }, 
+                                {
+                                    "handler" : "documentlisting",
+                                    "queryParams" : "{\"query\": {\n    \"bool\": {\n        \"must\": [{\n            \"bool\": {\n                \"should\": [{\n                    \"bool\": {\n                        \"must\": [{\n                            \"multi_match\": {\n                                \"query\": \"Shipment\",\n                                \"type\": \"phrase_prefix\",\n                                \"fields\": [\"documentType\"]\n                            }\n                        }]\n                    }\n                }]\n            }\n        }]\n    }\n}}",
+                                    "text" : "Shipment Documents",
+                                    "iconCls" : "app-menu-icon"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "deviceType" : "mobile"
+}

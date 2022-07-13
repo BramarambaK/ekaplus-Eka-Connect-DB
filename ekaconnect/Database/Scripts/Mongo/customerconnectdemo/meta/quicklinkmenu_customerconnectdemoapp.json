@@ -1,0 +1,115 @@
+{
+  "_id": "quicklinkmenu_customerconnectdemoapp",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "sys__UUID": "749ad44d-9982-4687-bd4a-0d2f9e2b6df5",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Videos",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            [
+              {
+                "label": "Video 1",
+                "items": [
+                  {
+                    "handler": "sampleagainst",
+                    "label": "Video 1.1",
+                    "iconCls": ""
+                  },
+                  {
+                    "handler": "samplinginstructionlist",
+                    "label": "Video 1.2",
+                    "iconCls": ""
+                  }
+                ]
+              },
+              {
+                "label": "Video 2",
+                "items": [
+                  {
+                    "handler": "sampleagainst",
+                    "label": "Video 2.1",
+                    "iconCls": ""
+                  },
+                  {
+                    "handler": "samplinginstructionlist",
+                    "label": "Video 2.2",
+                    "iconCls": ""
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "label": "Video 3",
+                "items": [
+                  {
+                    "handler": "sampleagainst",
+                    "label": "Video 3.1",
+                    "iconCls": ""
+                  },
+                  {
+                    "handler": "samplinginstructionlist",
+                    "label": "Video 3.2",
+                    "iconCls": ""
+                  }
+                ]
+              },
+              {
+                "label": "Video 4",
+                "items": [
+                  {
+                    "handler": "sampleagainst",
+                    "label": "Video 4.1",
+                    "iconCls": ""
+                  },
+                  {
+                    "handler": "samplinginstructionlist",
+                    "label": "Video 4.2",
+                    "iconCls": ""
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "label": "TV",
+          "iconCls": "",
+          "menuItems": [
+            [
+              {
+                "label": "TV1",
+                "items": [
+                  {
+                    "label": "TV 1.1"
+                  },
+                  {
+                    "label": "TV 1.2"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "label": "TV2",
+                "items": [
+                  {
+                    "label": "TV 2.1"
+                  },
+                  {
+                    "label": "TV 2.2"
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

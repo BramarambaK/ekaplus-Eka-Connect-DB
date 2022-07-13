@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CUSTOMERCONNECTDEMO_DELETE_workflow",
+  "componentType": "SystemTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "type": "workflow",
+  "taskId": "_ST_CUSTOMERCONNECTDEMO_DELETE",
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928",
+  "sys__UUID": "88a2e00b-2df4-4733-a91f-f2fd991204ad"
+}

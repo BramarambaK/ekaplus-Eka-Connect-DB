@@ -1,0 +1,26 @@
+{
+  "_id": "documentType_propertyKey",
+  "type": "property",
+  "name": "documentType",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "label": "Document Type",
+  "defaultValue": [
+    {
+      "key": "Invoice",
+      "value": "Invoice"
+    },
+    {
+      "key": "Contract",
+      "value": "Contract"
+    },
+    {
+      "key": "Shipment",
+      "value": "Shipment"
+    }
+  ],
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "description": "Values available for Document Type"
+}

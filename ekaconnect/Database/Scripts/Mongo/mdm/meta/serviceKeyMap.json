@@ -1,0 +1,591 @@
+{
+  "_id": "serviceKeyMap",
+  "name": "serviceKeyMap",
+  "type": "object",
+  "version": "1",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "fields": {
+    "mdm_ctrm_qualityMapInstrument": {
+      "serviceKey": "qualityMapInstrument",
+      "attributeOne": "$mdmDerInstruments$"
+    },
+    "mdm_ctrm_futurePriceUnit": {
+      "serviceKey": "futurePriceUnit",
+      "attributeOne": "$instrumentId$",
+      "attributeTwo": "$productId$"
+    },
+    "mdm_ctrm_productorigin": {
+      "serviceKey": "productorigin",
+      "attributeOne": "$productId$"
+    },
+    "mdm_ctrm_RequestType": {
+      "serviceKey": "RequestType",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_requestTypeMapInstrument": {
+      "serviceKey": "requestTypeMapInstrument",
+      "attributeOne": "$mdmDerInstruments$"
+    },
+    "mdm_ctrm_mdmDerInstruments": {
+      "serviceKey": "mdmDerInstruments"
+    },
+    "mdm_ctrm_defineActualsEventType": {
+      "serviceKey": "defineActualsEventType"
+    },
+    "mdm_ctrm_customEventAndBaseDateList": {
+      "serviceKey": "customEventAndBaseDateList"
+    },
+    "mdm_ctrm_addDedNameList": {
+      "serviceKey": "addDedNameList",
+      "attributeOne": "$productId$",
+      "dropDownType": "combo",
+      "limit": "9999"
+    },
+    "mdm_ctrm_priceUnitsForContractPrice": {
+      "serviceKey": "priceUnitsForContractPrice",
+      "attributeOne": "$productId$",
+      "attributeThree": "$productPriceUnit$",
+      "attributeTwo": ""
+    },
+    "mdm_ctrm_addDed": {
+      "serviceKey": "addDed",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_rateTypePrice": {
+      "serviceKey": "rateTypePrice",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_weightBasisForAddDedForItem": {
+      "serviceKey": "weightBasisForAddDedForItem",
+      "attributeOne": "$productId$"
+    },
+    "mdm_ctrm_productPriceUnit": {
+      "serviceKey": "productPriceUnit",
+      "attributeOne": "$productId$",
+      "attributeTwo": "$productCurrencyListId$"
+    },
+    "mdm_ctrm_legalEntityList": {
+      "serviceKey": "legalEntityList"
+    },
+    "mdm_ctrm_cropyearComboDropDrown": {
+      "serviceKey": "cropyearComboDropDrown",
+      "attributeOne": "$productId$",
+      "attributeTwo": "$OriginId$",
+      "dropDownType": "combo",
+      "limit": "9999"
+    },
+    "mdm_ctrm_phyPackingtypesizeByCItemOrProductList": {
+      "serviceKey": "phyPackingtypesizeByCItemOrProductList",
+      "attributeOne": "$productId$"
+    },
+    "mdm_ctrm_packingSize": {
+      "serviceKey": "phyPackingtypesizeByCItemOrProductList",
+      "entityType": "Child",
+      "alias": "packingSize",
+      "attributeOne": "$productId$",
+      "parentFieldIdList": ["$packingTypeId$"]
+    },
+    "mdm_ctrm_productDerivativeInstrument": {
+      "serviceKey": "productDerivativeInstrument",
+      "attributeOne": "$productId$"
+    },
+    "mdm_ctrm_periodMonthsListByInstrument": {
+      "serviceKey": "periodMonthsListByInstrument",
+      "attributeOne": "$productDerivativeInstrumentId$"
+    },
+    "mdm_ctrm_PriceFixLatestBy": {
+      "serviceKey": "PriceFixLatestBy",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_PriceFixBy": {
+      "serviceKey": "PriceFixBy",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_FixationMethod": {
+      "serviceKey": "FixationMethod",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_businesspartner": {
+      "serviceKey": "businesspartner",
+      "attributeOne": "$attributeOne$"
+    },
+    "mdm_ctrm_sublevelApprovalUsersList": {
+      "serviceKey": "sublevelApprovalUsersList",
+      "attributeOne": "$levelId$"
+    },
+    "mdm_ctrm_businessPartnerComboByRoleType": {
+      "serviceKey": "businessPartnerComboByRoleType",
+      "attributeOne": "INSPECTIONAGENCY",
+      "dropDownType": "combo",
+      "limit": "9999"
+    },
+    "mdm_ctrm_cityNameComboList": {
+      "serviceKey": "cityNameComboList",
+      "attributeOne": "Port",
+      "dropDownType": "combo",
+      "limit": "9999"
+    },
+    "mdm_ctrm_originComboDropDrown": {
+      "serviceKey": "originComboDropDrown",
+      "dropDownType": "combo",
+      "attributeOne": "$productId$",
+      "limit": "9999"
+    },
+    "mdm_ctrm_masterDataDropdown": {
+      "serviceKey": "masterDataDropdown"
+    },
+    "mdm_ctrm_cpPersonInCharge": {
+      "serviceKey": "cpPersonInCharge"
+    },
+    "mdm_ctrm_carryChargeRateTypeList": {
+      "serviceKey": "carryChargeRateTypeList",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_corporateLevelTemplateList": {
+      "serviceKey": "corporateLevelTemplateList"
+    },
+    "mdm_ctrm_PortOperations": {
+      "serviceKey": "PortOperations",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_brokerPersonInCharge": {
+      "serviceKey": "businesspartnercontactperson",
+      "entityType": "Child",
+      "alias": "brokerPersonInCharge",
+      "parentFieldIdList": ["$parentBrokerId$"]
+    },
+    "mdm_ctrm_variableInterestCurve": {
+      "serviceKey": "variableInterestCurve",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_LatePaymentInt": {
+      "serviceKey": "LatePaymentInt",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_corporateStrategy": {
+      "serviceKey": "corporateStrategy"
+    },
+    "mdm_ctrm_incoTermLocationGroupType": {
+      "serviceKey": "incoTermLocationGroupType",
+      "attributeOne": "$incotermId$"
+    },
+    "mdm_ctrm_productCurrencyList": {
+      "serviceKey": "productCurrencyList"
+    },
+    "mdm_ctrm_currencylist": {
+      "serviceKey": "currencylist"
+    },
+    "mdm_ctrm_AbsolutePercentage": {
+      "serviceKey": "AbsolutePercentage",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_listOfDocumentNameByDocumentSetName": {
+      "serviceKey": "listOfDocumentNameByDocumentSetName",
+      "dropDownType": "combo",
+      "limit": "9999"
+    },
+    "mdm_ctrm_countriesComboDataFromDB": {
+      "serviceKey": "countriesComboDataFromDB",
+      "dropDownType": "combo",
+      "limit": "9999"
+    },
+    "mdm_ctrm_cityComboDataFromDB": {
+      "serviceKey": "cityComboDataFromDB",
+      "dropDownType": "combo",
+      "limit": "9999",
+      "attributeOne": "$countryId$",
+      "attributeThree": "$type$"
+    },
+    "mdm_ctrm_priceUnitsByCurrency": {
+      "serviceKey": "priceUnitsByCurrency"
+    },
+    "mdm_ctrm_CostType": {
+      "serviceKey": "CostType",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_costComponent": {
+      "serviceKey": "costComponent"
+    },
+    "mdm_ctrm_incoterm": {
+      "serviceKey": "incoterm"
+    },
+    "mdm_ctrm_ticketModeOfTransport": {
+      "serviceKey": "ticketModeOfTransport",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_CarryChargeFrequencyId": {
+      "serviceKey": "CarryChargeFrequencyId",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_userProfitCenterList": {
+      "serviceKey": "userProfitCenterList",
+      "attributeTwo": "$userId$"
+    },
+    "mdm_ctrm_productpricetypelist": {
+      "serviceKey": "productpricetypelist",
+      "attributeOne": "$productId$"
+    },
+    "mdm_ctrm_Tolerance": {
+      "serviceKey": "Tolerance",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_userListByRole": {
+      "serviceKey": "userListByRole"
+    },
+    "mdm_ctrm_physicalproductquantitylist": {
+      "serviceKey": "physicalproductquantitylist",
+      "attributeOne": "$productId$"
+    },
+    "mdm_ctrm_qualityComboDropDrown": {
+      "serviceKey": "qualityComboDropDrown",
+      "dropDownType": "combo",
+      "limit": "9999",
+      "attributeTwo": "$OriginId$",
+      "attributeOne": "$productId$"
+    },
+    "mdm_ctrm_businessPartnerCombo": {
+      "limit": "9999",
+      "attributeOne": "$contractType$",
+      "attributeTwo": "$partyType$",
+      "serviceKey": "businessPartnerCombo",
+      "includeInActiveElement": "cpProfileId",
+      "dropDownType": "combo"
+    },
+    "mdm_ctrm_productComboDropDrown": {
+      "serviceKey": "productComboDropDrown",
+      "limit": "9999",
+      "dropDownType": "combo"
+    },
+    "mdm_ctrm_dealType": {
+      "serviceKey": "dealType",
+      "attributeOne": "$caption$",
+      "dropDownType": "dropDown"
+    },
+    "mdm_ctrm_paytermlist_phy": {
+      "serviceKey": "paytermlist_phy"
+    },
+    "mdm_ctrm_applicableLaw": {
+      "serviceKey": "applicableLaw"
+    },
+    "mdm_ctrm_ContractRulesAndArbitrationList": {
+      "serviceKey": "ContractRulesAndArbitrationList"
+    },
+    "mdm_ctrm_businesspartnercontactperson": {
+      "serviceKey": "businesspartnercontactperson",
+      "attributeOne": "$attributeOne$"
+    },
+    "mdm_ctrm_allDistinctPriceUnits": {
+      "serviceKey": "allDistinctPriceUnits"
+    },
+    "mdm_ctrm_estimateFor": {
+      "serviceKey": "estimateFor",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_CostRateType": {
+      "serviceKey": "CostRateType",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_CostIncExp": {
+      "serviceKey": "CostIncExp",
+      "isStatic": "Yes"
+    },
+    "mdm_ctrm_pdNewscheduleList": {
+      "serviceKey": "pdNewscheduleList",
+      "attributeOne": "$productId$",
+      "attributeTwo": "$qualityId$",
+      "attributeThree": "$currencyId$"
+    },
+    "mdm_ctrm_taxScheduleCountrystate": {
+      "serviceKey": "taxScheduleCountrystate"
+    },
+    "mdm_ctrm_listOfTaxSchedules": {
+      "serviceKey": "listOfTaxSchedules",
+      "attributeOne": "$taxScheduleCountrystateId$"
+    },
+    "mdm_ctrm_taxScheduleState": {
+      "serviceKey": "taxScheduleCountrystate",
+      "entityType": "Child",
+      "alias": "taxScheduleState",
+      "parentFieldIdList": ["$taxScheduleCountryId$"]
+    },
+    "mdm_ctrm_fxRatesForInsToBasis": {
+      "serviceKey": "fxRatesForInsToBasis",
+      "attributeFour": "$instrumentId$",
+      "attributeOne": "$productId$",
+      "attributeThree": "$basisPriceId$",
+      "attributeTwo": "$issueDate$"
+    },
+    "mdm_ctrm_convertedPriceWithGivenfxRate": {
+      "serviceKey": "convertedPriceWithGivenfxRate",
+      "attributeFour": "$fromPrice$",
+      "attributeOne": "$fromPriceUnitId$",
+      "attributeThree": "$toPriceUnitId$",
+      "attributeTwo": "$fxRate$",
+      "usedFor": "$issueDate$"
+    },
+    "mdm_ctrm_calculateFxRatesForBasisToPayin": {
+      "serviceKey": "calculateFxRatesForBasisToPayin",
+      "attributeFour": "$payInCurrId$",
+      "attributeOne": "$productId$",
+      "attributeThree": "$basisPriceId$",
+      "attributeTwo": "$issueDate$"
+    },
+    "mdm_ctrm_costcomponents": {
+      "serviceKey": "costcomponents"
+    },
+    "mdm_ctrm_corporatebusinesspartnerCombo": {
+      "serviceKey": "corporatebusinesspartnerCombo",
+      "dropDownType": "combo",
+      "limit": "9999"
+    },
+    "mdm_quantConv_quantityConversionFactor": {
+      "serviceKey": "quantityConversionFactor",
+      "from": "$fromUnit$",
+      "to": "$toUnit$",
+      "productId": "$productId$"
+    },
+    "mdm_priceConv_fxRateConversionFactor": {
+      "serviceKey": "fxRateConversionFactor",
+      "from": "$fromUnit$",
+      "to": "$toUnit$",
+      "date": "$date$"
+    },
+    "mdm_subCurrFactor_subCurrencyFactor": {
+      "serviceKey": "subCurrencyFactor",
+      "from": "$fromUnit$"
+    },
+    "mdm_connect_priceType": {
+      "type": "connectmdm",
+      "object": "priceType"
+    },
+    "mdm_connect_pricePoint": {
+      "type": "connectmdm",
+      "object": "pricePoint"
+    },
+    "mdm_connect_priceQuoteRule": {
+      "type": "connectmdm",
+      "object": "priceQuoteRule"
+    },
+    "mdm_connect_holidayRule": {
+      "type": "connectmdm",
+      "object": "holidayRule"
+    },
+    "mdm_connect_contractType": {
+      "type": "connectmdm",
+      "object": "contractType"
+    },
+    "mdm_connect_percentage": {
+      "type": "connectmdm",
+      "object": "percentage"
+    },
+    "mdm_connect_period": {
+      "type": "connectmdm",
+      "object": "period"
+    },
+    "mdm_connect_event": {
+      "type": "connectmdm",
+      "object": "event"
+    },
+    "mdm_connect_quotedPeriod": {
+      "type": "connectmdm",
+      "object": "quotedPeriod"
+    },
+    "mdm_connect_fx": {
+      "type": "connectmdm",
+      "object": "fx"
+    },
+    "mdm_connect_priceDifferential": {
+      "type": "connectmdm",
+      "object": "priceDifferential"
+    },
+    "mdm_connect_instrumentType": {
+      "type": "connectmdm",
+      "object": "instrumentType"
+    },
+    "mdm_connect_counterParty": {
+      "type": "connectmdm",
+      "object": "counterParty"
+    },
+    "mdm_connect_tradeType": {
+      "type": "connectmdm",
+      "object": "tradeType"
+    },
+    "mdm_connect_orderType": {
+      "type": "connectmdm",
+      "object": "orderType"
+    },
+    "mdm_connect_timeInForce": {
+      "type": "connectmdm",
+      "object": "timeInForce"
+    },
+    "mdm_connect_broker": {
+      "type": "connectmdm",
+      "object": "broker"
+    },
+    "mdm_connect_instrument": {
+      "type": "connectmdm",
+      "object": "instrument"
+    },
+    "mdm_connect_shipper": {
+      "type": "connectmdm",
+      "object": "shipper"
+    },
+    "mdm_connect_offsetType": {
+      "type": "connectmdm",
+      "object": "offsetType",
+      "priceQuoteRule": "$priceQuoteRuleId$",
+      "event": "$eventId$"
+    },
+    "mdm_connect_offsetValue": {
+      "type": "connectmdm",
+      "object": "offsetValue",
+      "offsetType": "$offsetTypeId$"
+    },
+    "mdm_connect_modeOfTransport": {
+      "type": "connectmdm",
+      "object": "modeOfTransport"
+    },
+    "mdm_connect_loose": {
+      "type": "connectmdm",
+      "object": "loose"
+    },
+    "mdm_connect_containerSize": {
+      "type": "connectmdm",
+      "object": "containerSize"
+    },
+    "mdm_connect_creditLimitSource": {
+      "type": "connectmdm",
+      "object": "creditLimitSource"
+    },
+    "mdm_connect_creditLimitType": {
+      "type": "connectmdm",
+      "object": "creditLimitType",
+      "creditLimitSource": "$creditLimitSourceId$"
+    },
+    "mdm_connect_creditRiskStatus": {
+      "type": "connectmdm",
+      "object": "creditRiskStatus"
+    },
+    "mdm_connect_creditCollectionStatus": {
+      "type": "connectmdm",
+      "object": "creditCollectionStatus"
+    },
+    "mdm_connect_limitStatus": {
+      "type": "connectmdm",
+      "object": "limitStatus"
+    },
+    "mdm_connect_pricingStrategy": {
+      "type": "connectmdm",
+      "object": "pricingStrategy"
+    },
+    "mdm_platform_instrumentName": {
+      "collectionName": "DS-Market Prices",
+      "filter": {},
+      "key": "Instrument Name",
+      "value": "Instrument Name",
+      "displayKey": "instrumentName"
+    },
+    "mdm_platform_expiryDate": {
+      "collectionName": "DS-Market Prices",
+      "filter": {},
+      "key": "Prompt Date",
+      "value": "Prompt Date",
+      "displayKey": "expiryDate"
+    },
+    "mdm_platform_promptMonth": {
+      "collectionName": "DS-Market Prices",
+      "filter": {},
+      "key": "Month/Year",
+      "value": "Month/Year",
+      "displayKey": "promptMonth"
+    },
+    "mdm_logistic_contractQuality": {
+      "deliveryItem": "$deliveryItem$",
+      "pcdiId": "$pcdiId$",
+      "entity": "contractQuality"
+    },
+    "mdm_logistic_incoTermDestination": {
+      "deliveryItem": "$deliveryItem$",
+      "pcdiId": "$pcdiId$",
+      "entity": "incoTermDestination"
+    },
+    "mdm_logistic_incoTermId": {
+      "deliveryItem": "$deliveryItem$",
+      "pcdiId": "$pcdiId$",
+      "entity": "incoTermId"
+    },
+    "mdm_setupAttributes_productRule": {
+      "serviceKey": "productRule",
+      "productId": "$productId$",
+      "actionId": "CPM_CORPORATEPRODUCTMASTER"
+    },
+    "mdm_connect_dailyMonthly": {
+      "type": "connectmdm",
+      "object": "dailyMonthly"
+    },
+    "mdm_connect_powerDeliveryType": {
+      "type": "connectmdm",
+      "object": "powerDeliveryType"
+    },
+    "mdm_connect_facilityLocation": {
+      "type": "connectmdm",
+      "object": "facilityLocation"
+    },
+    "mdm_connect_powerShapeTimeFrequency": {
+      "type": "connectmdm",
+      "object": "powerShapeTimeFrequency"
+    },
+    "mdm_connect_powerBlockTimeFrequency": {
+      "type": "connectmdm",
+      "object": "powerBlockTimeFrequency"
+    },
+    "mdm_connect_holidayRuleOil": {
+      "type": "connectmdm",
+      "object": "holidayRuleOil"
+    },
+    "mdm_ctrm_productQtyUnitByType" : {
+      "serviceKey" : "productQtyUnitByType",
+      "attributeOne" : "$productId$",
+      "attributeTwo" : "$qualityUnit$"
+    },
+        "mdm_connect_loose_esourcing" : {
+            "type" : "connectmdm",
+            "object" : "loose_esourcing"
+        },
+        "mdm_connect_containerSize_esourcing" : {
+            "type" : "connectmdm",
+            "object" : "containerSize_esourcing"
+        },
+    "mdm_connect_modeOfTransport_esourcing": {
+      "type": "connectmdm",
+      "object": "modeOfTransport_esourcing"
+    },
+    "mdm_ctrm_userProfitCenterListLegalEntity" : {
+      "serviceKey" : "userProfitCenterListLegalEntity",
+      "attributeTwo" : "$legalEntity$"
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "951c3ad8-5088-4f14-b19c-a9d4bac1b5da"
+}

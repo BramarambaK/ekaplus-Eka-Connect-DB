@@ -1,0 +1,119 @@
+{
+  "_id": "document_object",
+  "fields": {
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "uploadedDate",
+      "labelKey": "uploadedDate",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "icon": {
+        "field": "fileContentType"
+      }
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "Upload File",
+      "labelKey": "file",
+      "type": "file",
+      "dataType": "Object",
+      "isRequired": true
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "description": {
+      "description": "Description",
+      "labelKey": "description",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "tags": {
+      "tags": "Tags",
+      "labelKey": "tags",
+      "type": "textbox",
+      "dataType": "Object",
+      "massageDataFormat": "json"
+    },
+    "sys__createdOn": {
+      "sys__createdOn": "Date",
+      "labelKey": "sys__createdOn",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "documentType": {
+      "documentType": "Type",
+      "labelKey": "documentType",
+      "type": "dropdown",
+      "dataType": "String",
+      "propertyKey": "documentType"
+    }
+  },
+  "label": "DOCUMENT_OBJECT",
+  "name": "document_object",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "sys__UUID": "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1"
+}

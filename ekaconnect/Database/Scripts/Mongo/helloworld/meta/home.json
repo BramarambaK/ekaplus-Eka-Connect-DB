@@ -1,0 +1,13 @@
+{
+  "layout": {"name": "list"},
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "workflow": "listing",
+  "refType": "app",
+  "refTypeId": "29a2660b-78a2-498a-9b94-75cdacd5f471",
+  "decisions": [],
+  "_id": "home_HW",
+  "type": "workflow",
+  "taskId": "home",
+  "object": "beeb3afa-50fa-4027-ab14-dc091a982283"
+}

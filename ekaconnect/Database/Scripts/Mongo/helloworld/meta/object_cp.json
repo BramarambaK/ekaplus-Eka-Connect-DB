@@ -1,0 +1,57 @@
+{
+  "_id": "helloworld_cp",
+  "name": "helloworld_cp",
+  "label": "helloworld_cp",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": ["Role", "CP_Name", "PROFILEID"],
+  "uniqueFields": ["Role"],
+  "fields": {
+    "Role": {
+      "Role": "Role",
+      "labelKey": "Role",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "CP_Name": {
+      "CP_Name": "CP_Name",
+      "labelKey": "CP_Name",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "PROFILEID": {
+      "PROFILEID": "PROFILEID",
+      "labelKey": "PROFILEID",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdOn": ISODate("2019-02-07T19:21:17.926Z"),
+  "sys__createdBy": "admin",
+  "sys__UUID": "f871182c-ff36-465d-b5b0-656f7bd910d3"
+}

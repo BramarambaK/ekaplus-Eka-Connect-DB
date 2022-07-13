@@ -1,0 +1,109 @@
+{
+    "_id" : "documentlisting_documentsapp_Mobile",
+    "componentType" : "UserTask",
+    "payLoad" : "selected.documentlistingcomposite.documentlisting",
+    "version" : "V2",
+    "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "documentlist_chainedtask",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : false,
+            "statusFlagWorklowTask" : "documentlistingV2",
+            "hasStatusFlag" : true,
+            "defaultOptions" : {
+                "sort" : [ 
+                    {
+                        "column" : "fileName.raw",
+                        "order" : "desc"
+                    }
+                ]
+            }
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "position" : "row-selection",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.documentlisting",
+                    "name" : "documentdownload",
+                    "headers" : {
+                        "storageType" : "awsS3",
+                        "folderInS3" : "generalDocs"
+                    },
+                    "forceDownload" : true,
+                    "type" : "downloadLink"
+                }
+            ],
+            "label" : "Download",
+            "iconClass" : "download-icon"
+        }
+    ],
+    "fields" : [ 
+        {
+            "label" : "Document",
+            "key" : "fileName",
+            "sort" : true,
+            "placement" : "Row1"
+        }, 
+        {
+            "label" : "Description",
+            "key" : "layoutdescription",
+            "placement" : "Row2"
+        }, 
+        {
+            "label" : "Date",
+            "key" : "sys__createdOn",
+            "placement" : "Row3",
+            "dateformat" : "dd-MMM-yyyy HH:MM:ss"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "labelKey" : "DOCUMENT_LISTING",
+    "layout" : {
+        "header" : {
+            "title" : "Document Listing"
+        },
+        "selection" : "row",
+        "name" : "list",
+        "lazyLoading" : true,
+        "customFilter" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "serverSearch" : false,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "showCheckbox" : false,
+        "menu" : false,
+        "getInitialData" : false,
+        "preserveSelectedData" : true
+    },
+    "object" : "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+    "rows" : "100",
+    "taskId" : "documentlisting",
+    "theme" : "theme-grid-light",
+    "type" : "workflow",
+    "sys__UUID" : "5f58d775-5540-469c-b92a-72daf485fb04",
+    "deviceType" : "mobile",
+    "label" : "Document Listing"
+}

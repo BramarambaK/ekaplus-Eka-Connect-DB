@@ -1,0 +1,23 @@
+{
+	"_id":"helloworld_cp_policy",
+    "type" : "policy",
+    "app_UUID" : "29a2660b-78a2-498a-9b94-75cdacd5f471",
+    "refType" : "object",
+    "refTypeId" : "f871182c-ff36-465d-b5b0-656f7bd910d3",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

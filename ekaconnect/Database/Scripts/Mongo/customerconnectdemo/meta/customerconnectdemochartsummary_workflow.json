@@ -1,0 +1,36 @@
+{
+  "_id": "customerconnectdemochartsummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "label": "Cost Summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData" : true
+  },
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "_id",
+        "label": "Estimates",
+        "aggregateFunction": "count"
+      },
+      {
+        "key": "fulfilledQty",
+        "label": "Total Fulfilled Quantity",
+        "aggregateFunction": "sum"
+      },
+      {
+        "key": "remainingQty",
+        "label": "Total Remaining Quantity",
+        "aggregateFunction": "sum"
+      }
+    ]
+  ],
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "customerconnectdemochartsummary",
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928"
+}

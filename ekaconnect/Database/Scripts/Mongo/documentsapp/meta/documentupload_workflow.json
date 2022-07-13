@@ -1,0 +1,203 @@
+{
+  "_id": "documentupload_documentsapp",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentlistingcomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "documentupload",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "File uploaded successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "File uploaded with some errors"
+            }
+          },
+          "data": "output.documentupload",
+          "appendMsg": true,
+          "name": "_ST_CREATE_DOCUMENT"
+        },
+        {
+          "data": "output._ST_CREATE_DOCUMENT",
+          "name": "documentlistingcomposite",
+          "showToaster": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "headers": {
+        "storageType": "awsS3",
+        "folderInS3": "generalDocs"
+      },
+      "type": "submit"
+    },
+    {
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "DOCUMENT_UPLOAD_VALIDATE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.documentupload",
+          "appendMsg": false,
+          "name": "DOCUMENT_UPLOAD_VALIDATE"
+        }
+      ]
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentlistingcomposite"
+        }
+      ],
+      "position": "header",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "400px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "documentType"
+      },
+      {
+        "style": {
+          "width": "400px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "layoutdescription"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "file"
+      },
+      {
+        "style": {
+          "width": "400px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "key": "tags"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "fileName"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "uploadedBy"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "uploadedDate"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "fileContentType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "id"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "size"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "refObject"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "refObjectId"
+      }
+    ]
+  ],
+  "getDataFromExternalAPI": true,
+  "label": "Add Document",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "defaultFormItemStyle": {},
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "Document Upload - "
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "object": "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "taskId": "documentupload",
+  "type": "workflow",
+  "sys__UUID": "8e2b01e6-e5ad-4927-8464-6ce28441aead"
+}

@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESS_QUERY_DOC_documentsapp",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "processorInfo": {
+    "processorId": "729f1fdd-0057-4dae-8e41-1d1db6a2b31c"
+  },
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_QUERY_DOC",
+  "object": "d017a90c-57f6-4be3-aabe-4c1de0e7f1df",
+  "sys__UUID": "630d7260-013d-4bc0-bfac-f6abeec3d01c"
+}

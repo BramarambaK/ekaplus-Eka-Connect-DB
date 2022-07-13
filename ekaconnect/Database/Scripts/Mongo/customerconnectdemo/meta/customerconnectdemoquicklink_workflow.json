@@ -1,0 +1,37 @@
+{
+  "_id": "customerconnectdemoquicklink_workflow",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "inputData": {
+    "type": "menuObject",
+    "config": {
+      "id": "quicklinkmenu_customerconnectdemoapp"
+    }
+  },
+  "label": "Quick Link",
+  "labelKey": "Quick Link",
+  "layout": {
+    "name": "flexible-menu",
+	"component" : "FlexibleMenuComponent",
+    "header": {
+      "label": "Quick links",
+      "style": {
+        "color": "#3B4047",
+        "font-size": "18px",
+        "font-weight": "600",
+        "padding": "0px 10px 10px 20px",
+        "margin": "0 5px",
+        "border-bottom": "solid 1px #DBE1EB"
+      }
+    }
+  },
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "taskId": "customerconnectdemoquicklink",
+  "type": "workflow",
+  "sys__UUID": "5f914770-60c6-490a-ae39-04d0ed374b30"
+}

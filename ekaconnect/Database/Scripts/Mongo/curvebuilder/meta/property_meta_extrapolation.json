@@ -1,0 +1,20 @@
+{
+    "_id":"extrapolation_CB",
+    "type" : "property",
+    "name" : "extrapolation",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue":[ 
+        {
+            "key" : "Linear",
+            "value" : "Linear"
+        }
+    ],
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "label": "Extrapolation",
+    "description": "Dropdown value for Extrapolation",
+    "editSupportedInUI" : false
+
+}

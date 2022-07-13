@@ -1,0 +1,29 @@
+{
+  "_id": "menuObject_helloworld",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "29a2660b-78a2-498a-9b94-75cdacd5f471",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Hello World",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "List",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "/app/hello/listing/list",
+                  "text": "List",
+                  "iconCls": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

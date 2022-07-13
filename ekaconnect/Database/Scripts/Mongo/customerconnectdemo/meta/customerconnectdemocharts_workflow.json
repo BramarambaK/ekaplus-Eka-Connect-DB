@@ -1,0 +1,88 @@
+{
+  "_id": "customerconnectdemocharts_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "label": "Voyage",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Fulfilled Quantity vs Remaining Quantity",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "getInitialData": true,
+    "name": "chart",
+    "type": "horizontalBar",
+    "xAxesTick": {
+      "display": false
+    },
+    "legend": {
+      "display": false,
+      "position": "top"
+    }
+  },
+  "fields": [
+    {
+      "label": "Product",
+      "key": "product",
+      "type": "label"
+    },
+    {
+      "key": "deliveryDestination",
+      "filterType": "dropdown",
+      "multiple": true,
+      "placeholder": "Location",
+      "maxSelectedLabels": 1
+    },
+    {
+      "label": "Fulfilled Quantity",
+      "key": "fulfilledQty",
+      "backgroundColor": [
+        "#BE531C",
+        "#CF7F00",
+        "#DAAA00",
+        "#ABAD25"
+      ],
+      "fontColor": "#FFFFFF",
+      "type": "value"
+    },
+    {
+      "label": "Remaining Quantity",
+      "key": "remainingQty",
+      "backgroundColor": "#DBE1EB",
+      "fontColor": "#5D646F",
+      "type": "value"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "chart",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": [
+            "costestimatelistplatform"
+          ]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "CHARTS",
+  "taskId": "customerconnectdemocharts",
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928"
+}

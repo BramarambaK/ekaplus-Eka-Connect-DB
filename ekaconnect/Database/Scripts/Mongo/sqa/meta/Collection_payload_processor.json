@@ -1,0 +1,11 @@
+{
+    "_id" : "Collection_payload_processor",
+    "name" : "Collection_payload_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "snippet" : "let data = { ...req.body };\r\n  delete data.propertyList;\r\n  delete data.processorDetails;\r\n  delete data.processorId;\r\n  delete data.appId;\r\n  delete data.sys__state;\r\n  let finalData = { ...data };\r\n  finalData.collectionData = [];\r\n  finalData.collectionData.push(data);\r\n  delete finalData.collectionData[0].collectionName;\r\n  delete finalData.collectionData[0].collectionHeaderProperty;\r\n  delete finalData.collectionData[0].collectionConnectMapProperty;\r\n  delete finalData.collectionData[0].platformTemplateId;\r\n  console.log(finalData);\r\n  res.status(200).send(finalData);",
+    "sys__UUID" : "29e174df-c951-4738-abd5-71efdf7a7d9e",
+    "sys__createdOn" : ISODate("2019-06-26T08:50:01.556Z"),
+    "sys__createdBy" : "Bravo"
+}

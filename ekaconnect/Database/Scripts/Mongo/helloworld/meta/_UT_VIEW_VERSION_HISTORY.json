@@ -1,0 +1,11 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "29a2660b-78a2-498a-9b94-75cdacd5f471",
+  "decisions": [],
+  "_id": "_UT_VIEW_VERSION_HISTORY_HW",
+  "type": "workflow",
+  "taskId": "_UT_VIEW_VERSION_HISTORY",
+  "object": "beeb3afa-50fa-4027-ab14-dc091a982283"
+}

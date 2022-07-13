@@ -1,0 +1,60 @@
+{
+  "_id": "documentlisting_composite",
+  "componentType": "UserTask",
+  "processorInfo" : {
+    "processorId" : "729f1fdd-0057-4dae-8e41-1d1db6a2b31c"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "uploadpopupcss",
+          "name": "documentupload"
+        }
+      ],
+      "label": "ADD DOCUMENT",
+      "position": "top",
+      "iconClass": "fa fa-plus",
+      "style" : {
+        "width" : "130px"
+      }
+    }
+  ],
+  "label": "Documents Listing",
+  "layout": {
+    "name": "customv2",
+    "preserveSelectedData": true,
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "dropdownDecisions": false
+  },
+  "object": "d017a90c-57f6-4be3-aabe-4c1de0e7f1df",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "taskId": "documentlistingcomposite",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "name": "querydocuments",
+      "visibility" : "return '${documentlistingcomposite.querydocuments.visibility}' == 'true' ? true : false"
+    },
+    {
+      "name": "documentlisting"
+    }
+  ],
+  "sys__UUID": "6b25a4ba-2703-4a8c-a423-6ade8ea03d0b"
+}

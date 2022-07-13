@@ -1,0 +1,109 @@
+{
+    "_id": "customerconnectdemoedit_workflow",
+    "componentType": "UserTask",
+    "objectAction": "UPDATE",
+    "refType": "app",
+    "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+    "label": "Create",
+    "type": "workflow",
+    "layout": {
+      "defaultFormItemStyle": {
+        "justify-content": "flex-start",
+        "flex-wrap": "wrap",
+        "margin-right": "10px"
+      },
+      "defaultFormLabelStyle": {},
+      "topLine": {
+        "display": true
+      },
+      "name": "create",
+      "formStyle": {
+        "margin": "auto",
+        "margin-bottom": "20px"
+      },
+      "defaultFormValueStyle": {},
+      "type": "row"
+    },
+    "decisions": [
+      {
+        "btnClass": "btn btn-outline-dark custom-btn",
+        "objectAction": "READ",
+        "outcomes": [
+          {
+            "name": "customerconnectdemolisting"
+          }
+        ],
+        "style": {
+          "margin-right": "auto"
+        },
+        "label": "CANCEL",
+        "position": "bottom"
+      },
+      {
+        "btnClass": "btn-primary custom-btn oms-blue",
+        "objectAction": "UPDATE",
+        "labelkey": "REVIEW",
+        "task": "customerconnectdemoedit",
+        "outcomes": [
+          {
+            "data": "output.customerconnectdemoedit",
+            "appendMsg": false,
+            "name": "_ST_CUSTOMERCONNECTDEMO_EDIT"
+          },
+          {
+            "data": "output.customerconnectdemoedit",
+            "name": "customerconnectdemolisting"
+          }
+        ],
+        "label": "SAVE",
+        "position": "bottom",
+        "type": "submit"
+      },
+      {
+        "btnClass": "close-icon btn",
+        "objectAction": "READ",
+        "outcomes": [
+          {
+            "name": "customerconnectdemolisting"
+          }
+        ],
+        "position": "top",
+        "type": "close"
+      }
+    ],
+    "labelKey": "CREATE",
+    "fields": [
+      [
+        {
+          "key": "product"
+        },
+        {
+          "key": "quality"
+        },
+        {
+          "key": "estimatedValue"
+        },
+        {
+          "key": "fulfilledQty"
+        }
+      ],
+      [
+        {
+          "key": "remainingQty"
+        },
+        {
+          "key": "deliveryDate"
+        },
+        {
+          "key": "deliveryTerm"
+        },
+        {
+          "key": "deliveryDestination"
+        }
+      ]
+    ],
+    "taskId": "customerconnectdemoedit",
+    "object": "0f4baa06-35f1-4868-8635-c4226ae16928",
+    "sys__UUID": "02bedc12-d3bb-4e4e-bea0-f24eb8d1edc8"
+  }
+  

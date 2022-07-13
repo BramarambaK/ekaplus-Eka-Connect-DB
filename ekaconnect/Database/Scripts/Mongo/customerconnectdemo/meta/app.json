@@ -1,0 +1,68 @@
+{
+  "_id": "customerconnectdemo_app",
+  "title": "Customer Connect Demo App",
+  "name": "customerconnectdemo",
+  "type": "app",
+  "appType": "CONNECT",
+  "platform_id": "55",
+   "template" : [ 
+        {
+            "deviceType" : "web",
+            "template" : "cargill-web",
+            "config" : {
+                "header" : "headerWorkflow",
+                "footer" : "footerWorkflow"
+            }
+        }, 
+        {
+            "deviceType" : "mobile",
+            "template" : "cargill-mobile",
+            "config" : {
+                "header" : "headerWorkflow",
+                "footer" : "footerWorkflow"
+            }
+        }
+    ],
+  "config": {
+    "header": {
+      "brand": {
+        "src": "assets/img/brand/eka-login-logo.png",
+        "width": 60,
+        "height": 20,
+        "alt": "Eka"
+      },
+      "clientLogo": {
+        "src": "assets/img/brand/cargil-logo.png",
+        "width": 60.0,
+        "height": 20.0,
+        "alt": "Cargill"
+      },
+      "sidebarToggler": true,
+      "asideMenuToggler": false
+    },
+    "sidebar": {
+      "fixed": true,
+      "display": false
+    },
+    "navbar": [
+      {
+        "apiMenuData": [
+          {
+            "menu": [
+              {
+                "handler": "/app/customerconnectdemo/customerconnectdemolisting",
+                "text": "Customer Connect Demo App Listing",
+                "iconCls": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "aside": {
+      "fixed": true,
+      "display": false
+    }
+  },
+  "sys__UUID": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e"
+}

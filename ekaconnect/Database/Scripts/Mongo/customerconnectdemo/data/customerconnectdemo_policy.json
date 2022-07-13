@@ -1,0 +1,15 @@
+{
+  "_id": "customerconnectdemo_policy",
+  "type": "policy",
+  "app_UUID": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "refType": "object",
+  "refTypeId": "0f4baa06-35f1-4868-8635-c4226ae16928",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

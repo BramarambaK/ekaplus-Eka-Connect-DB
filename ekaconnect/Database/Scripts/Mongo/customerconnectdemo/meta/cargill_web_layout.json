@@ -1,0 +1,25 @@
+{
+    "_id" : "Cargil_Layout",
+    "name" : "cargill-web",
+    "image" : "layouts/cargill-sample.jpg",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "layout",
+    "areas" : [ 
+        {
+            "name" : "header",
+            "displayName" : "Header",
+            "workflow" : "headerWorkflow"
+        }, 
+        {
+            "name" : "aside",
+            "displayName" : "Aside",
+            "workflow" : "customerconnectdemoquicklink"
+        }, 
+        {
+            "name" : "menu",
+            "displayName" : "Menu",
+            "workflow" : "MenuWorkflow"
+        }
+    ],
+    "sys__UUID" : "a9b0ca40-15c0-4276-ba02-b35443708599"
+}

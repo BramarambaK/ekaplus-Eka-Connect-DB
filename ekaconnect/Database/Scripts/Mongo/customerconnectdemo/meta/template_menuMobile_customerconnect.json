@@ -1,0 +1,20 @@
+{
+    "_id" : "template_menu_Mobile_sampling",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+    "type" : "workflow",
+    "layout" : {
+        "type" : "template",
+        "component" : "AppSidebarV2Component",
+        "config" : {
+            "display" : false,
+            "minimized" : true,
+            "fixed" : true
+        }
+    },
+    "taskId" : "MenuMobileWorkflow",
+    "decisions" : [],
+    "object" : "0f4baa06-35f1-4868-8635-c4226ae16928"
+}

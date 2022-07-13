@@ -1,0 +1,26 @@
+{
+  "_id": "download_view_documentlisting",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "label": "Download",
+  "type": "workflow",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["id"]
+      }
+    },
+    "name": "download",
+    "headers": {
+      "storageType": "awsS3",
+      "folderInS3": "generalDocs"
+    },
+    "forceDownload": true
+  },
+  "getDataFromExternalAPI": false,
+  "decisions": [],
+  "taskId": "download",
+  "object": "02799bd0-20c8-4281-9aee-44d4b4d9e1f2"
+}

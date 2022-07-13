@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_MENU_STATE_HELLO",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "29a2660b-78a2-498a-9b94-75cdacd5f471",
+    "type" : "workflow",
+    "taskId" : "_ST_MENU_STATE",
+    "object" : "beeb3afa-50fa-4027-ab14-dc091a982283"
+}

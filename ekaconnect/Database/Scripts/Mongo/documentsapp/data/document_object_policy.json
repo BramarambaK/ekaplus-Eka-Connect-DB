@@ -1,0 +1,23 @@
+{
+  "_id": "document_object_policy_documentsapp",
+  "app_UUID": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "refType": "object",
+  "refTypeId": "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": [
+        "CREATE",
+        "READ",
+        "UPDATE",
+        "DELETE",
+        "LISTVIEW",
+        "APPROVE",
+        "REJECT"
+      ],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  },
+  "type": "policy",
+  "userGrants": {}
+}

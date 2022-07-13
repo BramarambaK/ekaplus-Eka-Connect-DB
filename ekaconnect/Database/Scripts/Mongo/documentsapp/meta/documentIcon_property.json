@@ -1,0 +1,18 @@
+{
+  "type": "property",
+  "name": "documentIcon",
+  "propertyLevel": "app",
+  "dataType": "object",
+  "fieldtype": "textbox",
+  "length": "500",
+  "visibility": "public",
+  "label": "Display Icons for document types",
+  "defaultValue": {
+    "pdf": "fa fa fa-file-pdf-o",
+    "jpg": "fa fa-picture-o",
+    "csv": "fa fa-file-excel-o",
+    "default": "fa fa-file-text-o"
+  },
+  "description": "Used to display file types for documents",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54"
+}

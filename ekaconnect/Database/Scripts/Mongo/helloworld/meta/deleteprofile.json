@@ -1,0 +1,55 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "29a2660b-78a2-498a-9b94-75cdacd5f471",
+  "label": "Delete",
+  "type": "workflow",
+  "apiInfo": {"responseDataKey": ""},
+  "layout": {
+    "topLine": {"display": true},
+    "name": "cancelpopup"
+  },
+  "input": ["id"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [{"name": "listing"}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "deleteprofile",
+      "outcomes": [
+        {
+          "result": {
+            "success": {"message": "Profile got deleted successfully"},
+            "failure": {"message": "Please fix errors "},
+            "successWithWarning": {"message": "Profile got deleted with some errors"}
+          },
+          "data": "output.deleteprofile",
+          "appendMsg": true,
+          "name": "_ST_DELETE_PROFILE"
+        },
+        {
+          "name": "listing",
+          "showPopUp": "true"
+        }
+      ],
+      "label": "Delete",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "deleteprofile_HW",
+  "labelKey": "Delete_Profile",
+  "fields": [{"heading": "name"}],
+  "taskId": "deleteprofile",
+  "object": "beeb3afa-50fa-4027-ab14-dc091a982283"
+}

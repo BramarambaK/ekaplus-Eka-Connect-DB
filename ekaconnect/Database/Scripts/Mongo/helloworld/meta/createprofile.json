@@ -1,0 +1,132 @@
+{
+    "_id" : "createprofile_HW",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "80020ae1-c7bf-41a1-9f04-2f30d16c8469"
+    },
+    "refType" : "app",
+    "refTypeId" : "29a2660b-78a2-498a-9b94-75cdacd5f471",
+    "label" : "New User",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "column"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "createprofile",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Profile got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Profile got created with some errors"
+                        }
+                    },
+                    "data" : "output.createprofile",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_PROFILE",
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output._ST_CREATE_PROFILE",
+                            "value" : "name"
+                        }
+                    ]
+                }, 
+                {
+                    "data" : "output._ST_CREATE_PROFILE",
+                    "name" : "_ST_MENU_STATE",
+                    "config" : {
+                        "uniqueFields" : [ 
+                            "name"
+                        ],
+                        "menuState" : {
+                            "createprofile" : "completed"
+                        }
+                    },
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output._ST_MENU_STATE",
+                    "name" : "listing",
+                    "showPopUp" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "CREATE_NEW_PROFILE",
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "key" : "name"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "age"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "phone"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "address"
+            }
+        ]
+    ],
+    "taskId" : "createprofile",
+    "object" : "beeb3afa-50fa-4027-ab14-dc091a982283",
+    "menuObject" : "9c98c493-ee2f-490d-be92-fe2424f513e5"
+}

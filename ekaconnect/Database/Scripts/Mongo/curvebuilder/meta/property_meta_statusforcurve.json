@@ -1,0 +1,23 @@
+{
+    "_id":"statusforcurve_CB",
+    "type" : "property",
+    "name" : "statusforcurve",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Active",
+            "value" : "ACTIVE"
+        }, 
+        {
+            "key" : "Inactive",
+            "value" : "INACTIVE"
+        }
+    ],
+    "label": "Status",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "description": "Dropdown value for Status",
+    "editSupportedInUI" : false
+}

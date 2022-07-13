@@ -1,0 +1,48 @@
+{
+  "_id": "query_object",
+  "fields": {
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "userName": {
+      "userName": "Username",
+      "labelKey": "userName",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "location": {
+      "location": "Location",
+      "labelKey": "location",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "visibility" : {
+      "visibility" : "",
+      "labelKey" : "visibility",
+      "type" : "hidden",
+      "dataType" : "Boolean"
+    }
+  },
+  "label": "QUERY OBJECT",
+  "name": "query_object",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "sys__UUID": "d017a90c-57f6-4be3-aabe-4c1de0e7f1df",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1"
+}

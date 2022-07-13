@@ -1,0 +1,11 @@
+{
+    "_id" : "Validation__processor_CB",
+    "name" : "validation_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "snippet" : " if(req.body.status ===\"Active\"){\r\n    if(req.body.evaluatedPrice ===\"\")\r\n    res.status(500).send('Please fill evaluatedPrice')\r\n    if(req.body.extrapolation ===\"\")\r\n    res.status(500).send('Please fill extrapolation')\r\n    if(req.body.granularity ===\"\")\r\n    res.status(500).send('Please fill granularity')\r\n    if(req.body.intrapolation ===\"\")\r\n    res.status(500).send('Please fill intrapolation')\r\n   }\r\n   res.status(200).send({})",
+    "sys__UUID" : "93105528-f1c5-4e02-bf57-965588d7f374",
+    "sys__createdOn" : ISODate("2019-12-02T01:45:18.385Z"),
+    "sys__createdBy" : "Bravo"
+}

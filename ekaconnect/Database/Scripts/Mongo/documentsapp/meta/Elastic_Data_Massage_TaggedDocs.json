@@ -1,0 +1,10 @@
+{
+    "_id" : "Elastic_Data_Massage_TaggedDocs",
+    "componentType" : "ELASTICDATAMASSSAGETASK",
+    "refTypeId" : "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+    "type" : "workflow",
+    "taskId" : "Elastic_Data_Massage_TaggedDocs",
+    "object" : "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

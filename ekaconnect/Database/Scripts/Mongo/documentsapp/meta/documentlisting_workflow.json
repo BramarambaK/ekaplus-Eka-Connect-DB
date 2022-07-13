@@ -1,0 +1,139 @@
+{
+    "_id" : "documentlisting_documentsapp",
+    "componentType" : "UserTask",
+    "payLoad" : "selected.documentlistingcomposite.documentlisting",
+   "version" : "V2",
+    "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "documentlist_chainedtask",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : false,
+            "statusFlagWorklowTask" : "documentlisting",
+            "hasStatusFlag" : true,
+            "defaultOptions" : {
+                "sort" : [ 
+                    {
+                        "column" : "fileName.raw",
+                        "order" : "desc"
+                    }
+                ]
+            }
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.documentlisting",
+                    "name" : "documentdownload",
+                    "targetPath" : "/download/file/${id}",
+                    "type" : "internalLink"
+                }
+            ],
+            "label" : "Download",
+            "iconClass" : "fa fa-external-link"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.documentlisting",
+                    "name" : "documentdelete",
+                    "displayType" : "popup"
+                }
+            ],
+            "label" : "Delete",
+            "iconClass" : "delete-icon"
+        },
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "default",
+            "position" : "top",
+            "outcomes" : [
+                {
+                    "type" : "client",
+                    "action" : "event",
+                    "event" : "data.querydocuments.visibility = !data.querydocuments.visibility"
+                }
+            ],
+            "label" : "CUSTOM QUERY",
+            "iconClass" : "fa fa-external-link"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Document",
+            "sort" : true,
+            "key" : "fileName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Description",
+            "sort" : true,
+            "key" : "layoutdescription"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Date",
+            "sort" : true,
+            "key" : "sys__createdOn",
+            "dateformat" : "DD-MMM-YYYY"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "labelKey" : "DOCUMENT_LISTING",
+    "layout" : {
+        "header" : {
+            "title" : "Document Listing"
+        },
+        "selection" : "row",
+        "name" : "list",
+        "lazyLoading" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "serverSearch" : true,
+            "columnFilter" : false,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : false,
+            "export" : false,
+            "sessionStateDisable" : true
+        },
+        "theme" : "theme-grid-white",
+        "showCheckbox" : false,
+        "menu" : false,
+        "getInitialData" : false,
+        "preserveSelectedData" : true
+    },
+    "object" : "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+    "rows" : "100",
+    "taskId" : "documentlisting",
+    "theme" : "theme-grid-light",
+    "type" : "workflow",
+    "sys__UUID" : "5f58d775-5540-469c-b92a-72daf485fb04"
+}

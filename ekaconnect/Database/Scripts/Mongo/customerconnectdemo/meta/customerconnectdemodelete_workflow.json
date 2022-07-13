@@ -1,0 +1,67 @@
+{
+  "_id": "customerconnectdemodelete_workflow",
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "label": "Delete",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to delete ${product}-${quality}?",
+      "headerMessage": "Remove: ${product}-${quality}"
+    }
+  },
+  "input": ["product"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "customerconnectdemolisting"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "customerconnectdemodelete",
+      "outcomes": [
+        {
+          "data": "output.customerconnectdemodelete",
+          "appendMsg": false,
+          "name": "_ST_CUSTOMERCONNECTDEMO_DELETE"
+        },
+        {
+          "name": "customerconnectdemolisting"
+        }
+      ],
+      "label": "Delete",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "Delete",
+  "fields": [
+    {
+      "heading": "product"
+    },
+    {
+      "heading": "quality"
+    }
+  ],
+  "taskId": "customerconnectdemodelete",
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928",
+  "sys__UUID": "3d6d425e-10f0-480c-ab4c-d5a4e1ad1c42"
+}

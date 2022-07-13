@@ -1,0 +1,86 @@
+{
+  "_id": "documentdelete_documentsapp",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentlisting"
+        }
+      ],
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "task": "documentdelete",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Document deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in external task"
+            },
+            "successWithWarning": {
+              "message": "Document deleted with some errors"
+            }
+          },
+          "data": "output.documentdelete",
+          "appendMsg": true,
+          "name": "_EXT_DELETE_DOCUMENT"
+        },
+        {
+          "data": "output.documentdelete",
+          "appendMsg": false,
+          "name": "_ST_DELETE_DOCUMENT"
+        },
+        {
+          "name": "documentlisting",
+          "showToaster": true
+        }
+      ],
+      "style": {
+        "margin-left": "auto"
+      },
+      "label": "DELETE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentlisting"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "getDataFromExternalAPI": true,
+  "label": "DELETE DOCUMENT",
+  "labelKey": "DELETE_DOCUMENT",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to delete document ${fileName}?",
+      "headerMessage": "Delete Document: ${fileName}"
+    }
+  },
+  "object": "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "taskId": "documentdelete",
+  "type": "workflow",
+  "sys__UUID": "31482c40-c1a6-4a4d-a4bd-d1131d34ee44"
+}

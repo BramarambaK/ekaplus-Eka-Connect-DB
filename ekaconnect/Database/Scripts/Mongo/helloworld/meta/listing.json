@@ -1,0 +1,99 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "29a2660b-78a2-498a-9b94-75cdacd5f471",
+  "label": "Profile List",
+  "type": "workflow",
+  "refreshData": true,
+  "apiInfo": {
+    "path": "/collection/v1?collectionName=Credit Risk Counter Party Details&limit=10000",
+    "headers": {},
+    "inputMapping": {},
+    "method": "GET",
+    "useInputMapping": false,
+    "host": "${platform_url}",
+    "body": {}
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "refreshData": {"time": 30000}
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "selection": "row",
+      "outcomes": [{
+        "displayType": "popup",
+        "data": "selected.listing",
+        "popupClass": "edit-modal700px",
+        "name": "editprofile"
+      }],
+      "label": "EDIT PROFILE",
+      "iconClass": "fa fa-edit"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "selection": "row",
+      "outcomes": [{
+        "displayType": "popup",
+        "data": "selected.listing",
+        "name": "deleteprofile"
+      }],
+      "label": "Delete",
+      "iconClass": "fa fa-trash-o fa-fw"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "outcomes": [{
+        "popupClass": "edit-modal700px",
+        "name": "createprofile"
+      }],
+      "label": "Create",
+      "iconClass": "fa fa-plus"
+    }
+  ],
+  "_id": "listing_HW",
+  "labelKey": "USER LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "Role"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "PROFILEID"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "CP_Name"
+    }
+  ],
+  "taskId": "listing",
+  "object": "beeb3afa-50fa-4027-ab14-dc091a982283"
+}

@@ -1,0 +1,75 @@
+{
+  "_id": "customerconnectdemo_object",
+  "name": "customerconnectdemo_object",
+  "label": "Customer Connect Demo Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+
+  "fields": {
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "estimatedValue": {
+      "estimatedValue": "Estimated Value",
+      "labelKey": "estimatedValue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "fulfilledQty": {
+      "fulfilledQty": "Fulfilled Qty",
+      "labelKey": "fulfilledQty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "remainingQty": {
+      "remainingQty": "Remaining Qty",
+      "labelKey": "remainingQty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "deliveryDate": {
+      "deliveryDate": "Delivery Date",
+      "labelKey": "deliveryDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "date"
+    },
+    "deliveryTerm": {
+      "deliveryTerm": "Delivery Term",
+      "labelKey": "deliveryTerm",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "deliveryDestination": {
+      "deliveryDestination": "Delivery Destination",
+      "labelKey": "deliveryDestination",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "0f4baa06-35f1-4868-8635-c4226ae16928"
+}

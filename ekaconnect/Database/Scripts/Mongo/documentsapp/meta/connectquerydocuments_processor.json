@@ -1,0 +1,10 @@
+{
+    "_id": "connectquerydocuments_processor",
+    "name": "connectquerydocuments",
+    "type": "processor",
+    "refType": "app",
+    "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+    "snippet": "var formData = req.body;\r\nvar connect = {\r\n  method: \"GET\",\r\n  url:\r\n    req.body.propertyList.eka_connect_host +\r\n    `\/data\/c45c9007-1aa9-4262-b0d5-29c5379abc54\/02799bd0-20c8-4281-9aee-44d4b4d9e1f2`,\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    \"X-TenantID\": req.headers[\"x-tenantid\"],\r\n  },\r\n  json: true,\r\n};\r\n\r\nfunction get_connect() {\r\n  return new Promise(function (resolve, reject) {\r\n    console.log(\"Request - \" + connect.url);\r\n    request(connect, function (err, response, body) {\r\n      console.log(\"Response - \" + body);\r\n      if (err || body.error) reject(body);\r\n      else {\r\n        console.log(\"Success\");\r\n        resolve(body);\r\n      }\r\n    });\r\n  });\r\n}\r\nif (req.headers.hasOwnProperty(\"device-id\")) {\r\n  connect.headers[\"Device-Id\"] = req.headers[\"device-id\"];\r\n}\r\nif (req.body.fileName) {\r\n  connect.url = connect.url + `?fileName=${req.body.fileName}`;\r\n}\r\nif (req.body.layoutdescription) {\r\n  connect.url =\r\n    connect.url + `?layoutdescription=${req.body.layoutdescription}`;\r\n}\r\ndelete formData.appId;\r\ndelete formData.processorDetails;\r\ndelete formData.processorId;\r\ndelete formData.propertyList;\r\nget_connect().then((result) => {\r\n  res.status(200).send({\r\n    documentlisting: result,\r\n    querydocuments: formData,\r\n  });\r\n});\r\n",
+    "sys__UUID": "a1e0cd93-dec0-4286-8abb-4c303e8d94fd"
+  }
+  

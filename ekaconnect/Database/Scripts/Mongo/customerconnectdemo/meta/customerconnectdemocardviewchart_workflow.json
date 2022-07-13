@@ -1,0 +1,107 @@
+{
+  "_id": "customerconnectdemocardviewchart_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "label": "Voyage",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 8
+    }
+  },
+  "fields": [
+    [
+      {
+        "key": "product",
+        "type": "heading",
+        "class": "header"
+      },
+      {
+        "key": "quality",
+        "type": "heading",
+        "filterType": "tabs"
+      }
+    ],
+    [
+      {
+        "label": "Fulfilled Quantity",
+        "key": "fulfilledQty",
+        "type": "details"
+      },
+      {
+        "label": "Remaining Quantity",
+        "key": "remainingQty",
+        "type": "details"
+      },
+      {
+        "label": "Estimated Value",
+        "key": "estimatedValue",
+        "type": "details"
+      }
+    ]
+  ],
+  "template12": [
+    {
+      "section": "heading",
+      "title": "costComponentDisplayName",
+      "date": ""
+    },
+    {
+      "section": "insight"
+    },
+    {
+      "section": "details",
+      "data": [
+        {
+          "key": "Entity Type",
+          "value": "entityType",
+          "alertText": "",
+          "alert": false
+        },
+        {
+          "key": "Cost Component",
+          "value": "costComponent",
+          "alertText": "",
+          "alert": false
+        },
+        {
+          "key": "Rate Type Price",
+          "value": "rateTypePriceDisplayName",
+          "alertText": "",
+          "alert": false
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "chart",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": [
+            "costestimatelistplatform"
+          ]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "customerconnectdemocardviewchart",
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928"
+}

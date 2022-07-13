@@ -1,0 +1,75 @@
+{
+	"_id":"hello_object",
+    "name" : "hello",
+    "label" : "Hello World",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [ 
+        "name"
+    ],
+    "fields" : {
+        "name" : {
+            "name" : "Name",
+            "labelKey" : "name",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "age" : {
+            "age" : "Age",
+            "labelKey" : "age",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number",
+            "length" : "2",
+            "isMandatory" : "if('${name}' == 'Rahul') { return true} else { return false}",
+            "valueCheck" : "if(${age} == 50 ) { return true} else { return false}"
+        },
+        "address" : {
+            "address" : "Address",
+            "labelKey" : "address",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "phone" : {
+            "phone" : "Phone No.",
+            "labelKey" : "phone",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number",
+            "length" : "10",
+            "defaultValue" : "return ${age} + 30"
+        },
+        "salary" : {
+            "phone" : "Salary",
+            "labelKey" : "salary",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number",
+            "serialNumber" : {
+                "startsWith" : "0"
+            }
+        }
+    },
+    "sys__UUID" : "beeb3afa-50fa-4027-ab14-dc091a982283",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

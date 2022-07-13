@@ -1,0 +1,143 @@
+{
+  "_id": "querydocuments_DocumentsApp",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reset",
+          "type": "client"
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style":{
+        "margin-right":"auto"
+      }
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "querydocuments",
+      "outcomes": [
+        {
+          "data": "output.querydocuments",
+          "appendMsg": false,
+          "name": "_ST_PROCESS_QUERY_DOC"
+        },
+        {
+          "data": "output._ST_PROCESS_QUERY_DOC",
+          "name": "querydocuments"
+        }
+      ],
+      "label": "QUERY TAG",
+      "type": "submit",
+      "position": "bottom"
+    },
+    {	
+      "btnClass" : "btn-success custom-btn",	
+      "objectAction" : "UPDATE",	
+      "labelkey" : "REVIEW",	
+      "task" : "connectquerydocuments",	
+      "decisionName" : "connectquerydocuments",	
+      "outcomes" : [ 	
+          {	
+              "data" : "output.querydocuments",	
+              "appendMsg" : false,	
+              "name" : "_ST_PROCESS_CONNECT_QUERY_DOC"	
+          }, 	
+          {	
+              "data" : "output._ST_PROCESS_CONNECT_QUERY_DOC",	
+              "name" : "querydocuments"	
+          }	
+      ],	
+      "label" : "QUERY",	
+      "type" : "submit",	
+      "position" : "bottom"	
+  }
+
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "key": "userName"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "key": "location"
+      },
+      {
+        "style" : {
+            "width" : "200px"
+        },
+        "formItemStyle" : {
+            "margin-top" : "10px",
+            "margin-right" : "20px"
+        },
+        "key" : "layoutdescription"
+      }, 
+      {
+          "style" : {
+              "width" : "200px"
+          },
+          "formItemStyle" : {
+              "margin-top" : "10px",
+              "margin-right" : "20px"
+          },
+          "key" : "fileName"
+      },
+      {
+        "key" : "visibility",
+        "type" : "hidden",
+        "value" : false
+      }
+    ]
+  ],
+  "label": "Query Documents",
+  "labelKey": "DOCUMENT_QUERY",
+  "layout": {
+    "defaultFormItemStyle": {},
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "Document Upload"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "object": "d017a90c-57f6-4be3-aabe-4c1de0e7f1df",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "taskId": "querydocuments",
+  "type": "workflow",
+  "sys__UUID": "ec5bf32f-8cc2-4545-ab6e-2259f95c52d4"
+}

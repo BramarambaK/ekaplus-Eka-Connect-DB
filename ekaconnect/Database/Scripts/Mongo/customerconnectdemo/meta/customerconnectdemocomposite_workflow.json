@@ -1,0 +1,66 @@
+{
+  "_id": "customerconnectdemocomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+  "label": "Voyage",
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "name": "customerconnectdemoquery"
+            },
+            {
+              "name": "customerconnectdemochartsummary"
+            },
+            {
+              "name": "customerconnectdemocharts",
+              "data": "selected.customerconnectdemocomposite.customerconnectdemoquery"
+            },
+            {
+              "name": "customerconnectdemocardviewchart",
+              "data": "selected.customerconnectdemocomposite.customerconnectdemocharts"
+            }
+          ],
+          "style": {
+            "width": "100%"
+          }
+        },
+        {
+          "workflows": [
+            {
+              "name": "customerconnectdemoquicklink"
+            }
+          ],
+          "style": {
+            "width": "18%",
+            "position": "fixed",
+            "right": "10px",
+            "height": "100%"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Open Contracts"
+    },
+    "name": "customv2",
+    "menu": false,
+    "eventManager": {
+      "changeVessel": "selected.createownerform.Vessel_Intake = _payload_;",
+      "conditionalDropdown": "if(_payload === 'Yes') {selected.createownerform.Vessel_Agent_discharge_port = _payload_; UIupdates = {createownerform.Vessel_Agent_discharge_port = {disability: true}}} else {UIupdates = {createownerform.Vessel_Agent_discharge_port = {disability: true}}}};",
+      "updateChart": "selected.charts = [{backgroundColor:'#db4343',data:[38,68,20,29,66,27,40]},{backgroundColor:'#db4343',data:[38,58,20,29,66,77,60]},{backgroundColor:'#db4343',data:[38,68,20,39,66,37,60]},{backgroundColor:'#db4343',data:[18,48,50,39,66,67,60]}];"
+    }
+  },
+  "decisions": [],
+  "taskId": "customerconnectdemocomposite",
+  "object": "0f4baa06-35f1-4868-8635-c4226ae16928"
+}

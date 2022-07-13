@@ -1,0 +1,23 @@
+{
+	"_id":"user_info_policy_helloworld",
+    "type" : "policy",
+    "app_UUID" : "29a2660b-78a2-498a-9b94-75cdacd5f471",
+    "refType" : "object",
+    "refTypeId" : "User_Info",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

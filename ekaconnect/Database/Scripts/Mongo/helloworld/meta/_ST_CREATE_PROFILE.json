@@ -1,0 +1,10 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "29a2660b-78a2-498a-9b94-75cdacd5f471",
+  "_id": "_ST_CREATE_PROFILE_HW",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_PROFILE",
+  "object": "beeb3afa-50fa-4027-ab14-dc091a982283"
+}

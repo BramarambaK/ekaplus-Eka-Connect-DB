@@ -1,0 +1,30 @@
+{
+  "_id": "menuObject_documentsapp",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "sys__UUID": "7eec366d-b04c-4d49-ba24-02709bfd26ec",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Documents App",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "documentlisting",
+                  "text": "Document Listing",
+                  "iconCls": "app-menu-icon"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "_id" : "documentlist_chainedtask",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+    "objectAction" : "CREATE",
+    "taskId" : "documentlist_chainedtask",
+    "refType" : "app",
+    "refTypeId" : "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "CONNECT_DOCSAPP_DOCUMENT",
+            "data" : "output.documentlist_chainedtask",
+			"returnData":"Y"
+        }, 
+		{
+            "name" : "Elastic_Data_Massage_TaggedDocs",
+            "data" : "output.CONNECT_DOCSAPP_DOCUMENT"
+        }, 
+        {
+            "name" : "Elastic_Bulk_Upload_TaggedDocs",
+            "data" : "output.Elastic_Data_Massage_TaggedDocs",
+            "config" : {
+                "primaryKeyColumn" : "id"
+            }
+        }
+    ]
+}

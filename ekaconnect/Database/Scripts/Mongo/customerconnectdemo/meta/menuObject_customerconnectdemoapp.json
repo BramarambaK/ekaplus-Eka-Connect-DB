@@ -1,0 +1,27 @@
+{
+    "_id" : "menuObject_customerconnectdemoapp",
+    "type" : "menuObject",
+    "refType" : "app",
+    "refTypeId" : "10b79bb5-f0f0-4ba6-9a65-15f918aeeb7e",
+    "sys__UUID" : "a4b8266c-6be3-47ba-a4d0-a4245297bec1",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "menu" : [ 
+                        {
+                            "handler" : "customerconnectdemolisting",
+                            "text" : "Listing",
+                            "iconCls" : "app-menu-icon"
+                        }, 
+                        {
+                            "handler" : "customerconnectdemocomposite",
+                            "text" : "Chart View",
+                            "iconCls" : "app-menu-icon"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

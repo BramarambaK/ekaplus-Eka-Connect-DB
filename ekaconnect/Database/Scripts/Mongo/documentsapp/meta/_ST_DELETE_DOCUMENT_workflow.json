@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_DELETE_DOCUMENT_documentsapp",
+  "componentType": "SystemTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "c45c9007-1aa9-4262-b0d5-29c5379abc54",
+  "type": "workflow",
+  "taskId": "_ST_DELETE_DOCUMENT",
+  "object": "02799bd0-20c8-4281-9aee-44d4b4d9e1f2",
+  "sys__UUID": "ce98e5ba-e3f7-4c5d-90c4-bf9fa129ac35"
+}

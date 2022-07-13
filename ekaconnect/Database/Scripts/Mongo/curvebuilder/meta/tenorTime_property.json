@@ -1,0 +1,19 @@
+{
+    "_id":"tenorTime_CB",
+    "type" : "property",
+    "name" : "tenorTime",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "days",
+            "value" : "days"
+        }
+    ],
+    "label": "Tenor Time",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "description": "Dropdown value for Tenor Time",
+    "editSupportedInUI" : false
+}
