@@ -1,0 +1,14 @@
+{
+  "_id": "cargill_menuList_property",
+  "type": "property",
+  "name": "cargill_menuList",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "200",
+  "editSupportedInUI": true,
+  "label": "App Switcher and Account Details",
+  "defaultValue": "https://api-dev.dev.dev-cglcloud.com/api/cacp/v1/auth/menuLists",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL to fetch the app switcher and account details data."
+}

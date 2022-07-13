@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_JDEExtracts_externalApiHost_property",
+  "type": "property",
+  "name": "cargil_JDEExtracts_externalApiHost",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "1000",
+  "editSupportedInUI": true,
+  "label": "JDEExtracts URL Host",
+  "defaultValue": "https://grainpricing.test.cargill.cd8.cloud/odata",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL host to fetch the JDEExtracts data."
+}

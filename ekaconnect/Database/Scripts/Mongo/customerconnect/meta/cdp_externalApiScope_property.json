@@ -1,0 +1,15 @@
+{
+    "_id" : "cdp_externalApiScope_property",
+    "type" : "property",
+    "name" : "cdp_externalApiScope",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CDP token scope",
+    "defaultValue" : "groups",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External scope to generate token from CDP system.",
+    "sys__UUID" : "ba663e40-8e4d-11ec-b909-0242ac120002"
+}

@@ -1,0 +1,70 @@
+{
+    "_id" : "cancelpopup_ticketTransfer_submit",
+    "name" : "cancelpopup_ticketTransfer_submit",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Exit",
+    "type" : "workflow",
+    "sys__UUID" : "d03d421a-d7a2-4f6b-923a-f4a15840c807",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cargillcancelpopup",
+        "option" : {
+            "bodyMessage" : "Are you sure you want to exit ? ",
+            "headerMessage" : "Exit form",
+            "information" : "You will lose all data entered."
+        },
+        "showErrorInToastr" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn cargill-outline-btn request-contract-cancel",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "submittickettransfercomposite",
+                    "restoreState" : false
+                }
+            ],
+            "label" : "Cancel",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn cargill-outline-btn request-contract-ok",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "ticketlistingcomposite",
+                    "restoreState" : true,
+                    "clearSelected" : [ 
+                        "selected.ticketlistingcomposite", 
+                        "selected.tickettransfercomposite", 
+                        "selected.enterngrcomposite"
+                    ]
+                }
+            ],
+            "label" : "Exit",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "submittickettransfercomposite",
+                    "restoreState" : false
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Cancel",
+    "fields" : [],
+    "taskId" : "cancelpopup_ticketTransfer_submit"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "cargil_menu_externalApiPath_property",
+    "type" : "property",
+    "name" : "menuList_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "Menu List URL path",
+    "defaultValue" : "/api/cacp/v1/auth/menuLists",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to fetch the Menu Lists of logged in user."
+}

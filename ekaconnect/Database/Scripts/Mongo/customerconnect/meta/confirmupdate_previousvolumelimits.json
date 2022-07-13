@@ -1,0 +1,118 @@
+{
+  "_id": "confirmupdate_previousvolumelimits_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Update tonnage limits",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenu_updatevolume_previous"
+    },
+    {
+      "style": {
+        "padding": "26px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "-10px 10px"
+      },
+      "workflows": [
+        {
+          "name": "updatevolumelimitsummary",
+          "data": "selected.volumelistingcomposite.volumelistingprevious"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Update tonnage limits"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Update tonnage limits",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "cancelpopup_tonnagePrevious2",
+          "restoreState": true,
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "15px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatevolumelimitsprevious"
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "UPDATE",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "summarylimitscomposite",
+          "clearSelected": ["selected.updatevolumelimitsprevious"]
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Submit requests",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "confirmupdatepreviousvolumelimits",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys_UUID": "d2a05888-4d9b-40ee-8617-a9b1eefeb0cf"
+}

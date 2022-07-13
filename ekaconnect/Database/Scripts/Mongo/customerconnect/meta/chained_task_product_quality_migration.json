@@ -1,0 +1,42 @@
+{
+    "_id" : "chained_task_product_quality_migration",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "ae5f314e-c377-419e-9dfa-1f296f6fccfa",
+    "objectAction" : "CREATE",
+    "taskId" : "chained_task_product_quality_migration",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "config" : {
+        "type" : "execute",
+        "recordsPerThread" : "${properties.default_records_fetchfrom_collection}",
+        "from" : "start",
+        "size" : "limit",
+        "queryParamMapping" : {
+            "start" : "0",
+            "limit" : "${properties.default_records_fetchfrom_collection}"
+        },
+        "backupIndex" : false,
+        "reIndex" : false,
+        "isAsynchCallRequired" : "Y",
+        "isPlatformCollectionCall" : true
+    },
+    "chainedTasks" : [ 
+        {
+            "name" : "external_collection_product_quality_migration",
+            "data" : "output.chained_task_product_quality_migration",
+            "returnData" : "Y"
+        },
+ 
+        {
+            "name" : "_ST_SYTEM_BULK_PRODUCT_QUALITY_DATA",
+            "appendMsg" : false,
+            "data" : "output.external_collection_product_quality_migration"
+        }
+    ]
+}
+
+
+
+

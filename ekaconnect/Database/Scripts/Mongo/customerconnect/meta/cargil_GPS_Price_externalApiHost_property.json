@@ -1,0 +1,15 @@
+{
+    "_id" : "cargil_GPS_Price_externalApiHost_property",
+    "type" : "property",
+    "name" : "cargil_GPS_Price_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "GPS price push URL Host",
+    "defaultValue" : "https://grainpricing.test.cargill.cd8.cloud/odata",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL host to update the prices in GPS system.",
+	"sys__UUID": "5698bd68-4e39-4441-a03c-188ace5dadd9"
+}

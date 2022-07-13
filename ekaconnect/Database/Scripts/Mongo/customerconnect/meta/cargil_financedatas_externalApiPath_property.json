@@ -1,0 +1,15 @@
+{
+    "_id" : "cargil_financedatas_externalApiPath_property",
+    "type" : "property",
+    "name" : "cargil_financedatas_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "FinanceDatas URL path",
+    "defaultValue" : "/FinanceDatas",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to fetch FinanceDatas.",
+    "sys__UUID": "ab740517-021e-4cb8-947f-ebc1d6c4d5b8"
+}

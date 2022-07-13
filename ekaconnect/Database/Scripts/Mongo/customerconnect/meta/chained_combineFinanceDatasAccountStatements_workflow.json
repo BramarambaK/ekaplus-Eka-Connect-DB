@@ -1,0 +1,23 @@
+{
+  "_id": "chained_combineFinanceDatasAccountStatements_workflow",
+  "version": "V2",
+  "componentType": "ChainedSystemTask",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11",
+  "objectAction": "CREATE",
+  "taskId": "chained_combineFinanceDatasAccountStatements",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "chainedTasks": [
+    {
+      "name": "MULTI_API_FINANCEDATAS_ACCOUNTSTATEMENTS",
+      "data": "output.chained_combineFinanceDatasAccountStatements",
+      "returnData": "Y"
+    },
+    {
+      "name": "ELASTIC_BULK_UPLOAD_FINANCEDATAS_ACCOUNTSTATEMENTS",
+      "data": "output.MULTI_API_FINANCEDATAS_ACCOUNTSTATEMENTS"
+    }
+  ],
+  "sys__UUID": "bb1c55c9-8f92-411b-84ff-3df33b7a9083"
+}

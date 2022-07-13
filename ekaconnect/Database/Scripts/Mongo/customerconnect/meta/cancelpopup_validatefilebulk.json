@@ -1,0 +1,68 @@
+{
+  "_id": "cancelpopup_validatefilebulk",
+  "name": "cancelpopup_validatefilebulk",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Cancel",
+  "type": "workflow",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to exit this form? ",
+      "headerMessage": "Cancel",
+      "information": "You will lose the data you have entered"
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "pricelistingcomposite",
+          "restoreState": true,
+          "clearSelected": [
+            "selected.pricelimitsbulkcomposite",
+            "selected.validatefilecomposite"
+          ]
+        }
+      ],
+      "label": "Ok",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "fields": [],
+  "taskId": "cancelpopup_validatefilebulk"
+}

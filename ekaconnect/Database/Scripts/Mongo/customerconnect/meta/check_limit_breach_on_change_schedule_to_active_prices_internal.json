@@ -1,0 +1,19 @@
+{
+  "_id": "check_limit_breach_on_change_schedule_to_active_prices_internal",
+  "version": "V2",
+  "componentType": "ChainedSystemTask",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "objectAction": "CREATE",
+  "taskId": "check_limit_breach_on_change_schedule_to_active_prices_internal",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "sys__UUID": "49b1df30-01d8-4eb7-99be-eed7fc3ce500",
+  "chainedTasks": [
+    {
+      "name": "_ST_PROCESSOR_CHECK_LIMIT_BREACH_ON_CHANGE_SCHEDULE_TO_ACTIVE_PRICES",
+      "appendMsg": false,
+      "data": "output.check_limit_breach_on_change_schedule_to_active_prices_internal"
+    }
+  ]
+}

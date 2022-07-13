@@ -1,0 +1,14 @@
+{
+    "_id" : "cargil_contractDownload_externalApiHost_property",
+    "type" : "property",
+    "name" : "cargil_contractDownload_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "editSupportedInUI" : true,
+    "label" : "Cargil contract Document download host.",
+    "defaultValue" : "https://grainpricing.test.cargill.cd8.cloud",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External Host URL for contract document download."
+}

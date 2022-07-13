@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_ticketDownload_externalApiPath_property",
+  "type": "property",
+  "name": "cargil_ticketDownload_externalApiPath",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "500",
+  "editSupportedInUI": true,
+  "label": "Cargil Ticket Contract Document download end point path.",
+  "defaultValue": "/api/getDocument/contract/download?id=#{body.contractId}",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL Path for contract document download."
+}

@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_oktaAuthURL_property",
+  "type": "property",
+  "name": "cargil_oktaAuthURL",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "1000",
+  "editSupportedInUI": true,
+  "label": "Okta URL",
+  "defaultValue": "${platform_url}/cac-security/api/external/identity-provider/token",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL to fetch the OKTA token for logged in user."
+}

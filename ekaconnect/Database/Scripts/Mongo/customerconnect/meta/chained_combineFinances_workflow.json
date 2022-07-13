@@ -1,0 +1,22 @@
+{
+    "_id" : "chained_combineFinances_workflow",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "d59b8c10-8c94-4b87-a430-f6fd69888a37",
+    "objectAction" : "CREATE",
+    "taskId" : "chained_combineFinances",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "MULTI_API_ACCPAYMENT",
+            "data" : "output.chained_combineFinances",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_FINANCES",
+            "data" : "output.MULTI_API_ACCPAYMENT"
+        }
+    ]
+}

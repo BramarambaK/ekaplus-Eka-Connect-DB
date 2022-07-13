@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_profilePic_externalApiHost_property",
+  "type": "property",
+  "name": "profilePic_externalApiHost",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "1000",
+  "editSupportedInUI": true,
+  "label": "Profile picture URL Host",
+  "defaultValue": "https://api-dev.dev.dev-cglcloud.com",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL host to fetch the profle pic of logged in user."
+}

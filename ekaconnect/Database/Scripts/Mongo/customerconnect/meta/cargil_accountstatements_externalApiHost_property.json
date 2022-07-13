@@ -1,0 +1,15 @@
+{
+    "_id" : "cargil_accountstatements_externalApiHost_property",
+    "type" : "property",
+    "name" : "cargil_accountstatements_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "AccountStatements URL Host",
+    "defaultValue" : "https://grainpricing.test.cargill.cd8.cloud/odata",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL host to fetch Account Statements.",
+    "sys__UUID": "4a6158e6-170f-486c-bf1f-b16905fe3448"
+}

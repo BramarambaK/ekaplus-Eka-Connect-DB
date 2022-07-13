@@ -1,0 +1,13 @@
+{
+    "_id" : "external_collection_contract_migration",
+    "componentType" : "CollectionTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "returnData" : "Y",
+    "type" : "workflow",
+    "path" : "fetchCollectionRecordsMap",
+    "collectionName" : "DS-Contract Data Migration Cargill",
+    "taskId" : "external_collection_contract_migration",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

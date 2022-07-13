@@ -1,0 +1,13 @@
+{
+    "_id" : "external_collection_inventory_migration",
+    "componentType" : "CollectionTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "returnData" : "Y",
+    "type" : "workflow",
+    "path" : "fetchCollectionRecordsMap",
+    "collectionName" : "DS-Inventory Data Migration Cargill",
+    "taskId" : "external_collection_inventory_migration",
+    "object" : "f895de3c-5f05-4671-b70d-4c180078fc07"
+}

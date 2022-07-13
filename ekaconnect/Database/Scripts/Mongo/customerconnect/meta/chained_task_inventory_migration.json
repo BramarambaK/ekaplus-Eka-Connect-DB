@@ -1,0 +1,43 @@
+{
+    "_id" : "chained_task_inventory_migration",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "f895de3c-5f05-4671-b70d-4c180078fc07",
+    "objectAction" : "CREATE",
+    "taskId" : "chained_task_inventory_migration",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "config" : {
+        "type" : "execute",
+        "recordsPerThread" : "${properties.default_records_fetchfrom_collection}",
+        "from" : "start",
+        "size" : "limit",
+        "queryParamMapping" : {
+            "start" : "0",
+            "limit" : "${properties.default_records_fetchfrom_collection}"
+        },
+        "backupIndex" : false,
+        "reIndex" : false,
+        "isAsynchCallRequired" : "Y",
+		"isPlatformCollectionCall":true
+		
+    },
+    "chainedTasks" : [
+        {
+            "name" : "external_collection_inventory_migration",
+            "data" : "output.chained_task_inventory_migration",
+            "returnData" : "Y"
+        },
+		{
+            "name" : "_ST_SYTEM_BULK_INVENTORY_DATA",
+            "appendMsg" : false,
+            "data" : "output.external_collection_inventory_migration"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_INVENTORY",
+            "appendMsg" : false,
+            "data" : "output._ST_SYTEM_BULK_INVENTORY_DATA"
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+  "_id": "cancelpopup_requestContract_freight",
+  "name": "cancelpopup_requestContract_freight",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Exit",
+  "type": "workflow",
+  "sys__UUID": "c602b144-b9a2-40e0-af3f-6a0e0ec8f220",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to exit this form? ",
+      "headerMessage": "Exit form",
+      "information": "You will lose all data entered."
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn cargill-outline-btn request-contract-cancel",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "requestcontractfreightcomposite",
+          "restoreState": false
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn cargill-outline-btn request-contract-ok",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "externalLinkSameTab",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform",
+          "targetPath": "${requestcontractdetailsform.appHome}",
+          "restoreState": true
+        }
+      ],
+      "label": "Exit",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn ",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "requestcontractfreightcomposite",
+          "restoreState": false
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "fields": [],
+  "taskId": "cancelpopup_requestContract_freight"
+}

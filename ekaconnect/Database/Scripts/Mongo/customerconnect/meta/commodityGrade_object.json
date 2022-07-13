@@ -1,0 +1,33 @@
+{
+  "_id": "commodityGrade_object",
+  "name": "commodityGrade_object",
+  "label": "CommodityGrade Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["commodity", "grade"],
+  "fields": {
+    "commodity": {
+      "commodity": "Commodity",
+      "labelKey": "commodity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+	"grade": {
+      "grade": "Grade",
+      "labelKey": "grade",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "d5c07a6e-6583-44b1-abcd-91c417c80977"
+}

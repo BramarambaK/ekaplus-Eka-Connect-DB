@@ -1,0 +1,15 @@
+{
+    "_id" : "cargil_accountstatements_externalApiPath_property",
+    "type" : "property",
+    "name" : "cargil_accountstatements_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "AccountStatements URL path",
+    "defaultValue" : "/AccountStatements",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to fetch Account Statements.",
+    "sys__UUID": "14192562-cd9b-4b52-84db-e886b8bb9230"
+}

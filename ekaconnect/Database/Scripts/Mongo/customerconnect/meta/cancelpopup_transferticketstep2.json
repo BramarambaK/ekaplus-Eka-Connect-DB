@@ -1,0 +1,69 @@
+{
+  "_id": "cancelpopup_transferticketstep2",
+  "name": "cancelpopup_transferticketstep2",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Exit",
+  "type": "workflow",
+  "sys__UUID": "8e9611b2-e32f-48d5-b674-c5240004618a",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to exit this form? ",
+      "headerMessage": "Exit form",
+      "information": "You will lose all data entered."
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn cargill-outline-btn request-contract-cancel",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "enterngrcomposite",
+          "restoreState": false
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn cargill-outline-btn request-contract-ok",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "restoreState": true,
+          "clearSelected": [
+            "selected.enterngrcomposite",
+            "selected.tickettransfercomposite"
+          ]
+        }
+      ],
+      "label": "Exit",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "enterngrcomposite",
+          "restoreState": false
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "fields": [],
+  "taskId": "cancelpopup_transferticketstep2"
+}

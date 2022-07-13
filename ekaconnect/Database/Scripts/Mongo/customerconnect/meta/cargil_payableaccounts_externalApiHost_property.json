@@ -1,0 +1,14 @@
+{
+    "_id" : "cargil_payableaccounts_externalApiHost_property",
+    "type" : "property",
+    "name" : "cargil_payableaccounts_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "Aggregate Accounts payable receivable URL Host",
+    "defaultValue" : "https://grainpricing.test.cargill.cd8.cloud/odata",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL host to fetch the Aggregate Accounts payable receivable."
+}

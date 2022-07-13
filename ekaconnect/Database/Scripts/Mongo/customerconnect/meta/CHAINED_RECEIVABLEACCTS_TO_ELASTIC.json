@@ -1,0 +1,25 @@
+{
+    "_id" : "CHAINED_RECEIVABLEACCTS_TO_ELASTIC",
+    "componentType" : "ChainedSystemTask",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "taskId" : "CHAINED_RECEIVABLEACCTS_TO_ELASTIC",
+    "refType" : "app",
+    "object" : "967db9f1-f006-400f-8dee-e81692973390",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "EXTERNAL_RECEIVABLE_ACCOUNTS_DATA",
+            "data" : "output.CHAINED_RECEIVABLEACCTS_TO_ELASTIC",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "ELASTIC_UPLOAD_RECEIVABLE_ACCOUNTS",
+            "appendMsg" : false,
+            "data" : "output.EXTERNAL_RECEIVABLE_ACCOUNTS_DATA"
+        }
+    ],
+    "sys__UUID" : "d86ce552-c356-47b0-a865-d0f530eebaa4"
+}

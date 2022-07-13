@@ -1,0 +1,14 @@
+{
+    "_id" : "cargil_token_cachettl_property",
+    "type" : "property",
+    "name" : "cargil_token_cachettl_property",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "100",
+    "editSupportedInUI" : true,
+    "label" : "TTL to cache the access token to call accounts api",
+    "defaultValue" : "480",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "TTL to cache the access token to call accounts api."
+}

@@ -1,0 +1,20 @@
+{
+    "_id" : "Cargil_MobileLayout_customerconnect",
+    "name" : "cargill-mobile",
+    "image" : "layouts/cargill-sample.jpg",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "layout",
+    "areas" : [ 
+        {
+            "name" : "header",
+            "displayName" : "Header",
+            "workflow" : "headerMobileWorkflow"
+        }, 
+        {
+            "name" : "menu",
+            "displayName" : "Menu",
+            "workflow" : "MenuMobileWorkflow"
+        }
+    ],
+    "sys__UUID" : "a9b0ca40-15c0-4276-ba02-b35443708599"
+}

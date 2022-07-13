@@ -1,0 +1,15 @@
+{
+    "_id" : "cdp_locations_externalApiHost_property",
+    "type" : "property",
+    "name" : "cdp_locations_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CDP locations URL Host",
+    "defaultValue" : "https://api-stage.stage.cglcloud.in",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External locations URL host to fetch CDP data.",
+    "sys__UUID" : "b2acf950-8fbf-11ec-b909-0242ac120002"
+}

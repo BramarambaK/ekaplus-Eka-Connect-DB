@@ -1,0 +1,43 @@
+{
+  "_id": "ccontractdomainsummarysell_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract Domain Summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false
+  },
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "contractSubType",
+        "label": "return 'Open contracts'",
+        "aggregateFunction": "count",
+        "filterExpression": "return '${fulfillmentStatus}'.toLowerCase() != 'fulfilled' ? true: false"
+      },
+      {
+        "key": "itemOpenQuantityInBase",
+        "label": "return 'Open quantity'",
+        "suffix": "'${contractItemQuantityUnitInBase}'",
+        "aggregateFunction": "sum",
+        "roundOff": "round"
+      },
+      {
+        "key": "contractSubType",
+        "label": "return 'Requested contracts'"
+      },
+      {
+        "key": "itemOpenQuantityInBase",
+        "label": "return 'Requested contract quantity'",
+        "suffix": "'${contractItemQuantityUnitInBase}'"
+      }
+    ]
+  ],
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "contractdomainsummarysell",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "cargil_GPS_Price_externalApiPath_property",
+    "type" : "property",
+    "name" : "cargil_GPS_Price_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "GPS price push URL path",
+    "defaultValue" : "/PriceUpdateRequests",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to update the prices in GPS system.",
+	"sys__UUID": "6d9e12f8-aad6-485c-934d-ede5143aed3e"
+}

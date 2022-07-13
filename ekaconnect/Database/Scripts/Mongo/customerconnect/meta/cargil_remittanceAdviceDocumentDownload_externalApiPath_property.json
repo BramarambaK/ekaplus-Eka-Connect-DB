@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_remittanceAdviceDocumentDownload_externalApiPath_property",
+  "type": "property",
+  "name": "cargil_remittanceAdviceDocumentDownload_externalApiPath",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "500",
+  "editSupportedInUI": true,
+  "label": "Cargil Ticket Contract Document download end point path.",
+  "defaultValue": "/api/getDocument/remittanceadvice/download?id=#{body.raInvoiceNumber}",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL Path for contract document download."
+}

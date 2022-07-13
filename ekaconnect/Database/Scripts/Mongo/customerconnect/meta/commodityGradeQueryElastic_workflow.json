@@ -1,0 +1,22 @@
+{
+  "_id": "commodityGradeQueryElastic_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "type": "workflow",
+  "layout": {
+    "name": "query"
+  },
+  "version": "V2",
+  "inputData": {
+    "type": "elasticSearch"
+  },
+  "fields": [],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "commodityGradeQueryElastic",
+  "object": "d5c07a6e-6583-44b1-abcd-91c417c80977",
+  "sys__UUID": "b4debaea-6566-4fb1-b528-4d3ec32127c7"
+}

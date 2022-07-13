@@ -1,0 +1,15 @@
+{
+    "_id" : "cargil_GPS_VolumeLimit_externalApiPath_property",
+    "type" : "property",
+    "name" : "cargil_GPS_VolumeLimit_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "GPS price push URL path",
+    "defaultValue" : "/VolumeLimitRequests",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to update the volume limit in GPS system.",
+	"sys__UUID": "aa0f3691-a383-4912-bd7c-3900304cc3cd"
+}

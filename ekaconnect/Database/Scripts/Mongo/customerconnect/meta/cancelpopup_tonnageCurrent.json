@@ -1,0 +1,66 @@
+{
+  "_id": "cancelpopup_tonnageCurrent",
+  "name": "cancelpopup_tonnageCurrent",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Cancel",
+  "type": "workflow",
+  "sys__UUID": "606ec7da-6251-4204-9604-3940a47fb234",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to exit this form? ",
+      "headerMessage": "Cancel",
+      "information": "You will lose the data you have entered."
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatevolumelimitscurrent",
+          "restoreState": false
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "volumelistingcomposite",
+          "restoreState": true,
+          "clearSelected": ["selected.updatevolumelimitscurrent"]
+        }
+      ],
+      "label": "Ok",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatevolumelimitscurrent",
+          "restoreState": false
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "fields": [],
+  "taskId": "cancelpopup_tonnageCurrent"
+}

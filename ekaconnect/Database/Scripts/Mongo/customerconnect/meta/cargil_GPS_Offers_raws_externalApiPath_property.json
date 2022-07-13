@@ -1,0 +1,15 @@
+{
+    "_id" : "cargil_GPS_Offers_raws_externalApiPath_property",
+    "type" : "property",
+    "name" : "cargil_GPS_Offers_raws_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "GPS Offers Raws push URL path",
+    "defaultValue" : "/EKAOffersRaws",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to update the Offers Raw in GPS system.",
+    "sys__UUID" : "1e50a046-84d8-11ec-a8a3-0242ac120002"
+}

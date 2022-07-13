@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_accountDocumentDownload_externalApiPath_property",
+  "type": "property",
+  "name": "cargil_accountDocumentDownload_externalApiPath",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "500",
+  "editSupportedInUI": true,
+  "label": "Cargil Account Document download end point path.",
+  "defaultValue": "/api/getDocument/#{body.CDDocumentType}/download?id=#{body.documentId}",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL Path for account document download."
+}

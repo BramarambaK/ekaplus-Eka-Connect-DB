@@ -1,0 +1,52 @@
+{
+    "_id" : "chained_task_bpRef_Season_Details_MasterData_migration",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "6d10c2dd-c5c5-451e-88f5-3de80e151bc3",
+    "objectAction" : "CREATE",
+    "taskId" : "chained_task_bpRef_Season_Details_MasterData_migration",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "config" : {
+        "type" : "execute",
+        "recordsPerThread" : "${properties.default_records_fetchfrom_collection}",
+        "from" : "start",
+        "size" : "limit",
+        "queryParamMapping" : {
+            "start" : "0",
+            "limit" : "${properties.default_records_fetchfrom_collection}"
+        },
+        "backupIndex" : false,
+        "reIndex" : false,
+        "isAsynchCallRequired" : "Y",
+        "isPlatformCollectionCall" : true
+    },
+    "chainedTasks" : [ 
+        {
+            "name" : "external_collection_bpRef_Season_Details_MasterData_migration",
+            "data" : "output.chained_task_bpRef_Season_Details_MasterData_migration",
+            "returnData" : "Y"
+        },
+ 
+        {
+            "name" : "_ST_SYTEM_BULK_BPREF_SEASON_DETAILS_MASTERDATA_DATA_MIGRATION",
+            "appendMsg" : false,
+            "data" : "output.external_collection_bpRef_Season_Details_MasterData_migration"
+        },
+        {
+            "name" : "_ST_PROCESSOR_UPDATE_BPREF_SEASON_MASTER_DATA",
+            "appendMsg" : false,
+            "data" : "output._ST_SYTEM_BULK_BPREF_SEASON_DETAILS_MASTERDATA_DATA_MIGRATION"
+        }, 
+        {
+            "name" : "_ST_UPDATE_BPREF_SEASON_MASTER_DATA",
+            "appendMsg" : false,
+            "data" : "output._ST_PROCESSOR_UPDATE_BPREF_SEASON_MASTER_DATA"
+        }
+    ]
+}
+
+
+
+

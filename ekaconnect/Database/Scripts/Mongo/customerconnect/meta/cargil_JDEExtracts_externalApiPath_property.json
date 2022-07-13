@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_JDEExtracts_externalApiPath_property",
+  "type": "property",
+  "name": "cargil_JDEExtracts_externalApiPath",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "1000",
+  "editSupportedInUI": true,
+  "label": "JDEExtracts URL path",
+  "defaultValue": "/AggregatedJDEExtracts",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL path to fetch the JDEExtracts data."
+}

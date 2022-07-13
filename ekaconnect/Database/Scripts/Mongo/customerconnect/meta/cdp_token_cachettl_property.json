@@ -1,0 +1,14 @@
+{
+    "_id" : "cdp_token_cachettl_property",
+    "type" : "property",
+    "name" : "cdp_token_cachettl",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CDP token cache ttl",
+    "defaultValue" : "3300",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External cache ttl for CDP token."
+}

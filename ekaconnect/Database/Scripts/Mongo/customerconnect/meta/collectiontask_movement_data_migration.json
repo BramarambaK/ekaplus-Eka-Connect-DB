@@ -1,0 +1,13 @@
+{
+    "_id" : "external_collection_movement_order_migration",
+    "componentType" : "CollectionTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "returnData" : "Y",
+    "type" : "workflow",
+    "path" : "fetchCollectionRecordsMap",
+    "collectionName" : "DS-Movement Orders Data Migration Cargill",
+    "taskId" : "external_collection_movement_order_migration",
+    "object" : "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b"
+}

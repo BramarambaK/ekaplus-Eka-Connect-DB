@@ -1,0 +1,15 @@
+{
+    "_id" : "cdp_commoditygrade_externalApiHost_property",
+    "type" : "property",
+    "name" : "cdp_commoditygrade_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CDP Commoditygrade URL Host",
+    "defaultValue" : "https://api-stage.stage.cglcloud.in",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External Commoditygrade URL host to fetch CDP data.",
+    "sys__UUID" : "f559c3c8-8e4d-11ec-b909-0242ac120002"
+}

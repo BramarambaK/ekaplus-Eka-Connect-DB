@@ -1,0 +1,14 @@
+{
+    "_id" : "cargil_published_bids_externalApiPath_property",
+    "type" : "property",
+    "name" : "cargil_published_bids_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "Published bids URL path",
+    "defaultValue" : "/PublishedBids",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to fetch the prices for published bid."
+}

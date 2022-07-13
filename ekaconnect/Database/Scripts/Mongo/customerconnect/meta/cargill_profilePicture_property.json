@@ -1,0 +1,14 @@
+{
+  "_id": "cargill_profilePicture_property",
+  "type": "property",
+  "name": "cargill_profilePicture",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "200",
+  "editSupportedInUI": true,
+  "label": "Profile Picture",
+  "defaultValue": "https://api-dev.dev.dev-cglcloud.com/api/cacp/v1/auth/profilePicture",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL to fetch the profile picture of logged in user."
+}

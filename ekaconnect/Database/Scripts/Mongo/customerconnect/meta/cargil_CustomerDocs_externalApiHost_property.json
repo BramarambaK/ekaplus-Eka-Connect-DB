@@ -1,0 +1,14 @@
+{
+  "_id": "cargil_CustomerDocs_externalApiHost_property",
+  "type": "property",
+  "name": "cargil_CustomerDocs_externalApiHost",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "500",
+  "editSupportedInUI": true,
+  "label": "Cargil Document download end point",
+  "defaultValue": "https://api-dev.dev.dev-cglcloud.com",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "External URL to download document."
+}

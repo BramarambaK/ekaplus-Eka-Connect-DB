@@ -1,0 +1,14 @@
+{
+    "_id" : "cdp_token_externalApiHost_property",
+    "type" : "property",
+    "name" : "cdp_token_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CDP token URL Host",
+    "defaultValue" : "https://login-stage.mycargill.com/oauth2/ausuxvhj0tYXalhhl0h7/v1/token",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL host to generate token from CDP system."
+}

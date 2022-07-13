@@ -1,0 +1,131 @@
+{
+    "_id": "connectpaymentslist_workflow",
+    "componentType": "UserTask",
+    "objectAction": "LISTVIEW",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId": "connectpaymentslist",
+    "object": "4465c36c-84ab-403b-a61e-cf73a37705fe",
+    "label": "connectpaymentslist",
+    "type": "workflow",
+    "layout": {
+      "header": {
+        "label": "Payments",
+        "style": {
+          "font-size": "22px"
+        }
+      },
+      "name": "connectpaymentslist"
+    },
+    "fields": [
+      {
+        "filter": true,
+        "edit": false,
+        "label": "userType",
+        "sort": true,
+        "key": "userType"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "BPRefNo",
+        "sort": true,
+        "key": "BPRefNo",
+        "align": "right"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "bpName",
+        "sort": true,
+        "key": "bpName"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "payeeID",
+        "sort": true,
+        "key": "payeeID"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "payeeName",
+        "sort": true,
+        "key": "payeeName"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "type",
+        "sort": true,
+        "key": "type"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "paymentreceiptNo",
+        "sort": true,
+        "key": "paymentreceiptNo"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "documentNo",
+        "sort": true,
+        "key": "documentNo"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "documentDate",
+        "sort": true,
+        "key": "documentDate"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "documentCount",
+        "sort": true,
+        "key": "documentCount"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "currency",
+        "sort": true,
+        "key": "currency"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "totalAmount",
+        "sort": true,
+        "key": "totalAmount"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "totalAmountInForeignCurrency",
+        "sort": true,
+        "key": "totalAmountInForeignCurrency"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "label": "fileId",
+        "sort": true,
+        "key": "fileId"
+      }
+    ],
+    "decisions": [],
+    "labelKey": "LIST",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "EXTERNAL_GRAIN_PRICING_REMITTANCE_DATA"           
+        }
+    }
+  }
+  

@@ -1,0 +1,15 @@
+{
+  "_id": "cargill_modified_request_expiry_time_property",
+  "type": "property",
+  "name": "cargill_modified_request_expiry_time",
+  "propertyLevel": "app",
+  "dataType": "Number",
+  "fieldtype": "textbox",
+  "length": "500",
+  "editSupportedInUI": true,
+  "label": "Cargill modified request expiry time",
+  "defaultValue": 1,
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Cargill modified request expiry time duration(No. of days).",
+  "sys__UUID" : "58b918fa-9bd3-4790-912c-e5a6ddeb2b0b"
+}

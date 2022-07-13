@@ -1,0 +1,10 @@
+{
+  "_id": "checkfilecomposite_processor",
+  "name": "checkfilecomposite_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "\r\n    var fileID = req.body.selectedData.id;\r\n    var response = {};\r\n    response.logs = { id: fileID }\r\n    res.status(200).send(response);\r\n ",
+  "sys__UUID": "311cb41e-b5e0-4e7b-87d3-7eefdc3a590b",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}
