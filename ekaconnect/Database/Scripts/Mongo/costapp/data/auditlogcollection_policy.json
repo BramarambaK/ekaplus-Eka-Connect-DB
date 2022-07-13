@@ -1,0 +1,15 @@
+{
+  "_id": "auditlogcollection_policy",
+  "type": "policy",
+  "app_UUID": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "refType": "object",
+  "refTypeId": "e0f0498d-4f4f-4c02-8596-562938156ab6",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+    "_id" : ObjectId("5f85975d2ab79c000190917c"),
+    "targetObject" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "typeOfData" : "mapping",
+    "mappingData" : {
+        "incExpenseDisplayName" : {
+            "income" : "Income",
+            "cost" : "Expense",
+            "expense" : "Expense"
+        },
+        "estimateForDisplayName" : {
+            "execution" : "Execution",
+            "Ex" : "Execution",
+            "ex" : "Execution",
+            "valuation" : "Valuation",
+            "Execute" : "Execution",
+            "ex and value" : "Execution & Valuation",
+            "execute and value" : "Execution & Valuation",
+            "value" : "Valuation",
+            "ex and val" : "Execution & Valuation",
+            "execute" : "Execution",
+            "exec" : "Execution"
+        },
+        "costComponentDisplayName" : {
+            "credit insurance" : "Credit Insurance",
+            "import duty" : "Import Duty",
+            "despatch loading port" : "Despatch Loading Port",
+            "ocean freight" : "Freight - Ocean",
+            "agency fee" : "Agency and document fees",
+            "agency fees" : "Agency and document fees",
+            "import" : "Import Duty",
+            "broker commission general" : "Broker commission_general",
+            "guarantee fees" : "Bank Guarantee fees",
+            "agency and document fees" : "Agency and document fees",
+            "analysis fee" : "Analysis fees",
+            "guarantee fee" : "Bank Guarantee fees",
+            "barge freight" : "Freight - Barge",
+            "carrying charges purchase" : "Carrying charges Purchase",
+            "agency and doc fee" : "Agency and document fees",
+            "carrying charges sales" : "Carrying charges Sales",
+            "Duty" : "Import Duty",
+            "duty" : "Import Duty",
+            "document fee" : "Agency and document fees",
+            "sales charges" : "Carrying charges Sales",
+            "bank fee" : "Bank fees",
+            "sales charge" : "Carrying charges Sales"
+        },
+        "counterpartyGroupNameDisplayName" : {
+            "ab" : "AB World Trade Pvt. Ltd.",
+            "a and z" : "A & Z AGRO INDUSTRIES (PVT.) LTD.",
+            "2bs" : "2BS Association",
+            "3f" : "3 F Industries Limited",
+            "ab world" : "AB World Trade Pvt. Ltd.",
+            "three f" : "3 F Industries Limited",
+            "brusse" : "A BRUSSE AND ZN BV",
+            "adm" : "ADM Grain CO",
+            "ceresia" : "Ceresia",
+            "a brusse" : "A BRUSSE AND ZN BV",
+            "agencia" : "AGENCIA MARITIMA CONDEMINAS CADIZ S.A."
+        },
+        "group" : {
+            "cif" : "CIF",
+            "xyz" : "XYZ"
+        },
+        "rateTypePriceDisplayName" : {
+            "pop" : "% of Price",
+            "curve" : "Curve",
+            "absolute" : "Absolute",
+            "percent price" : "% of Price",
+            "percent of Price" : "% of Price",
+            "percent" : "% of Price",
+            "price percent" : "% of Price"
+        }
+    },
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "48241a5b-d117-495d-81ef-82b2fcbcd32d",
+    "sys__createdOn" : ISODate("2020-10-13T12:02:37.287Z"),
+    "sys__data__state" : "Create"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "propertydata_cost_is_versioning_enabled",
+    "propertyValue" : true,
+    "propertyLevel" : "app",
+    "type" : "property",
+    "propertyName" : "is_versioning_enabled",
+    "sys__createdOn" : ISODate("2019-04-17T04:57:55.849Z"),
+    "sys__createdBy" : "test1@ekaplus.com",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed"
+}

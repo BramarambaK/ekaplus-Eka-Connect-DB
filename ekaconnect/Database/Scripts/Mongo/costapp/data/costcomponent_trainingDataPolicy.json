@@ -1,0 +1,21 @@
+{
+    "_id" : ObjectId("5f8596f92ab79c000190917b"),
+    "app_UUID" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "ffb49f18-32da-4c92-b075-a7110679cd9d",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46"
+}

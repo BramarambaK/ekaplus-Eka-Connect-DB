@@ -1,0 +1,98 @@
+{
+    "_id" : "cost_estimate_mappingData",
+    "targetObject" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "typeOfData" : "mapping",
+    "mappingData" : {
+    "estimateForDisplayName":{
+        "execution":"Execution",
+        "Ex":"Execution",
+        "ex":"Execution",
+        "exec":"Execution",
+        "valuation":"Valuation",
+        "value":"Valuation",
+        "execute and value":"Execution & Valuation",
+        "ex and value":"Execution & Valuation",
+        "ex and val":"Execution & Valuation",
+        "execute":"Execution",
+        "Execute":"Execution"
+    },
+    "group":{
+        "cif":"CIF",
+        "xyz":"XYZ"
+    },
+    "rateTypePriceDisplayName":{
+        "curve":"Curve",
+        "absolute":"Absolute",
+        "percent of Price":"% of Price",
+        "pop":"% of Price",
+        "price percent":"% of Price",
+        "percent":"% of Price",
+        "percent price":"% of Price"
+    },
+    "costComponentDisplayName":{
+        "import duty":"Import Duty",
+        "import":"Import Duty",
+        "duty":"Import Duty",
+        "Duty":"Import Duty",
+        "credit insurance":"Credit Insurance",
+        "ocean freight":"Freight - Ocean",
+        "sales charges":"Carrying charges Sales",
+        "carrying charges sales":"Carrying charges Sales",
+        "carrying charges purchase":"Carrying charges Purchase",
+        "analysis fee":"Analysis fees",
+        "sales charge":"Carrying charges Sales",
+        "bank fee":"Bank fees",
+        "broker commission":"Broker commission",
+        "broker Commission":"Broker commission",
+        "agency and document fees":"Agency and document fees",
+        "agency and doc fee":"Agency and document fees",
+        "agency fees":"Agency and document fees",
+        "document fee":"Agency and document fees",
+        "agency fee":"Agency and document fees",
+        "guarantee fees":"Bank Guarantee fees",
+        "guarantee fee":"Bank Guarantee fees",
+        "barge freight":"Freight - Barge",
+        "despatch loading port":"Despatch Loading Port"
+    },
+    "incExpenseDisplayName":{
+        "income":"Income",
+        "expense":"Expense",
+        "cost":"Expense"
+    },
+    "counterpartyGroupNameDisplayName":{
+        "a and z":"A & Z AGRO INDUSTRIES (PVT.) LTD.",
+        "three f":"3 F Industries Limited",
+        "adm":"ADM Grain CO",
+        "2bs":"2BS Association",
+        "3f":"3 F Industries Limited",
+        "ceresia":"Ceresia",
+        "a brusse":"A BRUSSE AND ZN BV",
+        "brusse":"A BRUSSE AND ZN BV",
+        "ab world":"AB World Trade Pvt. Ltd.",
+        "ab":"AB World Trade Pvt. Ltd.",
+        "agencia":"AGENCIA MARITIMA CONDEMINAS CADIZ S.A."
+    },
+    "product":{
+        "cotton seed":"Cotton Seed",
+        "soy oil":"Soy Oil",
+        "rapeseed":"RapeSeed"
+    },
+    "costPriceUnitIdDisplayName":{
+        "usd/mt":"USD/MT",
+        "usd per mt":"USD/MT",
+        "usd mt":"USD/MT",
+        "mt usd":"USD/MT"
+    },
+    "quality":{
+        "brazil cotton seed":"Brazil CottonSeed"
+    }
+},
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "83add1ed-c1de-419e-8e30-16d3660d98de",
+    "sys__createdOn" : ISODate("2020-10-13T12:02:37.287Z"),
+    "sys__data__state" : "Create"
+}

@@ -1,0 +1,24 @@
+{
+    "_id" : "policy_object_upload_cost_estimates",
+    "app_UUID" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "userGrants" : {},
+    "refType" : "object",
+    "refTypeId" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "name" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "tenantId" : "cofcopreprd",
+    "type" : "policy",
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE"
+            ]
+        }
+    }
+}

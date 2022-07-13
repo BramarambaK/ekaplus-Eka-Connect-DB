@@ -1,0 +1,60 @@
+{
+    "_id" : "customizedDocument_costcomponentlistplatform_workflow_alvean",
+    "type" : "customizedDocument",
+    "refType" : "workflow",
+    "refTypeId" : "9074a643-7514-4e64-a039-b7f30e4a2d0c",
+    "app_UUID":"d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "customizeLevel" : "system",
+    "fields" : [ 
+        {
+            "hidden" : true,
+            "key" : "templateName"
+        }, 
+        {
+            "key" : "costComponent"
+        }, 
+        {
+            "key" : "costComponentDisplayName"
+        }, 
+        {
+            "key" : "counterpartyGroupName"
+        }, 
+        {
+            "key" : "counterpartyGroupNameDisplayName"
+        }, 
+        {
+            "key" : "incExpense"
+        }, 
+        {
+            "key" : "incExpenseDisplayName"
+        }, 
+        {
+            "key" : "estimateFor"
+        }, 
+        {
+            "key" : "estimateForDisplayName"
+        }, 
+        {
+            "key" : "rateTypePrice"
+        }, 
+        {
+            "key" : "rateTypePriceDisplayName"
+        }, 
+        {
+            "key" : "costCurve"
+        }, 
+        {
+            "key" : "costCurveDisplayName"
+        }, 
+        {
+            "key" : "costMonth"
+        }, 
+        {
+            "key" : "costMonthDisplayName"
+        }, 
+        {
+            "key" : "group"
+        }
+    ],
+    "taskId" : "costcomponentlistplatform"
+}

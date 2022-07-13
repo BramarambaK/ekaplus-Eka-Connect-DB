@@ -1,0 +1,11 @@
+{
+  "_id" : "property_data_versioning_enabled_objects_costapp",
+  "propertyValue": [
+    "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "00189ca9-cfc1-4327-95ac-f937f22deb60"
+  ],
+  "propertyLevel": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "property",
+  "propertyName": "versioning_enabled_objects"
+}

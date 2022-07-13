@@ -1,0 +1,60 @@
+{
+    "_id" : "customizedDocument_draftcostcomponentlistctrm_workflow_alvean",
+    "type" : "customizedDocument",
+    "refType" : "workflow",
+    "refTypeId" : "06719f0e-0880-493a-a24d-d70c4427ef5e",
+    "app_UUID":"d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "customizeLevel" : "system",
+    "fields" : [ 
+        {
+            "hidden" : true,
+            "key" : "templateName"
+        }, 
+        {
+            "key" : "costComponent"
+        }, 
+        {
+            "key" : "costComponentDisplayName"
+        }, 
+        {
+            "key" : "counterpartyGroupName"
+        }, 
+        {
+            "key" : "counterpartyGroupNameDisplayName"
+        }, 
+        {
+            "key" : "incExpense"
+        }, 
+        {
+            "key" : "incExpenseDisplayName"
+        }, 
+        {
+            "key" : "estimateFor"
+        }, 
+        {
+            "key" : "estimateForDisplayName"
+        }, 
+        {
+            "key" : "rateTypePrice"
+        }, 
+        {
+            "key" : "rateTypePriceDisplayName"
+        }, 
+        {
+            "key" : "costCurve"
+        }, 
+        {
+            "key" : "costCurveDisplayName"
+        }, 
+        {
+            "key" : "costMonth"
+        }, 
+        {
+            "key" : "costMonthDisplayName"
+        }, 
+        {
+            "key" : "group"
+        }
+    ],
+    "taskId" : "draftcostcomponentlistctrm"
+}

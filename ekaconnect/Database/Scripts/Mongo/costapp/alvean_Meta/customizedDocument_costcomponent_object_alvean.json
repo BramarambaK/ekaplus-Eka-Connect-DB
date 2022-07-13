@@ -1,0 +1,13 @@
+{
+    "_id" : "customizedDocument_costcomponent_object_alvean",
+    "type" : "customizedDocument",
+    "refType" : "object",
+    "refTypeId" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "customizeLevel" : "system",
+    "uniqueFields" : [],
+    "fields" : {
+        "templateName" : {
+            "isRequired" : false
+        }
+    }
+}

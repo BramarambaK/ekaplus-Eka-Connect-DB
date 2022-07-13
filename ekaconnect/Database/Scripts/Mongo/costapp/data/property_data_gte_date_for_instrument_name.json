@@ -1,0 +1,8 @@
+{
+    "_id" : "property_data_gte_date_for_instrument_name",
+    "type" : "property",
+    "propertyValue" : "2018-01-01T00:00:00",
+    "propertyLevel" : "app",
+    "propertyName" : "gte_date_for_instrument_name",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed"
+}

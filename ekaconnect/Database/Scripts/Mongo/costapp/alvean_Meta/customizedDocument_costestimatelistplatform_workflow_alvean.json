@@ -1,0 +1,20 @@
+{
+    "_id" : "customizedDocument_costestimatelistplatform_workflow_alvean",
+    "type" : "customizedDocument",
+    "refType" : "workflow",
+    "refTypeId" : "d0e8bf30-66a7-46e9-b9a5-b1b4e3b84c0f",
+    "app_UUID":"d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "customizeLevel" : "system",
+    "decisions" : [ 
+        {
+            "decisionName" : "Add Document",
+            "style" : {
+                "display" : "none"
+            }
+        }, 
+        {
+            "decisionName" : "Lifecycle"
+        }
+    ],
+    "taskId" : "costestimatelistplatform"
+}

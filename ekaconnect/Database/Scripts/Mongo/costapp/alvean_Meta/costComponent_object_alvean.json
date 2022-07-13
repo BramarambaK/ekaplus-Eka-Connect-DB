@@ -1,0 +1,199 @@
+{
+  "_id": "object_costComponent_alvean",
+  "name": "costcomponent",
+  "label": "Cost Component",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [
+    "costComponent",
+    "estimateFor",
+    "incExpense",
+    "rateTypePrice",
+    "costCurve",
+    "costMonth",
+    "counterpartyGroupName"
+  ],
+  "fields": {
+    "templateName": {
+      "templateName": "Template Name",
+      "labelKey": "templateName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costComponent": {
+      "costComponent": "Cost Component Name",
+      "labelKey": "costComponent",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "costComponentDisplayName",
+      "serviceKey": "costcomponents",
+      "children": ["costCurve", "costMonth"]
+    },
+    "costComponentDisplayName": {
+      "costComponentDisplayName": "Cost Component Name",
+      "labelKey": "costComponentDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "estimateFor": {
+      "estimateFor": "Estimate For",
+      "labelKey": "estimateFor",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "estimateForDisplayName",
+      "serviceKey": "estimateFor1"
+    },
+    "estimateForDisplayName": {
+      "estimateForDisplayName": "Estimate For",
+      "labelKey": "estimateForDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "incExpense": {
+      "incExpense": "Income/Expense",
+      "labelKey": "incExpense",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "incExpenseDisplayName",
+      "serviceKey": "CostIncExp"
+    },
+    "incExpenseDisplayName": {
+      "incExpenseDisplayName": "Income/Expense",
+      "labelKey": "incExpenseDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "rateTypePrice": {
+      "rateTypePrice": "Rate Type",
+      "labelKey": "rateTypePrice",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "rateTypePriceDisplayName",
+      "serviceKey": "rateTypePrice1",
+      "children": ["costCurve", "costMonth"]
+    },
+    "rateTypePriceDisplayName": {
+      "rateTypePriceDisplayName": "Rate Type",
+      "labelKey": "rateTypePriceDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costCurve": {
+      "costCurve": "Cost Curve",
+      "labelKey": "costCurve",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "costCurveDisplayName",
+      "serviceKey": "costCurve",
+      "parent": ["costComponent", "rateTypePrice"],
+      "children": ["costMonth"],
+      "UIupdates": {
+        "disability": "return '${rateTypePrice}' == 'absolute' || '${rateTypePrice}' == 'rate' || '${rateTypePrice}' ==  '% of Price' ? true : false",
+        "value": "if('${rateTypePrice}' == 'absolute' || '${rateTypePrice}' == 'rate' || '${rateTypePrice}' == '% of Price') {return null} else {return}"
+      },
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}"
+    },
+    "costCurveDisplayName": {
+      "costCurveDisplayName": "Cost Curve",
+      "labelKey": "costCurveDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costMonth": {
+      "costMonth": "Cost Month",
+      "labelKey": "costMonth",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "costMonthDisplayName",
+      "serviceKey": "costMonth",
+      "parent": ["costCurve", "rateTypePrice", "costComponent"],
+      "UIupdates": {
+        "disability": "return '${rateTypePrice}' == 'absolute' || '${rateTypePrice}' == 'rate' || '${rateTypePrice}' ==  '% of Price' ? true : false",
+        "value": "if('${rateTypePrice}' == 'absolute' || '${rateTypePrice}' == 'rate' || '${rateTypePrice}' == '% of Price') {return null} else {return}"
+      },
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}"
+    },
+    "costMonthDisplayName": {
+      "costMonthDisplayName": "Cost Month",
+      "labelKey": "costMonthDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyGroupNameDisplayName": {
+      "counterpartyGroupNameDisplayName": "CP Name",
+      "labelKey": "counterpartyGroupNameDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyGroupName": {
+      "counterpartyGroupName": "CP Name",
+      "labelKey": "counterpartyGroupName",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "corporatebusinesspartnerCombo",
+      "dropdownValue": "counterpartyGroupNameDisplayName",
+      "lazy": true
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "group": {
+      "group": "Group",
+      "labelKey": "group",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costType": {
+      "costType": "Type",
+      "labelKey": "costType",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+
+  "sys__createdBy": "admin",
+  "sys__UUID": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a"
+}

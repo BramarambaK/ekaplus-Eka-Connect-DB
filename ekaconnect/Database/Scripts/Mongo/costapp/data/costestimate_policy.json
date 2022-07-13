@@ -1,0 +1,23 @@
+{
+    "_id" : "costestimate_policy",
+    "type" : "policy",
+    "app_UUID" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "refType" : "object",
+    "refTypeId" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

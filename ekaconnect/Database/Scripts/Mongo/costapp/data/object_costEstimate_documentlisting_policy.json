@@ -1,0 +1,15 @@
+{
+  "_id": "object_costEstimate_documentlisting_policy",
+  "type": "policy",
+  "app_UUID": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "refType": "object",
+  "refTypeId": "cf60685f-c8d4-4558-a3bc-ba64f7e78d00",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

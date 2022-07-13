@@ -1,0 +1,210 @@
+{
+  "_id": "editcostcomponent_CostApp_alvean",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "edit",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "processorInfo": {
+      "processorId": "0878f64e-7fb4-4b89-bffe-0700c6122f4b"
+    },
+    "header": {
+      "title": "Edit Cost Component"
+    },
+    "formLayoutStyle": {
+      "height": "450px"
+    }
+  },
+  "input": ["costComponent"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costcomponentlistplatform"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editcostcomponent",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got replaced with some errors"
+            }
+          },
+          "data": "output.editcostcomponent",
+          "appendMsg": true,
+          "name": "_ST_EDIT_COST_COMPONENT"
+        },
+        {
+          "name": "costcomponentlistplatform",
+          "showPopUp": false
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDIT_COST",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "costComponent"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costComponentDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "counterpartyGroupName",
+        "virtualScroll": true
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "counterpartyGroupNameDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "incExpense"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "incExpenseDisplayName"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "estimateFor"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "estimateForDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "rateTypePrice"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "rateTypePriceDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "costCurve"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costCurveDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "costMonth"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costMonthDisplayName"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "20%"
+        },
+        "key": "group"
+      }
+    ]
+  ],
+  "taskId": "editcostcomponent",
+  "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "sys__UUID": "d877e3d4-e51e-4790-99a1-905a98d61815"
+}

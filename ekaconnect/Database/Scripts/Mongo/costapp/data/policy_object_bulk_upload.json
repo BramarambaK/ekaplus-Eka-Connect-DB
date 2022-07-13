@@ -1,0 +1,22 @@
+{
+    "_id" : "policy_object_bulk_upload",
+    "app_UUID" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "userGrants" : {},
+    "refType" : "object",
+    "refTypeId" : "6cdd3b23-84fd-42e6-91ea-3cc188127749",
+    "name" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "tenantId" : "980qa",
+    "type" : "policy",
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE"
+            ]
+        }
+    }
+}

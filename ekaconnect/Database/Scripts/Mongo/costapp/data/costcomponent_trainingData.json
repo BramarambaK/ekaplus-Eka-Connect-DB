@@ -1,0 +1,186 @@
+{
+    "_id" : ObjectId("5f8596f92ab79c000190917a"),
+    "targetObject" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "trainingData" : [ 
+        {
+            "sentence" : "Despatch Loading Port component for Income with Execution estimate",
+            "incExpenseDisplayName" : "Income",
+            "estimateForDisplayName " : "Execution",
+            "costComponentDisplayName" : "Despatch Loading Port"
+        }, 
+        {
+            "sentence" : "Absolute component Legal fees with counterparty AB World Trade Pvt. Ltd. in group CIF",
+            "costComponentDisplayName" : "Legal fees",
+            "counterpartyGroupNameDisplayName" : "AB World Trade Pvt. Ltd.",
+            "rateTypePriceDisplayName" : "Absolute",
+            "group" : "CIF"
+        }, 
+        {
+            "sentence" : "Import Duty with rate type Absolute belonging to Group XYZ with Curve type",
+            "incExpenseDisplayName" : "Expense",
+            "costComponentDisplayName" : "Import Duty",
+            "rateTypePriceDisplayName" : "Curve",
+            "group" : "XYZ"
+        }, 
+        {
+            "sentence" : "Import Duty with rate type Absolute belonging to Group xyz with Curve type",
+            "incExpenseDisplayName" : "Expense",
+            "costComponentDisplayName" : "Import Duty",
+            "rateTypePriceDisplayName" : "Curve",
+            "group" : "xyz"
+        }, 
+        {
+            "sentence" : "Execute absolute detention income against A & Z AGRO INDUSTRIES (PVT.) LTD.  ",
+            "incExpenseDisplayName" : "income",
+            "estimateForDisplayName" : "Execute",
+            "costComponentDisplayName" : "detention",
+            "counterpartyGroupNameDisplayName" : "A & Z AGRO INDUSTRIES (PVT.) LTD.",
+            "rateTypePriceDisplayName" : "absolute"
+        }, 
+        {
+            "sentence" : "value curve credit insurance expense to a and z",
+            "incExpenseDisplayName" : "expense",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "credit insurance",
+            "counterpartyGroupNameDisplayName" : "a and z",
+            "rateTypePriceDisplayName" : "curve"
+        }, 
+        {
+            "sentence" : "execute and value absolute rate type for ocean freight expense for 3 F Industries Limited",
+            "incExpenseDisplayName" : "expense",
+            "estimateForDisplayName" : "execute and value",
+            "costComponentDisplayName" : "ocean freight",
+            "counterpartyGroupNameDisplayName" : "3 F Industries Limited",
+            "rateTypePriceDisplayName" : "absolute"
+        }, 
+        {
+            "sentence" : "execute and value percent of price rate type for ocean freight expense against three f.",
+            "incExpenseDisplayName" : "expense",
+            "estimateForDisplayName" : "execute and value",
+            "costComponentDisplayName" : "ocean freight",
+            "counterpartyGroupNameDisplayName" : "three f",
+            "rateTypePriceDisplayName" : "percent of price"
+        }, 
+        {
+            "sentence" : "value pop rate for bank fee income for AB World Trade Pvt. Ltd.",
+            "incExpenseDisplayName" : "income",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "bank fee",
+            "counterpartyGroupNameDisplayName" : "AB World Trade Pvt. Ltd.",
+            "rateTypePriceDisplayName" : "pop"
+        }, 
+        {
+            "sentence" : "value pop rate for Carrying charges Sales income against ADM Grain CO",
+            "incExpenseDisplayName" : "income",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "Carrying charges Sales",
+            "counterpartyGroupNameDisplayName" : "ADM Grain CO",
+            "rateTypePriceDisplayName" : "pop"
+        }, 
+        {
+            "sentence" : "value pop rate for Carrying charges Sales income for adm",
+            "incExpenseDisplayName" : "income",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "Carrying charges Sales",
+            "counterpartyGroupNameDisplayName" : "adm",
+            "rateTypePriceDisplayName" : "pop"
+        }, 
+        {
+            "sentence" : "value absolute rate for sales charges cost to 2bs",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "sales charges",
+            "counterpartyGroupNameDisplayName" : "2bs",
+            "rateTypePriceDisplayName" : "absolute"
+        }, 
+        {
+            "sentence" : "value absolute rate for sales charges cost to 3f",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "sales charges",
+            "counterpartyGroupNameDisplayName" : "3f",
+            "rateTypePriceDisplayName" : "absolute"
+        }, 
+        {
+            "sentence" : "ex pop rate for Analysis fees cost against 3f",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "ex",
+            "costComponentDisplayName" : "Analysis fees",
+            "counterpartyGroupNameDisplayName" : "3f",
+            "rateTypePriceDisplayName" : "pop"
+        }, 
+        {
+            "sentence" : "ex pop rate for analysis fee cost against A BRUSSE AND ZN BV",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "ex",
+            "costComponentDisplayName" : "analysis fee",
+            "counterpartyGroupNameDisplayName" : "A BRUSSE AND ZN BV",
+            "rateTypePriceDisplayName" : "pop"
+        }, 
+        {
+            "sentence" : "against 3f ex pop rate for Bank fees cost",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "ex",
+            "costComponentDisplayName" : "Bank fees",
+            "counterpartyGroupNameDisplayName" : "3f",
+            "rateTypePriceDisplayName" : "pop"
+        }, 
+        {
+            "sentence" : "against 3f ex absolute rate for sales charge cost",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "ex",
+            "costComponentDisplayName" : "sales charge",
+            "counterpartyGroupNameDisplayName" : "3f",
+            "rateTypePriceDisplayName" : "absolute"
+        }, 
+        {
+            "sentence" : "for adm grain income value absolute rate for broker commission general",
+            "incExpenseDisplayName" : "income",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "broker commission general",
+            "counterpartyGroupNameDisplayName" : "adm grain",
+            "rateTypePriceDisplayName" : "absolute"
+        }, 
+        {
+            "sentence" : "for A BRUSSE AND ZN BV value cost curve rate for agency and document fees",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "agency and document fees",
+            "counterpartyGroupNameDisplayName" : "A BRUSSE AND ZN BV",
+            "rateTypePriceDisplayName" : "curve"
+        }, 
+        {
+            "sentence" : "for a brusse value curve rate for document fee cost",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "value",
+            "costComponentDisplayName" : "document fee",
+            "counterpartyGroupNameDisplayName" : "a brusse",
+            "rateTypePriceDisplayName" : "curve"
+        }, 
+        {
+            "sentence" : "for brusse ex and val income curve rate for agency fee",
+            "incExpenseDisplayName" : "income",
+            "estimateForDisplayName" : "ex and val",
+            "costComponentDisplayName" : "agency fee",
+            "counterpartyGroupNameDisplayName" : "brusse",
+            "rateTypePriceDisplayName" : "curve"
+        }, 
+        {
+            "sentence" : "ex val cost curve rate for agency and doc fee",
+            "incExpenseDisplayName" : "cost",
+            "estimateForDisplayName" : "ex val",
+            "costComponentDisplayName" : "agency and doc fee",
+            "counterpartyGroupNameDisplayName" : "brusse",
+            "rateTypePriceDisplayName" : "curve"
+        }
+    ],
+    "typeOfData" : "training",
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "ffb49f18-32da-4c92-b075-a7110679cd9d",
+    "sys__createdOn" : ISODate("2020-10-13T12:00:57.307Z"),
+    "sys__data__state" : "Create"
+}

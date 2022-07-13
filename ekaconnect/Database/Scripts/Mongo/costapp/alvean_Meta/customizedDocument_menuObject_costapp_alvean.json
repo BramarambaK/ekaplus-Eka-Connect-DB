@@ -1,0 +1,32 @@
+{
+    "_id" : "customizedDocument_menuObject_costapp_alvean",
+    "type" : "customizedDocument",
+    "refType" : "menuObject",
+    "refTypeId" : "e7182569-06cd-4709-962e-14b670397742",
+    "app_UUID":"d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "customizeLevel" : "system",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "menuItems" : [ 
+                        {
+                            "items" : [ 
+                                {
+                                    "handler" : "costcomponentlistplatform"
+                                }, 
+                                {
+                                    "handler" : "costestimatelistplatform"
+                                }, 
+                                {
+                                    "handler" : "ruleslist",
+                                    "hidden" : true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

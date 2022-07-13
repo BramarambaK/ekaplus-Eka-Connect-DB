@@ -1,0 +1,243 @@
+{
+  "_id": "costestimatelistplatform_COSTAPP_alvean",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Cost Estimates",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "refreshData": {
+      "time": 300000
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.costestimatelistplatform",
+          "name": "costestimatelifecycle"
+        }
+      ],
+      "label": "Lifecycle",
+      "position": "top",
+      "iconClass": "info-icon"
+    }
+  ],
+  "labelKey": "COST_ESTIMATE",
+  "fields": [
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "entityType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "entityRefNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "entityActualNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractItemRefNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costComponent"
+    },
+    {
+      "key": "costComponentDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "counterpartyGroupName"
+    },
+    {
+      "key": "counterpartyGroupNameDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "incExpense"
+    },
+    {
+      "key": "incExpenseDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "estimateFor"
+    },
+    {
+      "key": "estimateForDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "rateTypePrice"
+    },
+    {
+      "key": "rateTypePriceDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costCurve"
+    },
+    {
+      "key": "costCurveDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costMonth"
+    },
+    {
+      "key": "costMonthDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costValue"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costPriceUnitIdDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costAmountInBaseCurrency"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costAmountInBaseCurrencyUnitId"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToBaseType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxRate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToBase",
+      "roundoff": "5"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToPosition"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxValueDate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "comments"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "paymentTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractIncoTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "valuationIncoTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "quality"
+    }
+  ],
+  "taskId": "costestimatelistplatform",
+  "object": "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+  "sys__UUID": "d0e8bf30-66a7-46e9-b9a5-b1b4e3b84c0f"
+}

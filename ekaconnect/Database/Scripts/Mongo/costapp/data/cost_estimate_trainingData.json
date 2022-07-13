@@ -1,0 +1,146 @@
+{
+    "_id" : "cost_estimate_trainingData",
+    "targetObject" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "trainingData" : [
+    {
+        "sentence": "Analysis fees Income estimated for Execution with Rate",
+        "costComponentDisplayName": "Analysis fees",
+        "incExpenseDisplayName ": "Income",
+        "estimateForDisplayName": "Execution",
+        "rateTypePriceDisplayName": "Rate"
+    },
+    {
+        "sentence": "Bank fees with Rate value 1.8 USD/MT Expense and Valuation estimate with counterparty ADM Germany GMBH",
+        "costComponentDisplayName": "Bank fees",
+        "incExpenseDisplayName ": "Expense",
+        "estimateForDisplayName": "Execution and Valuation",
+        "rateTypePriceDisplayName": "Rate",
+        "costPriceUnitIdDisplayName": "USD/MT",
+        "counterpartyGroupNameDisplayName": "ADM Germany GMBH"
+    },
+    {
+        "sentence": "Curve estimate Freight – Ocean for NAAalborgAarhusAug-2020 with Aug-2020 and USD/MT",
+        "costComponentDisplayName": "Freight – Ocean",
+        "rateTypePriceDisplayName": "Curve",
+        "costCurveDisplayName": " NAAalborgAarhusAug-2020",
+        "costMonthDisplayName ": "Aug-2020",
+        "curveCurrencyDisplayName": "USD/MT"
+    },
+    {
+        "sentence": "against 3f ex absolute rate for sales charge cost",
+        "estimateForDisplayName":"ex",
+        "rateTypePriceDisplayName":"absolute",
+        "costComponentDisplayName": "sales charge",
+        "incExpenseDisplayName": "cost",
+        "counterpartyGroupNameDisplayName": "3f"
+    },
+    {
+        "sentence": "income valuation for adm grain using absolute rate for product cotton seed",
+        "rateTypePriceDisplayName":"absolute",
+        "estimateForDisplayName":"valuation",
+        "incExpenseDisplayName": "income",
+        "counterpartyGroupNameDisplayName": "adm grain",
+        "product": "cotton seed"
+    },
+    {
+        "sentence": "value cost curve rate against A BRUSSE AND ZN BV for agency and document fees for product 100 MT cotton seed at 2.5 usd/mt",
+        "rateTypePriceDisplayName":"curve",
+        "costComponentDisplayName": "agency and document fees",
+        "estimateForDisplayName":"value",
+        "incExpenseDisplayName": "cost",
+        "counterpartyGroupNameDisplayName": "A BRUSSE AND ZN BV",
+        "product": "cotton seed",
+        "costPriceUnitIdDisplayName": "usd/mt",
+        "itemQty":"100"
+    },
+    {
+        "sentence": "value curve rate for broker commission for a brusse for 10 MT soy oil at 1000 usd per mt",
+        "rateTypePriceDisplayName":"curve",
+        "costComponentDisplayName": "broker commission",
+        "estimateForDisplayName":"value",
+        "incExpenseDisplayName": "cost",
+        "counterpartyGroupNameDisplayName": "a brusse",
+        "product": "soy oil",
+        "costPriceUnitIdDisplayName": "usd per mt",
+        "itemQty":"10"
+    },
+    {
+        "sentence": "agency fee income against brusse with ex and val curve rate for 100 mt rapeseed at 2500 usd",
+        "rateTypePriceDisplayName":"curve",
+        "costComponentDisplayName": "agency fee",
+        "estimateForDisplayName":"ex and val",
+        "incExpenseDisplayName": "income",
+        "counterpartyGroupNameDisplayName": "brusse",
+        "product": "rapeseed",
+        "costPriceUnitIdDisplayName": "usd per mt",
+        "itemQty":"100"
+    },
+    {
+        "sentence": "ex val cost curve rate for agency and doc fee for 10 mt, brazil cotton seed, cotton seed at 25.00 usd mt",
+        "rateTypePriceDisplayName":"curve",
+        "costComponentDisplayName": "agency and doc fee",
+        "estimateForDisplayName":"ex val",
+        "counterpartyGroupNameDisplayName": "brusse",
+        "incExpenseDisplayName": "cost",
+        "quality":"brazil cotton seed",
+        "costPriceUnitIdDisplayName": "usd mt",
+        "itemQty":"10"
+    },
+    {
+        "sentence": "against AB World Trade Pvt Ltd execute cost price percent rate for Bank Guarantee fees",
+        "rateTypePriceDisplayName":"price percent",
+        "costComponentDisplayName": "Bank Guarantee fees",
+        "estimateForDisplayName":"execute",
+        "counterpartyGroupNameDisplayName": "AB World Trade Pvt Ltd",
+        "incExpenseDisplayName": "cost"
+    },
+    {
+        "sentence": "against ab world value income at price percent rate for guarantee fees",
+        "rateTypePriceDisplayName":"price percent",
+        "costComponentDisplayName": "guarantee fees",
+        "estimateForDisplayName":"value",
+        "counterpartyGroupNameDisplayName": "ab world",
+        "incExpenseDisplayName": "income"
+    },
+    {
+        "sentence": "exec percent price rate for analysis fee cost for AGENCIA MARITIMA CONDEMINAS CADIZ S.A.",
+        "estimateForDisplayName":"exec",
+        "rateTypePriceDisplayName":"percent price",
+        "costComponentDisplayName": "analysis fee",
+        "incExpenseDisplayName": "cost",
+        "counterpartyGroupNameDisplayName": "AGENCIA MARITIMA CONDEMINAS CADIZ S.A."
+    },
+    {
+        "sentence": "value percent price rate for barge freight cost for agencia",
+        "estimateForDisplayName":"value",
+        "rateTypePriceDisplayName":"percent price",
+        "costComponentDisplayName": "barge freight",
+        "incExpenseDisplayName": "cost",
+        "counterpartyGroupNameDisplayName": "agencia"
+    },
+    {
+        "sentence": "barge freight with rate type absolute belonging to fob",
+        "costComponentDisplayName": "barge freight",
+        "rateTypePriceDisplayName": "absolute",
+        "incExpenseDisplayName": "Expense",
+        "counterpartyGroupNameDisplayName": "fob"
+    },
+    {
+        "sentence": "despatch loading port component for income with execution estimate",
+        "costComponentDisplayName": "despatch Loading Port",
+        "incExpenseDisplayName": "income",
+        "estimateForDisplayName ": "execution"
+    }
+]
+
+,
+    "typeOfData" : "training",
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "1933fea4-ba32-405c-9208-b4704014e6fa",
+    "sys__createdOn" : ISODate("2020-10-13T12:00:57.307Z"),
+    "sys__data__state" : "Create"
+}

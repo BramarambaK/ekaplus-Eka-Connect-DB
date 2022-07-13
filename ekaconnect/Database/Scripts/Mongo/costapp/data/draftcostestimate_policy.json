@@ -1,0 +1,23 @@
+{
+    "_id" : "draftcostestimate_policy",
+    "type" : "policy",
+    "app_UUID" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "refType" : "object",
+    "refTypeId" : "00189ca9-cfc1-4327-95ac-f937f22deb60",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

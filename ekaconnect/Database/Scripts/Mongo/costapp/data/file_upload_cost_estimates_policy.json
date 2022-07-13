@@ -1,0 +1,15 @@
+{
+  "_id": "file_upload_cost_estimates_policy",
+  "type": "policy",
+  "app_UUID": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "refType": "object",
+  "refTypeId": "023a828b-028e-4202-912c-02a4f1898c6d",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

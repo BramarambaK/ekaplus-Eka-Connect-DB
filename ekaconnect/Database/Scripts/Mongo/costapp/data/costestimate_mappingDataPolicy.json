@@ -1,0 +1,21 @@
+{
+    "_id" :"cost_estimate_mappingDataPolicy",
+    "app_UUID" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "83add1ed-c1de-419e-8e30-16d3660d98de",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46"
+}
