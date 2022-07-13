@@ -1,0 +1,236 @@
+{
+    "_id" : "viewmargin_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Budget view",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "width" : "33.33%",
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "40%",
+            "height" : "28px"
+        },
+        "topLine" : {
+            "display" : false
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "font-size" : "15px",
+            "font-weight" : "700",
+            "margin-bottom" : "0"
+        },
+        "formLayoutStyle" : {
+            "background" : "#f6f6f6",
+            "height" : "90px",
+            "padding" : "1px 8px"
+        },
+        "defaultFormValueStyle" : {
+            "flex" : "1",
+            "height" : "20px"
+        },
+        "type" : "row"
+    },
+    "decisions" : [],
+    "labelKey" : "VIEW_MARGIN",
+    "fields" : [ 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "salesContractItemRefNo"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "traderName"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "contractValueUOM"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "allocGrpName"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "personIncharge"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "titleTransferDate"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "quantity"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "finalCustomer"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "type" : "readOnly",
+                "event" : "var theEvent = value || window.event;\r\n        var key;\r\n        if (theEvent.type === 'paste') {\r\n          key = event.clipboardData.getData('text/plain');\r\n        } else {\r\n          key = theEvent;\r\n        }\r\n        let regex = /^(?=.)([+-]?([0-9]+)(\\.([0-9]{0,2}))?)$/g;\r\n\r\n        let result = regex.test(key);\r\n        if (result === true) {\r\n        for (var x = 0; x < data.listingmargin.length; x++) {\r\n          data.listingmargin[x].interest = value;\r\n          if (\r\n            data.listingmargin[x]['COST GROUP NAME'] != 'Expense Total' &&\r\n            data.listingmargin[x]['COST GROUP NAME'] != 'Income Total'\r\n          ) {\r\n            data.listingmargin[x].financing =\r\n              (-1 *\r\n                data.listingmargin[x].totalAmountMarginCurrency *\r\n                (data.listingmargin[x].paymentsplit / 100) *\r\n                data.listingmargin[x].financingdays *\r\n                (data.listingmargin[x].interest / 100)) /\r\n              360;\r\n          }\r\n        }\r\n        let sum = 0;\r\n        let sumfinancingDays = 0;\r\n        let records = data.listingmargin;\r\n        let sumtotalAmt = 0;\r\n        let prodtotalAmtFdays = 0;\r\n        for (let i = 0; i < records.length; i++) {\r\n          if (records[i]['COST GROUP NAME'] !== 'Expense Total' && records[i]['COST GROUP NAME'] !== 'Income Total') {\r\n            sum = sum + records[i].financing;\r\n            sumfinancingDays = sumfinancingDays + Number(records[i].financingdays);\r\n            sumtotalAmt = sumtotalAmt + records[i].totalAmount;\r\n            prodtotalAmtFdays = prodtotalAmtFdays + records[i].prodtotalAmtFdays;\r\n          }\r\n          if (records[i]['COST GROUP NAME'] === 'Expense Total') {\r\n            console.log(records[i]);\r\n            records[i].financing.value = sum;\r\n            records[i].financingdays.value = sumfinancingDays;\r\n            records[i].totalAmount.value = sumtotalAmt;\r\n            records[i].prodtotalAmtFdays.value = prodtotalAmtFdays;\r\n            sumfinancingDays = 0;\r\n            sumtotalAmt = 0;\r\n            sum = 0;\r\n            prodtotalAmtFdays = 0;\r\n          }\r\n          if (records[i]['COST GROUP NAME'] === 'Income Total') {\r\n            records[i].financing.value = sum;\r\n            records[i].financingdays.value = sumfinancingDays;\r\n            records[i].totalAmount.value = sumtotalAmt;\r\n            records[i].prodtotalAmtFdays.value = prodtotalAmtFdays;\r\n            sumtotalAmt = 0;\r\n            sumfinancingDays = 0;\r\n            sum = 0;\r\n            prodtotalAmtFdays = 0;\r\n          }\r\n        }\r\n      }\r\n      else{\r\n         value = value === '' ? '' : data.viewmarginInterestEdit.interest || '';\r\n      }",
+                "key" : "interest"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "product"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "shipmentFromDate"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "label" : "Status:",
+                "formItemStyle" : {
+                    "width" : "33.33%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "status"
+            }
+        ]
+    ],
+    "taskId" : "viewmargin",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

@@ -1,0 +1,92 @@
+{
+    "_id" : "viewprofile_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "83514c7a-39b0-4de5-91ca-43883f895bb5"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "User Profile",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "background" : "white",
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "viewprofile",
+        "formStyle" : {
+            "border-right-style" : "solid",
+            "padding" : "7px",
+            "margin" : "auto",
+            "max-width" : "100%",
+            "border-top-width" : "1px",
+            "border-left-style" : "solid",
+            "border-right-width" : "1px",
+            "border-left-color" : "#dee2e5",
+            "border-top-color" : "#dee2e5",
+            "border-right-color" : "#dee2e5",
+            "border-left-width" : "1px",
+            "border-top-style" : "solid"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "menu" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "default"
+                }
+            ],
+            "position" : "top"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "default"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "VIEW_PROFILE",
+    "fields" : [ 
+        {
+            "placement" : "row1",
+            "key" : "firstName"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "lastName"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "email"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "mobile"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "phone"
+        }
+    ],
+    "taskId" : "viewprofile",
+    "object" : "User_Info"
+}

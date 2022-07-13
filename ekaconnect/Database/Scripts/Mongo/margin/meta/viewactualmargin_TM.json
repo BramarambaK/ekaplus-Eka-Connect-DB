@@ -1,0 +1,116 @@
+{
+    "_id" : "viewactualmargin_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "bd90f393-c705-47d9-a335-478d3c8b1850"
+    },
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Actual View",
+    "workflows" : [ 
+        {
+            "data" : "selected.viewactualmargin.versiondropdown",
+            "name" : "actualviewversiondropdown"
+        }, 
+        {
+            "data" : "selected.viewactualmargin.viewmargin",
+            "name" : "viewmargin"
+        }, 
+        {
+            "data" : "selected.viewactualmargin.listingactualmargin",
+            "name" : "listingactualmarginVersion"
+        }, 
+        {
+            "class" : "composite-row",
+            "workflows" : [ 
+                {
+                    "workflows" : [ 
+                        {
+                           
+                            "name" : "tradeMarginVersion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.viewactualmargin.shares",
+                            "name" : "sharesversion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "style" : {
+                        "flex" : 1
+                    },
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.viewactualmargin.ratesinput",
+                            "name" : "ratesinputversion"
+                        }, 
+                        {
+                            "data" : "selected.viewactualmargin.rates",
+                            "name" : "ratesversion"
+                        }
+                    ]
+                }, 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.viewactualmargin.remark",
+                            "name" : "remarkversion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "objectAction" : "READ",
+            "task" : "viewactualmargin",
+            "selection" : "external",
+            "outcomes" : [ 
+                {
+                    "data" : "output.viewactualmargin",
+                    "name" : "_ST_VERSION_VIEW_ACTUAL_MARGIN"
+                }, 
+                {
+                    "data" : "output._ST_VERSION_VIEW_ACTUAL_MARGIN",
+                    "name" : "viewactualmargin"
+                }
+            ]
+        }
+    ],
+    "taskId" : "viewactualmargin",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}
