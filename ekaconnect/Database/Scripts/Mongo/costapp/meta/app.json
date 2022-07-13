@@ -1,0 +1,52 @@
+{
+  "_id": "Cost_APP",
+  "title": "Cost",
+  "name": "costapp",
+  "isTrmIntegrated" : true,
+  "platform_id": "44",
+  "tenantID": "",
+  "type": "app",
+  "appType": "CONNECT",
+  "config": {
+    "header": {
+      "brand": {
+        "src": "assets/img/brand/eka-login-logo.png",
+        "width": 60.0,
+        "height": 20.0,
+        "alt": "Eka"
+      },
+      "clientLogo": {},
+      "sidebarToggler": true,
+      "asideMenuToggler": false
+    },
+    "sidebar": {
+      "fixed": true,
+      "display": false
+    },
+    "navbar": [
+      {
+        "apiMenuData": [
+          {
+            "menu": [
+              {
+                "handler": "/app/costapp/costcomponentlistplatform",
+                "text": "Cost Components",
+                "iconCls": "app-menu-icon"
+              },
+              {
+                "handler": "/app/costapp/costestimatelistplatform",
+                "text": "Cost Estimates",
+                "iconCls": "app-menu-icon"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "aside": {
+      "fixed": true,
+      "display": false
+    }
+  },
+  "sys__UUID": "d33143ac-4164-4a3f-8d30-61d845c9eeed"
+}

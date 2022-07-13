@@ -1,0 +1,161 @@
+{
+  "_id": "createdocuments_CostApp",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "downloadsample",
+      "decisionName": "downloadsample",
+      "outcomes": [
+        {
+          "data": "output.createdocuments",
+          "name": "_ST_DOWNLOAD_SAMPLE"
+        },
+        {
+          "data": "output._ST_DOWNLOAD_SAMPLE",
+          "download": true,
+          "name": "costestimatelistplatform"
+        }
+      ],
+      "style": {
+        "pointer-events": "none"
+      },
+      "label": "Download Sample File",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "createdocuments",
+      "decisionName": "createdocuments",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "File uploaded successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "File uploaded with some errors"
+            }
+          },
+          "data": "output.createdocuments",
+          "appendMsg": true,
+          "name": "COST_ST_CREATE_DOCUMENT"
+        },
+        {
+          "data": "output.COST_ST_CREATE_DOCUMENT",
+          "name": "FILE_PROCESS_TASK",
+          "returnData": "Y",
+          "showToaster": true
+        },
+        {
+          "data": "output.FILE_PROCESS_TASK",
+          "name": "_ST_PROCESSOR_FILE_TASK"
+        },
+        {
+          "data": "output._ST_PROCESSOR_FILE_TASK",
+          "name": "createdocuments",
+          "showToaster": true
+        }
+      ],
+      "label": "VALIDATE",
+      "position": "bottom",
+      "headers": {
+        "storageType": "awsS3"
+      },
+      "type": "submit"
+    },
+    {
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "COST_DOCUMENT_UPLOAD_VALIDATE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.createdocuments",
+          "appendMsg": false,
+          "name": "COST_DOCUMENT_UPLOAD_VALIDATE"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "layoutdescription"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "file"
+      },
+      {
+        "key": "download",
+        "type": "button",
+        "label": "Download Sample File",
+        "btnClass": "link p-0",
+        "decision": "downloadsample",
+        "style": {
+          "margin-right": "25px"
+        }
+      },
+      {
+        "key": "validate",
+        "type": "button",
+        "label": "Validate",
+        "btnClass": "btn btn-outline-dark custom-btn",
+        "decision": "createdocuments",
+        "style": {
+          "width": "122px"
+        }
+      }
+    ]
+  ],
+  "label": "Upload Document",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "defaultFormItemStyle": {},
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "Document Upload"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "object": "023a828b-028e-4202-912c-02a4f1898c6d",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "taskId": "createdocuments",
+  "type": "workflow",
+  "sys__UUID": "d4392fbf-c7de-42dc-b96b-f540fa31adf2"
+}

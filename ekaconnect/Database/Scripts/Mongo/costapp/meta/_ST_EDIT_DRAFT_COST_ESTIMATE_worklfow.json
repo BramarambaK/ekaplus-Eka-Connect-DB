@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_EDIT_DRAFT_COST_ESTIMATE_COSTAPP",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_EDIT_DRAFT_COST_ESTIMATE",
+    "object" : "00189ca9-cfc1-4327-95ac-f937f22deb60",
+    "label": "System Edit Draft Cost Esimate",
+    "sys__UUID" : "f87e7e11-2fc4-4044-b670-60a18002318f"
+}

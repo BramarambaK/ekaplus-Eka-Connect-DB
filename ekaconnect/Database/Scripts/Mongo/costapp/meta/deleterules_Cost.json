@@ -1,0 +1,86 @@
+{
+  "_id": "deleterules_Cost",
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Remove Rule",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to remove ${rule_name}?",
+      "headerMessage": "Remove : ${rule_name}"
+    }
+  },
+  "input": ["rule_name"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "ruleslist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "deleterules",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got deleted with some errors"
+            }
+          },
+          "data": "output.deleterules",
+          "appendMsg": true,
+          "name": "_ST_DELETE_RULES"
+        },
+        {
+          "name": "ruleslist",
+          "showPopUp": false
+        }
+      ],
+      "label": "DELETE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "ruleslist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    {
+      "heading": "rule_name"
+    }
+  ],
+  "taskId": "deleterules",
+  "object": "2d3221f6-0717-4f08-b380-25c7094dcd0b",
+  "sys__UUID" : "053df05a-27d0-4a7b-bf1f-b107de79032c"
+}

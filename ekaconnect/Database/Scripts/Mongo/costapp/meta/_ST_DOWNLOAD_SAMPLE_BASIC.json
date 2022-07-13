@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_DOWNLOAD_SAMPLE_BASIC",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "b295a956-0a4d-4fea-bdcb-a85f73275212"
+  },
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "_ST_DOWNLOAD_SAMPLE",
+  "object": "023a828b-028e-4202-912c-02a4f1898c6d",
+  "sys__UUID" : "63086737-5e9b-43c6-aa15-ec9d5b51e474"
+}

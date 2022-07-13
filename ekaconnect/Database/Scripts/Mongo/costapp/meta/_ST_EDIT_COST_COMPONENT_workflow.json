@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_EDIT_COST_COMPONENT_COSTAPP",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_EDIT_COST_COMPONENT",
+    "object" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "label": "System Edit Cost Component",
+    "sys__UUID" : "dec64a35-0d41-4434-af6c-efac0e3e3d22"
+}

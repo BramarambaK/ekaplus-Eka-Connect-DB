@@ -1,0 +1,11 @@
+{
+  "_id": "costestimatelistplatformCollection_COSTAPP_processor",
+  "name": "costestimatelistplatformCollectionprocessor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": "\r\n    var costEstimatesURL = req.body.propertyList.eka_connect_host + '/workflow/data';\r\n    var costEstimatesBody = {\r\n      appId: req.body.appId,\r\n      workFlowTask: 'costestimatelistplatformcollectionCOPY'\r\n    };\r\n    var costEstimatesData = {\r\n      method: 'POST',\r\n      url: costEstimatesURL,\r\n      body: costEstimatesBody,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    var get_costEstimatesData = function get_costEstimatesData() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(costEstimatesData, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    };\r\n    Promise.all([get_costEstimatesData()]).then(function(result) {\r\n      var data = result[0].data;\r\n\r\n      data = data.map(item => {\r\n        let {\r\n          sys__createdBy,\r\n          sys__createdOn,\r\n          sys__version,\r\n          sys__updatedBy,\r\n          sys__updatedOn,\r\n          _id,\r\n          object,\r\n          refType,\r\n          refTypeId,\r\n          sys__data__state,\r\n          sys__state,\r\n          sys__UUID,\r\n          userId,\r\n          ...rest\r\n        } = item;\r\n        return rest;\r\n      });\r\n      res.status(200).send(data);\r\n    });\r\n ",
+  "sys__UUID": "15ea1806-5df3-4b45-b625-0ab1d4b213ce",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}

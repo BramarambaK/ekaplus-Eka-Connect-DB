@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_CREATE_BULK_CONTRACT_DATA",
+    "version" : "V2",
+    "componentType" : "SystemBulkUploadTask",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "objectAction" : "CREATE",
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "taskId" : "_ST_CREATE_BULK_CONTRACT_DATA"
+}

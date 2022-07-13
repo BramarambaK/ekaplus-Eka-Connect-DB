@@ -1,0 +1,177 @@
+{
+  "_id": "costdocumentlisting_CostApp",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Total Records",
+  "type": "workflow",
+  "payLoad": "selected.createdocuments",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "preserveSelectedData": true
+  },
+  "decisions": [],
+  "labelKey": "COST_COMPONENT",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "remarks"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "entityType"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "entityRefNo"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costComponent"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "counterpartyGroupName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "incExpense"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "estimateFor"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "rateTypePrice"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costCurve"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costMonth"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costValue"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costPriceUnitIdDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costAmountInBaseCurrency"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costAmountInBaseCurrencyUnitId"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxToBaseType"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxRate"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxToBase",
+      "roundoff": "5"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxToPosition"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxValueDate"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "comments"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "paymentTerm"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "contractIncoTerm"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "valuationIncoTerm"
+    }
+  ],
+  "taskId": "costdocumentlisting",
+  "object": "cf60685f-c8d4-4558-a3bc-ba64f7e78d00",
+  "sys__UUID": "4686bc3d-10ba-4b91-86e1-f0b9be4a03e1"
+}

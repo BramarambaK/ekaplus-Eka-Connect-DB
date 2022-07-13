@@ -1,0 +1,14 @@
+{
+  "_id": "_UNIQUENESS_CHECK_PROCESS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "processorInfo": {
+    "processorId": "2ccf3834-9ec6-407d-974a-13558b15e48d"
+  },
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "_UNIQUENESS_CHECK_PROCESS",
+  "object": "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+  "sys__UUID": "b1956ade-c5d7-4cfd-9965-2679fb8b71f9"
+}

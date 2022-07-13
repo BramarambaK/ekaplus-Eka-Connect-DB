@@ -1,0 +1,45 @@
+{
+  "_id": "costestimatelifecycle_COST",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Item : ${entityRefNo}",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "f3c0be10-e863-40c5-865c-e685c1d78077"
+  },
+  "layout": {
+    "name": "data-view",
+    "template": "<div><table class='ml-2'>#{selected.data.details *= <tr><td title='${item.name}' class='t-c-w-150'>${item.name}:</td><td title='${item.value}' class='pl-25'>${item.value}</td></tr>}</table><br /><div>#{selected.data.description *= <div class='left-border-dash'><div class='flex-container'><i class='material-icons doticon'>fiber_manual_record</i><div class='mr-a'>${item.timestamp}</div><div>${item.doneBy}</div></div><div class='lc-pb-10'><div class='p-10 bg-grey'>#{item.details *= <div class='lc'><div title='${item.name}'>${item.name}:</div><div title='${item.preValue}'>${item.preValue}</div><div><i class='material-icons'>arrow_forward</i></div><div title='${item.postValue}'>${item.postValue}</div></div>}</div></div></div>}</div><div class='lc-msg'>${selected.data.message}</div></div>",
+    "options": {
+      "hideRowHeader": false,
+      "columnWidth": "30px",
+      "popupWidth": "490px"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costestimatelistplatform"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    {
+      "key": "timestamp",
+      "path": "description",
+      "format": "DD/MM/YYYY hh:mm:ss"
+    }
+  ],
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "costestimatelifecycle",
+  "object": "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+  "sys__UUID": "da339035-f49b-42da-97e5-567c72fd3dd7"
+}

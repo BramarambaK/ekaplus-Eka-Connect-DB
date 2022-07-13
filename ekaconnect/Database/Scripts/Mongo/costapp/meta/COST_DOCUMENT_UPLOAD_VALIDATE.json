@@ -1,0 +1,12 @@
+{
+    "_id" : "COST_DOCUMENT_UPLOAD_VALIDATE",
+    "componentType" : "ValidateTask",
+    "object" : "023a828b-028e-4202-912c-02a4f1898c6d",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "taskId" : "COST_DOCUMENT_UPLOAD_VALIDATE",
+    "label" : "Validate Document Upload",
+    "type" : "workflow",
+    "sys__UUID" : "0eec7499-d4f0-4377-b0af-49e5c3a6f45b"
+}

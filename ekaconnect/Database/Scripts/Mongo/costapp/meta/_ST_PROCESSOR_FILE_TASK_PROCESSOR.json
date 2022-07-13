@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_PROCESSOR_FILE_TASK_PROCESSOR",
+  "name": "_ST_PROCESSOR_FILE_TASK",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": "    let data = req.body.bulkPayLoadData;\r\n    data = JSON.parse(JSON.stringify(data));\r\n    for (var i = 0; i < data.length; i++) {\r\n      for (var key in data[i]) {\r\n        if (data[i][key] === '' || data[i][key] === null) {\r\n          delete data[i][key];\r\n        }\r\n      }\r\n    }\r\n    var validatedata = {};\r\n    validatedata['data'] = data;\r\n    console.log(validatedata);\r\n    var validateURL = req.body.propertyList.eka_utility_host + '/costapp/validateCostEstimates';\r\n    var validate = {\r\n      method: 'POST',\r\n      body: validatedata,\r\n      url: validateURL,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_validate() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(validate, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_validate().then(result => {\r\n      if (result.errors) {\r\n        res.status(500).send(result.message);\r\n      } else {\r\n        for (let i = 0; i < result.length; i++) {\r\n          result[i]['remarks'] = JSON.stringify(result[i].remarks);\r\n        }\r\n        res.status(200).send(result);\r\n      }\r\n    });",
+  "sys__UUID": "2051b694-c8e6-4021-9ca2-e16398bb0d5e",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}

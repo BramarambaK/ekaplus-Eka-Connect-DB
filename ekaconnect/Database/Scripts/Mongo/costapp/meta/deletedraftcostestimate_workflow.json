@@ -1,0 +1,93 @@
+{
+    "_id" : "deletedraftcostestimate_COSTAPP",
+    "componentType" : "UserTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Remove Cost",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to remove ${costComponentDisplayName}?",
+            "headerMessage" : "Remove : ${costComponentDisplayName}"
+        }
+    },
+    "input" : [ 
+        "costComponent"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "costitemsfornewentitylist"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "deletedraftcostestimate",
+            "outcomes" : [ 
+                {
+                    "name": "_ST_PROCESS_DELETE_DRAFT_COST_ESTIMATE",
+                    "data": "output.deletedraftcostestimate"
+                },
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deletedraftcostestimate",
+                    "appendMsg" : true,
+                    "name" : "_ST_DELETE_DRAFT_COST_ESTIMATE"
+                }, 
+                {
+                    "name" : "costitemsfornewentitylist",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "DELETE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "costitemsfornewentitylist"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Delete_COST",
+    "fields" : [ 
+        {
+            "heading" : "costComponent"
+        }
+    ],
+    "taskId" : "deletedraftcostestimate",
+    "object" : "00189ca9-cfc1-4327-95ac-f937f22deb60",
+    "sys__UUID" : "765bee7d-70bc-4c4b-83a0-4bd1893a84c5"
+}

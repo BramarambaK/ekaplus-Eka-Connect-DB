@@ -1,0 +1,22 @@
+{
+    "_id": "deletecustomizeddocuments_enablecurve_workflow",
+    "type": "workflow",
+    "componentType": "UserTask",
+    "labelKey": "Delete Customized documents",
+    "label": "Delete Customized documents",
+    "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "refType": "app",
+    "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "objectAction": "CREATE",
+    "processorInfo": {
+      "processorId": "0aa7b981-5964-4cdd-9629-c573a2619c24"
+    },
+    "getDataFromExternalAPI": false,
+    "layout": {},
+    "fields": [],
+    "decisions": [],
+    "taskId": "deletecustomizeddocuments_enablecurve",
+    "tag": "config",
+    "description": "Execute to enable FX to base type Curve"
+  }
+  

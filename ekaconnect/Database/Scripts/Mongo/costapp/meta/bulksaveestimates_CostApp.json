@@ -1,0 +1,177 @@
+{
+  "_id": "bulksaveestimates_CostApp",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Cost Estimates",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "useQueryParams": true,
+    "preserveSelectedData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "SAVE",
+      "selection": "default",
+      "position": "bottom",
+      "disabled": "typeof field == 'undefined' || field.length == 0",
+      "type": "submit",
+      "task": "costcomponentlistctrm",
+      "outcomes": [
+        {
+          "data": "output.bulksaveestimates",
+          "name": "_ST_CREATE_COSTESTIMATE",
+          "appendMsg": false
+        },
+        {
+          "name": "bulksaveestimates"
+        }
+      ],
+      "label": "SAVE"
+    }
+  ],
+  "labelKey": "COST_ESTIMATE",
+  "fields": [
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "entityType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "entityRefNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costComponent"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "counterpartyGroupName"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "incExpense"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "estimateFor"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "rateTypePrice"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costCurve"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costMonth"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costValue"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costAmountInBaseCurrency"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToBaseType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxRate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToBase"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToPosition"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxValueDate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "comments"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "paymentTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractIncoTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "valuationIncoTerm"
+    }
+  ],
+  "taskId": "bulksaveestimates",
+  "object": "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+  "sys__UUID" : "0b45efde-0fca-4798-a359-337e4dcebea4"
+}

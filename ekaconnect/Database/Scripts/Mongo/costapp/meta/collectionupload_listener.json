@@ -1,0 +1,7 @@
+{
+  "type": "listener",
+  "actions": ["CREATE", "UPDATE"],
+  "workflow": "COLLECTION_VERSION_UPLOAD",
+  "refType": "object",
+  "refTypeId": "f3d6ff89-b541-4dc0-b88d-12065d10cc90"
+}

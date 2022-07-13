@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESS_CHECKASYNC_workflow",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "8aaa524b-1e97-45a3-999a-7ba727bcd10a"
+  },
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_CHECKASYNC",
+  "object": "3d3977c0-8af1-44e2-b118-2f0ec353e4d7",
+  "label": "Check async object status"
+}

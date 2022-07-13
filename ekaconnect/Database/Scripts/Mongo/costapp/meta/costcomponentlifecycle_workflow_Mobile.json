@@ -1,0 +1,93 @@
+{
+    "_id" : "costcomponentlifecycle_COST_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Cost Component Lifecycle",
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "b0fc93b0-3009-430e-be82-882058c346eb"
+    },
+    "layout" : {
+        "name" : "lifecycle",
+        "options" : {
+            "hideRowHeader" : true
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "costcomponentlistplatform"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "DERIVATIVE_ORDER_VIEW",
+    "fields" : [ 
+        {
+            "placement" : "topHeading",
+            "key" : "Cost Component"
+        }, 
+        {
+            "placement" : "topHeading",
+            "key" : "costComponentDisplayName"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "costComponentDisplayName"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "counterpartyGroupNameDisplayName"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "sys__createdOnDate"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "sys__createdOnTime"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "sys__createdBy"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "status"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "estimateFor"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "incExpense"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "rateTypePrice"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "costCurve"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "costMonth"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "group"
+        }
+    ],
+    "taskId" : "costcomponentlifecycle",
+    "object" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "deviceType": "mobile"
+}

@@ -1,0 +1,19 @@
+{
+    "_id" : "bulk_contract_data",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "objectAction" : "UPDATE",
+    "taskId" : "bulk_contract_data",
+    "refType" : "app",
+    "tags" : "notifyDataChange",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_CREATE_BULK_CONTRACT_DATA",
+            "data" : "output.bulk_contract_data",
+            "returnData" : "Y"
+        }
+    ]
+}

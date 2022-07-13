@@ -1,0 +1,99 @@
+{
+  "_id": "deletecostcomponent_COSTAPP",
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Remove Cost",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to remove ${costComponentDisplayName}?",
+      "headerMessage": "Remove : ${costComponentDisplayName}"
+    }
+  },
+  "input": ["costComponent"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costcomponentlistplatform"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "deletecostcomponent",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got deleted with some errors"
+            }
+          },
+          "data": "output.deletecostcomponent",
+          "appendMsg": true,
+          "name": "_ST_DELETE_COST_COMPONENT"
+        },
+        {
+          "data": "output.deletecostcomponent",
+          "name": "ST_DELETE_COSTCOMPONENT_RULE_PROCESSOR",
+          "showPopUp": false,
+          "appendMsg": true
+        },
+        {
+          "data": "output.ST_DELETE_COSTCOMPONENT_RULE_PROCESSOR",
+          "name": "_ST_EDIT_RULES",
+          "showPopUp": false,
+          "appendMsg": true
+        },
+        {
+          "name": "costcomponentlistplatform",
+          "showPopUp": false
+        }
+      ],
+      "label": "DELETE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costcomponentlistplatform"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Delete_COST",
+  "fields": [
+    {
+      "heading": "costComponent"
+    }
+  ],
+  "taskId": "deletecostcomponent",
+  "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "sys__UUID": "7c230934-dd40-4460-aaf0-22c8872e6e17"
+}

@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_EDIT_COST_ESTIMATE_COSTAPP",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_EDIT_COST_ESTIMATE",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "label": "System Edit Cost Estimate",
+    "sys__UUID" : "8f2f7f7c-0fc9-4c5c-b294-740c60aca643"
+}

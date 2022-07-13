@@ -1,0 +1,96 @@
+{
+    "_id" : "costestimatelistplatform_COSTAPP_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Cost Estimates",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : false,
+        "showCheckbox" : false,
+        "refreshData" : {
+            "time" : 300000
+        },
+        "preserveSelectedData" : true
+    },
+    "decisions" : [],
+    "labelKey" : "COST_ESTIMATE",
+    "fields" : [ 
+        {
+            "key" : "entityType"
+        }, 
+        {
+            "key" : "entityRefNo"
+        }, 
+        {
+            "key" : "costComponent"
+        }, 
+        {
+            "key" : "counterpartyGroupName"
+        }, 
+        {
+            "key" : "incExpense"
+        }, 
+        {
+            "key" : "estimateFor"
+        }, 
+        {
+            "key" : "rateTypePrice"
+        }, 
+        {
+            "key" : "costCurve"
+        }, 
+        {
+            "key" : "costMonth"
+        }, 
+        {
+            "key" : "costValue"
+        }, 
+        {
+            "key" : "costAmountInBaseCurrency"
+        }, 
+        {
+            "key" : "fxToBaseType"
+        }, 
+        {
+            "key" : "fxRate"
+        }, 
+        {
+            "key" : "fxToBase"
+        }, 
+        {
+            "key" : "fxToPosition"
+        }, 
+        {
+            "key" : "fxValueDate"
+        }, 
+        {
+            "key" : "comments"
+        }, 
+        {
+            "key" : "paymentTerm"
+        }, 
+        {
+            "key" : "contractIncoTerm"
+        }, 
+        {
+            "key" : "valuationIncoTerm"
+        }
+    ],
+    "taskId" : "costestimatelistplatform",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+     "deviceType" : "mobile"
+}

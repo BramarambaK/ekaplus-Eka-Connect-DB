@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_DELETE_DRAFT_COST_ESTIMATE_COSTAPP",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_DRAFT_COST_ESTIMATE",
+    "object" : "00189ca9-cfc1-4327-95ac-f937f22deb60",
+    "label": "System Delete Draft Cost Estimate",
+    "sys__UUID" : "296ad352-7a0c-4066-806c-2d67d4c90c76"
+}

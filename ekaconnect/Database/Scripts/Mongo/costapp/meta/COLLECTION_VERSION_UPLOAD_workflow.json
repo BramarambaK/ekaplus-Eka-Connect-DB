@@ -1,0 +1,16 @@
+{
+  "_id": "COLLECTION_VERSION_UPLOAD_Cost",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "d66f3c42-9b86-466a-834d-9f2e9acd9238"
+  },
+  "decisions": [],
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "COLLECTION_VERSION_UPLOAD",
+  "object": "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+  "label": "Upload versions to platform collection",
+  "sys__UUID": "805c1e5f-b5db-4718-8623-abeadab05dab"
+}

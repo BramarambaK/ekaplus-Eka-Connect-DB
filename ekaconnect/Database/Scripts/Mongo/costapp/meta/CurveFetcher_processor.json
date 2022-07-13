@@ -1,0 +1,11 @@
+{
+    "_id" : "CurveFetcher_processor",
+    "name" : "CurveFetcher",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "snippet" : "var defaultDataURL =\r\n    req.body.propertyList.eka_connect_host + '/workflow/data';\r\n    var dbody = {\r\n      \"appId\":req.body.appId,\r\n      \"workFlowTask\":\"listingtrade\"\r\n    }\r\n    var defaultdata = {\r\n      method: 'POST',\r\n      url: defaultDataURL,\r\n      body:dbody,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_defaultData() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(defaultdata, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n\r\n    Promise.all([get_defaultData()]).then(function(result) {\r\n      var mdmData = [];\r\n\t  var mdm2=[]\r\n      var data = {};\r\n      for(var i=0; i<result[0].data.length; i++){\r\n        mdmData.push({ key: result[0].data[i]._id, value: result[0].data[i].productIdDisplayName });\r\n      }\r\n\t   \r\n        mdm2.push({ key: \"Fixed\", value: \"Fixed\" });\r\n\t\tmdm2.push({ key: \"Flat\", value: \"Flat\" });\r\n\t\tmdm2.push({ key: \"On Call Basis Fixed\", value: \"Floating\" });\r\n\t\tmdm2.push({ key: \"FormulaPricing\", value: \"Index/Formula\" });\r\n\t\t\r\n      \r\n\t  \r\n      data = { formulaList : mdmData, priceTypeRestricted: mdm2 };\r\n      res.status(200).send(data);\r\n    });",
+    "sys__UUID" : "d182ed28-0532-4ec0-adc6-2dfc2cce2be3",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "srini@ekaplus.com"
+}

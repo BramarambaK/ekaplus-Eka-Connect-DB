@@ -1,0 +1,13 @@
+{
+  "_id": "costapp_auditlog_collectionHeader_property",
+  "type": "property",
+  "name": "costapp_auditlog_collectionHeader",
+  "label": "Costapp Audit Log collectionHeader",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "Contract Item Ref No:String,Cost Component name:String,Field Name:String,Old Value:String,New Value:String,Version:String,Version Date:Date,Has Changed:String",
+  "length": "1000",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "description": "Property is used to fetch all datatypes of audit log collection"
+}

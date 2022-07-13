@@ -1,0 +1,157 @@
+{
+  "_id": "costcomponentlist_in_Ctrm_CostApp",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Cost Components",
+  "type": "workflow",
+  "payLoad": "selected.costcomponentlistctrm",
+  "processorInfo": {
+    "processorId": "fffad4dc-f14e-4b96-bfc4-df483965a124"
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "showCheckbox": true,
+    "useQueryParams": true,
+    "selectionMode": "multiple"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "UPDATE",
+      "position": "bottom",
+      "outcomes": [
+        {
+          "name": "costitemsforexistingentitylist"
+        }
+      ],
+      "label": "CANCEL",
+      "style": {
+        "margin-right": "auto"
+      }
+    },
+    {
+      "btnClass": "btn-success",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "selection": "default",
+      "position": "bottom",
+      "disabled": "typeof field == 'undefined' || field.length == 0",
+      "type": "submit",
+      "task": "costcomponentlistctrm",
+      "outcomes": [
+        {
+          "data": "output.costcomponentlistctrm",
+          "name": "_ST_CREATE_TEMPCOSTESTIMATE",
+          "appendMsg": false
+        },
+        {
+          "name": "useexistingpbslist"
+        }
+      ],
+      "label": "NEXT"
+    }
+  ],
+  "labelKey": "COST_COMPONENT",
+  "fields": [
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "templateName"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costComponent"
+    },
+    {
+      "key" : "costComponentDisplayName",
+      "hidden" : true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "counterpartyGroupName"
+    },
+    {
+      "key" : "counterpartyGroupNameDisplayName",
+      "hidden" : true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "incExpense"
+    },
+    {
+      "key" : "incExpenseDisplayName",
+      "hidden" : true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "estimateFor"
+    },
+    {
+      "key" : "estimateForDisplayName",
+      "hidden" : true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "rateTypePrice"
+    },
+    {
+      "key" : "rateTypePriceDisplayName",
+      "hidden" : true
+    }, 
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costCurve"
+    },
+    {
+      "key" : "costCurveDisplayName",
+      "hidden" : true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costMonth"
+    },
+    {
+      "key" : "costMonthDisplayName",
+      "hidden" : true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "group"
+    }
+  ],
+  "taskId": "costcomponentlistctrm",
+  "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "sys__UUID" : "c39dfa69-c5b4-4d98-b51b-c77d53bfc5a8"
+}

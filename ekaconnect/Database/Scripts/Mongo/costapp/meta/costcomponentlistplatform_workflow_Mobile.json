@@ -1,0 +1,141 @@
+{
+    "_id" : "costcomponentlist_CostApp_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Cost Components",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "refreshData" : {
+            "time" : 300000
+        },
+        "searchFields" : [ 
+            "group"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "Create",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "createcostcomponent"
+                }
+            ],
+            "label" : "Create",
+            "position" : "top"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editcostcomponent",
+            "selection" : "row",
+            "position" : "top",
+            "data" : "selected.costcomponentlistplatform",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.costcomponentlistplatform",
+                    "name" : "editcostcomponent"
+                }
+            ],
+            "label" : "Update"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "selection" : "row",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.costcomponentlistplatform",
+                    "popupClass" : "deleteclass",
+                    "name" : "deletecostcomponent"
+                }
+            ],
+            "label" : "Delete",
+            "iconClass" : "cr-delete-icon"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.costcomponentlistplatform",
+                    "name" : "createcostcomponent"
+                }
+            ],
+            "label" : "Copy Cost",
+            "position" : "top",
+            "iconClass" : "info-icon"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.costcomponentlistplatform",
+                    "name" : "costcomponentlifecycle"
+                }
+            ],
+            "label" : "Lifecycle",
+            "position" : "top",
+            "iconClass" : "info-icon"
+        }
+    ],
+    "labelKey" : "COST_COMPONENT",
+    "fields" : [ 
+        {
+            "key" : "costComponent"
+        }, 
+        {
+            "key" : "counterpartyGroupName"
+        }, 
+        {
+            "key" : "incExpense"
+        }, 
+        {
+            "key" : "estimateFor"
+        }, 
+        {
+            "key" : "rateTypePrice"
+        }, 
+        {
+            "key" : "costCurve"
+        }, 
+        {
+            "key" : "costMonth"
+        }, 
+        {
+            "key" : "group"
+        }
+    ],
+    "taskId" : "costcomponentlistplatform",
+    "object" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "deviceType" : "mobile"
+}

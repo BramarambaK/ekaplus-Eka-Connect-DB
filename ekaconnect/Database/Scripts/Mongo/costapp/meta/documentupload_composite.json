@@ -1,0 +1,80 @@
+{
+  "_id": "documentupload_composite",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costestimatelistplatform"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "costcomponentlistplatform",
+      "outcomes": [
+        {
+          "data": "output.documentuploadview",
+          "name": "_ST_PROCESSOR_BULK_FILE_TASK"
+        },
+        {
+          "data": "output._ST_PROCESSOR_BULK_FILE_TASK",
+          "name": "EXT_BULK_SAVE",
+          "appendMsg": false
+        },
+        {
+          "name": "costestimatelistplatform"
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "label": "Import Cost Estimates",
+  "layout": {
+    "name": "customv2",
+    "useQueryParams": true,
+    "preserveSelectedData": true
+  },
+  "object": "023a828b-028e-4202-912c-02a4f1898c6d",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "taskId": "documentuploadview",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "data": "selected.documentuploadview.createdocuments",
+      "name": "createdocuments"
+    },
+    {
+      "display": "tabs",
+      "workflows": [
+        {
+          "data": "selected.documentuploadview.costdocumentlisting",
+          "name": "costdocumentlisting"
+        },
+        {
+          "data": "selected.documentuploadview.successfulcostdocumentlisting",
+          "name": "successfulcostdocumentlisting"
+        },
+        {
+          "data": "selected.documentuploadview.badcostdocumentlisting",
+          "name": "badcostdocumentlisting"
+        }
+      ]
+    }
+  ],
+  "sys__UUID": "d3838781-49f2-437c-912b-22887f435b25"
+}

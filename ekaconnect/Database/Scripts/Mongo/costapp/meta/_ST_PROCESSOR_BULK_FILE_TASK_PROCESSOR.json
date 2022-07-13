@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_PROCESSOR_BULK_FILE_TASK_PROCESSOR",
+  "name": "_ST_PROCESSOR_BULK_FILE_TASK",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": " let data = req.body.bulkPayLoadData;\r\n    var response = {};\r\n    response['data'] = data;\r\n    res.status(200).send(response);",
+  "sys__UUID": "b6a21550-903c-468c-a658-134b61f34db0",
+  "sys__createdBy": "srini@ekaplus.com",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "type": "processor"
+}

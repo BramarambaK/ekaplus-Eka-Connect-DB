@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_CREATE_COSTESTIMATE_costApp",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_COSTESTIMATE",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "label": "System Create Cost Estimate",
+    "sys__UUID" : "ec5e15a5-9521-4cd4-bbfc-b3876a1840fe"
+}

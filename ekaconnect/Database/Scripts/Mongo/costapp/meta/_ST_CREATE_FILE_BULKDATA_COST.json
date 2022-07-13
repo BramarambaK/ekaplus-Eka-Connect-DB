@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_CREATE_FILE_BULKDATA_COST",
+    "version" : "V2",
+    "componentType" : "SystemBulkUploadTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_FILE_BULKDATA_COST",
+    "object" : "6cdd3b23-84fd-42e6-91ea-3cc188127749"
+}

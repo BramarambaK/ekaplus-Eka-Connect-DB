@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_RULES_Cost",
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_RULES",
+  "object": "2d3221f6-0717-4f08-b380-25c7094dcd0b",
+  "sys__UUID" : "24352cbc-c0d7-4ed8-ae21-cc1b21be0753"
+}

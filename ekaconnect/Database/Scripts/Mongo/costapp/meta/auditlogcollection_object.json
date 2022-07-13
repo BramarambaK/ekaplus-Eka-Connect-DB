@@ -1,0 +1,77 @@
+{
+  "_id": "auditlogcollection_object",
+  "name": "auditlogcollection_object",
+  "label": "Audit Log Collection Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "translatableKeys": [],
+  "fields": {
+    "contractItemRefNo": {
+      "contractItemRefNo": "Contract Item Ref No",
+      "labelKey": "contractItemRefNo",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "costComponentName": {
+      "costComponentName": "Cost Component Name",
+      "labelKey": "costComponentName",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "fieldName": {
+      "fieldName": "Field Name",
+      "labelKey": "fieldName",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "oldValue": {
+      "oldValue": "Old Value",
+      "labelKey": "oldValue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "newValue": {
+      "newValue": "New Value",
+      "labelKey": "newValue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "version": {
+      "version": "Version",
+      "labelKey": "version",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "versionDate": {
+      "versionDate": "Version Date",
+      "labelKey": "versionDate",
+      "type": "datepicker",
+      "isRequired": true,
+      "dataType": "Date"
+    },
+    "hasChanged": {
+      "hasChanged": "Has Changed",
+      "labelKey": "hasChanged",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "e0f0498d-4f4f-4c02-8596-562938156ab6"
+}

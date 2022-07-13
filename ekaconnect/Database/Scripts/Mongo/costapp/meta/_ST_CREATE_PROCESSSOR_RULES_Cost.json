@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_CREATE_PROCESSSOR_RULES_Cost",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "16a7b6b6-6db6-43f0-88f9-6eee6151fc8e"
+  },
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_PROCESSSOR_RULES",
+  "object": "2d3221f6-0717-4f08-b380-25c7094dcd0b",
+  "sys__UUID": "7dc94a3c-f524-4069-acf7-8414114a4f1f"
+}

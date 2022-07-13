@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESS_DELETE_PBS_COST_ESTIMATE_Cost",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "6a00c44e-37de-4f1d-b866-4e4b62e33c19"
+    },
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_DELETE_PBS_COST_ESTIMATE",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "label" : "Delete PBS Cost Processor Task",
+    "sys__UUID" : "f9cce4c9-4f2d-400f-a41a-9807ccebe39b"
+}

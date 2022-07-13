@@ -1,0 +1,45 @@
+{
+  "_id": "costcomponentlifecycle_COST",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Cost Component : ${costComponentDisplayName}",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "b0fc93b0-3009-430e-be82-882058c346eb"
+  },
+  "layout": {
+    "name": "data-view",
+    "template": "<div><table class='ml-2'>#{selected.data.details *= <tr><td title='${item.name}' class='t-c-w-150'>${item.name}:</td><td title='${item.value}' class='pl-25'>${item.value}</td></tr>}</table><br /><div>#{selected.data.description *= <div class='left-border-dash'><div class='flex-container'><i class='material-icons doticon'>fiber_manual_record</i><div class='mr-a'>${item.timestamp}</div><div>${item.doneBy}</div></div><div class='lc-pb-10'><div class='p-10 bg-grey'>#{item.details *= <div class='lc'><div title='${item.name}'>${item.name}:</div><div title='${item.preValue}'>${item.preValue}</div><div><i class='material-icons'>arrow_forward</i></div><div title='${item.postValue}'>${item.postValue}</div></div>}</div></div></div>}</div><div class='lc-msg'>${selected.data.message}</div></div>",
+    "options": {
+      "hideRowHeader": false,
+      "columnWidth": "30px",
+      "popupWidth": "490px"
+    }
+  },
+  "fields": [
+    {
+      "key": "timestamp",
+      "path": "description",
+      "format": "DD/MM/YYYY hh:mm:ss"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costcomponentlistplatform"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "costcomponentlifecycle",
+  "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "sys__UUID": "1a7df6c1-4511-41ef-bc02-5da92bd1a831"
+}

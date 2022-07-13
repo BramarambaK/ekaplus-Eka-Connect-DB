@@ -1,0 +1,293 @@
+{
+    "_id" : "costestimatebulkupload_COSTAPP",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Cost Estimates Bulk Upload",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "createdocuments3",
+                    "data" : "selected.costestimatebulkupload"
+                }
+            ],
+            "label" : "Import Cost Estimates",
+            "decisionName" : "Import Cost Estimates",
+            "position" : "top"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.costestimatebulkupload",
+                    "name" : "triggerbulkvalidation",
+                    "displayType": "popup"
+                }, 
+                {
+                    "data" : "output.triggerbulkvalidation",
+                    "name" : "costestimatebulkupload"
+                }
+            ],
+            "label" : "Re-process Upload",
+            "position" : "top"
+        }
+    ],
+    "labelKey" : "COST_ESTIMATE",
+    "fields" : [ 
+		{
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "sNo"
+        },
+		{
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "UploadRemarks"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "UploadStatus"
+        },
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "EntityName"
+        },  
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "EntityRefNo"
+        }, 
+		{
+			"filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "ContractRefNo"
+        },
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "EntityItemRefNo"
+        }, 
+		{
+            "key" : "CostComponentName",
+			"filter": true,
+			"edit": false,
+			"sort": true
+        },
+        {
+            "key" : "costComponent",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "CPName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "IncomeExpense"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "EstimateFor"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "RateType"
+        }, 
+        {
+            "key" : "rateTypePriceDisplayName",
+            "hidden" : true
+        },
+		{
+            "key" : "ApplicableDate",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "CostCurve"
+        }, 
+        {
+            "key" : "costCurveDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "CostMonth"
+        }, 
+        {
+            "key" : "costMonthDisplayName",
+            "hidden" : true
+        }, 
+		{
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "Quantity"
+        },
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "CostValue",
+            "roundoff" : "8"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "CostValueUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costAmountInBaseCurrency",
+            "roundoff" : "5"
+        }, 
+        {
+            "hidden" : true,
+            "key" : "costAmountInAccuralEstimateCurrency"
+        }, 
+		{
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CostCurrency"
+        },
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "FXtoBaseType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "FXRate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "FXtoBaseValue",
+            "roundoff" : "5"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "FXtoPosition"
+        }, 
+		{
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "FXDate"
+        },
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "comments"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "paymentTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "contractIncoTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "valuationIncoTerm"
+        }, 
+		{
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "profitCenter"
+        },  
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "Product"
+        },
+		{
+			"filter" : true,
+			"edit" : true,
+			"sort" : true,
+			"hidden" : true,
+			"key" : "corporateId"
+		},
+		{
+			"filter" : true,
+			"edit" : true,
+			"sort" : true,
+			"key" : "corporateName"
+		}
+    ],
+    "taskId" : "costestimatebulkupload",
+    "object" : "6cdd3b23-84fd-42e6-91ea-3cc188127749",
+    "sys__UUID" : "3de178a3-8ae9-46f8-9367-5413c42772c3"
+}

@@ -1,0 +1,207 @@
+{
+  "_id": "costcomponentlist_CostApp",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Cost Components",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "156f8992-38ab-4aa5-8755-223a38e335cf"
+  },
+  "tags": "trainingData",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "refreshData": {
+      "time": 300000
+    },
+    "searchFields": ["group"]
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "Create",
+      "selection": "default",
+      "outcomes": [
+        {
+          "name": "createcostcomponent"
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editcostcomponent",
+      "selection": "global",
+      "position": "top",
+      "data": "selected.costcomponentlistplatform",
+      "outcomes": [
+        {
+          "data": "selected.costcomponentlistplatform",
+          "name": "editcostcomponent"
+        }
+      ],
+      "label": "Update"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.costcomponentlistplatform",
+          "popupClass": "deleteclass",
+          "name": "deletecostcomponent"
+        }
+      ],
+      "label": "Delete",
+      "iconClass": "cr-delete-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.costcomponentlistplatform",
+          "name": "createcostcomponent"
+        }
+      ],
+      "label": "Copy Cost",
+      "position": "top",
+      "iconClass": "info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.costcomponentlistplatform",
+          "name": "costcomponentlifecycle",
+          "popupClass": "limitinfopopup"
+        }
+      ],
+      "label": "Lifecycle",
+      "position": "none",
+      "iconClass": "info-icon"
+    }
+  ],
+  "labelKey": "COST_COMPONENT",
+  "fields": [
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "templateName"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costComponent"
+    },
+    {
+      "key": "costComponentDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "counterpartyGroupName"
+    },
+    {
+      "key": "counterpartyGroupNameDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "incExpense"
+    },
+    {
+      "key": "incExpenseDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "estimateFor"
+    },
+    {
+      "key": "estimateForDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "rateTypePrice"
+    },
+    {
+      "key": "rateTypePriceDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costCurve"
+    },
+    {
+      "key": "costCurveDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costMonth"
+    },
+    {
+      "key": "costMonthDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "group",
+      "limit": 10
+    }
+  ],
+  "taskId": "costcomponentlistplatform",
+  "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "sys__UUID": "9074a643-7514-4e64-a039-b7f30e4a2d0c"
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "costapperror_enUS",
+    "title" : "Costapp App Level Error",
+    "name" : "costapp",
+    "tenantID" : "",
+    "type" : "error",
+    "locale" : "en",
+    "001" : "Mandatory fields missing, please update and proceed %s",
+	"002" : "Error while converting actual to draft estimate ,Error Message: %s",
+	"003" : "Error while fetching corporate currency"
+}

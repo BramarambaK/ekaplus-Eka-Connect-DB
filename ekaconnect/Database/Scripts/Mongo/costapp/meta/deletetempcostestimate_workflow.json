@@ -1,0 +1,87 @@
+{
+  "_id": "deletetempcostestimate_COSTAPP",
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Remove Cost",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to remove ${costComponentDisplayName}?",
+      "headerMessage": "Remove : ${costComponentDisplayName}"
+    }
+  },
+  "input": ["costComponent"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "tempcostestimatelist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "deletetempcostestimate",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got deleted with some errors"
+            }
+          },
+          "data": "output.deletetempcostestimate",
+          "appendMsg": true,
+          "name": "_ST_DELETE_TEMPCOSTESTIMATE"
+        },
+        {
+          "name": "tempcostestimatelist",
+          "showPopUp": false
+        }
+      ],
+      "label": "DELETE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "tempcostestimatelist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Delete_COST",
+  "fields": [
+    {
+      "heading": "costComponent"
+    }
+  ],
+  "taskId": "deletetempcostestimate",
+  "object": "3fc4f79b-3f25-4cb8-a62a-7d36e13bf045",
+  "sys__UUID" : "dcdb5bed-7794-4699-af3e-691570045d7a"
+}

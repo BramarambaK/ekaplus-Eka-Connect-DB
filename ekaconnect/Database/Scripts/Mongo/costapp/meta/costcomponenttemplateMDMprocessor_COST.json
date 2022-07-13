@@ -1,0 +1,10 @@
+{
+  "_id": "costcomponenttemplateMDMprocessor_COST",
+  "name": "costcomponenttemplate_mdmprocessor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": " \r\n    var connectUrl = req.body.propertyList.eka_connect_host + '/workflow/data';\r\n    var connectBody = {\r\n      appId: req.body.appId,\r\n      workFlowTask: 'costcomponentlistplatform'\r\n    };\r\n    var connect = {\r\n      method: 'POST',\r\n      body: connectBody,\r\n      url: connectUrl,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_data() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(connect, function(err, response, body) {\r\n          if (err || body.error) {\r\n            console.log('error occured ::' + body.error);\r\n            reject(body);\r\n          } else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_data().then(function(result) {\r\n      req.body.mdmProcessorServiceKey = JSON.parse(req.body.mdmProcessorServiceKey);\r\n      let data = result.data;\r\n      var mdmData = [];\r\n\r\n      for (var i = 0; i < data.length; i++) {\r\n        if (data[i]['templateName'])\r\n          mdmData.push({ key: data[i]['templateName'], value: data[i]['templateName'] });\r\n      }\r\n      var mdmData1 = { cityNameComboList: mdmData };\r\n      res.status(200).send(mdmData1);\r\n    });\r\n   ",
+  "sys__UUID": "9515166b-df33-4353-8a60-6b3ee099735d",
+  "sys__createdBy": "srini@ekaplus.com"
+}

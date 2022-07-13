@@ -1,0 +1,22 @@
+{
+  "_id": "costapp_auditlog_collectionConnectMap_property",
+  "type": "property",
+  "name": "costapp_auditlog_collectionConnectMap",
+  "label": "Costapp Audit Log Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "Contract Item Ref No": "Contract Item Ref No",
+    "Cost Component name": "Cost Component name",
+    "Field Name": "Field Name",
+    "Old Value": "Old Value",
+    "New Value": "New Value",
+    "Version": "Version",
+    "Version Date": "Version Date",
+    "Has Changed": "Has Changed"
+  },
+  "length": "1000",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "description": "Property is used to match all column names of audit log collection and connect object"
+}

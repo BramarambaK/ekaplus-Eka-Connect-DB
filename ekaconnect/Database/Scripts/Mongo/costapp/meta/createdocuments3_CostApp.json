@@ -1,0 +1,192 @@
+{
+    "_id" : "createdocuments3_CostApp",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "downloadsample",
+            "ignoreFileUpload" : true,
+            "decisionName" : "downloadsample",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createdocuments3",
+                    "name" : "_ST_DOWNLOAD_SAMPLE"
+                }, 
+                {
+                    "data" : "output._ST_DOWNLOAD_SAMPLE",
+                    "download" : true,
+                    "name" : "costestimatebulkupload"
+                }
+            ],
+            "style" : {
+                "pointer-events" : "none"
+            },
+            "label" : "Generate Sample File",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "getfileinfo",
+            "decisionName" : "getfileinfo",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createdocuments3",
+                    "name" : "getfileinfolist3",
+                    "popupClass" : "edit-modal907px",
+                    "displayType" : "popup"
+                }
+            ],
+            "label" : "Get File Info"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "costestimatebulkupload"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "READ",
+            "labelkey" : "REVIEW",
+            "task" : "createdocuments3",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_PROCESS_CHECKASYNC"
+                },
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Validating the file"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.createdocuments3",
+                    "appendMsg" : true,
+                    "name" : "COST_ST_CREATE_DOCUMENT"
+                }, 
+                {
+                    "data" : "output.COST_ST_CREATE_DOCUMENT",
+                    "name" : "FILE_PROCESS_TASK",
+                    "CSVRecToProcesNum" : "10500",
+                    "removeSpecialCharsFromColumnNames" : true,
+                    "returnData" : "Y"
+                }, 
+                {
+                    "data" : "output.FILE_PROCESS_TASK",
+                    "name" : "_ST_CREATE_FILE_BULKDATA_COST"
+                },
+				{
+                    "data" : "output._ST_CREATE_FILE_BULKDATA_COST",
+                    "name" : "EXT_BULK_UPDATE_FOR_CORPORATE"
+                },
+				{
+                    "name" : "EXT_BULK_IMPORT_VALIDATION_TASK"
+                },				
+                {
+                    "data" : "output._ST_CREATE_FILE_BULKDATA_COST",
+                    "name" : "costestimatebulkupload",
+                    "showToaster" : true
+                }
+            ],
+            "label" : "UPLOAD",
+            "position" : "bottom",
+            "headers" : {
+                "storageType" : "fileSys",
+                "folderInS3" : "costDocs",
+                "validExtension" : "csv,xlsx,xls",
+                "fileUploadSuccessMessage" : "File uploaded successfully. Validating the file now."
+            },
+            "type" : "submit"
+        }, 
+        {
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "COST_DOCUMENT_UPLOAD_VALIDATE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createdocuments3",
+                    "appendMsg" : false,
+                    "name" : "COST_DOCUMENT_UPLOAD_VALIDATE"
+                }
+            ]
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "suffix" : "",
+                "key" : "file"
+            }, 
+            {
+                "key" : "download",
+                "type" : "button",
+                "label" : "Generate Sample File",
+                "btnClass" : "link p-0",
+                "decision" : "downloadsample"
+            }, 
+            {
+                "key" : "getfile",
+                "type" : "button",
+                "label" : "Get File Info",
+                "btnClass" : "btn-primary custom-btn oms-blue",
+                "decision" : "getfileinfo",
+                "formLabelStyle" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "23px",
+                    "margin-left" : "20px"
+                }
+            }
+        ]
+    ],
+    "label" : "",
+    "labelKey" : "DOCUMENT_UPLOAD",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "padding" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "eventingRequired" : false,
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : "Upload Document"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "023a828b-028e-4202-912c-02a4f1898c6d",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "sys__UUID" : "d4392fbf-c7de-42dc-b96b-f540fa31adf2",
+    "taskId" : "createdocuments3",
+    "type" : "workflow",
+    "version" : "V2"
+}

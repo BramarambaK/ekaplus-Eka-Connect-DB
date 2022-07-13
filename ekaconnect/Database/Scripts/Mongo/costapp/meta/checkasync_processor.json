@@ -1,0 +1,9 @@
+{
+  "_id": "checkasync_processor",
+  "name": "checkasync_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": "var async_data = {\r\n  method: \"GET\",\r\n  url:\r\n    req.body.propertyList.eka_connect_host +\r\n    \"\/data\/d33143ac-4164-4a3f-8d30-61d845c9eeed\/3d3977c0-8af1-44e2-b118-2f0ec353e4d7?Status=Started\",\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    \"X-TenantID\": req.headers[\"x-tenantid\"],\r\n  },\r\n  json: true,\r\n};\r\nfunction get_asyncdata() {\r\n  return new Promise(function (resolve, reject) {\r\n    request(async_data, function (err, response, body) {\r\n      if (err || body.error) reject(body);\r\n      else {\r\n        resolve(body);\r\n      }\r\n    });\r\n  });\r\n}\r\nget_asyncdata()\r\n  .then((data) => {\r\n    if (data.length > 0)\r\n      res\r\n        .status(500)\r\n        .send(\"An upload is already in progress. Please try again later.\");\r\n    else res.status(200).send(data);\r\n  })\r\n  .catch((err) => res.status(500).send(err));\r\n",
+  "sys__UUID": "8aaa524b-1e97-45a3-999a-7ba727bcd10a"
+}

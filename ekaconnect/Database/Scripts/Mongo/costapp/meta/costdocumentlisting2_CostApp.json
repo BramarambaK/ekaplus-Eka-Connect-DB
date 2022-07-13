@@ -1,0 +1,258 @@
+{
+  "_id": "costdocumentlisting2_CostApp",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createdocuments2",
+          "data": "selected.createdocuments2",
+          "dirtyCheck": false,
+          "resetForm": false
+        }
+      ],
+      "label": "Upload Document",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costdocumentlisting2",
+          "data": "selected.costdocumentlisting2",
+          "dirtyCheck": false,
+          "resetForm": false
+        }
+      ],
+      "label": "Review Records",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createdocuments2"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "costcomponentlistplatform",
+      "outcomes": [
+        {
+          "data": "output.costdocumentlisting2",
+          "name": "_ST_PROCESSOR_BULK_FILE_TASK"
+        },
+        {
+          "data": "output._ST_PROCESSOR_BULK_FILE_TASK",
+          "name": "EXT_BULK_SAVE",
+          "appendMsg": false
+        },
+        {
+          "name": "costestimatelistplatform"
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "remarks"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "entityType"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "entityActualNo"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "itemNo"
+    },
+    {
+      "hidden": true,
+      "key": "entityRefNo"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costComponentDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "counterpartyGroupNameDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "incExpenseDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "estimateForDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "rateTypePriceDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costCurveDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costMonthDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costValue"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costPriceUnitIdDisplayName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costAmountInBaseCurrency"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "costAmountInBaseCurrencyUnitId"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxToBaseType"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxRate"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxToBase",
+      "roundoff": "5"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxToPosition"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "fxValueDate"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "comments"
+    }
+  ],
+  "label": "Import Cost Estimates",
+  "labelKey": "COST_COMPONENT",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": true,
+      "headerFilter": {
+        "label": "Select",
+        "field": "status",
+        "options": [
+          {
+            "label": "All",
+            "value": "reset"
+          },
+          {
+            "label": "True",
+            "value": true
+          },
+          {
+            "label": "False",
+            "value": false
+          }
+        ]
+      }
+    },
+    "theme": "theme-grid-white",
+    "preserveSelectedData": true,
+    "getInitialData": true,
+    "menu": true
+  },
+  "object": "cf60685f-c8d4-4558-a3bc-ba64f7e78d00",
+  "objectAction": "READ",
+  "payLoad": "selected.createdocuments2",
+  "processorInfo": {
+    "processorId": "f5c39c52-6f9d-489e-b6e7-67530c9d9275"
+  },
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "sys__UUID": "4686bc3d-10ba-4b91-86e1-f0b9be4a03e1",
+  "taskId": "costdocumentlisting2",
+  "type": "workflow"
+}

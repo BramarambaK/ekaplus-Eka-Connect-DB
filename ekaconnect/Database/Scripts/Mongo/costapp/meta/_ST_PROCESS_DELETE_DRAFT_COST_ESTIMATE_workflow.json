@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESS_DELETE_DRAFT_COST_ESTIMATE_Cost",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "df3b76c5-bf99-4691-9088-09cdc14b04a0"
+    },
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_DELETE_DRAFT_COST_ESTIMATE",
+    "object" : "00189ca9-cfc1-4327-95ac-f937f22deb60",
+    "label" : "Delete Draft Cost Processor Task",
+    "sys__UUID" : "7c6adc57-2ecc-482c-86b6-ce86d97921c3"
+}

@@ -1,0 +1,129 @@
+{
+    "_id" : "createcostcomponent_CostAPP_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "New Cost Component",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "create",
+        "type" : "row",
+        "recommedationNeed" : true,
+        "processorInfo" : {
+            "processorId" : "0878f64e-7fb4-4b89-bffe-0700c6122f4b"
+        },
+        "header" : {
+            "title" : "New Cost Component"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "costcomponentlistplatform",
+                    "action" : "Cancel",
+                    "type" : "client"
+                }
+            ],
+            "label" : "Cancel",
+            "position" : "TopLeft"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "createcostcomponent",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Cost Component got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Cost Component got created with some errors"
+                        }
+                    },
+                    "data" : "output.createcostcomponent",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_COSTCOMPONENT",
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output._ST_CREATE_COSTCOMPONENT",
+                            "value" : "_id"
+                        }
+                    ]
+                }, 
+                {
+                    "data" : "output.createcostcomponent",
+                    "name" : "costcomponentlistplatform",
+                    "showPopUp" : true,
+                    "showToaster" : false
+                }
+            ],
+            "label" : "Save",
+            "position" : "TopRight",
+            "type" : "submit"
+        },        
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "label" : "Speech",
+            "outcomes" : [ 
+                {
+                    "action" : "Audio",
+                    "style" : {
+                        "btnImage" : "Microphone"
+                    }
+                }
+            ],
+            "position" : "TopRight"
+        }
+    ],
+    "labelKey" : "create cost Component",
+    "fields" : [ 
+        [ 
+            {
+                "key" : "templateName"
+            }, 
+            {
+                "key" : "costComponent"
+            }, 
+            {
+                "key" : "counterpartyGroupName"
+            }, 
+            {
+                "key" : "estimateFor"
+            }, 
+            {
+                "key" : "incExpense"
+            }, 
+            {
+                "key" : "rateTypePrice"
+            }, 
+            {
+                "key" : "costCurve"
+            }, 
+            {
+                "key" : "costMonth"
+            }, 
+            {
+                "key" : "group"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "costType",
+                "value" : "template"
+            }
+        ]
+    ],
+    "taskId" : "createcostcomponent",
+    "object" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "deviceType" : "mobile"
+}

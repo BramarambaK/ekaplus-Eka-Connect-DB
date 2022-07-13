@@ -1,0 +1,489 @@
+{
+  "_id": "CostItemsForexistingEntity_CostAPP",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "39407a0e-c305-4bfc-ac92-8c632ff33c52"
+  },
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "processorInfo": {
+      "processorId": "0878f64e-7fb4-4b89-bffe-0700c6122f4b"
+    },
+    "header": {
+      "title": "New Cost Estimate"
+    },
+    "formLayoutStyle": {
+      "height": "500px"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costitemsforexistingentitylist",
+          "resetForm" : true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "costitemsforexistingentity",
+      "outcomes": [
+        {
+          "data": "output.costitemsforexistingentity",
+          "name": "_UNIQUENESS_CHECK_PROCESS"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Cost Component got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Cost Component got created with some errors"
+            }
+          },
+          "data": "output.costitemsforexistingentity",
+          "appendMsg": true,
+          "name": "_ST_CREATE_COSTESTIMATE",
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_CREATE_COSTESTIMATE",
+              "value": "_id"
+            }
+          ]
+        },
+        {
+          "data": "output.costitemsforexistingentity",
+          "name": "costitemsforexistingentitylist",
+          "showPopUp": false,
+          "showToaster": false,
+          "resetForm" : true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "create Estimate Component",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "costComponent",
+        "filter" : true
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costComponentDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "counterpartyGroupName",
+        "virtualScroll": true,
+        "filter" : true
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "counterpartyGroupNameDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "incExpense"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "incExpenseDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "estimateFor"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "estimateForDisplayName"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "rateTypePrice"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "rateTypePriceDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "costCurve"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costCurveDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "costMonth"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costMonthDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "curveCurrency"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "curveCurrencyDisplayName"
+      },
+      {
+        "suffix" : "",
+        "type" : "hidden",
+        "style" : {
+            "display" : "none"
+        },
+        "key" : "curveCurrencySplit"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "width": "9%"
+        },
+        "key": "costValue",
+        "roundoff" : "5"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "9%"
+        },
+        "key": "costPriceUnitId",
+        "filter" : true
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costPriceUnitIdDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "width": "9%"
+        },
+        "key": "costAmountInBaseCurrency",
+        "disabled" : true
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "9%"
+        },
+        "key": "costAmountInBaseCurrencyUnitId",
+        "disabled" : true
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "fxToBaseType"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "fxToBase",
+        "type" : "textbox",
+        "roundoff" : "8"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "fxToPosition"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "fxRate"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "fxValueDate"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "status"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "draftEstimateNo"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "entityType"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "entityRefNo"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "itemQty"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "contractPrice"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "productId"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "payInCurId"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "priceType"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "paymentTerm"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "contractIncoTerm"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "valuationIncoTerm"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "shipmentDate"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "itemQtyUnitId"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "entityActualNo"
+      },
+      {
+        "type" : "hidden",
+        "style" : {
+            "display" : "none"
+        },
+        "key" : "costType",
+        "value" : "estimate"
+      },
+      {
+        "type" : "hidden",
+        "style" : {
+            "display" : "none"
+        },
+        "key" : "corporateCurrency"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "itemNo"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "comments"
+      },
+      {
+        "suffix" : "",
+        "style" : {
+            "display" : "none"
+        },
+        "key" : "conversionFactor",
+        "type" : "hidden",
+        "value" : "1"
+      }
+    ]
+  ],
+  "taskId": "costitemsforexistingentity",
+  "object": "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+  "sys__UUID" : "d791e2b4-055c-42d6-aba0-a9c6c50b2cd0"
+}

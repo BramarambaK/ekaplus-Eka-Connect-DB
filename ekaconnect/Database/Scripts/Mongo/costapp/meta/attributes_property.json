@@ -1,0 +1,30 @@
+{
+  "_id": "attributes_Property",
+  "type": "property",
+  "name": "attributes",
+  "label": "Attributes List",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Contract Type",
+      "value": "Contract Type"
+    },
+    {
+      "key": "Contract Incoterm",
+      "value": "Contract Incoterm"
+    },
+    {
+      "key": "Valuation Incoterm",
+      "value": "Valuation Incoterm"
+    },
+    {
+      "key": "Payment Term",
+      "value": "Payment Term"
+    }
+  ],
+  "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "description" : "List of attributes that can be used for setting up rules"
+}

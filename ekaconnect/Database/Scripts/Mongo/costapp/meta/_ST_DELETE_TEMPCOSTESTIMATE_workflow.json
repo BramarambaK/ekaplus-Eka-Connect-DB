@@ -1,0 +1,12 @@
+{
+  "_id": "_ST_DELETE_TEMPCOSTESTIMATE_costApp",
+  "componentType": "SystemTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "_ST_DELETE_TEMPCOSTESTIMATE",
+  "object": "3fc4f79b-3f25-4cb8-a62a-7d36e13bf045",
+  "label": "System Delete Temp Cost Estimate",
+  "sys__UUID" : "62e90f5d-9974-46df-9784-b4c8cca94e35"
+}

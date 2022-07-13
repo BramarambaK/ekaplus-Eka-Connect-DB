@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_BULK_FILE_TASK_COST",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "b6a21550-903c-468c-a658-134b61f34db0"
+    },
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_BULK_FILE_TASK",
+    "label" : "Create Files using Processor",
+    "object" : "cf60685f-c8d4-4558-a3bc-ba64f7e78d00",
+    "sys__UUID" : "268b11a6-a7a4-4a32-99dc-d4be9f4afb22"
+}

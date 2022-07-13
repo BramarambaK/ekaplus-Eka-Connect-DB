@@ -1,0 +1,15 @@
+{
+  "_id": "_ST_PROCESS_USEEXISTING_Cost",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "9c40a5e9-4478-4aef-82ad-692614ec6915"
+  },
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_USEEXISTING",
+  "object": "3fc4f79b-3f25-4cb8-a62a-7d36e13bf045",
+  "label": "Create Derivative Processor Task",
+  "sys__UUID" : "d6c386ab-4a52-4e21-903f-86ee96dcd6f3"
+}

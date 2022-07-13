@@ -1,0 +1,12 @@
+{
+    "_id" : "COST_ST_CREATE_DOCUMENT",
+    "componentType" : "SystemTask",
+    "object" : "023a828b-028e-4202-912c-02a4f1898c6d",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "taskId" : "COST_ST_CREATE_DOCUMENT",
+    "label" : "Create Document in System",
+    "type" : "workflow",
+    "sys__UUID" : "b26d8165-395d-4810-98bf-38e1c6f92b4e"
+}

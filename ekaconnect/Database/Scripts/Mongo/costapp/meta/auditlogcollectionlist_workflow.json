@@ -1,0 +1,75 @@
+{
+  "_id": "auditlogcollectionlist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Audit Log Collection",
+  "type": "workflow",
+  "processorInfo" : {
+    "processorId" : "450a1865-a2a5-4cd2-8c3c-6f70e559cb70"
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "refreshData": true
+  },
+  "decisions": [],
+  "labelKey": "LIST",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contractItemRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "costComponentName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "fieldName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "oldValue"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "newValue"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "versionDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "hasChanged"
+    }
+  ],
+  "taskId": "auditlogcollectionlist",
+  "object": "e0f0498d-4f4f-4c02-8596-562938156ab6"
+}

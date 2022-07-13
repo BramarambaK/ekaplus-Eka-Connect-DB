@@ -1,0 +1,334 @@
+{
+  "_id": "CostItemsForNewEntityList_CostApp",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Cost Estimates",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "a5ef899d-f31f-4b16-a448-1722125a4853"
+  },
+  "payLoad": "completeData",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "useQueryParams": true,
+    "preserveSelectedData": false
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "Create",
+      "selection": "default",
+      "outcomes": [
+        {
+          "name": "costitemsfornewentity",
+          "resetForm": true
+        }
+      ],
+      "label": "Create New",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "selection": "default",
+      "position": "top",
+      "outcomes": [
+        {
+          "name": "draftcostcomponentlistctrm"
+        }
+      ],
+      "label": " Use Existing"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editcostestimate",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.costitemsfornewentitylist",
+          "name": "editdraftcostestimate"
+        }
+      ],
+      "label": " Update"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "deletedraftcostestimate",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.costitemsfornewentitylist",
+          "name": "deletedraftcostestimate",
+          "displayType": "popup"
+        }
+      ],
+      "label": " Delete"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.costitemsfornewentitylist",
+          "name": "copydraftcostestimate"
+        }
+      ],
+      "label": "Copy Cost",
+      "position": "top",
+      "iconClass": "info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.costitemsfornewentitylist",
+          "name": "costitemsfornewentitylifecycle",
+          "popupClass": "limitinfopopup"
+        }
+      ],
+      "label": "Lifecycle",
+      "position": "top",
+      "iconClass": "info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "costitemsfornewentitylist",
+      "outcomes": [
+        {
+          "data": "output.costitemsfornewentitylist",
+          "name": "_ST_PROCESS_MANDATORY",
+          "appendMsg": false
+        },
+        {
+          "name": "costitemsforexistingentitylist",
+          "close": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "COST_ESTIMATE",
+  "fields": [
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "entityType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costComponent"
+    },
+    {
+      "key": "costComponentDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "counterpartyGroupName"
+    },
+    {
+      "key": "counterpartyGroupNameDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "incExpense"
+    },
+    {
+      "key": "incExpenseDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "estimateFor"
+    },
+    {
+      "key": "estimateForDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "rateTypePrice"
+    },
+    {
+      "key": "rateTypePriceDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costCurve"
+    },
+    {
+      "key": "costCurveDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costMonth"
+    },
+    {
+      "key": "costMonthDisplayName",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costValue",
+      "roundoff": "5"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costPriceUnitIdDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costAmountInBaseCurrency",
+      "roundoff": "5"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "costAmountInBaseCurrencyUnitId"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "itemQty"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToBaseType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxRate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToBase",
+      "roundoff": "5"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxToPosition"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fxValueDate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "comments"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "paymentTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractIncoTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "valuationIncoTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "quality"
+    }
+  ],
+  "taskId": "costitemsfornewentitylist",
+  "object": "00189ca9-cfc1-4327-95ac-f937f22deb60",
+  "sys__UUID": "9929f6c8-1b0a-4ace-b464-0545025e2bd7"
+}

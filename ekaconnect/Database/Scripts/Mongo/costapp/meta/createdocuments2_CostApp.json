@@ -1,0 +1,206 @@
+{
+    "_id" : "createdocuments2_CostApp",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createdocuments2",
+                    "data" : "selected.createdocuments2",
+                    "dirtyCheck" : false,
+                    "resetForm" : false
+                }
+            ],
+            "label" : "Upload Document",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "costdocumentlisting2",
+                    "data" : "selected.costdocumentlisting2",
+                    "dirtyCheck" : false,
+                    "resetForm" : false
+                }
+            ],
+            "label" : "Review Records",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "btnClass" : "link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "downloadsample",
+            "decisionName" : "downloadsample",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createdocuments2",
+                    "name" : "_ST_DOWNLOAD_SAMPLE"
+                }, 
+                {
+                    "data" : "output._ST_DOWNLOAD_SAMPLE",
+                    "download" : true,
+                    "name" : "costestimatelistplatform"
+                }
+            ],
+            "style" : {
+                "pointer-events" : "none"
+            },
+            "label" : "Generate Sample File",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "getfileinfo",
+            "decisionName" : "getfileinfo",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createdocuments2",
+                    "name" : "getfileinfolist",
+                    "popupClass" : "edit-modal907px",
+                    "displayType" : "popup"
+                }
+            ],
+            "label" : "Get File Info"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "READ",
+            "labelkey" : "REVIEW",
+            "task" : "createdocuments2",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Validating the file"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.createdocuments2",
+                    "appendMsg" : true,
+                    "name" : "COST_ST_CREATE_DOCUMENT"
+                }, 
+                {
+                    "data" : "output.COST_ST_CREATE_DOCUMENT",
+                    "name" : "FILE_PROCESS_TASK",
+                    "CSVRecToProcesNum" : "100",
+                    "returnData" : "Y"
+                }, 
+                {
+                    "data" : "output.FILE_PROCESS_TASK",
+                    "name" : "_ST_PROCESSOR_FILE_TASK"
+                }, 
+                {
+                    "data" : "output._ST_PROCESSOR_FILE_TASK",
+                    "name" : "costdocumentlisting2",
+                    "showToaster" : true
+                }
+            ],
+            "label" : "Read File",
+            "position" : "bottom",
+            "headers" : {
+                "storageType" : "fileSys",
+                "folderInS3" : "costDocs",
+                "validExtension" : "csv",
+                "fileUploadSuccessMessage" : "File uploaded successfully. Validating the file now."
+            },
+            "type" : "submit"
+        }, 
+        {
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "COST_DOCUMENT_UPLOAD_VALIDATE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createdocuments2",
+                    "appendMsg" : false,
+                    "name" : "COST_DOCUMENT_UPLOAD_VALIDATE"
+                }
+            ]
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle1" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "file"
+            }, 
+            {
+                "key" : "download",
+                "type" : "button",
+                "label" : "Generate Sample File",
+                "btnClass" : "link p-0",
+                "decision" : "downloadsample",
+                "style1" : {
+                    "margin-right" : "25px",
+                    "margin-top" : "4px"
+                }
+            }, 
+            {
+                "key" : "getfile",
+                "type" : "button",
+                "label" : "Get File Info",
+                "btnClass" : "btn-primary",
+                "decision" : "getfileinfo",
+                "formLabelStyle" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "23px",
+                    "margin-left" : "20px"
+                },
+                "style1" : {
+                    "margin-top" : "20px"
+                }
+            }
+        ]
+    ],
+    "label" : "Upload Document",
+    "labelKey" : "DOCUMENT_UPLOAD",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "padding" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "eventingRequired" : false,
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : "Import Cost Estimates"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "menu" : true
+    },
+    "object" : "023a828b-028e-4202-912c-02a4f1898c6d",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "sys__UUID" : "d4392fbf-c7de-42dc-b96b-f540fa31adf2",
+    "taskId" : "createdocuments2",
+    "type" : "workflow",
+    "version" : "V2"
+}
