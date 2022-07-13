@@ -1,0 +1,176 @@
+{
+  "_id": "delivery_weights_workflow_SC_V2",
+ "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "version" : "V2",
+	 "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Delivery Weights",
+    "type" : "workflow",
+    "inputData" : {
+        "type" : "SystemTask",
+        "queryParamMapping" : {
+            "from" : "start",
+            "size" : "limit"
+        },
+        "config" : {
+            "id" : "crawler_chainedtask"
+        }
+    },
+    "rows" : 100,
+    "layout" : {
+        "name" : "list",
+        "cache" : true,
+		"lazyLoading" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "serverSearch" : true,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : true,
+            "export" : true,
+            "showFilterHeader" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "theme" : "theme-grid-light",
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "selection" : "custom-link",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.deliveryWeightsListing",
+                    "name" : "viewgmrbasic_delivery_weights"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "Delivery Weights",
+    "fields" : [ 
+        {
+            "task" : "custom-link",
+            "filter" : true,
+            "edit" : false,
+            "label" : "gmrRefNo",
+            "sort" : true,
+            "key" : "gmrRefNo",
+            "category" : "link",
+			"sortColumn" : "GMRNO_SUBSTR",
+            "width" : "20%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "supplierReferenceId",
+            "sort" : true,
+            "key" : "supplierReferenceId",
+            "width" : "20%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "quality",
+            "sort" : true,
+            "width" : "20%",
+            "key" : "quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "contractDeliveryItem",
+            "sort" : true,
+            "width" : "20%",
+            "key" : "contractDeliveryItem"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "avisedNetWeight",
+            "sort" : true,
+            "roundoff" : "5",
+            "width" : "20%",
+            "key" : "avisedNetWeight"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "weightUnit",
+            "sort" : true,
+            "width" : "20%",
+            "key" : "weightUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "arrivalDate",
+            "sort" : true,
+            "width" : "20%",
+            "dateformat" : "DD-MMM-YYYY",
+            "key" : "arrivalDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "wnsDate",
+            "sort" : true,
+            "width" : "20%",
+            "dateformat" : "DD-MMM-YYYY",
+            "key" : "wnsDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "wetWeight",
+            "sort" : true,
+            "roundoff" : "3",
+            "width" : "20%",
+            "key" : "wetWeight"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "dryWeight",
+            "sort" : true,
+            "roundoff" : "3",
+            "width" : "20%",
+            "key" : "dryWeight"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "moisture",
+            "sort" : true,
+            "roundoff" : "3",
+            "width" : "20%",
+            "key" : "moisture"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "latestAssayType",
+            "sort" : true,
+            "width" : "20%",
+            "key" : "latestAssayType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "supplier",
+            "sort" : true,
+            "width" : "20%",
+            "key" : "supplier"
+        }
+    ],
+    "taskId" : "deliveryWeightsListing",
+    "object" : "b77d3e1e-4005-4b90-8a24-5a4cc69b918e"
+}

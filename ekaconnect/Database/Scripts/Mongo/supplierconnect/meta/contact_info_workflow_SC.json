@@ -1,0 +1,47 @@
+{
+    "_id" : "contact_info_workflow_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Contact Information",
+    "type" : "workflow",
+    "rows" : "100",
+    "layout" : {
+        "name" : "list",
+        "cache" : false,
+        "options" : {},
+		"footer": false,
+        "theme" : "theme-no-border-white",
+        "toggleheader" : true,
+        "pagination" : false,
+        "limitHeight" : true
+    },
+    "theme" : "theme-grid-light",
+    "decisions" : [],
+    "labelKey" : "contactinfo",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "label" : "Contact Information",
+            "sort" : true,
+            "width" : "30%",
+            "key" : "Contact Information"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "label" : "Contact Information 1",
+            "sort" : true,
+            "width" : "70%",
+            "key" : "Contact Information 1"
+        }
+    ],
+    "processorInfo" : {
+        "processorId" : "ba314fcf-5b20-40f1-9a03-622720012f4e"
+    },
+    "taskId" : "contactinformationlisting",
+    "object" : "ebd7a28b-9a12-437c-a09c-052650fe7a19"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "_bolidenCheckWorkflow_SC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "6fbf41f0-7cd9-4c04-8946-bd5896930953"
+    },
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "_UPDATE_BOLIDENCHECKBOX_SC",
+    "object" : "7bd6f722-684f-4b92-9f75-1fb94857ed85"
+}

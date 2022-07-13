@@ -1,0 +1,25 @@
+{
+    "_id" : "crawler_chainedDeliveryItemList",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "6413bd7c-d358-4cfd-9bac-00a857b7f3f7",
+    "objectAction" : "LISTVIEW",
+    "taskId" : "crawler_chainedDeliveryItemList",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "EXTERNAL_TASK_DELVERYITEM_LIST",
+            "data" : "output.crawler_chainedDeliveryItemList",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "Elastic_Upload_DEL_ITEM_LIST",
+            "data" : "output.EXTERNAL_TASK_DELVERYITEM_LIST",
+            "config" : {
+                "primaryKeyColumn" : "deliveryItemRefNo"
+            }
+        }
+    ]
+}

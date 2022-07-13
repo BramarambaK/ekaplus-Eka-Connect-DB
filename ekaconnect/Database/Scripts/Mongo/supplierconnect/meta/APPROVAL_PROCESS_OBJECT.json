@@ -1,0 +1,161 @@
+{
+    "_id" : "APPROVAL_PROCESS_OBJECT",
+    "type" : "object",
+    "name" : "approval_process_object",
+    "label" : "approval_process",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "1",
+    "sys__UUID" : "0800a667-67c8-4f79-b124-b6b422aff8a0",
+    "createdOn" : "",
+    "createdBy" : "shubham.dholu",
+    "lastModifiedOn" : "",
+    "lastModifiey" : "Test",
+	 "description" : "Set GMR Approval Status(Delivery).",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [],
+    "translatableKeys" : [],
+    "fields" : {
+        "internalRefNo" : {
+            "internalRefNo" : "internalRefNo",
+            "labelKey" : "internalRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "id" : {
+            "id" : "id",
+            "labelKey" : "id",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "name" : {
+            "name" : "name",
+            "labelKey" : "name",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "refObject" : {
+            "refObject" : "refObject",
+            "labelKey" : "refObject",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "refObjectId" : {
+            "refObjectId" : "refObjectId",
+            "labelKey" : "refObjectId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "internalGMRRefNo" : {
+            "internalGMRRefNo" : "Internal GMR Ref No",
+            "labelKey" : "internalGMRRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "internalGmrRefNo" : {
+            "internalGmrRefNo" : "Internal GMR Ref No",
+            "labelKey" : "internalGmrRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "intGmrRefNo" : {
+            "intGmrRefNo" : "Internal GMR Ref No",
+            "labelKey" : "intGmrRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "layoutdescription" : {
+            "layoutdescription" : "Description",
+            "labelKey" : "layoutdescription",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isMandatory" : "if('${types}' == 'other') { return true} else { return false}"
+        },
+        "description" : {
+            "description" : "Description",
+            "labelKey" : "description",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "uploadedByName" : {
+            "uploadedByName" : "Added By",
+            "labelKey" : "uploadedByName",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "approvalNote" : {
+            "approvalNote" : "I confirm that all information is correct and all necessary documents are attached.",
+            "labelKey" : "approvalNote",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isMandatory" : false
+        },
+        "gmrApprovalStatus" : {
+            "gmrApprovalStatus" : "GMR Approval Status",
+            "labelKey" : "gmrApprovalStatus",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "propertyKey" : "setGMRStatus_propertyKey",
+            "isRequired" : true,
+            "children" : [ 
+                "gmrIncompleteReason"
+            ]
+        },
+        "gmrIncompleteReason" : {
+            "gmrIncompleteReason" : "Incomplete Reason",
+            "labelKey" : "gmrIncompleteReason",
+            "type" : "multiselect",
+            "dataType" : "String",
+            "serviceKey" : "gmrIncompleteReason",
+            "isRequired" : true,
+            "parent" : [ 
+                "gmrApprovalStatus"
+            ],
+            "UIupdates" : {
+                "visibility" : "return ('${gmrApprovalStatus}' == 'Incomplete') ? true : false"
+            }
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "Gmr RefNo",
+            "labelKey" : "gmrRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "mail_body" : {
+            "mail_body" : "mail_body",
+            "labelKey" : "mail_body",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "approveSelectedData" : {
+            "approveSelectedData" : "approveSelectedData",
+            "labelKey" : "approveSelectedData",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "layout" : {
+        "fields" : [ 
+            []
+        ]
+    }
+}

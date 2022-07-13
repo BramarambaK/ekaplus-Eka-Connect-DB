@@ -1,0 +1,9 @@
+{
+    "_id" : "_READY_FOR_APPROVAL_DATAPROCESSOR_SC",
+    "name" : "_READY_FOR_APPROVAL_DATAPROCESSOR_SC",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "snippet" : "\/\/ preparing payload when Ready for approval popup opens.\r\n    let selectedData = req.body.selectedData;\r\n    if (selectedData) {\r\n      return res.status(200).send({\r\n        \/\/287a\r\n        internalGMRRefNo: selectedData.intGmrRefNo,\r\n        gmrRefNo: selectedData.gmrRefNo,\r\n        gmrApprovalStatus: selectedData.gmrApprovalStatus,\r\n        gmrIncompleteReason: selectedData.gmrIncompleteReason,\r\n        mail_body: JSON.stringify(selectedData)\r\n      });\r\n    }",
+    "sys__UUID" : "92acb6a1-f575-49da-983a-3c67fce7d663"
+}

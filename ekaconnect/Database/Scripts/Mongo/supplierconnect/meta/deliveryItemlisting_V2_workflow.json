@@ -1,0 +1,164 @@
+{
+  "_id": "deliveryItemlisting_SC_V2",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.deliveryItemlisting",
+          "name": "creategmrbasic"
+        }
+      ],
+      "position": "top",
+      "label": "Advice Delivery",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.deliveryItemlisting",
+          "popupClass": "edit-modal",
+          "name": "attributedetails"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Contract Delivery Item",
+      "sort": true,
+      "key": "deliveryItemRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Quality",
+      "sort": true,
+      "key": "qualityName"
+    },
+    {
+      "filter": true,
+      "label": "Open Qty",
+      "sort": true,
+      "sortColumn": "openQtySubStr",
+      "key": "openQty",
+      "align": "right",
+      "sortExp": "return '${value}'.split(' ')[0]"
+    },
+    {
+      "filter": false,
+      "task": "custom-link",
+      "label": "Attributes",
+      "sort": true,
+      "category": "link",
+      "key": "attributes"
+    },
+    {
+      "filter": true,
+      "filterType": "dateOperations",
+      "label": "From Date",
+      "sort": true,
+      "key": "fromDate",
+      "sourceDateFormat": "DD-MMM-YYYY",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "filterType": "dateOperations",
+      "label": "To Date",
+      "sort": true,
+      "key": "toDate",
+      "sourceDateFormat": "DD-MMM-YYYY",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "label": "Destination (Smelter)",
+      "sort": true,
+      "key": "delLocation"
+    },
+    {
+      "filter": true,
+      "label": "Supplier",
+      "sort": true,
+      "key": "cpName"
+    },
+    {
+      "filter": true,
+      "label": "Currency",
+      "sort": true,
+      "key": "payInCurrency"
+    }
+  ],
+  "inputData": {
+    "type": "SystemTask",
+    "queryParamMapping": {
+      "from": "start",
+      "size": "limit"
+    },
+    "config": {
+      "id": "crawler_chainedDeliveryItemList",
+      "ttl": 0,
+      "isAsynchCallRequired": "Y",
+      "isElasticCumSystemTask": true
+    }
+  },
+  "listingDataOptions": {
+    "filterOptions": {
+      "type": "elasticSearch"
+    }
+  },
+  "label": "Advice Delivery – Select Contract Delivery Item",
+  "labelKey": "DELIVER_IEM_LISTING",
+  "layout": {
+    "cache": false,
+    "selection": "row",
+    "lazyLoading": true,
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "serverSearch": true,
+      "columnFilter": true,
+      "serverFilter": true,
+      "sortFilter": true,
+      "reset": true,
+      "export": true,
+      "customization": true,
+      "showFilterHeader": true
+    },
+    "optionsOrder": [
+      "outcome",
+      "customization",
+      "search",
+      "reload",
+      "reset",
+      "columnFilter",
+      "filter",
+      "export"
+    ],
+    "theme": "theme-grid-white",
+    "disabledDecision": true,
+    "showCheckbox": true,
+    "columnResizeMode" : "expand"
+  },
+  "object": "6413bd7c-d358-4cfd-9bac-00a857b7f3f7",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "taskId": "deliveryItemlisting",
+  "type": "workflow",
+  "sys__UUID": "e5c685b0-94f1-4f7e-9db8-acbfa8865ee7"
+}

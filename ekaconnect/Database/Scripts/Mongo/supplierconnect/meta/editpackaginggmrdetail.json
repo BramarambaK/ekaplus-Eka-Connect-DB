@@ -1,0 +1,96 @@
+{
+    "_id" : "editpackaginggmrdetail_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "5ecc771e-8c98-43be-9ac6-ba7b7c0fa0f7"
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Packaging Details",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "pack",
+        "details" : true,
+        "menu" : false,
+        "options" : {
+            "readonly" : false
+        },
+        "header" : {
+            "field" : "gmrRefNo",
+            "title" : "Edit Packaging - "
+        },
+        "type" : "row"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewgmrbasic",
+                    "cache" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.editgmrbasicgmrdetails",
+                    "name" : "editgmrbasicgmrdetails",
+                    "cache" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "selection" : "global",
+            "disabled" : "!selected.editgmrbasicgmrdetails",
+            "label" : "BACK",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "editpackaginggmrdetail",
+            "outcomes" : [ 
+                {
+                    "name" : "_UPDATEDDATA_PROCESSOR_SC",
+                    "data" : "output.editpackaginggmrdetail",
+                    "appendMsg": true,
+                    "result": {
+                        "success": {
+                            "message": "GMR and Packaging information have been successfully submitted"
+                        },
+                        "failure": {
+                            "message": "GMR and Packaging is failing, please try once again"
+                        },
+                        "successWithWarning": {
+                            "message": "GMR and Packaging is failing, please try once again"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output.editpackaginggmrdetail",
+                    "name" : "viewgmrbasic",
+                    "showToaster": true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "EDIT_PACKAGING",
+    "fields" : [],
+    "taskId" : "editpackaginggmrdetail",
+    "object" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "Elastic_Bulk_Upload_INVOICELIST",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "Elastic_Bulk_Upload_INVOICELIST",
+    "object" : "c02555d6-307d-46de-b98d-17c48aea7daa",
+    "refType" : "app",
+    "objectAction" : "LISTVIEW"
+}

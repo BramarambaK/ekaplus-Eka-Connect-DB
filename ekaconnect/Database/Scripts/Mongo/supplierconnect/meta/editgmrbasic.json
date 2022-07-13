@@ -1,0 +1,367 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "getDataFromExternalAPI": false,
+  "processorInfo": {
+    "processorId": "ec83540d-2bcb-44bc-9b78-cfaf5ea2a0c8"
+  },
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "label": "Delivery Details",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {
+      "border-right-style": "solid",
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%",
+      "border-top-width": "1px",
+      "border-left-style": "solid",
+      "border-right-width": "1px",
+      "border-left-color": "#dee2e5",
+      "border-top-color": "#dee2e5",
+      "border-right-color": "#dee2e5",
+      "border-left-width": "1px",
+      "border-top-style": "solid"
+    },
+    "header": {
+      "field": "gmrRefNo",
+      "title": "Update Advice - "
+    },
+    "routeOnRefresh": "supplierlisting",
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "menu": true
+  },
+  "input": [
+    "deliveryItemRefNo",
+    "cpAddress",
+    "cpName",
+    "pcdiId",
+    "qualityName"
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editgmrbasic",
+          "data": "selected.editgmrbasic"
+        }
+      ],
+      "label": "Delivery Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editpackaging",
+          "data": "selected.editpackaging"
+        }
+      ],
+      "label": "Packaging Details",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editassayinglisting",
+          "data": "selected.editassayinglisting"
+        }
+      ],
+      "label": "Assay Details",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editdocumentlisting",
+          "data": "selected.editdocumentlisting"
+        }
+      ],
+      "label": "Documents",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "supplierlisting",
+          "cache": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "editgmrbasic",
+      "outcomes": [
+        {
+          "data": "output.editgmrbasic",
+          "name": "editpackaging"
+        }
+      ],
+      "label": "NEXT",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "editgmrbasic_SC",
+  "labelKey": "EDIT_GMR_BASIC",
+  "fields": [
+    [
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "pcdiId"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden",
+        "value": "City",
+        "key": "city"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden",
+        "key": "modeOfTransport"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "qualityName"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "dischargeCountryId"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "dischargeCityId"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "qtyUnitId"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "qtyUnitName"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "supplierId"
+      },
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "SupplierReference"
+      },
+      {
+        "isRequired": false,
+        "disabled": true,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "suffix": "",
+        "key": "ExpectedArrivalDate"
+      },
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "width": "48%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "incoLocation"
+      }
+    ],
+    [
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "Quality"
+      },
+      {
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "suffix": "",
+        "type": "readOnlyTextfield",
+        "key": "particleSize"
+      },
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "width": "48%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "MaterialDescription"
+      }
+    ],
+    [
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "containerFlag"
+      },
+      {
+        "isRequired": false,
+        "disabled": true,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "suffix": "",
+        "key": "LoadingDate"
+      },
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "LoadingLocationCountry"
+      },
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "width": "23%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "EditLocationCity"
+      }
+    ],
+    [
+      {
+        "isRequired": false,
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "CountryOfOrigin"
+      },
+      {
+        "formItemStyle": {
+          "margin-top": "10px",
+          "width": "23%"
+        },
+        "type": "readOnlyTextfield",
+        "suffix": "",
+        "key": "SupplierRepresentative"
+      }
+    ],
+    [
+      {
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "suffix": "",
+        "type": "readOnlyTextfield",
+        "key": "deliveryItemRefNo"
+      },
+      {
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2%",
+          "width": "23%"
+        },
+        "suffix": "",
+        "type": "readOnlyTextfield",
+        "key": "cpName"
+      },
+      {
+        "formItemStyle": {
+          "margin-top": "10px",
+          "width": "48%"
+        },
+        "suffix": "",
+        "type": "readOnlyTextfield",
+        "key": "cpAddress"
+      }
+    ]
+  ],
+  "taskId": "editgmrbasic",
+  "object": "c05cacf5-200c-4d97-8e8d-a67329ff286c"
+}

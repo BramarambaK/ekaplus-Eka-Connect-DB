@@ -1,0 +1,21 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "_id": "_ST_CREATE_FILEDOC_SC",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "UPDATE",
+      "outcomes": [{"name": "_ST_CREATE_FILEDOC_SC", "resetForm": true}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "type": "workflow",
+  "taskId": "_ST_CREATE_FILEDOC_SC",
+ "object": "775dd413-6618-405e-b6c8-5951a903530f"
+ }
+

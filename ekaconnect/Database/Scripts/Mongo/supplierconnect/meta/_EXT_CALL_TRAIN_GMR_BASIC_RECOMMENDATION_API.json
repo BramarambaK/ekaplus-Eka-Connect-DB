@@ -1,0 +1,28 @@
+{
+    "_id": "_EXT_CALL_TRAIN_GMR_BASIC_RECOMMENDATION_API",
+    "componentType": "ExtSystemTask",
+    "object": "c05cacf5-200c-4d97-8e8d-a67329ff286c",
+    "objectAction": "CREATE",
+    "apiInfo": {
+        "host": "${properties.eka_connect_host}",
+        "path": "/lambdagatewayapi",
+        "method": "POST",
+        "body": {
+            "appId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+            "method": "POST",
+            "workFlowTask": "gmrObject",
+            "workflowTaskForSave": "saveRecommendationData_sc",
+            "object": "c05cacf5-200c-4d97-8e8d-a67329ff286c"
+        },
+        "inputMapping": {},
+        "headers": {
+            "X-Locale": "en-US",
+            "Content-Type": "application/json",
+            "endPoint": "/train-recommendation-for-all-users/"
+        }
+    },
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId": "_EXT_CALL_TRAIN_GMR_BASIC_RECOMMENDATION_API"
+}

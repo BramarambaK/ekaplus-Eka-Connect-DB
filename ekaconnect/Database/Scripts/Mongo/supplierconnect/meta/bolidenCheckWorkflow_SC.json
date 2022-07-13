@@ -1,0 +1,37 @@
+{
+    "_id" : "bolidenCheckWorkflow_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Edit Assaying Listing",
+    "type" : "workflow",
+    "layout" : {},
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "bolidenCheckWorkflow",
+            "outcomes" : [ 
+                {
+                    "name" : "_UPDATE_BOLIDENCHECKBOX_SC",
+                    "data" : "output.bolidenCheckWorkflow",
+                    "appendmessage" : true
+                }, 
+                {
+                    "data" : "output._UPDATE_BOLIDENCHECKBOX_SC",
+                    "name" : "viewgmrbasic",
+                    "showToaster" : false
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "bolidenCheckWorkflow",
+    "fields" : [],
+    "taskId" : "bolidenCheckWorkflow",
+    "object" : "7bd6f722-684f-4b92-9f75-1fb94857ed85"
+}

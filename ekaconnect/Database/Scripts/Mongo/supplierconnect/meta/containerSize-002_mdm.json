@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5d0b371492574aeb77154b63"),
+    "key" : "containerSize-002",
+    "value" : "40 Ft",
+    "object" : "containerSize",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "connectmdm"
+}

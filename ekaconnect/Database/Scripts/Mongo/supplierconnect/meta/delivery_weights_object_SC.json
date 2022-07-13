@@ -1,0 +1,82 @@
+{
+  "_id": "delivery_weights_object_SC",
+  "name": "delivery_weights",
+  "type": "object",
+  "sys__UUID": "b77d3e1e-4005-4b90-8a24-5a4cc69b918e",
+  "description" : "-N/A-",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "fields": {
+    "gmrRefNo" : {
+      "gmrRefNo" : "GMR No",
+      "labelKey" : "gmrRefNo"
+	},  
+	 "GMRNO_SUBSTR" : {
+            "GMRNO_SUBSTR" : "GMR No",
+            "labelKey" : "GMRNO_SUBSTR",
+            "dataType" : "Number"
+        },
+   "supplierReferenceId" : {
+      "supplierReferenceId" : "Supplier Reference ID",
+      "labelKey" : "supplierReferenceId"
+  },
+  "quality" : {
+      "quality" : "Quality",
+      "labelKey" : "quality"
+  }, 
+  "contractDeliveryItem": {
+	"contractDeliveryItem": "Contract Delivery Item",
+	"labelKey": "contractDeliveryItem"
+  },
+  "avisedNetWeight": {
+	"avisedNetWeight": "Advised Net Weight",
+	"labelKey": "avisedNetWeight",
+            "dataType" : "Number"
+  },
+  "weightUnit": {
+	"weightUnit": "Weight Unit",
+	"labelKey": "weightUnit"
+  },
+  "arrivalDate": {
+	"arrivalDate": "Arrival Date",
+	"labelKey": "arrivalDate"
+  },
+  "wnsDate": {
+	"wnsDate": "W&S Date",
+	"labelKey": "wnsDate",
+            "dataType" : "Date"
+  },
+  "wetWeight": {
+	"wetWeight": "Wet Weight",
+	"labelKey": "wetWeight",
+            "dataType" : "Number"
+  },
+  "dryWeight": {
+	"dryWeight": "Dry Weight",
+	"labelKey": "dryWeight",
+            "dataType" : "Number"
+  },
+  "moisture": {
+	"moisture": "Moisture",
+	"labelKey": "moisture",
+            "dataType" : "Number"
+  },
+  "latestAssayType": {
+	"latestAssayType": "Latest Assay Type",
+	"labelKey": "latestAssayType"
+  },
+  "supplier": {
+	"supplier": "Supplier",
+	"labelKey": "supplier"
+  }
+   
+  },
+  "layout": {
+    "fields": []
+  }
+}

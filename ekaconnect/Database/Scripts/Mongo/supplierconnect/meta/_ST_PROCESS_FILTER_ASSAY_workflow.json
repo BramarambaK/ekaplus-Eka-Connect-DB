@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESS_FILTER_ASSAY",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "processorInfo": {
+    "processorId": "3cfc61e8-1ced-4405-aa61-0823096a1b38"
+  },
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_FILTER_ASSAY",
+  "object": "6f46a4d0-401c-4b7b-b542-b3d3eafe4aad",
+  "sys__UUID": "bfad286c-7c27-4867-9a1b-03647aea1e40"
+}

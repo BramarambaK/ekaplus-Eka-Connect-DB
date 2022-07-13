@@ -1,0 +1,393 @@
+{
+    "_id" : "editgmrbasicgmrdetails_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "getDataFromExternalAPI" : false,
+    "processorInfo" : {
+        "processorId" : "ec83540d-2bcb-44bc-9b78-cfaf5ea2a0c8"
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Delivery Details",
+    "type" : "workflow",
+    "layout" : {
+        "processorInfo" : {
+            "processorId" : "1f0a2bec-ea54-4a20-b75e-eb39869c9ee1",
+            "processorId1" : "d31da359-5911-4fb0-8ba7-7de07b7bcd88"
+        },
+        "defaultFormItemStyle" : {
+            "background" : "white",
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {
+            "border-right-style" : "solid",
+            "padding" : "7px",
+            "margin" : "auto",
+            "max-width" : "100%",
+            "border-top-width" : "1px",
+            "border-left-style" : "solid",
+            "border-right-width" : "1px",
+            "border-left-color" : "#dee2e5",
+            "border-top-color" : "#dee2e5",
+            "border-right-color" : "#dee2e5",
+            "border-left-width" : "1px",
+            "border-top-style" : "solid"
+        },
+        "header" : {
+            "field" : "gmrRefNo",
+            "title" : "Edit Delivery - "
+        },
+        "routeOnRefresh" : "supplierlisting",
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "menu" : false
+    },
+    "input" : [ 
+        "deliveryItemRefNo", 
+        "cpAddress", 
+        "cpName", 
+        "pcdiId", 
+        "qualityName"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewgmrbasic",
+                    "cache" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "editgmrbasicgmrdetails",
+            "outcomes" : [ 
+                {
+                    "data" : "output.editgmrbasicgmrdetails",
+                    "name" : "_ST_VALIDATE_EDIT_GMR",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.editgmrbasicgmrdetails",
+                    "name" : "editpackaginggmrdetail"
+                }
+            ],
+            "label" : "NEXT",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "EDIT_GMR_BASIC",
+    "fields" : [ 
+        [ 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "fromDate"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "toDate"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "currentDate",
+                "value1" : "currentDate"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "incoTermId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "pcdiId"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "value" : "City",
+                "key" : "city"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "qualityName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "dischargeCountryId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "dischargeCityId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "qtyUnitId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "qtyUnitName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "supplierId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "incoLocationDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "LoadingLocationCountryDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "LoadingLocationCityDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "CountryOfOriginDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "containerFlagDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "SupplierRepresentativeDisplayName"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "SupplierReference"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "LoadingDate"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "LoadingLocationCountry",
+                "patchFromValue" : "LoadingLocationCountry"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "LoadingLocationCity",
+                "patchFromValue" : "EditLocationCity"
+            }
+        ], 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "containerFlag",
+                "patchFromValue" : "containerFlag"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "ExpectedArrivalDate"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "CountryOfOrigin",
+                "patchFromValue" : "CountryOfOrigin"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "incoLocation",
+                "patchFromValue" : "incoLocation"
+            }
+        ], 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "Quality",
+                "patchFromValue" : "qualityName"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "disabled" : true,
+                "key" : "particleSize"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "materialClassification",
+                "patchFromValue" : "materialClassification"
+            },
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "key" : "MaterialDescription"
+            }
+        ], 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "disabled" : true,
+                "key" : "deliveryItemRefNo"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "disabled" : true,
+                "key" : "cpName"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "disabled" : true,
+                "key" : "cpAddress"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-left" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "SupplierRepresentative",
+                "patchFromValue" : "SupplierRepresentative"
+            }
+        ]
+    ],
+    "taskId" : "editgmrbasicgmrdetails",
+    "object" : "c05cacf5-200c-4d97-8e8d-a67329ff286c"
+}

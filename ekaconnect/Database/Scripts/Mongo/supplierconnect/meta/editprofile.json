@@ -1,0 +1,165 @@
+{
+  "componentType": "UserTask",
+  "headers": [
+    {
+      "placement": "heading",
+      "key": "firstName"
+    },
+    {
+      "placement": "heading",
+      "key": "lastName"
+    },
+    {
+      "placement": "heading",
+      "key": "email"
+    },
+    {
+      "placement": "heading",
+      "key": "userRole"
+    }
+  ],
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "label": "Edit Profile",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {"display": true},
+    "name": "editprofile",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "column"
+  },
+  "decisions": [
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "deliveryItemlisting"}],
+      "style": {"margin-left": "38rem"},
+      "position": "top",
+      "type": "close"
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [{"name": "deliveryItemlisting"}],
+      "style": {
+        "margin-left": "15px",
+        "margin-top": "8px",
+        "margin-bottom": "8px",
+        "margin-right": "444px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editprofile",
+      "outcomes": [
+        {
+          "result": {
+            "success": {"message": "Profile got replaced successfully"},
+            "failure": {"message": "Please fix errors "},
+            "backButton": true,
+            "options": {
+              "filter": false,
+              "search": false,
+              "view": true,
+              "reload": false,
+              "columnFilter": false,
+              "reset": false,
+              "export": false
+            }
+          },
+          "data": "output.editprofile",
+          "appendMsg": true,
+          "name": "_ST_EDIT_PROFILE",
+          "appendPlaceHolderToPopUpMsg": [{
+            "outputTask": "output._ST_EDIT_PROFILE",
+            "value": "firstName"
+          }]
+        },
+        {
+          "name": "deliveryItemlisting",
+          "showPopUp": "true"
+        }
+      ],
+      "style": {
+        "margin-top": "8px",
+        "margin-bottom": "8px",
+        "margin-right": "20px"
+      },
+      "label": "Save",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "editprofile_SC",
+  "labelKey": "EDIT_PROFILE",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "mobile"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "fax"
+      },
+      {
+        "style": {"width": "18rem"},
+        "formItemStyle": {"margin-top": "1px"},
+        "suffix": "",
+        "key": "address"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "country"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "city"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "phone"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "website"
+      },
+      {},
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "state"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "18rem"},
+        "key": "zipcode"
+      }
+    ]
+  ],
+  "taskId": "editprofile",
+  "object": "User_Info"
+}

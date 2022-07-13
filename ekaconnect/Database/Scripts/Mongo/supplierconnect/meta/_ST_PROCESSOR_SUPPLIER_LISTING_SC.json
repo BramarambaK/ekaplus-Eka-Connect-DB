@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_SUPPLIER_LISTING_SC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "LISTVIEW",
+    "processorInfo" : {
+        "processorId" : "b9f57b26-fbb5-4339-b34b-a29a92efda17"
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_SUPPLIER_LISTING",
+    "object" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec"
+}

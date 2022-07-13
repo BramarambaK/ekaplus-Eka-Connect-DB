@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_GENERAL_DOCUMENT_SC",
+    "componentType" : "SystemTask",
+    "object" : "2b28674d-c7ba-4661-ae32-f9b86d8c1007",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId" : "_ST_CREATE_GENERAL_DOCUMENT",
+    "type" : "workflow"
+}

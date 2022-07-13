@@ -1,0 +1,144 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "9c20bf5f-7084-42c9-aca6-4d27b4d40541"
+  },
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "label": "Edit Assaying Listing",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "assay",
+    "menu": true,
+    "options": {
+      "filter": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "edit": true,
+      "reset": false,
+      "export": false
+    },
+    "header": {
+      "field": "gmrRefNo",
+      "title": "Update Advice - "
+    }
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editgmrbasic",
+          "data": "selected.editgmrbasic"
+        }
+      ],
+      "label": "Delivery Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editpackaging",
+          "data": "selected.editpackaging"
+        }
+      ],
+      "label": "Packaging Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editassayinglisting",
+          "data": "selected.editassayinglisting"
+        }
+      ],
+      "label": "Assay Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "editdocumentlisting",
+          "data": "selected.editdocumentlisting"
+        }
+      ],
+      "label": "Documents",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "supplierlisting",
+          "cache": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "editassayinglisting",
+      "outcomes": [
+        {
+          "data": "output.editassayinglisting",
+          "name": "editdocumentlisting",
+          "showToaster": false
+        }
+      ],
+      "label": "SUBMIT",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "editassayinglisting_SC",
+  "labelKey": "Edit_Assaying_LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "label": "Element",
+      "sort": true,
+      "key": "Element"
+    },
+    {
+      "filter": false,
+      "label": "Type",
+      "sort": true,
+      "key": "Type"
+    },
+    {
+      "filter": false,
+      "label": "Assay Rule",
+      "sort": true,
+      "key": "AssayRule"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "label": "Provisional Assay",
+      "sort": true,
+      "key": "EstimatedValue"
+    },
+    {
+      "filter": false,
+      "label": "Supplier Assay",
+      "sort": true,
+      "key": "SupplierAssay"
+    }
+  ],
+  "taskId": "editassayinglisting",
+  "object": "7bd6f722-684f-4b92-9f75-1fb94857ed85"
+}

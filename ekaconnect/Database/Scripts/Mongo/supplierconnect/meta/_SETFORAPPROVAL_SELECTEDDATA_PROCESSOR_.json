@@ -1,0 +1,9 @@
+{
+    "_id" : "_SETFORAPPROVAL_SELECTEDDATA_PROCESSOR_",
+    "name" : "SETFORAPPROVAL_SELECTEDDATA_PROCESSOR",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "snippet" : "\/\/preparing selected data for setforapproval save.\r\n    var selectedData = req.body.selectedData;\r\n    selectedData['gmrApprovalStatus'] = null; \/\/removing stale status to add in dropdown.\r\n    selectedData['approveSelectedData'] = JSON.stringify(selectedData)\r\n    res.status(200).send(selectedData)",
+    "sys__UUID" : "f8374346-1a21-4ff4-a28d-04092cbf3ff6"
+}

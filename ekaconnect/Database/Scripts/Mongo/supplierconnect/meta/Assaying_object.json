@@ -1,0 +1,66 @@
+{
+    "_id" : "assaying_object",
+    "type" : "object",
+    "name" : "Assaying",
+    "label" : "ASSAYING",
+    "sys__UUID" : "7bd6f722-684f-4b92-9f75-1fb94857ed85",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "2",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+	"description" : "Create/Edit Assay Details(Delivery).",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT",
+        "SWITCH" : "SWITCH"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [],
+    "fields" : {
+        "Element" : {
+            "Element" : "Element",
+            "labelKey" : "Element",
+            "type" : "hidden",
+            "dataType" : "String",
+            "serviceKey" : "Element",
+            "isRequired" : false
+        },
+        "Type" : {
+            "Type" : "Type",
+            "labelKey" : "Type",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "AssayRule" : {
+            "AssayRule" : "Assay Rule",
+            "labelKey" : "AssayRule",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "EstimatedValue" : {
+            "EstimatedValue" : "Provisional Assay",
+            "labelKey" : "EstimatedValue",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

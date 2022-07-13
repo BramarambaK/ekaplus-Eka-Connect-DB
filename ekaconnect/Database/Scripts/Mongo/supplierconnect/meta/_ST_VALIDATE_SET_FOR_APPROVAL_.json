@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_VALIDATE_SET_FOR_APPROVAL_",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "ad96e22d-7f41-41a2-a99c-c8e9ffceebfe"
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "_ST_VALIDATE_SET_FOR_APPROVAL_",
+    "object" : "12ff0fa0-c5e5-4fa5-bbe5-2bb5f1da7715"
+}

@@ -1,0 +1,34 @@
+{
+    "_id" : "assaydetails_tab",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Assay Details",
+    "type" : "workflow",
+    "layout" : {},
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary custom-btn mr-10",
+            "objectAction" : "UPDATE",
+            "labelkey" : "",
+            "task" : "",
+            "label" : "Edit Assaying Details",
+            "position" : "top",
+            "outcomes" : []
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn mr-10",
+            "objectAction" : "SWITCH",
+            "labelkey" : "",
+            "task" : "",
+            "label" : "Use Boliden Assay",
+            "position" : "top",
+            "outcomes" : []
+        }
+    ],
+    "labelKey" : "",
+    "fields" : [],
+    "taskId" : "assaydetails_tab",
+    "object" : "7bd6f722-684f-4b92-9f75-1fb94857ed85"
+}

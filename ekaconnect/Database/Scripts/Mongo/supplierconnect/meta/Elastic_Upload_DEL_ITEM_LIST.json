@@ -1,0 +1,10 @@
+{
+    "_id" : "Elastic_Upload_DEL_ITEM_LIST",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "Elastic_Upload_DEL_ITEM_LIST",
+    "object" : "6413bd7c-d358-4cfd-9bac-00a857b7f3f7",
+    "refType" : "app",
+    "objectAction" : "LISTVIEW"
+}

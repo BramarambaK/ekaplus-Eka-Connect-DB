@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_CAL_ECONOMIC_VALUE_API_SC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "3dfd5221-0fc0-485b-a988-f257c01ca986"
+    },
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "_ST_CAL_ECONOMIC_VALUE_API_SC",
+    "object" : "a62e5abe-44e0-4c5c-845c-f2b55f764dc6"
+}

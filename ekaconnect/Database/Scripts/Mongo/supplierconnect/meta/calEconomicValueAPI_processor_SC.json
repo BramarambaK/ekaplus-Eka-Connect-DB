@@ -1,0 +1,9 @@
+{
+    "_id" : "calEconomicValueAPI_processor_SC",
+    "name" : "calEconomicValueAPI_processor_SC",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "snippet" : "var calEconomicValueAPI = {\r\n    method: 'POST',\r\n    url: req.body.propertyList.eka_ctrm_host + '/api/logistic/calEconomicValue',\r\n    headers: {\r\n        'Content-Type': 'application/json',\r\n        Accept: 'application/json',\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n    },\r\n    body: req.body.gmrData,\r\n    json: true\r\n};\r\n\r\nfunction post_calEconomicValueAPI() {\r\n    return new Promise(function (resolve, reject) {\r\n        request(calEconomicValueAPI, function (err, response, body) {\r\n            console.log('Response - ' + body);\r\n            if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n                console.log('Success');\r\n                resolve({'Msg':'EconomicAPI called and calculated'});\r\n            } else {\r\n                console.log(body.error);\r\n                reject(err || body);\r\n            }\r\n        });\r\n    });\r\n}\r\n\r\npost_calEconomicValueAPI().then(function (result) {\r\n    console.log(JSON.stringify(result))\r\n    var data = result;\r\n    res.status(200).send(data);\r\n}).catch((err) => {\r\n    console.log(err);\r\n    err = err.hasOwnProperty('Error') ? err.Error : err;\r\n    res.status(500).send(err)\r\n})\r\n\r\n",
+    "sys__UUID" : "3dfd5221-0fc0-485b-a988-f257c01ca986"
+}

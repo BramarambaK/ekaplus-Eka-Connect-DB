@@ -1,0 +1,10 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "_id": "_ST_EDIT_PROFILE_SC",
+  "type": "workflow",
+  "taskId": "_ST_EDIT_PROFILE",
+  "object": "User_Info"
+}

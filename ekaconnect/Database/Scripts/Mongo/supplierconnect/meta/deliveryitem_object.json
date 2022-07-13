@@ -1,0 +1,117 @@
+{
+  "_id": ObjectId("5ccb0ebb03ca42b76b34762b"),
+  "name": "deliveryitem",
+  "label": "Contract Delivery item",
+  "type": "object",
+  "sys__UUID": "6413bd7c-d358-4cfd-9bac-00a857b7f3f7",
+  "version": "1",
+  "tenantID": "reference",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "description" : "View Contract Delivery Items(available for Advice).",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "versionHistory": [
+    {
+      "version": "2",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [
+    "deliveryItemRefNo",
+    "qualityName",
+    "quotaOpenQty",
+    "openQty",
+    "executedQty",
+    "executableQty",
+    "quotaMonth",
+    "delLocation",
+    "cpName"
+  ],
+  "fields": {
+    "payInCurrency": {
+      "payInCurrency": "Currency",
+      "labelKey": "payInCurrency",
+      "dataType": "String"
+    },
+    "qualityName": {
+      "qualityName": "Quality",
+      "labelKey": "qualityName",
+      "dataType": "String"
+    },
+    "attributes": {
+      "attributes": "Attributes",
+      "labelKey": "attributes",
+      "dataType": "String"
+    },
+    "deliveryItemRefNo": {
+      "deliveryItemRefNo": "Contract Delivery Item",
+      "labelKey": "deliveryItemRefNo",
+      "isRequired": false
+    },
+    "openQty": {
+      "openQty": "Open Qty",
+      "labelKey": "openQty",
+      "dataType": "String"
+    },
+	 "openQtySubStr" : {
+            "openQtySubStr" : "Open Qty",
+            "labelKey" : "openQtySubStr",
+            "dataType" : "Number"
+        },
+    "executedQty": {
+      "executedQty": "Executable Qty",
+      "labelKey": "executedQty",
+      "dataType": "String"
+    },
+	 "executableQtySubStr" : {
+            "executableQtySubStr" : "Executable Qty",
+            "labelKey" : "executableQtySubStr",
+            "dataType" : "Number"
+        },
+    "executableQty": {
+      "executableQty": "Executable Qty",
+      "labelKey": "executableQty",
+      "dataType": "String"
+    },
+   "fromDate" : {
+            "fromDate" : "From Date",
+            "labelKey" : "fromDate",
+            "sourceDateFormat" : "dd-MMM-yyyy",
+            "dataType" : "date"
+        },
+        "toDate" : {
+            "toDate" : "To Date",
+            "labelKey" : "toDate",
+            "sourceDateFormat" : "dd-MMM-yyyy",
+            "dataType" : "date"
+        },
+    "delLocation": {
+      "delLocation": "Destination (Smelter)",
+      "labelKey": "delLocation",
+      "dataType": "String"
+    },
+    "cpName": {
+      "cpName": "Supplier",
+      "labelKey": "cpName",
+      "dataType": "String"
+    }
+  },
+  "layout": {
+    "fields": [
+      ["deliveryItemRefNo", "qualityName"],
+      ["contractqty", "quotaMonth"]
+    ]
+  },
+  "additionalProperties": {},
+  "sys__createdOn": ISODate("2019-02-07T19:21:17.926Z"),
+  "sys__createdBy": "admin"
+}

@@ -1,0 +1,14 @@
+{
+  "_id": "_UPDATEDDATA_PROCESSOR_SC",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "processorInfo": {
+    "processorId": "5ab64cc9-002d-4bf1-a812-c4a9d2970850"
+  },
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "type": "workflow",
+  "taskId": "_UPDATEDDATA_PROCESSOR_SC",
+  "object": "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+  "sys__UUID": "97f82e58-b4e0-44ff-8e88-bd33908ddf39"
+}

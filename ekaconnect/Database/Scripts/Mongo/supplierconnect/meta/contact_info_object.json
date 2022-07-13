@@ -1,0 +1,31 @@
+{
+    "_id" : "contact_info_object_SC",
+    "name" : "contactinfo",
+    "type" : "object",
+    "sys__UUID" : "ebd7a28b-9a12-437c-a09c-052650fe7a19",
+	"description" : "View Contact Information.",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "fields" : {
+        "Functiion" : {
+            "Functiion" : "Functiion",
+            "labelKey" : "Functiion"
+        },
+        "Contact Information" : {
+            "Contact Information" : "Contact Information",
+            "labelKey" : "Contact Information"
+        },
+        "Contact Information 1" : {
+            "Contact Information 1" : "Contact Information 1",
+            "labelKey" : "Contact Information 1"
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

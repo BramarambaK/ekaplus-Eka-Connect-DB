@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_INVOICE_IV",
+    "componentType" : "ProcessTask",
+    "objectAction" : "LISTVIEW",
+    "processorInfo" : {
+        "processorId" : "3a33348a-65bd-4330-be8f-8cf6649eb45a"
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_INVOICE",
+    "object" : "c02555d6-307d-46de-b98d-17c48aea7daa"
+}

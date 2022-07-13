@@ -1,0 +1,140 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "label": "Advice Delivery – Select Contract Item",
+  "type": "workflow",
+  "apiInfo": {
+    "responseDataKey": "data",
+    "path": "/collection/fetchDeliveryItems",
+    "headers": {
+      "username": "e-bolprpa"
+    },
+    "method": "GET",
+    "host": "${properties.eka_utility_host}"
+  },
+  "layout": {
+    "cache": false,
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.deliveryItemlisting",
+          "name": "creategmrbasic"
+        }
+      ],
+      "position": "top",
+      "label": "Advice Delivery",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.deliveryItemlisting",
+          "popupClass": "edit-modal",
+          "name": "attributedetails"
+        }
+      ]
+    }
+  ],
+  "_id": "deliveryItemlisting_SC",
+  "labelKey": "DELIVER_IEM_LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract Delivery Item",
+      "sort": true,
+      "key": "deliveryItemRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Quality",
+      "sort": true,
+      "key": "qualityName"
+    },
+    {
+      "filter": true,
+      "label": "Open Qty",
+      "sort": true,
+      "key": "openQty"
+    },
+    {
+      "filter": true,
+      "label": "Executable Qty",
+      "sort": true,
+      "key": "executableQty"
+    },
+    {
+      "filter": false,
+      "task": "custom-link",
+      "label": "Attributes",
+      "sort": true,
+      "category": "link",
+      "key": "attributes"
+    },
+    {
+      "filter": true,
+      "label": "From Date",
+      "sort": true,
+      "key": "fromDate",
+      "dataType": "date",
+      "sourceDateFormat": "MMM YYYY",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "label": "To Date",
+      "sort": true,
+      "key": "toDate",
+      "dataType": "date",
+      "sourceDateFormat": "MMM YYYY",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "label": "Location",
+      "sort": true,
+      "key": "delLocation"
+    },
+    {
+      "filter": true,
+      "label": "Supplier Name",
+      "sort": true,
+      "key": "cpName"
+    },
+    {
+      "filter": true,
+      "label": "Currency",
+      "sort": true,
+      "key": "payInCurrency"
+    }
+  ],
+  "taskId": "deliveryItemlistingV1",
+  "object": "6413bd7c-d358-4cfd-9bac-00a857b7f3f7"
+}

@@ -1,0 +1,26 @@
+{
+    "_id" : "crawler_chainedInvoicelist",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "c02555d6-307d-46de-b98d-17c48aea7daa",
+    "objectAction" : "CREATE",
+    "taskId" : "crawler_chainedInvoicelist",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "EXTERNAL_API_INVOICELIST",
+            "data" : "output.crawler_chainedInvoicelist"
+        }, 
+        {
+            "name" : "_ST_PROCESSOR_INVOICE",
+            "data" : "output.EXTERNAL_API_INVOICELIST",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "Elastic_Bulk_Upload_INVOICELIST",
+            "data" : "output._ST_PROCESSOR_INVOICE"
+        }
+    ]
+}

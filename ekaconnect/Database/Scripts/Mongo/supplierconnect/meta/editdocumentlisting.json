@@ -1,0 +1,161 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "getDataFromExternalAPI": false,
+  "payLoad": "selected.supplierlisting",
+  "processorInfo": {"processorId": "b6bb5b59-089b-4be2-aff1-94f4eb3ae2a5"},
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "type": "workflow",
+  "rows": "100",
+  "label": "Documents",
+  "layout": {
+    "name": "list",
+	"header": true,
+    "preserveSelectedData": true,
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "header": {
+      "field": "gmrRefNo",
+      "title": "Update Advice - "
+    },
+    "theme": "theme-grid-white",
+    "menu": true,
+    "refreshData": true
+  },
+  "theme": "theme-grid-light",
+  "decisions": [
+      {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editgmrbasic",
+                "data" : "selected.editgmrbasic"
+            }
+        ],
+        "label" : "Delivery Details",
+        "position" : "leftMenu",
+        "disabled" : true
+    }, 
+    {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editpackaging",
+                "data" : "selected.editpackaging"
+            }
+        ],
+        "label" : "Packaging Details",
+        "position" : "leftMenu",
+        "disabled" : true
+    }, 
+    {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editassayinglisting",
+                "data" : "selected.editassayinglisting"
+            }
+        ],
+        "label" : "Assay Details",
+        "position" : "leftMenu",
+        "disabled" : true
+    }, 
+    {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editdocumentlisting",
+                "data" : "selected.editdocumentlisting"
+            }
+        ],
+        "label" : "Documents",
+        "position" : "leftMenu"
+    }, 
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "outcomes": [{
+        "displayType": "popup",
+        "data": "selected.supplierlisting",
+        "popupClass": "uploadpopupcss",
+        "name": "editdocumentupload",
+		"resetForm" : true
+      }],
+      "label": "Add Document",
+      "position": "header"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "READ",
+      "labelkey": "EDIT_GMR_BASIC",
+      "selection": "row",
+      "outcomes": [{
+        "data": "selected.editdocumentlisting",
+        "name": "documentdownload",
+		"forceDownload": true,
+        "type": "downloadLink"
+      }],
+      "label": "Download",
+      "iconClass": "download-icon"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "READ",
+      "labelkey": "Done",
+      "outcomes": [{"name": "supplierlisting", "cache": true}],
+      "label": "Done",
+      "position": "bottom"
+    }
+  ],
+  "_id": "editdocumentlisting_SC",
+  "labelKey": "GMR_LISTING",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Type",
+      "sort": true,
+      "key": "types"
+    },
+	{
+      "filter": true,
+      "edit": false,
+      "label": "Description",
+      "sort": true,
+      "key": "description"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Document",
+      "sort": true,
+      "key": "fileName"
+    },
+    {
+      "filter" : true,
+      "edit" : false,
+      "label" : "Added By",
+      "sort" : true,
+      "key" : "uploadedByName"
+  }, 
+    {
+      "filter" : true,
+      "edit" : false,
+      "sort" : true,
+      "key" : "dateForDisplay",
+      "dateformat" : "DD-MMM-YYYY HH:mm"
+    }
+  ],
+  "taskId": "editdocumentlisting",
+  "object": "12ff0fa0-c5e5-4fa5-bbe5-2bb5f1da7715"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "Elastic_Bulk_Upload_DW",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "taskId" : "Elastic_Bulk_Upload_DW",
+    "object" : "b77d3e1e-4005-4b90-8a24-5a4cc69b918e",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

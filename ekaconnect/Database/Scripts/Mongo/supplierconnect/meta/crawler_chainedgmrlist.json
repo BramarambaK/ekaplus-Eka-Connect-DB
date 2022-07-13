@@ -1,0 +1,29 @@
+{
+    "_id" : "crawler_chainedgmrlist",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec",
+    "objectAction" : "CREATE",
+    "taskId" : "crawler_chainedgmrlist",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "MULTI_API_TASK4",
+            "data" : "output.crawler_chainedgmrlist"
+        }, 
+        {
+            "name" : "_ST_PROCESSOR_SUPPLIER_LISTING",
+            "data" : "output.MULTI_API_TASK4",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "Elastic_Bulk_Upload_GMRLIST",
+            "data" : "output._ST_PROCESSOR_SUPPLIER_LISTING",
+            "config" : {
+                "primaryKeyColumn" : "gmrRefNo"
+            }
+        }
+    ]
+}

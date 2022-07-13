@@ -1,0 +1,25 @@
+{
+    "_id" : "crawler_chainedtask",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "b77d3e1e-4005-4b90-8a24-5a4cc69b918e",
+    "objectAction" : "CREATE",
+    "taskId" : "crawler_chainedtask",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "MULTI_API_TASK3",
+            "data" : "output.crawler_chainedtask",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "Elastic_Bulk_Upload_DW",
+            "data" : "output.MULTI_API_TASK3",
+            "config" : {
+                "primaryKeyColumn" : "gmrRefNo"
+            }
+        }
+    ]
+}

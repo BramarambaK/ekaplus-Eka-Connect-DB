@@ -1,0 +1,85 @@
+{
+    "_id" : ObjectId("5cf0db85ff0598c9d0358a9b"),
+    "title" : "Supplier Connect",
+    "name" : "supplierconnect",
+    "tenantID" : "",
+    "type" : "app",
+    "sys__UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "platform_id" : "36",
+    "appType" : "CONNECT",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "assets/img/brand/boliden-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Boliden"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "menu" : [ 
+                            {
+                                "handler" : "/app/supplierconnect/deliveryItemlisting",
+                                "text" : "Contract Items Open for Advice",
+                                "iconCls" : "app-menu-icon"
+                            }, 
+                            {
+                                "handler" : "/app/supplierconnect/news",
+                                "text" : "News",
+                                "iconCls" : "news-icon"
+                            },
+							{
+                                "handler" : "/app/supplierconnect/supplierlisting",
+                                "text" : "Deliveries",
+                                "iconCls" : "app-menu-icon"
+<<<<<<< HEAD
+                            },                            
+							{
+								"handler" : "/app/supplierconnect/generaldocumentlisting",
+								"text" : "Documents",
+								"iconCls" : "app-menu-icon"
+							},                             
+							{
+								"handler" : "",
+								"text" : "Contact Information",
+								"iconCls" : "app-menu-icon"
+							}
+=======
+                            },
+                            {
+                                "handler" : "/app/supplierconnect/deliveryItemlisting/list",
+                                "text" : "Contract Items Open for Advice",
+                                "iconCls" : "app-menu-icon"
+                            },                             
+			    {
+				"handler" : "/app/supplierconnect/generaldocumentlisting/list",
+				"text" : "General Documents & Templates",
+				"iconCls" : "templates-icon"
+			     }
+>>>>>>> development
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    }
+}

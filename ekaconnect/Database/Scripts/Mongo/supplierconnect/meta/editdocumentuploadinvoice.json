@@ -1,0 +1,258 @@
+{
+    "_id" : "editdocumentuploadinvoice_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "getDataFromExternalAPI" : true,
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Add Document",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : "Document Upload - "
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "input" : [ 
+        "internalGmrRefNo", 
+        {
+            "internalGmrRefNo" : "internalRefNo"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewinvoicegmrbasic",
+                    "resetForm" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "DOCUMENT_UPLOAD_VALIDATE",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "File uploaded successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.editdocumentuploadinvoice",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_DOCUMENT"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_DOCUMENT",
+                    "name" : "viewinvoicegmrbasic",
+                    "showToaster" : true,
+                    "resetForm" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "editdocumentlisting",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "File uploaded successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.editdocumentuploadinvoice",
+                    "appendMsg" : true,
+                    "name" : "DOCUMENT_UPLOAD_VALIDATE"
+                }
+            ],
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewinvoicegmrbasic",
+                    "resetForm" : true
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "DOCUMENT_UPLOAD",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "suffix" : "",
+                "key" : "types"
+            }, 
+            {
+                "style" : {
+                    "width" : "400px"
+                },
+                "suffix" : "",
+                "key" : "layoutdescription"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "actionId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGmrRefNo"
+            }, 
+            {
+                "style" : {
+                    "width" : "400px"
+                },
+                "suffix" : "",
+                "key" : "file"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGmrRefNo"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "refObject"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "refObjectId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "otherAttributes"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "fileName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "fileName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "downloadUri"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "id"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "size"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "uploadedBy"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "uploadedDate"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "documentId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "name"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalRefNo"
+            }
+        ]
+    ],
+    "taskId" : "editdocumentuploadinvoice",
+    "object" : "12ff0fa0-c5e5-4fa5-bbe5-2bb5f1da7715"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5d1b0248013dd21de063888e"),
+    "type" : "property",
+    "name" : "date_input_format",
+	"label" : "DATE INPUT FORMAT",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "visibility" : "public",
+	"defaultValue" : "dd-M-yy",
+	"refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+	"description" : "Date input format changes the datepicker date format"
+	
+}
