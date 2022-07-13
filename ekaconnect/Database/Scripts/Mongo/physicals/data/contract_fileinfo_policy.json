@@ -1,0 +1,16 @@
+{
+  "_id": "contract_fileinfo_policy",
+  "app_UUID": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "userGrants": {},
+  "refType": "object",
+  "refTypeId": "2ba827f0-059c-4b88-8320-95a0eb1a5f5f",
+  "name": "contract_fileinfo_policy",
+  "type": "policy",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["UPDATE", "READ", "DELETE"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE"]
+    }
+  }
+}

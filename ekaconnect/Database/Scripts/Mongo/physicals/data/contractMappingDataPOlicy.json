@@ -1,0 +1,21 @@
+{
+    "_id" : "contractmappingDataPolicy",
+    "app_UUID" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "ccec9d08-340f-4c7d-b84c-5dbe10bea4dc",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46"
+}

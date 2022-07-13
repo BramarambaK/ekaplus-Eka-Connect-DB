@@ -1,0 +1,21 @@
+{
+    "_id" : "trade-agstrainingDataPolicy",
+    "app_UUID" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "65600c4b-1030-469e-add1-b58a84faefa5",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46"
+}

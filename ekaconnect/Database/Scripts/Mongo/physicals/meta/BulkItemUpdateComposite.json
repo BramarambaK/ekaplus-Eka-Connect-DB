@@ -1,0 +1,153 @@
+{
+    "_id" : "contract_item_composite",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "4c466549-fedc-4ea6-8a10-2ec217f09b24"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Bulk Amendment Contract Items",
+    "workflows" : [ 
+        {
+            "data" : "selected.bulkcontractitemsupdate.listingcontractitem",
+            "header" : "Bulk Amendment From",
+            "name" : "listingcontractitem"
+        }, 
+        {
+            "data" : "selected.bulkcontractitemsupdate.editcontractitem",
+            "header" : "Bulk Amendment To",
+            "name" : "editcontractitem"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : false,
+        "dropdownDecisions" : false,
+        "getInitialData" : {
+            "filterBy" : {
+                "sD" : [ 
+                    "contractRefNo", 
+                    "product", 
+                    "itemNo", 
+                    "quality", 
+                    "issueDate", 
+                    "executedQty", 
+                    "contractQuantity", 
+                    "priceType", 
+                    "deliveryPeriodFromDate", 
+                    "deliveryPeriodToDate", 
+                    "remarks", 
+                    "productId", 
+                    "payinCurrencyId", 
+                    "priceTypeId", 
+                    "priceDetails", 
+                    "cpName", 
+                    "incotermId", 
+                    "qualityId", 
+                    "originId", 
+                    "cropYear", 
+                    "provInvoicedQtyString", 
+                    "finalInvoicedQty", 
+                    "internalContractItemRefNo", 
+                    "internalContractRefNo", 
+                    "periodType", 
+                    "origin", 
+                    "productSpecs", 
+                    "priceDetails", 
+                    "connectListingData"
+                ]
+            }
+        },
+        "sessionStorage" : [ 
+            "contractRefNo", 
+            "priceDetails", 
+            "product", 
+            "itemNo", 
+            "quality", 
+            "contractQuantity", 
+            "priceType", 
+            "issueDate", 
+            "executedQty", 
+            "priceDetails", 
+            "deliveryPeriodFromDate", 
+            "deliveryPeriodToDate", 
+            "remarks", 
+            "productId", 
+            "payinCurrencyId", 
+            "priceTypeId", 
+            "qualityId", 
+            "cpName", 
+            "incotermId", 
+            "originId", 
+            "cropYear", 
+            "internalContractItemRefNo", 
+            "internalContractRefNo", 
+            "periodType", 
+            "origin", 
+            "provInvoicedQtyString", 
+            "finalInvoicedQty", 
+            "productSpecs", 
+            "connectListingData"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "CANCEL",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOCI",
+                    "name" : "bulkcontractitemsupdate",
+                    "showPopUp" : false
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "bulkamendmentapprovalitem",
+            "type" : "submit",
+            "label" : "MODIFY",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.bulkcontractitemsupdate",
+                    "name" : "validationbulkform1"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : ""
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data1" : "output.bulkcontractitemsupdate",
+                    "name" : "bulkamendmentapprovalitem",
+                    "displayType" : "popup"
+                }, 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOCI",
+                    "name" : "editcontractitem",
+                    "showPopUp" : false
+                }
+            ]
+        }
+    ],
+    "taskId" : "bulkcontractitemsupdate",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

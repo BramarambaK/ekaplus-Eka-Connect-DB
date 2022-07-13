@@ -1,0 +1,21 @@
+{
+    "_id" : "new_exposure_policy",
+    "type" : "policy",
+    "app_UUID" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "refType" : "object",
+    "refTypeId" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "LISTVIEW",
+				"CREATE",
+				"UPDATE",
+				"DELETE"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : []
+        }
+    }
+}

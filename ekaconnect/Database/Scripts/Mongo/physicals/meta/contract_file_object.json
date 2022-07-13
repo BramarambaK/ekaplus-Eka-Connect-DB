@@ -1,0 +1,133 @@
+{
+  "_id": "contract_file_object",
+  "fields": {
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "showRecords": {
+      "showRecords": "Show Records",
+      "labelKey": "showRecords",
+      "type": "dropdown",
+      "dataType": "String",
+      "isRequired": false,
+      "propertyKey": "records"
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "uploadedDate",
+      "labelKey": "uploadedDate",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "documentId": {
+      "documentId": "documentId",
+      "labelKey": "documentId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "type": {
+      "type1": "Type",
+      "labelKey": "type1",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "Upload File",
+      "labelKey": "file",
+      "type": "file",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "description": {
+      "description": "Description",
+      "labelKey": "description",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "validate": {
+      "validate": "Validate",
+      "labelKey": "validate",
+      "type": "textbox"
+    },
+    "download": {
+      "download": "Download A Sample File",
+      "labelKey": "download",
+      "type": "textbox"
+    },
+    "getfile": {
+      "getfile": "Get File",
+      "labelKey": "getfile",
+      "type": "textbox"
+    }
+  },
+  "label": "FILE_OBJECT",
+  "label_key": "",
+  "name": "contract_file_object",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "sys__UUID": "30a9272c-25d1-4278-bc31-08189619a93a",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

@@ -1,0 +1,18 @@
+{
+    "_id" : "call_contract_gmr_physicals",
+    "componentType" : "UserTask",
+    "labelKey" : "CALL_CONTRACT_GMR_PHYSICALS",
+    "label" : "Call Contract Gmr Physicals",
+    "object" : "contract",
+    "objectAction" : "CREATE",
+    "layout" : {},
+    "fields" : [],
+    "processorInfo" : {
+        "processorId" : "079515b3-e915-4d9a-a5c6-aa516a89ca90"
+    },
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "call_contract_gmr"
+}

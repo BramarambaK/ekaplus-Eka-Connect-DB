@@ -1,0 +1,25 @@
+{
+    "_id" : "GMR_TRIGGER_PRICE_policy",
+    "type" : "policy",
+    "app_UUID" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "refType" : "object",
+    "refTypeId" : "084d7fa2-f8e9-47ea-bb3c-ebc0bd65f3b1",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    },
+    "sys__createdOn" : ISODate("2019-12-26T05:17:39.219Z"),
+    "sys__createdBy" : "Bravo"
+}

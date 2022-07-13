@@ -1,0 +1,41 @@
+{
+    "_id" : "Acknowledgement_item_composite",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "processorInfo1" : {
+        "processorId" : "3f60bf7c-e85d-419c-b646-7e1870db9b33"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Bulk Amendment Contract Items",
+    "workflows" : [ 
+        {
+            "header" : "Acknowledgement Page",
+            "name" : "ackitem"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : false,
+        "dropdownDecisions" : false
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "OK",
+            "btnClass" : "btn btn-success",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOCI",
+                    "name" : "bulkcontractitemsupdate",
+                    "showPopUp" : false
+                }
+            ]
+        }
+    ],
+    "taskId" : "acknowledgementpageitem",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

@@ -1,0 +1,18 @@
+{
+    "_id" : "bulk_contract_collection_schedular_workflow",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "contract",
+    "objectAction" : "CREATE",
+    "taskId" : "bulk_contract_collection_schedular_workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [ 
+				{
+                    "name" : "_EXT_CALL_BULK_CONTRACT_CREATION_API",
+                    "appendMsg" : false
+                }
+    ]
+}

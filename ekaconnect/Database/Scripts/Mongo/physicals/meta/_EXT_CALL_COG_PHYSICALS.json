@@ -1,0 +1,26 @@
+{
+    "_id" : "_EXT_CALL_COG_PHYSICALS",
+    "componentType" : "ExtSystemTask",
+    "object" : "fde1b873-9b1d-44c7-bf6a-dc86898bfd52",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.platform_url}",
+        "path" : "/api/gmr/postcog?internalGMRRefNo={0}&itemRefNo={1}",
+        "method" : "POST",
+        "body" : {},
+        "pathParams" : [ 
+            "##output.internalGmrRefNo", 
+            "##output.internalItemRefNo"
+        ],
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_EXT_CALL_COG"
+}

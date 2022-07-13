@@ -1,0 +1,11 @@
+{
+    "_id" : "add_Contract_Details_processor",
+    "name" : "add_Contract_details_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : " var data = req.body.bulkPayLoadData;\r\nlet sum = 0\r\nfor(var i = 0;i<data.length;i++){\r\n  if(data[i].componentPercentage==='' || !data[i].componentPercentage){\r\n  data[i].componentPercentage = 0\r\n  }\r\n sum = sum + Number(data[i].componentPercentage)\r\n}\r\nif(sum===0){\r\n res.status(500).send('Please fill at least one Component weightage')\r\n}\r\nelse{\r\nres.status(200).send(data)\r\n\r\n}",
+    "sys__UUID" : "3f930322-9c74-4675-829a-a31c2c46e705",
+    "sys__createdOn" : ISODate("2019-12-26T05:17:29.849Z"),
+    "sys__createdBy" : "Bravo"
+}

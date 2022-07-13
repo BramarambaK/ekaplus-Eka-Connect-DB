@@ -1,0 +1,13 @@
+{
+    "_id" : "_PROCESSOR_ITEM_SAVE_BULKAMENDMENT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "c0f106d4-8bae-4ff4-a8f1-5f9bc654d91a"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_PROCESSOR_ITEM_SAVE",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

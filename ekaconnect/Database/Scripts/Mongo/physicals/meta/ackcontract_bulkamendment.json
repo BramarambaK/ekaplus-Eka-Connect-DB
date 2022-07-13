@@ -1,0 +1,54 @@
+{
+    "_id" : "ackcontract_bulkamendment",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract List",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "none",
+        "showCheckbox" : false,
+        "name" : "list",
+        "footer" : false,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "pagination" : false,
+        "dropdownDecisions" : true,
+        "selectionMode" : "none",
+        "limitHeight" : true
+    },
+    "decisions" : [],
+    "labelKey" : "itemlist",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "status"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "reason"
+        }
+    ],
+    "taskId" : "ackcontract",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

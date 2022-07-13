@@ -1,0 +1,25 @@
+{
+    "_id" : "physicals_workflow_ext_documentListContract",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "ext_documentListContract",
+    "task" : "ext_documentListContract",
+    "componentType" : "ExtSystemTask",
+    "object" : "contract",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/file/list/v2",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "storageType" : "trmAGS"
+        },
+        "useInputMapping" : false
+    }
+}

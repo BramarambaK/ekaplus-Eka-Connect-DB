@@ -1,0 +1,11 @@
+{
+    "_id" : "Bulk_Update_Processor_Component_Save",
+    "name" : "Bulk_Update_Component",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "var data = []\r\n       var component = {}\r\n       for(let j=0;j<req.body.bulkPayLoadData.length;j++){\r\n         component[req.body.bulkPayLoadData[j].productComponentName] = req.body.bulkPayLoadData[j].componentPercentage\r\n       }\r\n       for(let i =0;i<req.body.bulkPayLoadData[0].bulkPayload.length;i++){\r\n         for(let k =0;k<req.body.bulkPayLoadData[0].bulkPayload[i].componentDetails.length;k++){\r\n          req.body.bulkPayLoadData[0].bulkPayload[i].componentDetails[k].componentPercentage =component[req.body.bulkPayLoadData[0].bulkPayload[i].componentDetails[k].productComponentName]\r\n         data.push(req.body.bulkPayLoadData[0].bulkPayload[i].componentDetails[k])\r\n       }\r\n      }\r\n       res.status(200).send(data)",
+    "sys__UUID" : "b6dc0fc0-5ec0-4974-817d-4e98c1dac623",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

@@ -1,0 +1,22 @@
+{
+    "_id" : "_EXT_CALL_BULK_CONTRACT_CREATION_API",
+    "componentType" : "ExtSystemTask",
+    "object" : "contract",
+    "objectAction" : "CREATE",
+    "tags" : "physical_trade",
+    "apiInfo" : {
+        "host" : "${properties.eka_trm_physicals_api_host}",
+        "path" : "/contract/bulk",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_EXT_CALL_BULK_CONTRACT_CREATION_API"
+}

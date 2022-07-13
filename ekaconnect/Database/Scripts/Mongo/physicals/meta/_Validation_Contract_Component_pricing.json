@@ -1,0 +1,15 @@
+{
+    "_id" : "_Validation_Contract_Component_pricing",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "3f930322-9c74-4675-829a-a31c2c46e705"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "addmore_contract_processor",
+    "object" : "contract",
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

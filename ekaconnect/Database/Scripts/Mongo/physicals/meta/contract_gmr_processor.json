@@ -1,0 +1,9 @@
+{
+    "_id" : "contract_gmr_processor",
+    "name" : "contract_gmr",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "var internalContractItemRefNo =\r\n  req.body.selectedData['contractDetails'][\"internalContractItemRefNo\"];\r\n  \r\nvar productId =\r\n  req.body.selectedData['contractDetails'][\"productId\"];\r\n \r\n var gmrCreation = {\r\n  method: \"GET\",\r\n  url: req.body.propertyList.eka_ctrm_host + \"\/api\/contract\/gmr\/\"+internalContractItemRefNo,\r\n  headers: {\r\n    \"Content-Type\": \"application\/json\",\r\n    Accept: \"application\/json\",\r\n    Authorization: req.headers.authorization\r\n  },\r\n  body:{},\r\n  json: true\r\n};\r\n\r\n\r\nfunction get_gmrcreation() {\r\n  if(req.body.propertyList.eka_ctrm_version.length > 0){\r\n\tlet trmVersion = 913;\r\n\tlet trmLatest =  parseInt(req.body.propertyList.eka_ctrm_version[0].value.split('.').join(''));\r\n\tif(trmVersion < trmLatest){\r\n\t\treturn new Promise(function(resolve, reject) {\r\n\t\t\tconsole.log(\"Request - \" + gmrCreation.url);\r\n\t\t\tconsole.log(\"Payload -\" + JSON.stringify(gmrCreation));\r\n\t\t\trequest(gmrCreation, function(err, response, body) {\r\n\t\t\t  console.log(\"Request Body - \" + JSON.stringify(body));\r\n\t\t\t  if (err || body.error) reject(body);\r\n\t\t\t  else {\r\n\t\t\t\tresolve(body);\r\n\t\t\t  }\r\n\t\t\t});\r\n       });\r\n}else{\r\n\tlet data = {\"gmrData\" : {\"data\": null}};\r\n\tres.status(200).send(data);\r\n}\r\n} \r\n}\r\n\r\n\r\nPromise.all([get_gmrcreation()])\r\n  .then(function(result) {\r\n    var data = {};\r\n    data[\"gmrData\"] = result[0];\r\n    console.log(\"Response - \" + JSON.stringify(data));\r\n    res.status(200).send(data);\r\n  })\r\n  .catch(err => {\r\n    console.log(\"Error Executing Processor -\" + err);\r\n    res.status(500).send(err);\r\n  });",
+    "sys__UUID" : "079515b3-e915-4d9a-a5c6-aa516a89ca90"
+}

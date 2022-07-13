@@ -1,0 +1,10 @@
+{
+  "_id": "_ST_CREATE_ITEM_GMR_OBJECT",
+  "componentType": "SystemTask",
+  "object": "0a58c051-99ad-491d-8d05-400bd90bffe9",
+  "objectAction": "UPDATE",
+  "type": "workflow",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "taskId": "_ST_CREATE_ITEM_GMR_OBJECT"
+}

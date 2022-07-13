@@ -1,0 +1,62 @@
+{
+    "_id" : "bulk_amendment_approval_popup_physicals",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Bulk Amendment Approval Popup",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "contractapproval",
+        "options" : {
+            "columnFilter" : true,
+            "sortFilter" : true,
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "_PROCESSOR_CONTRACTS_SAVE",
+            "type" : "submit",
+            "label" : "CREATE",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : ""
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "output._PROCESSOR_CONTRACTS_SAVE",
+                    "name" : "_PROCESSOR_CONTRACTS_SAVE"
+                }, 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOC",
+                    "name" : "_PROCESSOR_CONTRACTS_SAVE",
+                    "showPopUp" : false
+                }
+            ]
+        }
+    ],
+    "labelKey" : "bulk_amendment_approval_popup",
+    "fields" : [],
+    "taskId" : "bulkamendmentapproval",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

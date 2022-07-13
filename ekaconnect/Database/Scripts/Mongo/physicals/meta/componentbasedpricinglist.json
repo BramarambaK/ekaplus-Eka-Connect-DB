@@ -1,0 +1,17 @@
+{
+    "_id" : "component_based_list_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "component_based_list",
+    "label" : "Component List",
+    "object" : "a17ad3d2-8c98-461d-98c7-d91e953aa819",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "component_list",
+    "sys__createdOn" : ISODate("2019-12-12T07:12:18.780Z"),
+    "sys__createdBy" : "Avinash"
+}

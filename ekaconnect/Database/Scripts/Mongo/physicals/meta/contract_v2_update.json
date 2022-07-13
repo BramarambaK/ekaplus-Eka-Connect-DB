@@ -1,0 +1,44 @@
+{
+    "_id" : "contract_v2_update",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "contract_v2_update",
+            "outcomes" : [ 
+                {
+                    "data" : "output.contract_v2_update",
+                    "name" : "_ST_UPDATE_CONTRACT_V2",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "ItemDetails Object is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "ItemDetails Object is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._ST_UPDATE_CONTRACT_V2",
+                    "name" : "contract_v2_update"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "contract_v2_update",
+    "labelKey" : "contract_v2_update",
+    "layout" : {},
+    "object" : "a90bb5d7-59ce-441f-a478-0fdc233c6d17",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "contract_v2_update",
+    "type" : "workflow"
+}

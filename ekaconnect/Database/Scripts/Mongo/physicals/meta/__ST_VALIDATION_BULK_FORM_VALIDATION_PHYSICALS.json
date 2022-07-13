@@ -1,0 +1,14 @@
+{
+    "_id" : "__ST_VALIDATION_BULK_FORM_VALIDATION_PHYSICALS",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "3088dee3-93d3-4c2d-9460-3a48b7694425"
+    },
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "validationbulkform",
+    "label" : "VALIDATE BULKAMEND",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

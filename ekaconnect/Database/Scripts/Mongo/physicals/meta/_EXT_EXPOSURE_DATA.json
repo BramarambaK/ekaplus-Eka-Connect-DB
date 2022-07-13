@@ -1,0 +1,19 @@
+{
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "_id": "_EXT_EXPOSURE_DATA",
+  "type": "workflow",
+  "apiInfo": {
+    "headers": {"X-ObjectAction": "CREATE"},
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+	"path" : "/workflow",
+    "body": {}
+  },
+  "taskId": "_EXT_EXPOSURE_DATA",
+  "object": "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_CHECK_APPROVAL",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "4523d816-48ef-4fbf-8b77-42d011637d53"
+    },
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_CHECK_APPROVAL",
+    "label" : "ST CHECK APPROVAL",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

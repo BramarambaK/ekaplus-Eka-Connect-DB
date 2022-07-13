@@ -1,0 +1,570 @@
+{
+    "_id" : "bulk_amendment_object",
+    "app" : "physicals",
+    "fields" : {
+        "issueDate" : {
+            "labelKey" : "issueDate",
+            "issueDate" : "Issue Date",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "contractRefNo" : {
+            "labelKey" : "contractRefNo",
+            "contractRefNo" : "Contract Ref No",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "cpName" : {
+            "options" : [],
+            "labelKey" : "cpName",
+            "cpName" : "CP Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "dropdownValue" : "cpNameDisplayName",
+            "serviceKey" : "businesspartnercontactperson",
+            "dependsOn" : [ 
+                "ALL"
+            ]
+        },
+        "cpNameDisplayName" : {
+            "cpNameDisplayName" : "cp name display",
+            "labelKey" : "cpNameDisplayName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "incoTerm" : {
+            "labelKey" : "incoTerm",
+            "incoTerm" : "INCO Term",
+            "dropdownValue" : "incoTermDisplayName",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "incoterm"
+        },
+        "incoTermDisplayName" : {
+            "incoTermDisplayName" : "inco term display",
+            "labelKey" : "incoTermDisplayName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "payTerm" : {
+            "labelKey" : "payTerm",
+            "payTerm" : "Payment Term",
+            "dropdownValue" : "payTermDisplayName",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "paytermlist_phy"
+        },
+        "payTermDisplayName" : {
+            "payTermDisplayName" : "pay term display",
+            "labelKey" : "payTermDisplayName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quantitySpecs" : {
+            "labelKey" : "quantitySpecs",
+            "quantitySpecs" : "Total Quantity",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "amendmentReason" : {
+            "labelKey" : "amendmentReason",
+            "amendmentReason" : "Amendment Reason",
+            "isRequired" : true,
+            "type" : "textarea"
+        },
+        "amendmentDate" : {
+            "labelKey" : "amendmentDate",
+            "amendmentDate" : "Amendment Date",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "format" : "YYYY-MM-DD hh:mm:ss",
+            "dataType" : "date"
+        },
+        "periodFromDate" : {
+            "labelKey" : "periodFromDate",
+            "periodFromDate" : "Period From & To Date",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "format" : "YYYY-MM-DD hh:mm:ss",
+            "dataType" : "date"
+        },
+        "periodToDate" : {
+            "labelKey" : "periodToDate",
+            "periodToDate" : "",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "format" : "YYYY-MM-DD hh:mm:ss",
+            "dataType" : "date"
+        },
+        "multiDeliveryFromDate" : {
+            "labelKey" : "multiDeliveryFromDate",
+            "multiDeliveryFromDate" : "Period From & To Date",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "format" : "YYYY-MM-DD hh:mm:ss",
+            "dataType" : "date"
+        },
+        "multiDeliveryToDate" : {
+            "labelKey" : "multiDeliveryToDate",
+            "multiDeliveryToDate" : "",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "format" : "YYYY-MM-DD hh:mm:ss",
+            "dataType" : "date"
+        },
+        "itemNo" : {
+            "labelKey" : "itemNo",
+            "itemNo" : "Item No",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "product" : {
+            "labelKey" : "product",
+            "product" : "Product",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "productId" : {
+            "labelKey" : "productId",
+            "productId" : "Product",
+            "serviceKey" : "productComboDropDrown",
+            "isRequired" : false,
+            "children" : [ 
+                "qualityId", 
+                "priceUnitId", 
+                "priceContractDefId", 
+                "basisPriceUnitId", 
+                "futurePriceUnitId", 
+                "originId", 
+                "cropYearId"
+            ],
+            "type" : "dropdown"
+        },
+        "qualityId" : {
+            "labelKey" : "qualityId",
+            "serviceKey" : "qualityComboDropDrown",
+            "isRequired" : false,
+            "qualityId" : "Quality",
+            "type" : "dropdown",
+            "dropdownValue" : "quality",
+            "parent" : [ 
+                "productId", 
+                "originId"
+            ]
+        },
+        "origin" : {
+            "origin" : "Origin",
+            "labelKey" : "origin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "originId" : {
+            "labelKey" : "originId",
+            "serviceKey" : "originComboDropDrown",
+            "isRequired" : false,
+            "originId" : "Origin",
+            "type" : "dropdown",
+            "dropdownValue" : "origin",
+            "parent" : [ 
+                "productId"
+            ],
+            "children" : [ 
+                "cropYearId", 
+                "qualityId"
+            ]
+        },
+        "quality" : {
+            "labelKey" : "quality",
+            "quality" : "Quality",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "openQuantity" : {
+            "labelKey" : "openQuantity",
+            "openQuantity" : "Total Quantity",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "executedQty" : {
+            "labelKey" : "executedQty",
+            "executedQty" : "Executed Quantity",
+            "isRequired" : false,
+            "type" : "hidden",
+            "children" : [ 
+                "originId", 
+                "qualityId"
+            ]
+        },
+        "priceType" : {
+            "labelKey" : "priceType",
+            "priceType" : "Price Type",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "remarks" : {
+            "labelKey" : "remarks",
+            "remarks" : "Remarks",
+            "isRequired" : false,
+            "type" : "textarea"
+        },
+        "deliveryPeriodFromDate" : {
+            "labelKey" : "deliveryPeriodFromDate",
+            "deliveryPeriodFromDate" : "Period From",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "deliveryPeriodToDate" : {
+            "labelKey" : "deliveryPeriodToDate",
+            "deliveryPeriodToDate" : "Period To",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "internalContractRefNo" : {
+            "labelKey" : "internalContractRefNo",
+            "internalContractRefNo" : "Internal Contract Ref No",
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "priceTypeId" : {
+            "labelKey" : "priceTypeId",
+            "serviceKey" : "priceTypeContract",
+            "dropdownValue" : "priceTypeIdDisplayName",
+            "parent" : [ 
+                "productId"
+            ],
+            "isRequired" : true,
+            "priceTypeId" : "Price Type",
+            "type" : "dropdown",
+            "children" : [ 
+                "priceDf", 
+                "priceUnitId", 
+                "earliestBy", 
+                "fxBasisToPayin", 
+                "priceContractDefId", 
+                "priceFutureContractId", 
+                "futurePrice", 
+                "futurePriceUnitId", 
+                "basisPrice", 
+                "basisPriceUnitId", 
+                "fxFutureToBasis", 
+                "pricingFormulaId", 
+                "priceLastFixDayBasedOn", 
+                "optionsToFix", 
+                "fixationMethod", 
+                "fxInstToBasis"
+            ]
+        },
+        "priceDf" : {
+            "labelKey" : "priceDf",
+            "isRequired" : false,
+            "priceDf" : "Contract Price",
+            "type" : "textbox",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' || '${priceTypeId}' == 'Flat' ? true : false"
+            }
+        },
+        "priceUnitId" : {
+            "priceUnitId" : "",
+            "labelKey" : "priceUnitId",
+            "type" : "dropdown",
+            "dropdownValue" : "priceUnitIdDisplayName",
+            "serviceKey" : "productPriceUnit",
+            "parent" : [ 
+                "productId", 
+                "payinCurrencyId"
+            ],
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' || '${priceTypeId}' == 'Flat' || '${priceTypeId}' == 'FormulaPricing' ? true : false"
+            }
+        },
+        "earliestBy" : {
+            "labelKey" : "earliestBy",
+            "earliestBy" : "Price-Fix Earliest by",
+            "serviceKey" : "",
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "fxFuturesToBasis" : {
+            "labelKey" : "fxFuturesToBasis",
+            "isRequired" : false,
+            "fxFuturesToBasis" : "FX-Futures to Basis",
+            "type" : "textbox",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' ? true : false"
+            }
+        },
+        "fxBasisToPayin" : {
+            "labelKey" : "fxBasisToPayin",
+            "isRequired" : false,
+            "fxBasisToPayin" : "FX-Basis to Pay In",
+            "type" : "textbox",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' || '${priceTypeId}' == 'Flat' || '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "fxInstToBasis" : {
+            "labelKey" : "fxInstToBasis",
+            "isRequired" : false,
+            "fxInstToBasis" : "FX-Futures to Basis",
+            "type" : "textbox",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' ? true : false"
+            }
+        },
+        "priceFutureContractId" : {
+            "labelKey" : "priceFutureContractId",
+            "serviceKey" : "periodMonthsListByInstrument",
+            "parent" : [ 
+                "priceContractDefId"
+            ],
+            "isRequired" : false,
+            "dropdownValue" : "priceFutureContractIdDisplayName",
+            "type" : "dropdown",
+            "priceFutureContractId" : "Price Month",
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' || '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "priceFutureContractIdDisplayName" : {
+            "priceFutureContractIdDisplayName" : "",
+            "labelKey" : "priceFutureContractIdDisplayName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "futurePrice" : {
+            "labelKey" : "futurePrice",
+            "isRequired" : false,
+            "futurePrice" : "Future Price",
+            "type" : "textbox",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' ? true : false"
+            }
+        },
+        "basisPrice" : {
+            "labelKey" : "basisPrice",
+            "isRequired" : false,
+            "basisPrice" : "Basis Price",
+            "type" : "textbox",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' || '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "priceLastFixDayBasedOn" : {
+            "labelKey" : "priceLastFixDayBasedOn",
+            "priceLastFixDayBasedOn" : "Price-Fix Latest by",
+            "serviceKey" : "PriceFixLatestBy",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "optionsToFix" : {
+            "labelKey" : "optionsToFix",
+            "optionsToFix" : "Price-Fix Option",
+            "serviceKey" : "PriceFixBy",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "fixationMethod" : {
+            "labelKey" : "fixationMethod",
+            "fixationMethod" : "Price-Fix Method",
+            "serviceKey" : "FixationMethod",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "payinCurrencyId" : {
+            "labelKey" : "payinCurrencyId",
+            "serviceKey" : "productCurrencyList",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "dropdownValue" : "payinCurrencyIdDisplayName",
+            "payinCurrencyId" : "Pay-in Currency",
+            "children" : [ 
+                "priceUnitId", 
+                "futurePriceUnitId", 
+                "basisPriceUnitId"
+            ]
+        },
+        "futurePriceUnitId" : {
+            "futurePriceUnitId" : "",
+            "labelKey" : "futurePriceUnitId",
+            "serviceKey" : "productPriceUnit",
+            "type" : "dropdown",
+            "dropdownValue" : "futurePriceUnitIdDisplayName",
+            "parent" : [ 
+                "productId", 
+                "payinCurrencyId"
+            ],
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' ? true : false"
+            }
+        },
+        "futurePriceUnitIdDisplayName" : {
+            "futurePriceUnitIdDisplayName" : "",
+            "labelKey" : "futurePriceUnitIdDisplayName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "basisPriceUnitId" : {
+            "basisPriceUnitId" : "",
+            "labelKey" : "basisPriceUnitId",
+            "serviceKey" : "productPriceUnit",
+            "dropdownValue" : "basisPriceUnitIdDisplayName",
+            "type" : "dropdown",
+            "parent" : [ 
+                "productId", 
+                "payinCurrencyId"
+            ],
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' || '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "basisPriceUnitIdDisplayName" : {
+            "basisPriceUnitIdDisplayName" : "",
+            "labelKey" : "basisPriceUnitIdDisplayName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "priceContractDefId" : {
+            "labelKey" : "priceContractDefId",
+            "priceContractDefId" : "Future Instrument",
+            "serviceKey" : "productDerivativeInstrument",
+            "dropdownValue" : "priceContractDefIdDisplayName",
+            "parent" : [ 
+                "productId"
+            ],
+            "children" : [ 
+                "priceFutureContractId"
+            ],
+            "type" : "dropdown",
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${priceTypeId}' == 'Fixed' || '${priceTypeId}' == 'On Call Basis Fixed' ? true : false"
+            }
+        },
+        "priceContractDefIdDisplayName" : {
+            "priceContractDefIdDisplayName" : "",
+            "labelKey" : "priceContractDefIdDisplayName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "periodType" : {
+            "periodType" : "Period Type",
+            "labelKey" : "periodType",
+            "type" : "dropdown",
+            "propertyKey" : "periodType",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "multiDeliveryPeriodTypeId" : {
+            "multiDeliveryPeriodTypeId" : "Period Type",
+            "labelKey" : "multiDeliveryPeriodTypeId",
+            "type" : "dropdown",
+            "propertyKey" : "periodType",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        
+        "contractQuantity" : {
+            "contractQuantity" : "Quantity",
+            "labelKey" : "contractQuantity",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "cropYearId" : {
+            "labelKey" : "cropYearId",
+            "serviceKey" : "cropyearComboDropDrown",
+            "isRequired" : false,
+            "cropYearId" : "Crop Year",
+            "type" : "dropdown",
+            "dropdownValue" : "cropYear",
+            "parent" : [ 
+                "productId", 
+                "originId"
+            ]
+        },
+        "cropYear" : {
+            "cropYear" : "Crop Year",
+            "labelKey" : "cropYear",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "priceDetails" : {
+            "priceDetails" : "Price Details",
+            "labelKey" : "priceDetails",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "provInvoicedQtyString" : {
+            "provInvoicedQtyString" : "Provisonal Invoice",
+            "labelKey" : "provInvoicedQtyString",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "finalInvoicedQty" : {
+            "finalInvoicedQty" : "Invoice",
+            "labelKey" : "finalInvoicedQty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+         "status" : {
+            "status" : "Status",
+            "labelKey" : "status",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+         "reason" : {
+            "reason" : "Reason",
+            "labelKey" : "reason",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "label" : "BULK_AMENDMENT",
+    "label_key" : "",
+    "name" : "bulk_amendment",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "sys__UUID" : "f23f5e71-1885-455f-9cc8-adf73e4e2116",
+    "type" : "object"
+}

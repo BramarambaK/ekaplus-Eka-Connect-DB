@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_DOWNLOAD_SAMPLE_CONTRACT_workflow",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "951f77da-6de2-48af-993f-ff91dc72af47"
+  },
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "type": "workflow",
+  "taskId": "_ST_DOWNLOAD_SAMPLE_CONTRACT",
+  "object": "30a9272c-25d1-4278-bc31-08189619a93a"
+}

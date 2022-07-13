@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_DELETE_TIERED_PRICING_physicals",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_TIERED_PRICING",
+    "object" : "fb40488f-e9bb-4c92-8299-618177d8da99"
+}

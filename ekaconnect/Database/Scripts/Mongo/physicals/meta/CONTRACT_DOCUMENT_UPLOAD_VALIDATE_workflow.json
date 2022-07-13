@@ -1,0 +1,11 @@
+{
+  "_id": "CONTRACT_DOCUMENT_UPLOAD_VALIDATE_workflow",
+  "componentType": "ValidateTask",
+  "object": "30a9272c-25d1-4278-bc31-08189619a93a",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "taskId": "CONTRACT_DOCUMENT_UPLOAD_VALIDATE",
+  "label": "Validate Document Upload",
+  "type": "workflow"
+}

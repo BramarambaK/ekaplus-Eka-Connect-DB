@@ -1,0 +1,22 @@
+{
+    "_id" : "contract_smart_compose_keys",
+    "name" : "contract_smart_compose_keys",
+    "label": "Contract Smart Compose Keys",
+    "defaultValue" : [{'contractType':['traderUserId']},
+                   {'cpProfileId':['traderUserId']},
+                   {'applicableLawId' : ['traderUserId', 'cpProfileId']},
+                   {'arbitrationId' : ['traderUserId', 'cpProfileId']},
+                   {'incotermId' : ['traderUserId', 'contractType','cpProfileId']},
+                   {'productId' : ['traderUserId', 'contractType','cpProfileId']},
+                   {'quality': ['traderUserId', 'contractType','cpProfileId', 'productId']},
+                   {'itemQtyUnitId' : ['traderUserId', 'contractType','cpProfileId', 'productId', 'quality']},
+                   {'toleranceType' : ['traderUserId', 'contractType','cpProfileId', 'productId', 'quality']}],
+    "type" : "property",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "10000",
+    "editSupportedInUI " : true,
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "description" : "Keys used for smart compose prediction"
+}

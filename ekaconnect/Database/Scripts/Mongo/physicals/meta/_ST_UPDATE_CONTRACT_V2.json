@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_UPDATE_CONTRACT_V2_physicals",
+    "componentType" : "SystemTask",
+    "object" : "a90bb5d7-59ce-441f-a478-0fdc233c6d17",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_ST_UPDATE_CONTRACT_V2",
+    "type" : "workflow"
+}

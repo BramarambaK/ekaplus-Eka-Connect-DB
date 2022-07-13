@@ -1,0 +1,41 @@
+{
+    "_id" : "Acknowledgement_contract_composite",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "d705fdc3-6923-4b53-ba76-82d54eb0a15d"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Bulk Amendment Contract",
+    "workflows" : [ 
+        {
+            "header" : "Acknowledgement Page",
+            "name" : "ackcontract"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : false,
+        "dropdownDecisions" : false
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "OK",
+            "btnClass" : "btn btn-success",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOC",
+                    "name" : "bulkcontractitemsupdate",
+                    "showPopUp" : false
+                }
+            ]
+        }
+    ],
+    "taskId" : "acknowledgementpagecontract",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

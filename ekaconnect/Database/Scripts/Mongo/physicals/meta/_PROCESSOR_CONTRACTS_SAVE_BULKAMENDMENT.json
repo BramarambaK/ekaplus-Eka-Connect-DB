@@ -1,0 +1,47 @@
+{
+    "_id" : "_PROCESSOR_CONTRACTS_SAVE_BULKAMENDMENT",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "4523d816-48ef-4fbf-8b77-42d011637d53"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_PROCESSOR_CONTRACTS_SAVE",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "_PROCESSOR_CONTRACTS_SAVE",
+            "type" : "submit",
+            "label" : "CREATE",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : ""
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "output._PROCESSOR_CONTRACTS_SAVE",
+                    "name" : "_ST_CHECK_APPROVAL"
+                }, 
+                {
+                    "data" : "output._ST_CHECK_APPROVAL",
+                    "name" : "_PROCESSOR_CONTRACTS_SAVE"
+                }
+            ]
+        }
+    ],
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116",
+    "layout" : {}
+}

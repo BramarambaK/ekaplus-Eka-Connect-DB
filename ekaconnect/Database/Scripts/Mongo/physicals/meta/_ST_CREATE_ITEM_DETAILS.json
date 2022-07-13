@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_ITEM_DETAILS_physicals",
+    "componentType" : "SystemTask",
+    "object" : "f7bad03a-8206-4294-80b0-47549f58d163",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_ST_CREATE_ITEM_DETAILS",
+    "type" : "workflow"
+}

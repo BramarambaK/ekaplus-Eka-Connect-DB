@@ -1,0 +1,11 @@
+{
+    "_id" : "cog_processor_Processor_gmr",
+    "name" : "cog_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "\r\n    var defaultDataURL1 =\r\n    req.body.propertyList.platform_url + '\/api\/gmr\/postcog?internalGMRRefNo='+req.body.bulkPayLoadData[0].internalGmrRefNo+'&itemRefNo='+req.body.bulkPayLoadData[0].internalContractItemRefNo\r\n    var defaultdata1 = {\r\n      method: 'POST',\r\n      url: defaultDataURL1,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_defaultData1() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(defaultdata1, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    var totalItems = []\r\n    if(req.body.bulkPayLoadData[0].bulkPayload){\r\n      let totalRecords= req.body.bulkPayLoadData[0].bulkPayload\r\n      for(let i = 0;i<totalRecords.length;i++){\r\n        totalItems.push({'internalGMRRefNo':totalRecords[i].internalGmrRefNo,'itemRefNo':totalRecords[i].internalItemRefNo})\r\n      }\r\n    }\r\n    else{\r\n      totalItems.push({'internalGMRRefNo':req.body.bulkPayLoadData[0].internalGmrRefNo,'itemRefNo':req.body.bulkPayLoadData[0].internalContractItemRefNo})\r\n    }\r\n    Promise.all(totalItems.map(group =>{\r\n      defaultdata1.url = req.body.propertyList.platform_url + '\/api\/gmr\/postcog?internalGMRRefNo='+group.internalGmrRefNo+'&itemRefNo='+group.itemRefNo\r\n         return get_defaultData1()}))\r\n       .then(results => {\r\n        res.status(200).send({sucess:'COG Updated SuccessFully'});\r\n       })\r\n  ",
+    "sys__UUID" : "3f15a8b9-060e-4441-97c4-0ee6f94c053e",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_ITEM_GMR_FORMULA_PRICE_COLLECTION",
+    "componentType" : "SystemTask",
+    "object" : "afa4778b-b1dc-4916-90b4-f75141d48fbd",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_ST_CREATE_ITEM_GMR_FORMULA_PRICE_COLLECTION",
+    "type" : "workflow"
+}

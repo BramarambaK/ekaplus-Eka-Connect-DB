@@ -1,0 +1,23 @@
+{
+  "_id": "gmr_item_policy",
+  "type": "policy",
+  "app_UUID": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "refType": "object",
+  "refTypeId": "0a58c051-99ad-491d-8d05-400bd90bffe9",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": [
+        "READ",
+        "UPDATE",
+        "DELETE",
+        "LISTVIEW"
+      ],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": [
+        "CREATE",
+        "UPLOAD"
+      ]
+    }
+  }
+}

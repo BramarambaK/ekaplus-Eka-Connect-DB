@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_SAVE_GMR_STOCK_DATA",
+    "version" : "V2",
+    "componentType" : "SystemTask",
+    "object" : "00ac5c66-69c6-11eb-9439-0242ac130002",
+    "objectAction" : "UPDATE",
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_ST_SAVE_GMR_STOCK_DATA"
+}

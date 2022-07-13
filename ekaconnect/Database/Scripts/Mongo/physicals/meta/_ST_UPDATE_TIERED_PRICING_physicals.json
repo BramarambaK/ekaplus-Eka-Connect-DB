@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_UPDATE_TIERED_PRICING_physicals",
+    "componentType" : "SystemTask",
+    "object" : "fb40488f-e9bb-4c92-8299-618177d8da99",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_ST_UPDATE_TIERED_PRICING",
+    "type" : "workflow"
+}

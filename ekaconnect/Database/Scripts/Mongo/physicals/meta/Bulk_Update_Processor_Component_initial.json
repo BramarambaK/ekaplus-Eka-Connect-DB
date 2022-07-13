@@ -1,0 +1,11 @@
+{
+    "_id" : "Bulk_Update_Processor_Component",
+    "name" : "Bulk Update Component",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "var data = [];\r\n    var arrData = req.body.selectedData.data;\r\n    var component = {};\r\n\r\n    for (var i = 0; i < arrData[0].componentDetails.length; i++) {\r\n      component[arrData[0].componentDetails[i].productComponentName] = 'exist';\r\n      data.push({ 'productComponentName': arrData[0].componentDetails[i].productComponentName,'executedQuantity': arrData[0].totalQuantity.split(' ')[0],'executedcomponent':'','componentPercentage': '', 'bulkPayload': arrData });\r\n    }\r\n    var flag = true;\r\n    for (var _i = 0; _i < arrData.length; _i++) {\r\n      for (var j = 0; j < arrData[_i].componentDetails.length; j++) {\r\n        if (!component.hasOwnProperty(arrData[_i].componentDetails[j].productComponentName)) {\r\n          flag = false;\r\n        }\r\n      }\r\n    }\r\n    if (flag && data.length === Object.keys(component).length) res.status(200).send(data);else res.status(500).send('Each item has different components , please select only  1 item');",
+    "sys__UUID" : "a612b657-00fc-4f39-a85b-a02267d09524",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "collection_bulk_contract_headers",
+    "type" : "property",
+    "name" : "collection_bulk_contract_headers",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "Seq No:Integer,Issue Date:Date,Trader Name:String,CP Name:String,Contract Type:String,Product:String,Quality:String,Item Quantity:String,Quantity Unit:String,Delivery Period From:date,Delivery Period To:Date,Pay In Currency:String,Inco Term:String,Contract Quantity Unit:String,Loading Country:String,Loading Type:String,Loading Location:String,Discharge Country:String,Discharge Type:String,Discharge Location:String,Price Type:String,Contract Price:Number,Contract Price Unit:String,Tolerance Min:Number,Tolerance Max:Number,Tolerance Type:String,Tolerance Level:String,Transportation Mode:String,Payment Terms:String,Payment Due Date:Date,Arbitration:String,Applicable Law/Contract:String,Tax Schedule Applicable Country:String,Tax Schedule:String,Stratergy:String,Profit Centre:String,Deal Type:String,Origin:String,Crop Year:String,Contract Ref No:String,Contract Status:String,Error Message:String,Future Instrument:String,Price Month:String,Basis Price Unit:String,Price fix Latest by:String,Price Fix Option:String,Price fix Method:String,Basis Price:Number,Price fix Earliest by:Date,Ship/Vessel Details:String",
+    "length" : "1000"
+}

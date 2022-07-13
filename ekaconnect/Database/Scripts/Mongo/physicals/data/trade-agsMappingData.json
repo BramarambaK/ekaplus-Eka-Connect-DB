@@ -1,0 +1,55 @@
+{
+    "_id" : "trade-agsmappingData",
+    "targetObject" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "typeOfData" : "mapping",
+    "mappingData" : {
+        "contractTypeDisplayName": {
+            "sell": "Sale",
+            "Sell": "Sale",
+            "sold": "Sale",
+            "purchase":"Purchase",
+            "buy": "Purchase",
+            "Buy": "Purchase",
+            "bought":"Purchase",
+            "Bought":"Purchase",
+            "got": "Purchase",
+            "to": "Sale",
+            "from": "Purchase",
+            "To": "Sale",
+            "From": "Purchase",
+            "Discharge": "Sale",
+            "discharge": "Sale",
+            "dispatch": "Sale",
+            "Dispatch": "Sale",
+            "Despatch": "Sale",
+            "despatch": "Sale",
+            "sale":"Sale",
+            "get":"Purchase",
+            "Get":"Purchase"
+        },
+        "productIdDisplayName": {
+            "crude": "Crude",
+            "cotton": "Cotton",
+            "gas oil": "Gasoil",
+            "gasoil": "Gasoil",
+            "gas":"Gasoil",
+            "oil":"Gasoil",
+            "Gas":"Gasoil",
+            "Oil":"Gasoil",
+            "Gas oil":"Gasoil",
+            "GasOil":"Gasoil"
+        },
+        "priceTypeId": {
+            "flat": "Flat",
+            "fixed": "Fixed"
+        }
+    },
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "e5847bac-dab7-4eae-9e09-cd9a78f14562",
+    "sys__createdOn" : ISODate("2020-10-13T12:02:37.287Z"),
+    "sys__data__state" : "Create"
+}

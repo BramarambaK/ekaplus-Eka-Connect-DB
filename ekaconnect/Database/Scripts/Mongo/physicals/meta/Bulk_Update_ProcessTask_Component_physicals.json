@@ -1,0 +1,13 @@
+{
+    "_id" : "Bulk_Update_ProcessTask_Component",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "b6dc0fc0-5ec0-4974-817d-4e98c1dac623"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "componentProcessortask",
+    "object" : "a17ad3d2-8c98-461d-98c7-d91e953aa819"
+}

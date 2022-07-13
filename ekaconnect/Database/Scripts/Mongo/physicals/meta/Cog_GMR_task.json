@@ -1,0 +1,13 @@
+{
+    "_id" : "Cog_GMR",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "3f15a8b9-060e-4441-97c4-0ee6f94c053e"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "callcog",
+    "object" : "fde1b873-9b1d-44c7-bf6a-dc86898bfd52"
+}

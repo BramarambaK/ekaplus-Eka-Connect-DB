@@ -1,0 +1,24 @@
+{
+    "_id" : "file_model_contract_policy",
+    "type" : "policy",
+    "app_UUID" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "refType" : "object",
+    "refTypeId" : "775dd413-6618-405e-b6c8-5951a903530f",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [
+                "READ",
+                "UPDATE",
+                "DELETE",
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [
+                "CREATE"
+            ]
+        }
+    },
+    "sys__createdOn" : ISODate("2019-12-26T05:17:39.219Z"),
+    "sys__createdBy" : "Bravo"
+}

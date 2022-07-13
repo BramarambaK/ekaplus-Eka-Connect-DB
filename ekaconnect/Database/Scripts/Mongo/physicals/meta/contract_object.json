@@ -1,0 +1,1488 @@
+{
+    "_id" : "contract_object",
+    "app" : "physicals",
+    "name" : "contract",
+    "type" : "object",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "2",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "fields" : {
+        "generalDetails" : {
+            "labelKey" : "ContractgeneralDetails",
+            "ContractgeneralDetails" : "General Details",
+            "isRequired" : false
+        },
+        "templateId" : {
+            "options" : [],
+            "labelKey" : "ContracttemplateId",
+            "ContracttemplateId" : "Select Template",
+            "serviceKey" : "templateId",
+            "isRequired" : false
+        },
+        "templateName" : {
+            "labelKey" : "ContracttemplateName",
+            "ContracttemplateName" : "Template Name",
+            "isRequired" : false
+        },
+        "issueDate" : {
+            "labelKey" : "ContractissueDate",
+            "ContractissueDate" : "Contract Issue Date",
+            "isRequired" : false
+        },
+        "dealType" : {
+            "options" : [],
+            "labelKey" : "ContractdealType",
+            "ContractdealType" : "Deal Type",
+            "serviceKey" : "dealType",
+            "isRequired" : false
+        },
+        "contractType" : {
+            "options" : [ 
+                {
+                    "key" : "P",
+                    "value" : "Purchase"
+                }, 
+                {
+                    "key" : "S",
+                    "value" : "Sale"
+                }
+            ],
+            "labelKey" : "ContractcontractType",
+            "ContractcontractType" : "Contract Type",
+            "isRequired" : false
+        },
+        "traderUserId" : {
+            "options" : [],
+            "labelKey" : "ContracttraderUserId",
+            "ContracttraderUserId" : "Trader Name",
+            "serviceKey" : "userListByRole",
+            "isRequired" : false
+        },
+        "cpProfileId" : {
+            "options" : [],
+            "key" : "cpProfileId",
+            "labelKey" : "ContractcpProfileId",
+            "ContractcpProfileId" : "CP Name",
+            "serviceKey" : "businessPartnerCombo",
+            "dependsOn" : [ 
+                "dealType"
+            ],
+            "isRequired" : false
+        },
+        "cpName" : {
+            "options" : [],
+            "key" : "cpProfileId",
+            "labelKey" : "ContractcpProfileId",
+            "ContractcpProfileId" : "CP Name",
+            "serviceKey" : "businessPartnerCombo",
+            "dependsOn" : [ 
+                "dealType"
+            ],
+            "isRequired" : false
+        },
+        "paymentTermId" : {
+            "options" : [],
+            "labelKey" : "ContractpaymentTermId",
+            "ContractpaymentTermId" : "Final Payment Terms",
+            "serviceKey" : "paytermlist_phy",
+            "isRequired" : false
+        },
+        "applicableLawId" : {
+            "options" : [],
+            "labelKey" : "ContractapplicableLawId",
+            "ContractapplicableLawId" : "Applicable Law/Contract",
+            "serviceKey" : "applicableLaw",
+            "isRequired" : false
+        },
+        "arbitrationId" : {
+            "options" : [],
+            "labelKey" : "ContractarbitrationId",
+            "ContractarbitrationId" : "Arbitration",
+            "serviceKey" : "ContractRulesAndArbitrationList",
+            "isRequired" : false
+        },
+        "optional" : {
+            "labelKey" : "Contractoptional",
+            "Contractoptional" : "Optional",
+            "isRequired" : false
+        },
+        "generalDetailsOptional" : {
+            "labelKey" : "ContractgeneralDetailsOptional",
+            "ContractgeneralDetailsOptional" : "(Quality Finalization Point, Quantity Finalization Point, Broker Name, Broker Person Incharge, Broker Ref. No., Broker Commission, CP Person Incharge, CP Contract Ref. No.)",
+            "isRequired" : false
+        },
+        "agentProfileId" : {
+            "options" : [],
+            "labelKey" : "ContractagentProfileId",
+            "ContractagentProfileId" : "Broker Name",
+            "serviceKey" : "businesspartnercontactperson",
+            "isRequired" : false
+        },
+        "agentPersonInCharge" : {
+            "options" : [],
+            "labelKey" : "ContractagentPersonInCharge",
+            "ContractagentPersonInCharge" : "Broker Person Incharge",
+            "serviceKey" : "brokerPersonInCharge",
+            "dependsOn" : [ 
+                "agentProfileId"
+            ],
+            "isRequired" : false
+        },
+        "agentRefNo" : {
+            "options" : [],
+            "labelKey" : "ContractagentRefNo",
+            "ContractagentRefNo" : "Broker Ref No.",
+            "isRequired" : false
+        },
+        "agentCommValue" : {
+            "options" : [],
+            "labelKey" : "ContractagentCommValue",
+            "ContractagentCommValue" : "Broker Commission",
+            "isRequired" : false
+        },
+        "agentCommPriceUnitId" : {
+            "options" : [],
+            "labelKey" : "ContractagentCommPriceUnitId",
+            "ContractagentCommPriceUnitId" : "Unit",
+            "serviceKey" : "allDistinctPriceUnits",
+            "isRequired" : false
+        },
+        "cpPersonInCharge" : {
+            "options" : [],
+            "labelKey" : "ContractcpPersonInCharge",
+            "ContractcpPersonInCharge" : "CP Person Incharge",
+            "serviceKey" : "cpPersonInCharge",
+            "dependsOn" : [ 
+                "cpProfileId"
+            ],
+            "isRequired" : false
+        },
+        "cpRefNo" : {
+            "options" : [],
+            "labelKey" : "ContractcpRefNo",
+            "ContractcpRefNo" : "CP Contact Ref No.",
+            "isRequired" : false
+        },
+        "itemDetails" : {
+            "labelKey" : "ContractitemDetails",
+            "ContractitemDetails" : "Item Details",
+            "isRequired" : false
+        },
+        "productId" : {
+            "options" : [],
+            "labelKey" : "ContractproductId",
+            "ContractproductId" : "Product",
+            "serviceKey" : "productComboDropDrown",
+            "isRequired" : false
+        },
+        "quality" : {
+            "options" : [],
+            "labelKey" : "Contractquality",
+            "Contractquality" : "Quality",
+            "serviceKey" : "qualityComboDropDrown",
+            "dependsOn" : [ 
+                "productId"
+            ],
+            "isRequired" : false
+        },
+        "qualityPdScheduleId" : {
+            "options" : [],
+            "labelKey" : "ContractqualityPdScheduleId",
+            "ContractqualityPdScheduleId" : "Quality P/D Schedule",
+            "isRequired" : false
+        },
+        "itemQty" : {
+            "labelKey" : "ContractitemQty",
+            "ContractitemQty" : "Item Quantity",
+            "isRequired" : false
+        },
+        "itemQtyUnitId" : {
+            "options" : [],
+            "labelKey" : "ContractitemQtyUnitId",
+            "serviceKey" : "physicalproductquantitylist",
+            "dependsOn" : [ 
+                "productId"
+            ],
+            "isRequired" : false
+        },
+        "tolerance" : {
+            "labelKey" : "Contracttolerance",
+            "Contracttolerance" : "Tolerance",
+            "isRequired" : false
+        },
+        "toleranceType" : {
+            "options" : [],
+            "labelKey" : "ContracttoleranceType",
+            "ContracttoleranceType" : "Tolerance Type",
+            "serviceKey" : "AbsolutePercentage",
+            "isRequired" : false
+        },
+        "toleranceLevel" : {
+            "options" : [],
+            "labelKey" : "ContracttoleranceLevel",
+            "ContracttoleranceLevel" : "Tolerance Level",
+            "serviceKey" : "Tolerance",
+            "isRequired" : false
+        },
+        "payInCurId" : {
+            "options" : [],
+            "labelKey" : "payInCurIdCurrency",
+            "payInCurIdCurrency" : "Pay-In Settlement Currency",
+            "serviceKey" : "productCurrencyList",
+            "isRequired" : false
+        },
+        "priceTypeId" : {
+            "options" : [],
+            "labelKey" : "ContractpriceType",
+            "ContractpriceType" : "Price Type",
+            "serviceKey" : "productpricetypelist",
+            "dependsOn" : [ 
+                "productId"
+            ],
+            "isRequired" : false
+        },
+        "priceDf" : {
+            "labelKey" : "Contractprice",
+            "Contractprice" : "Contract Price",
+            "isRequired" : false
+        },
+        "priceUnitId" : {
+            "options" : [],
+            "ContractpriceUnitId" : "Price Unit",
+            "labelKey" : "ContractpriceUnitId",
+            "serviceKey" : "productPriceUnit",
+            "dependsOn" : [ 
+                "productId", 
+                "payInCurId"
+            ],
+            "isRequired" : false
+        },
+        "payInSettlementCurrency" : {
+            "options" : [],
+            "labelKey" : "ContractpayInSettlementCurrency",
+            "ContractpayInSettlementCurrency" : "Pay-In Settlement Currency",
+            "isRequired" : false
+        },
+        "fxRate" : {
+            "labelKey" : "ContractfxRate",
+            "ContractfxRate" : "FX-Rate",
+            "isRequired" : false
+        },
+        "fxRateUnit" : {
+            "options" : [],
+            "labelKey" : "ContractfxRateUnit",
+            "isRequired" : false
+        },
+        "differentialPrice" : {
+            "labelKey" : "ContractdifferentialPrice",
+            "ContractdifferentialPrice" : "Differential",
+            "isRequired" : false
+        },
+        "differentialPriceUnit" : {
+            "options" : [],
+            "labelKey" : "ContractdifferentialUnitPriceUnit",
+            "serviceKey" : "allDistinctPriceUnits",
+            "isRequired" : false
+        },
+        "formula" : {
+            "labelKey" : "Contractformula",
+            "Contractformula" : "Define Formula",
+            "isRequired" : false
+        },
+        "baseCurve" : {
+            "labelKey" : "ContractbaseCurve",
+            "ContractbaseCurve" : "Base Curve",
+            "isRequired" : false
+        },
+        "shipmentMode" : {
+            "options" : [],
+            "labelKey" : "ContractshipmentMode",
+            "ContractshipmentMode" : "Transportation mode",
+            "serviceKey" : "ticketModeOfTransport",
+            "isRequired" : false
+        },
+        "deliveryPeriod" : {
+            "labelKey" : "ContractdeliveryPeriod",
+            "ContractdeliveryPeriod" : "Delivery Period",
+            "isRequired" : false
+        },
+        "originationCountryId" : {
+            "options" : [],
+            "labelKey" : "ContractoriginationCountryId",
+            "ContractoriginationCountryId" : "Loading Country",
+            "serviceKey" : "countriesComboDataFromDB",
+            "isRequired" : false
+        },
+        "originationCityId" : {
+            "options" : [],
+            "labelKey" : "ContractoriginationCityId",
+            "ContractoriginationCityId" : "Loading Location",
+            "serviceKey" : "cityComboDataFromDB",
+            "dependsOn" : [ 
+                "originationCountryId", 
+                "loadingLocationGroupTypeId"
+            ],
+            "isRequired" : false
+        },
+        "loadingLocationGroupTypeId" : {
+            "options" : [],
+            "labelKey" : "ContractloadingLocationGroupTypeId",
+            "ContractloadingLocationGroupTypeId" : "Loading Location",
+            "serviceKey" : "incoTermLocationGroupType",
+            "dependsOn" : [ 
+                "incotermId"
+            ],
+            "isRequired" : false
+        },
+        "destinationLocationGroupTypeId" : {
+            "options" : [],
+            "labelKey" : "ContractdestinationLocationGroupTypeId",
+            "ContractdestinationLocationGroupTypeId" : "Discharge Location",
+            "serviceKey" : "incoTermLocationGroupType",
+            "dependsOn" : [ 
+                "incotermId"
+            ],
+            "isRequired" : false
+        },
+        "destinationCountryId" : {
+            "options" : [],
+            "labelKey" : "ContractdestinationCountryId",
+            "ContractdestinationCountryId" : "Discharge Country",
+            "serviceKey" : "countriesComboDataFromDB",
+            "isRequired" : false
+        },
+        "destinationCityId" : {
+            "options" : [],
+            "labelKey" : "ContractdestinationCityId",
+            "ContractdestinationCityId" : "Discharge Location",
+            "serviceKey" : "cityComboDataFromDB",
+            "dependsOn" : [ 
+                "destinationCountryId", 
+                "destinationLocationGroupTypeId"
+            ],
+            "isRequired" : false
+        },
+        "paymentDueDate" : {
+            "labelKey" : "ContractpaymentDueDate",
+            "ContractpaymentDueDate" : "Payment Due Date",
+            "isRequired" : false
+        },
+        "incotermId" : {
+            "options" : [],
+            "labelKey" : "ContractincotermId",
+            "ContractincotermId" : "INCO Term",
+            "serviceKey" : "incoterm",
+            "isRequired" : false
+        },
+        "profitCenterId" : {
+            "options" : [],
+            "labelKey" : "ContractprofitCenterId",
+            "ContractprofitCenterId" : "Profit Center",
+            "serviceKey" : "userProfitCenterList",
+            "dependsOn" : [ 
+                "traderUserId"
+            ],
+            "isRequired" : false
+        },
+        "strategyAccId" : {
+            "options" : [],
+            "labelKey" : "ContractstrategyAccId",
+            "ContractstrategyAccId" : "Strategy",
+            "serviceKey" : "corporateStrategy",
+            "isRequired" : false
+        },
+        "valuationFormula" : {
+            "options" : [],
+            "labelKey" : "ContractvaluationFormula",
+            "ContractvaluationFormula" : "Market Valuation",
+            "isRequired" : false
+        },
+        "secondaryCost" : {
+            "labelKey" : "ContractsecondaryCost",
+            "ContractsecondaryCost" : "Secondary Cost",
+            "isRequired" : false
+        },
+        "addCost" : {
+            "labelKey" : "ContractaddCost",
+            "ContractaddCost" : "+ Add Cost",
+            "isRequired" : false
+        },
+        "addMore" : {
+            "labelKey" : "ContractaddMore",
+            "ContractaddMore" : "+ Add More",
+            "isRequired" : false
+        },
+        "costComponent" : {
+            "options" : [],
+            "key" : "costComponent",
+            "labelKey" : "ContractcostComponent",
+            "ContractcostComponent" : "Cost Component",
+            "serviceKey" : "costComponent",
+            "dependsOn" : [ 
+                "SECONDARY_COST", 
+                "CONTRACT"
+            ],
+            "isRequired" : false
+        },
+        "costType" : {
+            "options" : [],
+            "key" : "costType",
+            "labelKey" : "ContractcostType",
+            "ContractcostType" : "Cost Type",
+            "serviceKey" : "CostType",
+            "isRequired" : false
+        },
+        "rateType" : {
+            "options" : [],
+            "key" : "rateType",
+            "labelKey" : "ContractrateType",
+            "ContractrateType" : "Rate Type",
+            "serviceKey" : "CostRateType",
+            "isRequired" : false
+        },
+        "cost" : {
+            "key" : "cost",
+            "labelKey" : "ContractcostValue",
+            "ContractcostValue" : "Cost Value",
+            "isRequired" : false
+        },
+        "costUnit" : {
+            "options" : [],
+            "key" : "costUnit",
+            "ContractcostUnit" : "Cost Unit",
+            "labelKey" : "ContractcostUnit",
+            "isRequired" : false
+        },
+        "costUnitCurrency" : {
+            "options" : [],
+            "key" : "costUnit",
+            "labelKey" : "costUnit",
+            "serviceKey" : "productCurrencyList",
+            "isRequired" : false
+        },
+        "costUnitRate" : {
+            "options" : [],
+            "key" : "costUnit",
+            "labelKey" : "costUnit",
+            "serviceKey" : "allDistinctPriceUnits",
+            "isRequired" : false
+        },
+        "fxToBase" : {
+            "key" : "fxToBase",
+            "labelKey" : "ContractfxToBase",
+            "ContractfxToBase" : "FX to Base",
+            "isRequired" : false
+        },
+        "secondaryCostComments" : {
+            "key" : "comments",
+            "labelKey" : "ContractsecondaryCostComments",
+            "ContractsecondaryCostComments" : "Comments",
+            "isRequired" : false
+        },
+        "estimateFor" : {
+            "labelKey" : "ContractestimateFor",
+            "ContractestimateFor" : "Estimate For",
+            "options" : [],
+            "serviceKey" : "estimateFor",
+            "isRequired" : false
+        },
+        "incExpense" : {
+            "labelKey" : "ContractincomeExpense",
+            "ContractincomeExpense" : "Income/Expense",
+            "options" : [],
+            "serviceKey" : "CostIncExp",
+            "isRequired" : false
+        },
+        "costAmountInBaseCurrency" : {
+            "labelKey" : "ContractcostAmountInBaseCurrency",
+            "ContractcostAmountInBaseCurrency" : "Cost Amount In Base Currency",
+            "isRequired" : false
+        },
+        "costAmountInAccuralEstimateCurrency" : {
+            "labelKey" : "ContractcostAmountInAccuralEstimateCurrency",
+            "ContractcostAmountInAccuralEstimateCurrency" : "Cost Amount in Accrual/Estimate Currency",
+            "isRequired" : false
+        },
+        "secondaryCostAction" : {
+            "labelKey" : "ContractsecondaryCostAction",
+            "ContractsecondaryCostAction" : "Action",
+            "isRequired" : false
+        },
+        "generateItems" : {
+            "labelKey" : "ContractgenerateItems",
+            "ContractgenerateItems" : "Generate Items",
+            "isRequired" : false
+        },
+        "saveItemBtn" : {
+            "labelKey" : "ContractsaveItemBtn",
+            "ContractsaveItemBtn" : "Save Item",
+            "isRequired" : false
+        },
+        "newItemBtn" : {
+            "labelKey" : "ContractnewItemBtn",
+            "ContractnewItemBtn" : "New Item",
+            "isRequired" : false
+        },
+        "defineFormula" : {
+            "labelKey" : "ContractdefineFormula",
+            "ContractdefineFormula" : "Define Formula",
+            "isRequired" : false
+        },
+        "saveBtn" : {
+            "labelKey" : "ContractsaveBtn",
+            "ContractsaveBtn" : "SAVE",
+            "isRequired" : false
+        },
+        "itemDeliveryFrequency" : {
+            "options" : [ 
+                {
+                    "key" : "Monthly",
+                    "value" : "Monthly"
+                }, 
+                {
+                    "key" : "Quarterly",
+                    "value" : "Quarterly"
+                }, 
+                {
+                    "key" : "Yearly",
+                    "value" : "Yearly"
+                }
+            ],
+            "labelKey" : "ContractitemDeliveryFrequency",
+            "ContractitemDeliveryFrequency" : "Frequency",
+            "isRequired" : false
+        },
+        "itemsGenerateMsg" : {
+            "labelKey" : "ContractitemsGenerateMsg",
+            "ContractitemsGenerateMsg" : "items will be generated",
+            "isRequired" : false
+        },
+        "generateBtn" : {
+            "labelKey" : "ContractgenerateBtn",
+            "ContractgenerateBtn" : "GENERATE",
+            "isRequired" : false
+        },
+        "cancelBtn" : {
+            "labelKey" : "ContractcancelBtn",
+            "ContractcancelBtn" : "CANCEL",
+            "isRequired" : false
+        },
+        "itemNo" : {
+            "labelKey" : "ContractitemNo",
+            "ContractitemNo" : "Item No.",
+            "isRequired" : false
+        },
+        "contractQuantity" : {
+            "labelKey" : "ContractcontractQuantity",
+            "ContractcontractQuantity" : "",
+            "isRequired" : false
+        },
+        "minQuantity" : {
+            "labelKey" : "ContractminQuantity",
+            "ContractminQuantity" : "Min Quantity",
+            "isRequired" : false
+        },
+        "maxQuantity" : {
+            "labelKey" : "ContractmaxQuantity",
+            "ContractmaxQuantity" : "Max Quantity",
+            "isRequired" : false
+        },
+        "deliveredQuantity" : {
+            "labelKey" : "ContractdeliveredQuantity",
+            "ContractdeliveredQuantity" : "Delivered Quantity",
+            "isRequired" : false
+        },
+        "openQuantity" : {
+            "labelKey" : "ContractopenQuantity",
+            "ContractopenQuantity" : "Open Quantity",
+            "isRequired" : false
+        },
+        "action" : {
+            "labelKey" : "Contractaction",
+            "Contractaction" : "Action",
+            "isRequired" : false
+        },
+        "addItem" : {
+            "labelKey" : "ContractaddItem",
+            "ContractaddItem" : "+ Add Item",
+            "isRequired" : false
+        },
+        "documentUpload" : {
+            "labelKey" : "ContractdocumentUpload",
+            "ContractdocumentUpload" : "Document Upload",
+            "isRequired" : false
+        },
+        "document" : {
+            "options" : [],
+            "labelKey" : "Contractdocument",
+            "Contractdocument" : "Document",
+            "isRequired" : false
+        },
+        "documentDate" : {
+            "labelKey" : "ContractdocumentDate",
+            "ContractdocumentDate" : "Document date",
+            "isRequired" : false
+        },
+        "description" : {
+            "labelKey" : "Contractdescription",
+            "Contractdescription" : "Description",
+            "isRequired" : false
+        },
+        "optionalItemDetails" : {
+            "labelKey" : "ContractoptionalItemDetails",
+            "ContractoptionalItemDetails" : "(Inspection Company, Late Payment Interest Type, Late Payment Interest Rate, Interest Method, Option Load, Option Discharge)",
+            "isRequired" : false
+        },
+        "qualityFinalizationPoint" : {
+            "options" : [],
+            "labelKey" : "ContractqualityFinalizationPoint",
+            "ContractqualityFinalizationPoint" : "Quality Finalization Point",
+            "serviceKey" : "PortOperations",
+            "isRequired" : false
+        },
+        "weightFinalizationPoint" : {
+            "options" : [],
+            "labelKey" : "ContractweightFinalizationPoint",
+            "ContractweightFinalizationPoint" : "Quantity Finalization Point",
+            "serviceKey" : "PortOperations",
+            "isRequired" : false
+        },
+        "inspectionCompany" : {
+            "options" : [],
+            "labelKey" : "ContractinspectionCompany",
+            "ContractinspectionCompany" : "Inspection Company",
+            "isRequired" : false
+        },
+        "interestRateType" : {
+            "options" : [],
+            "labelKey" : "ContractinterestRateType",
+            "ContractinterestRateType" : "Late Payment Interest Type",
+            "serviceKey" : "LatePaymentInt",
+            "isRequired" : false
+        },
+        "interestRate" : {
+            "options" : [],
+            "labelKey" : "ContractinterestRate",
+            "ContractinterestRate" : "Late Payment Interest Rate",
+            "isRequired" : false
+        },
+        "variableType" : {
+            "options" : [],
+            "labelKey" : "ContractvariableType",
+            "ContractvariableType" : "Late Payment Interest Method",
+            "isRequired" : false
+        },
+        "latePaymentInterestRate" : {
+            "options" : [],
+            "labelKey" : "ContractlatePaymentInterestRate",
+            "ContractlatePaymentInterestRate" : "Late Payment Interest Rate",
+            "serviceKey" : "variableInterestCurve",
+            "isRequired" : false
+        },
+        "compounding" : {
+            "options" : [],
+            "labelKey" : "Contractcompounding",
+            "Contractcompounding" : "Compounding",
+            "isRequired" : false
+        },
+        "frequency" : {
+            "options" : [],
+            "labelKey" : "Contractfrequency",
+            "Contractfrequency" : "Frequency",
+            "serviceKey" : "CarryChargeFrequencyId",
+            "isRequired" : false
+        },
+        "latePaymentInterestMethod" : {
+            "options" : [],
+            "labelKey" : "ContractlatePaymentInterestMethod",
+            "ContractlatePaymentInterestMethod" : "Interest Method",
+            "isRequired" : false
+        },
+        "optionalLoadingDetails" : {
+            "options" : [],
+            "labelKey" : "ContractoptionLoad",
+            "ContractoptionLoad" : "Option Load",
+            "isRequired" : false
+        },
+        "provisionalInvoice" : {
+            "labelKey" : "ContractprovisionalInvoice",
+            "ContractprovisionalInvoice" : "Provisional Invoice % to Pay ",
+            "isRequired" : false
+        },
+        "unweighedPiPctValue" : {
+            "labelKey" : "ContractunweighedPiPctValue",
+            "ContractunweighedPiPctValue" : "Provisional Invoice % to Pay ",
+            "isRequired" : false
+        },
+        "laycanDate" : {
+            "labelKey" : "ContractlaycanDate",
+            "ContractlaycanDate" : "Laycan Date",
+            "isRequired" : false
+        },
+        "optionalDischargeDetails" : {
+            "labelKey" : "ContractoptionDischarge",
+            "ContractoptionDischarge" : "Option Discharge",
+            "isRequired" : false
+        },
+        "itemListTable" : {
+            "headers" : [ 
+                "Item No.", 
+                "Delivery Periods", 
+                "Transportation Mode", 
+                "Contract Quantity", 
+                "Min Quantity", 
+                "Max Quantity", 
+                "Delivered Quantity", 
+                "Open Quantity"
+            ],
+            "labelKey" : "ContractitemListTable",
+            "isRequired" : false
+        },
+        "interestMethod" : {
+            "labelKey" : "ContractinterestMethod",
+            "ContractinterestMethod" : "Interest Method",
+            "isRequired" : false
+        },
+        "optionalLoad" : {
+            "labelKey" : "ContractoptionalLoad",
+            "ContractoptionalLoad" : "Optional Load",
+            "isRequired" : false
+        },
+        "loadingCity" : {
+            "options" : [],
+            "labelKey" : "ContractloadingCity",
+            "isRequired" : false
+        },
+        "locationPD" : {
+            "options" : [],
+            "labelKey" : "ContractlocationPD",
+            "isRequired" : false
+        },
+        "usdMT" : {
+            "options" : [],
+            "labelKey" : "ContractusdMT",
+            "isRequired" : false
+        },
+        "actionOnContract" : {
+            "labelKey" : "ContractactionOnContract",
+            "ContractactionOnContract" : "Action On Contract",
+            "isRequired" : false
+        },
+        "approve" : {
+            "labelKey" : "Contractapprove",
+            "Contractapprove" : "Approve",
+            "isRequired" : false
+        },
+        "reject" : {
+            "labelKey" : "Contractreject",
+            "Contractreject" : "Reject",
+            "isRequired" : false
+        },
+        "remark" : {
+            "labelKey" : "Contractremark",
+            "Contractremark" : "Remarks",
+            "isRequired" : false
+        },
+        "proceed" : {
+            "labelKey" : "Contractproceed",
+            "Contractproceed" : "PROCEED",
+            "isRequired" : false
+        },
+        "specification" : {
+            "labelKey" : "Contractspecification",
+            "Contractspecification" : "Specification",
+            "isRequired" : false
+        },
+        "qualityFinalAt" : {
+            "options" : [],
+            "labelKey" : "ContractqualityFinalizationPoint",
+            "ContractqualityFinalizationPoint" : "Quality Finalization Point",
+            "isRequired" : false
+        },
+        "weightFinalAt" : {
+            "options" : [],
+            "labelKey" : "ContractweightFinalizationPoint",
+            "ContractweightFinalizationPoint" : "Quantity Finalization Point",
+            "isRequired" : false
+        },
+        "agentCommType" : {
+            "options" : [],
+            "labelKey" : "ContractAgentCommissionType",
+            "ContractAgentCommissionType" : "Agent commission type",
+            "isRequired" : false
+        },
+        "userId" : {
+            "isRequired" : false
+        },
+        "sys__createdOn" : {
+            "isRequired" : false
+        },
+        "sys__createdBy" : {
+            "isRequired" : false
+        },
+        "sys__updatedBy" : {
+            "isRequired" : false
+        },
+        "sys__updatedOn" : {
+            "isRequired" : false
+        },
+        "id" : {
+            "isRequired" : false
+        },
+        "sourceContractDetails" : {
+            "isRequired" : false
+        },
+        "contractRefNo" : {
+            "isRequired" : false
+        },
+        "internalContractRefNo" : {
+            "isRequired" : false
+        },
+        "reasonForModification" : {
+            "labelKey" : "reasonForModification",
+            "reasonForModification" : "Reason For Modification",
+            "isRequired" : false
+        },
+        "approvalManagementDO" : {
+            "isRequired" : false
+        },
+        "app" : {
+            "isRequired" : false
+        },
+        "object" : {
+            "isRequired" : false
+        },
+        "priceContractDefId" : {
+            "options" : [],
+            "labelKey" : "ContractfutureInstrument",
+            "ContractfutureInstrument" : "Future Insrument",
+            "serviceKey" : "productDerivativeInstrument",
+            "dependsOn" : [ 
+                "productId"
+            ],
+            "isRequired" : false
+        },
+        "priceFutureContractId" : {
+            "options" : [],
+            "labelKey" : "ContractpriceMonth",
+            "ContractpriceMonth" : "Price Month",
+            "serviceKey" : "periodMonthsListByInstrument",
+            "dependsOn" : [ 
+                "priceContractDefId"
+            ],
+            "isRequired" : false
+        },
+        "futurePrice" : {
+            "labelKey" : "ContractfuturePrice",
+            "ContractfuturePrice" : "Future Price",
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "futurePriceUnitId" : {
+            "ContractfuturePriceUnitId" : "Future Price Unit",
+            "labelKey" : "ContractPriceUnitId",
+            "serviceKey" : "productPriceUnit",
+            "dependsOn" : [ 
+                "productId", 
+                "payInCurId"
+            ],
+            "isRequired" : false
+        },
+        "basisPrice" : {
+            "labelKey" : "ContractbasisPrice",
+            "ContractbasisPrice" : "Basis Price",
+            "isRequired" : false
+        },
+        "basisPriceUnitId" : {
+            "ContractbasisPriceUnitId" : "Basis Price Unit",
+            "labelKey" : "ContractbasisPriceUnitId",
+            "serviceKey" : "productPriceUnit",
+            "dependsOn" : [ 
+                "productId", 
+                "payInCurId"
+            ],
+            "isRequired" : false
+        },
+        "fxFuturesToBasis" : {
+            "labelKey" : "ContractfxFuturesToBasis",
+            "ContractfxFuturesToBasis" : "FX-Futures to Basis",
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "fxBasisToPayin" : {
+            "labelKey" : "ContractfutureInstrument",
+            "ContractfutureInstrument" : "FX-Basis to Pay In",
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "priceInclusiveOfTax" : {
+            "labelKey" : "ContractpriceInclusiveOfTax",
+            "ContractpriceInclusiveOfTax" : "Price inclusive of Tax",
+            "isRequired" : false
+        },
+        "contractPrice" : {
+            "labelKey" : "ContractcontractPrice",
+            "ContractcontractPrice" : "Contract Price",
+            "isRequired" : false
+        },
+        "contractPriceUnit" : {
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "earliestBy" : {
+            "labelKey" : "ContractpriceFixEarliestBy",
+            "ContractpriceFixEarliestBy" : "Price-Fix Earliest by",
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "priceLastFixDayBasedOn" : {
+            "options" : [],
+            "labelKey" : "ContractpriceFixLatestBy",
+            "ContractpriceFixLatestBy" : "Price-Fix Latest by",
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "optionsToFix" : {
+            "options" : [],
+            "labelKey" : "ContractpriceFixOption",
+            "ContractpriceFixOption" : "Price-Fix Option",
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "fixationMethod" : {
+            "options" : [],
+            "labelKey" : "ContractpriceFixMethod",
+            "ContractpriceFixMethod" : "Price-Fix Method",
+            "serviceKey" : "",
+            "isRequired" : false
+        },
+        "deliveryPeriods" : {
+            "labelKey" : "ContractdeliveryPeriods",
+            "ContractdeliveryPeriods" : "Delivery Periods",
+            "isRequired" : false
+        },
+        "minQty" : {
+            "labelKey" : "ContractminQty",
+            "ContractminQty" : "Min Quantity",
+            "isRequired" : false
+        },
+        "maxQty" : {
+            "labelKey" : "ContractmaxQty",
+            "ContractmaxQty" : "Max Quantity",
+            "isRequired" : false
+        },
+        "deliveredQty" : {
+            "labelKey" : "ContractdeliveredQty",
+            "ContractdeliveredQty" : "Delivered Quantity",
+            "isRequired" : false
+        },
+        "openQty" : {
+            "labelKey" : "ContractopenQty",
+            "ContractopenQty" : "Open Quantity",
+            "isRequired" : false
+        },
+        "comments" : {
+            "labelKey" : "Contractcomments",
+            "Contractcomments" : "Comments",
+            "isRequired" : false
+        },
+        "fxInstToBasis" : {
+            "labelKey" : "ContractfxInstToBasis",
+            "ContractfxInstToBasis" : "FX-Futures to Basis",
+            "isRequired" : false
+        },
+        "additionsDeductions" : {
+            "labelKey" : "ContractadditionsDeductions",
+            "ContractadditionsDeductions" : "Additions/Deductions",
+            "isRequired" : false,
+            "fields" : [ 
+                {
+                    "field" : "addDedNameId",
+                    "scGroup" : "addDedNameId",
+                    "type" : "dropdown",
+                    "required" : true
+                }, 
+                {
+                    "field" : "addDedType",
+                    "scGroup" : "addDedType",
+                    "type" : "dropdown",
+                    "required" : true
+                }, 
+                {
+                    "field" : "rateTypePrice",
+                    "scGroup" : "rateType",
+                    "type" : "dropdown",
+                    "required" : true
+                }, 
+                {
+                    "field" : "costValue",
+                    "scGroup" : "costValue",
+                    "type" : "inputText",
+                    "required" : true
+                }, 
+                {
+                    "field" : "costPriceUnitId",
+                    "scGroup" : "costPriceUnitId",
+                    "type" : "dropdown",
+                    "required" : true
+                }, 
+                {
+                    "field" : "weightBasisId",
+                    "scGroup" : "weightBasisId",
+                    "type" : "dropdown",
+                    "required" : true
+                }, 
+                {
+                    "field" : "remarks",
+                    "scGroup" : "remarks",
+                    "type" : "inputText",
+                    "required" : false
+                }
+            ]
+        },
+        "internalDraftId" : {
+            "labelKey" : "internalDraftId",
+            "isRequired" : false
+        },
+        "contractState" : {
+            "labelKey" : "contractState",
+            "isRequired" : false
+        },
+        "userInputText" : {
+            "labelKey" : "userInputText",
+            "isRequired" : false
+        },
+        "generalDetailsDisplayValue" : {
+            "labelKey" : "generalDetailsDisplayValue",
+            "isRequired" : false
+        },
+        "isOptionalFieldsEnabled" : {
+            "labelKey" : "isOptionalFieldsEnabled",
+            "isRequired" : false
+        },
+        "addDedNameId" : {
+            "labelKey" : "ContractaddDedNameId",
+            "ContractaddDedNameId" : "Add/Ded Name",
+            "serviceKey" : "addDedNameList",
+            "dependsOn" : [ 
+                "productId"
+            ],
+            "isRequired" : false,
+            "options" : []
+        },
+        "addDedType" : {
+            "labelKey" : "ContractaddDedType",
+            "ContractaddDedType" : "Add/Ded",
+            "serviceKey" : "addDed",
+            "isRequired" : false,
+            "options" : []
+        },
+        "rateTypePrice" : {
+            "labelKey" : "ContractrateTypePrice",
+            "ContractrateTypePrice" : "Rate Type",
+            "serviceKey" : "rateTypePrice",
+            "isRequired" : false,
+            "options" : []
+        },
+        "costValue" : {
+            "labelKey" : "ContractcostValue",
+            "ContractcostValue" : "Cost Value",
+            "isRequired" : false,
+            "options" : []
+        },
+        "costPriceUnitId" : {
+            "labelKey" : "ContractcostPriceUnitId",
+            "ContractcostPriceUnitId" : "Cost Unit",
+            "serviceKey" : "priceUnitsForContractPrice",
+            "dependsOn" : [ 
+                "productId", 
+                "priceUnitId"
+            ],
+            "isRequired" : false,
+            "options" : []
+        },
+        "weightBasisId" : {
+            "labelKey" : "ContractweightBasisId",
+            "ContractweightBasisId" : "Weight Basis",
+            "serviceKey" : "weightBasisForAddDedForItem",
+            "dependsOn" : [ 
+                "productId"
+            ],
+            "isRequired" : false,
+            "options" : []
+        },
+        "remarks" : {
+            "labelKey" : "Contractremarks",
+            "Contractremarks" : "Comments",
+            "isRequired" : false,
+            "options" : []
+        },
+        "taxScheduleCountryId" : {
+            "options" : [],
+            "labelKey" : "ContracttaxScheduleCountryId",
+            "ContracttaxScheduleCountryId" : "Tax Schedule Applicable Country",
+            "serviceKey" : "taxScheduleCountrystate",
+            "isRequired" : false
+        },
+        "taxScheduleStateId" : {
+            "options" : [],
+            "labelKey" : "ContracttaxScheduleStateId",
+            "ContracttaxScheduleStateId" : "Tax Applicable State",
+            "serviceKey" : "cityComboDataFromDB",
+            "dependsOn" : [ 
+                "taxScheduleCountryId"
+            ],
+            "isRequired" : false
+        },
+        "taxScheduleId" : {
+            "options" : [],
+            "labelKey" : "ContracttaxScheduleId",
+            "ContracttaxScheduleId" : "Tax Schedule",
+            "serviceKey" : "listOfTaxSchedules",
+            "dependsOn" : [ 
+                "taxScheduleCountrystate"
+            ],
+            "isRequired" : false
+        },
+        "prePaymentPct": {
+            "options": [],
+            "labelKey": "ContractprePaymentPct",
+            "ContractprePaymentPct": "Pre-payment",
+            "isRequired": false
+        },
+        "prePaymentDays": {
+            "options": [],
+            "labelKey": "ContractprePaymentDays",
+            "ContractprePaymentDays": " Days",
+            "isRequired": false
+        },
+        "legalEntityId" :{
+            "options" : [],
+            "labelKey" : "ContractlegalEntityId",
+            "ContractlegalEntityId" : "Legal Entity",
+            "serviceKey" : "legalEntityList",
+            "isRequired" : false
+        },
+        "solutionType" :{
+            "options" : [],
+            "labelKey" : "ContractsolutionType",
+            "ContractsolutionType" : "",
+            "isRequired" : false
+        },
+        "isRenewable" : {
+            "labelKey" : "ContractisRenewable",
+            "ContractisRenewable" : "Renewable",
+            "isRequired" : false
+        },
+        "isRinContract" : {
+            "options" : [],
+            "labelKey" : "ContractisRinContract",
+            "ContractisRinContract" : "RINs Applicable ?",
+            "isRequired" : false
+        },
+        "rinEquivalanceValue" : {
+            "options" : [],
+            "labelKey" : "ContractrinEquivalanceValue",
+            "ContractrinEquivalanceValue" : "RIN Equivalence Value",
+            "isRequired" : false
+        },
+        "rinQuantity" : {
+            "options" : [],
+            "labelKey" : "ContractrinQuantity",
+            "ContractrinQuantity" : "RIN Equivalence Quantity",
+            "isRequired" : false
+        },
+        "rinUnit" : {
+            "options" : [],
+            "labelKey" : "ContractrinUnit",
+            "ContractrinUnit" : "RIN Unit",
+            "isRequired" : false
+        },
+		"pricingStrategy" : {
+            "options" : [],
+            "labelKey" : "pricingStrategy",
+            "pricingStrategy" : "Pricing Strategy",
+            "isRequired" : false
+        },
+        "packingTypeId" : {
+            "options" : [],
+            "labelKey" : "packingTypeId",
+            "packingTypeId" : "Packing Type",
+            "serviceKey" : "phyPackingtypesizeByCItemOrProductList",
+            "isRequired" : false
+        },
+        "packingSizeId" : {
+            "options" : [],
+            "labelKey" : "packingSizeId",
+            "packingSizeId" : "Packing Size",
+            "serviceKey" : "packingSize",
+            "dependsOn" : [ 
+                "productId",
+                "packingTypeId"
+            ],
+            "isRequired" : false
+        },
+        "dailyMonthly" : {
+            "options" : [],
+            "labelKey" : "dailyMonthly",
+            "dailyMonthly" : "Daily/Monthly",
+            "isRequired" : false
+        },
+        "customEvent" : {
+            "options" : [],
+            "labelKey" : "customEvent",
+            "customEvent" : "Payment Event",
+            "isRequired" : false
+        },
+        "customEventDate" : {
+            "options" : [],
+            "labelKey" : "customEventDate",
+            "customEventDate" : "Payment Event Date",
+            "isRequired" : false
+        },
+        "holidayRule" : {
+            "options" : [],
+            "labelKey" : "holidayRule",
+            "holidayRule" : "Holiday Rules",
+            "serviceKey" : "holidayRule",
+            "isRequired" : false
+        },
+        "totalQtyUnitId" : {
+            "options" : [],
+            "labelKey" : "totalQtyUnitId",
+            "totalQtyUnitId" : "Contract Quantity Unit",
+            "serviceKey" : "physicalproductquantitylist",
+            "isRequired" : false
+        },
+        "toleranceMin" : {
+            "options" : [],
+            "labelKey" : "toleranceMin",
+            "toleranceMin" : "Min Tolerance",
+            "isRequired" : false
+        },
+        "toleranceMax" : {
+            "options" : [],
+            "labelKey" : "toleranceMax",
+            "toleranceMax" : "Max Tolerance",
+            "isRequired" : false
+        },
+		"revaluation" : {
+            "labelKey" : "revaluation",
+            "revaluation" : "General Details",
+            "isRequired" : false
+        },
+        "densityFactor" : {
+            "labelKey" : "densityFactor",
+            "densityFactor" : "Density",
+            "options" : [],
+            "isRequired" : false
+        },
+        "densityMassQtyUnitId" : {
+            "labelKey" : "densityMassQtyUnitId",
+            "densityMassQtyUnitId" : "Mass Unit",
+            "options" : [],
+            "isRequired" : false
+        },
+        "densityVolumeQtyUnitId" : {
+            "labelKey" : "densityVolumeQtyUnitId",
+            "densityVolumeQtyUnitId" : "Volume Unit",
+            "options" : [],
+            "isRequired" : false
+        },
+        "useDensityInPricingExposure": {
+            "labelKey" : "useDensityInPricingExposure",
+            "useDensityInPricingExposure" : "useDensityInPricingExposure",
+            "isRequired" : false
+        },
+        "amendmentDate" : {
+            "labelKey" : "contractamendmentDate",
+            "contractamendmentDate" : "Modification Date",
+            "isRequired" : false
+        },
+        "cpContractItemId" : {
+            "labelKey" : "cpContractItemId",
+            "cpContractItemId" : "CP Contract Item ID",
+            "isRequired" : false
+        },
+        "qualityLongDesc" : {
+            "labelKey" : "qualityLongDesc",
+            "qualityLongDesc" : "Quality Long Description",
+            "isRequired" : false
+        },
+        "qualityShortDesc" : {
+            "labelKey" : "qualityShortDesc",
+            "qualityShortDesc" : "Quality Short Description",
+            "isRequired" : false
+        },
+        "reasonToModify" : {
+            "labelKey" : "reasonToModify",
+            "reasonToModify" : "Reason For Modification",
+            "isRequired" : false
+        },
+        "intraCompanyCPProfileId" : {
+            "options" : [],
+            "key" : "intraCompanyCPProfileId",
+            "labelKey" : "intraCompanyCPProfileId",
+            "intraCompanyCPProfileId" : "Target CP Name",
+            "serviceKey" : "businessPartnerCombo",
+            "dependsOn" : [ 
+                "dealType"
+            ],
+            "isRequired" : false
+        },
+        "intraCompanyCPName" : {
+            "options" : [],
+            "key" : "intraCompanyCPName",
+            "labelKey" : "intraCompanyCPName",
+            "intraCompanyCPName" : "Target CP display Name",
+            "isRequired" : false
+        },
+        "intraCompanyTraderUserId" : {
+            "options" : [],
+            "key" : "intraCompanyTraderUserId",
+            "labelKey" : "intraCompanyTraderUserId",
+            "intraCompanyTraderUserId" : "Target CP Trader",
+            "serviceKey" : "userListByRole",
+            "isRequired" : false
+        },
+        "internalProfitCenterId" : {
+            "options" : [],
+            "labelKey" : "internalProfitCenterId",
+            "internalProfitCenterId" : "Target Profit Center",
+            "serviceKey" : "userProfitCenterList",
+            "dependsOn" : [ 
+                "traderUserId"
+            ],
+            "isRequired" : false
+        },
+        "internalStrategyAccId" : {
+            "options" : [],
+            "labelKey" : "internalStrategyAccId",
+            "internalStrategyAccId" : "Target Strategy",
+            "serviceKey" : "corporateStrategy",
+            "isRequired" : false
+        },
+        "copySecondaryCost" : {
+            "labelKey" : "copySecondaryCost",
+            "copySecondaryCost" : "Copy Secondary Cost",
+            "isRequired" : false
+        },
+        "provisionalPaymentTermId" : {
+            "labelKey" : "provisionalPaymentTermId",
+            "provisionalPaymentTermId" : "Provisional Payment Terms",
+            "isRequired" : false
+        },
+		"intraCompanyDealID" : {
+			"key" : "intraCompanyDealID",
+			"labelKey" : "intraCompanyDealIDLabel",
+			"intraCompanyDealIDLabel" : "intraCompanyDealID",
+			"isRequired" : false
+		},
+		"interCompanyDealId" : {
+			"key" : "interCompanyDealId",
+			"labelKey" : "interCompanyDealIdLabel",
+			"interCompanyDealIdLabel" : "interCompanyDealId",
+			"isRequired" : false
+		},
+		"interCompanyDeal" : {
+			"key" : "interCompanyDeal",
+			"labelKey" : "interCompanyDealLabel",
+			"interCompanyDealLabel" : "interCompanyDeal",
+			"isRequired" : false
+		},
+		"secondLegInternalContractRefNo" : {
+			"key" : "secondLegInternalContractRefNo",
+			"labelKey" : "secondLegInternalContractRefNoLabel",
+			"secondLegInternalContractRefNoLabel" : "secondLegInternalContractRefNo",
+			"isRequired" : false
+		},
+		"firstLegInternalContractRefNo" : {
+			"key" : "firstLegInternalContractRefNo",
+			"labelKey" : "firstLegInternalContractRefNoLabel",
+			"firstLegInternalContractRefNoLabel" : "firstLegInternalContractRefNo",
+			"isRequired" : false
+		},
+	    "corporateId" : {
+			"key" : "corporateId",
+			"labelKey" : "corporateIdLabel",
+			"corporateIdLabel" : "corporateId",
+			"isRequired" : false
+		},
+        "valuationIncotermId" : {
+            "options" : [],
+            "labelKey" : "valuationIncotermId",
+            "valuationIncotermId" : "Valuation INCO Term",
+            "serviceKey" : "incoterm",
+            "isRequired" : false
+        },
+        "valuationCountryId" : {
+            "options" : [],
+            "labelKey" : "valuationCountryId",
+            "valuationCountryId" : "Valuation Country",
+            "serviceKey" : "countriesComboDataFromDB",
+            "isRequired" : false
+        },
+        "valuationCityId" : {
+            "options" : [],
+            "labelKey" : "valuationCityId",
+            "valuationCityId" : "Valuation City",
+            "serviceKey" : "cityComboDataFromDB",
+            "dependsOn" : [ 
+                "valuationCountryId", 
+                "locGroupTypeId"
+            ],
+            "isRequired" : false
+        },
+        "locGroupTypeId" : {
+            "options" : [],
+            "labelKey" : "locGroupTypeId",
+            "locGroupTypeId" : "Valuation Location",
+            "serviceKey" : "incoTermLocationGroupType",
+            "dependsOn" : [ 
+                "valuationIncotermId"
+            ],
+            "isRequired" : false
+        },
+        "contractItemValuationDTO" : {
+            "labelKey" : "contractItemValuationDTO",
+            "contractItemValuationDTO" : "Item Valuation",
+            "isRequired" : false
+        },
+        "totalPrice" : {
+            "labelKey" : "totalPrice",
+            "totalPrice" : "Total Price",
+            "isRequired" : false
+        },
+        "ticketNumber" : {
+            "labelKey" : "ticketNumber",
+            "ticketNumber" : "Ticket Ref No.",
+            "isRequired" : false
+        },
+        "isGrossOrNetQty" : {
+            "labelKey" : "isGrossOrNetQty",
+            "isGrossOrNetQty" : "Invoiceable Qty",
+            "isRequired" : false
+        },
+        "shipVesselDetails" : {
+            "labelKey" : "shipVesselDetails",
+            "shipVesselDetails" : "Ship/Vessel Details",
+            "isRequired" : false
+        },
+        "IS_INTER_INTRA_COMP_APPROVAL_REQ": {
+            "labelKey" : "IS_INTER_INTRA_COMP_APPROVAL_REQ",
+            "IS_INTER_INTRA_COMP_APPROVAL_REQ" : "Is Inter/Intra company approval required",
+            "isRequired" : false
+        }
+    },
+    "sys__UUID" : "contract"
+}

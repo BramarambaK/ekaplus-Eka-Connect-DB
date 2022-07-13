@@ -1,0 +1,117 @@
+{
+    "_id" : "contract_composite",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "processorInfo" : {
+        "processorId" : "4c525236-0b3a-4327-9f0b-e88a57b6d5dd"
+    },
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Bulk Amendment of Contracts",
+    "workflows" : [ 
+        {
+            "data" : "selected.bulkcontractsupdate.listingcontract",
+            "header" : "Bulk Amendment From",
+            "name" : "listingcontract"
+        }, 
+        {
+            "data" : "selected.bulkcontractsupdate.editcontract",
+            "header" : "Bulk Amendment To",
+            "name" : "editcontract"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : false,
+        "dropdownDecisions" : false,
+        "getInitialData" : {
+            "filterBy" : {
+                "sD" : [ 
+                    "contractRefNo", 
+                    "product", 
+                    "issueDate", 
+                    "openQuantity", 
+                    "executedQty", 
+                    "cpName", 
+                    "incoTerm", 
+                    "payTerm", 
+                    "remarks", 
+                    "product", 
+                    "internalContractRefNo"
+                ]
+            }
+        },
+        "sessionStorage" : [ 
+            "contractRefNo", 
+            "product", 
+            "issueDate", 
+            "openQuantity", 
+            "executedQty", 
+            "cpName", 
+            "incoTerm", 
+            "payTerm", 
+            "remarks", 
+            "product", 
+            "internalContractRefNo"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "CANCEL",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOC",
+                    "name" : "bulkcontractsupdate",
+                    "showPopUp" : false
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "bulkamendmentapproval",
+            "label" : "MODIFY",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.bulkcontractsupdate",
+                    "name" : "validationbulkform"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : ""
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data1" : "output.bulkcontractsupdate",
+                    "name" : "bulkamendmentapproval",
+                    "displayType" : "popup"
+                }, 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOC",
+                    "name" : "bulkcontractsupdate",
+                    "showPopUp" : false
+                }
+            ]
+        }
+    ],
+    "taskId" : "bulkcontractsupdate",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}
