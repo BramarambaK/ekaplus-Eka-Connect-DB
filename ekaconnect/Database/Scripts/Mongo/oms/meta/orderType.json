@@ -1,0 +1,26 @@
+{
+  "_id": ObjectId("5d418258bf1c316b79e3b7dd"),
+  "type": "property",
+  "name": "orderType",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "label" : "Order Type",
+  "defaultValue" : [
+    {
+      "key": "Limit",
+      "value": "Limit"
+    },
+    {
+      "key": "Stop Limit",
+      "value": "Stop Limit"
+    },
+    {
+      "key": "Market",
+      "value": "Market"
+    }
+  ],
+  "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "description": "Values available for order type"
+}

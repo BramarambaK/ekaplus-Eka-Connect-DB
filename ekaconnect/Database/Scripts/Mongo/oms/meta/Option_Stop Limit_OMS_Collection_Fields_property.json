@@ -1,0 +1,13 @@
+{
+    "_id" : "Option_Stop Limit_OMS_Collection_Fields",
+    "type" : "property",
+    "name" : "Option_Stop Limit_collection_fields",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "label" : "Option Stop Limit Collection Fields",
+    "defaultValue" : "MsgType:messageType,Account:account,Broker:broker,InsType:instrumentType,InsName:instrument,TimeInForce:timeInForce,Side:tradeType,ContractMonth:promptMonth,StrikePrice:strikePrice,OptionType:optionType,OrderType:orderType,LimitPrice:limitPrice,TriggerPrice:triggerPrice,OrderQty:orderQuantity,OrigClOrdID:origClOrdId,Remarks:remarks",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "description": "Fields for order type Stop Limit with OPT option"
+}

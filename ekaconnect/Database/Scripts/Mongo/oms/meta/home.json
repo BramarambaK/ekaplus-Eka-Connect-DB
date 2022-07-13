@@ -1,0 +1,15 @@
+{
+  "layout": {"name": "list"},
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "workflow": "listderivative",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "decisions": [],
+  "_id": "home_OMS",
+  "type": "workflow",
+  "taskId": "home",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "Home",
+  "sys__UUID" : "609f718f-31eb-4bbc-b603-9ab5fa471d8b"
+}

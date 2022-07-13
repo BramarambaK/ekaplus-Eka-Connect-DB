@@ -1,0 +1,13 @@
+{
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {"processorId": "c7d369a4-f19f-462f-b028-9ef6456ae890"},
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_ST_PROCESSOR_CREATE_DERIVATIVE_ORDER_OMS",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_CREATE_DERIVATIVE_ORDER",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "Create Derivative Processor Task",
+  "sys__UUID" : "85a11435-f889-47a2-8659-3020990c256b"
+}

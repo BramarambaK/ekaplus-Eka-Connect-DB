@@ -1,0 +1,12 @@
+{
+    "_id" : "Property_OMS_order_status_collection_name",
+    "type" : "property",
+    "name" : "order_status_collection_name",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "label": "Order Status Collection Name",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "description": "Order Status Collection Name"
+}

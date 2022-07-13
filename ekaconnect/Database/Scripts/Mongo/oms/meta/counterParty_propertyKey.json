@@ -1,0 +1,34 @@
+{
+  "_id": "counterParty_propertyKey",
+  "type": "property",
+  "name": "counterParty",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "label": "CounterParty",
+  "defaultValue": [
+    {
+      "key": "McDonalds",
+      "value": "McDonalds"
+    },
+    {
+      "key": "Panera Bread Company",
+      "value": "Panera Bread Company"
+    },
+    {
+      "key": "Safeway",
+      "value": "Safeway"
+    },
+    {
+      "key": "Walmart",
+      "value": "Walmart"
+    },
+    {
+      "key": "Foremost Farms",
+      "value": "Foremost Farms"
+    }
+  ],
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "description": "CounterParty available for placing orders"
+}

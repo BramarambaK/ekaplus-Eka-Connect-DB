@@ -1,0 +1,17 @@
+{
+  "implicitActions": [{
+    "field": "orderStatus",
+    "type": "fieldUpdate",
+    "value": "Cancelled"
+  }],
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_ST_CANCEL_ORDER_DERIVATIVE_ORDER_OMS",
+  "type": "workflow",
+  "taskId": "_ST_CANCEL_ORDER_DERIVATIVE_ORDER",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "System Cancel Order",
+  "sys__UUID" : "d812b120-ff35-4e14-89eb-24bb25d387b8"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "Property_OMS_Collection_Fields",
+    "type" : "property",
+    "name" : "collection_fields",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "label" : "Collection Fields",
+    "defaultValue" : "SourceID:Integer,MessageType:String,Account:String,Broker:String,InstrumentType:String,InstrumentName:String,TimeInForce:String,TradeType:String,ContractMonth:String,StrikePrice:Number,OptionType:String,OrderType:String,LimitPrice:Number,TriggerPrice:Number,Quantity:Integer,OrigClOrdID:String,OpenClose:String",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "description": "Fields present in platform collection"
+}

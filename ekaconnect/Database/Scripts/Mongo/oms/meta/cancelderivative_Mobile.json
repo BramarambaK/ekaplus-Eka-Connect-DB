@@ -1,0 +1,74 @@
+{
+    "_id" : "cancelderivative_OMS_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "getDataFromExternalAPI" : true,
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "label" : "Cancel",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to cancel ${sourceId}?"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "UPDATE",
+            "task" : "cancelderivative",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got cancelled successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got cancelled with some errors"
+                        }
+                    },
+                    "data" : "output.cancelderivative",
+                    "appendMsg" : false,
+                    "name" : "_ST_CANCEL_ORDER_DERIVATIVE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got cancelled successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output.cancelderivative",
+                    "appendMsg" : true,
+                    "name" : "_EXT_ORDER_CANCEL_COLLECTION"
+                }, 
+                {
+                    "name" : "listderivative",
+                    "showPopUp" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "YES",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "CANCEL_DERIVATIVE_ORDER",
+    "taskId" : "cancelderivative",
+    "object" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "deviceType" : "mobile"
+}

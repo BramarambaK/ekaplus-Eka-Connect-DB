@@ -1,0 +1,154 @@
+{
+    "_id" : "editpreviewderivative_OMS",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "label" : "Replace Order",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {
+            "font-size" : "18px"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "view",
+        "formStyle" : {},
+        "formLayoutStyle" : {
+            "margin" : "auto"
+        },
+        "defaultFormValueStyle" : {
+            "width" : "auto",
+            "display" : "inline-block",
+            "font-weight" : "bold",
+            "margin-right" : "5px",
+            "font-size" : "18px"
+        },
+        "type" : "row"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "editderivative",
+                    "data" : "selected.editderivative",
+                    "displayType" : "popup"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "MODIFY",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "editpreviewderivative",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got replaced with some errors"
+                        }
+                    },
+                    "data" : "output.editpreviewderivative",
+                    "appendMsg" : false,
+                    "name" : "_ST_EDIT_DERIVATIVE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got replaced with some errors"
+                        }
+                    },
+                    "data" : "output._ST_EDIT_DERIVATIVE_ORDER",
+                    "appendMsg" : true,
+                    "name" : "_EXT_ORDER_EDIT_COLLECTION"
+                }, 
+                {
+                    "name" : "listderivative",
+                    "showPopUp" : "true"
+                }
+            ],
+            "label" : "REPLACE ORDER",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "EDIT_PREVIEW_DERIVATIVE_ORDER",
+    "fields" : [ 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : "Replace ",
+                "key" : "orderType"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : "with Limit Price ",
+                "key" : "limitPrice"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : "for Quantity ",
+                "key" : "orderQuantity"
+            }
+        ]
+    ],
+    "taskId" : "editpreviewderivative",
+    "object" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "sys__UUID" : "b490b17c-70f2-431d-a79c-77c4f75e77d0"
+}

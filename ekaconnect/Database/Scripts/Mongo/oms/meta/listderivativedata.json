@@ -1,0 +1,13 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "decisions": [],
+  "_id": "listderivativedata_OMS",
+  "type": "workflow",
+  "taskId": "listderivativedata",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "List Derivative Data",
+  "sys__UUID" : "b47ade41-7039-4c75-a8b6-63dffdb3143f"
+}

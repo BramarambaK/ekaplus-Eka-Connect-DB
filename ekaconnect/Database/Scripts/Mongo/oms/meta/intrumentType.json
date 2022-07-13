@@ -1,0 +1,22 @@
+{
+  "_id": ObjectId("5d416133bf1c316b79e3a012"),
+  "type": "property",
+  "name": "instrumentType",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "label" : "Instrument Type",
+  "defaultValue" : [
+    {
+      "key": "Future",
+      "value": "FUT"
+    },
+    {
+      "key": "Option",
+      "value": "OPT"
+    }
+  ],
+  "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "description": "Values for instrument type"
+}

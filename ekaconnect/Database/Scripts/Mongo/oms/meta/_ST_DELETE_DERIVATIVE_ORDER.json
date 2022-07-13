@@ -1,0 +1,12 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_ST_DELETE_DERIVATIVE_ORDER_OMS",
+  "type": "workflow",
+  "taskId": "_ST_DELETE_DERIVATIVE_ORDER",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "System Delete Order",
+  "sys__UUID" : "c1239c84-9aa1-45ee-986e-fbf70f15114a"
+}

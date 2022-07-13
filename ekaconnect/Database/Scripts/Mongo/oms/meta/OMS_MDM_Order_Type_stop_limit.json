@@ -1,0 +1,8 @@
+{
+    "_id" : "OMS_MDM_Order_Type_stop_limit",
+    "key" : "Stop Limit",
+    "value" : "Stop Limit",
+    "object" : "orderType",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "type" : "connectmdm"
+}

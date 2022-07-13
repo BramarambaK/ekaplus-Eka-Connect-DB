@@ -1,0 +1,165 @@
+{
+    "_id" : "editderivative_OMS_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "label" : "Replace Order",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "edit",
+        "formStyle" : {
+            "margin" : "auto",
+            "max-width" : "100%",
+            "font-weight" : "600"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "input" : [ 
+        "sourceId", 
+        "instrument", 
+        "promptMonth", 
+        "timeInForce", 
+        "broker"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative",
+                    "action" : "Cancel",
+                    "type" : "client"
+                }
+            ],
+            "label" : "Cancel",
+            "position" : "TopLeft"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editderivative",
+            "outcomes" : [ 
+                {
+                    "data" : "output.editderivative",
+                    "name" : "_ST_PROCESSOR_CREATE_DERIVATIVE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got replaced with some errors"
+                        }
+                    },
+                    "data" : "output.editderivative",
+                    "appendMsg" : true,
+                    "name" : "_ST_EDIT_DERIVATIVE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got cancelled successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output.editderivative",
+                    "appendMsg" : false,
+                    "name" : "_EXT_ORDER_EDIT_COLLECTION"
+                }, 
+                {
+                    "name" : "listderivative",
+                    "showPopUp" : "true"
+                }
+            ],
+            "label" : "Update",
+            "position" : "TopRight",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "ORDER_EDIT",
+    "fields" : [ 
+            [ 
+                {
+                    "type" : "hidden",
+                    "key" : "sourceId"
+                }, 
+                {
+                    "disabled" : true,
+                    "type" : "readOnly",
+                    "key" : "tradeType"
+                }, 
+                {
+                    "disabled" : true,
+                    "type" : "readOnly",
+                    "key" : "source"
+                }, 
+                {
+                    "disabled" : true,
+                    "type" : "readOnly",
+                    "key" : "instrumentType"
+                }, 
+                {
+                    "disabled" : true,
+                    "type" : "readOnly",
+                    "key" : "filledQuantity"
+                }, 
+                {
+                    "disabled" : true,
+                    "type" : "readOnly",
+                    "key" : "instrumentDetails"
+                }, 
+                {
+                    "disabled" : true,
+                    "type" : "readOnly",
+                    "key" : "orderStatus"
+                },
+                {},
+                {
+                    "key" : "orderType"
+                }, 
+                {
+                    "key" : "limitPrice"
+                }, 
+                {
+                    "key" : "triggerPrice"
+                }, 
+                {
+                    "key" : "orderQuantity"
+                }
+            ]
+    ],
+    "taskId" : "editderivative",
+    "object" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "deviceType" : "mobile"
+}

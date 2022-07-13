@@ -1,0 +1,8 @@
+{ 
+    "_id" : "OMS_MDM_Instrument_Type_fut", 
+    "key" : "Future", 
+    "value" : "FUT", 
+    "object" : "instrumentType",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "type" : "connectmdm"
+}

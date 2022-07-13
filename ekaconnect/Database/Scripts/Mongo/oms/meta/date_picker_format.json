@@ -1,0 +1,13 @@
+{
+    "_id" : "Property_OMS_Date_Picker_Format",
+    "type" : "property",
+    "name" : "date_picker_format",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "editSupportedInUI" : false,
+    "label" : "Date Picker Format",
+    "defaultValue" : "YYYY-MM-DD",
+    "description": "Format of date picker"
+}

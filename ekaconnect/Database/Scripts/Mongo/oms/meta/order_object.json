@@ -1,0 +1,372 @@
+{
+  "_id": "OMS_Order_Object",
+  "name": "order",
+  "label": "ORDER MANAGEMENT SYSTEM",
+  "type": "object",
+  "version": "1",
+  "tenantID": "reference",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": ["sourceId"],
+  "versionHistory": [
+    {
+      "version": "2",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [
+    "account",
+    "broker",
+    "instrumentType",
+    "instrument",
+    "timeInForce",
+    "counterParty",
+    "tradeDate",
+    "promptMonth",
+    "strikePrice",
+    "orderType",
+    "limitPrice",
+    "tradeType",
+    "triggerPrice",
+    "orderQuantity",
+    "expirtyDate",
+    "orderNo",
+    "source",
+    "instrumentDetails",
+    "filledQuantity",
+    "orderStatus",
+    "orderNo",
+    "lastPx",
+    "symbol"
+  ],
+  "fields": {
+    "sourceId": {
+      "sourceId": "Source Id ",
+      "labelKey": "sourceId",
+      "serialNumber": {
+        "startsWith": "1000000000"
+      }
+    },
+    "text": {
+      "text": "Reject",
+      "labelKey": "text",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+
+    "account": {
+      "account": "Account",
+      "labelKey": "account",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "orderNo": {
+      "orderNo": "Order No",
+      "labelKey": "orderNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "source": {
+      "source": "Source",
+      "labelKey": "source",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "instrumentDetails": {
+      "instrumentDetails": "Instrument Details",
+      "labelKey": "instrumentDetails",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "instrument": {
+      "instrument": "Instrument",
+      "labelKey": "instrument",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "propertyKey": "instrument"
+    },
+    "promptMonth": {
+      "promptMonth": "Prompt Month",
+      "labelKey": "promptMonth",
+      "type": "monthpicker",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "tradeType": {
+      "tradeType": "Trade Type",
+      "labelKey": "tradeType",
+      "type": "radio",
+      "isRequired": true,
+      "dataType": "String",
+      "propertyKey": "tradeType"
+    },
+    "orderType": {
+      "orderType": "Order Type",
+      "labelKey": "orderType",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "serviceKey": "orderType",
+      "parent": ["instrumentType"],
+      "children": ["triggerPrice", "limitPrice"]
+    },
+    "triggerPrice": {
+      "triggerPrice": "Trigger Price",
+      "labelKey": "triggerPrice",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "disability": "return '${orderType}' == 'Limit' || '${orderType}' == 'Market' ? true : false",
+        "value": "if('${orderType}' == 'Limit' || '${orderType}' == 'Market') {return null} else {return}"
+      }
+    },
+    "limitPrice": {
+      "limitPrice": "Limit Price",
+      "labelKey": "limitPrice",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "disability": "return '${orderType}' == 'Market' ? true : false",
+        "value": "if('${orderType}' == 'Market') {return null} else {return}"
+      }
+    },
+    "orderQuantity": {
+      "orderQuantity": "Order Quantity",
+      "labelKey": "orderQuantity",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "filledQuantity": {
+      "filledQuantity": "Filled Quantity",
+      "labelKey": "filledQuantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "lastPx": {
+      "lastPx": "Last Price",
+      "labelKey": "lastPx",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "symbol": {
+      "symbol": "Symbol",
+      "labelKey": "symbol",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "orderStatus": {
+      "orderStatus": "Order Status",
+      "labelKey": "orderStatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "broker": {
+      "broker": "Broker",
+      "labelKey": "broker",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "propertyKey": "broker"
+    },
+    "instrumentType": {
+      "instrumentType": "Instrument Type",
+      "labelKey": "instrumentType",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "serviceKey": "instrumentType",
+      "children": ["orderType", "strikePrice", "optionType"]
+    },
+    "timeInForce": {
+      "timeInForce": "Time In Force",
+      "labelKey": "timeInForce",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "propertyKey": "timeInForce"
+    },
+    "counterParty": {
+      "counterParty": "Counter Party",
+      "labelKey": "counterParty",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "counterParty"
+    },
+    "tradeDate": {
+      "tradeDate": "Order Date",
+      "labelKey": "tradeDate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "tradeId": {
+      "tradeId": "Trade ID",
+      "labelKey": "tradeId",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "counterParty"
+    },
+    "strikePrice": {
+      "strikePrice": "Strike Price",
+      "labelKey": "strikePrice",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "disability": "return '${instrumentType}' == 'Future' ? true : false",
+        "value": "if('${instrumentType}' == 'Future') {return null} else {return}"
+      }
+    },
+    "expirtyDate": {
+      "expirtyDate": "Expiry Date",
+      "labelKey": "expirtyDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "appName": {
+      "appName": "Type",
+      "labelKey": "appName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "length": "20"
+    },
+    "objectName": {
+      "objectName": "Type",
+      "labelKey": "objectName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "length": "10"
+    },
+    "sendingTime": {
+      "sendingTime": "Sending Time",
+      "labelKey": "sendingTime",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "optionType": {
+      "optionType": "Option Type",
+      "labelKey": "optionType",
+      "type": "dropdown",
+      "dataType": "String",
+      "isRequired": false,
+      "propertyKey": "optionType",
+      "UIupdates": {
+        "disability": "return '${instrumentType}' == 'Future' ? true : false",
+        "value": "if('${instrumentType}' == 'Future') {return null} else {return}"
+      }
+    },
+    "price": {
+      "price": "Price",
+      "labelKey": "price",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "transactTime": {
+      "transactTime": "Transact Time",
+      "labelKey": "transactTime",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "Status": {
+      "Status": "Status",
+      "labelKey": "Status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "origClOrdId": {
+      "origClOrdId": "Orig Cl Ord Id",
+      "labelKey": "origClOrdId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "openClose": {
+      "openClose": "Open Close",
+      "labelKey": "openClose",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "operation": {
+      "operation": "Operation",
+      "labelKey": "operation",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "layout": {
+    "fields": [
+      [
+        "account",
+        "broker",
+        "orderNo",
+        "source",
+        "instrumentType",
+        "tradeDate",
+        "filledQuantity",
+        "instrumentDetails",
+        "orderStatus",
+        "timeInForce",
+        "instrument"
+      ],
+      [
+        "sourceId",
+        "tradeType",
+        "promptMonth",
+        "strikePrice",
+        "triggerPrice",
+        "counterParty",
+        "orderQuantity",
+        "orderType",
+        "limitPrice",
+        "expirtyDate"
+      ]
+    ]
+  },
+  "additionalProperties": {},
+  "sys__createdOn": ISODate("2019-02-07T19:21:17.926Z"),
+  "sys__createdBy": "admin",
+  "sys__UUID": "8ca20157-5616-41ec-9fb5-fe8a733c948b"
+}

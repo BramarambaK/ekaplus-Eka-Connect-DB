@@ -1,0 +1,14 @@
+{
+    "_id" : "Property_OMS_Month_Picker_Format",
+    "type" : "property",
+    "name" : "month_picker_format",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+	"visibility" : "public",
+    "length" : "20",
+    "editSupportedInUI" : false,
+    "label" : "Month Picker Format",
+    "defaultValue" : "MMM-YYYY",
+    "description": "Format for month picker"
+}

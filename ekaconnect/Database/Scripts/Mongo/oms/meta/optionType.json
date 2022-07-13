@@ -1,0 +1,22 @@
+{
+  "_id": ObjectId("5d43d32b75090972591629a0"),
+  "type": "property",
+  "name": "optionType",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "label" : "Option Type",
+  "defaultValue" : [
+    {
+      "key": "Put",
+      "value": "Put"
+    },
+    {
+      "key": "Call",
+      "value": "Call"
+    }
+  ],
+  "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "description": "Values available for option type"
+}

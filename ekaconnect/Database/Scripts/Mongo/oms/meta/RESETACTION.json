@@ -1,0 +1,13 @@
+{
+  "componentType": "client",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "action": "reset",
+  "_id": "RESETACTION_OMS",
+  "type": "workflow",
+  "taskId": "RESETACTION",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "Reset Action",
+  "sys__UUID" : "cd5aa40d-a4f0-4e9d-921b-71a37d062d3b"
+}

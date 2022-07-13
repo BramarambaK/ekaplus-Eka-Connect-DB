@@ -1,0 +1,101 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "rowAction": ["viewderivative"],
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "label": "Derivative Order View",
+  "type": "workflow",
+  "layout": {"name": "view"},
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "EDIT",
+      "outcomes": [{"name": "editderivative"}],
+      "label": "Edit"
+    },
+    {
+      "btnClass": "btn-danger",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "outcomes": [
+        {"name": "_ST_DELETE_DERIVATIVE_ORDER"},
+        {"name": "listderivative"}
+      ],
+      "label": "Delete"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "APPROVE",
+      "labelkey": "APPROVE",
+      "outcomes": [
+        {"name": "_ST_APPROVE_DERIVATIVE_ORDER"},
+        {"name": "listderivative"}
+      ],
+      "label": "Approve"
+    },
+    {
+      "btnClass": "btn-warning",
+      "objectAction": "REJECT",
+      "labelkey": "REJECT",
+      "outcomes": [
+        {"name": "_ST_REJECT_DERIVATIVE_ORDER"},
+        {"name": "listderivative"}
+      ],
+      "label": "Reject"
+    }
+  ],
+  "_id": "viewderivative_OMS",
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "key": "orderNo"
+      },
+      {
+        "suffix": "",
+        "key": "source"
+      },
+      {"key": "instrumentType"},
+      {
+        "suffix": "",
+        "key": "tradeDate"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "key": "tradeType"
+      },
+      {
+        "suffix": "",
+        "key": "promptMonth"
+      },
+      {
+        "suffix": "",
+        "key": "triggerPrice"
+      },
+      {
+        "suffix": "",
+        "key": "counterParty"
+      },
+      {
+        "suffix": "",
+        "key": "orderQuantity"
+      },
+      {
+        "suffix": "",
+        "key": "orderType"
+      },
+      {
+        "suffix": "",
+        "key": "limitPrice"
+      }
+    ]
+  ],
+  "taskId": "viewderivative",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "sys__UUID" : "499162b6-03e6-4190-a6ce-4a6efb8b44ac"
+}

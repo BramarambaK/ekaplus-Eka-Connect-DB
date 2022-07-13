@@ -1,0 +1,173 @@
+{
+    "_id" : "createderivative_OMS_Mobile",
+    "object" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "label" : "New Order",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "create",
+        "recommedationNeed" : true,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "processorInfo" : {
+            "processorId" : "4400e251-360b-4a05-bf95-62628ba45210"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative",
+                    "action" : "Cancel",
+                    "type" : "client"
+                }
+            ],
+            "label" : "Cancel",
+            "position" : "TopLeft"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_PROCESSOR_CREATE_DERIVATIVE_ORDER",
+                    "data" : "output.createderivative"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output.createderivative",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_DERIVATIVE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "appendDataValues" : [ 
+                        {
+                            "outputTask" : "output._ST_CREATE_DERIVATIVE_ORDER",
+                            "field" : "id",
+                            "value" : "_id"
+                        }
+                    ],
+                    "data" : "output._ST_CREATE_DERIVATIVE_ORDER",
+                    "appendMsg" : true,
+                    "name" : "_EXT_CREATE_COLLECTION"
+                }, 
+                {
+                    "name" : "listderivative",
+                    "showPopUp" : true
+                }
+            ],
+            "label" : "Submit",
+            "position" : "TopRight",
+            "labelkey" : "REVIEW",
+            "task" : "createderivative",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "action" : "Audio",
+                    "style" : {
+                        "btnImage" : "Microphone"
+                    }
+                }
+            ],
+            "position" : "TopRight"
+        }
+    ],
+    "labelKey" : "CREATE_DERIVATIVE_ORDER",
+    "fields" : [ 
+        [ 
+                {
+                    "disabled" : "true",
+                    "type" : "readOnly",
+                    "value" : "rs365561",
+                    "key" : "account"
+                }, 
+                {
+                    "key" : "broker"
+                }, 
+                {
+                    "key" : "instrumentType"
+                }, 
+                {
+                    "key" : "instrument"
+                }, 
+                {
+                    "key" : "timeInForce"
+                }, 
+                {
+                    "key" : "counterParty"
+                }, 
+                {
+                    "disabled" : true,
+                    "type" : "readOnly",
+                    "value" : "currentDate",
+                    "key" : "tradeDate"
+                }
+        ], 
+        [ 
+                {
+                    "key" : "tradeType"
+                }, 
+                {
+                    "key" : "promptMonth"
+                }, 
+                {
+                    "key" : "orderType"
+                }, 
+                {
+                    "key" : "limitPrice"
+                }, 
+                {
+                    "key" : "orderQuantity"
+                }, 
+                {
+                    "key" : "expirtyDate"
+                }
+        ]
+    ],
+    "taskId" : "createderivative",
+    "deviceType" : "mobile"
+}

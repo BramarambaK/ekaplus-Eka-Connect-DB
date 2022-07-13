@@ -1,0 +1,15 @@
+{
+    "_id" : "account_value_property",
+    "type" : "property",
+    "name" : "account_value",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "editSupportedInUI" : true,
+    "label" : "Account Value",
+    "defaultValue" : "rs365561",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "description": "Account id used for the REDI connection rs365561 (QA) and DEMO (preprod)",
+    "listOfValues": "rs365561,DEMO"
+}

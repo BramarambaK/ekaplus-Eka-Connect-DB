@@ -1,0 +1,107 @@
+{
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "label": "Order Lifecycle",
+  "type": "workflow",
+  "layout": {
+    "name": "lifecycle"
+  },
+  "decisions": [
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "listderivative"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "_id": "lifecyclederivative_OMS_Mobile",
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "lifecyclederivative",
+  "getDataFromExternalAPI": true,
+  "apiInfo": {
+    "path": "/app/oms/orderdetails",
+    "headers": {},
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${eka_utility_host}",
+    "body": {}
+  },
+  "fields": [
+    {
+      "placement": "topHeading",
+      "key": "Order Status Log"
+    },
+    {
+      "placement": "topHeading",
+      "key": "orderNo"
+    },
+    {
+      "placement": "header",
+      "key": "tradeType"
+    },
+    {
+      "placement": "header",
+      "key": "instrumentType"
+    },
+    {
+      "placement": "header",
+      "key": "instrument"
+    },
+    {
+      "placement": "header",
+      "key": "source"
+    },
+    {
+      "placement": "header",
+      "key": "symbol"
+    },
+    {
+      "placement": "header",
+      "key": "tradeDate",
+      "dateformat": "YYYY-MM-dd"
+    },
+    {
+      "placement": "row1",
+      "key": "transactTime",
+      "dateformat" : "YYYY-MM-dd HH:mm:ss"
+    },
+    {
+      "placement": "row2",
+      "key": "orderStatus"
+    },
+    {
+      "placement": "row3",
+      "key": "tradeId"
+    },
+    {
+      "placement": "row3",
+      "key": "orderType"
+    },
+    {
+      "placement": "row3",
+      "key": "limitPrice"
+    },
+    {
+      "placement": "row3",
+      "key": "orderQuantity"
+    },
+    {
+      "placement": "row3",
+      "key": "filledQuantity"
+    },
+    {
+      "placement": "row3",
+      "key": "lastPx"
+    }
+  ],
+  "deviceType": "mobile"
+}

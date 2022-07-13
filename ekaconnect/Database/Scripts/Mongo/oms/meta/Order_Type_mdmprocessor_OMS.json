@@ -1,0 +1,11 @@
+{
+    "_id" : "Order_Type_mdmprocessor_OMS",
+    "name" : "Order_Type_mdmprocessor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "snippet" : "var mdmData = [];\r\nvar data = {};\r\nreq.body.mdmProcessorServiceKey = JSON.parse(req.body.mdmProcessorServiceKey);\r\nmdmData.push({ key: \"Limit\", value: \"Limit\" });\r\nmdmData.push({ key: \"Stop Limit\", value: \"Stop Limit\" });\r\nmdmData.push({ key: \"Market\", value: \"Market\" });\r\ndata = { orderType: mdmData };\r\nif (\r\n  req.body &&\r\n  req.body.mdmProcessorServiceKey &&\r\n  req.body.mdmProcessorServiceKey[0] &&\r\n  req.body.mdmProcessorServiceKey[0].dependsOn &&\r\n  req.body.mdmProcessorServiceKey[0].dependsOn[0]\r\n) {\r\n  mdmData = [];\r\n  if (req.body.mdmProcessorServiceKey[0].dependsOn[0] === \"Future\") {\r\n    mdmData.push({ key: \"Limit\", value: \"Limit\" });\r\n    mdmData.push({ key: \"Stop Limit\", value: \"Stop Limit\" });\r\n    mdmData.push({ key: \"Market\", value: \"Market\" });\r\n  } else if (req.body.mdmProcessorServiceKey[0].dependsOn[0] === \"Option\") {\r\n    mdmData.push({ key: \"Limit\", value: \"Limit\" });\r\n    mdmData.push({ key: \"Market\", value: \"Market\" });\r\n  }\r\n  data = { orderType: mdmData };\r\n}\r\nres.status(200).send(data);\r\n",
+    "sys__UUID" : "4400e251-360b-4a05-bf95-62628ba45210",
+    "sys__createdOn" : ISODate("2019-06-26T08:50:01.556Z"),
+    "sys__createdBy" : "Bravo"
+}

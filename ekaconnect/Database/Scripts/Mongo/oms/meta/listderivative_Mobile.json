@@ -1,0 +1,187 @@
+{
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "label": "Derivative Order Listing",
+  "type": "workflow",
+  "rows": "100",
+  "apiInfo": {
+    "path": "/app/oms/orderlist",
+    "headers": {},
+    "inputMapping": {},
+    "method": "GET",
+    "useInputMapping": false,
+    "host": "${eka_utility_host}",
+    "body": {}
+  },
+  "layout": {
+    "selection": "row",
+    "selectionMode": "single",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-dark",
+    "highlightChangedData": {
+      "time": 7000
+    },
+    "dropdownDecisions": true,
+    "lazyLoading": true,
+    "refreshData": {
+      "time": 30000
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.createderivative",
+          "name": "createderivative"
+        }
+      ],
+      "label": "New",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "row",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "name": "lifecyclederivative"
+        }
+      ],
+      "label": "Lifecycle",
+      "position": "top",
+      "iconClass": "info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "row",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "popupClass": "edit-modal",
+          "name": "editderivative"
+        }
+      ],
+      "disabled": "field.orderStatus === 'Rejected' || field.orderStatus === 'Order Sent' || field.orderStatus === 'Order Cancelled' || field.orderStatus === 'Order Replaced' || field.orderStatus === 'Filled' || field.orderStatus === 'Done for day' || field.orderStatus === 'Rejected' || field.orderStatus === 'Suspended' || field.orderStatus === 'Expired' || field.orderStatus === 'Cancelled' || field.orderStatus === 'Canceled'",
+      "label": "Replace order",
+      "position": "top",
+      "iconClass": "edit-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "row",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "name": "cancelderivative"
+        }
+      ],
+      "disabled": "field.orderStatus === 'Rejected' || field.orderStatus === 'Order Sent' || field.orderStatus === 'Order Cancelled' || field.orderStatus === 'Order Replaced' || field.orderStatus === 'Filled' || field.orderStatus === 'Done for day' || field.orderStatus === 'Rejected' || field.orderStatus === 'Suspended' || field.orderStatus === 'Expired' || field.orderStatus === 'Cancelled' || field.orderStatus === 'Canceled'",
+      "label": "Cancel order",
+      "position": "top",
+      "iconClass": "delete-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "name": "createderivative"
+        }
+      ],
+      "label": "Copy order",
+      "position": "top",
+      "iconClass": "delete-icon"
+    }
+  ],
+  "_id": "listderivative_OMS_Mobile",
+  "labelKey": "DERIVATIVE_ORDER_LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "orderNo",
+      "placement": "Row1"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "tradeDate",
+      "placement": "Row1"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "instrument",
+      "placement": "Row2"
+    },{
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "orderQuantity",
+      "placement": "Row2"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "orderType",
+      "placement": "Row2"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "limitPrice",
+      "placement": "Row3"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "promptMonth",
+      "placement": "Row3"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "orderStatus",
+      "placement": "Row3"
+    }
+  ],
+  "taskId": "listderivative",
+  "deviceType":"mobile"
+}

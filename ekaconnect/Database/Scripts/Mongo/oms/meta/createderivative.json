@@ -1,0 +1,196 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "label": "New Order",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {"display": true},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "processorInfo" : {
+      "processorId" : "4400e251-360b-4a05-bf95-62628ba45210"
+  }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "listderivative"}],
+      "label": "CLOSE",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [{
+        "name": "RESETACTION",
+        "action": "reset",
+        "type": "client"
+      }],
+      "style": {"margin-right": "auto"},
+      "label": "RESET",
+      "position": "bottom"
+    },
+    {
+      "btnClass" : "btn-primary custom-btn oms-blue",
+      "objectAction" : "READ",
+      "labelkey" : "REVIEW",
+      "task" : "createderivative",
+      "outcomes" : [ 
+          {
+            "name" : "_ST_VALIDATE_DERIVATIVE_ORDER",
+            "appendMsg" : false,
+            "data" : "output.createderivative"
+          }, 
+          {
+              "data" : "output.createderivative",
+              "appendMsg" : false,
+              "name" : "_ST_PROCESSOR_CREATE_DERIVATIVE_ORDER"
+          }, 
+          {
+              "data" : "selected.createderivative",
+              "name" : "previewderivative",
+              "displayType" : "popup"
+          }
+      ],
+      "label" : "PREVIEW",
+      "position" : "bottom",
+      "type" : "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "listderivative"}],
+      "position": "header",
+      "type": "close"
+    }
+  ],
+  "_id": "createderivative_OMS",
+  "labelKey": "CREATE_DERIVATIVE_ORDER",
+  "fields": [
+    [
+      {
+        "disabled": "true",
+        "style": {"width": "80px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "type": "readOnly",
+        "value": "${properties.account_value}",
+        "key": "account"
+      },
+      {
+        "style": {"width": "120px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "broker"
+      },
+      {
+        "style": {"width": "120px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "instrumentType",
+		"value" : "Future"
+      },
+      {
+        "style": {"width": "120px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "instrument"
+      },
+      {
+        "style": {"width": "120px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "timeInForce"
+      },
+      {
+        "style": {"width": "120px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "counterParty"
+      },
+      {
+        "disabled": true,
+        "style": {"width": "120px"},
+        "formItemStyle": {"margin-left": "auto"},
+        "suffix": "",
+        "type": "readOnly",
+        "value": "currentDate",
+        "key": "tradeDate"
+      }
+    ],
+    [
+      {
+        "style": {"width": "80px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "tradeType"
+      },
+      {
+        "style": {"width": "100px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "promptMonth"
+      },
+      {
+        "style": {"width": "80px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "strikePrice"
+      },
+      {
+        "style": {"width": "100px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "optionType"
+      },
+      {
+        "style": {"width": "100px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "orderType"
+      },
+      {
+        "style": {"width": "80px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "limitPrice"
+      },
+      {
+        "style": {"width": "80px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "triggerPrice"
+      },
+      {
+        "style": {"width": "100px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "orderQuantity"
+      },
+      {
+        "style": {"width": "90px"},
+        "formItemStyle": {"margin-right": "15px"},
+        "suffix": "",
+        "key": "expirtyDate",
+        "minimumDate" : true
+      }
+    ]
+  ],
+  "taskId": "createderivative",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "sys__UUID" : "f1cf6f04-a270-472d-a19a-a987885a8ae8"
+}

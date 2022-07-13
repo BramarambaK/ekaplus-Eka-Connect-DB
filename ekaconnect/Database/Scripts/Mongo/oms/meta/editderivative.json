@@ -1,0 +1,299 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "label": "Replace order",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {"justify-content": "flex-start"},
+    "defaultFormLabelStyle": {
+      "width" : "250px"
+    },
+    "topLine": {"display": true},
+    "name": "edit",
+    "formStyle": {
+      "margin": "auto",
+      "max-width": "100%",
+      "font-weight": "600"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "input": [
+    "sourceId",
+    "instrument",
+    "promptMonth",
+    "timeInForce",
+    "broker"
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [{"name": "listderivative"}],
+      "style": {"margin-right": "auto"},
+      "label": "CLOSE",
+      "position": "bottom"
+    },
+    {
+      "btnClass" : "btn-primary custom-btn oms-blue",
+      "objectAction" : "READ",
+      "labelkey" : "REVIEW",
+      "task" : "editderivative",
+      "fieldsNeedToComp" : [ 
+          {
+              "key" : "limitPrice"
+          }, 
+          {
+              "key" : "orderQuantity"
+          }, 
+          {
+              "key" : "orderType"
+          }, 
+          {
+              "key" : "triggerPrice"
+          }
+      ],
+      "outcomes" : [ 
+          {
+            "name" : "_ST_VALIDATE_DERIVATIVE_ORDER",
+            "appendMsg" : false,
+            "data" : "output.editderivative"
+          },
+          {
+              "data" : "output.editderivative",
+              "appendMsg" : false,
+              "name" : "_ST_PROCESSOR_CREATE_DERIVATIVE_ORDER"
+          }, 
+          {
+              "data" : "selected.listderivative",
+              "name" : "editpreviewderivative",
+              "displayType" : "popup"
+          }
+      ],
+      "label" : "PREVIEW",
+      "position" : "bottom",
+      "type" : "submit"
+  },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "listderivative"}],
+      "position": "header",
+      "type": "close"
+    }
+  ],
+  "_id": "editderivative_OMS",
+  "labelKey": "ORDER_EDIT",
+  "fields": [
+    [
+      {
+        "type": "hidden",
+        "style": {"display": "none"},
+        "key": "sourceId"
+      },
+      {
+        "type" : "hidden",
+        "style" : {
+            "display" : "none"
+        },
+        "key" : "operation",
+        "value" : "Replace"
+      }, 
+      {
+        "disabled": true,
+        "style": {
+          "justify-content": "flex-start",
+          "display": "flex"
+        },
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "tradeType"
+      },
+      {
+        "disabled": true,
+        "style": {
+          "justify-content": "flex-start",
+          "display": "flex"
+        },
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "source"
+      },
+      {
+        "disabled": true,
+        "style": {
+          "justify-content": "flex-start",
+          "display": "flex"
+        },
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "instrumentType"
+      },
+      {
+        "disabled": true,
+        "style": {
+          "justify-content": "flex-start",
+          "display": "flex"
+        },
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "filledQuantity"
+      },
+      {
+        "disabled": true,
+        "style": {"display": "flex"},
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "instrumentDetails"
+      },
+      {
+        "disabled": true,
+        "style": {
+          "justify-content": "flex-start",
+          "display": "flex"
+        },
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "orderStatus"
+      },
+      {
+        "disabled": true,
+        "style": {
+          "justify-content": "flex-start",
+          "display": "flex"
+        },
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "strikePrice"
+      },
+      {
+        "disabled": true,
+        "style": {
+          "justify-content": "flex-start",
+          "display": "flex"
+        },
+        "formItemStyle": {
+          "width": "50%",
+          "max-height": "20px",
+          "margin-right": "0px"
+        },
+        "type": "readOnly",
+        "suffix": "",
+        "key": "optionType"
+      }
+    ],
+    [
+      {
+        "style": {"width": "100px"},
+        "formItemStyle": {
+          "font-weight": "600",
+          "margin-top": "10px",
+          "margin-right": "10px"
+        },
+        "key": "orderType"
+      },
+      {
+        "style": {"width": "100px"},
+        "key": "limitPrice",
+        "formItemStyle": {
+          "font-weight": "600",
+          "margin-top": "10px",
+          "margin-right": "10px"
+        }
+      },
+      {
+        "style": {"width": "100px"},
+        "key": "triggerPrice",
+        "formItemStyle": {
+          "font-weight": "600",
+          "margin-top": "10px",
+          "margin-right": "10px"
+        }
+      },
+      {
+        "style": {"width": "100px"},
+        "formItemStyle": {
+          "font-weight": "600",
+          "margin-top": "10px",
+          "margin-right": "10px"
+        },
+        "valueDerivedFrom": {
+          "operand": [
+            "orderQuantity",
+            "filledQuantity"
+          ],
+          "operator": ["-"]
+        },
+        "key": "orderQuantity"
+      }, 
+      {
+          "type" : "hidden",
+          "style" : {
+              "display" : "none"
+          },
+          "key" : "instrument"
+      }, 
+      {
+          "type" : "hidden",
+          "style" : {
+              "display" : "none"
+          },
+          "key" : "promptMonth"
+      }, 
+      {
+          "type" : "hidden",
+          "style" : {
+              "display" : "none"
+          },
+          "key" : "timeInForce"
+      }, 
+      {
+          "type" : "hidden",
+          "style" : {
+              "display" : "none"
+          },
+          "key" : "broker"
+      }
+    ]
+  ],
+  "taskId": "editderivative",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "sys__UUID" : "b6de9da3-50e0-4a89-abf1-70b1a34885f0"
+}

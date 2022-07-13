@@ -1,0 +1,21 @@
+{
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_EXT_ORDER_CANCEL_COLLECTION_OMS",
+  "type": "workflow",
+  "apiInfo": {
+    "path": "/app/e621d081-85cb-4951-adea-49b88d7f4ab0/8ca20157-5616-41ec-9fb5-fe8a733c948b/cancel",
+    "headers": { "X-ObjectAction": "CREATE" },
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_utility_host}",
+    "body": {}
+  },
+  "taskId": "_EXT_ORDER_CANCEL_COLLECTION",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "External Order Cancel Collection",
+  "sys__UUID" : "a501f612-d1c4-4e10-bb57-86a4b7240840"
+}

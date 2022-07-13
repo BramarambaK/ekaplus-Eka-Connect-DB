@@ -1,0 +1,63 @@
+{
+   "_id" : "Derivative_OMS_App",
+    "title" : "Derivative OMS",
+    "name" : "oms",
+    "tenantID" : "indigo",
+    "version" : "1",
+    "createdOn" : "Test",
+    "createdBy" : "admin",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "admin",
+    "type" : "app",
+    "platform_id" : "35",
+    "sys__UUID" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "assets/img/brand/indigo-logo.jpg",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Indigo"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "label" : "Derivative OMS",
+                        "iconCls" : "insights-icon",
+                        "menuItems" : [ 
+                            {
+                                "text" : "Derivative OMS",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/oms/listderivative/list",
+                                        "text" : "Order App Home",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    }
+}

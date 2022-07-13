@@ -1,0 +1,17 @@
+{
+  "implicitActions": [{
+    "field": "Status",
+    "type": "fieldUpdate",
+    "value": "Reject"
+  }],
+  "componentType": "SystemTask",
+  "objectAction": "REJECT",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_ST_REJECT_DERIVATIVE_ORDER_OMS",
+  "type": "workflow",
+  "taskId": "_ST_REJECT_DERIVATIVE_ORDER",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "System Reject Order",
+  "sys__UUID" : "83a563ce-360e-44bd-9318-91d167d24c3d"
+}

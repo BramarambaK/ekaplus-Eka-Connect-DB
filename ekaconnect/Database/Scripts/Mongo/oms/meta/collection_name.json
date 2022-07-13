@@ -1,0 +1,13 @@
+{
+    "_id" : "Property_Collection_Name",
+    "type" : "property",
+    "name" : "collection_name",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Collection Name",
+    "defaultValue" : "Order Request",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "description": "Collection name"
+}

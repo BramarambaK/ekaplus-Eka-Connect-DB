@@ -1,0 +1,19 @@
+{
+  "_id": ObjectId("5d416083bf1c316b79e39f5c"),
+  "type": "property",
+  "name": "broker",
+  "propertyLevel": "app",
+  "dataType": "JSON",
+  "fieldtype": "textbox",
+  "length": "20",
+  "editSupportedInUI" : true,
+  "label" : "Broker",
+  "defaultValue" : [
+    {
+      "key": "TST3",
+      "value": "RJ O'Brien"
+    }
+  ],
+  "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "description": "Broker key used for the REDI connection TST3 (QA) and DEMF (preprod)"
+}

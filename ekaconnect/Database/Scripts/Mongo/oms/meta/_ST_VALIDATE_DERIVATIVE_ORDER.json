@@ -1,0 +1,12 @@
+{
+    "_id" : ObjectId("5def63d9fcd51cb945f492ca"),
+    "componentType" : "ValidateTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "type" : "workflow",
+    "taskId" : "_ST_VALIDATE_DERIVATIVE_ORDER",
+    "object" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "label": "System Validate Task",
+    "sys__UUID" : "69023cbf-8a20-4731-8fc7-07cc535743c0"
+}

@@ -1,0 +1,24 @@
+{
+	"_id":"order_policy_oms",
+    "type" : "policy",
+    "app_UUID" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "refType" : "object",
+    "refTypeId" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+	
+}

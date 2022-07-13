@@ -1,0 +1,242 @@
+{
+  "_id": "listderivative_OMS",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "label": "Derivative Order Listing",
+  "type": "workflow",
+  "rows": "100",
+  "apiInfo": {
+    "path": "/app/oms/orderlist",
+    "headers": {},
+    "inputMapping": {},
+    "method": "GET",
+    "useInputMapping": false,
+    "host": "${properties.eka_utility_host}",
+    "body": {}
+  },
+  "layout": {
+    "selection": "row",
+    "selectionMode": "single",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": false,
+      "reset": true,
+      "export": true,
+      "lastUpdated": true
+    },
+    "theme": "theme-grid-dark",
+    "dropdownDecisions": true,
+    "lazyLoading": true,
+    "refreshData": {
+      "time": 5000
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.createderivative",
+          "name": "createderivative"
+        }
+      ],
+      "label": "Place order",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "name": "lifecyclederivative"
+        }
+      ],
+      "label": "Lifecycle",
+      "position": "top",
+      "iconClass": "info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "popupClass": "edit-modal",
+          "name": "editderivative"
+        }
+      ],
+      "disabled": "field.orderStatus === 'Rejected' || field.orderStatus === 'Order Sent' || field.orderStatus === 'Order Cancelled' || field.orderStatus === 'Order Replaced' || field.orderStatus === 'Filled' || field.orderStatus === 'Done for day' || field.orderStatus === 'Rejected' || field.orderStatus === 'Suspended' || field.orderStatus === 'Expired' || field.orderStatus === 'Cancelled' || field.orderStatus === 'Canceled'",
+      "label": "Replace order",
+      "position": "top",
+      "iconClass": "edit-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "name": "cancelderivative"
+        }
+      ],
+      "disabled": "field.orderStatus === 'Rejected' || field.orderStatus === 'Order Sent' || field.orderStatus === 'Order Cancelled' || field.orderStatus === 'Order Replaced' || field.orderStatus === 'Filled' || field.orderStatus === 'Done for day' || field.orderStatus === 'Rejected' || field.orderStatus === 'Suspended' || field.orderStatus === 'Expired' || field.orderStatus === 'Cancelled' || field.orderStatus === 'Canceled'",
+      "label": "Cancel order",
+      "position": "top",
+      "iconClass": "delete-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_DERIVATIVE_ORDER",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listderivative",
+          "name": "createderivative"
+        }
+      ],
+      "label": "Copy order",
+      "position": "top",
+      "iconClass": "delete-icon"
+    }
+  ],
+  "labelKey": "DERIVATIVE_ORDER_LISTING",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "tradeDate",
+      "dateformat": "DD MMM YYYY",
+      "width": "110px"
+    },
+    {
+      "filter": true,
+      "highlight": {
+        "New": "warning-bg",
+        "Replaced": "warning-bg",
+        "Order Sent": "success-bg",
+        "Expired": "danger-bg",
+        "Rejected": "danger-bg",
+        "Cancelled": "danger-bg",
+        "Partially filled": "warning-bg",
+        "Pending cancel": "warning-bg",
+        "Pending replaced": "warning-bg",
+        "Done for day": "success-bg",
+        "Filled": "success-bg",
+        "default": "bg-transparent",
+        "Pending new": "warning-bg",
+        "Suspended": "danger-bg"
+      },
+      "edit": true,
+      "sort": true,
+      "key": "orderStatus",
+      "width": "120px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "instrumentType",
+      "width": "140px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "instrument",
+      "width": "130px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "promptMonth",
+      "width": "130px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "tradeType",
+      "width": "110px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "orderType",
+      "width": "110px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "align": "right",
+      "key": "limitPrice",
+      "width": "110px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "align": "right",
+      "key": "orderQuantity",
+      "width": "130px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "align": "right",
+      "key": "filledQuantity",
+      "width": "130px"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "align": "right",
+      "key": "lastPx",
+      "width": "100px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "orderNo",
+      "width": "145px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "source",
+      "width": "100px"
+    }
+  ],
+  "taskId": "listderivative",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "sys__UUID": "d4dc6d27-ebc4-4b8c-aebb-55410ed576b7"
+}

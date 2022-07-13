@@ -1,0 +1,21 @@
+{
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_EXT_ORDER_EDIT_COLLECTION_OMS",
+  "type": "workflow",
+  "apiInfo": {
+    "path": "/app/e621d081-85cb-4951-adea-49b88d7f4ab0/8ca20157-5616-41ec-9fb5-fe8a733c948b/replace",
+    "headers": { "X-ObjectAction": "CREATE" },
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_utility_host}",
+    "body": {}
+  },
+  "taskId": "_EXT_ORDER_EDIT_COLLECTION",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "External Edit Order Collection",
+  "sys__UUID" : "0869ee0a-f7a9-4446-89fe-94660149f122"
+}

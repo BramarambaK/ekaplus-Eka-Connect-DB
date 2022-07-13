@@ -1,0 +1,96 @@
+{
+   "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative"
+                }
+            ],
+            "label" : "CLOSE",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "UPDATE",
+            "task" : "cancelderivative",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got cancelled successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got cancelled with some errors"
+                        }
+                    },
+                    "data" : "output.cancelderivative",
+                    "appendMsg" : false,
+                    "name" : "_ST_CANCEL_ORDER_DERIVATIVE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got cancelled successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output.cancelderivative",
+                    "appendMsg" : true,
+                    "name" : "_EXT_ORDER_CANCEL_COLLECTION"
+                }, 
+                {
+                    "name" : "listderivative",
+                    "showPopUp" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CANCEL ORDER",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "getDataFromExternalAPI" : true,
+    "label" : "CANCEL ORDER",
+    "labelKey" : "CANCEL_DERIVATIVE_ORDER",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to Cancel order ${sourceId}?",
+            "headerMessage" : "Cancel order : ${sourceId}"
+        }
+    },
+    "object" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "taskId" : "cancelderivative",
+    "type" : "workflow",
+    "sys__UUID" : "33e2c8e7-9d24-429f-b1a7-d833f3285ffb"
+}

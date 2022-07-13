@@ -1,0 +1,30 @@
+{
+  "_id": "menuObject_oms",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Derivative OMS",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "Derivative OMS",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "listderivative",
+                  "text": "Order App Home",
+                  "iconCls": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sys__UUID" : "95e8afb3-d220-4ae6-a10d-31dbbbd03622"
+}

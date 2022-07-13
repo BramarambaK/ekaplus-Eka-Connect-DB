@@ -1,0 +1,185 @@
+{
+    "_id" : "previewderivative_OMS",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "label" : "New Order",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {
+            "font-size" : "18px"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "view",
+        "formStyle" : {},
+        "formLayoutStyle" : {
+            "margin" : "auto"
+        },
+        "defaultFormValueStyle" : {
+            "width" : "auto",
+            "display" : "inline-block",
+            "font-weight" : "bold",
+            "margin-right" : "5px",
+            "font-size" : "18px"
+        },
+        "type" : "row"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createderivative",
+                    "data" : "selected.createderivative",
+                    "displayType" : "popup"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "MODIFY",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "previewderivative",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output.previewderivative",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_DERIVATIVE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "appendDataValues" : [ 
+                        {
+                            "outputTask" : "output._ST_CREATE_DERIVATIVE_ORDER",
+                            "field" : "id",
+                            "value" : "_id"
+                        }
+                    ],
+                    "data" : "output._ST_CREATE_DERIVATIVE_ORDER",
+                    "appendMsg" : true,
+                    "name" : "_EXT_CREATE_COLLECTION"
+                }, 
+                {
+                    "name" : "listderivative",
+                    "showPopUp" : true
+                }
+            ],
+            "label" : "PLACE ORDER",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listderivative"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "PREVIEW_DERIVATIVE_ORDER",
+    "fields" : [ 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : " ",
+                "key" : "tradeType"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : " ",
+                "key" : "instrument"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : " ",
+                "key" : "instrumentType"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : " ",
+                "key" : "promptMonth"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : "with Limit Price ",
+                "key" : "limitPrice"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px"
+                },
+                "suffix" : "",
+                "label" : "for Quantity ",
+                "key" : "orderQuantity"
+            }
+        ]
+    ],
+    "taskId" : "previewderivative",
+    "object" : "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+    "sys__UUID" : "9279f16a-dfed-4044-a330-e0f163b272e1"
+}

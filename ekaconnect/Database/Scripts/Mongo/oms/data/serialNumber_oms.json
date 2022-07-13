@@ -1,0 +1,9 @@
+{
+    "_id" : "serialNumber_oms",
+    "8ca20157-5616-41ec-9fb5-fe8a733c948b" : {
+        "sourceId" : "50"
+    },
+    "refType" : "app",
+    "refTypeId" : "e621d081-85cb-4951-adea-49b88d7f4ab0",
+    "type" : "serialNumber"
+}

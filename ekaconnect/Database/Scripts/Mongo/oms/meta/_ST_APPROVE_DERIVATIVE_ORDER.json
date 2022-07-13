@@ -1,0 +1,17 @@
+{
+  "implicitActions": [{
+    "field": "Status",
+    "type": "fieldUpdate",
+    "value": "Approve"
+  }],
+  "componentType": "SystemTask",
+  "objectAction": "APPROVE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_ST_APPROVE_DERIVATIVE_ORDER_OMS",
+  "type": "workflow",
+  "taskId": "_ST_APPROVE_DERIVATIVE_ORDER",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "System Approve Order",
+  "sys__UUID" : "dab1184e-c3f1-4591-8ed4-9c5c1a392ad2"
+}

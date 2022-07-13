@@ -1,0 +1,17 @@
+{
+  "implicitActions": [{
+    "field": "orderStatus",
+    "type": "fieldUpdate",
+    "value": "Order Sent"
+  }],
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "_id": "_ST_CREATE_DERIVATIVE_ORDER_OMS",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_DERIVATIVE_ORDER",
+  "object": "8ca20157-5616-41ec-9fb5-fe8a733c948b",
+  "label": "System Create Order",
+  "sys__UUID" : "8e6ade82-c938-478c-a3c6-817e12448b3e"
+}

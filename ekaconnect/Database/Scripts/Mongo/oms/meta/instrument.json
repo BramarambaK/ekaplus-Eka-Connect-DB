@@ -1,0 +1,70 @@
+{
+  "_id": ObjectId("5d415f02bf1c316b79e39ddc"),
+  "type": "property",
+  "name": "instrument",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "label": "Instrument",
+  "defaultValue": [
+    {
+      "key": "CBOT Corn",
+      "value": "CBOT Corn"
+    },
+    {
+      "key": "CBOT Red Wheat",
+      "value": "CBOT Red Wheat"
+    },
+    {
+      "key": "CBOT Soybeans",
+      "value": "CBOT Soybeans"
+    },
+    {
+      "key": "CBOT Wheat",
+      "value": "CBOT Wheat"
+    },
+    {
+      "key": "CBOT Rough Rice",
+      "value": "CBOT Rough Rice"
+    },
+    {
+      "key": "NYBOT Cotton",
+      "value": "NYBOT Cotton"
+    },
+    {
+      "key": "ICE Gasoil LS",
+      "value": "ICE Gasoil LS"
+    },
+    {
+      "key": "ICE Brent Crude",
+      "value": " ICE Brent Crude"
+    },
+    {
+      "key": "CME Class III Milk Future",
+      "value": "CME Class III Milk Future"
+    },
+    {
+      "key": "CME Cash-Settled Butter Futures",
+      "value": "CME Cash-Settled Butter Futures"
+    },
+    {
+      "key": "CME Cash-Settled Cheese Futures",
+      "value": "CME Cash-Settled Cheese Futures"
+    },
+    {
+      "key": "LME Zinc Future",
+      "value": "LME Zinc Future"
+    },
+    {
+      "key": "LME Copper Future",
+      "value": "LME Copper Future"
+    },
+    {
+      "key": "LME Aluminium Future",
+      "value": "LME Aluminium Future"
+    }
+  ],
+  "refTypeId": "e621d081-85cb-4951-adea-49b88d7f4ab0",
+  "description": "Instruments available for placing orders"
+}
