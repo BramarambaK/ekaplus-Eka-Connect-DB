@@ -1,0 +1,222 @@
+{
+  "_id": "ticketlistingsold_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "ticketlistingsold",
+  "label": "Manage Tickets",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "2239d619-c6d5-4a41-8658-a3bd67be3734",
+  "type": "workflow",
+  "lazyLoading": false,
+  "layout": {
+    "mdmPayload": {},
+    "name": "list",
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. ticket ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "single",
+    "resetSelection": true,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true,
+    "dropdownDecisions": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo",
+      "hidden": false,
+      "category": "link",
+      "task": "custom-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Site",
+      "sort": true,
+      "key": "bulkHandler"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Quantity (MT)",
+      "sort": true,
+      "key": "quantity"
+    },
+
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Date delivered",
+      "sort": true,
+      "key": "receivalDate",
+      "dateformat": "DD/MM/YYYY"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Split from",
+      "sort": true,
+      "key": "parentticketRefNo"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Acquirer name",
+      "sort": true,
+      "key": "ticketHandlerName"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract ID",
+      "sort": true,
+      "key": "contractId",
+      "task": "download-link",
+      "UIupdates": {
+        "listValue": "if(data.hasOwnProperty('pricingOption') && data.hasOwnProperty('isInternalContract') && data.pricingOption == 'Contract' && data.isInternalContract == 'Y') { \r\n  data.sys__state['contractId']['hyperlink'] = true\r\n} else{\r\n  data.sys__state['contractId']['hyperlink'] = false \r\n}\r\nreturn (data.pricingOption == 'Contract') ? data.contractId!='' ? data.contractId : data.pricingOption : data.pricingOption!='' ? data.pricingOption : '-';"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Allocated on",
+      "sort": true,
+      "key": "allocationDate",
+      "dateformat": "DD/MM/YYYY",
+      "sourceDateFormat": "DD-MM-YYYY"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Allocated by",
+      "sort": true,
+      "key": "allocatedBy"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite.ticketlistingsold",
+          "name": "viewticketsoldcomposite"
+        }
+      ],
+      "position": "top",
+      "label": "View ticket",
+      "disabled": "selected.ticketlistingcomposite.ticketlistingsold.length>=2",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "download-link",
+      "task": "EXTERNAL_TICKET_DOWNLOADDOC",
+      "workflowTaskName": "EXTERNAL_TICKET_DOWNLOADDOC",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite.ticketlistingsold",
+          "name": "ticketlistingcomposite",
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_TICKET_DOWNLOADDOC"
+        }
+      ],
+      "position": "top",
+      "label": "View contract",
+      "disabled": "selected.ticketlistingcomposite.ticketlistingsold.length == 1 && selected.ticketlistingcomposite.ticketlistingsold[0].isInternalContract == 'Y' && selected.ticketlistingcomposite.ticketlistingsold[0].pricingOption == 'Contract' ? false : true",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite",
+          "name": "viewticketsoldcomposite"
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "task": "EXTERNAL_TICKET_DOWNLOADDOC",
+      "workflowTaskName": "EXTERNAL_TICKET_DOWNLOADDOC",
+      "outcomes": [
+        {
+          "name": "viewticketsoldcomposite",
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_TICKET_DOWNLOADDOC",
+          "setSelected": ["selected.ticketlistingcomposite.ticketlistingsold"]
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST",
+  "deviceType": "mobile"
+}

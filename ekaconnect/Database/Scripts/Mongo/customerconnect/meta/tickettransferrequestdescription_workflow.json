@@ -1,0 +1,33 @@
+{
+  "_id": "tickettransferrequestdescription_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Submit request contract Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "descriptionExpression": "return 'Enter the NGR(s) and the relevant quantity you wish to transfer from <b>'  + ${data}[0].bpName + ' - ' + ${data}[0].bpRefNo + '</b>.' ",
+      "label": "Enter NGRs",
+      "style": {
+        "margin-bottom": "16px"
+      }
+    },
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 10,
+      "type": "showMoreLess"
+    },
+    "cardsListClass": "submit-summary",
+    "theme": "submit-summary"
+  },
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "labelKey": "Cards View",
+  "taskId": "tickettransferrequestdescription",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "3bcd42eb-933e-4151-9597-13dd2310a335"
+}

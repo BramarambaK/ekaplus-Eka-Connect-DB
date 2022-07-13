@@ -1,0 +1,25 @@
+{
+  "_id": "tickets_quicklinkmenu",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "sys__UUID": "ddf62652-a9b9-4b9a-90cc-d4871db2e553",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "label": "Manage tickets",
+              "handler": "ticketlistingcomposite"
+            },
+            {
+              "label": "Make an offer",
+              "handler": "warehousedticketoffercomposite"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

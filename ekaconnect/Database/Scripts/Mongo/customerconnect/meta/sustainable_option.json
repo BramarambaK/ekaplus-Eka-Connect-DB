@@ -1,0 +1,22 @@
+{
+    "_id": "sustainableoptions_propertyKey",
+    "type": "property",
+    "name": "yesOrNo",
+    "propertyLevel": "app",
+    "dataType": "String",
+    "fieldtype": "textbox",
+    "length": "24",
+    "label": "Enter your choice",
+    "defaultValue": [
+      {
+        "key": "-",
+        "value": "-"
+      },
+      {
+        "key": "Yes",
+        "value": "Yes"
+      }
+    ],
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "description": "Enter your choice"
+  }

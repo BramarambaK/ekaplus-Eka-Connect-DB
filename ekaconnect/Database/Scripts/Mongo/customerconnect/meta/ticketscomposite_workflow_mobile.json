@@ -1,0 +1,74 @@
+{
+  "_id": "ticketscomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Tickets Composite",
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "margin": "24px 0"
+              },
+              "workflows": [
+                {
+                  "name": "ticketsquery"
+                }
+              ]
+            },
+            {
+              "name": "ticketsquicklink"
+            },
+            {
+              "style": {
+                "margin": "38px 0 34px"
+              },
+              "workflows": [
+                {
+                  "name": "ticketssummary",
+                  "data": "selected.ticketscomposite.ticketsquery"
+                }
+              ]
+            },
+            {
+              "name": "ticketscharts",
+              "data": "selected.ticketscomposite.ticketsquery"
+            },
+            {
+              "name": "ticketscardview",
+              "data": "selected.ticketscomposite.ticketscharts"
+            },
+            {
+              "name": "lastUpdated",
+              "data": "selected.ticketscomposite.ticketsquery"
+            }
+          ],
+          "style": {
+            "width": "100%"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Tickets"
+    },
+    "name": "customv2",
+    "menu": false,
+    "queryParam": true,
+    "clearSelected": ["selected"]
+  },
+  "decisions": [],
+  "taskId": "ticketscomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "deviceType": "mobile"
+}

@@ -1,0 +1,76 @@
+{
+  "_id": "ticketscomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Tickets Composite",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": { "aside": "ticketsquicklink" }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": { "aside": "ticketsquicklink" }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": { "margin": "0 0 2rem 0" },
+              "workflows": [{ "name": "ticketsquery" }]
+            },
+            {
+              "style": { "margin": "2rem 0 49px" },
+              "workflows": [
+                {
+                  "name": "ticketssummary",
+                  "data": "selected.ticketscomposite.ticketsquery"
+                }
+              ]
+            },
+            {
+              "name": "ticketscharts",
+              "data": "selected.ticketscomposite.ticketsquery"
+            },
+            {
+              "name": "ticketscardview",
+              "data": "selected.ticketscomposite.ticketscharts"
+            },
+            {
+              "style": { "display": "flex" },
+              "workflows": [
+                {
+                  "name": "lastUpdated",
+                  "data": "selected.ticketscomposite.ticketsquery"
+                }
+              ]
+            }
+          ],
+          "style": { "width": "100%" }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": { "title": "Tickets" },
+    "name": "customv2",
+    "menu": false,
+    "customScrollBar": true,
+    "queryParam": true,
+    "clearSelected": ["selected"]
+  },
+  "decisions": [],
+  "taskId": "ticketscomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

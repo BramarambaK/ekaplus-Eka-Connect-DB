@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_CREATE_PAYMENT_RECEIPT_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_PAYMENT_RECEIPT_DATA",
+    "object" : "4465c36c-84ab-403b-a61e-cf73a37705fe",
+    "label": "System Tickets"
+}

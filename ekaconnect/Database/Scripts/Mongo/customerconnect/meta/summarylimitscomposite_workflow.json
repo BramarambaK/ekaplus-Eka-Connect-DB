@@ -1,0 +1,150 @@
+{
+  "_id": "summarylimitscomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Add tonnage limits",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenu"
+    },
+    {
+      "style": {
+        "padding": "26px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "-10px 10px"
+      },
+      "workflows": [
+        {
+          "name": "pricelimitsummary",
+          "data": "selected.summarylimitscomposite.pricelimitsummary"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Add volumn limits"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Price and limits",
+        "type": "string",
+        "task": "pricelimitsdomaincomposite"
+      },
+      {
+        "label": "Add tonnage limits",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "priceandlimitshome",
+      "outcomes": [
+        {
+          "name": "pricelimitsdomaincomposite",
+          "clearSelected": ["selected.pricelimitsdomaincomposite"]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "cancelpopup_tonnage2",
+          "clearSelected": ["selected.volumelimitscomposite"],
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "15px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "task": "summarylimitsprevious",
+      "additionalSelectedData": {
+        "enterlimits": "selected.volumelimitscomposite"
+      },
+      "outcomes": [
+        {
+          "data": "output.summarylimitscomposite",
+          "appendMsg": false,
+          "name": "_ST_PROCESS_PREVIOUS_VOLUME_LIMITS"
+        },
+        {
+          "data": "output._ST_PROCESS_PREVIOUS_VOLUME_LIMITS",
+          "name": "volumelimitscomposite",
+          "setSelected": [
+            "selected.volumelimitscomposite.enterlimits.tonnagelimits"
+          ],
+          "clearSelected": ["selected.summarylimitscomposite"]
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "label": "Previous",
+      "type": "submit",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "UPDATE",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "volumelistingcomposite",
+          "restoreState": true,
+          "clearSelected": ["selected.volumelimitscomposite"]
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Submit",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "taskId": "summarylimitscomposite",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "56eb9020-f13e-4ada-ba99-e9ec76d2fa66"
+}

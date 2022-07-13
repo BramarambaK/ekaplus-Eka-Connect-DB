@@ -1,0 +1,194 @@
+{
+  "_id": "ticketlistingrequests_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "ticketlistingrequests",
+  "label": "Manage Tickets",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "da62ce2f-b8dd-4528-a5ba-b9292b7ed7c2",
+  "type": "workflow",
+  "tags": "trainingData",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "mdmPayload": {},
+    "name": "list",
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. ticket ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true,
+    "dropdownDecisions": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Request ID",
+      "sort": true,
+      "key": "requestId",
+      "hidden": false,
+      "category": "link",
+      "task": "custom-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Request type",
+      "sort": true,
+      "key": "requestType",
+      "hidden": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Quantity (MT)",
+      "sort": true,
+      "key": "quantity",
+      "format": "decimal",
+      "UIupdates": {
+        "listValue": "return Number('${quantity}').toFixed(2)"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Requested date",
+      "sort": true,
+      "key": "receivalDate",
+      "hidden": true,
+      "manageColhidden": true
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Site",
+      "sort": true,
+      "key": "location"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Requested date",
+      "sort": true,
+      "key": "formattedRequestDate",
+      "dateformat": "DD/MM/YYYY",
+      "UIupdates": {
+        "listValue": "return '${requestDate}'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Requested by",
+      "sort": true,
+      "key": "requestBy"
+    },
+    {
+      "filter": false,
+      "highlight": {
+        "Approved": "cargill-table-listing-status-btn-green",
+        "Action required": "cargill-table-listing-status-btn-orange",
+        "Rejected": "cargill-table-listing-status-btn-red",
+        "Awaiting review": "cargill-table-listing-status-btn-blue",
+        "Withdrawn": "cargill-table-listing-status-btn-grey",
+        "Expired": "cargill-table-listing-status-btn-grey"
+      },
+      "edit": true,
+      "label": "Request status",
+      "sort": true,
+      "key": "requestStatus"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite.ticketlistingrequests",
+          "name": "viewticketrequestcomposite"
+        }
+      ],
+      "position": "top",
+      "label": "View request details",
+      "disabled": "selected.ticketlistingcomposite.ticketlistingrequests.length>=2",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite",
+          "name": "viewticketrequestcomposite"
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST",
+  "deviceType": "mobile"
+}
