@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESSOR_BUYEROPTIONALITY_SAVE_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "61ea7a07-283f-4c61-aac6-d2fa8255f758"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_BUYEROPTIONALITY_SAVE",
+  "object": "5e9c9451-2fed-4593-b729-5bab6a29feff"
+}

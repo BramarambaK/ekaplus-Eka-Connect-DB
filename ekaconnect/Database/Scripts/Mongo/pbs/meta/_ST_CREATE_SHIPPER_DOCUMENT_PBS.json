@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_SHIPPER_DOCUMENT_PBS",
+  "componentType": "SystemTask",
+  "object": "1df1ff7c-572e-4ce2-bf72-f80bf41514e2",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "_ST_CREATE_SHIPPER_DOCUMENT",
+  "label": "Create SHIPPER Document in System",
+  "type": "workflow"
+}

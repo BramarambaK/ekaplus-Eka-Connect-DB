@@ -1,0 +1,163 @@
+{
+    "_id" : "loadingporttrainingData",
+    "targetObject" : "3ef12f80-9dca-46e0-afb6-915e729efe40",
+    "trainingData" :[{
+    "sentence": "these are the dates 2015-07-06 2016-12-04 2020-04-20 and 2019-11-11",
+    "loadingNorTenderedDate": "2015-07-06",
+    "loadingVesselETBDate": "2016-12-04",
+    "loadingVesselETADate": "2020-04-20",
+    "loadingblreleasedDate": "2019-11-11"
+  },
+  {
+    "sentence": "attached are the dates 2015-07-06 2016-12-04 2020-04-20 and 2019-11-11",
+    "loadingNorTenderedDate": "2015-07-06",
+    "loadingVesselETBDate": "2016-12-04",
+    "loadingVesselETADate": "2020-04-20",
+    "loadingblreleasedDate": "2019-11-11"
+  },
+  {
+    "sentence": "use these dates 2007-07-06 2017-12-04 2009-04-20 and 2019-11-11",
+    "loadingNorTenderedDate": "2007-07-06",
+    "loadingVesselETBDate": "2017-12-04",
+    "loadingVesselETADate": "2009-04-20",
+    "loadingblreleasedDate": "2019-11-11"
+  },
+  {
+    "sentence": "Fill up the first date as 2007-07-06 the second as 2017-12-04 and subsequent ones as 2009-04-20 and 2019-11-11",
+    "loadingNorTenderedDate": "2007-07-06",
+    "loadingVesselETBDate": "2017-12-04",
+    "loadingVesselETADate": "2009-04-20",
+    "loadingblreleasedDate": "2019-11-11"
+  },
+  {
+    "sentence": "Fill up the first date as 2017-11-16 the second as 2017-12-04 and subsequent ones as 2019-04-20 and 2019-11-11",
+    "loadingNorTenderedDate": "2017-11-16",
+    "loadingVesselETBDate": "2017-12-04",
+    "loadingVesselETADate": "2019-04-20",
+    "loadingblreleasedDate": "2019-11-11"
+  },
+  {
+    "sentence": "First date as 2017-11-16 the second as 2017-12-04 and subsequent ones as 2020-04-28 and 2029-11-11",
+    "loadingNorTenderedDate": "2017-11-16",
+    "loadingVesselETBDate": "2017-12-04",
+    "loadingVesselETADate": "2020-04-28",
+    "loadingblreleasedDate": "2029-11-11"
+  },
+  {
+    "sentence": "Autofill the date one as 2017-11-16 the second as 2017-12-04 and subsequent ones as 2020-04-28 and 2029-11-11",
+    "loadingNorTenderedDate": "2017-11-16",
+    "loadingVesselETBDate": "2017-12-04",
+    "loadingVesselETADate": "2020-04-28",
+    "loadingblreleasedDate": "2029-11-11"
+  },
+  {
+    "sentence": "Autofill the dates in order 2017-05-16 2007-12-04 2020-04-28 and 2029-11-11",
+    "loadingNorTenderedDate": "2017-05-16",
+    "loadingVesselETBDate": "2007-12-04",
+    "loadingVesselETADate": "2020-04-28",
+    "loadingblreleasedDate": "2029-11-11"
+  },
+  {
+    "sentence": "Ordered dates are 1987-05-16  1997-12-04 2000-04-28 and 1999-11-11",
+    "loadingNorTenderedDate": "1987-05-16",
+    "loadingVesselETBDate": "1997-12-04",
+    "loadingVesselETADate": "2000-04-28",
+    "loadingblreleasedDate": "1999-11-11"
+  },
+  {
+    "sentence": "dates in order to fill are 1987-05-16  1997-12-04 2000-04-28 and 1999-11-11",
+    "loadingNorTenderedDate": "1987-05-16",
+    "loadingVesselETBDate": "1997-12-04",
+    "loadingVesselETADate": "2000-04-28",
+    "loadingblreleasedDate": "1999-11-11"
+  },
+  {
+    "sentence": "please fill the dates in order 1987-05-16 1997-12-04 2000-04-28 1999-11-11",
+    "loadingNorTenderedDate": "1987-05-16",
+    "loadingVesselETBDate": "1997-12-04",
+    "loadingVesselETADate": "2000-04-28",
+    "loadingblreleasedDate": "1999-11-11"
+  },
+  {
+    "sentence": "please fill the dates in order 1977-05-16 1997-12-04 2001-09-29 2099-03-16",
+    "loadingNorTenderedDate": "1977-05-16",
+    "loadingVesselETBDate": "1997-12-04",
+    "loadingVesselETADate": "2001-09-29",
+    "loadingblreleasedDate": "2099-03-16"
+  },
+  {
+    "sentence": "tender date is 2019-02-02 etb date is 2020-12-04 eta date is 2020-10-10 release date is 2019-11-11",
+    "loadingNorTenderedDate": "2019-02-02",
+    "loadingVesselETBDate": "2020-12-04",
+    "loadingVesselETADate": "2020-10-10",
+    "loadingblreleasedDate": "2019-11-11"
+  },
+  {
+    "sentence": "The dates are 2019-11-27 2020-12-24 2020-10-19 2019-11-21",
+    "loadingNorTenderedDate": "2019-11-27",
+    "loadingVesselETBDate": "2020-12-24",
+    "loadingVesselETADate": "2020-10-19",
+    "loadingblreleasedDate": "2019-11-21"
+  },
+  {
+    "sentence": "Ordered dates are 1987-05-16 1997-12-04",
+    "loadingNorTenderedDate": "1987-05-16",
+    "loadingVesselETBDate": "1997-12-04"
+  },
+  {
+    "sentence": "Ordered dates are 1997-05-16 2007-12-04",
+    "loadingNorTenderedDate": "1997-05-16",
+    "loadingVesselETBDate": "2007-12-04"
+  },
+  {
+    "sentence": "Ordered dates are 1997-05-16 2007-12-04 2013-01-25",
+    "loadingNorTenderedDate": "1997-05-16",
+    "loadingVesselETBDate": "2007-12-04",
+    "loadingVesselETADate":"2013-01-25"
+  },
+  {
+    "sentence": "2007-05-16 2017-12-04 2013-01-25 fill them in order",
+    "loadingNorTenderedDate": "2007-05-16",
+    "loadingVesselETBDate": "2017-12-04",
+    "loadingVesselETADate":"2013-01-25"
+  },
+  {
+    "sentence": "tender date is 2019-02-02",
+    "loadingNorTenderedDate": "2019-02-02"
+  },
+  {
+    "sentence": "etb date is 2020-12-04",
+    "loadingVesselETBDate": "2020-12-04"
+  },
+  {
+    "sentence": "release date is 2019-11-11",
+    "loadingblreleasedDate": "2019-11-11"
+  },
+  {
+    "sentence": "tender date is 2019-02-02 etb date is 2020-12-04",
+    "loadingNorTenderedDate": "2019-02-02",
+    "loadingVesselETBDate": "2020-12-04"
+  },
+  {
+    "sentence": "tender date is 2019-02-02 etb date is 2020-12-04 eta date is 2020-10-10",
+    "loadingNorTenderedDate": "2019-02-02",
+    "loadingVesselETBDate": "2020-12-04",
+    "loadingVesselETADate": "2020-10-10"
+  },
+  {
+    "sentence": "eta date is 2020-10-10",
+    "loadingVesselETADate": "2020-10-10"
+  }
+]
+
+,
+    "typeOfData" : "training",
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "object" : "3ef12f80-9dca-46e0-afb6-915e729efe40",
+    "sys__UUID" : "b13af03c-cc77-4065-8d97-4c1b5e906c17",
+    "sys__createdOn" : ISODate("2020-10-13T12:00:57.307Z"),
+    "sys__data__state" : "Create"
+}

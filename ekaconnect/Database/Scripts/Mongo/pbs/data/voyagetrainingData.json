@@ -1,0 +1,49 @@
+{
+    "_id" : "voyagetrainingData",
+    "targetObject" : "9c98c493-ee2f-490d-be92-fe2424f513e5",
+    "trainingData" :[
+  {
+    "sentence": "From Australia laytime 2021-09-09 and treasury date 2019-09-13 on fob terms",
+    "tradeRegion": "Australia",
+    "SOF_NOR_CP_Laytime_team": "2021-09-09",
+    "Mates_Receipt_Treasury": "2019-09-13",
+    "incoTerm": "fob"
+  },
+  {
+    "sentence": "On cif terms and region algeria with laytime 2020-10-10 and treasury 2020-09-13",
+    "tradeRegion": "algeria",
+    "SOF_NOR_CP_Laytime_team": "2020-10-10",
+    "Mates_Receipt_Treasury": "2020-09-13",
+    "incoTerm": "cif"
+  },
+  {
+    "sentence": "sanction laytime 2020-10-10 for brazil treasury 2019-09-13 on fob cfr term for rapeseed",
+    "sanctionCheck": "sanction",
+    "tradeRegion": "brazil",
+    "SOF_NOR_CP_Laytime_team": "2020-10-10",
+    "Mates_Receipt_Treasury": "2019-09-13",
+    "incoTerm": "fob cfr",
+    "product": "rapeseed"
+  },
+  {
+    "sentence": "sanction laytime 2021-10-01 for china treasury 2019-10-13 on cfr cif term for cotton seed",
+    "sanctionCheck": "sanction",
+    "tradeRegion": "china",
+    "SOF_NOR_CP_Laytime_team": "2021-10-01",
+    "Mates_Receipt_Treasury": "2019-10-13",
+    "incoTerm": "cfr cif",
+    "product": "cotton seed"
+  }
+]
+
+,
+    "typeOfData" : "training",
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "object" : "9c98c493-ee2f-490d-be92-fe2424f513e5",
+    "sys__UUID" : "78278a99-b2dd-42f9-86df-65bdd2569463",
+    "sys__createdOn" : ISODate("2020-10-13T12:00:57.307Z"),
+    "sys__data__state" : "Create"
+}

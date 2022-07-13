@@ -1,0 +1,23 @@
+{
+  "_id": "_EXT_CREATE_VOYAGE_PBS",
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "authorization" : "api",
+  "apiInfo": {
+    "path": "/collectionmapper/4e20f754-574e-43e7-8d11-87c6fae060f5/180f1a9d-8e2a-4f7b-8f72-1d316650f876/addToCollection",
+    "headers": {
+      "X-ObjectAction": "CREATE"
+    },
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+    "body": {}
+  },
+  "taskId": "_EXT_CREATE_VOYAGE",
+  "label": "Create Voyage Externally",
+  "object": "180f1a9d-8e2a-4f7b-8f72-1d316650f876"
+}

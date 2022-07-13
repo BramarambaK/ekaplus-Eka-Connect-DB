@@ -1,0 +1,27 @@
+{
+  "_id": "_EXT_DELETE_DOCUMENT_BUYER_PBS",
+  "componentType": "ExtSystemTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "apiInfo": {
+    "path": "/file/4f7f1799-a0b9-4d0d-b09c-ea4227c5a0f4/4e20f754-574e-43e7-8d11-87c6fae060f5/delete/{0}",
+    "headers": {
+      "X-ObjectAction": "CREATE",
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "storageType": "awsS3",
+      "folderInS3": "pbsDocs"
+    },
+    "inputMapping": {},
+    "method": "DELETE",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+    "body": {},
+    "pathParams": ["##output.id"]
+  },
+  "taskId": "_EXT_DELETE_DOCUMENT_BUYER",
+  "label": "Delete Buywer Document Externally",
+  "object": "f117d5ad-c51f-443f-8855-1993a8ae2a72"
+}

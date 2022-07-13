@@ -1,0 +1,15 @@
+{
+  "_id": "createfca_policy",
+  "type": "policy",
+  "app_UUID": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "refType": "object",
+  "refTypeId": "c89b6d1a-e787-4325-af34-6975ce382fd6",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

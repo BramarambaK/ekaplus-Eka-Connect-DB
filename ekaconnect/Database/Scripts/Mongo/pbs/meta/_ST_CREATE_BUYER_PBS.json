@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_BUYER_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_BUYER",
+  "label": "Create Buyer in System",
+  "object": "5556394f-829b-48ec-950f-ed4c705738df"
+}

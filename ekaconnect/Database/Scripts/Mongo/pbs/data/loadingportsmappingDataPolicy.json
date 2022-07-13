@@ -1,0 +1,21 @@
+{
+    "_id" : "loadingportsmappingDataPolicy",
+    "app_UUID" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "9fc2aab5-2199-46af-9006-3a80b3c3e892",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "3ef12f80-9dca-46e0-afb6-915e729efe40"
+}

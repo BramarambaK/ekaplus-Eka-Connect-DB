@@ -1,0 +1,23 @@
+{
+    "_id": "createvoyage_policy",
+    "type": "policy",
+    "app_UUID": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "refType": "object",
+    "refTypeId": "9c98c493-ee2f-490d-be92-fe2424f513e5",
+    "userGrants": {},
+    "roleGrants": {
+        "AUTHENTICATED_USERS": {
+            "allowedItemLevelActions": [
+                "READ",
+                "UPDATE",
+                "DELETE",
+                "LISTVIEW"
+            ],
+            "itemLevelFilters": [],
+            "allowedGlobalActions": [
+                "CREATE",
+                "UPLOAD"
+            ]
+        }
+    }
+}

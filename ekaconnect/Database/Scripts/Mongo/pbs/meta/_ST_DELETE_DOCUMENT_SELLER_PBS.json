@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_DELETE_DOCUMENT_SELLER_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_DELETE_DOCUMENT_SELLER",
+  "label": "Delete Seller Document from System",
+  "object": "4f7f1799-a0b9-4d0d-b09c-ea4227c5a0f4"
+}

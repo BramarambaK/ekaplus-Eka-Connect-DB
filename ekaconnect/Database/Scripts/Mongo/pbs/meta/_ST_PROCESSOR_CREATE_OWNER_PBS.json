@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_CREATE_OWNER_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "bf2956b2-37e1-416d-a653-fb3785976fff"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_CREATE_OWNER",
+  "label": "Create Owner using Processor",
+  "object": "cd74327c-cb01-4194-a03d-965eceba4119"
+}

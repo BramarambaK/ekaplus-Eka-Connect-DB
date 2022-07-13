@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_LOI_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_LOI",
+  "label": "Create LOI in System",
+  "object": "485db470-4c7b-49d3-a1e2-e39534067bc5"
+}

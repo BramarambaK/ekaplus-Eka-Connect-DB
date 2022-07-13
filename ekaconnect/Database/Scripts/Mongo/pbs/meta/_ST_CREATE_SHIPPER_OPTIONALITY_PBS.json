@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_SHIPPER_OPTIONALITY_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_SHIPPER_OPTIONALITY",
+  "label": "Create SHIPPER Optionality in System",
+  "object": "bf4b1a46-b478-4983-b04e-0ad6848bf660"
+}

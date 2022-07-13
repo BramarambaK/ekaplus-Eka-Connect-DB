@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_CREATE_BUYER_OPTIONALITY_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "1ca2c83b-42cc-47a5-a70a-9b40ce71640b"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_CREATE_BUYER_OPTIONALITY",
+  "label": "Create Buyer Optionality using Processor",
+  "object": "5e9c9451-2fed-4593-b729-5bab6a29feff"
+}

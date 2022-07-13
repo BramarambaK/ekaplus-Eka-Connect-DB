@@ -1,0 +1,23 @@
+{
+    "_id" : "createseller_policy",
+    "type" : "policy",
+    "app_UUID" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "refType" : "object",
+    "refTypeId" : "5c1d2726-79c9-4915-9243-8d7aa4d6791d",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

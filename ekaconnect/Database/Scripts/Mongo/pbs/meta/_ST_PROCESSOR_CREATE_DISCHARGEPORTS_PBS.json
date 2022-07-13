@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_CREATE_DISCHARGEPORTS_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "891d09d6-7dea-4e11-94d1-5ec8ba22dcf8"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_CREATE_DISCHARGEPORTS",
+  "label": "Create Discharge Ports using Processor",
+  "object": "6350bb49-87aa-4baf-8165-5cd717ab8afa"
+}

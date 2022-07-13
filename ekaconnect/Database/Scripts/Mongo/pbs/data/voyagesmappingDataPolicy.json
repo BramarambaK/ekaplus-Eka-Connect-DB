@@ -1,0 +1,21 @@
+{
+    "_id" : "voyagesmappingDataPolicy",
+    "app_UUID" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "bed3cbbc-1edc-48f7-a50c-329a938fffd4",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "9c98c493-ee2f-490d-be92-fe2424f513e5"
+}

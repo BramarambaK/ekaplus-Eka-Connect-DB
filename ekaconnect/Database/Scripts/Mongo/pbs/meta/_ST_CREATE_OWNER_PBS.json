@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_OWNER_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_OWNER",
+  "label": "Create Owner in System",
+  "object": "cd74327c-cb01-4194-a03d-965eceba4119"
+}

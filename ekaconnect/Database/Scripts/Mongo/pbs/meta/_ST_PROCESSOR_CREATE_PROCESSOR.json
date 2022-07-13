@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_PROCESSOR_CREATE_PROCESSOR",
+  "name": "_ST_PROCESSOR_CREATE",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "snippet": "var moment = require(\"moment\");\r\nlet data = { ...req.body };\r\ndelete data.propertyList;\r\ndelete data.processorDetails;\r\ndelete data.processorId;\r\ndelete data.appId;\r\ndelete data.sys__state;\r\nvar copyfinalData = { ...data };\r\nif (copyfinalData.sys__updatedOn) delete copyfinalData.sys__updatedOn;\r\nif (copyfinalData.sys__createdOn) delete copyfinalData.sys__createdOn;\r\nif (copyfinalData.uniqueId) delete copyfinalData.uniqueId;\r\nif (copyfinalData.numberOfRollings) delete copyfinalData.numberOfRollings;\r\nif (copyfinalData.office) delete copyfinalData.office;\r\nif (copyfinalData.LOI_sent_To) delete copyfinalData.LOI_sent_To;\r\nif (copyfinalData.counterLOIFrom) delete copyfinalData.counterLOIFrom;\r\nif (copyfinalData.whydoWeNeedLOI) delete copyfinalData.whydoWeNeedLOI;\r\nif (copyfinalData.deliveredTo) delete copyfinalData.deliveredTo;\r\nif (copyfinalData.LOICancellationTracking)\r\n  delete copyfinalData.LOICancellationTracking;\r\nif (copyfinalData.comments) delete copyfinalData.comments;\r\nif (copyfinalData.containers_Quantity_Pickedup)\r\n  delete copyfinalData.containers_Quantity_Pickedup;\r\nfor (var key in copyfinalData) {\r\n  var instancedate = copyfinalData[key];\r\n  if (typeof instancedate == \"string\" && instancedate.includes(\"-\")) {\r\n    instancedate = moment\r\n      .utc(instancedate)\r\n      .utcOffset(\"+0530\")\r\n      .format(\"DD-MMM-YYYY\");\r\n    if (instancedate != \"Invalid date\") {\r\n      data[key] = instancedate;\r\n    }\r\n  }\r\n}\r\nlet finalData = { ...data };\r\nfinalData.collectionData = [];\r\nfinalData.collectionData.push(data);\r\ndelete finalData.collectionData[0].collectionName;\r\ndelete finalData.collectionData[0].collectionHeaderProperty;\r\ndelete finalData.collectionData[0].collectionConnectMapProperty;\r\ndelete finalData.collectionData[0].platformTemplateId;\r\nconsole.log(finalData);\r\nres.status(200).send(finalData);\r\n",
+  "sys__UUID": "bf2956b2-37e1-416d-a653-fb3785976fff",
+  "sys__createdOn": "2019-06-26T08:50:01.556Z",
+  "sys__createdBy": "Bravo"
+}

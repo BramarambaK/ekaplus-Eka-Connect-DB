@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_PROCESSOR_CREATE_BUYER_OPTIONALITY_PROCESSOR",
+  "name": "_ST_PROCESSOR_CREATE",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "snippet": " \r\n    var moment = require('moment');\r\n    let data = { ...req.body };\r\n    data.collectionName = 'buyeroptionality_collection';\r\n    data.collectionConnectMapProperty = 'buyeroptionality_collectionConnectMap';\r\n    data.collectionHeaderProperty = 'buyeroptionality_collectionHeader';\r\n    delete data.propertyList;\r\n    delete data.processorDetails;\r\n    delete data.processorId;\r\n    delete data.appId;\r\n    delete data.sys__state;\r\n    var copyfinalData = { ...data };\r\n    if (copyfinalData.sys__updatedOn) delete copyfinalData.sys__updatedOn;\r\n    if (copyfinalData.sys__createdOn) delete copyfinalData.sys__createdOn;\r\n    if (copyfinalData.uniqueId) delete copyfinalData.uniqueId;\r\n  if (copyfinalData.optionalityDeclaration) delete copyfinalData.optionalityDeclaration;\r\n   for (var key in copyfinalData) {\r\n      var instancedate = copyfinalData[key];\r\n            instancedate = moment.utc(instancedate).utcOffset('+0530').format('DD-MMM-YYYY');\r\n            if (instancedate != 'Invalid date') {\r\n   console.log(instancedate);\r\n     data[key] = instancedate;\r\n      }\r\n    }\r\n    let finalData = { ...data };\r\n    finalData.collectionData = [];\r\n    finalData.collectionData.push(data);\r\n    delete finalData.collectionData[0].collectionName;\r\n    delete finalData.collectionData[0].collectionHeaderProperty;\r\n    delete finalData.collectionData[0].collectionConnectMapProperty;\r\n    delete finalData.collectionData[0].platformTemplateId;\r\n    console.log(finalData);\r\n    res.status(200).send(finalData);\r\n ",
+  "sys__UUID": "1ca2c83b-42cc-47a5-a70a-9b40ce71640b",
+  "sys__createdOn": ISODate("2019-06-26T08:50:01.556Z"),
+  "sys__createdBy": "Bravo"
+}

@@ -1,0 +1,23 @@
+{
+    "_id": "policy_voyage_dischargeports",
+    "type": "policy",
+    "app_UUID": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "refType": "object",
+    "refTypeId": "6350bb49-87aa-4baf-8165-5cd717ab8afa",
+    "userGrants": {},
+    "roleGrants": {
+        "AUTHENTICATED_USERS": {
+            "allowedItemLevelActions": [
+                "READ",
+                "UPDATE",
+                "DELETE",
+                "LISTVIEW"
+            ],
+            "itemLevelFilters": [],
+            "allowedGlobalActions": [
+                "CREATE",
+                "UPLOAD"
+            ]
+        }
+    }
+}

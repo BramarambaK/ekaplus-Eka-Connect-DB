@@ -1,0 +1,23 @@
+{
+  "_id": "_EXT_UPDATE_LOI_PBS",
+  "apiInfo": {
+    "path": "/collectionmapper/4e20f754-574e-43e7-8d11-87c6fae060f5/485db470-4c7b-49d3-a1e2-e39534067bc5/updateCollectionRecords",
+    "headers": {
+      "X-ObjectAction": "CREATE"
+    },
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+    "body": {}
+  },
+  "componentType": "ExtSystemTask",
+  "authorization" : "api",
+  "label": "Edit LOI Externally",
+  "object": "485db470-4c7b-49d3-a1e2-e39534067bc5",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "_EXT_UPDATE_LOI",
+  "type": "workflow"
+}

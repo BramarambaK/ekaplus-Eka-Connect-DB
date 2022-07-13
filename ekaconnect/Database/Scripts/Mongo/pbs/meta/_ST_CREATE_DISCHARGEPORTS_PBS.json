@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_DISCHARGEPORTS_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_DISCHARGEPORTS",
+  "label": "Create Discharge Ports in System",
+  "object": "6350bb49-87aa-4baf-8165-5cd717ab8afa"
+}

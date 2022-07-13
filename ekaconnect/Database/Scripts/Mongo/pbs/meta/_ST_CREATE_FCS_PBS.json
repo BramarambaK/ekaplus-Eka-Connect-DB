@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_FCS_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_FCA",
+  "label": "Create FCA in System",
+  "object": "c89b6d1a-e787-4325-af34-6975ce382fd6"
+}

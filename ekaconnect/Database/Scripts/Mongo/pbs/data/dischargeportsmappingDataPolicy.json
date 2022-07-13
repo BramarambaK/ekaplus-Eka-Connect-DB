@@ -1,0 +1,21 @@
+{
+    "_id" : "dischargeportsmappingDataPolicy",
+    "app_UUID" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "7d0c66f8-5f63-4e04-9617-edbd778c6aa9",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "6350bb49-87aa-4baf-8165-5cd717ab8afa"
+}

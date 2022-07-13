@@ -1,0 +1,23 @@
+{
+    "_id": "policy_voyage_loadingports",
+    "type": "policy",
+    "app_UUID": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "refType": "object",
+    "refTypeId": "3ef12f80-9dca-46e0-afb6-915e729efe40",
+    "userGrants": {},
+    "roleGrants": {
+        "AUTHENTICATED_USERS": {
+            "allowedItemLevelActions": [
+                "READ",
+                "UPDATE",
+                "DELETE",
+                "LISTVIEW"
+            ],
+            "itemLevelFilters": [],
+            "allowedGlobalActions": [
+                "CREATE",
+                "UPLOAD"
+            ]
+        }
+    }
+}

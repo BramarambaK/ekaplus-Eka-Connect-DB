@@ -1,0 +1,23 @@
+{
+    "_id" : "createowner_policy",
+    "type" : "policy",
+    "app_UUID" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "refType" : "object",
+    "refTypeId" : "cd74327c-cb01-4194-a03d-965eceba4119",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

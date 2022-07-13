@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_CREATE_SELLER_OPTIONALITY_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "d8e7aa6f-0b84-404d-a171-6852a074e2f1"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_CREATE_SELLER_OPTIONALITY",
+  "label": "Create Seller Optionality using Processor",
+  "object": "41fdb9ce-4fe0-4c87-a901-61f14f2fca17"
+}

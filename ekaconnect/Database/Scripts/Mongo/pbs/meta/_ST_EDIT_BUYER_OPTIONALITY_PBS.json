@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_EDIT_BUYER_OPTIONALITY_PBS",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_EDIT_BUYER_OPTIONALITY",
+  "label": "Edit Buyer Optionality in System",
+  "object": "5e9c9451-2fed-4593-b729-5bab6a29feff"
+}

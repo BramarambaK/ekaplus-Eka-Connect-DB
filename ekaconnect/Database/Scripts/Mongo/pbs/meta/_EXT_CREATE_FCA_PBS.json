@@ -1,0 +1,23 @@
+{
+  "_id": "_EXT_CREATE_FCA_PBS",
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "authorization" : "api",
+  "apiInfo": {
+    "path": "/collectionmapper/4e20f754-574e-43e7-8d11-87c6fae060f5/c89b6d1a-e787-4325-af34-6975ce382fd6/addToCollection",
+    "headers": {
+      "X-ObjectAction": "CREATE"
+    },
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+    "body": {}
+  },
+  "taskId": "_EXT_CREATE_FCA",
+  "label": "Create FCA Externally",
+  "object": "c89b6d1a-e787-4325-af34-6975ce382fd6"
+}

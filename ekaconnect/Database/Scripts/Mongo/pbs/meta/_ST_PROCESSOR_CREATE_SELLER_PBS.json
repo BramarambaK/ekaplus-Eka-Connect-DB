@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_CREATE_SELLER_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "bf2956b2-37e1-416d-a653-fb3785976fff"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_CREATE_SELLER",
+  "label": "Create Seller using Processor",
+  "object": "5c1d2726-79c9-4915-9243-8d7aa4d6791d"
+}

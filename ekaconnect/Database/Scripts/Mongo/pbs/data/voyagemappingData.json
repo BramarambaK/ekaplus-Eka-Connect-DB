@@ -1,0 +1,23 @@
+{
+    "_id" : "voyagemappingData",
+    "targetObject" : "9c98c493-ee2f-490d-be92-fe2424f513e5",
+    "typeOfData" : "mapping",
+    "mappingData" :{
+    "loadingNorTenderedDate": {
+    },
+    "loadingVesselETBDate": {
+    },
+    "loadingVesselETADate": {
+    },
+    "loadingblreleasedDate": {
+    }
+},
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "object" : "9c98c493-ee2f-490d-be92-fe2424f513e5",
+    "sys__UUID" : "bed3cbbc-1edc-48f7-a50c-329a938fffd4",
+    "sys__createdOn" : ISODate("2020-10-13T12:02:37.287Z"),
+    "sys__data__state" : "Create"
+}

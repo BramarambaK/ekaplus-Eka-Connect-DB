@@ -1,0 +1,23 @@
+{
+    "_id" : "dischargeportmappingData",
+    "targetObject" : "6350bb49-87aa-4baf-8165-5cd717ab8afa",
+    "typeOfData" : "mapping",
+    "mappingData" :{
+    "loadingNorTenderedDate": {
+    },
+    "loadingVesselETBDate": {
+    },
+    "loadingVesselETADate": {
+    },
+    "loadingblreleasedDate": {
+    }
+},
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "object" : "6350bb49-87aa-4baf-8165-5cd717ab8afa",
+    "sys__UUID" : "7d0c66f8-5f63-4e04-9617-edbd778c6aa9",
+    "sys__createdOn" : ISODate("2020-10-13T12:02:37.287Z"),
+    "sys__data__state" : "Create"
+}

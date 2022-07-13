@@ -1,0 +1,21 @@
+{
+    "_id" :"dischargeporttrainingDataPolicy",
+    "app_UUID" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "028458fc-f30d-456c-9619-ee2c08ae4e3f",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "6350bb49-87aa-4baf-8165-5cd717ab8afa"
+}
