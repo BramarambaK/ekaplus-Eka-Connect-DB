@@ -1,0 +1,8 @@
+{
+    "_id" : "mdm_shapeTimeFrequency_15mins_PNG",
+    "object": "powerShapeTimeFrequency",
+    "value": "15 mins",
+    "key": "15",
+    "type" : "connectmdm",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7"
+}

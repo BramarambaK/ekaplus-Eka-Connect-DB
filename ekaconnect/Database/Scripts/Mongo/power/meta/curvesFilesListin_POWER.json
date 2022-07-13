@@ -1,0 +1,127 @@
+{
+    "_id" : "curvesFilesListin_POWER",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "uploadpopupcss",
+                    "name" : "documentuploadcurve"
+                }
+            ],
+            "label" : "Add Document",
+            "position" : "top",
+            "iconClass" : "fa fa-plus"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "Download",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.documentcurvelisting",
+                    "name" : "documentdownloadpower",
+                    "headers" : {
+                        "storageType" : "awsS3",
+                        "folderInS3" : "generalDocs"
+                    },
+                    "forceDownload" : true,
+                    "type" : "downloadLink"
+                }
+            ],
+            "label" : "Download",
+            "iconClass" : "download-icon"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.documentcurvelisting",
+                    "name" : "documentdeletepower",
+                    "displayType" : "popup"
+                }
+            ],
+            "label" : "Delete",
+            "iconClass" : "delete-icon"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Description",
+            "sort" : true,
+            "key" : "layoutdescription"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Document",
+            "sort" : true,
+            "key" : "fileName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Instrument Name",
+            "sort" : true,
+            "key" : "instrumentName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Price SubType",
+            "sort" : true,
+            "key" : "priceSubType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Month",
+            "sort" : true,
+            "key" : "priceMonth"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "labelKey" : "FILE_LISTING",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : false,
+        "menu" : false,
+        "refreshData" : true,
+        "showErrorInPopUp" : {
+            "navigateURL" : "documentcurvelisting",
+            "buttonLabel" : "Update Later"
+        }
+    },
+    "object" : "4fdc5e81-ac93-43c0-a6b3-5608c8428971",
+    "objectAction" : "LISTVIEW",
+    "payLoad" : "",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "rows" : "100",
+    "taskId" : "documentcurvelisting",
+    "theme" : "theme-grid-light",
+    "type" : "workflow"
+}

@@ -1,0 +1,300 @@
+{
+    "_id" : "object_itemDetails_PNG",
+    "name" : "object_power_create_item",
+    "type" : "object",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "1",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "DELETE" : "DELETE",
+        "LISTVIEW" : "GET",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "fields" : {
+        "powerItemRefNo" : {
+            "powerItemRefNo" : "Power ItemRefNo",
+            "labelKey" : "powerItemRefNo",
+            "serialNumber" : {
+                "startsWith" : "1",
+                "prefix" : "PW-",
+                "suffix" : "-ITEM"
+            }
+        },
+        "powerContractRefNo" : {
+            "labelKey" : "powerContractRefNo",
+            "powerContractRefNo" : "Power ContractRefNo",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "blockNo" : {
+            "labelKey" : "blockNo",
+            "blockNo" : "SL No.",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "startDate" : {
+            "labelKey" : "startDate",
+            "startDate" : "startDate",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "startDateDatePicker" : {
+            "labelKey" : "startDateDatePicker",
+            "startDateDatePicker" : "startDateDatePicker",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "endDate" : {
+            "labelKey" : "endDate",
+            "endDate" : "endDate",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "endDateDatePicker" : {
+            "labelKey" : "endDateDatePicker",
+            "endDateDatePicker" : "endDateDatePicker",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "startTime" : {
+            "labelKey" : "startTime",
+            "startTime" : "startTime",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "startTimeTimePicker" : {
+            "labelKey" : "startTimeTimePicker",
+            "startTimeTimePicker" : "startTimeTimePicker",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "endTime" : {
+            "labelKey" : "endTime",
+            "endTime" : "endTime",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "timeFrequency" : {
+            "labelKey" : "timeFrequency",
+            "timeFrequency" : "Time Frequency",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "timeFrequencyDisplayName" : {
+            "labelKey" : "timeFrequencyDisplayName",
+            "timeFrequencyDisplayName" : "Time Frequency",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "endTimeTimePicker" : {
+            "labelKey" : "endTimeTimePicker",
+            "endTimeTimePicker" : "endTimeTimePicker",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "weekDays" : {
+            "labelKey" : "weekDays",
+            "weekDays" : "weekDays",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "quantity" : {
+            "labelKey" : "quantity",
+            "quantity" : "quantity",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "quantityUnit" : {
+            "labelKey" : "quantityUnit",
+            "quantityUnit" : "Quantity Unit",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "quantityUnitDisplayName" : {
+            "labelKey" : "quantityUnitDisplayName",
+            "quantityUnitDisplayName" : "Quantity Unit",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "priceType" : {
+            "labelKey" : "priceType",
+            "priceType" : "Price Type",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "priceTypeDisplayName" : {
+            "labelKey" : "priceTypeDisplayName",
+            "priceTypeDisplayName" : "Price Type",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "price" : {
+            "labelKey" : "price",
+            "price" : "price",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "expression" : {
+            "labelKey" : "expression",
+            "expression" : "expression",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "priceUnit" : {
+            "labelKey" : "priceUnit",
+            "priceUnit" : "Price Unit",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "priceUnitDisplayName" : {
+            "labelKey" : "priceUnitDisplayName",
+            "priceUnitDisplayName" : "Price Unit",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "payInCurId" : {
+            "labelKey" : "payInCurId",
+            "payInCurId" : "Payment Settlement Currency",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "payInCurIdDisplayName" : {
+            "labelKey" : "payInCurIdDisplayName",
+            "payInCurIdDisplayName" : "Payment Settlement Currency",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "transmissionLoss" : {
+            "labelKey" : "transmissionLoss",
+            "transmissionLoss" : "transmissionLoss",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "secondaryCost" : {
+            "labelKey" : "secondaryCost",
+            "secondaryCost" : "secondaryCost",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "String"
+        },
+        "hoursPerDay" : {
+            "labelKey" : "hoursPerDay",
+            "hoursPerDay" : "hoursPerDay",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "quantityPerDay" : {
+            "labelKey" : "quantityPerDay",
+            "quantityPerDay" : "quantityPerDay",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "totalDays" : {
+            "labelKey" : "totalDays",
+            "totalDays" : "totalDays",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "totalHours" : {
+            "labelKey" : "totalHours",
+            "totalHours" : "totalHours",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "totalQuantity" : {
+            "labelKey" : "totalQuantity",
+            "totalQuantity" : "totalQuantity",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "totalAmount" : {
+            "labelKey" : "totalAmount",
+            "totalAmount" : "totalAmount",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "formulaPrice" : {
+            "labelKey" : "formulaPrice",
+            "formulaPrice" : "formulaPrice",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Number"
+        },
+        "shape" : {
+            "labelKey" : "shape",
+            "shape" : "Shape",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Object"
+        },
+        "fileDetails" : {
+            "labelKey" : "fileDetails",
+            "fileDetails" : "fileDetails",
+            "isRequired" : false,
+            "type" : "text",
+            "dataType" : "Object"
+        },
+        "userId" : {
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sys__createdBy" : {
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sys__createdOn" : {
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "sys__UUID" : "0de25ff5-9c68-48fe-abd8-f8e8d4a4132b",
+    "label" : "Power Contract Item Details",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [ 
+        "contractType"
+    ]
+}

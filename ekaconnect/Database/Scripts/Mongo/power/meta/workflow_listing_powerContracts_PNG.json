@@ -1,0 +1,230 @@
+{
+    "_id" : "workflow_listing_powerContracts_PNG",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "label" : "Contracts",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "refreshData" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "create_power_contract",
+            "position" : "top",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "createTrade_PNG"
+                }
+            ],
+            "label" : "Create"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "Update_power_contract",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.powerlisting",
+                    "name" : "workflow_updateGeneralDetails_PNG"
+                }
+            ],
+            "label" : "Update",
+            "iconClass" : "cr-edit-icon"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "position" : "top",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.powerlisting",
+                    "name" : "deletePowerContract"
+                }
+            ],
+            "label" : "Delete",
+            "iconClass" : "cr-delete-icon"
+        }
+    ],
+    "labelKey" : "LIMIT_LIST",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "powerContractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractTypeDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "dealTypeDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractIssueDate",
+            "sourceDateFormat" : "YYYY-MM-DD",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "highlight" : {
+                "default" : "bg-transparent",
+                "Active" : "success-bg",
+                "limitStatus-002" : "danger-bg",
+                "limitStatus-001" : "success-bg",
+                "Inactive" : "danger-bg"
+            },
+            "edit" : true,
+            "sort" : true,
+            "key" : "traderNameDisplayName"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cpNameDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "paymentTermsDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "applicableLawContractDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "arbitrationDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "brokerNameDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "brokerPersonInchargeDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "brokerRefNo"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "brokerCommission"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "brokerCommissionUnitDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cpPersonInchargeDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cpContractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "remark"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "productDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "deliveryTypeDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "facilityLocationDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "profitCenterDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "strategyDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "taxScheduleCountryIdDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "taxScheduleIdDisplayName"
+        }        
+    ],
+    "taskId" : "powerlisting",
+    "object" : "73314f69-35dc-43c1-a1db-47d755bafd0d"
+}

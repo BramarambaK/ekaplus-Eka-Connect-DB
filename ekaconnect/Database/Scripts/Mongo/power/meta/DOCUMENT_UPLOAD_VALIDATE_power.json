@@ -1,0 +1,10 @@
+{
+    "_id" : "DOCUMENT_UPLOAD_VALIDATE_power",
+    "componentType" : "ValidateTask",
+    "object" : "4fdc5e81-ac93-43c0-a6b3-5608c8428971",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "UPLOAD_VALIDATE",
+    "type" : "workflow"
+}

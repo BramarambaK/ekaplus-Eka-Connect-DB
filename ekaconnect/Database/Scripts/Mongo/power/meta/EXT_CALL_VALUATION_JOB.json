@@ -1,0 +1,21 @@
+{
+    "_id" : "_EXT_CALL_VALUATION_JOB",
+    "componentType" : "ExtSystemTask",
+    "object" : "73314f69-35dc-43c1-a1db-47d755bafd0d",
+    "objectAction" : "READ",
+    "apiInfo" : {
+        "host" : "${properties.power_api_host}",
+        "path" : "/api/valuation/run",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "_EXT_CALL_VALUATION_JOB"
+}

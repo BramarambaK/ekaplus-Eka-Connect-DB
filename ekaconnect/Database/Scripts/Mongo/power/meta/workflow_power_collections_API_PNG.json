@@ -1,0 +1,18 @@
+{
+    "_id" : "workflow_power_collection_API_PNG",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "type" : "workflow",
+    "taskId" : "power_collection",
+    "label" : "power_collection",
+    "labelKey" : "power_collection",
+    "object" : "0de25ff5-9c68-48fe-abd8-f8e8d4a4132b",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "processorInfo" : {
+        "processorId" : "87094f05-979f-4833-904f-7817d6f01e81"
+    }
+}

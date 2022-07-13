@@ -1,0 +1,357 @@
+{
+    "_id" : "workflow_createTrade_PNG",
+    "type" : "workflow",
+    "refType" : "app",
+    "componentType" : "UserTask",
+    "labelKey" : "createTrade",
+    "label" : "General Details",
+    "object" : "73314f69-35dc-43c1-a1db-47d755bafd0d",
+    "objectAction" : "CREATE",
+    "layout" : {
+        "name" : "create",
+        "type" : "row",
+        "recommedationNeed" : true,
+        "data" : "selected.createTrade_PNG",
+        "sentenceForNlpExample" : "",
+        "formLayoutStyle" : {
+            "background" : "#eff7f9"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "formStyle" : {
+            "margin" : "auto",
+            "font-size" : "14px"
+        },
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px",
+            "width" : "19%"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "100%",
+            "height" : "25px"
+        },
+        "defaultFormValueStyle" : {
+            "flex" : "1",
+            "height" : "20px"
+        },
+        "menu" : true
+    },
+    "fields" : [ 
+        [ 
+            {
+                "key" : "contractType",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "dealType",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "contractIssueDate",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "traderName",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "cpName",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "paymentTerms",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "applicableLawContract",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "arbitration",
+                "formItemStyle" : {
+                    "width" : "230px",
+                    "margin" : "10px"
+                }
+            }
+        ], 
+        {
+            "header" : {
+                "accordion" : true,
+                "label" : "Optional (Broker Name, Broker Incharge, Broker Ref., Broker Commission, CP Incharge, CP Ref., Remark)"
+            },
+            "fields" : [ 
+                {
+                    "key" : "brokerName",
+                    "formItemStyle" : {
+                        "width" : "210px",
+                        "margin" : "10px"
+                    }
+                }, 
+                {
+                    "key" : "brokerPersonIncharge",
+                    "formItemStyle" : {
+                        "width" : "210px",
+                        "margin" : "10px"
+                    }
+                }, 
+                {
+                    "key" : "brokerRefNo",
+                    "formItemStyle" : {
+                        "width" : "210px",
+                        "margin" : "10px"
+                    }
+                }, 
+                {
+                    "key" : "brokerCommission",
+                    "formItemStyle" : {
+                        "width" : "105px",
+                        "margin" : "10px 0 10px 10px"
+                    }
+                }, 
+                {
+                    "key" : "brokerCommissionUnit",
+                    "formItemStyle" : {
+                        "width" : "105px",
+                        "margin" : "10px 10px 10px 0"
+                    }
+                }, 
+                {
+                    "key" : "cpPersonIncharge",
+                    "formItemStyle" : {
+                        "width" : "210px",
+                        "margin" : "10px"
+                    }
+                }, 
+                {
+                    "key" : "cpContractRefNo",
+                    "formItemStyle" : {
+                        "width" : "210px",
+                        "margin" : "10px"
+                    }
+                }, 
+                {
+                    "key" : "remark",
+                    "formItemStyle" : {
+                        "width" : "440px",
+                        "margin" : "10px"
+                    }
+                }
+            ]
+        },
+        [ 
+            {
+                "key" : "powerContractRefNo",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "contractTypeDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "dealTypeDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "traderNameDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "cpNameDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "paymentTermsDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "applicableLawContractDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "arbitrationDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "brokerNameDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "brokerPersonInchargeDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "brokerCommissionUnitDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "cpPersonInchargeDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "productDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "deliveryTypeDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "facilityLocationDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "profitCenterDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "strategyDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "taxScheduleCountryIdDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "taxScheduleIdDisplayName",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createTrade_PNG",
+                    "data" : "selected.createTrade_PNG"
+                }
+            ],
+            "label" : "General Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "deliveryDetails_PNG",
+                    "data" : "selected.deliveryDetails_PNG"
+                }
+            ],
+            "label" : "Delivery Details",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "label" : "CANCEL",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "position" : "bottom",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "outcomes" : [ 
+                {
+                    "name" : "listingtrade"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "CREATE",
+            "labelkey" : "NEXT",
+            "task" : "createTrade_PNG",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "GMR basic got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Price request got created with some errors"
+                        }
+                    },
+                    "data" : "output.createTrade_PNG",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_CONTRACT_PNG"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_CONTRACT_PNG",
+                    "name" : "deliveryDetails_PNG"
+                }
+            ],
+            "label" : "NEXT",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "createTrade_PNG"
+}

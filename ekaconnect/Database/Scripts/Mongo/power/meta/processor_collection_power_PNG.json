@@ -1,0 +1,9 @@
+{
+    "_id" : "processor_collection_power_PNG",
+    "name" : "power_collection_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "snippet" : "var collectionURL = req.body.propertyList.eka_connect_host + \"/collectionmapper/d7d05837-88a3-471e-a5f1-1c5fd6cec3e7/0de25ff5-9c68-48fe-abd8-f8e8d4a4132b/fetchCollectionRecords\";\r\n\r\nvar collectionDataAPI = {\r\n    method: 'POST',\r\n    url: collectionURL,\r\n    body: {\r\n        \"criteria\": {\r\n            \"filter\": [\r\n                {\r\n                    \"fieldName\": \"serviceKey\",\r\n                    \"value\": \"facility\",\r\n                    \"operator\": \"in\"\r\n                }\r\n            ]\r\n        },\r\n        \"collectionName\": \"powerMDM\",\r\n        \"start\": 0,\r\n        \"limit\": 1000\r\n    },\r\n    headers: {\r\n        Authorization: req.headers.authorization,\r\n        \"X-TenantID\": req.headers[\"x-tenantid\"],\r\n        \"Content-Type\": \"application/json\",\r\n        \"ttl\": \"300\"\r\n    },\r\n    json: true\r\n};\r\n\r\nfunction get_collectionData() {\r\n    return new Promise(function (resolve, reject) {\r\n        request(collectionDataAPI, function (err, response, body) {\r\n            if (err || body.error) reject(body);\r\n            else {\r\n                resolve(body);\r\n            }\r\n        });\r\n    });\r\n}\r\n\r\nget_collectionData().then(function (result) {\r\n    console.log(\"Response - \" + JSON.stringify(result));\r\n    res.status(200).send(result);\r\n}).catch(err => {\r\n    console.log(\"Error Executing Processor - power collectionDataAPI\" + err);\r\n    res.status(500).send(err);\r\n});",
+    "sys__UUID" : "87094f05-979f-4833-904f-7817d6f01e81"
+}

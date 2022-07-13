@@ -1,0 +1,10 @@
+{
+    "_id" : "workflow_task_updateContract_PNG",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "type" : "workflow",
+    "taskId" : "_ST_UPDATE_CONTRACT_PNG",
+    "object" : "73314f69-35dc-43c1-a1db-47d755bafd0d"
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "_LIST_ITEM_CREATE_UPDATE_POWER",
+    "actions" : [ 
+        "CREATE", 
+        "UPDATE"
+    ],
+    "refType" : "object",
+    "refTypeId" : "0de25ff5-9c68-48fe-abd8-f8e8d4a4132b",
+    "type" : "listener",
+    "workflow" : "_EXT_CALL_LIVE_PRICE_POWER"
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "documentdownload_Power",
+    "action" : "downloadLink",
+    "componentType" : "client",
+    "object" : "4fdc5e81-ac93-43c0-a6b3-5608c8428971",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "documentdownloadpower",
+    "type" : "workflow"
+}

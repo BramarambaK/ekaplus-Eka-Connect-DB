@@ -1,0 +1,39 @@
+{
+    "_id" : "object_menu_power_PNG",
+    "type" : "menuObject",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Power",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "powerlisting",
+                                    "text" : "Power Contract Listing",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "createTrade_PNG",
+                                    "text" : "Create Power Contract",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "documentcurvelisting",
+                                    "text" : "Upload Curve Data",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+  "_id": "_ST_CREATE_FILEDOC_POWER",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "UPDATE",
+      "outcomes": [{"name": "_ST_CREATE_FILEDOC_POWER", "resetForm": true}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "type": "workflow",
+  "taskId": "_ST_CREATE_FILEDOC_POWER",
+ "object": "775dd413-6618-405e-b6c8-5951a903530f"
+ }
+

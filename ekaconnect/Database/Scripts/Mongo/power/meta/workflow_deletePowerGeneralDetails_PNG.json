@@ -1,0 +1,88 @@
+{
+    "_id" : "workflow_deletePowerContract_PNG",
+    "componentType" : "UserTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "label" : "Remove Contract",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to delete the selected contract ${powerContractRefNo}?",
+            "headerMessage" : "Delete Contract : ${powerContractRefNo}"
+        }
+    },
+    "input" : [ 
+        "powerContractRefNo"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "powerlisting"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "deletePowerContract",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Contract got deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Contract got deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deletePowerContract",
+                    "appendMsg" : true,
+                    "name" : "_ST_DELETE_POWERCONTRACT"
+                }, 
+                {
+                    "name" : "powerlisting",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "DELETE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "powerlisting"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Delete_POWER",
+    "fields" : [ 
+        {
+            "heading" : "powerContractRefNo"
+        }
+    ],
+    "taskId" : "deletePowerContract",
+    "object" : "73314f69-35dc-43c1-a1db-47d755bafd0d"
+}

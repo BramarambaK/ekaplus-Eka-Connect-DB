@@ -1,0 +1,28 @@
+{
+    "_id" : "doc_EXT_DELETE_DOCUMENT_PNG",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "type" : "workflow",
+    "apiInfo" : {
+        "path" : "/file/9c86d836-36e7-41f1-bb6f-71efd7df43aa/d7d05837-88a3-471e-a5f1-1c5fd6cec3e7/delete/v2/{0}",
+        "headers" : {
+            "X-ObjectAction" : "CREATE",
+            "Content-Type" : "application/json",
+            "Accept" : "application/json",
+            "storageType" : "awsS3",
+            "folderInS3" : "generalDocs"
+        },
+        "inputMapping" : {},
+        "method" : "DELETE",
+        "useInputMapping" : false,
+        "host" : "${properties.eka_connect_host}",
+        "body" : {},
+        "pathParams" : [ 
+            "##output.id"
+        ]
+    },
+    "taskId" : "_EXT_DELETE_DOCUMENT",
+    "object" : "9c86d836-36e7-41f1-bb6f-71efd7df43aa"
+}

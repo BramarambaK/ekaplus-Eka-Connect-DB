@@ -1,0 +1,10 @@
+{
+    "_id" : "doc_DOCUMENT_UPLOAD_VALIDATE_PNG",
+    "componentType" : "ValidateTask",
+    "object" : "9c86d836-36e7-41f1-bb6f-71efd7df43aa",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "DOCUMENT_UPLOAD_VALIDATE",
+    "type" : "workflow"
+}

@@ -1,0 +1,467 @@
+{
+    "_id" : "object_generalDetails_PNG",
+    "name" : "object_power_create_contract",
+    "type" : "object",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "1",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "DELETE" : "DELETE",
+        "LISTVIEW" : "GET",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "fields" : {
+        "powerContractRefNo" : {
+            "powerContractRefNo" : "Contract Ref No.",
+            "labelKey" : "powerContractRefNo",
+            "serialNumber" : {
+                "startsWith" : "1",
+                "prefix" : "PW-",
+                "suffix" : "-REF"
+            }
+        },
+        "selectTemplate" : {
+            "labelKey" : "selectTemplate",
+            "isRequired" : false,
+            "selectTemplate" : "Select Template",
+            "type" : "hidden",
+            "serviceKey" : "corporateLevelTemplateList",
+            "dropdownValue" : "selectTemplateDisplayName",
+            "dataType" : "String"
+        },
+        "contractType" : {
+            "labelKey" : "contractType",
+            "isRequired" : true,
+            "contractType" : "Contract Type",
+            "type" : "dropdown",
+            "propertyKey" : "contractType",
+            "dropdownValue" : "contractTypeDisplayName",
+            "dataType" : "String"
+        },
+        "dealType" : {
+            "labelKey" : "dealType",
+            "isRequired" : true,
+            "dealType" : "Deal Type",
+            "type" : "dropdown",
+            "serviceKey" : "dealType",
+            "dependsOn" : [
+                "DealType"
+            ],
+            "children":[
+                "cpName"
+            ],
+            "dropdownValue" : "dealTypeDisplayName",
+            "dataType" : "String"
+        },
+        "contractIssueDate" : {
+            "labelKey" : "contractIssueDate",
+            "isRequired" : true,
+            "contractIssueDate" : "Contract Issue Date",
+            "type" : "datepicker",
+            "format" : "dd-MM-yyyy"
+        },
+        "traderName" : {
+            "labelKey" : "traderName",
+            "isRequired" : true,
+            "traderName" : "Trader Name",
+            "type" : "dropdown",
+            "serviceKey" : "userListByRole",
+            "children" : [
+                "profitCenter"
+            ],
+            "dropdownValue" : "traderNameDisplayName",
+            "dataType" : "String"
+        },
+        "cpName" : {
+            "labelKey" : "cpName",
+            "isRequired" : true,
+            "cpName" : "CP Name",
+            "type" : "dropdown",
+            "serviceKey" : "businessPartnerCombo",
+            "parent" : [ 
+                "dealType"
+            ],
+            "dropdownValue" : "cpNameDisplayName",
+            "dataType" : "String"
+        },
+        "paymentTerms" : {
+            "labelKey" : "paymentTerms",
+            "isRequired" : true,
+            "paymentTerms" : "Payment Terms",
+            "type" : "dropdown",
+            "serviceKey" : "paytermlist_phy",
+            "dropdownValue" : "paymentTermsDisplayName",
+            "dataType" : "String"
+        },
+        "applicableLawContract" : {
+            "labelKey" : "applicableLawContract",
+            "isRequired" : true,
+            "applicableLawContract" : "Applicable Law/Contract",
+            "type" : "dropdown",
+            "serviceKey" : "applicableLaw",
+            "dropdownValue" : "applicableLawContractDisplayName",
+            "dataType" : "String"
+        },
+        "arbitration" : {
+            "labelKey" : "arbitration",
+            "isRequired" : true,
+            "arbitration" : "Arbitration",
+            "type" : "dropdown",
+            "serviceKey" : "ContractRulesAndArbitrationList",
+            "dropdownValue" : "arbitrationDisplayName",
+            "dataType" : "String"
+        },
+        "brokerName" : {
+            "labelKey" : "brokerName",
+            "isRequired" : false,
+            "brokerName" : "Broker Name",
+            "type" : "dropdown",
+            "serviceKey" : "businesspartnercontactperson",
+            "dependsOn" : [ 
+                "ALL"
+            ],
+            "children":[
+                "brokerPersonIncharge"
+            ],
+            "virtualScroll" : true,
+            "dropdownValue" : "brokerNameDisplayName",
+            "dataType" : "String"
+        },
+        "brokerPersonIncharge" : {
+            "labelKey" : "brokerPersonIncharge",
+            "isRequired" : false,
+            "brokerPersonIncharge" : "Broker Person Incharge",
+            "type" : "dropdown",
+            "serviceKey" : "brokerPersonInCharge",
+            "parent" : [ 
+                "brokerName"
+            ],
+            "dropdownValue" : "brokerPersonInchargeDisplayName",
+            "dataType" : "String"
+        },
+        "brokerRefNo" : {
+            "labelKey" : "brokerRefNo",
+            "isRequired" : false,
+            "brokerRefNo" : "Broker Ref. No.",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "brokerCommission" : {
+            "labelKey" : "brokerCommission",
+            "isRequired" : false,
+            "brokerCommission" : "Broker Commission",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "brokerCommissionUnit" : {
+            "labelKey" : "brokerCommissionUnit",
+            "isRequired" : false,
+            "brokerCommissionUnit" : "Unit",
+            "type" : "dropdown",
+            "serviceKey" : "allDistinctPriceUnits",
+            "dropdownValue" : "brokerCommissionUnitDisplayName",
+            "dataType" : "String"
+        },
+        "cpPersonIncharge" : {
+            "labelKey" : "cpPersonIncharge",
+            "isRequired" : false,
+            "cpPersonIncharge" : "CP Person Incharge",
+            "type" : "dropdown",
+            "serviceKey" : "cpPersonInCharge",
+            "dropdownValue" : "cpPersonInchargeDisplayName",
+            "dataType" : "String"
+        },
+        "cpContractRefNo" : {
+            "labelKey" : "cpContractRefNo",
+            "isRequired" : false,
+            "cpContractRefNo" : "CP Contract Ref. No.",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "remark" : {
+            "labelKey" : "remark",
+            "isRequired" : false,
+            "remark" : "Remark",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "product" : {
+            "labelKey" : "product",
+            "isRequired" : false,
+            "product" : "Product",
+            "type" : "dropdown",
+            "serviceKey" : "productComboDropDrown",
+            "dropdownValue" : "productDisplayName",
+            "dataType" : "String"
+        },
+        "deliveryType" : {
+            "labelKey" : "deliveryType",
+            "isRequired" : false,
+            "deliveryType" : "Delivery Type",
+            "type" : "dropdown",
+            "dropdownValue" : "deliveryTypeDisplayName",
+            "serviceKey" : "powerDeliveryType",
+            "dataType" : "String"
+        },
+        "facilityLocation" : {
+            "labelKey" : "facilityLocation",
+            "isRequired" : false,
+            "facilityLocation" : "Facility/Location",
+            "type" : "dropdown",
+            "serviceKey" : "facilityLocation",
+            "dropdownValue" : "facilityLocationDisplayName",
+            "dataType" : "String"
+        },
+        "valuationFormulaId" : {
+            "labelKey" : "valuationFormulaId",
+            "isRequired" : false,
+            "valuationFormulaId" : "Valuation Formula",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "profitCenter" : {
+            "labelKey" : "profitCenter",
+            "isRequired" : false,
+            "profitCenter" : "Profit Center",
+            "type" : "dropdown",
+            "serviceKey" : "userProfitCenterList",
+            "parent" : [
+               "traderName"
+            ],
+            "dropdownValue" : "profitCenterDisplayName",
+            "dataType" : "String"
+        },
+        "strategy" : {
+            "labelKey" : "strategy",
+            "isRequired" : false,
+            "strategy" : "Strategy",
+            "type" : "dropdown",
+            "serviceKey" : "corporateStrategy",
+            "dropdownValue" : "strategyDisplayName",
+            "dataType" : "String"
+        },
+        "taxScheduleCountryId" : {
+            "labelKey" : "ContracttaxScheduleCountryId",
+            "isRequired" : false,
+            "ContracttaxScheduleCountryId" : "Tax Schedule Applicable Country",
+            "serviceKey" : "taxScheduleCountrystate",
+            "type" : "dropdown",
+            "dropdownValue" : "taxScheduleCountryIdDisplayName",
+            "children":[
+                "taxScheduleId"
+            ],
+            "dataType" : "String"
+        },
+        "taxScheduleId" : {
+            "labelKey" : "ContracttaxScheduleId",
+            "isRequired" : false,
+            "ContracttaxScheduleId" : "Tax Schedule",
+            "serviceKey" : "listOfTaxSchedules",
+            "type" : "dropdown",
+            "dropdownValue" : "taxScheduleIdDisplayName",
+            "parent" : [
+                "taxScheduleCountryId"
+             ],
+            "dataType" : "String"
+        },
+        "userId" : {
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sys__createdBy" : {
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sys__createdOn" : {
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "selectTemplateDisplayName" : {
+            "labelKey" : "selectTemplateDisplayName",
+            "isRequired" : false,
+            "selectTemplateDisplayName" : "Template Name",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "contractTypeDisplayName" : {
+            "labelKey" : "contractTypeDisplayName",
+            "isRequired" : false,
+            "contractTypeDisplayName" : "Contract Type",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "dealTypeDisplayName" : {
+            "labelKey" : "dealTypeDisplayName",
+            "isRequired" : false,
+            "dealTypeDisplayName" : "Deal Type",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "traderNameDisplayName" : {
+            "labelKey" : "traderNameDisplayName",
+            "isRequired" : false,
+            "traderNameDisplayName" : "Trader Name",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "cpNameDisplayName" : {
+            "labelKey" : "cpNameDisplayName",
+            "isRequired" : false,
+            "cpNameDisplayName" : "CP Name",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "paymentTermsDisplayName" : {
+            "labelKey" : "paymentTermsDisplayName",
+            "isRequired" : false,
+            "paymentTermsDisplayName" : "Payment Terms",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "applicableLawContractDisplayName" : {
+            "labelKey" : "applicableLawContractDisplayName",
+            "isRequired" : false,
+            "applicableLawContractDisplayName" : "Applicable Law/Contract",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "arbitrationDisplayName" : {
+            "labelKey" : "arbitrationDisplayName",
+            "isRequired" : false,
+            "arbitrationDisplayName" : "Arbitration",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "brokerNameDisplayName" : {
+            "labelKey" : "brokerNameDisplayName",
+            "isRequired" : false,
+            "brokerNameDisplayName" : "Broker Name",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "brokerPersonInchargeDisplayName" : {
+            "labelKey" : "brokerPersonInchargeDisplayName",
+            "isRequired" : false,
+            "brokerPersonInchargeDisplayName" : "Broker Person Incharge",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "brokerCommissionUnitDisplayName" : {
+            "labelKey" : "brokerCommissionUnitDisplayName",
+            "isRequired" : false,
+            "brokerCommissionUnitDisplayName" : "Unit",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "cpPersonInchargeDisplayName" : {
+            "labelKey" : "cpPersonInchargeDisplayName",
+            "isRequired" : false,
+            "cpPersonInchargeDisplayName" : "CP Person Incharge",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "productDisplayName" : {
+            "labelKey" : "productDisplayName",
+            "isRequired" : false,
+            "productDisplayName" : "Product",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "deliveryTypeDisplayName" : {
+            "labelKey" : "deliveryTypeDisplayName",
+            "isRequired" : false,
+            "deliveryTypeDisplayName" : "Delivery Type",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "facilityLocationDisplayName" : {
+            "labelKey" : "facilityLocationDisplayName",
+            "isRequired" : false,
+            "facilityLocationDisplayName" : "Facility/Location",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "valuationFormulaIdDisplayName" : {
+            "labelKey" : "valuationFormulaIdDisplayName",
+            "isRequired" : false,
+            "valuationFormulaIdDisplayName" : "Valuation Formula",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "profitCenterDisplayName" : {
+            "labelKey" : "profitCenterDisplayName",
+            "isRequired" : false,
+            "profitCenterDisplayName" : "Profit Center",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "strategyDisplayName" : {
+            "labelKey" : "strategyDisplayName",
+            "isRequired" : false,
+            "strategyDisplayName" : "Strategy",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "taxScheduleCountryIdDisplayName" : {
+            "labelKey" : "taxScheduleCountryIdDisplayName",
+            "isRequired" : false,
+            "taxScheduleCountryIdDisplayName" : "Tax Schedule Applicable Country",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "taxScheduleIdDisplayName" : {
+            "labelKey" : "taxScheduleIdDisplayName",
+            "isRequired" : false,
+            "taxScheduleIdDisplayName" : "Tax Schedule",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "quantityUnitDisplayName" : {
+            "labelKey" : "quantityUnitDisplayName",
+            "isRequired" : false,
+            "quantityUnitDisplayName" : "Quantity Unit",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "priceTypeDisplayName" : {
+            "labelKey" : "priceTypeDisplayName",
+            "isRequired" : false,
+            "priceTypeDisplayName" : "Price Type",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "priceUnitDisplayName" : {
+            "labelKey" : "priceUnitDisplayName",
+            "isRequired" : false,
+            "priceUnitDisplayName" : "Price Unit",
+            "type" : "hidden",
+            "dataType" : "String"
+        },
+        "payInCurIdDisplayName" : {
+            "labelKey" : "payInCurIdDisplayName",
+            "payInCurId" : "Pay-In Settlement Currency",
+            "payInCurIdDisplayName" : "productCurrencyList",
+            "type" : "hidden",
+            "dataType" : "String"
+        }
+    },
+    "sys__UUID" : "73314f69-35dc-43c1-a1db-47d755bafd0d",
+    "label" : "Power Contract General Details",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [ 
+        "contractType"
+    ]
+}

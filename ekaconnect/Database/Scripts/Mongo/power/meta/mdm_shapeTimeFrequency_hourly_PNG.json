@@ -1,0 +1,8 @@
+{
+    "_id" : "mdm_shapeTimeFrequency_hourly_PNG",
+    "object": "powerShapeTimeFrequency",
+    "value": "hourly",
+    "key": "60",
+    "type" : "connectmdm",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7"
+}

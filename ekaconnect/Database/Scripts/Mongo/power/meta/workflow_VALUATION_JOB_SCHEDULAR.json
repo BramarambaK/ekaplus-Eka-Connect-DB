@@ -1,0 +1,19 @@
+{
+    "_id" : "workflow_VALUATION_JOB_SCHEDULAR",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "73314f69-35dc-43c1-a1db-47d755bafd0d",
+    "objectAction" : "READ",
+    "taskId" : "VALUATION_JOB_SCHEDULAR",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [
+	
+                {
+                    "name" : "_EXT_CALL_VALUATION_JOB",
+                    "appendMsg" : false
+                }
+            ]
+}

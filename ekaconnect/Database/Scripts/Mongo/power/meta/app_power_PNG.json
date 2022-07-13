@@ -1,0 +1,59 @@
+{
+    "_id" : "app_power_PNG",
+    "title" : "Power",
+    "name" : "power",
+    "platform_id" : "45",
+    "tenantID" : "",
+    "type" : "app",
+    "appType" : "CTRM",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "assets/img/brand/manuchar.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Boliden"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "label" : "Gas and Power",
+                        "iconCls" : "insights-icon",
+                        "menuItems" : [ 
+                            {
+                                "text" : "",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/power/newContract",
+                                        "text" : "New Physical Contract",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7"
+}

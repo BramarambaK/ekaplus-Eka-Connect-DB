@@ -1,0 +1,150 @@
+{
+    "_id" : "workflow_itemDetails_PNG",
+    "type" : "workflow",
+    "refType" : "app",
+    "componentType" : "UserTask",
+    "labelKey" : "createItems",
+    "label" : "Item Details",
+    "object" : "0de25ff5-9c68-48fe-abd8-f8e8d4a4132b",
+    "objectAction" : "CREATE",
+    "layout" : {
+        "name" : "itemDetails_PNG",
+        "type" : "row",
+        "recommedationNeed" : true,
+        "data" : "selected.itemDetails_PNG",
+        "sentenceForNlpExample" : "",
+        "formLayoutStyle" : {
+            "background" : "#eff7f9"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "formStyle" : {
+            "margin" : "auto",
+            "font-size" : "14px"
+        },
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px",
+            "width" : "19%"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "100%",
+            "height" : "25px"
+        },
+        "defaultFormValueStyle" : {
+            "flex" : "1",
+            "height" : "20px"
+        },
+        "menu" : true
+    },
+    "fields" : [ 
+        [ 
+            {
+                "key" : "blockNo"
+            }, 
+            {
+                "key" : "endDate"
+            }, 
+            {
+                "key" : "endDateDatePicker"
+            }, 
+            {
+                "key" : "endTime"
+            }, 
+            {
+                "key" : "endTimeTimePicker"
+            }, 
+            {
+                "key" : "hoursPerDay"
+            }, 
+            {
+                "key" : "price"
+            }, 
+            {
+                "key" : "quantity"
+            }, 
+            {
+                "key" : "quantityPerDay"
+            }, 
+            {
+                "key" : "secondaryCost"
+            }, 
+            {
+                "key" : "startDate"
+            }, 
+            {
+                "key" : "startDateDatePicker"
+            }, 
+            {
+                "key" : "startTime"
+            }, 
+            {
+                "key" : "startTimeTimePicker"
+            }, 
+            {
+                "key" : "totalAmount"
+            }, 
+            {
+                "key" : "formulaPrice"
+            }, 
+            {
+                "key" : "totalDays"
+            }, 
+            {
+                "key" : "totalHours"
+            }, 
+            {
+                "key" : "totalQuantity"
+            }, 
+            {
+                "key" : "transmissionLoss"
+            }, 
+            {
+                "key" : "weekDays"
+            },
+            {
+                "key" : "fileDetails"
+            },
+            {
+                "key" : "timeFrequency"
+            }
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "NEXT",
+            "task" : "itemDetails_PNG",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Power Items got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Power Items got created with some errors"
+                        }
+                    },
+                    "data" : "output.itemDetails_PNG",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_ITEMS_PNG"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_ITEMS_PNG",
+                    "name" : "powerlisting"
+                }
+            ],
+            "label" : "NEXT",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "itemDetails_PNG"
+}

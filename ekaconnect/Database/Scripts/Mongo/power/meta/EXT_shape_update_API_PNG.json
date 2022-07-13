@@ -1,0 +1,24 @@
+{
+    "_id" : "EXT_shape_update_API_PNG",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "type" : "workflow",
+    "taskId" : "EXT_shape_update",
+    "task" : "EXT_shape_update",
+    "componentType" : "ExtSystemTask",
+    "object" : "0de25ff5-9c68-48fe-abd8-f8e8d4a4132b",
+    "apiInfo" : {
+        "host" : "${properties.power_api_host}",
+        "path" : "/shape/update",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        },
+        "useInputMapping" : false
+    }
+}

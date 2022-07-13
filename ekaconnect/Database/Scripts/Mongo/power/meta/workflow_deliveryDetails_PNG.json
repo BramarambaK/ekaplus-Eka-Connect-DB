@@ -1,0 +1,188 @@
+{
+    "_id" : "workflow_deliveryDetails_PNG",
+    "type" : "workflow",
+    "refType" : "app",
+    "componentType" : "UserTask",
+    "labelKey" : "createTrade",
+    "label" : "Delivery Details",
+    "object" : "73314f69-35dc-43c1-a1db-47d755bafd0d",
+    "objectAction" : "CREATE",
+    "layout" : {
+        "name" : "deliveryDetails_PNG",
+        "type" : "row",
+        "recommedationNeed" : true,
+        "data" : "selected.createTrade_PNG",
+        "sentenceForNlpExample" : "",
+        "formLayoutStyle" : {
+            "background" : "#eff7f9"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "formStyle" : {
+            "margin" : "auto",
+            "font-size" : "14px"
+        },
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px",
+            "width" : "19%"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "100%",
+            "height" : "25px"
+        },
+        "defaultFormValueStyle" : {
+            "flex" : "1",
+            "height" : "20px"
+        },
+        "menu" : true
+    },
+    "fields" : [ 
+        [ 
+            {
+                "key" : "product",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            },
+            {
+                "key" : "deliveryType",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "facilityLocation",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            },
+            {
+                "key" : "valuationFormulaId",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            }  
+        ],
+        [ 
+            {
+                "key" : "profitCenter",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            },
+            {
+                "key" : "strategy",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            }, 
+            {
+                "key" : "taxScheduleCountryId",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            },
+            {
+                "key" : "taxScheduleId",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin" : "10px"
+                }
+            }  
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "workflow_updateGeneralDetails_PNG",
+                    "data" : "selected.workflow_updateGeneralDetails_PNG"
+                }
+            ],
+            "label" : "General Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "deliveryDetails_PNG",
+                    "data" : "selected.deliveryDetails_PNG"
+                }
+            ],
+            "label" : "Delivery Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "label" : "CANCEL",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "position" : "bottom",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "outcomes" : [ 
+                {
+                    "name" : "listingtrade"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "SAVE",
+            "task" : "deliveryDetails_PNG",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Power contract got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Power Contract got created with some errors"
+                        }
+                    },
+                    "data" : "output.deliveryDetails_PNG",
+                    "appendMsg" : false,
+                    "name" : "_ST_UPDATE_CONTRACT_PNG"
+                }, 
+                {
+                    "data" : "output._ST_UPDATE_CONTRACT_PNG",
+                    "result" : {
+                        "success" : {
+                            "message" : "Power Contract basic got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Power Contract got created with some errors"
+                        }
+                    },
+                    "name" : "powerlisting"
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "deliveryDetails_PNG"
+}

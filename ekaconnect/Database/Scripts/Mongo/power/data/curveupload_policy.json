@@ -1,0 +1,23 @@
+{
+    "_id" : "curveupload_policy",
+    "type" : "policy",
+    "app_UUID" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "refType" : "object",
+    "refTypeId" : "4fdc5e81-ac93-43c0-a6b3-5608c8428971",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

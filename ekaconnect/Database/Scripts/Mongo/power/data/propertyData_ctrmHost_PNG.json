@@ -1,0 +1,8 @@
+{
+    "_id" : "propertyData_ctrmHost_PNG",
+    "type" : "property",
+    "propertyName" : "eka_ctrm_host",
+	"propertyLevel" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+	"propertyValue" : "http://192.168.1.162:8101"
+}

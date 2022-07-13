@@ -1,0 +1,223 @@
+{
+    "_id" : "documentuploadcurve_Power",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "documentcurvelisting"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "documentuploadcurve",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "File uploaded successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.documentuploadcurve",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_CURVE_DOCUMENT"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_CURVE_DOCUMENT",
+                    "name" : "documentcurvelisting",
+                    "showToaster" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "headers" : {
+                "storageType" : "awsS3",
+                "folderInS3" : "generalDocs"
+            },
+            "type" : "submit"
+        }, 
+        {
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "UPLOAD_VALIDATE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.documentuploadcurve",
+                    "appendMsg" : false,
+                    "name" : "UPLOAD_VALIDATE"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "documentcurvelisting"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "400px"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "instrumentName"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "priceSubType"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "priceMonth"
+            }, 
+            {
+                "style" : {
+                    "width" : "400px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "layoutdescription"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "file"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "fileName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "documentId"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "uploadedBy"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "uploadedDate"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "fileContentType"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "id"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "type"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "size"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "refObject"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "refObjectId"
+            }
+        ]
+    ],
+    "getDataFromExternalAPI" : false,
+    "label" : "Add Document",
+    "labelKey" : "DOCUMENT_UPLOAD",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "eventingRequired" : false,
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : "Document Upload - "
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "column"
+    },
+    "object" : "4fdc5e81-ac93-43c0-a6b3-5608c8428971",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d7d05837-88a3-471e-a5f1-1c5fd6cec3e7",
+    "taskId" : "documentuploadcurve",
+    "type" : "workflow"
+}
