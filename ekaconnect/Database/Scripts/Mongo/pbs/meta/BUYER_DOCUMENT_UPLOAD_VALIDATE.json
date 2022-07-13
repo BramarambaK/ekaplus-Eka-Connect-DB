@@ -1,0 +1,11 @@
+{
+  "_id": "BUYER_DOCUMENT_UPLOAD_VALIDATE",
+  "componentType": "ValidateTask",
+  "object": "f117d5ad-c51f-443f-8855-1993a8ae2a72",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "BUYER_DOCUMENT_UPLOAD_VALIDATE",
+  "label": "Validate Buyer Document Upload",
+  "type": "workflow"
+}

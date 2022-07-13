@@ -1,0 +1,12 @@
+{
+  "_id": "general_collectionHeader_property",
+  "type": "property",
+  "name": "general_collectionHeader",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "plannedBulkShipmentNo:String,docsByPass:String,circleSettlement:String,blConsolidated:String,certificatesConsolidated:String,SAP_No:String,Sanction_checks_clearance:String,Supervision_appointment:String,estimatedSailing:String,contNominationDate:String,Final_Shipper_Breakdown:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of general collection"
+}

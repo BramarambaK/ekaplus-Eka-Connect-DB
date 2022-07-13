@@ -1,0 +1,169 @@
+{
+  "_id": "leftmenu_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Left Menu PBS",
+  "type": "workflow",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "name": "menu"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createvoyage",
+          "data": "selected.createvoyage",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Voyage",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createfreight",
+          "data": "selected.createfreight",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Freight",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategeneral",
+          "data": "selected.creategeneral",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "General",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createsellerlist",
+          "data": "selected.createsellerlist",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Seller",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyerlist",
+          "data": "selected.createbuyerlist",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Buyer",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createshipperlist",
+          "data": "selected.createshipperlist",
+          "resetForm": true
+        }
+      ],
+      "label": "Shipper",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createfca",
+          "data": "selected.createfca",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "FCA",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createowner",
+          "data": "selected.createowner",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Owner",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createloilisting",
+          "data": "selected.createloilisting",
+          "resetForm": true
+        }
+      ],
+      "label": "LOI Details",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "data": "output.leftmenupbs",
+          "appendMsg": false,
+          "name": "_ST_CREATE_LEFTMENU_PBS"
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "taskId": "leftmenupbs",
+  "object": "811d4a0f-60ea-468f-aebc-d795cb5fe8cf"
+}

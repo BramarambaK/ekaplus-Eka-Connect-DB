@@ -1,0 +1,268 @@
+{
+  "_id": "createvoyageform_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Voyage",
+  "type": "workflow",
+  "layout": {
+    "processorInfo": {
+      "processorId": "9e85a127-1094-4205-b69a-a930328c1de0"
+    },
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "formLayoutStyle": {
+      "height": "204px",
+      "padding-left": "6px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "Important Dates - "
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "label": "SAVE",
+      "decisionName": "compositeSave",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.createvoyageform",
+          "appendMsg": false,
+          "name": "_ST_CREATE_VOYAGE"
+        },
+        {
+          "data": "output.createvoyageform",
+          "name": "_ST_PROCESSOR_CREATE_VOYAGE_FORM"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_VOYAGE_FORM",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_VOYAGEFORM"
+        },
+        {
+          "data": "output._ST_CREATE_VOYAGE",
+          "name": "createvoyageform",
+          "dirtyCheckFulfilled": true
+        }
+      ]
+    }
+  ],
+  "labelKey": "CREATE_VOYAGE",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "key": "sanctionCheck"
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "43px"
+        },
+        "suffix": "",
+        "key": "SOF_NOR_CP_Laytime_team",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "38px"
+        },
+        "suffix": "",
+        "key": "Mates_Receipt_Treasury",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "tradeRegionKey",
+        "clearSelection": true
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "key": "numberOfRollings",
+        "value": "0"
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "43px"
+        },
+        "suffix": "",
+        "key": "incoTerm",
+        "clearSelection": true
+      }
+    ],
+    [
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "voyage_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "voyage_collectionHeader",
+        "disabled": "true",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "voyage_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "key": "plannedBulkShipmentNo"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "key": "product"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "key": "tradeRegion"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      }
+    ]
+  ],
+  "taskId": "createvoyageform",
+  "object": "9c98c493-ee2f-490d-be92-fe2424f513e5"
+}

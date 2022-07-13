@@ -1,0 +1,76 @@
+{
+  "_id": "createshipperoptionality_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Create Shipper Optionality Declaration",
+  "type": "workflow",
+  "layout": {
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "name": "customv2",
+    "menuCurrentState": "createshipperlist"
+  },
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "name": "leftmenupbs"
+            }
+          ],
+          "style": {
+            "width": "15%",
+            "margin": "-10px 0 -10px -10px",
+            "min-width": "175px",
+            "background": "#d7e1e9"
+          }
+        },
+        {
+          "workflows": [
+            {
+              "name": "createshipperoptionalityview",
+              "data": "selected.createshipperlist"
+            }
+          ],
+          "style": {
+            "width": "86%"
+          }
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createshipperlist",
+          "data": "selected.createshipperlist",
+          "dirtyCheck": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "Optionality Declaration",
+  "taskId": "createshipperoptionality",
+  "object": "bf4b1a46-b478-4983-b04e-0ad6848bf660"
+}

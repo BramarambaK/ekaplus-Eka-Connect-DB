@@ -1,0 +1,78 @@
+{
+  "_id": "seller_list_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "List of Sellers",
+  "type": "workflow",
+  "layout": {
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo",
+      "firstPersonInchargeId",
+      "firstPersonInchargeName",
+      "dischargePort",
+      "contractItems"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "name": "customv2"
+  },
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "name": "leftmenupbs"
+            }
+          ],
+          "style": {
+            "width": "15%",
+            "margin": "-10px 0 -10px -10px",
+            "min-width": "175px",
+            "background": "#d7e1e9"
+          }
+        },
+        {
+          "workflows": [
+            {
+              "name": "createsellerlistview"
+            }
+          ],
+          "style": {
+            "width": "86%"
+          }
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "targetPath": "${properties.platform_url}/trm/#gridId/LOPBS",
+          "name": "createvoyage",
+          "showPopUp": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "CREATE_SELLER",
+  "taskId": "createsellerlist",
+  "object": "5c1d2726-79c9-4915-9243-8d7aa4d6791d"
+}

@@ -1,0 +1,168 @@
+{
+  "_id": "buyerdocumentupload_PBS",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "buyerdocumentlisting",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "buyerdocumentupload",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "File uploaded successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "File uploaded with some errors"
+            }
+          },
+          "data": "output.buyerdocumentupload",
+          "appendMsg": true,
+          "name": "_ST_CREATE_BUYER_DOCUMENT"
+        },
+        {
+          "data": "output._ST_CREATE_BUYER_DOCUMENT",
+          "name": "buyerdocumentlisting",
+          "showToaster": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "headers": {
+        "storageType": "awsS3",
+        "folderInS3": "pbsDocs"
+      },
+      "type": "submit"
+    },
+    {
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "BUYER_DOCUMENT_UPLOAD_VALIDATE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.buyerdocumentupload",
+          "appendMsg": false,
+          "name": "BUYER_DOCUMENT_UPLOAD_VALIDATE"
+        }
+      ]
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "buyerdocumentlisting",
+          "resetForm": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "layoutdescription"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "file"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "buyer_id"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "buyer"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "plannedBulkShipmentNo"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "product"
+      }
+    ]
+  ],
+  "label": "Upload Document",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "defaultFormItemStyle": {},
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "Document Upload - "
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "object": "f117d5ad-c51f-443f-8855-1993a8ae2a72",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "buyerdocumentupload",
+  "type": "workflow"
+}

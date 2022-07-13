@@ -1,0 +1,13 @@
+{
+  "_id": "buyer_collectionHeader_property",
+  "type": "property",
+  "name": "buyer_collectionHeader",
+  "label": "Buyer Collection Header",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "buyerpbs:String,buyer_id:String,plannedBulkShipmentNo:String,buyer:String,nominationDate:String,nominationAccepted:String,eTAOnNomination:String,fixingAdvise:String,documentaryInstructions:String,draftsSentReceived:String,draftsApproval:String,insuranceNotice:String,shipmentAdvise:String,lcOpeningDeadline:String,lcOperative:String,docsLegalization:String,docsReleasedbyEmbassy:String,documentsDispatched:String,courierTrackingNumber:String,paymentDocumentsPresentation:String,nonPaymentDocumentsPresentation:String,estimateCashReceivableDate:String,actualCashReceivableDate:String,claimagainstBuyer:String,optionalDeclaration:String,optionalDeclarationField:String,LC_Required:String,LC_Received:String,Non_Payment_Documents_courier_no:String,deposit_RequiredDate:String,shipment_Paid:String,released:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of buyer collection"
+}

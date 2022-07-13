@@ -1,0 +1,100 @@
+{
+  "_id": "createloi_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "LOI",
+  "type": "workflow",
+  "processorInfo123": {
+    "processorId": "abf2a84f-ba23-4f12-8b4e-3b6cc672b006"
+  },
+  "layout": {
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo",
+      "firstPersonInchargeId",
+      "firstPersonInchargeName",
+      "dischargePort",
+      "contractItems"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "name": "customv2",
+    "menuCurrentState": "createloilisting"
+  },
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "name": "leftmenupbs"
+            }
+          ],
+          "style": {
+            "width": "15%",
+            "margin": "-10px 0 -10px -10px",
+            "min-width": "175px",
+            "background": "#d7e1e9"
+          }
+        },
+        {
+          "workflows": [
+            {
+              "name": "createloiform"
+            }
+          ],
+          "style": {
+            "width": "86%"
+          }
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createloilisting",
+          "data": "selected.createloilisting",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "data": "output.createloi",
+          "name": "createloi",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "CREATE_LOI",
+  "taskId": "createloi",
+  "object": "485db470-4c7b-49d3-a1e2-e39534067bc5"
+}

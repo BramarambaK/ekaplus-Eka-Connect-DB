@@ -1,0 +1,139 @@
+{
+  "_id": "loadingports_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Loadingports",
+  "type": "workflow",
+  "payLoad": "completeData",
+  "layout": {
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "showCheckbox": false,
+    "tableEditing": true,
+    "pagination": false,
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "limitHeight": true,
+    "dropdownDecisions": true,
+    "selectionMode": "none"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.loadingports",
+          "appendMsg": false,
+          "name": "_ST_CREATE_LOADINGPORTS"
+        },
+        {
+          "data": "output.loadingports",
+          "name": "_ST_PROCESSOR_CREATE_LOADINGPORTS"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_LOADINGPORTS",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_LOADINGPORTS"
+        },
+        {
+          "data": "output._ST_CREATE_LOADINGPORTS",
+          "name": "loadingports",
+          "dirtyCheckFulfilled": true
+        }
+      ]
+    }
+  ],
+  "labelKey": "Loading ports",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "loadingPort",
+      "width": "206px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "loadingNorTenderedDate",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "loadingVesselETBDate",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "loadingVesselETCDate",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "loadingblreleasedDate",
+      "width": "180px"
+    }
+  ],
+  "taskId": "loadingports",
+  "object": "3ef12f80-9dca-46e0-afb6-915e729efe40"
+}

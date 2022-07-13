@@ -1,0 +1,71 @@
+{
+    "_id" : "listingPBS_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "label" : "Shipment and planning app",
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "bc815549-f9a2-4eb4-a3c7-729bacad8e5b"
+    },
+    "layout" : {
+        "name" : "list",
+        "lazyLoading" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "serverSearch" : true,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : true,
+            "export" : true
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "pbs/createvoyage?isPopUp=true",
+                    "name" : "createvoyage",
+                    "orientation" : "landscape"
+                }
+            ],
+            "position" : "top",
+            "label" : "Shipment and Planning"
+        }
+    ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        {
+            "key" : "plannedBulkShipmentNo",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "product",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "shipmentMode",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "vesselName",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "bookingRefNo",
+            "placement" : "Row3"
+        }
+    ],
+    "taskId" : "listingPBS",
+    "object" : "3991dd41-4d63-4447-8778-f24505d6e905",
+    "deviceType" : "mobile"
+}

@@ -1,0 +1,28 @@
+{
+  "_id": "buyerlist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "buyerlist",
+  "object": "5556394f-829b-48ec-950f-ed4c705738df",
+  "label": "buyerlist",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Buyer"
+    },
+    "name": "list"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "plannedBulkShipmentNo",
+      "sort": true,
+      "key": "plannedBulkShipmentNo"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

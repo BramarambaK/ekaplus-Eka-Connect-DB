@@ -1,0 +1,28 @@
+{
+  "_id": "fcalist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "fcalist",
+  "object": "c89b6d1a-e787-4325-af34-6975ce382fd6",
+  "label": "fcalist",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Buyer"
+    },
+    "name": "list"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "plannedBulkShipmentNo",
+      "sort": true,
+      "key": "plannedBulkShipmentNo"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

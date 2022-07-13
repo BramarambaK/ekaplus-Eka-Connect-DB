@@ -1,0 +1,62 @@
+{
+  "_id": "incoterm_propertyKey",
+  "type": "property",
+  "name": "incoterm",
+  "label": "Incoterm Dropdown",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "FOB/FOB",
+      "value": "FOB/FOB"
+    },
+    {
+      "key": "FOB/CFR",
+      "value": "FOB/CFR"
+    },
+    {
+      "key": "FOB/CIF",
+      "value": "FOB/CIF"
+    },
+    {
+      "key": "FOB/CFR",
+      "value": "FOB/CFR"
+    },
+    {
+      "key": "CFR/CFR",
+      "value": "CFR/CFR"
+    },
+    {
+      "key": "CFR/CIF",
+      "value": "CFR/CIF"
+    },
+    {
+      "key": "CIF/CIF",
+      "value": "CIF/CIF"
+    },
+    {
+      "key": "FCA/FCA",
+      "value": "FCA/FCA"
+    },
+    {
+      "key": "FCA/FOB",
+      "value": "FCA/FOB"
+    },
+    {
+      "key": "FCA/CFR",
+      "value": "FCA/CFR"
+    },
+    {
+      "key": "FCA/CIF",
+      "value": "FCA/CIF"
+    },
+    {
+      "key": "EXW/EXW",
+      "value": "EXW/EXW"
+    }
+  ],
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to show dropdown values of incoterm"
+}

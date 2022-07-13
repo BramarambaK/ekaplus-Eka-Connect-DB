@@ -1,0 +1,222 @@
+{
+  "_id": "editselleroptionalityform_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Optionality Declaration",
+  "type": "workflow",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {	      
+        "payLoadData": ["uniqueId"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "edit",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "input": ["uniqueId"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createselleroptionality"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editselleroptionalityform",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got replaced with some errors"
+            }
+          },
+          "data": "output.editselleroptionalityform",
+          "appendMsg": true,
+          "name": "_ST_EDIT_SELLER_OPTIONALITY"
+        },
+        {
+          "data": "output.editselleroptionalityform",
+          "name": "_ST_PROCESSOR_CREATE_SELLER_OPTIONALITY"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_SELLER_OPTIONALITY",
+          "appendMsg": true,
+          "name": "_EXT_EDIT_SELLER_OPTIONALITY"
+        },
+        {
+          "data": "output._ST_EDIT_SELLER_OPTIONALITY",
+          "name": "createselleroptionality",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "Save",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "CREATE",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "seller"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "plannedBulkShipmentNo"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "219px",
+          "margin-right": "10px"
+        },
+        "key": "optionalityDeclaration"
+      },
+      {
+        "style": {
+          "width": "219px",
+          "margin-right": "10px"
+        },
+        "suffix": "",
+        "key": "optionalityDeclaration2"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      },
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "key": "product"
+      },
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "selleroptionality_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "selleroptionality_collectionHeader",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "selleroptionality_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "seller_id"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "uniqueId"
+      },
+      {
+        "disabled": "true",
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "taskId": "editselleroptionalityform",
+  "object": "41fdb9ce-4fe0-4c87-a901-61f14f2fca17"
+}

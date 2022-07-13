@@ -1,0 +1,29 @@
+{
+    "_id": "freightlist_workflow",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "refType": "app",
+    "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "taskId": "freightlist",
+    "object": "eed6e72c-7823-448d-a3a6-82664294dc37",
+    "label": "freightlist",
+    "type": "workflow",
+    "layout": {
+      "header": {
+        "label": "Buyer"
+      },
+      "name": "list"
+    },
+    "fields": [
+      {
+        "filter": true,
+        "edit": false,
+        "label": "plannedBulkShipmentNo",
+        "sort": true,
+        "key": "plannedBulkShipmentNo"
+      }
+    ],
+    "decisions": [],
+    "labelKey": "LIST"
+  }
+  

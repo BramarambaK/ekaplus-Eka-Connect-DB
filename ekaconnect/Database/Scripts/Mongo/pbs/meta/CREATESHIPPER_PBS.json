@@ -1,0 +1,373 @@
+{
+  "_id": "CREATESHIPPER_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Shipper",
+  "type": "workflow",
+  "layout": {
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"],
+        "payLoadData": ["shipper", "shipper_id"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "formLayoutStyle": {
+      "height": "450px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {
+      "border-right-style": "solid",
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%",
+      "border-top-width": "1px",
+      "border-left-style": "solid",
+      "border-right-width": "1px",
+      "border-left-color": "#dee2e5",
+      "border-top-color": "#dee2e5",
+      "border-right-color": "#dee2e5",
+      "border-left-width": "1px",
+      "border-top-style": "solid"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.createshipperform",
+          "appendMsg": false,
+          "name": "_ST_CREATE_SHIPPER"
+        },
+        {
+          "data": "output.createshipperform",
+          "name": "_ST_PROCESSOR_CREATE_SHIPPER"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_SHIPPER",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_SHIPPER"
+        },
+        {
+          "data": "output._ST_CREATE_SHIPPER",
+          "name": "createshipperlist",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "SAVE",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "CREATE_SHIPPER",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "shipper"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "Original_BLMR_received"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "Docs_Instructions_Sent"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "draftsSentReceived"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "paymentDocumentsReceived"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "nonpaymentDocumentsPresentation"
+      },
+      {
+        "style": {
+          "width": "70px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "63px"
+        },
+        "suffix": "",
+        "key": "coPresented"
+      },
+      {
+        "style": {
+          "width": "76px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "35px"
+        },
+        "suffix": "",
+        "key": "coPresentedtimer"
+      },
+      {
+        "style": {
+          "width": "70px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "63px"
+        },
+        "suffix": "",
+        "key": "wqPresented"
+      },
+      {
+        "style": {
+          "width": "76px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "35px"
+        },
+        "suffix": "",
+        "key": "wqPresentedtimer"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "healthPresented"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "radioPresented"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "nonGMOCertificatePresented"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "sanitaryPresented"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "phytosanitaryPresented"
+      }
+    ],
+    [
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "shipper_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "shipper_collectionHeader",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "shipper_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "shipper_id"
+      },
+      {
+        "disabled": "true",
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "shipperpbs"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "plannedBulkShipmentNo"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "product"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      }
+    ]
+  ],
+  "taskId": "createshipperform",
+  "object": "742f1ce2-89e9-42e2-abdf-6ac9565eea1f"
+}

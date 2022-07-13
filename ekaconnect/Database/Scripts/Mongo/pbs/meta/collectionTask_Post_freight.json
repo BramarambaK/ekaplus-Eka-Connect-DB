@@ -1,0 +1,24 @@
+{
+    "_id" : "collectionTask_Post_freight",
+    "componentType" : "UserTask",
+    "version" : "V2",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "data" : "output.collectionTask_Post_freight",
+                    "name" : "EXTERNAL_API_COLLECTIONTASK_POST_FREIGHT",
+                    "returnData" : "Y"
+                }
+            ]
+        }
+    ],
+    "object" : "eed6e72c-7823-448d-a3a6-82664294dc37",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "taskId" : "collectionTask_Post_freight",
+    "type" : "workflow"
+}

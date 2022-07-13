@@ -1,0 +1,28 @@
+{
+    "_id" : "EXTERNAL_API_COLLECTIONTASK_POST_FREIGHT",
+    "componentType" : "CollectionTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "type" : "workflow",        
+        "collectionName" : "freight_collection",       
+        "columns" : [ 
+            {
+                "name" : "plannedBulkShipmentNo",
+                "type" : "String",
+                "collectionCol" : "plannedBulkShipmentNo"
+            }, 
+            {
+                "name" : "Confirmed_book",
+                "type" : "String",
+                "collectionCol" : "Confirmed_book"
+            }, 
+            {
+                "name" : "Carrier_booking_date",
+                "type" : "String",
+                "collectionCol" : "Carrier_booking_date"
+            }
+        ],    
+    "taskId" : "EXTERNAL_API_COLLECTIONTASK_POST_FREIGHT",
+    "object" : "eed6e72c-7823-448d-a3a6-82664294dc37"
+}

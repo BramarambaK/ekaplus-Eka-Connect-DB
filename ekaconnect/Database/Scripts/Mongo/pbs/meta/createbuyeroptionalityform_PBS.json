@@ -1,0 +1,232 @@
+{
+  "_id": "createbuyeroptionalityform_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Optionality Declaration",
+  "type": "workflow",
+  "layout": {
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyeroptionality",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "CREATE",
+      "labelkey": "UPDATE",
+      "task": "createbuyeroptionalityform",
+      "outcomes": [
+        {
+          "data": "output.createbuyeroptionalityform",
+          "name": "_ST_PROCESSOR_BUYEROPTIONALITY_SAVE"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "GMR basic got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Price request got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_BUYEROPTIONALITY_SAVE",
+          "appendMsg": false,
+          "name": "_ST_CREATE_BUYER_OPTIONALITY"
+        },
+        {
+          "data": "output._ST_CREATE_BUYER_OPTIONALITY",
+          "name": "_ST_PROCESSOR_CREATE_BUYER_OPTIONALITY"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_BUYER_OPTIONALITY",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_BUYER_OPTIONALITY"
+        },
+        {
+          "data": "output._ST_CREATE_BUYER_OPTIONALITY",
+          "name": "createbuyeroptionality",
+          "dirtyCheckFulfilled": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyeroptionality"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "CREATE",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "buyer"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "plannedBulkShipmentNo"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "219px"
+        },
+        "key": "optionalityDeclaration"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "suffix": "",
+        "key": "optionalityDeclaration2"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      },
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "key": "product"
+      },
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "buyeroptionality_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "buyeroptionality_collectionHeader",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "buyeroptionality_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "buyer_id"
+      },
+      {
+        "disabled": "true",
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "taskId": "createbuyeroptionalityform",
+  "object": "5e9c9451-2fed-4593-b729-5bab6a29feff"
+}

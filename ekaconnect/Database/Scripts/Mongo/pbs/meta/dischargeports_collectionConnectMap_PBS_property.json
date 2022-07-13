@@ -1,0 +1,21 @@
+{
+  "_id": "dischargeports_collectionConnectMap_PBS_property",
+  "type": "property",
+  "name": "dischargeports_collectionConnectMap",
+  "label": "Dischargeports Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "uniqueId": "uniqueId",
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "dischargePort": "dischargePort",
+    "dischargeportId": "dischargeportId",
+    "dischargeNorTenderedDate": "dischargeNorTenderedDate",
+    "dischargeVesselETBDate": "dischargeVesselETBDate",
+    "dischargeVesselETCDate": "dischargeVesselETCDate"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of dischargeport collection and connect object"
+}

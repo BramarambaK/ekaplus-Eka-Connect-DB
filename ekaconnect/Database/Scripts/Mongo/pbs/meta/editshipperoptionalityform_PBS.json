@@ -1,0 +1,212 @@
+{
+  "_id": "editshipperoptionalityform_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Optionality Declaration",
+  "type": "workflow",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {	      
+        "payLoadData": ["uniqueId"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "edit",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "input": ["uniqueId"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createshipperoptionality"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editshipperoptionalityform",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got replaced with some errors"
+            }
+          },
+          "data": "output.editshipperoptionalityform",
+          "appendMsg": true,
+          "name": "_ST_EDIT_SHIPPER_OPTIONALITY"
+        },
+        {
+          "data": "output.editshipperoptionalityform",
+          "name": "_ST_PROCESSOR_CREATE_SHIPPER_OPTIONALITY"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_SHIPPER_OPTIONALITY",
+          "appendMsg": true,
+          "name": "_EXT_EDIT_SHIPPER_OPTIONALITY"
+        },
+        {
+          "data": "output._ST_EDIT_SHIPPER_OPTIONALITY",
+          "name": "createshipperoptionality",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "Save",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "CREATE",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "shipper"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "plannedBulkShipmentNo"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "219px",
+          "margin-right": "10px"
+        },
+        "key": "optionalityDeclaration"
+      },
+      {
+        "style": {
+          "width": "219px",
+          "margin-right": "10px"
+        },
+        "suffix": "",
+        "key": "optionalityDeclaration2"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      },
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "shipperoptionality_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "shipperoptionality_collectionHeader",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "shipperoptionality_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "shipper_id"
+      },
+      {
+        "disabled": "true",
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "uniqueId"
+      }
+    ]
+  ],
+  "taskId": "editshipperoptionalityform",
+  "object": "bf4b1a46-b478-4983-b04e-0ad6848bf660"
+}

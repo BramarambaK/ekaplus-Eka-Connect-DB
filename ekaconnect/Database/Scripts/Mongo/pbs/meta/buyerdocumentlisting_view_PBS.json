@@ -1,0 +1,121 @@
+{
+  "_id": "buyerdocumentlisting_view_PBS",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "uploadpopupcss",
+          "name": "buyerdocumentupload",
+          "data": "selected.createbuyerlist.createbuyerlistview",
+          "resetForm": true
+        }
+      ],
+      "label": "Add Document",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "EDIT DOCUMENT",
+      "selection": "row",
+      "outcomes": [
+        {
+          "data": "selected.buyerdocumentlisting",
+          "name": "buyerdocumentdownload",
+          "headers": {
+            "storageType": "awsS3",
+            "folderInS3": "pbsDocs"
+          },
+          "forceDownload": true,
+          "type": "downloadLink"
+        }
+      ],
+      "label": "Download",
+      "iconClass": "download-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "selection": "row",
+      "outcomes": [
+        {
+          "data": "selected.buyerdocumentlisting",
+          "name": "buyerdocumentdelete",
+          "displayType": "popup"
+        }
+      ],
+      "label": "Delete",
+      "iconClass": "delete-icon"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Description",
+      "sort": true,
+      "key": "layoutdescription"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Document",
+      "sort": true,
+      "key": "fileName"
+    }
+  ],
+  "getDataFromExternalAPI": false,
+  "labelKey": "FILE_LISTING1",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "refreshData": true,
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "useQueryParams": false,
+    "preserveSelectedData": true
+  },
+  "object": "f117d5ad-c51f-443f-8855-1993a8ae2a72",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "rows": "100",
+  "taskId": "buyerdocumentlistingview",
+  "label": "Buyer Documentlisting",
+  "theme": "theme-grid-light",
+  "type": "workflow"
+}

@@ -1,0 +1,103 @@
+{
+  "_id": "createshipperoptionality_view_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Create Shipper Optionality Declaration",
+  "type": "workflow",
+  "payLoad": "selected.createshipperlist",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "refreshData": true,
+    "useQueryParams": false,
+    "preserveSelectedData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_SHIPPEROPTIONALITY",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modal542px",
+          "name": "createshipperoptionalityform",
+          "data": "selected.createshipperlist.createshipperlistview",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_SHIPPEROPTIONALITY",
+      "selection": "row-selection",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modal542px",
+          "data": "selected.createshipperoptionality",
+          "name": "editshipperoptionalityform"
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create"
+    }
+  ],
+  "labelKey": "Optionality Declaration",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "optionalityDeclaration",
+      "width": "206px"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "optionalityDeclaration2",
+      "width": "180px",
+      "dateformat": "DD-MMM-YYYY"
+    }
+  ],
+  "taskId": "createshipperoptionalityview",
+  "object": "bf4b1a46-b478-4983-b04e-0ad6848bf660"
+}

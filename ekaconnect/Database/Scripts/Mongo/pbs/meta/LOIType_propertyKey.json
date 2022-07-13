@@ -1,0 +1,46 @@
+{
+  "_id": "LOIType_propertyKey",
+  "type": "property",
+  "name": "LOIType",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Cargo internal transfer on board",
+      "value": "Cargo internal transfer on board"
+    },
+    {
+      "key": "Change of destination",
+      "value": "Change of destination"
+    },
+    {
+      "key": "Change of destination + Delivery of cargo without OBL",
+      "value": "Change of destination + Delivery of cargo without OBL"
+    },
+    {
+      "key": "Co-mingling or blending oil cargoes",
+      "value": "Co-mingling or blending oil cargoes"
+    },
+    {
+      "key": "Delivery of cargo without OBL",
+      "value": "Delivery of cargo without OBL"
+    },
+    {
+      "key": "Other",
+      "value": "Other"
+    },
+    {
+      "key": "Reissuance of OBL",
+      "value": "Reissuance of OBL"
+    },
+    {
+      "key": "Rain LOI",
+      "value": "Rain LOI"
+    }
+  ],
+  "label": "LOI Type Dropdown",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to show dropdown values for LOIType"
+}

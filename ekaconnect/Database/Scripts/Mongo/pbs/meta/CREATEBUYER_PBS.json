@@ -1,0 +1,546 @@
+{
+  "_id": "CREATEBUYER_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Buyer",
+  "type": "workflow",
+  "layout": {
+    "valueMouseHover": false,
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"],
+        "payLoadData": ["buyer", "buyer_id"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "formLayoutStyle": {
+      "height": "800px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {
+      "border-right-style": "solid",
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%",
+      "border-top-width": "1px",
+      "border-left-style": "solid",
+      "border-right-width": "1px",
+      "border-left-color": "#dee2e5",
+      "border-top-color": "#dee2e5",
+      "border-right-color": "#dee2e5",
+      "border-left-width": "1px",
+      "border-top-style": "solid"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyerlist",
+          "data": "selected.createbuyerlist",
+          "dirtyCheck": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.createbuyerform",
+          "appendMsg": false,
+          "name": "_ST_CREATE_BUYER"
+        },
+        {
+          "data": "output.createbuyerform",
+          "name": "_ST_PROCESSOR_CREATE_BUYER"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_BUYER",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_BUYER"
+        },
+        {
+          "data": "output._ST_CREATE_BUYER",
+          "name": "createbuyerlist",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "SAVE",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "CREATE_BUYER",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px"
+        },
+        "disabled": true,
+        "suffix": "",
+        "key": "buyer"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": " 219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px",
+          "margin-left": "20px"
+        },
+        "suffix": "",
+        "key": "nominationDate"
+      },
+      {
+        "style": {
+          "width": " 219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "nominationAccepted"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "eTAOnNomination"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "fixingAdvise"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "documentaryInstructions"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "draftsSentReceived"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "draftsApproval"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "insuranceNotice"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-left": "20px",
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "shipmentAdvise"
+      },
+      {
+        "style": {
+          "width": "87px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "13px"
+        },
+        "suffix": "",
+        "key": "deposit_Required",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "73px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "71px"
+        },
+        "suffix": "",
+        "key": "deposit_RequiredDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "LC_Required"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "lcOpeningDeadline"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "LC_Received"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "lcOperative"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "docsLegalization"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "docsReleasedbyEmbassy"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "documentsDispatched"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "courierTrackingNumber"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "paymentDocumentsPresentation"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "nonPaymentDocumentsPresentation"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "Non_Payment_Documents_courier_no"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "estimateCashReceivableDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "actualCashReceivableDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "claimagainstBuyer",
+        "clearSelection": true
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "shipment_Paid"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "released"
+      },
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "buyer_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "buyer_collectionHeader",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "buyer_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "disabled": "true",
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "buyerpbs"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "plannedBulkShipmentNo"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "product"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "buyer_id"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      }
+    ]
+  ],
+  "taskId": "createbuyerform",
+  "object": "5556394f-829b-48ec-950f-ed4c705738df"
+}

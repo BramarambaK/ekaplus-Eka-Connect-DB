@@ -1,0 +1,26 @@
+{
+  "_id": "fca_collectionConnectMap_property",
+  "type": "property",
+  "name": "fca_collectionConnectMap",
+  "label": "Fca Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "terminal_Instructed_containers": "terminal_Instructed_containers",
+    "initial_Container_Pickup_Date": "initial_Container_Pickup_Date",
+    "last_Container_Pickup_Date": "last_Container_Pickup_Date",
+    "containers_Quantity_Pickedup": "containers_Quantity_Pickedup",
+    "Instructed_to_deliver_cargo": "Instructed_to_deliver_cargo",
+    "Cargo_received_Stuffing_Terminal_First": "Cargo_received_Stuffing_Terminal_First",
+    "Cargo_received_Stuffing_Terminal_Last": "Cargo_received_Stuffing_Terminal_Last",
+    "Stuffing_Operation_Start": "Stuffing_Operation_Start",
+    "Stuffing_Operation_Complete": "Stuffing_Operation_Complete",
+    "Gate_Opening_Date": "Gate_Opening_Date",
+    "CNTRs_Gated_in": "CNTRs_Gated_in"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of fca collection and connect object"
+}

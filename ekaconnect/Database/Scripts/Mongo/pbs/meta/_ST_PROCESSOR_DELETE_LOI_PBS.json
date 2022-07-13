@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_DELETE_LOI_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "b7db9160-4dc7-47ee-a2ad-81f083c09b01"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_DELETE_LOI",
+  "label": "Create Loi using Processor",
+  "object": "485db470-4c7b-49d3-a1e2-e39534067bc5"
+}

@@ -1,0 +1,17 @@
+{
+  "_id": "freight_collectionConnectMap_property",
+  "type": "property",
+  "name": "freight_collectionConnectMap",
+  "label": "Freight Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "Confirmed_book": "Confirmed_book",
+    "Carrier_booking_date": "Carrier_booking_date"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of freight collection and connect object"
+}

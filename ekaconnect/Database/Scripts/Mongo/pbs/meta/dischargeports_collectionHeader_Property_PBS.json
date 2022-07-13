@@ -1,0 +1,13 @@
+{
+  "_id": "dischargeports_collectionHeader_Property_PBS",
+  "type": "property",
+  "name": "dischargeports_collectionHeader",
+  "label": "Dischargeports CollectionHeader",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "uniqueId:String,plannedBulkShipmentNo:String,dischargePort:String,dischargeportId:String,dischargeNorTenderedDate:String,dischargeVesselETBDate:String,dischargeVesselETCDate:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of dischargeport collection"
+}

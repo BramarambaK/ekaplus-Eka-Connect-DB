@@ -1,0 +1,301 @@
+{
+  "_id": "createloilisting_view_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "List of LOI",
+  "type": "workflow",
+  "layout": {
+    "setCompleteDataInSelected": false,
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "useQueryParams": false
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "targetPath": "${properties.platform_url}/trm/#gridId/LOPBS",
+          "name": "createvoyage",
+          "showPopUp": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "task": "createloi",
+      "selection": "!default",
+      "position": "top",
+      "outcomes": [
+        {
+          "name": "createloi",
+          "resetForm": true
+        }
+      ],
+      "label": "Add New"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editloi",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createloilistview",
+          "name": "editloi"
+        }
+      ],
+      "label": "Edit"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "deleteloi",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "deleteclass",
+          "data": "selected.createloilisting.createloilistview",
+          "name": "deleteloi"
+        }
+      ],
+      "label": "Delete"
+    }
+  ],
+  "labelKey": "CREATE_LOI",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "saleContractItem"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "salesCP"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "productValue"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "paymentTerms"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "loiRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "oblEndorsedtoDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "counterLOIFrom"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "whydoWeNeedLOI"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LOITypeDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LOIQty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LOIQtyValueDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "goodsValue"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "goodsValueDropdownDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ifLCOperative",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "fundsReceivedDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "blDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "noLienBkLetterReceived"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "deliveredTo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "13OBL"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LOICancellationTracking"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LOICancellationDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "profitCenter"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "corporateName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "personInCharge"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "dischargePort"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shippingLine"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "etaDisport",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LOI_sent_To"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "comments"
+    }
+  ],
+  "taskId": "createloilistview",
+  "object": "485db470-4c7b-49d3-a1e2-e39534067bc5"
+}

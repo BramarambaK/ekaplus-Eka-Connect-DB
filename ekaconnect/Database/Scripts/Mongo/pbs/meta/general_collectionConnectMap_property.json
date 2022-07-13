@@ -1,0 +1,25 @@
+{
+  "_id": "general_collectionConnectMap_property",
+  "type": "property",
+  "name": "general_collectionConnectMap",
+  "label": "General Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "docsByPass": "docsByPass",
+    "circleSettlement": "circleSettlement",
+    "blConsolidated": "blConsolidated",
+    "certificatesConsolidated": "certificatesConsolidated",
+    "SAP_No": "SAP_No",
+    "Sanction_checks_clearance": "Sanction_checks_clearance",
+    "Supervision_appointment": "Supervision_appointment",
+    "estimatedSailing": "estimatedSailing",
+    "contNominationDate": "contNominationDate",
+    "Final_Shipper_Breakdown": "Final_Shipper_Breakdown"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of general collection and connect object"
+}

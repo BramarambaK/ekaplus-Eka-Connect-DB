@@ -1,0 +1,339 @@
+{
+  "_id": "createshipperlistCOPY_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "List of Shippers",
+  "type": "workflow",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "menu": true,
+    "useQueryParams": false,
+    "preserveSelectedData": false
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createvoyage",
+          "data": "selected.createvoyage",
+          "resetForm": true
+        }
+      ],
+      "label": "Voyage",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createfreight",
+          "data": "selected.createfreight",
+          "resetForm": true
+        }
+      ],
+      "label": "Freight",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategeneral",
+          "data": "selected.creategeneral",
+          "resetForm": true
+        }
+      ],
+      "label": "General",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createsellerlist",
+          "data": "selected.createsellerlist",
+          "resetForm": true
+        }
+      ],
+      "label": "Seller",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyerlist",
+          "data": "selected.createbuyerlist",
+          "resetForm": true
+        }
+      ],
+      "label": "Buyer",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createshipperlist",
+          "data": "selected.createshipperlist",
+          "resetForm": true
+        }
+      ],
+      "label": "Shipper",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createfca",
+          "data": "selected.createfca",
+          "resetForm": true
+        }
+      ],
+      "label": "FCA",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createowner",
+          "data": "selected.createowner",
+          "resetForm": true
+        }
+      ],
+      "label": "Owner",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createloilisting",
+          "data": "selected.createloilisting",
+          "resetForm": true
+        }
+      ],
+      "label": "LOI Details",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "targetPath": "${properties.platform_url}/trm/#gridId/LOPBS",
+          "name": "createvoyage",
+          "showPopUp": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createshipper",
+      "selection": "default",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createshipperlist",
+          "name": "createshipper"
+        }
+      ],
+      "label": "Shipper Information"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createshipperoptionality",
+      "selection": "default",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createshipperlist",
+          "name": "createshipperoptionality"
+        },
+        {
+          "name": "createshipperlist",
+          "showPopUp": false
+        }
+      ],
+      "label": "Optionality Declaration"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createshipperdocuments",
+      "selection": "default",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createshipperlist",
+          "name": "shipperdocumentlisting"
+        }
+      ],
+      "label": "Documents"
+    }
+  ],
+  "labelKey": "CREATE_SHIPPER",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shipper"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Original_BLMR_received",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Docs_Instructions_Sent",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsSentReceived",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "paymentDocumentsReceived",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonpaymentDocumentsPresentation",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "coPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "coPresentedtimer"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "wqPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "wqPresentedtimer",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "healthPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "radioPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonGMOCertificatePresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sanitaryPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "phytosanitaryPresented",
+      "dateformat": "DD-MMM-YYYY"
+    }
+  ],
+  "taskId": "createshipperlistCOPY",
+  "object": "742f1ce2-89e9-42e2-abdf-6ac9565eea1f"
+}

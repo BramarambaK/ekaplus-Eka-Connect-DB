@@ -1,0 +1,38 @@
+{
+    "_id" : "EXTERNAL_API_POST_TO_COLLECTION_FREIGHT",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "type" : "workflow",
+    "apiInfo" : {
+        "path" : "/collectionmapper/4e20f754-574e-43e7-8d11-87c6fae060f5/eed6e72c-7823-448d-a3a6-82664294dc37/addToCollectionV2",
+        "headers" : {},
+        "inputMapping" : {},
+        "method" : "POST",
+        "useInputMapping" : false,
+        "host" : "${properties.eka_connect_host}",
+        "body" : {},
+        "collectionName" : "freight_collection",
+        "isCollectionOps" : "Y",
+        "columns" : [ 
+            {
+                "name" : "plannedBulkShipmentNo",
+                "type" : "String",
+                "collectionCol" : "plannedBulkShipmentNo"
+            }, 
+            {
+                "name" : "Confirmed_book",
+                "type" : "String",
+                "collectionCol" : "Confirmed_book"
+            }, 
+            {
+                "name" : "Carrier_booking_date",
+                "type" : "String",
+                "collectionCol" : "Carrier_booking_date"
+            }
+        ]
+    },
+    "taskId" : "EXTERNAL_API_POST_TO_COLLECTION_FREIGHT",
+    "object" : "eed6e72c-7823-448d-a3a6-82664294dc37"
+}

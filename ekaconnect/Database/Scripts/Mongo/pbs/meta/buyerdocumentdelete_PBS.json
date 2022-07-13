@@ -1,0 +1,85 @@
+{
+  "_id": "buyerdocumentdelete_PBS",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "buyerdocumentlisting"
+        }
+      ],
+      "label": "CLOSE",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "task": "buyerdocumentdelete",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Document deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in external task"
+            },
+            "successWithWarning": {
+              "message": "Document deleted with some errors"
+            }
+          },
+          "data": "output.buyerdocumentdelete",
+          "appendMsg": true,
+          "name": "_EXT_DELETE_DOCUMENT_BUYER"
+        },
+        {
+          "data": "output.buyerdocumentdelete",
+          "appendMsg": false,
+          "name": "_ST_DELETE_DOCUMENT_BUYER"
+        },
+        {
+          "name": "buyerdocumentlisting",
+          "showToaster": true
+        }
+      ],
+      "style": {
+        "margin-left": "auto"
+      },
+      "label": "DELETE DOCUMENT",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "buyerdocumentlisting"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "getDataFromExternalAPI": true,
+  "label": "DELETE DOCUMENT",
+  "labelKey": "DELETE_DOCUMENT",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to delete document ${fileName}?",
+      "headerMessage": "Delete Document:${fileName}"
+    }
+  },
+  "object": "f117d5ad-c51f-443f-8855-1993a8ae2a72",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "buyerdocumentdelete",
+  "type": "workflow"
+}

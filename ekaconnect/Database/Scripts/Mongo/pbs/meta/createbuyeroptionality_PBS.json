@@ -1,0 +1,75 @@
+{
+  "_id": "createbuyeroptionality_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Create Buyer Optionality Declaration",
+  "type": "workflow",
+  "layout": {
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "name": "customv2",
+    "menuCurrentState": "createbuyerlist"
+  },
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "name": "leftmenupbs"
+            }
+          ],
+          "style": {
+            "width": "15%",
+            "margin": "-10px 0 -10px -10px",
+            "min-width": "175px",
+            "background": "#d7e1e9"
+          }
+        },
+        {
+          "workflows": [
+            {
+              "name": "createbuyeroptionalityview",
+              "data": "selected.createbuyerlist"
+            }
+          ],
+          "style": {
+            "width": "86%"
+          }
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyerlist",
+          "data": "selected.createbuyerlist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "Optionality Declaration",
+  "taskId": "createbuyeroptionality",
+  "object": "5e9c9451-2fed-4593-b729-5bab6a29feff"
+}

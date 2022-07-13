@@ -1,0 +1,626 @@
+{
+  "_id": "CREATELOIFORM_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "LOI",
+  "type": "workflow",
+  "layout": {
+    "processorInfo": {
+      "processorId": "1afc9fbc-747c-45b0-9b4e-8efb9e965f75"
+    },
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "getInitialData": {
+      "filterBy": {
+        "sD": [
+          "plannedBulkShipmentNo",
+          "shipmentMode",
+          "vesselName",
+          "bookingRefNo",
+          "firstPersonInchargeId",
+          "firstPersonInchargeName",
+          "dischargePort",
+          "contractItems"
+        ]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo",
+      "firstPersonInchargeId",
+      "firstPersonInchargeName",
+      "dischargePort",
+      "contractItems"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "formLayoutStyle": {
+      "height": "700px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {
+      "border-right-style": "solid",
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%",
+      "border-top-width": "1px",
+      "border-left-style": "solid",
+      "border-right-width": "1px",
+      "border-left-color": "#dee2e5",
+      "border-top-color": "#dee2e5",
+      "border-right-color": "#dee2e5",
+      "border-left-width": "1px",
+      "border-top-style": "solid"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "data": "output.createloiform",
+          "appendMsg": false,
+          "name": "_ST_CREATE_LOI"
+        },
+        {
+          "data": "output._ST_CREATE_LOI",
+          "name": "_ST_PROCESSOR_CREATE_LOI"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "New LOI got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_LOI",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_LOI",
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_CREATE_LOI",
+              "value": "loiRefNo"
+            }
+          ]
+        },
+        {
+          "data": "output._ST_CREATE_LOI",
+          "name": "createloilisting",
+          "dirtyCheckFulfilled": true,
+          "showPopUp": true
+        }
+      ],
+      "label": "SAVE",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "CREATE_LOI",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "5px"
+        },
+        "suffix": "",
+        "key": "saleContractItem"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "salesCP"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "productValue"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "quality"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "5px"
+        },
+        "key": "paymentTerms"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "profitCenter"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "corporateName"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "personInCharge"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "5px"
+        },
+        "suffix": "",
+        "key": "dischargePort"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "shippingLineDisplayName"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "etaDisport"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "LOI_sent_To"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "5px"
+        },
+        "suffix": "",
+        "key": "oblEndorsedto"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "counterLOIFrom",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "whydoWeNeedLOI"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "LOIType"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": " 109px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "5px",
+          "margin-right": "2px"
+        },
+        "suffix": "",
+        "key": "LOIQty"
+      },
+      {
+        "style": {
+          "width": " 109px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "28px"
+        },
+        "suffix": "",
+        "key": "LOIQtyValue"
+      },
+      {
+        "style": {
+          "width": " 109px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "2px"
+        },
+        "suffix": "",
+        "key": "goodsValue"
+      },
+      {
+        "style": {
+          "width": "109px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "28px"
+        },
+        "suffix": "",
+        "key": "goodsValueDropdown"
+      },
+      {
+        "style": {
+          "width": " 219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "30px"
+        },
+        "suffix": "",
+        "key": "ifLCOperative"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "fundsReceivedDate"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "5px"
+        },
+        "suffix": "",
+        "key": "deliveredTo"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "blDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "noLienBkLetterReceived"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "13OBL"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "5px"
+        },
+        "suffix": "",
+        "key": "LOICancellationTracking"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "LOICancellationDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "office"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "30px"
+        },
+        "suffix": "",
+        "key": "comments"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "type": "hidden",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "key": "vesselName"
+      },
+      {
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "loi_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "loi_collectionHeader",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "loi_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "loiRefNo"
+      },
+      {
+        "disabled": "true",
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "plannedBulkShipmentNo"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "N",
+        "key": "isdeleted"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "key": "corporateID"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "key": "oblEndorsedtoDisplayName"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "key": "LOITypeDisplayName"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "key": "dischargePortDisplayName"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "key": "shippingLine"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "key": "goodsValueDropdownDisplayName"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "key": "LOIQtyValueDisplayName"
+      }
+    ]
+  ],
+  "taskId": "createloiform",
+  "object": "485db470-4c7b-49d3-a1e2-e39534067bc5"
+}

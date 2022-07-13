@@ -1,0 +1,342 @@
+{
+  "_id": "createseller_list_view_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "949eb3a4-dd3e-43c6-bef9-6086ea69cb68"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "List of Sellers",
+  "type": "workflow",
+  "layout": {
+    "setCompleteDataInSelected": false,
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo", "contractItems"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo",
+      "firstPersonInchargeId",
+      "firstPersonInchargeName",
+      "dischargePort",
+      "contractItems"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "useQueryParams": false,
+    "preserveSelectedData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createseller",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createsellerlistview",
+          "name": "createseller",
+          "resetForm": true
+        }
+      ],
+      "label": "Seller Information"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createselleroptionality",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createsellerlistview",
+          "name": "createselleroptionality"
+        },
+        {
+          "name": "createsellerlistview",
+          "showPopUp": false
+        }
+      ],
+      "label": "Optionality Declaration"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createsellerdocuments",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createsellerlistview",
+          "name": "sellerdocumentlisting"
+        }
+      ],
+      "label": "Documents"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "sellernonpaymentdoc",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createsellerlistview",
+          "name": "sellernonpaymentdoclisting"
+        }
+      ],
+      "label": "Non Payment Doc"
+    }
+  ],
+  "labelKey": "CREATE_SELLER",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "seller"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Final_shippers_breakdown",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "BL_released",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Original_BLMR_received",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "BL_Draft_Deadline",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Docs_Instructions_Sent",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "BL_Draft_approved",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Balance_drafts_approved",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "lcOpened",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nominationDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nominationAcceptedDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "eTAOnNomination",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "loadingPortDeclaration",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentaryInstructions",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsSentReceived",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsApproval",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "loadingBerthDeclaration",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "paymentDocumentsPresentation",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonPaymentDocumentsPresentation",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentsDispatched",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "courierTrackingNumber"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "estimatePaymentDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "actualPaymentDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Copy_of_original_docs_received",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "coPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "wqPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "healthPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "radioPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonGMOCertificatePresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sanitaryPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "phytosanitaryPresented",
+      "dateformat": "DD-MMM-YYYY"
+    }
+  ],
+  "taskId": "createsellerlistview",
+  "object": "5c1d2726-79c9-4915-9243-8d7aa4d6791d"
+}

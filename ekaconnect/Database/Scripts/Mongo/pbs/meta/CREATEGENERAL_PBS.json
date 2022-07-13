@@ -1,0 +1,305 @@
+{
+  "_id": "CREATEGENERAL_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "General",
+  "type": "workflow",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {
+      "border-right-style": "solid",
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%",
+      "border-top-width": "1px",
+      "border-left-style": "solid",
+      "border-right-width": "1px",
+      "border-left-color": "#dee2e5",
+      "border-top-color": "#dee2e5",
+      "border-right-color": "#dee2e5",
+      "border-left-width": "1px",
+      "border-top-style": "solid"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "GMR basic got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Price request got created with some errors"
+            }
+          },
+          "data": "output.creategeneralform",
+          "appendMsg": false,
+          "name": "_ST_CREATE_GENERAL"
+        },
+        {
+          "data": "output.creategeneralform",
+          "name": "_ST_PROCESSOR_CREATE_GENERAL"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_CREATE_GENERAL",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_GENERAL"
+        },
+        {
+          "data": "output._ST_CREATE_GENERAL",
+          "name": "creategeneral",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "SAVE",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "CREATE_GENERAL",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "blConsolidated",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "certificatesConsolidated",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "docsByPass",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "circleSettlement",
+        "clearSelection": true
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "SAP_No"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "Sanction_checks_clearance",
+        "clearSelection": true
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "Supervision_appointment"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "estimatedSailing"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "contNominationDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "Final_Shipper_Breakdown"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "plannedBulkShipmentNo"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "product"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none",
+          "padding": "0px"
+        },
+        "type": "hidden",
+        "value": "true",
+        "key": "isPopUp"
+      }
+    ],
+    [
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "value": "general_collection",
+        "key": "collectionName"
+      },
+      {
+        "suffix": "",
+        "key": "collectionHeaderProperty",
+        "type": "hidden",
+        "value": "general_collectionHeader",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "collectionConnectMapProperty",
+        "type": "hidden",
+        "value": "general_collectionConnectMap",
+        "disabled": "true",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "platformTemplateId",
+        "type": "hidden",
+        "value": "",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "taskId": "creategeneralform",
+  "object": "17e310dd-14f8-4a1b-ab38-8e67f6471950"
+}

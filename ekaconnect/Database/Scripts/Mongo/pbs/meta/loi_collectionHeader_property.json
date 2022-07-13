@@ -1,0 +1,13 @@
+{
+  "_id": "loi_collectionHeader_property",
+  "type": "property",
+  "name": "loi_collectionHeader",
+  "label": "Loi Collection Header",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "loiRefNo:String,plannedBulkShipmentNo:String,saleContractItem:String,salesCP:String,productValue:String,quality:String,paymentTerms:String,profitCenter:String,corporateName:String,personInCharge:String,dischargePort:String,shippingLine:String,etaDisport:String,oblEndorsedto:String,counterLOIFrom:String,whydoWeNeedLOI:String,LOIType:String,LOIQty:String,LOIQtyValue:String,goodsValue:String,goodsValueDropdown:String,ifLCOperative:String,fundsReceivedDate:String,blDate:String,noLienBkLetterReceived:String,13OBL:String,deliveredTo:String,LOICancellationDate:String,LOICancellationTracking:String,isdeleted:String,comments:String,LOI_sent_To:String,vesselName:String,office:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of LOI collection"
+}

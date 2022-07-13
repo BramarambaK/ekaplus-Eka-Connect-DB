@@ -1,0 +1,11 @@
+{
+    "_id": "_ST_SHIPPER_NONPAYMENTDOC",
+    "componentType": "SystemTask",
+    "objectAction": "UPDATE",
+    "refType": "app",
+    "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "type": "workflow",
+    "taskId": "_ST_SHIPPER_NONPAYMENTDOC",
+    "object": "7555b6ae-b3c7-4a56-b902-efc22fbdb919"
+  }
+  

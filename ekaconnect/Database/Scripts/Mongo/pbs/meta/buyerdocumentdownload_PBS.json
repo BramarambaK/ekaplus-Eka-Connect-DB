@@ -1,0 +1,12 @@
+{
+  "_id": "buyerdocumentdownload_PBS",
+  "action": "downloadLink",
+  "componentType": "client",
+  "object": "f117d5ad-c51f-443f-8855-1993a8ae2a72",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "buyerdocumentdownload",
+  "label": "Buyer Document Download",
+  "type": "workflow"
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "loadingport_collectionConnectMap_PBS_property",
+  "type": "property",
+  "name": "loadingport_collectionConnectMap",
+  "label": "Loadingport Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "uniqueId": "uniqueId",
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "loadingPort": "loadingPort",
+    "portId": "portId",
+    "loadingNorTenderedDate": "loadingNorTenderedDate",
+    "loadingVesselETBDate": "loadingVesselETBDate",
+    "loadingVesselETCDate": "loadingVesselETCDate",
+    "loadingblreleasedDate": "loadingblreleasedDate"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of loadingport collection and connect object"
+}

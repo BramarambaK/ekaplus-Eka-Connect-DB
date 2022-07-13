@@ -1,0 +1,22 @@
+{
+  "_id": "flag_propertyKey",
+  "type": "property",
+  "name": "flag",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Yes",
+      "value": "Yes"
+    },
+    {
+      "key": "No",
+      "value": "No"
+    }
+  ],
+  "label": "Flag Dropdown",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to show dropdown values(Yes/No)"
+}

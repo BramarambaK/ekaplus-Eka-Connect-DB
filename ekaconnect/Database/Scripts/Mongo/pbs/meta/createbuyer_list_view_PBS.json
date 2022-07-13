@@ -1,0 +1,288 @@
+{
+  "_id": "createbuyer_list_view_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "87c0231c-f1fc-4086-a7ce-9c07176e7c60"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "List of Buyers",
+  "type": "workflow",
+  "layout": {
+    "setCompleteDataInSelected": false,
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo", "contractItems"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo",
+      "firstPersonInchargeId",
+      "firstPersonInchargeName",
+      "dischargePort",
+      "contractItems"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "showCheckbox": true,
+    "useQueryParams": false,
+    "preserveSelectedData": true,
+    "dropdownDecisions": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createbuyer",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createbuyerlistview",
+          "name": "createbuyer",
+          "resetForm": true
+        }
+      ],
+      "label": "Buyer Information"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createbuyeroptionality",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createbuyerlistview",
+          "name": "createbuyeroptionality"
+        },
+        {
+          "name": "createbuyerlistview",
+          "showPopUp": false
+        }
+      ],
+      "label": "Optionality Declaration"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "buyerdocumentlisting",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createbuyerlistview",
+          "name": "buyerdocumentlisting"
+        }
+      ],
+      "label": "Documents"
+    }
+  ],
+  "labelKey": "CREATE_BUYER",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "buyer"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nominationDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nominationAccepted",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "eTAOnNomination",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "fixingAdvise",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentaryInstructions",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsSentReceived",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsApproval",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "insuranceNotice",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shipmentAdvise",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "deposit_Required"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LC_Required"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "lcOpeningDeadline",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LC_Received",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "lcOperative",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "docsLegalization",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "docsReleasedbyEmbassy",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentsDispatched",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "courierTrackingNumber"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "paymentDocumentsPresentation",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonPaymentDocumentsPresentation",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "estimateCashReceivableDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "actualCashReceivableDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "claimagainstBuyer"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shipment_Paid",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "released",
+      "dateformat": "DD-MMM-YYYY"
+    }
+  ],
+  "taskId": "createbuyerlistview",
+  "object": "5556394f-829b-48ec-950f-ed4c705738df"
+}

@@ -1,0 +1,14 @@
+{
+    "_id": "_ST_PROCESSOR_SELLER_NONPAYMENTDOC",
+    "componentType": "ProcessTask",
+    "processorInfo": {
+        "processorId": "e56394c2-d28d-4f8a-8ef1-a80f496be2ee"
+    },
+    "objectAction": "UPDATE",
+    "refType": "app",
+    "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "type": "workflow",
+    "taskId": "_ST_PROCESSOR_SELLER_NONPAYMENTDOC",
+    "object": "18521f4f-d2e8-47c8-9ac8-83b98ff4cf0e"
+  }
+  

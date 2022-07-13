@@ -1,0 +1,102 @@
+{
+  "_id": "createselleroptionality_list_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Create Seller Optionality Declaration",
+  "type": "workflow",
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "refreshData": true,
+    "useQueryParams": false,
+    "preserveSelectedData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_SELLEROPTIONALITY",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modal542px",
+          "name": "createselleroptionalityform",
+          "data": "selected.createsellerlist.createsellerlistview",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_SELLEROPTIONALITY",
+      "selection": "row-selection",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modal542px",
+          "data": "selected.createselleroptionality",
+          "name": "editselleroptionalityform"
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create"
+    }
+  ],
+  "labelKey": "Optionality Declaration",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "optionalityDeclaration",
+      "width": "206px"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "optionalityDeclaration2",
+      "width": "180px",
+      "dateformat": "DD-MMM-YYYY"
+    }
+  ],
+  "taskId": "createselleroptionalityview",
+  "object": "41fdb9ce-4fe0-4c87-a901-61f14f2fca17"
+}

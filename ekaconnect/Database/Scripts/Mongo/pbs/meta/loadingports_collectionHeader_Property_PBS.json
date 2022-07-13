@@ -1,0 +1,13 @@
+{
+  "_id": "loadingports_collectionHeader_Property_PBS",
+  "type": "property",
+  "name": "loadingports_collectionHeader",
+  "label": "Loadingports CollectionHeader",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "uniqueId:String,plannedBulkShipmentNo:String,loadingPort:String,portId:String,loadingNorTenderedDate:String,loadingVesselETBDate:String,loadingVesselETCDate:String,loadingblreleasedDate:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of loadingports collection"
+}

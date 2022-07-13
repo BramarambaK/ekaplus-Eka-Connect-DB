@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESSOR_SHIPPEROPTIONALITY_SAVE_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "660e562c-f408-4cd1-a8bf-517bc3cbd4c8"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_SHIPPEROPTIONALITY_SAVE",
+  "object": "bf4b1a46-b478-4983-b04e-0ad6848bf660"
+}

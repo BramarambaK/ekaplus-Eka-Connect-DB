@@ -1,0 +1,78 @@
+{
+  "_id": "buyerdocumentlisting_PBS",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyerlist",
+          "data": "selected.createbuyerlist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "FILE_LISTING1",
+  "layout": {
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "name": "customv2",
+    "menuCurrentState": "createbuyerlist"
+  },
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "name": "leftmenupbs"
+            }
+          ],
+          "style": {
+            "width": "15%",
+            "margin": "-10px 0 -10px -10px",
+            "min-width": "175px",
+            "background": "#d7e1e9"
+          }
+        },
+        {
+          "workflows": [
+            {
+              "name": "buyerdocumentlistingview",
+              "data": "selected.createbuyerlist"
+            }
+          ],
+          "style": {
+            "width": "86%"
+          }
+        }
+      ]
+    }
+  ],
+  "object": "f117d5ad-c51f-443f-8855-1993a8ae2a72",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "rows": "100",
+  "taskId": "buyerdocumentlisting",
+  "label": "Buyer Documentlisting",
+  "payLoad": "selected.createbuyerlist",
+  "theme": "theme-grid-light",
+  "type": "workflow"
+}

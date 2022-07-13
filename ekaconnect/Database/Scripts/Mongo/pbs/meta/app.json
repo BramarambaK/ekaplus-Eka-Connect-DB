@@ -1,0 +1,42 @@
+{
+  "_id": "PBS_APP",
+  "title": "Planned Shipment",
+  "name": "pbs",
+  "platform_id": "43",
+  "isTrmIntegrated" : true,
+  "tenantID": "",
+  "type": "app",
+  "appType": "CONNECT",
+  "config": {
+    "header": {
+      "brand": {
+        "src": "assets/img/brand/eka-login-logo.png",
+        "width": 60.0,
+        "height": 20.0,
+        "alt": "Eka"
+      },
+      "clientLogo": {
+        "src": "assets/img/brand/manuchar.png",
+        "width": 60.0,
+        "height": 20.0,
+        "alt": "Boliden"
+      },
+      "sidebarToggler": true,
+      "asideMenuToggler": false
+    },
+    "sidebar": {
+      "fixed": true,
+      "display": false
+    },
+    "navbar": [
+      {
+        "apiMenuData": [{}]
+      }
+    ],
+    "aside": {
+      "fixed": true,
+      "display": false
+    }
+  },
+  "sys__UUID": "4e20f754-574e-43e7-8d11-87c6fae060f5"
+}

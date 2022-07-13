@@ -1,0 +1,71 @@
+{
+  "_id": "leftmenuobject_PBS",
+  "name": "pbsleftmenu",
+  "label": "PBS Left Menu Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["plannedBulkShipmentNo"],
+  "fields": {
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "menuState": {
+      "menuState": "Menu State",
+      "labelKey": "menuState",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Object"
+    },
+    "bookingRefNo": {
+      "bookingRefNo": "bookingRefNo",
+      "labelKey": "bookingRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipmentMode": {
+      "shipmentMode": "shipmentMode",
+      "labelKey": "shipmentMode",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "vesselName": {
+      "vesselName": "vesselName",
+      "labelKey": "vesselName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "811d4a0f-60ea-468f-aebc-d795cb5fe8cf",
+  "additionalProperties": {},
+  "sys__createdOn": ISODate("2019-02-07T19:21:17.926Z"),
+  "sys__createdBy": "admin"
+}

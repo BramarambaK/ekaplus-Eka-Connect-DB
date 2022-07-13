@@ -1,0 +1,10 @@
+{
+  "_id" : "_ST_PROCESSOR_DELETE_LOI_PROCESSOR",
+  "name" : "_ST_PROCESSOR_DELETE_LOI",
+  "type" : "processor",
+  "refType" : "app",
+  "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "snippet" : "\r\n    var moment = require('moment');\r\n    req.body.isdeleted = 'Y';\r\n    let data = { ...req.body };\r\n    delete data.propertyList;\r\n    delete data.processorDetails;\r\n    delete data.processorId;\r\n    delete data.appId;\r\n    delete data.sys__state;\r\n    var copyfinalData = { ...data };\r\n    if (copyfinalData.sys__updatedOn) delete copyfinalData.sys__updatedOn;\r\n    if (copyfinalData.sys__createdOn) delete copyfinalData.sys__createdOn;\r\n    if (copyfinalData.uniqueId) delete copyfinalData.uniqueId;\r\n    if (copyfinalData.numberOfRollings) delete copyfinalData.numberOfRollings;\r\n    for (var key in copyfinalData) {\r\n      var instancedate = copyfinalData[key];\r\n      if (typeof instancedate == 'string' && instancedate.includes('-')) {\r\n        instancedate = moment\r\n          .utc(instancedate)\r\n          .utcOffset('+0530')\r\n          .format('DD-MMM-YYYY');\r\n        if (instancedate != 'Invalid date') {\r\n          data[key] = instancedate;\r\n        }\r\n      }\r\n    }\r\n    let finalData = { ...data };\r\n    finalData.collectionData = [];\r\n    finalData.collectionData.push(data);\r\n    delete finalData.collectionData[0].collectionName;\r\n    delete finalData.collectionData[0].collectionHeaderProperty;\r\n    delete finalData.collectionData[0].collectionConnectMapProperty;\r\n    delete finalData.collectionData[0].platformTemplateId;\r\n    console.log(finalData);\r\n    res.status(200).send(finalData);\r\n",
+  "sys__UUID" : "b7db9160-4dc7-47ee-a2ad-81f083c09b01",
+  "sys__createdBy" : "Bravo"
+}

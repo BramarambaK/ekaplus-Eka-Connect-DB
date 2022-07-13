@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESSOR_SELLEROPTIONALITY_SAVE_PBS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "8bc0bcf5-a21b-48ed-8448-61aa4d69e7ae"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_SELLEROPTIONALITY_SAVE",
+  "object": "41fdb9ce-4fe0-4c87-a901-61f14f2fca17"
+}

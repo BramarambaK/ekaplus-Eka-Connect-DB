@@ -1,0 +1,281 @@
+{
+  "_id": "buyer_listCOPY_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "List of Buyers",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "showCheckbox": true,
+    "refreshData": {
+      "time": 300000
+    },
+    "header": {
+      "field": "plannedBulkShipmentNo",
+      "title": "Important Dates:"
+    },
+    "useQueryParams": true,
+    "menu": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createvoyage",
+          "data": "selected.createvoyage"
+        }
+      ],
+      "label": "Voyage",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategeneral",
+          "data": "selected.creategeneral"
+        }
+      ],
+      "label": "General",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createsellerlist",
+          "data": "selected.createsellerlist"
+        }
+      ],
+      "label": "Seller",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createbuyerlist",
+          "data": "selected.createbuyerlist"
+        }
+      ],
+      "label": "Buyer",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createowner",
+          "data": "selected.createowner"
+        }
+      ],
+      "label": "Owner",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "targetPath": "${properties.platform_url}/trm/#gridId/LOPBS",
+          "name": "createvoyage",
+          "showPopUp": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createbuyer",
+      "selection": "row-selection",
+      "position": "top",
+      "data": "selected.createbuyerlist",
+      "outcomes": [
+        {
+          "data": "output.createbuyerlist",
+          "name": "createbuyer"
+        },
+        {
+          "name": "createbuyerlist",
+          "showPopUp": false
+        }
+      ],
+      "label": "Create Buyer"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "outcomes": [
+        {
+          "data": "output.createowner",
+          "name": "createowner"
+        }
+      ],
+      "label": "NEXT",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "CREATE_BUYER",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "buyer"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nominationDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nominationAccepted"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "eTAOnNomination"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "fixingAdvise"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentaryInstructions"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsSentReceived"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsApproval"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "insuranceNotice"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shipmentAdvise"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "lcOpeningDeadline"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "lcOperative"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "docsLegalization"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "docsReleasedbyEmbassy"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentsDispatched"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "courierTrackingNumber"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "paymentDocumentsPresentation"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonPaymentDocumentsPresentation"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "estimateCashReceivableDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "actualCashReceivableDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "claimagainstBuyer"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "optionalDeclaration"
+    }
+  ],
+  "taskId": "createbuyerlistCOPY",
+  "object": "5556394f-829b-48ec-950f-ed4c705738df"
+}

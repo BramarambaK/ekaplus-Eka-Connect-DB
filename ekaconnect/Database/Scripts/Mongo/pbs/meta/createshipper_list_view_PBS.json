@@ -1,0 +1,225 @@
+{
+  "_id": "createshipper_list_view_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "0041837a-0259-45cd-a326-a15bae84ebdc"
+  },
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "List of Shippers",
+  "type": "workflow",
+  "layout": {
+    "setCompleteDataInSelected": false,
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "useQueryParams": false,
+    "preserveSelectedData": false
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createshipper",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createshipperlistview",
+          "name": "createshipper",
+          "resetForm": true
+        }
+      ],
+      "label": "Shipper Information"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createshipperoptionality",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createshipperlistview",
+          "name": "createshipperoptionality"
+        },
+        {
+          "name": "createshipperlistview",
+          "showPopUp": false
+        }
+      ],
+      "label": "Optionality Declaration"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "createshipperdocuments",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createshipperlistview",
+          "name": "shipperdocumentlisting"
+        }
+      ],
+      "label": "Documents"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-info-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "shippernonpaymentdoc",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "data": "selected.createshipperlistview",
+          "name": "shippernonpaymentdoclisting"
+        }
+      ],
+      "label": "Non Payment Doc"
+    }
+  ],
+  "labelKey": "CREATE_SHIPPER",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shipper"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Original_BLMR_received",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Docs_Instructions_Sent",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "draftsSentReceived",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "paymentDocumentsReceived",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonpaymentDocumentsPresentation",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "coPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "coPresentedtimer"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "wqPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "wqPresentedtimer"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "healthPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "radioPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "nonGMOCertificatePresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sanitaryPresented",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "phytosanitaryPresented",
+      "dateformat": "DD-MMM-YYYY"
+    }
+  ],
+  "taskId": "createshipperlistview",
+  "object": "742f1ce2-89e9-42e2-abdf-6ac9565eea1f"
+}

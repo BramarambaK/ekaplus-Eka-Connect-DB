@@ -1,0 +1,108 @@
+{
+  "_id": "deleteloi_PBS",
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Remove LOI",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to remove ${loiRefNo}?",
+      "headerMessage": "Remove : ${loiRefNo}"
+    }
+  },
+  "input": ["loiRefNo"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createloilisting"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "deleteloi",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Quality got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Quality got deleted with some errors"
+            }
+          },
+          "data": "output.deleteloi",
+          "appendMsg": true,
+          "name": "_ST_DELETE_LOI"
+        },
+        {
+          "data": "output.deleteloi",
+          "name": "_ST_PROCESSOR_DELETE_LOI"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got updated successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got updated with some errors"
+            }
+          },
+          "data": "output._ST_PROCESSOR_DELETE_LOI",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_LOI"
+        },
+        {
+          "data": "output._ST_DELETE_LOI",
+          "appendMsg": true,
+          "name": "createloilisting",
+          "showPopUp": false
+        }
+      ],
+      "label": "DELETE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createloilisting"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Delete_Quality",
+  "fields": [
+    {
+      "heading": "loiRefNo"
+    }
+  ],
+  "taskId": "deleteloi",
+  "object": "485db470-4c7b-49d3-a1e2-e39534067bc5"
+}
