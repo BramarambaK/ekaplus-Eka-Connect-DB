@@ -1,0 +1,22 @@
+{
+    "_id" : "Update_Price_Question2_propertyKey",
+    "type" : "property",
+    "name" : "Update_Price_Question2",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "One-by-one",
+            "value" : "one_by_one"
+        }, 
+        {
+            "key" : "Increase or decrease by fixed amount",
+            "value" : "increase_or_decrease_fixed_amount"
+        }
+    ],
+    "label" : "Select option for Question 2",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "Property is used to show radio values for question 2"
+}

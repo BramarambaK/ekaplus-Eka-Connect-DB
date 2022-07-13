@@ -1,0 +1,9 @@
+{
+  "_id": "validateallocateticketsquantity_processor",
+  "name": "validateallocateticketsquantity_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const send = (status, message) => res.status(status).send(message);\r\n\r\n    let data = [];\r\n    if (req.body.hasOwnProperty('allocateticketquantitycomposite') && req.body.allocateticketquantitycomposite) {\r\n      data = req.body.allocateticketquantitycomposite.warehousedtickets || [];\r\n    } else if (req.body.hasOwnProperty('allocateticketcontractcomposite') && req.body.allocateticketcontractcomposite) {\r\n      data = req.body.allocateticketcontractcomposite.warehousedtickets || [];\r\n    } else {\r\n      data = req.body.allocateticketmarketpricecomposite.allocateticketmarketpricelist || [];\r\n      if (req.body.allocateticketmarketpricecomposite.allocateticketbpref.account == '') {\r\n        send(400, 'Please select NGR to proceed');\r\n      }\r\n    }\r\n\r\n    if (data && data.length > 0) {\r\n      const tonnesSoldOverflow = data.filter(i => parseFloat(i.tonnesSold) > parseFloat(i.quantity));\r\n      let totalQuantity = data.reduce((acc, curr) => acc + parseFloat(curr.tonnesSold), 0);\r\n\r\n      if (tonnesSoldOverflow && tonnesSoldOverflow.length > 0)\r\n        send(400, 'Allocated quantity should be equal or less than actual quantity.');\r\n      else if (data[0].sellingOption != 'Contract' && totalQuantity > 250)\r\n        send(400, 'Cannot allocate more than 250 MT');\r\n      else if (data[0].sellingOption == 'Contract' && totalQuantity > data[0].contractQuantity)\r\n        send(400, 'Total allocated quantity exceeds contract quantity');\r\n      else if (totalQuantity === 0) send(400, 'Total allocated quantity cannot be 0 MT');\r\n      else send(200, data);\r\n    } else {\r\n      send(400, 'No data to be saved');\r\n    }",
+  "sys__UUID": "4a03b561-1503-4b70-905c-41b0de76c3b4"
+}

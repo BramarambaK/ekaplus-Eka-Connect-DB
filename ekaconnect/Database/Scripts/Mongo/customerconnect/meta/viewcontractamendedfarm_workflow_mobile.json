@@ -1,0 +1,77 @@
+{
+  "_id": "viewcontractamendedfarm_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Freight details card view",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Amended farm contact person'"
+      }
+    ],
+    [
+      {
+        "label": "Name",
+        "type": "detailsFlex",
+        "key": "fullname",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${amendedFullname}' ? '${amendedFullname}' :'-'"
+      },
+      {
+        "label": "Phone",
+        "type": "detailsFlex",
+        "key": "phonenumber",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return ('${amendedPhonenumber}'  && '${amendedPhonenumber}' !='null') ? '${amendedPhonenumber}' :'-'"
+      },
+      {
+        "label": "Email",
+        "type": "detailsFlex",
+        "key": "email",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${amendedEmail}' ? '${amendedEmail}' :'-'"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "viewcontractamendedfarm",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "4c331335-18dc-4288-9d18-4978d02027bf",
+  "deviceType": "mobile"
+}

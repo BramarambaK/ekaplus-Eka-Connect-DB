@@ -1,0 +1,133 @@
+{
+  "_id": "updatescheduledpricelimitscomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Update scheduled prices",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "updatetopmenuscheduledprice"
+    },
+    {
+      "style": {
+        "padding": "5px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "-10px 10px"
+      },
+      "workflows": [
+        {
+          "name": "updatescheduledpricelimits",
+          "data": "selected.updatescheduledpricelimitscomposite.updatescheduledpricelimits"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Update scheduled prices"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Manage prices",
+        "type": "string",
+        "task": "pricelist"
+      },
+      {
+        "label": "Update prices",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "pricelist",
+      "outcomes": [
+        {
+          "name": "pricelistingcomposite",
+          "clearSelected": ["selected.pricelistingcomposite"]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "cancelpopup_priceSchedule2",
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px",
+        "margin-top": "7px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "updatescheduledpricelimitsformcomposite",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "15px",
+        "margin-top": "7px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "updatesubmitscheduledpricelimitscomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "32px",
+        "margin-top": "7px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "updatescheduledpricelimitscomposite",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "6b24772e-b3f7-11eb-8529-0242ac130003",
+  "deviceType": "mobile"
+}

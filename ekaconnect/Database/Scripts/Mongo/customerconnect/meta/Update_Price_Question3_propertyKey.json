@@ -1,0 +1,22 @@
+{
+    "_id" : "Update_Price_Question3_propertyKey",
+    "type" : "property",
+    "name" : "Update_Price_Question3",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "One-by-one",
+            "value" : "one_by_one"
+        }, 
+        {
+            "key" : "Set single date and time",
+            "value" : "set_single_date_and_time"
+        }
+    ],
+    "label" : "Select option for Question 3",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "Property is used to show radio values for question 3"
+}

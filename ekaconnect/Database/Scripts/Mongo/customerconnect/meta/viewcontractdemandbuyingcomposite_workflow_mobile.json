@@ -1,0 +1,79 @@
+{
+  "_id": "viewcontractdemandbuyingcomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract request",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "workflows": [
+        {
+          "name": "viewcontractrequestid",
+          "data": "selected.contractbuyerlistingcomposite.contractopen_demand"
+        },
+        {
+          "name": "viewcontractdetailssummary",
+          "data": "selected.contractbuyerlistingcomposite.contractopen_demand"
+        },
+        {
+          "name": "viewcontractmultigrade",
+          "data": "selected.contractbuyerlistingcomposite.contractopen_demand",
+          "visibility": "return ('${contractbuyerlistingcomposite.contractopen_demand.multiGradeDifferentialDetails}' != '') ? true : false"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Ticket Details"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Manage buying contracts",
+        "type": "string",
+        "task": "contractslist"
+      },
+      {
+        "label": "Contract request details",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "customScrollBar": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "contractslist",
+      "outcomes": [
+        {
+          "name": "contractbuyerlistingcomposite",
+          "clearSelected": ["selected.contractbuyerlistingcomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "viewcontractdemandbuyingcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "9b9a5401-4cc6-4b0c-b386-9b422cbcfa8a",
+  "deviceType": "mobile"
+}

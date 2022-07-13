@@ -1,0 +1,29 @@
+{
+    "_id" : "update_bpRefSeasonDetailsMasterData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "6d10c2dd-c5c5-451e-88f5-3de80e151bc3",
+    "objectAction" : "UPDATE",
+    "taskId" : "update_bpRefSeasonDetailsMasterData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "tags" : "notifyDataChange",    
+    "chainedTasks" : [ 
+		{
+            "name" : "_ST_UPDATE_BPREF_SEASON_DETAILS_MASTER_DATA",
+            "appendMsg" : false,
+            "data" : "output.update_bpRefSeasonDetailsMasterData"
+        },
+		{
+            "name" : "_ST_PROCESSOR_UPDATE_BPREF_SEASON_MASTER_DATA",
+            "appendMsg" : false,
+            "data" : "output._ST_UPDATE_BPREF_SEASON_DETAILS_MASTER_DATA"
+        },
+		{
+            "name": "_ST_UPDATE_BPREF_SEASON_MASTER_DATA",
+            "appendMsg" : false,
+            "data": "output._ST_PROCESSOR_UPDATE_BPREF_SEASON_MASTER_DATA"
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+  "_id": "transfermethod_CST",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+      "width": "100%"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "7px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "name": "create",
+    "formStyle": {
+      "padding-bottom": "12.5px",
+      "margin": "10px",
+      "max-width": "100%",
+      "margin-bottom": 0
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "cardClass": "cargill-form cargill-price-form transfer-ticket-method"
+  },
+  "decisions": [],
+  "labelKey": "Transfer Method",
+  "fields": [
+    [
+      {
+        "style": {
+          "margin": "0"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "formLabelStyle": {
+          "height": "24px",
+          "margin-bottom": "24px"
+        },
+        "suffix": "",
+        "placeholder": "Select",
+        "key": "transferpercentage",
+        "class": "radio-button-alignment-v2"
+      }
+    ]
+  ],
+  "taskId": "transfermethod",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "6a89933b-cf05-4ebe-a83b-8b90b9835401"
+}
