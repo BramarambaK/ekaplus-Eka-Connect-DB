@@ -1,0 +1,44 @@
+{
+  "_id" : "formula_save_pricing",
+  "componentType" : "UserTask",
+  "labelKey" : "formula_save",
+  "label" : "Formula Save",
+  "object" : "formula",
+  "objectAction" : "CREATE",
+  "layout" : {},
+  "fields" : [],
+  "decisions" : [ 
+      {
+          "objectAction" : "CREATE",
+          "label" : "CREATE",
+          "labelkey" : "CREATE",
+          "task" : "formula_save",
+          "outcomes" : [ 
+              {
+                  "data" : "output.formula_save",
+                  "name" : "_ST_CREATE_FORMULA",
+                  "appendMsg" : true,
+                  "result" : {
+                      "success" : {
+                          "message" : "Formula is Saved"
+                      },
+                      "failure" : {
+                          "message" : "Please fix errors "
+                      },
+                      "successWithWarning" : {
+                          "message" : "Formula is Saved with some errors"
+                      }
+                  }
+              }, 
+              {
+                  "data" : "output._ST_CREATE_FORMULA",
+                  "name" : "formula_save"
+              }
+          ]
+      }
+  ],
+  "type" : "workflow",
+  "refType" : "app",
+  "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+  "taskId" : "formula_save"
+}

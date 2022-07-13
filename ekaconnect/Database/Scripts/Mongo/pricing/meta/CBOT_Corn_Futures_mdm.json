@@ -1,0 +1,6 @@
+  {    "key": "instrument-003",
+    "value": "CBOT Corn Futures",
+    "object": "instrument",
+    "type": "connectmdm",
+    "_id": "instrument-003"
+  }

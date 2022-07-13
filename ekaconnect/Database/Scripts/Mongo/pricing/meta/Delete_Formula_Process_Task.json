@@ -1,0 +1,13 @@
+{
+    "_id" : "Delete_Formula_Process_Task",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "a1463e27-8a77-494b-a623-878b3d85e1fc"
+    },
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "type" : "workflow",
+    "taskId" : "deleteFormula",
+    "object" : "formula"
+}

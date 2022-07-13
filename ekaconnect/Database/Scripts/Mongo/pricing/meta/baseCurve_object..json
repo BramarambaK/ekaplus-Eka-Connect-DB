@@ -1,0 +1,38 @@
+{    "_id":"baseCurveMeta",
+    "name" : "baseCurve",
+    "label" : "Basecurve",
+    "type" : "object",
+    "version" : "3",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "fields" : {
+        "data" : {
+            "data" : "Base Curves",
+            "labelKey" : "data",
+            "type" : "textbox",
+            "isRequired" : false
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "baseCurve"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "formula_delete_check_processor",
+    "name" : "formula_delete_check_processor",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "snippet" : "\r\n  function createbody(method,host,url_end_Point,body = {}, Connection = false){\r\n    let bdy = {\r\n      method: method,\r\n      url : req.body.propertyList[host] + url_end_Point,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid'],\r\n        'Connection' : \"keep-alive\"\r\n      },\r\n      json: true,\r\n      body: body\r\n    };\r\n    return  bdy\r\n  }\r\n   \r\nfunction call_API(url_details) {\r\n  return new Promise(function(resolve, reject) {\r\n    request(url_details, function(err, response, body) {\r\n      console.log(url_details.url+'   ->   ' +err)\r\n      if (err|| body.error) reject(body);\r\n      else {\r\n        resolve(body);\r\n      }\r\n    });\r\n  });\r\n}\r\ncall_API(createbody('GET','eka_pricing_host',`\/api\/pricing\/formula\/edit?pricingFormulaId=${req.body._id}`)).then((associatedState)=>{\r\n if(associatedState){\r\ncall_API(createbody('DELETE','eka_connect_host','\/data\/84d7b167-1d9f-406d-b974-bea406a25f9a\/formula\/bulkDelete',{\r\n  \"filterData\": {\r\n    \"filter\": [\r\n      {\r\n        \"fieldName\": \"_id\",\r\n        \"value\": req.body._id,\r\n        \"operator\": \"eq\"\r\n      }\r\n    ]\r\n  }\r\n})).then((formula)=>{\r\n  res.status(200).send({})\r\n}).catch(err=>{\r\n  res.status(500).send(err)\r\n})\r\n }\r\n else res.status(500).send('Formula is associated with some contract')\r\n}).catch(err=>{\r\n  res.status(500).send(err)\r\n})\r\n",
+    "sys__UUID" : "a1463e27-8a77-494b-a623-878b3d85e1fc",
+    "sys__createdBy" : "avinash.singh@ekaplus.com",
+    "type" : "processor"
+}

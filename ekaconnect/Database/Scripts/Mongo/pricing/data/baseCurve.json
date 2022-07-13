@@ -1,0 +1,1698 @@
+{
+    "_id" : "baseCurveDetails",
+    "data" : [ 
+        {
+            "map" : {
+                "priceUnit" : "USc/BSH",
+                "product" : "Corn",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 156,
+                "curveName" : "CBOT Corn Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/LBS",
+                "product" : "Milk",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 157,
+                "curveName" : "CME Class III Milk Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "MYR/TONNE",
+                "product" : "Palm Oil",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 158,
+                "curveName" : "BMD Palm Oil Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/BSH",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 159,
+                "curveName" : "KC HRW Wheat Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Lean Hog",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 160,
+                "curveName" : "CME Lean Hog Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/BSH",
+                "product" : "Soybeans",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 162,
+                "curveName" : "CBOT Soybeans Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONS",
+                "product" : "Soybean Meal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 163,
+                "curveName" : "CBOT Soybean Meal Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Soybean Oil",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 164,
+                "curveName" : "CBOT Soybean Oil Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/BSH",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 165,
+                "curveName" : "CBOT SRW Wheat Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U GAL",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 166,
+                "curveName" : "NYMEX ISO-NE Power Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 167,
+                "curveName" : "ICE Richards Bay Coal Monthly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 168,
+                "curveName" : "ICE  Richards Bay Coal Quaterly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 169,
+                "curveName" : "ICE  Richards Bay Coal Seasonal Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 170,
+                "curveName" : "ICE  Richards Bay Coal Yearly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 171,
+                "curveName" : "ICE Rotterdam Coal Monthly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 172,
+                "curveName" : "ICE Rotterdam Coal Quaterly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 173,
+                "curveName" : "ICE Rotterdam Coal Yearly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/BSH",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 174,
+                "curveName" : "CBOT Wheat Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/TONNE",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 175,
+                "curveName" : "MATIF Milling Wheat No 2 Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Cocoa",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 177,
+                "curveName" : "ICE Cocoa Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/BBL",
+                "product" : "WTI",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 178,
+                "curveName" : "NYMEX Light Sweet Crude Oil(WTI) Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MMBTU",
+                "product" : "HH Financial",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 179,
+                "curveName" : "NYMEX Henry Hub Last Day Financial Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "product" : "Heating Oil",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 180,
+                "curveName" : "NYMEX Harbor No 2 Heating Oil Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MMBTU",
+                "product" : "LNG",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 181,
+                "curveName" : "NYMEX LNG  Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Coffee",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 182,
+                "curveName" : "ICE-US Coffee C Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/BBL",
+                "product" : "Brent Crude",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 183,
+                "curveName" : "ICE Brent Crude Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Sugar",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 184,
+                "curveName" : "ICE White Sugar No 5 Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Aluminium",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 185,
+                "curveName" : "LME Aluminium Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Copper",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 186,
+                "curveName" : "LME Copper Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Nickel",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 187,
+                "curveName" : "LME Nickel Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Tin",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 188,
+                "curveName" : "LME Tin Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Zinc",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 189,
+                "curveName" : "LME Zinc Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 190,
+                "curveName" : "ICE Europe Newcastle Coal Monthly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 191,
+                "curveName" : "ICE Europe gC Newcastle Coal  Quaterly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MMBTU",
+                "product" : "Natural Gas",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 192,
+                "curveName" : "NYMEX Henry Hub Natural Gas Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Orange Juice",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 193,
+                "curveName" : "ICE Frozen Orange Juice Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U GAL",
+                "product" : "Gasoline",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 194,
+                "curveName" : "NYMEX RBOB Gasoline Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "CAD/TONNE",
+                "product" : "Canola",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 195,
+                "curveName" : "ICE Canada Canola Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Sugar",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 196,
+                "curveName" : "ICE-US Sugar No. 11 Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/LBS",
+                "product" : "Cotton",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 197,
+                "curveName" : "NYMEX Cotton Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MW*OP",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 198,
+                "curveName" : "NYMEX ERCOT Houston 345 kV Hub Day Ahead 5 MW Peak Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U GAL",
+                "product" : "Ethanol",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 200,
+                "curveName" : "CBOT Ethanol Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "product" : "IronOre",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 201,
+                "curveName" : "NYMEX Iron Ore 62% Fe CFR China (TSI) Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/OZS",
+                "product" : "Gold",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 202,
+                "curveName" : "COMEX Gold Composite Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/OZS",
+                "product" : "Silver",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 203,
+                "curveName" : "COMEX Silver Composite Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/LBS",
+                "product" : "Copper",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 204,
+                "curveName" : "COMEX Copper Composite Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Aluminium",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 205,
+                "curveName" : "COMEX Aluminium Composite Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/OZS",
+                "product" : "Platinum",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 206,
+                "curveName" : "NYMEX Platinum Composite Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/OZS",
+                "product" : "Paladium",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 207,
+                "curveName" : "NYMEX Palladium Composite Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "product" : "Aluminium Alloy",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 208,
+                "curveName" : "LME Aluminium Alloy  Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "product" : "Copper",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 209,
+                "curveName" : "LME Ring and Inter Office Session Copper Pit Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "product" : "Lead",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 210,
+                "curveName" : "LME Lead Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "product" : "NASSA",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 211,
+                "curveName" : "LME Ring and Inter Office Session NASSA Pit Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "JPY/GRAMS",
+                "product" : "Gold",
+                "pricePoint" : "Forward",
+                "access" : "Delayed",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 212,
+                "curveName" : "TOCOM Gold Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "JPY/GRAMS",
+                "product" : "Platinum",
+                "pricePoint" : "Forward",
+                "access" : "Delayed",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 213,
+                "curveName" : "TOCOM Platinum Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/TONNE",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 450,
+                "curveName" : "ASX Western Australian Wheat Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/TONNE",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 451,
+                "curveName" : "ASX Eastern Australian Wheat Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "GBp/THERM",
+                "product" : "Natural Gas",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 452,
+                "curveName" : "ICE UK NBP Natural Gas Electronic Monthly Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/MWh",
+                "product" : "Natural Gas",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 453,
+                "curveName" : "ICE Europe Endex Natural Gas TTF Monthly Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/BBL",
+                "product" : "Crude",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 454,
+                "curveName" : "ICE WTI Crude Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U GAL",
+                "product" : "Gasoline",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 455,
+                "curveName" : "ICE Europe NYH (RBOB) Gasoline Future Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/LBS",
+                "product" : "Milk",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 456,
+                "curveName" : "CME Class IV Milk Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Milk",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 457,
+                "curveName" : "CME Non-fat Dry Milk Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Dry Whey",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 458,
+                "curveName" : "CME Dry Whey Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Butter",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 459,
+                "curveName" : "CME Cash settled Butter Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/LBS",
+                "product" : "Cheese",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 460,
+                "curveName" : "CME Cash settled Cheese Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/MWh",
+                "product" : "Electricity",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 461,
+                "curveName" : "ICE Europe Endex Electricity Netherlands Baseload Quarterly Energy Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/MWh",
+                "product" : "Electricity",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 462,
+                "curveName" : "ICE Europe Endex Electricity Netherlands Baseload Monthly Energy Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coffee",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 493,
+                "curveName" : "ICE Europe Coffee Robusta Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "product" : "Butter",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 497,
+                "curveName" : "CME Butter Commodity Cash Contract Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/USD",
+                "product" : "Cheese",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 498,
+                "curveName" : "CME Cheddar Barrels Commodity Cash Contract Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/LB",
+                "product" : "Cheese",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 499,
+                "curveName" : "CME Cheddar Blocks Commodity Cash Contract Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/m3",
+                "product" : "Ethanol",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 500,
+                "curveName" : "NYMEX Ethanol T2 FOB Rdam Including Duty (Platts) Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/UNITS",
+                "product" : "EUA",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 501,
+                "curveName" : "ICE Europe European Union Allowance (EUA) Month Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Diesel",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 502,
+                "curveName" : "NYMEX European Diesel 10 ppm Barges FOB Rdam (Platts) vs Gasoil Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 503,
+                "curveName" : "NYMEX Coal (API4) FOB Richards Bay (ARGUS-McCloskey) Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Coal",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 504,
+                "curveName" : "NYMEX Coal (API2) CIF ARA (ARGUS-McCloskey) Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/MWh",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 521,
+                "curveName" : "ICE Europe (ICE) Wheat Commodity Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "GBp/THERM",
+                "product" : "Corn",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 522,
+                "curveName" : "Euronext Paris Maize (Corn) Commodity Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/MWh",
+                "product" : "Sugar",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 523,
+                "curveName" : "ICE Containerised White Sugar Commodity Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U GAL",
+                "product" : "Ethanol",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 524,
+                "curveName" : "NYMEX Chicago Ethanol (Platts) Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U GAL",
+                "product" : "Gasoline",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 525,
+                "curveName" : "NYMEX RBOB Gasoline vs Euro-bob Oxy NWE Barges (Argus) (1000mt) Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/MWh",
+                "product" : "Gas",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 526,
+                "curveName" : "ICE Europe Endex Exchange ZTP Gas Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/TONNE",
+                "product" : "Butter",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 567,
+                "curveName" : "EEX Butter Commodity Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "EUR/TONNE",
+                "product" : "Whey Powder",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 568,
+                "curveName" : "EEX European Whey Powder Commodity Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/LBS",
+                "product" : "Cotton",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 572,
+                "curveName" : "ICE-US Cotton No. 2 Futures Electronic Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/CWT",
+                "product" : "Rice",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 573,
+                "curveName" : "CBoT Rough Rice Electronic Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Corn",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 589,
+                "curveName" : "MATBA Corn Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Soybean",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 590,
+                "curveName" : "MATBA Soybean Rosario Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Wheat",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 591,
+                "curveName" : "MATBA Wheat BA ARS Electronic Commodity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USc/BSH",
+                "product" : "Spring",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 161,
+                "curveName" : "MGEX Hard Red Spring Wheat Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "Fuel Oil",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1236,
+                "curveName" : "NYMEX European 3.5% Fuel Oil Barges FOB Rdam (Platts) Electronic Energy Future",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/TONNE",
+                "product" : "GasOIl",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1237,
+                "curveName" : "ICE Europe Low Sulphur Gasoil Energy Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1238,
+                "curveName" : "Sydney Futures Exchange NSW Base Load Calendar Month Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1239,
+                "curveName" : "Sydney Futures Exchange Queensland Base Load Calendar Month Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1240,
+                "curveName" : "Sydney Futures Exchange Victoria Base Load Calendar Month Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1241,
+                "curveName" : "Sydney Futures Exchange South Australia Base Load Cal Mnth Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1242,
+                "curveName" : "Sydney Futures Exchange Queensland Base Load Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1243,
+                "curveName" : "Sydney Futures Exchange NSW Base Load Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1244,
+                "curveName" : "Sydney Futures Exchange Victorian Base Load Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/MWh",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1245,
+                "curveName" : "Sydney Futures Exchange SA Base Load Electricity Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/GJ",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1246,
+                "curveName" : "ASX24 Wallumbilla Natural Gas Calendar Quarter Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "AUD/GJ",
+                "product" : "Power",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1247,
+                "curveName" : "ASX24 Wallumbilla Natural Gas Calendar Monthly Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MT",
+                "product" : "IronOre",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 1248,
+                "curveName" : "Platts IO Index",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MT",
+                "product" : "IronOre",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 1249,
+                "curveName" : "Mysteel 62% Australian Fines Index",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MT",
+                "product" : "Freight",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 1250,
+                "curveName" : "Baltic Exchange C5",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MT",
+                "product" : "IronOre",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Metals",
+                "id" : 1251,
+                "curveName" : "Platts IO Lump Premium Index",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MT",
+                "product" : "Freight",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 1252,
+                "curveName" : "Baltic Exchange C10",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MT",
+                "product" : "Freight",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Ags",
+                "id" : 1253,
+                "curveName" : "Platts Shanghai",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U Gal",
+                "product" : "Propane",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1254,
+                "curveName" : "NYMEX Conway Propane (OPIS) Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U Gal",
+                "product" : "Propane",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1255,
+                "curveName" : "NYMEX Conway Propane (OPIS) BALMO Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/U Gal",
+                "product" : "Propane",
+                "pricePoint" : "Forward",
+                "access" : "Available",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1256,
+                "curveName" : "NYMEX Conway Physical Propane In-Well (OPIS) Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }, 
+        {
+            "map" : {
+                "priceUnit" : "USD/MT",
+                "product" : "GasOil",
+                "pricePoint" : "Forward",
+                "access" : "Restricted",
+                "priceSubType" : "Forward",
+                "publishedExtrapolated" : "Published",
+                "assetClass" : "Energy",
+                "id" : 1257,
+                "curveName" : "ICE Europe Gasoil 0.1% CIF NWE Cargoes Futures",
+                "tradeType" : "Exchange"
+            },
+            "_class" : "org.json.JSONObject"
+        }
+    ],
+    "appName" : "Pricing",
+    "objectName" : "baseCurve",
+    "app" : "pricing",
+    "object" : "b894039f-c42f-4c67-b1c7-186be7b30659",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a"
+}

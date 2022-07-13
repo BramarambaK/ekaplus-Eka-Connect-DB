@@ -1,0 +1,69 @@
+{
+    "_id" : "cancelFixation_TRIGGERPricing",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "task" : "cancelpopupfixation",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Fixation Cancelled"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Fixation Cancelled with some errors"
+                        }
+                    },
+                    "data" : "output.cancelpopupfixation",
+                    "appendMsg" : true,
+                    "name" : "Process_task_cancellation"
+                }, 
+                {
+                    "data" : "output.Process_task_cancellation",
+                    "appendMsg" : false,
+                    "name" : "triggerpriceviewv2"
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "OK",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "triggerpriceviewv2"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "label" : "Cancel fixation",
+    "labelKey" : "Cancel_fixation",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "${cancelledFixationQty}",
+            "headerMessage" : "${fixationRefNo}"
+        }
+    },
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "cancelpopupfixation",
+    "type" : "workflow"
+}

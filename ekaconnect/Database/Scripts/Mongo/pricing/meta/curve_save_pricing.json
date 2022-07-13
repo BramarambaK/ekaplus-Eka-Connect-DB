@@ -1,0 +1,40 @@
+{
+    "componentType": "UserTask",
+    "labelKey": "curve_save",
+    "label": "Formula Save",
+    "object": "curve",
+    "objectAction": "CREATE",
+    "layout": {},
+    "fields": [],
+    "decisions": [
+      {
+        "objectAction": "CREATE",
+        "label": "CREATE",
+        "labelkey": "CREATE",
+        "task": "curve_save",
+        "outcomes": [
+          {
+            "data": "output.curve_save",
+            "name": "_ST_CREATE_CURVE",
+            "appendMsg": true,
+            "result": {
+              "success": {
+                "message": "Formula is Saved"
+              },
+              "failure": {
+                "message": "Please fix errors "
+              },
+              "successWithWarning": {
+                "message": "Formula is Saved with some errors"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "_id": "curve_save_pricing",
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId": "curve_save"
+  }

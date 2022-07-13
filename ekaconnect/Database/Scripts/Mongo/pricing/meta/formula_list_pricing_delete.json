@@ -1,0 +1,64 @@
+{
+    "_id" : "formula_list_pricing_delete",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Formula List",
+    "labelKey" : "Formula_List",
+    "processorInfo" : {
+        "processorId" : "19a2a291-26e2-4b81-8e0e-3c147b16c9bf"
+    },
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "isPopup" : false,
+        "name" : "list",
+        "preserveSelectedData" : true,
+        "dropdownDecisions" : false,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-delete-icon",
+            "objectAction" : "DELETE",
+            "labelkey" : "Delete",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "deleteclass",
+                    "data" : "selected.formulalisting",
+                    "name" : "deleteformulausertask"
+                }
+            ],
+            "label" : "Delete"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "formulaName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "newFormulaExp"
+        }
+    ],
+    "taskId" : "formulalisting",
+    "object" : "formula"
+}

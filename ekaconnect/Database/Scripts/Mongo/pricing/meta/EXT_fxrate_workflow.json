@@ -1,0 +1,23 @@
+{
+    "_id" : "_EXT_CALL_FXRATE_pricing",
+    "componentType" : "ExtSystemTask",
+   "object" : "formula",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.eka_utility_host}",
+        "path" : "/costapp/84d7b167-1d9f-406d-b974-bea406a25f9a/Formula/instrumentNamesFx",
+        "method" : "GET",
+        "body" : {},
+        "useInputMapping" : false,
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "_EXT_CALL_FX"
+}

@@ -1,0 +1,24 @@
+{
+    "_id" : "EXECUtion_type_pricing",
+    "type" : "property",
+    "name" : "executionType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Execution Type",
+    "defaultValue" : [ 
+        {
+            "key" : "Pre-execution",
+            "value" : "Pre Execution",
+            "src" : "buy-icon"
+        }, 
+        {
+            "key" : "Post- exection",
+            "value" : "Post Execution",
+            "src" : "sell-icon"
+        }
+    ],
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "description" : "Values available for execution Type"
+}

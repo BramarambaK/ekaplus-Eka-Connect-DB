@@ -1,0 +1,40 @@
+{
+    "componentType": "UserTask",
+    "labelKey": "Formula_List",
+    "label": "Formula List",
+    "object" : "formula",
+    "objectAction": "DELETE",
+    "layout": {},
+    "fields": [],
+    "decisions": [
+      {
+        "objectAction": "DELETE",
+        "label": "Delete",
+        "labelkey": "DELETE",
+        "task": "delete_formula",
+        "outcomes": [
+          {
+            "data": "output.delete_formula",
+            "name": "_ST_DELETE_FORMULA",
+            "appendMsg": true,
+            "result": {
+              "success": {
+                "message": "Profile got deleted successfully"
+              },
+              "failure": {
+                "message": "Please fix errors "
+              },
+              "successWithWarning": {
+                "message": "Profile got deleted with some errors"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "_id": "delete_formula_pricing",
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId": "delete_formula"
+  }

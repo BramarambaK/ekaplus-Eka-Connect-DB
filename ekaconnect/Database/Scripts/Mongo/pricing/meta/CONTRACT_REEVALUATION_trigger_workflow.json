@@ -1,0 +1,30 @@
+{
+    "_id" : "CONTRACT_REEVALUATION_trigger_workflow",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "object" : "contract",
+    "objectAction" : "CREATE",
+    "taskId" : "CONTRACT_REEVALUATION_trigger_workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "tags" : "listener,DS-Market Prices",
+    "type" : "workflow",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "type" : "submit",
+            "task" : "CONTRACT_REEVALUATION_trigger_workflow",
+            "outcomes" : [ 
+                {
+                    "name" : "_EXT_CALL_CONTRACT_REEVALUATION",
+					"data" : "output.CONTRACT_REEVALUATION_trigger_workflow",
+                    "appendMsg" : false
+                }, 
+                {
+                    "name" : "CONTRACT_REEVALUATION_trigger_workflow",
+                    "data" : "output._EXT_CALL_CONTRACT_REEVALUATION"
+                }
+            ]
+        }
+    ]
+}

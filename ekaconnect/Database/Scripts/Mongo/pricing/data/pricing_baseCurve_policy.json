@@ -1,0 +1,49 @@
+{
+    "_id" : "pricing_baseCurve_policy",
+    "type" : "policy",
+    "app_UUID" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "refType" : "object",
+    "refTypeId" : "baseCurve",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1245" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1244" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

@@ -1,0 +1,265 @@
+{
+    "_id" : "all_oil_fixation_Listing_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : true,
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "All Oil Price Fixation Listing",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.eka_pricing_host}",
+        "path" : "/api/pricing/formula/triggerPricingDetails",
+        "headers" : {},
+        "method" : "GET",
+        "body" : {}
+    },
+    "layout" : {
+        "selection" : "row",
+        "isPopup" : false,
+        "name" : "list",
+        "preserveSelectedData" : true,
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-success",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.allOilPriceFixationListing",
+                    "name" : "triggerpriceviewv2",
+                    "customQueryParams" : [ 
+                        "internalContractRefNo", 
+                        "internalContractItemRefNo"
+                    ],
+                    "clearSelected" : [ 
+                        "selected.allOilPriceFixationListing"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "selection" : "global",
+            "label" : "Record New fixation",
+            "position" : "top"
+        }
+    ],
+    "labelKey" : "LISTING",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "contractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "contractItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "hidden" : true,
+            "key" : "internalContractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "hidden" : true,
+            "key" : "internalContractItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "fixationRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "fixationStage"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "itemQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "itemFixedQtyAvaiable"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "basePrice"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "differential"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "avgPrice"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "totalValue"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "190px",
+            "key" : "fixationDate",
+            "dateformat" : "YYYY-MM-DDTHH:MM:SSZ"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "gmrRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "hidden" : true,
+            "key" : "internalGmrRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "gmrQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "gmrFixedQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "quantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "quantityunitconversion"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "cpName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "itemQtyUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "gmrQtyUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "avgPriceQtyUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "basePriceQtyUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "differentialQtyUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "pricingDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "fxRate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "kfactor"
+        }
+    ],
+    "taskId" : "allOilPriceFixationListing",
+    "object" : "5fee9de2-c1e6-11eb-8529-0242ac130003"
+}

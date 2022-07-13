@@ -1,0 +1,10 @@
+{
+    "_id" : "formula_autocreatedFilter_processor",
+    "name" : "formula_autocreatedFilter_processor",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "snippet" : "\r\n  function createbody(method,host,url_end_Point,body = {}, Connection = false){\r\n    let bdy = {\r\n      method: method,\r\n      url : req.body.propertyList[host] + url_end_Point,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid'],\r\n        'Connection' : \"keep-alive\"\r\n      },\r\n      json: true,\r\n      body: body\r\n    };\r\n    return  bdy\r\n  }\r\n   \r\nfunction call_API(url_details) {\r\n  console.log(url_details)\r\n  return new Promise(function(resolve, reject) {\r\n    request(url_details, function(err, response, body) {\r\n      console.log(url_details.url+'   ->   ' +err)\r\n      if (err|| body.error) reject(body);\r\n      else {\r\n        resolve(body);\r\n      }\r\n    });\r\n  });\r\n}\r\ncall_API(createbody('POST','eka_connect_host','\/workflow\/data',{\r\n  \"appId\": \"84d7b167-1d9f-406d-b974-bea406a25f9a\",\r\n  \"workFlowTask\": \"formula_list\",\r\n})).then((formula_list)=>{\r\n  formula_list.data = formula_list.data.filter((item)=>{\r\n    if(!(item.hasOwnProperty('_autoCreated') || item._autoCreated == true)) return item\r\n  })\r\n  res.status(200).send(formula_list.data)\r\n})\r\n",
+    "sys__UUID" : "19a2a291-26e2-4b81-8e0e-3c147b16c9bf",
+    "sys__createdBy" : "avinash.singh@ekaplus.com",
+    "type" : "processor"
+}

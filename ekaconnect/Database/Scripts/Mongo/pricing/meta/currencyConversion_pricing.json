@@ -1,0 +1,18 @@
+{
+    "_id" : "currencyConversion_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "currencyConversion",
+    "label" : "Currency Conversion",
+    "object" : "formula",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "6113481e-104c-4c43-962e-1113937a3b2a"
+    },
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "currencyConversion"
+}

@@ -1,0 +1,91 @@
+
+{
+    "_id" : "deleteformula_pricing",
+    "componentType" : "UserTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Delete Formula",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to remove ${formulaName}?",
+            "headerMessage" : "Remove : ${formulaName}"
+        }
+    },
+    "input" : [ 
+        "formulaName"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "formulalisting"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "deleteformulausertask",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Formula got deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Formula got deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deleteformulausertask",
+                    "appendMsg" : true,
+                    "name" : "deleteFormula"
+                }, 
+                {
+                    "data" : "output.deleteFormula",
+                    "appendMsg" : true,
+                    "name" : "formulalisting",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "DELETE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "formulalisting"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Delete_Formula",
+    "fields" : [ 
+        {
+            "heading" : "formulaName"
+        }
+    ],
+    "taskId" : "deleteformulausertask",
+    "object" : "formula"
+}

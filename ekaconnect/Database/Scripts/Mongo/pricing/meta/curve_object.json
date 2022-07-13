@@ -1,0 +1,67 @@
+{
+    "_id" : "curveobjectmeta",
+    "name" : "curve",
+    "label" : "CURVE",
+    "type" : "object",
+    "version" : "3",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "fields" : {
+        "curveName" : {
+            "curveName" : "Curve Name",
+            "labelKey" : "curveName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "curveExpression" : {
+            "curveExpression" : "Curve Expression",
+            "labelKey" : "curveExpression",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "curveExpressionArray" : {
+            "curveExpressionArray" : "Curve Expression Array",
+            "labelKey" : "curveExpressionArray",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "curveType" : {
+            "curveType" : "Curve Type",
+            "labelKey" : "curveType",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "length" : "20"
+        },
+        "includedCurve" : {
+            "includedCurve" : "Included Curves",
+            "labelKey" : "includedCurve",
+            "type" : "textbox",
+            "isRequired" : false
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "curve"
+}

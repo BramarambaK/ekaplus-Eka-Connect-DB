@@ -1,0 +1,10 @@
+{
+  "_id": "_ST_CREATE_PRICING_RESULT_OBJECT",
+  "componentType": "SystemTask",
+  "object": "e9008da5-1659-47ea-bbe6-4d1259978120",
+  "objectAction": "UPDATE",
+  "type": "workflow",
+  "refType": "app",
+  "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+  "taskId": "_ST_CREATE_PRICING_RESULT_OBJECT"
+} 

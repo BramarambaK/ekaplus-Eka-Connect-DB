@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_CREATE_TABLE_TRIGGER_PRICING",
+    "componentType" : "SystemTask",
+    "object" : "f90bdb99-9f27-4c50-a111-ee68ba425728",
+    "objectAction" : "CREATE",
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "_ST_CREATE_TABLE_TRIGGER_PRICING",
+    "sys__createdOn" : ISODate("2019-12-12T07:12:18.780Z"),
+    "sys__createdBy" : "Bravo"
+}

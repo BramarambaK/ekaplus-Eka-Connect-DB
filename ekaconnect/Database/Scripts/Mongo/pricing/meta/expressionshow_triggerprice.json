@@ -1,0 +1,18 @@
+{
+    "_id" : "expressionshow_triggerprice",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Formula Expression",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "data-view",
+        "template" : "#{selected.data *= <div style='font-size:${item.title.style.font-size};'>${item.title.label}</div>}"
+    },
+    "decisions" : [],
+    "labelKey" : "Formula_List",
+    "fields" : [],
+    "taskId" : "expressionshow",
+    "object" : "formula"
+}

@@ -1,0 +1,10 @@
+{
+    "componentType": "SystemTask",
+    "object": "curve",
+    "objectAction": "CREATE",
+    "_id": "_ST_CREATE_CURVE_pricing",
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId": "_ST_CREATE_CURVE"
+  }

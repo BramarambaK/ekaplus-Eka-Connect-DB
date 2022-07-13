@@ -1,0 +1,44 @@
+{
+    "_id" : "density_conversion_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "Density Conversion API",
+    "label" : "Density Conversion API",
+    "object" : "formula",
+    "objectAction" : "CREATE",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "task" : "density_conversion_pricing",
+            "outcomes" : [ 
+                {
+                    "name" : "_EXT_DENSITY_PRICING",
+                    "data" : "output.density_conversion_pricing",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "conversion got successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Profile got created with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "name" : "density_conversion_pricing",
+                    "data" : "output._EXT_DENSITY_PRICING"
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "density_conversion_pricing"
+}

@@ -1,0 +1,463 @@
+{
+    "_id" : "formulaobjectmeta",
+    "type" : "object",
+    "name" : "formula",
+    "label" : "FORMULA",
+    "version" : "3",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {
+                "additionalProperties" : {}
+            }
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "fields" : {
+        "formulaName" : {
+            "formulaName" : "Formula Name",
+            "labelKey" : "formulaName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "indexPrecision" : {
+            "indexPrecision" : "Decimal Precision",
+            "labelKey" : "indexPrecision",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "formulaExpression" : {
+            "formulaExpression" : "Expression",
+            "labelKey" : "formulaExpression",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "newFormulaExp" : {
+            "newFormulaExp" : "Expression",
+            "labelKey" : "newFormulaExp",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "types" : {
+            "types" : "Type",
+            "labelKey" : "types",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "width" : "10%"
+        },
+        "category" : {
+            "category" : "Category",
+            "labelKey" : "category",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "formula_category" : {
+            "formula_category" : "Formula Category",
+            "labelKey" : "formula_category",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "formula_name" : {
+            "formula_name" : "Formula Name",
+            "labelKey" : "formula_name",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "formula_type" : {
+            "formula_type" : "Formula Type",
+            "labelKey" : "formula_type",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "contract" : {
+            "contract" : "Contract",
+            "labelKey" : "contract",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "includedCurves" : {
+            "includedCurves" : "Included Curves",
+            "labelKey" : "includedCurves",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "curves" : {
+            "curves " : "Curve",
+            "labelKey" : "curves ",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "triggerValue" : {
+            "triggerValue" : "Trigger Value",
+            "labelKey" : "triggerValue",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "formula_expression" : {
+            "formula_expression" : "Expression",
+            "labelKey" : "formula_expression",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "price_point" : {
+            "price_point" : "Price Point",
+            "labelKey" : "price_point",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey" : "pricePoint"
+        },
+        "price_type" : {
+            "price_type" : "Price Type",
+            "labelKey" : "price_type",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "serviceKey" : "priceType"
+        },
+        "quoted_period" : {
+            "quoted_period" : "Quoted Month",
+            "labelKey" : "quoted_period",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "serviceKey" : "quotedPeriod"
+        },
+        "pricingPeriod" : {
+            "pricingPeriod" : "Pricing Month",
+            "labelKey" : "pricingPeriod",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "price_quote_rule" : {
+            "price_quote_rule" : "Price Quote Rule",
+            "labelKey" : "price_quote_rule",
+            "type" : "textbox",
+            "dataType" : "number",
+            "isRequired" : false,
+            "serviceKey" : "priceQuoteRule"
+        },
+        "price_period" : {
+            "price_period" : "Price Period",
+            "labelKey" : "price_period",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "serviceKey" : "period"
+        },
+        "event" : {
+            "event" : "Event",
+            "labelKey" : "event",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "serviceKey" : "event"
+        },
+        "pricePrecision" : {
+            "pricePrecision" : "Decimal Precision",
+            "labelKey" : "pricePrecision",
+            "type" : "textbox",
+            "dataType" : "number",
+            "isRequired" : false
+        },
+        "priceDifferential" : {
+            "priceDifferential" : "Price Differential",
+            "labelKey" : "priceDifferential",
+            "type" : "textbox",
+            "isRequired" : false,
+            "serviceKey" : "priceDifferential",
+            "dataType" : "type"
+        },
+        "holidayRule" : {
+            "holidayRule" : "Holiday Rule",
+            "labelKey" : "holidayRule",
+            "type" : "textbox",
+            "isRequired" : false,
+            "serviceKey" : "holidayRule",
+            "dataType" : "text"
+        },
+        "triggerPriceEnabled" : {
+            "triggerPriceEnabled" : "Trigger Price Enable",
+            "labelKey" : "triggerPriceEnabled",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "text"
+        },
+        "triggerPricing" : {
+            "triggerPricing" : "Trigger Pricing",
+            "labelKey" : "triggerPricing",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fx" : {
+            "fx" : "FX",
+            "labelKey" : "fx",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "number",
+            "serviceKey" : "fx"
+        },
+        "differential" : {
+            "differential" : "Differential",
+            "labelKey" : "differential",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "number"
+        },
+        "contractCurrencyPrice" : {
+            "contractCurrencyPrice" : "Contract Price Unit",
+            "labelKey" : "contractCurrencyPrice",
+            "type" : "textbox",
+            "dataType" : "text",
+            "isRequired" : false
+        },
+        "_autoCreated" : {
+            "_autoCreated" : "Autocreated",
+            "labelKey" : "_autoCreated",
+            "type" : "textbox",
+            "dataType" : "text",
+            "isRequired" : false
+        },
+        "appName" : {
+            "appName" : "Type",
+            "labelKey" : "appName",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "width" : "10%"
+        },
+        "objectName" : {
+            "objectName" : "Type",
+            "labelKey" : "objectName",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "width" : "10%"
+        },
+        "date" : {
+            "date" : "Activity Date",
+            "labelKey" : "date",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "fixedQuantity" : {
+            "fixedQuantity" : "Fixed Quantity",
+            "labelKey" : "fixedQuantity",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "unfixedQuantity" : {
+            "unfixedQuantity" : "Unfixed Quantity",
+            "labelKey" : "unfixedQuantity",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "component" : {
+            "component" : "Components",
+            "labelKey" : "component",
+            "type" : "checkbox",
+            "dataType" : "Boolean",
+            "isRequired" : false
+        },
+        "price" : {
+            "price" : "Price",
+            "labelKey" : "price",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "priceU" : {
+            "priceU" : "priceU",
+            "labelKey" : "priceU",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "quantity" : {
+            "quantity" : "Quantity",
+            "labelKey" : "quantity",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "fixationMethod" : {
+            "fixationMethod" : "Fixation Method",
+            "labelKey" : "fixationMethod",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "fixationMethodDisplayName" : {
+            "fixationMethodDisplayName" : "",
+            "labelKey" : "fixationMethodDisplayName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "indexName" : {
+            "indexName" : "Index Name",
+            "labelKey" : "indexName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "indexMultiplier" : {
+            "indexMultiplier" : "Index Multiplier",
+            "type" : "textbox",
+            "labelKey" : "indexMultiplier",
+            "isRequired" : false
+        },
+        "fxindex" : {
+            "fxindex" : "Fx Index",
+            "labelKey" : "fxindex",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "fxrate" : {
+            "fxrate" : "Fx Value",
+            "labelKey" : "fxrate",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "calculatedPrice" : {
+            "calculatedPrice" : "Calculated Price",
+            "labelKey" : "calculatedPrice",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "time" : {
+            "time" : "Time",
+            "labelKey" : "time",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "qty" : {
+            "qty" : "Time",
+            "labelKey" : "qty",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "contractIssueDate" : {
+            "contractIssueDate" : "Contract Issue Date",
+            "labelKey" : "contractIssueDate",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "exposureEnabled" : {
+            "exposureEnabled" : "Exposure",
+            "labelKey" : "exposureEnabled",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "isActualQuoted" : {
+            "isActualQuoted" : "Quoted Month",
+            "labelKey" : "isActualQuoted",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "isActualPricing" : {
+            "isActualPricing" : "Pricing Month",
+            "labelKey" : "isActualPricing",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "curveUnit" : {
+            "curveUnit" : "Curve Unit",
+            "labelKey" : "curveUnit",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "itemQtyUnit" : {
+            "itemQtyUnit" : "Item Quantity Unit",
+            "labelKey" : "itemQtyUnit",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "contractRefNo" : {
+            "contractRefNo" : "Contract Item Ref No",
+            "labelKey" : "contractRefNo",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "latestDate" : {
+            "latestDate" : "Latest Fixation Date",
+            "labelKey" : "latestDate",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "executedQty" : {
+            "executedQty" : "Executed Quantity",
+            "labelKey" : "executedQty",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "product" : {
+            "product" : "Product",
+            "labelKey" : "product",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "cpName" : {
+            "cpName" : "CP Name",
+            "labelKey" : "cpName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "quality" : {
+            "quality" : "Quality",
+            "labelKey" : "quality",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "sys_cloned_parent": {
+            "sys_cloned_parent": "sys_cloned_parent",
+            "labelKey": "sys_cloned_parent",
+            "type": "hidden",
+            "isRequired": false,
+            "dataType": "String"
+        },
+        "sys_cloned": {
+            "sys_cloned": "sys_cloned",
+            "labelKey": "sys_cloned",
+            "type": "hidden",
+            "isRequired": false,
+            "dataType": "String"
+        }
+
+    },
+    "additionalProperties" : {
+        "additionalProperties" : {}
+    },
+    "_class" : "com.eka.ekaconnect.pojo.AppObjectMeta",
+    "sys__UUID" : "formula"
+}

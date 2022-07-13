@@ -1,0 +1,169 @@
+{
+    "_id" : "all-oil-price-fixation-object",
+    "name" : "all-oil-price-fixation-object",
+    "label" : "all-oil-price-fixation-object",
+    "type" : "object",
+    "version" : "V2",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [],
+    "fields" : {
+        "contractRefNo" : {
+            "contractRefNo" : "Contract Ref No",
+            "labelKey" : "contractRefNo",
+            "isRequired" : false
+        },
+        "contractItemRefNo" : {
+            "contractItemRefNo" : "Contract Item Ref No",
+            "labelKey" : "contractItemRefNo",
+            "isRequired" : false
+        },
+        "internalContractRefNo" : {
+            "internalContractRefNo" : "Internal Contract Ref No",
+            "labelKey" : "internalContractRefNo",
+            "isRequired" : false
+        },
+        "internalContractItemRefNo" : {
+            "internalContractItemRefNo" : "Internal Contract Item Ref No",
+            "labelKey" : "internalContractItemRefNo",
+            "isRequired" : false
+        },
+        "fixationRefNo" : {
+            "fixationRefNo" : "Price Fixation No",
+            "labelKey" : "fixationRefNo",
+            "isRequired" : false
+        },
+        "fixationStage" : {
+            "fixationStage" : "Fixation Stage",
+            "labelKey" : "fixationStage",
+            "isRequired" : false
+        },
+        "itemQty" : {
+            "itemQty" : "Item Quantity",
+            "labelKey" : "itemQty",
+            "isRequired" : false
+        },
+        "itemFixedQtyAvaiable" : {
+            "itemFixedQtyAvaiable" : "Item Fixed Qty Available",
+            "labelKey" : "itemFixedQtyAvaiable",
+            "isRequired" : false
+        },
+        "basePrice" : {
+            "basePrice" : "Base Price",
+            "labelKey" : "basePrice",
+            "isRequired" : false
+        },
+        "differential" : {
+            "differential" : "Differential",
+            "labelKey" : "differential",
+            "isRequired" : false
+        },
+        "avgPrice" : {
+            "avgPrice" : "Avg Price",
+            "labelKey" : "avgPrice",
+            "isRequired" : false
+        },
+        "totalValue" : {
+            "totalValue" : "Total Value",
+            "labelKey" : "totalValue",
+            "isRequired" : false
+        },
+        "fixationDate" : {
+            "fixationDate" : "Fixation Date",
+            "labelKey" : "fixationDate",
+            "isRequired" : false
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "GMR Ref No",
+            "labelKey" : "gmrRefNo",
+            "isRequired" : false
+        },
+        "internalGmrRefNo" : {
+            "internalGmrRefNo" : "Internal GMR Ref No",
+            "labelKey" : "internalGmrRefNo",
+            "isRequired" : false
+        },
+        "gmrQty" : {
+            "gmrQty" : "GMR Qty",
+            "labelKey" : "gmrQty",
+            "isRequired" : false
+        },
+        "gmrFixedQty" : {
+            "gmrFixedQty" : "GMR Fixed Qty",
+            "labelKey" : "gmrFixedQty",
+            "isRequired" : false
+        },
+        "quantity" : {
+            "quantity" : "GMR Fixed Qty(in Item Qty Unit)",
+            "labelKey" : "quantity",
+            "isRequired" : false
+        },
+        "quantityunitconversion" : {
+            "quantityunitconversion" : "GMR Qty Conversion",
+            "labelKey" : "quantityunitconversion",
+            "isRequired" : false
+        },
+        "cpName" : {
+            "cpName" : "CP Name",
+            "labelKey" : "cpName",
+            "isRequired" : false
+        },
+        "itemQtyUnit" : {
+            "itemQtyUnit" : "Item Qty Unit",
+            "labelKey" : "itemQtyUnit",
+            "isRequired" : false
+        },
+        "gmrQtyUnit" : {
+            "gmrQtyUnit" : "GMR Qty Unit",
+            "labelKey" : "gmrQtyUnit",
+            "isRequired" : false
+        },
+        "avgPriceQtyUnit" : {
+            "avgPriceQtyUnit" : "Avg Price Qty Unit",
+            "labelKey" : "avgPriceQtyUnit",
+            "isRequired" : false
+        },
+        "basePriceQtyUnit" : {
+            "basePriceQtyUnit" : "Base Price Qty Unit",
+            "labelKey" : "basePriceQtyUnit",
+            "isRequired" : false
+        },
+        "differentialQtyUnit" : {
+            "differentialQtyUnit" : "Differential Qty Unit",
+            "labelKey" : "differentialQtyUnit",
+            "isRequired" : false
+        },
+        "pricingDate" : {
+            "pricingDate" : "Pricing Date",
+            "labelKey" : "pricingDate",
+            "isRequired" : false
+        },
+        "fxRate" : {
+            "fxRate" : "Fx Rate",
+            "labelKey" : "fxRate",
+            "isRequired" : false
+        },
+        "kfactor" : {
+            "kfactor" : "Adjustment Factor",
+            "labelKey" : "kfactor",
+            "isRequired" : false
+        }
+    },
+    "sys__UUID" : "5fee9de2-c1e6-11eb-8529-0242ac130003",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

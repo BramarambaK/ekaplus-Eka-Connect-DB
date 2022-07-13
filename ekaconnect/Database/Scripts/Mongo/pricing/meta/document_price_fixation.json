@@ -1,0 +1,16 @@
+{
+    "_id" : "document_price_fixation",
+    "type" : "property",
+    "name" : "document_price_fixation",
+    "label" : "Document Price Fixation",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "visibility" : "public",
+    "listOfValues" : "Default,Custom",
+    "defaultValue" : "Custom",
+    "editSupportedInUI" : true,
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "description" : "Property For Custom Document"
+}

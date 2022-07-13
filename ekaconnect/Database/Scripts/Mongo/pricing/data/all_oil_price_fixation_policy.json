@@ -1,0 +1,21 @@
+{
+    "_id" : "all_oil_price_fixation_policy",
+    "type" : "policy",
+    "app_UUID" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "refType" : "object",
+    "refTypeId" : "5fee9de2-c1e6-11eb-8529-0242ac130003",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "LISTVIEW",
+				"CREATE",
+				"UPDATE",
+				"DELETE"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : []
+        }
+    }
+}

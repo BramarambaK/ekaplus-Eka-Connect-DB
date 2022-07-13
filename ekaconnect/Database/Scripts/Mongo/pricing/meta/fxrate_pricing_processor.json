@@ -1,0 +1,10 @@
+{
+    "_id" : "fxrate_pricing",
+    "name" : "fxrate_pricing",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "snippet" : "\r\n    var defaultDataURL =req.body.propertyList.eka_connect_host + '\/collectionmapper\/84d7b167-1d9f-406d-b974-bea406a25f9a\/formula\/fetchCollectionRecords';\r\n     var defaultdata = {\r\n       method: 'POST',\r\n       url: defaultDataURL,\r\n       body:req.body.selectedData,\r\n       headers: {\r\n         \"Content-type\": \"application\/json\",\r\n         Authorization: req.headers.authorization,\r\n         \"ttl\":\"300\",\r\n         'X-TenantID': req.headers['x-tenantid']\r\n       },\r\n       json: true\r\n     };\r\n     \r\n     function get_defaultData() {\r\n       return new Promise(function(resolve, reject) {\r\n         request(defaultdata, function(err, response, body) {\r\n           if (err || body.error) reject(body);\r\n           else {\r\n             resolve(body);\r\n           }\r\n         });\r\n       });\r\n     }\r\n     \r\n     get_defaultData().then(function (Response) {\r\n      res.status(200).send(Response);\r\n     }).catch(err => {\r\n         console.log(err);\r\n        res.status(500).send({message:'API FAILED'});\r\n       });  \r\n  ",
+    "sys__UUID" : "f214cab8-4650-4d86-b1cd-c2cac4c8883b",
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

@@ -1,0 +1,18 @@
+{
+    "_id" : "fxratepricing_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "fxratepricing",
+    "label" : "fxrate pricing Conversion",
+    "object" : "formula",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "f214cab8-4650-4d86-b1cd-c2cac4c8883b"
+    },
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "fxratepricing"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "Auto_Trigger_Pre_Fixation_Process_Task",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "0d09ef03-8e55-4f80-bbee-347126eb10fd"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "type" : "workflow",
+    "taskId" : "ST_PROCESSOR_AUTO_TRIGGER_PRE_FIXATION",
+    "label" : "API FOR AUTO TRIGGER PRE FIXATION",
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4"
+}

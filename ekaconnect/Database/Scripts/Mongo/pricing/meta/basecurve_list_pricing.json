@@ -1,0 +1,15 @@
+{
+    "componentType": "UserTask",
+    "labelKey": "basecurve_list",
+    "label": "Base Curve List",
+    "object": "baseCurve",
+    "objectAction": "READ",
+    "layout": {},
+    "fields": [],
+    "decisions": [],
+    "_id": "basecurve_list_pricing",
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId": "basecurve_list"
+  }

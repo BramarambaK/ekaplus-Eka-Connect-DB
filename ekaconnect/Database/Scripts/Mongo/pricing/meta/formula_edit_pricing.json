@@ -1,0 +1,33 @@
+{
+    "_id" : "formula_edit_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "formula_edit",
+    "label" : "Formula Edit",
+    "object" : "formula",
+    "objectAction" : "UPDATE",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "formula_edit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.formula_edit",
+                    "name" : "_ST_UPDATE_FORMULA",
+                    "appendMsg" : true
+                }, 
+                {
+                    "data" : "output._ST_UPDATE_FORMULA",
+                    "name" : "formula_edit"
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "formula_edit"
+}

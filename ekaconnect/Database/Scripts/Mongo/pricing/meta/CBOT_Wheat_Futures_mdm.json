@@ -1,0 +1,6 @@
+  {    "key": "instrument-001",
+    "value": "CBOT Wheat Futures",
+    "object": "instrument",
+    "type": "connectmdm",
+    "_id": "instrument-001"
+  }

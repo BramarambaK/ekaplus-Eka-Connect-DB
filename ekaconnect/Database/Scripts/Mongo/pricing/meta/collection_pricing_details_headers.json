@@ -1,0 +1,10 @@
+{
+    "_id" : "collection_pricing_details_headers",
+    "type" : "property",
+    "name" : "collection_pricing_details_headers",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "Seq No:Integer,Contract Ref No:String,Contract Item Ref No:String,Formula Expression:String,Curve Name:String,Curve Unit:String,Price Point:String,Price Type:String,Price Quote Rule:String,Price Period:String,Start Date:Date,End Date:Date,Quoted Period:String,Event:String,Offset:String,Offset Type:String,Differential:String,Fx Type:String,Fx Value:String,Differential Type:String",
+    "length" : "1000"
+}

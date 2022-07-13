@@ -1,0 +1,15 @@
+{
+    "componentType": "UserTask",
+    "labelKey": "Curve_List",
+    "label": "Curve List",
+    "object": "curve",
+    "objectAction": "READ",
+    "layout": {},
+    "fields": [],
+    "decisions": [],
+    "_id": "curve_list_pricing",
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId": "curve_list"
+  }

@@ -1,0 +1,26 @@
+{
+    "_id" : "contract_formula_list",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : true,
+    "apiInfo" : {
+        "host" : "${properties.eka_pricing_host}",
+        "path" : "/api/pricing/formula/pricingDetails",
+        "headers" : {},
+        "inputMapping" : {},
+        "method" : "GET",
+        "mergePayload" : true,
+        "useInputMapping" : false,
+        "body" : {}
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "List Of Contract Pricing Configuration",
+    "type" : "workflow",
+    "layout" : {},
+    "decisions" : [],
+    "labelKey" : "Contract Formula Details List",
+    "fields" : [],
+    "taskId" : "contractformuladetails",
+    "object" : "formula"
+}

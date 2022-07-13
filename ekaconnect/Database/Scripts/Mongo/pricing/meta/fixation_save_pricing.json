@@ -1,0 +1,34 @@
+{
+    "_id" : "fixation_save_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "fixation_save",
+    "label" : "Fixation Save",
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67",
+    "objectAction" : "UPDATE",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "triggerdata_save",
+            "outcomes" : [ 
+                {
+                    "data" : "output.triggerdata_save",
+                    "name" : "_ST_CREATE_TRIGGER_PRICING",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output._ST_CREATE_TRIGGER_PRICING",
+                    "name" : "triggerdata_save",
+                    "appendMsg" : false
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "triggerdata_save"
+}

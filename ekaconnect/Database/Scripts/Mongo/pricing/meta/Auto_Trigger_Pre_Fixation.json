@@ -1,0 +1,22 @@
+{
+  "_id": "Auto_Trigger_Pre_Fixation",
+  "componentType": "ChainedSystemTask",
+  "label": "API AUTO TRIGGER PRE FIXATION",
+  "labelKey": "Trigger_Price",
+  "layout": {},
+  "object": "75f0d1f4-ceb1-498e-85c0-2eb433b809f4",
+  "objectAction": "CREATE",
+  "tags": "notifyDataChange",
+  "chainedTasks": [
+      {
+          "name": "ST_PROCESSOR_AUTO_TRIGGER_PRE_FIXATION",
+          "data": "output.Auto_Trigger_Pre_Fixation",
+          "returnData": "Y"
+      }
+  ],
+  "version": "V2",
+  "refType": "app",
+  "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+  "taskId": "Auto_Trigger_Pre_Fixation",
+  "type": "workflow"
+}

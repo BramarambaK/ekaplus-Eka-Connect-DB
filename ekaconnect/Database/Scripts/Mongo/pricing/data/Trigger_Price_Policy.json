@@ -1,0 +1,25 @@
+{
+    "_id" : "pricing_triggerPrice_policy",
+    "type" : "policy",
+    "app_UUID" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "refType" : "object",
+    "refTypeId" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    },
+    "sys__createdOn" : ISODate("2019-12-12T07:12:19.815Z"),
+    "sys__createdBy" : "Bravo"
+}

@@ -1,0 +1,704 @@
+{
+    "_id" :"pricing_app",
+    "title" : "Pricing App",
+    "platform_id" : "37",
+    "base_platform_id":"39",
+    "name" : "pricing",
+    "isTrmIntegrated" : true,
+    "tenantID" : "something",
+    "ObjectMetaIds" : [ 
+        "5be3e1a98fce6a0f9c12c220", 
+        "2345"
+    ],
+    "version" : "3",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "_class" : "com.eka.ekaconnect.pojo.ApplicationMeta",
+    "type" : "app",
+    "appType" : "CTRM",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "sidebarToggler" : "lg",
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "iconCls" : "insights-icon",
+                        "label" : "Trade Data",
+                        "itemId" : "scm-menu1",
+                        "reference" : "scmMenu1",
+                        "menuItems" : [ 
+                            {
+                                "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOC&applyDefaultValue=Y",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P2",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Contracts",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/connect/tenant/physicals/ctrmhandler?action=create&app=physicals&appObject=contract",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_NEW_CONTRACT",
+                                        "disabled" : "",
+                                        "gridID" : "P2",
+                                        "text" : "New Crude Contract",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/contractManagement.do?method=addMode&ContractType=P",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P4",
+                                        "disabled" : "",
+                                        "gridID" : "P2",
+                                        "text" : "New Purchase",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/contractManagement.do?method=addMode&ContractType=S",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P5",
+                                        "disabled" : "",
+                                        "gridID" : "P2",
+                                        "text" : "New Sales",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPA",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P18",
+                                        "disabled" : "",
+                                        "gridID" : "P2",
+                                        "text" : "Pending Approval",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOC&applyDefaultValue=Y",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P12",
+                                        "disabled" : "",
+                                        "gridID" : "P2",
+                                        "text" : "List Of Contracts",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=DUL",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_DUL",
+                                        "disabled" : "",
+                                        "gridID" : "P2",
+                                        "text" : "Documents Uploaded",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOCI&applyDefaultValue=Y",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P3",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Contract Items",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LODW",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P23",
+                                        "disabled" : "",
+                                        "gridID" : "P3",
+                                        "text" : "Delivery Washout",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOCI&applyDefaultValue=Y",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P22",
+                                        "disabled" : "",
+                                        "gridID" : "P3",
+                                        "text" : "List of Contract Items",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOCS",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P241",
+                                        "disabled" : "",
+                                        "gridID" : "P3",
+                                        "text" : "Carry Schedules",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOUO",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "LOUO-OP",
+                                        "disabled" : "",
+                                        "gridID" : "P3",
+                                        "text" : "Overfill/Underfill Items",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOIPD",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P242",
+                                        "disabled" : "",
+                                        "gridID" : "P3",
+                                        "text" : "Item Pricing Details",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LORO&retainFilterValue=Y&statusId=Active",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P243",
+                                        "disabled" : "",
+                                        "gridID" : "P3",
+                                        "text" : "List Of Rollovers",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=MFFI",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "MFFI1",
+                                        "disabled" : "",
+                                        "gridID" : "P3",
+                                        "text" : "List of FX Fixes",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P6",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Contract Draft",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/draftListing.do?method=getListOfDraftTemplate&gridId=LODT",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "CD-1",
+                                        "disabled" : "",
+                                        "gridID" : "P6",
+                                        "text" : "List of Contract Drafts",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P13",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Contract Approvals",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/contractApprovalList.do?method=getListOfContractApprovals&gridId=LOCA",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "CA-1",
+                                        "disabled" : "",
+                                        "gridID" : "P13",
+                                        "text" : "List of Contract Approvals",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOT",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P8",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Contract Templates",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/connect/tenant/physicals/ctrmhandler?action=create&app=physicals&appObject=template",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_NEW_CONTRACT_TEMPLATE",
+                                        "disabled" : "",
+                                        "gridID" : "P8",
+                                        "text" : "New Crude Contract Template",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/templateManagement.do?method=addMode",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P24",
+                                        "disabled" : "",
+                                        "gridID" : "P8",
+                                        "text" : "New Contract Template",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOT",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P25",
+                                        "disabled" : "",
+                                        "gridID" : "P8",
+                                        "text" : "List of Templates",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPT",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P14",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Printable Templates",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/contractOutputDocument.do?method=loadNewPrintableTemplate&templateType=P",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P15",
+                                        "disabled" : "",
+                                        "gridID" : "P14",
+                                        "text" : "New Purchase",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/contractOutputDocument.do?method=loadNewPrintableTemplate&templateType=S",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P16",
+                                        "disabled" : "",
+                                        "gridID" : "P14",
+                                        "text" : "New Sales",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPT",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P17",
+                                        "disabled" : "",
+                                        "gridID" : "P14",
+                                        "text" : "List All",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P10",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Intercompany Deals",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/interCompanyDealsList.do?method=getListOfInterCompanyDeals&gridId=LOCD",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "ICD-1",
+                                        "disabled" : "",
+                                        "gridID" : "P10",
+                                        "text" : "List All",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPDS",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P20",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "P/D Schedule SetUp",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPDS",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P21",
+                                        "disabled" : "",
+                                        "gridID" : "P20",
+                                        "text" : "List All",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOOA",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P29",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Hedge Allocation",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOOA",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P30",
+                                        "disabled" : "",
+                                        "gridID" : "P29",
+                                        "text" : "Futures/Option Allocation",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOFXA",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P31",
+                                        "disabled" : "",
+                                        "gridID" : "P29",
+                                        "text" : "FX Allocation",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "PPF-0",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Price Fixation",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPFG",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "PPF-01",
+                                        "disabled" : "",
+                                        "gridID" : "PPF-0",
+                                        "text" : "List All",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPG",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "PPF-02",
+                                        "disabled" : "",
+                                        "gridID" : "PPF-0",
+                                        "text" : "Priced GMRs",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOMPFG",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "PPF-03",
+                                        "disabled" : "",
+                                        "gridID" : "PPF-0",
+                                        "text" : "List Of Matched Price Fixations",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P32",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Trade Finance",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/createNewLc.do?method=loadNewLcScreen",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P34",
+                                        "disabled" : "",
+                                        "gridID" : "P32",
+                                        "text" : "New Letter of Credit-Export",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/loanOperationsAction.do?method=loadNewLoanScreen",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P37",
+                                        "disabled" : "",
+                                        "gridID" : "P32",
+                                        "text" : "New Loan",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOLC",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P35",
+                                        "disabled" : "",
+                                        "gridID" : "P32",
+                                        "text" : "List All Letter of Credit-Export",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOLS",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P38",
+                                        "disabled" : "",
+                                        "gridID" : "P32",
+                                        "text" : "List All Loan",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }, 
+                            {
+                                "handler" : "",
+                                "entityVersionMap" : {},
+                                "tabRequestId" : "",
+                                "cls" : "",
+                                "levelNo" : 2.0,
+                                "itemId" : "P_PCP_01",
+                                "disabled" : "",
+                                "gridID" : "P1",
+                                "text" : "Trader Position",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/positionComputationProcessAction.do?method=loadNewPCP",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_PCP_03",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "New Position Computation Process",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/rollOverOverAllBasisPositionAction.do?method=loadRolloverOverAllBasisPosition",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_RBP_02",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "Rollover Overall Basis Position",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/roRecordFlatPositionAdjustmentAction.do?method=loadNewRecordPositionAdjustment",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_RFP_02",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "Record of Flat Position Adjustment",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOPCP",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_PCP_04",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "List Position Computation Process",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/roRecordBasisPositionAdjustmentAction.do?method=loadNewRecordPositionAdjustment",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_RBP_03",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "Record Basis Position Adjustment",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOFPRA",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_RFP_03",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "Flat Position Adjustment",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOBPR",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_RBP_04",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "List of Basis Position Rollovers",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/commonListing.do?method=getCommonListingPage&gridId=LOBPRA",
+                                        "entityVersionMap" : {},
+                                        "tabRequestId" : "",
+                                        "cls" : "",
+                                        "levelNo" : 3.0,
+                                        "itemId" : "P_RBP_05",
+                                        "disabled" : "",
+                                        "gridID" : "P_PCP_01",
+                                        "text" : "List of Basis Position Adjustments",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "84d7b167-1d9f-406d-b974-bea406a25f9a"
+}
