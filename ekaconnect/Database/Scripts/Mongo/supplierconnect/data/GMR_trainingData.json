@@ -1,0 +1,52 @@
+{
+    "_id" :"Gmr_trainingData",
+    "targetObject" : "c05cacf5-200c-4d97-8e8d-a67329ff286c",
+    "trainingData" : [
+    {
+        "sentence": "Create a GMR with container Yes for loading City *Aruba* ans expected arrival date is 2020-09-16",
+        "containerFlagDisplayName": "Yes",
+        "LoadingLocationCountryDisplayName": "*Aruba*",
+        "ExpectedArrivalDate": "2020-09-16"
+    },
+    {
+        "sentence": "Create a GMR with quality arbina for Origin *Belize* and destination Ronnskar, Sweden",
+        "qualityName": "Almina",
+        "CountryOfOriginDisplayName": "*Belize*",
+        "incoLocationDisplayName": "Ronnskar, Sweden"
+    },
+    {
+        "sentence": "Create a GMR of Almina and container",
+        "qualityName": "Almina",
+        "containerFlagDisplayName": "container"
+    },
+    {
+        "sentence": "Create a GMR with quality Almina and container",
+        "qualityName": "Almina",
+        "containerFlagDisplayName": "container"
+    },
+    {
+        "sentence": "Almina and container",
+        "qualityName": "Almina",
+        "containerFlagDisplayName": "container"
+    },
+    {
+        "sentence": "Create a GMR with container from City Belize, Bahamas, arriving by 12-10-2020, from sealnotest",
+        "containerFlagDisplayName": "container",
+        "LoadingLocationCityDisplayName": "Belize",
+        "LoadingLocationCountryDisplayName":"Bahamas",
+        "ExpectedArrivalDate": "12-10-2020",
+        "SupplierReference":"sealnotest"
+    }
+]
+
+,
+    "typeOfData" : "training",
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "8a9b0aa7-da9f-4edf-9015-4a26c445081a",
+    "sys__createdOn" : ISODate("2020-10-13T12:00:57.307Z"),
+    "sys__data__state" : "Create"
+}

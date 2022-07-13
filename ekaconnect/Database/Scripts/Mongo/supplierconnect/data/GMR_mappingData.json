@@ -1,0 +1,32 @@
+{
+    "_id" : "Gmr_mappingData",
+    "targetObject" : "c05cacf5-200c-4d97-8e8d-a67329ff286c",
+    "typeOfData" : "mapping",
+    "mappingData" : {
+    "containerFlagDisplayName":{
+        "container":"Yes",
+        "Container":"Yes"
+    },
+    "qualityName":{
+        "almina":"Almina"
+    },
+    "LoadingLocationCountryDisplayName":{
+        "Bahamas":"*Bahamas*",
+        "bahamas":"*Bahamas*"
+    },
+    "LoadingLocationCityDisplayName":{
+        "belize":"Belize"
+    },
+    "SupplierReference":{
+        "seal":"sealnotest"
+    }
+},
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "1875691b-ab14-4b6d-82c9-5c7dfaf9a7c2",
+    "sys__createdOn" : ISODate("2020-10-13T12:02:37.287Z"),
+    "sys__data__state" : "Create"
+}

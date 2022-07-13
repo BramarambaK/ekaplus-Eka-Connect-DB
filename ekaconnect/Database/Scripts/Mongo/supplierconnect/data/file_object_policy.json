@@ -1,0 +1,35 @@
+{
+    "_id" : "file_object_policy_supplierconnect",
+    "app_UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "refType" : "object",
+    "refTypeId" : "2b28674d-c7ba-4661-ae32-f9b86d8c1007",
+    "roleGrants" : {   
+       "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+				"UPDATE",
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : []
+        },
+		"136" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ",
+				"UPDATE",
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    },
+    "type" : "policy",
+    "userGrants" : {}
+}

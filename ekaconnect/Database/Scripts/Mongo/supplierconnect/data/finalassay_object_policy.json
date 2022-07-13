@@ -1,0 +1,21 @@
+{
+  "_id": "finalassay_object_policy",
+  "app_UUID": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "refType": "object",
+  "refTypeId": "6f46a4d0-401c-4b7b-b542-b3d3eafe4aad",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": [
+        "CREATE",
+        "READ",
+        "UPDATE",
+        "DELETE",
+        "LISTVIEW"
+      ],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  },
+  "type": "policy",
+  "userGrants": {}
+}

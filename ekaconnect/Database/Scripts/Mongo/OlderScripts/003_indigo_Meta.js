@@ -1,0 +1,1 @@
+db.getCollection('indigo_Meta').update({"type" : "policy", "name" : "oms"}, {$set: {"app": "oms"}}, {multi: true});//

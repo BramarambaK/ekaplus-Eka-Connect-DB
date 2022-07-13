@@ -1,0 +1,145 @@
+{
+	"_id":"Gmr_Basic_policy_supplierconnect",
+    "type" : "policy",
+    "app_UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "refType" : "object",
+    "refTypeId" : "c05cacf5-200c-4d97-8e8d-a67329ff286c",
+    "userGrants" : {},
+    "roleGrants" : {        
+        "124" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1236" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "129" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1231" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "945" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "136" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1526" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1527" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1529" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

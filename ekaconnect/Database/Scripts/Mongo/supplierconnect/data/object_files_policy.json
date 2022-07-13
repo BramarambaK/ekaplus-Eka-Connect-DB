@@ -1,0 +1,111 @@
+{
+	"_id":"object_files_policy_supplierconnect",
+    "type" : "policy",
+    "app_UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "refType" : "object",
+    "refTypeId" : "12ff0fa0-c5e5-4fa5-bbe5-2bb5f1da7715",
+    "userGrants" : {},
+    "roleGrants" : {       
+        "1236" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "129" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1231" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "136" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1526" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1527" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1529" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : []
+        }
+    }
+}

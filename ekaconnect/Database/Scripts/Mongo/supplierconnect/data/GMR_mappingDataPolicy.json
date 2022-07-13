@@ -1,0 +1,21 @@
+{
+    "_id" : "Gmr_mappingDataPolicy",
+    "app_UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "1875691b-ab14-4b6d-82c9-5c7dfaf9a7c2",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46"
+}

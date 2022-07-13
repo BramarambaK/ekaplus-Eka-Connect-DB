@@ -1,0 +1,23 @@
+{
+    "_id" : "APPROVAL_PROCESS_OBJECT_POLICY",
+    "type" : "policy",
+    "app_UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "refType" : "object",
+    "refTypeId" : "0800a667-67c8-4f79-b124-b6b422aff8a0",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

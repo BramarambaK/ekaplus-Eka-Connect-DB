@@ -1,0 +1,161 @@
+{
+	"_id":"supplier_policy_supplierconnect",
+    "type" : "policy",
+    "app_UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "refType" : "object",
+    "refTypeId" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec",
+    "userGrants" : {},
+    "roleGrants" : {        
+        "124" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1236" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [ 
+                {
+                    "value" : [ 
+                        "##user.cp"
+                    ],
+                    "key" : "cpName",
+                    "operator" : "in"
+                }
+            ],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1231" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "945" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "136" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1526" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [ 
+                {
+                    "value" : [ 
+                        "##user.cp"
+                    ],
+                    "key" : "cpName",
+                    "operator" : "in"
+                }
+            ],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1527" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [ 
+                {
+                    "value" : [ 
+                        "##user.cp"
+                    ],
+                    "key" : "cpName",
+                    "operator" : "in"
+                }
+            ],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1529" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [ 
+                {
+                    "value" : [ 
+                        "##user.cp"
+                    ],
+                    "key" : "cpName",
+                    "operator" : "in"
+                }
+            ],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

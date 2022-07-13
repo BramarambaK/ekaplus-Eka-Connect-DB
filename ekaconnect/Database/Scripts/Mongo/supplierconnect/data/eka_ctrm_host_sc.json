@@ -1,0 +1,8 @@
+{
+    "_id" : "eka_ctrm_host_sc",
+    "propertyLevel" : "app",
+    "propertyName" : "eka_ctrm_host",
+    "propertyValue" : "http://192.168.1.169:8001",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "property"
+}

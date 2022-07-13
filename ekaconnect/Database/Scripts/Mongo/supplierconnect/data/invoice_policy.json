@@ -1,0 +1,50 @@
+{
+	"_id":"invoice_policy_sc",
+    "type" : "policy",
+    "app_UUID" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "refType" : "object",
+    "refTypeId" : "c02555d6-307d-46de-b98d-17c48aea7daa",
+    "userGrants" : {},
+    "roleGrants" : {         
+        "1811" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        },
+        "1813" : {
+            "allowedItemLevelActions" : [ 
+                "CREATE", 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW", 
+                "APPROVE", 
+                "REJECT"
+            ],
+            "itemLevelFilters" : [ 
+                {
+                    "value" : [ 
+                        "##user.cp"
+                    ],
+                    "key" : "supplierName",
+                    "operator" : "in"
+                }
+            ],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}
