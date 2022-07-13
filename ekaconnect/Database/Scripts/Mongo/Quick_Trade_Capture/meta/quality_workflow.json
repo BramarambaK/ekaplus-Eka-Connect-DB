@@ -1,0 +1,62 @@
+{
+    "_id" : "quality_spec_QTC",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Quality Specification",
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "828ba0a0-8eec-4694-8a8c-5e471bb7034b"
+    },
+    "layout" : {
+        "selection" : "row",
+        "name" : "create",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "READ",
+            "labelkey" : "",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "createtrade"
+                }
+            ],
+            "label" : "OK",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "Quality_Specification",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : false,
+            "key" : "Name"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : false,
+            "key" : "Value"
+        }
+    ],
+    "taskId" : "quality_specification",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

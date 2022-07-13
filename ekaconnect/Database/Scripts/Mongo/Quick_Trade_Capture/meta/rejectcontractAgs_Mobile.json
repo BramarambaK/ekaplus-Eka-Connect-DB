@@ -1,0 +1,53 @@
+{
+    "_id" : "rejectcontract_Ags_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Reject",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to reject contract ${contractRefNo}?"
+        }
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "Yes",
+            "task" : "rejectcontractags",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.rejectcontractags",
+                    "name" : "rejectprocessorags",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Contract is rejected."
+                        },
+                        "failure" : {
+                            "message" : "Rejection of contract failed"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output.rejectprocessorags",
+                    "name" : "rejectcontractags",
+                    "showPopUp" : true
+                }
+            ]
+        }
+    ],
+    "labelKey" : "REJECT_CONTRACT",
+    "taskId" : "rejectcontractags",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "deviceType" : "mobile"
+}

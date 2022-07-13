@@ -1,0 +1,22 @@
+{
+    "_id" : "qualityFinalAt_Property_QTC",
+    "type" : "property",
+    "name" : "qualityFinalAt",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+      "defaultValue":[{
+        "key" : "Loading",
+        "value" : "Loading"
+    }, 
+    {
+        "key" : "Discharge",
+        "value" : "Discharge"
+    }
+    ],
+    "description": "Dropdown value for Discharge",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label": "Contract Type",
+    "editSupportedInUI" : false
+}

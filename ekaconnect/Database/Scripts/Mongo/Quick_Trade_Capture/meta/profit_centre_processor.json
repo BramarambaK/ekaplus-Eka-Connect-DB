@@ -1,0 +1,11 @@
+{
+    "_id" : "ProfitCentre_QTC",
+    "name" : "preDefaultData",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : " var output = {\r\n      appId: req.body.appId,\r\n      flow: req.body.flow,\r\n      object: req.body.object,\r\n      objectMeta: req.body.objectMeta,\r\n      properties: req.body.properties,\r\n    }\r\n   var defaultDataURL2 =\r\n  req.body.propertyList.eka_trm_physicals_api_host + '\/user\/data';\r\n    var defaultdata2 = {\r\n    method: 'GET',\r\n    url: defaultDataURL2,\r\n   \r\n    headers: {\r\n      \"Connection\": \"keep-alive\",\r\n      \"Content-type\": \"application\/json\",\r\n      Authorization: req.headers.authorization,\r\n      'X-TenantID': req.headers['x-tenantid']\r\n  \r\n    },\r\n  };\r\n  function get_default2() {\r\n    return new Promise(function(resolve, reject) {\r\n      request(defaultdata2, function(err, response, body) {\r\n        if (err || body.error) reject(body);\r\n        else {\r\n          resolve(body);\r\n        }\r\n      });\r\n    });\r\n  }\r\nif(req.headers.hasOwnProperty('device-id')){\r\n\t\tdefaultdata2.headers['Device-Id'] = req.headers['device-id']\r\n      }\r\n    get_default2().then(function (result) {\r\n\tvar dataid=JSON.parse(result);\r\n\tconsole.log(dataid)\r\n\toutput.objectMeta.fields.profitCenterId.dependsOn[0] = dataid.userId\r\n      res.status(200).send(output);\r\n    }).catch(err => {\r\n      console.log(err);\r\n    });",
+    "sys__UUID" : "b9851f32-94ec-48e4-800d-87c32be0e3f6",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "avinash@ekaplus.com"
+}

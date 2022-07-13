@@ -1,0 +1,52 @@
+{
+    "_id" : "rejectcontract_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Reject",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to reject contract ${contractRefNo}?"
+        }
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "Yes",
+            "task" : "rejectcontract",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.rejectcontract",
+                    "name" : "rejectprocessor",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : ""
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output.rejectprocessor",
+                    "name" : "rejectcontract"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "REJECT_CONTRACT",
+    "taskId" : "rejectcontract",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "deviceType" : "mobile"
+}

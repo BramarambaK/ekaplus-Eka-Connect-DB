@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_PROCESS_quality_spec_PROCESSOR_QTC",
+    "name" : "_ST_PROCESS_Quality_Spec",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "var defaultDataURL =\r\n    req.body.propertyList.eka_mdm_host + `\/mdm\/product\/quality\/`+req.body.appId +'\/'+req.body.selectedData.quality;\r\n    var defaultdata = {\r\n      method: 'GET',\r\n      url: defaultDataURL,           \r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'Content-Type': 'application\/json',\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_defaultData() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(defaultdata, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n\r\n    get_defaultData().then(result=> {\r\n    var data = []\r\n    for(var i = 0;i<result.length;i++){\r\n      data.push({Name:result[i].attributeName,Value:result[i].attributeUnitType})\r\n    }\r\n      res.status(200).send(data);\r\n    }).catch(err => {\r\n      console.log(err);\r\n    });",
+    "sys__UUID" : "828ba0a0-8eec-4694-8a8c-5e471bb7034b",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "srini@ekaplus.com"
+}

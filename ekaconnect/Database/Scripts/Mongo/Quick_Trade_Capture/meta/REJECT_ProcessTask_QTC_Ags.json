@@ -1,0 +1,13 @@
+{
+    "_id" : "REJECT_ProcessTask_QTC_Ags",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "f035316c-9cf8-484b-8d96-d59fcd4f84a9"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "rejectprocessorags",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "REJECT_ProcessTask_QTC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "5f4f5731-52ac-4e20-8d31-4d5f2b2dd085"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "rejectprocessor",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}
