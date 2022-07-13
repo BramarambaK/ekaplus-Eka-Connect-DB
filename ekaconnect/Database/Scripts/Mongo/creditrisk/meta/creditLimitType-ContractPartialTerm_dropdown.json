@@ -1,0 +1,9 @@
+{
+  "_id": "dropdown_creditLimitType-ContractPartialTerm",
+  "key": "creditLimitType-002",
+  "value": "Contract (Partial Term)",
+  "object": "creditLimitType",
+  "type": "connectmdm",
+  "creditLimitSource": ["creditLimitSource-001"],
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89"
+}

@@ -1,0 +1,159 @@
+{
+  "_id": "creditstoplist_CR_Mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "8ff94f3e-9952-423e-be81-40b88895a2ae"
+  },
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "label": "Credit Stop Eligibility List",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "lazyLoading": false,
+    "refreshData": {
+      "time": 300000
+    }
+  },
+  "rows": "50",
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editcreditstop",
+      "selection": "row",
+      "data": "selected.creditstoplist",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Credit Stop data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Credit Stop data got replaced with some errors"
+            }
+          },
+          "displayType": "inlineEdit",
+          "data": "output.editcreditstop",
+          "appendMsg": true,
+          "name": "_ST_EDIT_CREDITSTOP"
+        },
+        {
+          "name": "creditstoplist",
+          "showPopUp": false
+        }
+      ],
+      "label": " Update",
+      "position": "top",
+      "type": "submit"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "LIFECYCLE",
+      "position": "top",
+      "selection": "row",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.creditstoplist",
+          "popupClass": "limitinfopopup",
+          "name": "lifecyclecreditstop"
+        }
+      ],
+      "label": "Info",
+      "iconClass": "cr-info-icon"
+    }
+  ],
+  "labelKey": "CREDIT_STOP_ELIGIBLITY_LISTING",
+  "fields": [
+    {
+      "key": "eligible"
+    },
+    {
+      "key": "declared"
+    },
+    {
+      "key": "overdue"
+    },
+    {
+      "key": "corporateid"
+    },
+    {
+      "key": "counterpartyGroup"
+    },
+    {
+      "key": "trader"
+    },
+    {
+      "key": "invoiceRefNo"
+    },
+    {
+      "key": "paymentTerm"
+    },
+    {
+      "key": "dueDate",
+      "dateformat": "YYYY-MM-DD"
+    },
+    {
+      "key": "payableCurrency"
+    },
+    {
+      "key": "totalAmount"
+    },
+    {
+      "key": "pendingAmount"
+    },
+    {
+      "key": "invoiceForm"
+    },
+    {
+      "key": "deliveryStopDays"
+    },
+    {
+      "key": "automaticSuspensionDays"
+    },
+    {
+      "key": "deliveryStopDueDate",
+      "dateformat": "YYYY-MM-DD"
+    },
+    {
+      "key": "automaticSuspensionDueDate",
+      "dateformat": "YYYY-MM-DD"
+    },
+    {
+      "key": "eligibleforDeliveryStop"
+    },
+    {
+      "key": "eligibleforAutomaticSuspension"
+    },
+    {
+      "key": "prepaymentStopDueDate",
+      "dateformat": "YYYY-MM-DD"
+    },
+    {
+      "key": "eligibleforPrePaymentStop"
+    }
+  ],
+  "taskId": "creditstoplist",
+  "object": "26a63eb4-79f9-4585-ab6a-6633fd19b8ea",
+  "sys__UUID":"d30fc66b-3cb5-463b-824c-9b4a02138773",
+  "deviceType": "mobile"
+}

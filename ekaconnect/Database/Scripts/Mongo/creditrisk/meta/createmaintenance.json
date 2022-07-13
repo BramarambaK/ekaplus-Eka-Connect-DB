@@ -1,0 +1,259 @@
+{
+    "_id" : "createmaintenance_CR",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "New Limit",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "processorInfo" : {
+            "processorId" : "9b41cdf5-251c-489e-9774-bbff26f947bf"
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "limitlist"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "createmaintenance",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createmaintenance",
+                    "name" : "_ST_PROCESS_LIMIT_SAVE"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Limit Maintenance got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Limit Maintenance got created with some errors"
+                        }
+                    },
+                    "data" : "output._ST_PROCESS_LIMIT_SAVE",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_LIMIT",
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output._ST_CREATE_LIMIT",
+                            "value" : "_id"
+                        }
+                    ]
+                }, 
+                {
+                    "data" : "output._ST_CREATE_LIMIT",
+                    "appendMsg" : true,
+                    "name" : "ElasticSearchDataMassageLimitMaintenance"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_LIMIT",
+                    "appendMsg" : true,
+                    "name" : "Elastic_Update_LimitMaintenance"
+                }, 
+                {
+                    "data" : "output.createmaintenance",
+                    "name" : "limitlist",
+                    "showPopUp" : false,
+                    "showToaster" : false
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "limitlist"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "CREATE_NEW_LIMIT",
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "counterpartyGroupName",
+                "virtualScroll" : true
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "type" : "textbox",
+                "suffix" : "",
+                "key" : "currency"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "creditLimitSource"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "153px"
+                },
+                "key" : "creditLimitType"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "amount"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "fromPeriod"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "toPeriod"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "153px"
+                },
+                "key" : "limitStatus"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "referenceNo"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "coverPercentage"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "146.5px",
+                    "margin-right" : "10px"
+                },
+                "key" : "maxPaymentTerm"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "width" : "153px"
+                },
+                "key" : "remarks"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "counterpartyGroupNameDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "creditLimitSourceDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "creditLimitTypeDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "limitStatusDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "currencyDisplayName"
+            },
+			 {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "limitRefNo"
+            }
+        ]
+    ],
+    "taskId" : "createmaintenance",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"7905f706-112e-46f3-aa7f-839d77b8494e"
+}

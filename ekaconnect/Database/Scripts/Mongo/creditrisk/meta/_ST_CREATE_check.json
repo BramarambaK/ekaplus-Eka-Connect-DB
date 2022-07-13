@@ -1,0 +1,11 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "_id": "_ST_CREATE_check_CR",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_check",
+  "object": "23061404-dc0e-4773-a073-0ba41f1d6f62",
+  "sys__UUID":"e7ab8763-f47c-4fee-9ad7-bd1b04093e31"
+}

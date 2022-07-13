@@ -1,0 +1,25 @@
+{
+    "_id" : "CRAWLER_LIMITMAINTENANCE_LIST",
+    "componentType" : "ChainedSystemTask",
+    "version" : "V2",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"15742c8f-f20e-4b95-867a-fb464d3b05e2",
+    "objectAction" : "CREATE",
+    "taskId" : "CRAWLER_LIMITMAINTENANCE_LIST",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [ 
+                {
+                    "name" : "LIMITMAINTENANCE_MULTI_API_TASK",
+                    "data" : "output.CRAWLER_LIMITMAINTENANCE_LIST",
+                    "appendMsg" : false
+                }, 
+                {
+                    "name" : "Elastic_Bulk_Upload_Limitmaintenance",
+                    "appendMsg" : false,
+                    "data" : "output.LIMITMAINTENANCE_MULTI_API_TASK"
+                }
+           ]
+}

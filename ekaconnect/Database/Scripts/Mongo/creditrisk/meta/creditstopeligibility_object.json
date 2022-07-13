@@ -1,0 +1,199 @@
+{ 
+ "_id" : "object_creditstop",
+    "name" : "creditstop",
+    "label" : "Credit Stop Eligibility",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "uniqueFields" : [ 
+        "counterpartyGroup", 
+        "invoiceRefNo"
+    ],
+    "translatableKeys" : [ 
+        "eligible", 
+        "declared", 
+        "overdue", 
+        "corporateid", 
+        "counterpartyGroup", 
+        "trader", 
+        "invoiceRefNo", 
+        "paymentTerm", 
+        "dueDate", 
+        "payableCurrency", 
+        "totalAmount", 
+        "pendingAmount"
+    ],
+    "fields" : {
+        "eligible" : {
+            "eligible" : "Eligible",
+            "labelKey" : "eligible",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "declared" : {
+            "declared" : "Declared",
+            "labelKey" : "declared",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "overdue" : {
+            "overdue" : "Overdue",
+            "labelKey" : "overdue",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "corporateid" : {
+            "corporateid" : "Corporate ID",
+            "labelKey" : "corporateid",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "counterpartyGroup" : {
+            "counterpartyGroup" : "Counterparty",
+            "labelKey" : "counterpartyGroup",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "trader" : {
+            "trader" : "Trader",
+            "labelKey" : "trader",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "invoiceRefNo" : {
+            "invoiceRefNo" : "Invoice Ref No.",
+            "labelKey" : "invoiceRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "paymentTerm" : {
+            "paymentTerm" : "Payment Term",
+            "labelKey" : "paymentTerm",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "dueDate" : {
+            "dueDate" : "Due Date",
+            "labelKey" : "dueDate",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "payableCurrency" : {
+            "payableCurrency" : "Payable Currency",
+            "labelKey" : "payableCurrency",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "totalAmount" : {
+            "totalAmount" : "Total Amount",
+            "labelKey" : "totalAmount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "number"
+        },
+        "pendingAmount" : {
+            "pendingAmount" : "Pending Amount",
+            "labelKey" : "pendingAmount",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "number"
+        },
+		"invoiceForm" : {
+            "invoiceForm" : "Invoice  From",
+            "labelKey" : "invoiceForm",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+		"deliveryStopDays" : {
+            "deliveryStopDays" : "Delivery Stop Days",
+            "labelKey" : "deliveryStopDays",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "number"
+        },
+		"automaticSuspensionDays" : {
+            "automaticSuspensionDays" : "Automatic Suspension Days",
+            "labelKey" : "automaticSuspensionDays",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "number"
+        },
+		"deliveryStopDueDate" : {
+            "deliveryStopDueDate" : "Delivery Stop Due Date",
+            "labelKey" : "deliveryStopDueDate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "datepicker"
+        },
+		"automaticSuspensionDueDate" : {
+            "automaticSuspensionDueDate" : "Automatic Suspension Due Date",
+            "labelKey" : "automaticSuspensionDueDate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "datepicker"
+        },
+		"eligibleforDeliveryStop" : {
+            "eligibleforDeliveryStop" : "Eligible for Delivery Stop",
+            "labelKey" : "eligibleforDeliveryStop",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+		"eligibleforAutomaticSuspension" : {
+            "eligibleforAutomaticSuspension" : "Eligible for Automatic Suspension",
+            "labelKey" : "eligibleforAutomaticSuspension",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+		"prepaymentStopDueDate" : {
+            "prepaymentStopDueDate" : "Prepayment Stop Due Date",
+            "labelKey" : "prepaymentStopDueDate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "datepicker"
+        },
+		"eligibleforPrePaymentStop" : {
+            "eligibleforPrePaymentStop" : "Eligible for Pre Payment Stop",
+            "labelKey" : "eligibleforPrePaymentStop",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "26a63eb4-79f9-4585-ab6a-6633fd19b8ea"
+}

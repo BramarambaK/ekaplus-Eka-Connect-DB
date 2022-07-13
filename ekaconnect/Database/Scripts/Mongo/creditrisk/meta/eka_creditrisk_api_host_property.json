@@ -1,0 +1,9 @@
+{
+    "_id" : "eka_creditrisk_api_host",
+    "type" : "property",
+    "name" : "eka_creditrisk_api_host",
+    "propertyLevel" : "tenant,app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : 120
+}

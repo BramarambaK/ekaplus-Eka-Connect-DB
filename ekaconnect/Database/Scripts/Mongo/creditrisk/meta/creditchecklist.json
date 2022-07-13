@@ -1,0 +1,158 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "label": "Credit Check Request List",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true,
+	  "customization":true
+    },
+    "theme": "theme-grid-white",
+    "refreshData": {"time": 300000}
+  },
+  "decisions": [],
+  "_id": "creditchecklist_CR",
+  "labelKey": "COUNTERPARTY_MAINTAINANCE_LISTING",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "requestID"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "entityRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "operationType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "eventName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "counterParty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "counterPartyGroup"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "limitRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contractType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "paymenTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractRefNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractItemRefNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "value"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "fromPeriod"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "toPeriod"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "invoiceCounterParty"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "GMRRefNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "responseStatus"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "responseBlockType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "responseMessage"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "requestBy"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "requestedOn"
+    }
+  ],
+  "taskId": "creditchecklist",
+  "object": "23061404-dc0e-4773-a073-0ba41f1d6f62",
+  "sys__UUID":"64c6231c-edaf-41f0-a864-0e7570f8bf4d"
+}

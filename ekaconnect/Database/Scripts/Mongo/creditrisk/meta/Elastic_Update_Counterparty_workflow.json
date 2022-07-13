@@ -1,0 +1,11 @@
+{
+    "_id" : "Elastic_Update_Counterparty",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+	"sys__UUID":"c0cf352b-20b8-4eda-b427-96c917358926",
+    "type" : "workflow",
+    "taskId" : "Elastic_Update_Counterparty",
+    "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

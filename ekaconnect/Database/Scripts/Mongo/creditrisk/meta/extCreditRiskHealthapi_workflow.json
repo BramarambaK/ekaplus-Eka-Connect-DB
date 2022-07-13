@@ -1,0 +1,32 @@
+{
+    "_id" : "EXT_CREDIT_RISK_HEALTH_API",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "tags" : "healthCheck",
+    "objectAction" : "READ",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "externalApi",
+    "config" : {
+        "path" : "/creditrisk/healthcheck",
+        "headers" : {
+            "Content-Type" : "application/json",
+            "Accept" : "application/json"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "useInputMapping" : false,
+        "host" : "${properties.eka_creditrisk_api_host}",
+        "body" : {},
+        "object" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586",
+        "responseDataKey" : "data"
+    }
+},
+    "decisions" : [],
+    "taskId" : "EXT_CREDIT_RISK_HEALTH_API",
+    "object" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586",
+    "sys__UUID" : "fdb86798-efa1-4bed-8522-cd91aa5c7c2a"
+}

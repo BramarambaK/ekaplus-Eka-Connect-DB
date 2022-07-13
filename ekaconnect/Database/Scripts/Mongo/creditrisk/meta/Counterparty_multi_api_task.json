@@ -1,0 +1,22 @@
+{
+    "_id" : "COUNTERPARTY_MULTI_API_TASK",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "taskId" : "COUNTERPARTY_MULTI_API_TASK",
+    "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+	"sys__UUID":"d96ee037-3ebe-4fde-8b47-cd4313096711",
+    "type" : "workflow",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "COUNTERPARTY_LISTING_EXTERNAL_DATA"
+            }, 
+            {
+                "id" : "COUNTERPARTY_LISTING_CONNECT_DATA"
+            }
+        ],
+        "query" : "select a.PRIMARY_ID as \"PRIMARY_ID\",a.PROFILEID as \"cpid\",a.Counter_Party_Group as \"counterpartyGroup\",a.cp_name as \"counterpartyName\", case when  (REGEXP_LIKE (a.ROLE, 'Buyer','i') and  REGEXP_LIKE (a.ROLE, 'Seller','i')) then 'Both' else (case when REGEXP_LIKE (a.ROLE, 'Buyer','i') then 'Buyer' when REGEXP_LIKE (a.ROLE, 'Seller','i') then 'Seller' else a.ROLE end) end as \"buyerSeller\",case when a.IS_ACTIVE='Y' then 'Active' else 'Inactive' end as \"crmStatus\",a.Default_Pay_In_Currency as \"currency\",b.reference as \"reference\",b.annexNumber as \"annexNumber\",b._id as \"mongoId\",b.object  as  \"object\",b.creditRiskStatusDisplayName as \"creditRiskStatusDisplayName\",b.debtorNumber as \"debtorNumber\",b.dateDecision as \"dateDecision\",b.decisionremarks  as \"decisionRemarks\",b.creditCollectionStatus  as \"creditCollectionStatus\",b.creditCollectionStatusDisplayName  as \"creditCollectionStatusDisplayName\" ,case when (COUNTER_PARTY_GROUP is null or COUNTER_PARTY_GROUP ='NA' or trim(COUNTER_PARTY_GROUP)='' )then 'Counterparty' else 'Counterparty Group' end as \"creditLimitLevel\" ,case when b.creditRiskStatus is  null then 'creditRiskStatus-001' else b.creditRiskStatus end as \"creditRiskStatus\", case when b.creditRiskStatusDisplayName is  null then 'Active' else b.creditRiskStatusDisplayName end as \"creditRiskStatusDisplayName\"   ,b.sys__UUID as \"sys__UUID\",b.sys__createdon as \"sys__createdOn\", b.sys__updatedon  as \"sys__updatedOn\" ,b._id as \"mongoId\",b.object as \"object\" ,b.refTypeId as \"refTypeId\", b.refType as \"refType\", b.sys__data__State as \"sys__data__state\" from COUNTERPARTY_LISTING_EXTERNAL_DATA a left outer join COUNTERPARTY_LISTING_CONNECT_DATA b on (a.PROFILEID=b.cpid) where (REGEXP_LIKE (a.ROLE, 'Seller','i') or REGEXP_LIKE (a.ROLE, 'Buyer','i'))"
+    }
+}

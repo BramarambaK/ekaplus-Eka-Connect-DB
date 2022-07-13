@@ -1,0 +1,81 @@
+{
+    "_id" : "creditriskhealthchecklist",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "Health Check",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true,
+            "customization" : true,
+            "sessionStateDisable" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "decisions" : [],
+    "labelKey" : "Credit Risk Health Check List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "targetType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "target"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "status"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "statusMessage"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "runId"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "runDateAndTime"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sys__createdOn",
+            "dateformat" : "MM/DD/YYYY HH:mm:ss"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sys__createdBy"
+        }
+    ],
+    "taskId" : "creditriskhealthchecklist",
+    "object" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586",
+    "sys__UUID" : "61c536a7-0520-4b54-ab6e-c6cba80656c3"
+}

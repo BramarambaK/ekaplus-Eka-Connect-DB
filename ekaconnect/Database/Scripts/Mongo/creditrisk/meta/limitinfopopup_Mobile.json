@@ -1,0 +1,97 @@
+{
+  "_id": "limitinfopopup_CR_Mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "e8787ab7-4a53-424b-a9e1-17c84b7facb2"
+  },
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "label": "Edit Limit Info",
+  "type": "workflow",
+  "layout": {
+    "name": "lifecycle",
+    "options": {
+      "hideRowHeader": true,
+      "columnWidth": "30px",
+      "popupWidth": "490px"
+    }
+  },
+  "decisions": [],
+  "labelKey": "LIMITINFO_EDIT",
+  "fields": [
+    {
+      "placement": "topHeading",
+      "key": "Limit Status Log"
+    },
+    {
+      "placement": "topHeading",
+      "key": "counterpartyGroupNameDisplayName"
+    },
+    {
+      "placement": "header",
+      "key": "counterpartyGroupNameDisplayName"
+    },
+    {
+      "placement": "header",
+      "key": "creditLimitSourceDisplayName"
+    },
+    {
+      "placement": "header",
+      "key": "creditLimitTypeDisplayName"
+    },
+    {
+      "placement": "header",
+      "labelKey": "period",
+      "key": "Period"
+    },
+    {
+      "placement": "header",
+      "key": "amount"
+    },
+    {
+      "placement": "header",
+      "labelKey": "contactName",
+      "key": "contactName"
+    },
+    {
+      "placement": "row1",
+      "key": "sys__createdOnDate",
+      "dateformat": "MM/DD/YYYY"
+    },
+    {
+      "placement": "row1",
+      "key": "sys__createdOnTime",
+      "dateformat": "HH:mm:ss"
+    },
+    {
+      "highlight": {
+        "default": "bg-transparent",
+        "Active": "text-success",
+        "Inactive": "text-danger"
+      },
+      "placement": "row2",
+      "key": "limitStatusDisplayName"
+    },
+    {
+      "placement": "row3",
+      "key": "referenceNo"
+    },
+    {
+      "placement": "row3",
+      "key": "coverPercentage"
+    },
+    {
+      "placement": "row3",
+      "key": "maxPaymentTerm"
+    },
+    {
+      "placement": "row3",
+      "key": "sys__createdBy"
+    }
+  ],
+  "taskId": "limitinfopopup",
+  "object": "26e782e8-89e5-40ea-a3be-63b320260b7d",
+  "sys__UUID":"3286b1d3-450c-43ed-9567-118304091766",
+  "deviceType": "mobile"
+}

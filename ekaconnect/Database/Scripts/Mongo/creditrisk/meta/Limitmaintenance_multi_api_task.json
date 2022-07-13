@@ -1,0 +1,19 @@
+{
+    "_id" : "LIMITMAINTENANCE_MULTI_API_TASK",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "taskId" : "LIMITMAINTENANCE_MULTI_API_TASK",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"a51daab3-9165-4008-b199-361a7d3dffb1",
+    "type" : "workflow",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "LIMITMAINTENANCE_LISTING_CONNECT_DATA"
+            }
+        ],
+        "query" : "select a.PRIMARY_ID as \"PRIMARY_ID\",a.limitrefno as \"limitRefNo\",a.currency as \"currency\",a.currencyDisplayName as \"currencyDisplayName\",a.counterpartyGroupNameDisplayName as \"counterpartyName\", a.counterpartyGroupName as \"counterpartyGroupName\" ,a.limitStatus as \"limitStatus\",a.limitStatusDisplayName as \"limitStatusDisplayName\",a.counterpartyGroupNameDisplayName as \"counterpartyGroupNameDisplayName\",a.creditLimitSource as \"creditLimitSource\", a.creditLimitSourceDisplayName as \"creditLimitSourceDisplayName\", a.creditLimitType as \"creditLimitType\" ,a.creditLimitTypeDisplayName as \"creditLimitTypeDisplayName\",a.amount as \"amount\",a.coverPercentage as \"coverPercentage\",a.maxPaymentTerm as \"maxPaymentTerm\", a.remarks as \"remarks\",a.referenceNo as \"referenceNo\", a.fromPeriod as \"fromPeriod\", a.toPeriod  as \"toPeriod\",a.sys__UUID as \"sys__UUID\",a.sys__createdon as \"sys__createdOn\", a.sys__updatedon  as \"sys__updatedOn\" ,a._id as \"mongoId\",a.object as \"object\" ,a.refTypeId as \"refTypeId\", a.refType as \"refType\", a.sys__data__State as \"sys__data__state\"  from LIMITMAINTENANCE_LISTING_CONNECT_DATA a"
+    }
+}

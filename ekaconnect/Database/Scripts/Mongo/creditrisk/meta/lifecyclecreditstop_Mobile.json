@@ -1,0 +1,95 @@
+{
+    "_id" : "lifecyclecreditstop_CR_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "67f94dd5-972e-4e07-9af5-911a1060b40a"
+    },
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "Credit Stop Eligiblity Lifecycle",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "lifecycle",
+        "options" : {
+            "hideRowHeader" : true,
+            "message" : "No versioning history available"
+        }
+    },
+    "decisions" : [],
+    "labelKey" : "Credit_Stop_Eligiblity_Lifecycle",
+    "fields" : [ 
+        {
+            "placement" : "topHeading",
+            "key" : "Counterparty Status Log"
+        }, 
+        {
+            "placement" : "topHeading",
+            "key" : "counterpartyGroup"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "corporateid"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "counterpartyGroup"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "trader"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "invoiceRefNo"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "paymentTerm"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "dueDate"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "payableCurrency"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "totalAmount"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "pendingAmount"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "sys__createdOnDate"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "sys__createdOnTime"
+        }, 
+        {
+            "placement" : "row2",
+            "key" : "sys__createdBy"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "eligible"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "declared"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "overdue"
+        }
+    ],
+    "taskId" : "lifecyclecreditstop",
+    "object" : "26a63eb4-79f9-4585-ab6a-6633fd19b8ea",
+	"sys__UUID":"469bb822-ad26-4e7d-bf6e-bdcfd47a0f0c",
+    "deviceType" : "mobile"
+}

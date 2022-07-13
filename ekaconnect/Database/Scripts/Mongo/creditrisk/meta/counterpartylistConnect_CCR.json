@@ -1,0 +1,181 @@
+{
+    "_id" : "counterpartylistConnect_CCR",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "Counterparty List",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "READ",
+            "labelkey" : "EDIT_LIFECYCLE",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.counterpartylist",
+                    "popupClass" : "limitinfopopup",
+                    "name" : "counterpartyinfopopup"
+                }
+            ],
+            "label" : "Versioning",
+            "iconClass" : "cr-info-icon marginleft"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editcounterparty",
+            "selection" : "row",
+            "position" : "top",
+            "data" : "selected.counterpartylist",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Counterparty data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Counterparty data got replaced with some errors"
+                        }
+                    },
+                    "displayType" : "inlineEdit",
+                    "data" : "output.editcounterparty",
+                    "appendMsg" : true,
+                    "name" : "_ST_EDIT_COUNTERPARTY"
+                }, 
+                {
+                    "name" : "counterpartylist",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : " Update",
+            "iconClass" : "cr-edit-icon"
+        }
+    ],
+    "labelKey" : "COUNTERPARTY_MAINTAINANCE_LISTING",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "counterpartyName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "counterpartyGroup"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "creditLimitLevel"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "buyerSeller"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "crmStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "currency"
+        }, 
+        {
+            "filter" : true,
+            "highlight" : {
+                "default" : "bg-transparent",
+                "creditRiskStatus-003" : "red-txtcol",
+                "creditRiskStatus-004" : "red-txtcol",
+                "creditRiskStatus-001" : "green-txtcol",
+                "creditRiskStatus-002" : "red-txtcol",
+                "creditRiskStatus-005" : "orange-txtcol",
+                "creditRiskStatus-006" : "orange-txtcol"
+            },
+            "edit" : true,
+            "sort" : true,
+            "key" : "creditRiskStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "statusDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "reference"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "debtorNumber"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "annexNumber"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "dateDecision",
+            "dateformat" : "YYYY-MM-DD"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "decisionRemarks"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "creditCollectionStatus"
+        }
+    ],
+    "taskId" : "counterpartylistConnect",
+    "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+	"sys__UUID":"ef703f35-550c-4f21-9a59-3a5d1568a933"
+}

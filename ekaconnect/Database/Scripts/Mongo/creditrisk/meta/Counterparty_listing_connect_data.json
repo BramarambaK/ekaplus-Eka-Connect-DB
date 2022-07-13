@@ -1,0 +1,107 @@
+{
+    "_id" : "COUNTERPARTY_LISTING_CONNECT_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "taskId" : "COUNTERPARTY_LISTING_CONNECT_DATA",
+    "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+	"sys__UUID":"e1fded70-c53c-47b0-8695-e534e266b248",
+    "columns" : [ 
+        {
+            "name" : "cpid",
+            "type" : "VARCHAR",
+            "primary" : "y"
+        }, 
+        {
+            "name" : "creditCollectionStatusDisplayName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "creditRiskStatusDisplayName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "annexNumber",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "creditRiskStatus",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "dateDecision",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "reference",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "counterpartyName",
+            "type" : "VARCHAR",
+            "primary" : "y"
+        }, 
+        {
+            "name" : "debtorNumber",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "decisionRemarks",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "creditCollectionStatus",
+            "type" : "VARCHAR"
+        }, 
+          {
+            "name" : "object",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "_id",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__UUID",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__createdOn",
+            "type" : "BIGINT"
+        }, 
+        {
+            "name" : "sys__updatedOn",
+            "type" : "BIGINT"
+        }, 
+        {
+            "name" : "refTypeId",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "refType",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__createdBy",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__version",
+            "type" : "NUMBER"
+        }, 
+        {
+            "name" : "userId",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__data__state",
+            "type" : "VARCHAR"
+        },
+		{
+            "name" : "statusDate",
+            "type" : "VARCHAR"
+        }
+    ]
+}

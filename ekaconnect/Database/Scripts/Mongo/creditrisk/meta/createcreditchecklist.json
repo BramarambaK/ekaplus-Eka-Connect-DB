@@ -1,0 +1,239 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "label": "New",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {"display": true},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "creditchecklist"}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "createcreditchecklist",
+      "outcomes": [
+        {
+          "result": {
+            "success": {"message": "createcreditchecklist got created successfully"},
+            "failure": {"message": "Please fix errors in ext"},
+            "successWithWarning": {"message": "createcreditchecklist got created with some errors"}
+          },
+          "data": "output.createcreditchecklist",
+          "appendMsg": true,
+          "name": "_ST_CREATE_check",
+          "appendPlaceHolderToPopUpMsg": [{
+            "outputTask": "output._ST_CREATE_check",
+            "value": "_id"
+          }]
+        },
+        {
+          "data": "output.createcreditchecklist",
+          "name": "creditchecklist",
+          "showPopUp": false,
+          "showToaster": false
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "creditchecklist"}],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "_id": "createcreditchecklist_CR",
+  "labelKey": "CREATE",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "requestID"
+      },
+      {
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "type": "textbox",
+        "suffix": "",
+        "key": "entityRefNo"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "operationType"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "153px"},
+        "key": "eventName"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "counterParty"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "counterPartyGroup"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "limitRefNo"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "153px"},
+        "key": "contractType"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "paymenTerm"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "contractRefNo"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "contractItemRefNo"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "153px"},
+        "key": "value"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "fromPeriod"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "toPeriod"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "invoiceCounterParty"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "153px"},
+        "key": "GMRRefNo"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "responseStatus"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "responseBlockType"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "responseMessage"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "153px"},
+        "key": "requestBy"
+      },
+      {
+        "suffix": "",
+        "style": {"width": "153px"},
+        "key": "requestedOn"
+      }
+    ]
+  ],
+  "taskId": "createcreditchecklist",
+  "object": "23061404-dc0e-4773-a073-0ba41f1d6f62",
+  "sys__UUID":"3cb6e6e2-fdeb-4ed1-aa59-381e82260dbb"
+}

@@ -1,0 +1,8 @@
+{
+  "_id": "dropdown_creditCollectionStatus-Sanctioned",
+  "key": "creditCollectionStatus-003",
+  "value": "Sanctioned",
+  "object": "creditCollectionStatus",
+  "type": "connectmdm",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89"
+}

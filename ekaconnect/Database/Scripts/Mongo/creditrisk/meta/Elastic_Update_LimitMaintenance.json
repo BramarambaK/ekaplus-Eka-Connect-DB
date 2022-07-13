@@ -1,0 +1,11 @@
+{
+    "_id" : "Elastic_Update_LimitMaintenance",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "taskId" : "Elastic_Update_LimitMaintenance",
+   "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+   "sys__UUID":"aa695834-cd9d-4c62-9850-71f3e6fd2120",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

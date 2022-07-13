@@ -1,0 +1,135 @@
+{
+    "_id" : "LIMITMAINTENANCE_LISTING_CONNECT_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "taskId" : "LIMITMAINTENANCE_LISTING_CONNECT_DATA",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"04445337-33af-47e7-b840-1afd75321114",
+    "columns" : [ 
+        {
+            "name" : "limitRefNo",
+            "type" : "VARCHAR",
+            "primary" : "y"
+        }, 
+        {
+            "name" : "limitStatusDisplayName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "coverPercentage",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "creditLimitSourceDisplayName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "remarks",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "counterpartyGroupNameDisplayName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "maxPaymentTerm",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "toPeriod",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "fromPeriod",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "creditLimitType",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "counterpartyGroupName",
+            "type" : "VARCHAR",
+            "primary" : "y"
+        }, 
+        {
+            "name" : "creditLimitTypeDisplayName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "referenceNo",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "currencyDisplayName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "counterpartyName",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "creditLimitSource",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "amount",
+            "type" : "NUMBER"
+        }, 
+        {
+            "name" : "currency",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "limitStatus",
+            "type" : "VARCHAR"
+        }, 
+         {
+            "name" : "object",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "_id",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__UUID",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__createdOn",
+            "type" : "BIGINT"
+        }, 
+        {
+            "name" : "sys__updatedOn",
+            "type" : "BIGINT"
+        }, 
+        {
+            "name" : "refTypeId",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "refType",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__createdBy",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__version",
+            "type" : "NUMBER"
+        }, 
+        {
+            "name" : "userId",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sys__data__state",
+            "type" : "VARCHAR"
+        }
+    ]
+}

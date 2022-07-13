@@ -1,0 +1,74 @@
+{
+    "_id" : "app_creditrisk",
+    "title" : "Counterparty Online Credit Risk",
+    "name" : "creditrisk",
+    "platform_id" : "40",
+    "tenantID" : "",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "label" : "Credit Risk Maintenance",
+                        "iconCls" : "insights-icon",
+                        "menuItems" : [ 
+                            {
+                                "text" : "",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/creditrisk/creditstoplist/list",
+                                        "text" : "Credit Stop Eligibility List",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/creditrisk/counterpartylist/list",
+                                        "text" : "Counterparty Maintenance",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/creditrisk/limitlist/list",
+                                        "text" : "Limit Maintenance",
+                                        "iconCls" : ""
+                                    }, 
+                                    {
+                                        "handler" : "/app/creditrisk/creditchecklist/list",
+                                        "text" : "Credit Check Request List",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "5539617b-5075-4482-8bcc-26f76849eb89"
+}

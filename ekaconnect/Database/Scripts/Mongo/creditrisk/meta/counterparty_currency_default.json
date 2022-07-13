@@ -1,0 +1,12 @@
+{
+  "_id": "counterparty_currency_default",
+  "type": "property",
+  "name": "currency_value",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "USD",
+  "label": "Counterparty Currency Default Value",
+  "editSupportedInUI": true
+}

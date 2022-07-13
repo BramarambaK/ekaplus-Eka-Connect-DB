@@ -1,0 +1,11 @@
+{
+    "_id" : "Elastic_Bulk_Upload_Limitmaintenance",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "taskId" : "Elastic_Bulk_Upload_Limitmaintenance",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"6ad23dcd-6417-4478-a788-18600a359475",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

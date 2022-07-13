@@ -1,0 +1,9 @@
+{
+  "_id": "dropdown_creditLimitType-PrepaymentCreditLimit",
+  "key": "creditLimitType-006",
+  "value": "Prepayment Credit Limit",
+  "object": "creditLimitType",
+  "type": "connectmdm",
+  "creditLimitSource": ["creditLimitSource-001"],
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89"
+}

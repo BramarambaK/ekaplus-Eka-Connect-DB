@@ -1,0 +1,23 @@
+{
+	"_id":"creditstop_policy_creditrisk",
+    "type" : "policy",
+    "app_UUID" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "refType" : "object",
+    "refTypeId" : "26a63eb4-79f9-4585-ab6a-6633fd19b8ea",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

@@ -1,0 +1,207 @@
+{
+  "_id": "object_counterparty",
+  "name": "counterparty",
+  "label": "Counterparty Maintenance",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [
+    "cpid",
+    "counterpartyGroup",
+    "counterpartyName",
+    "creditLimitLevel",
+    "buyerSeller",
+    "crmStatus",
+    "currency",
+    "contactName",
+    "creditRiskStatus",
+    "statusDate",
+    "reference",
+    "debtorNumber",
+    "annexNumber",
+    "dateDecision",
+    "decisionRemarks",
+    "creditRiskStatus",
+    "creditRiskStatusDisplayName",
+    "creditCollectionStatus",
+    "contactemail",
+    "contactphone"
+  ],
+  "uniqueFields": ["cpid", "counterpartyName"],
+  "fields": {
+    "cpid": {
+      "cpid": "CPID",
+      "labelKey": "cpid",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contactemail": {
+      "contactemail": "Email ID of Contact Person",
+      "labelKey": "contactemail",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contactphone": {
+      "contactphone": "Phone No. of Contact Person",
+      "labelKey": "contactphone",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyGroup": {
+      "counterpartyGroup": "Counterparty Group",
+      "labelKey": "counterpartyGroup",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyName": {
+      "counterpartyName": "Counterparty Name",
+      "labelKey": "counterpartyName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "creditLimitLevel": {
+      "creditLimitLevel": "Credit Limit Level",
+      "labelKey": "creditLimitLevel",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "buyerSeller": {
+      "buyerSeller": "Buyer/Seller",
+      "labelKey": "buyerSeller",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "crmStatus": {
+      "crmStatus": "CRM Status",
+      "labelKey": "crmStatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "currency": {
+      "currency": "Currency",
+      "labelKey": "currency",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contactName": {
+      "contactName": "Name of Contact",
+      "labelKey": "contactName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "creditRiskStatus": {
+      "creditRiskStatus": "Credit Risk Status",
+      "labelKey": "creditRiskStatus",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "serviceKey": "creditRiskStatus",
+      "dropdownValue": "creditRiskStatusDisplayName"
+    },
+    "creditRiskStatusDisplayName": {
+      "creditRiskStatusDisplayName": "Credit Risk Status",
+      "labelKey": "creditRiskStatusDisplayName",
+      "type" : "dropdown",
+      "isRequired" : false,
+      "serviceKey" : "creditRiskStatus",
+      "dataType": "String"
+    },
+    "statusDate": {
+      "statusDate": "Status Date",
+      "labelKey": "statusDate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "reference": {
+      "reference": "Reference",
+      "labelKey": "reference",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "length": "1000"
+    },
+    "debtorNumber": {
+      "debtorNumber": "Debtor No.",
+      "labelKey": "debtorNumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "length": "1000"
+    },
+    "annexNumber": {
+      "annexNumber": "Annex No.",
+      "labelKey": "annexNumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "length": "1000"
+    },
+    "dateDecision": {
+      "dateDecision": "Decision Date",
+      "labelKey": "dateDecision",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "decisionRemarks": {
+      "decisionRemarks": "Decision Remark",
+      "labelKey": "decisionRemarks",
+      "type": "textarea",
+      "isRequired": false,
+      "dataType": "String",
+      "length": "1000"
+    },
+    "creditCollectionStatus": {
+      "creditCollectionStatus": "Credit Collection Status",
+      "labelKey": "creditCollectionStatus",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "creditCollectionStatus",
+      "dropdownValue": "creditCollectionStatusDisplayName"
+    },
+    "creditCollectionStatusDisplayName": {
+      "creditCollectionStatusDisplayName": "credit Collection Status",
+      "labelKey": "creditCollectionStatusDisplayName",
+      "type" : "hidden",
+      "isRequired" : false,
+      "dataType" : "String"
+    
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdOn": ISODate("2019-02-07T19:21:17.926Z"),
+  "sys__createdBy": "admin",
+  "sys__UUID": "01abf4cd-c682-4988-9b8c-c84014a230e7"
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "dropdown_creditLimitType-TopupCreditLimit",
+  "key": "creditLimitType-008",
+  "value": "Top Up Credit Limit",
+  "object": "creditLimitType",
+  "type": "connectmdm",
+  "creditLimitSource": ["creditLimitSource-002"],
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89"
+}

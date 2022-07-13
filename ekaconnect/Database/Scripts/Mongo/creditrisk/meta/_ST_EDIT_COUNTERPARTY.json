@@ -1,0 +1,11 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "_id": "_ST_EDIT_COUNTERPARTY_CR",
+  "type": "workflow",
+  "taskId": "_ST_EDIT_COUNTERPARTY",
+  "object": "01abf4cd-c682-4988-9b8c-c84014a230e7",
+  "sys__UUID":"55baab99-ec94-4ce8-a925-0fb9f5564d45"
+}

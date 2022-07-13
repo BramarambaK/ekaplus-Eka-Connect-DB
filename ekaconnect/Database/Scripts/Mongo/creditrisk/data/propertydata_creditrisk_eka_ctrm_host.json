@@ -1,0 +1,10 @@
+{
+    "_id" :"propertydata_creditrisk_eka_ctrm_host",
+    "propertyValue" : "http://192.168.1.162:8101",
+    "propertyLevel" : "app",
+	"refTypeId":"5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "property",
+    "propertyName" : "eka_ctrm_host",
+    "sys__createdOn" : ISODate("2019-06-21T09:48:11.518Z"),
+    "sys__createdBy" : "admin@ekaplus.com"
+}

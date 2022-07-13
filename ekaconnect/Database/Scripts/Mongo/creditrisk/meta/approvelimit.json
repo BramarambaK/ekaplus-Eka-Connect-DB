@@ -1,0 +1,71 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "label": "Approve Limit : ${counterpartyGroupNameDisplayName}",
+  "type": "workflow",
+  "apiInfo": {"responseDataKey": ""},
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {"display": true},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "description": "You\u2019re approving the limit request for counterparty ${referenceNo}",
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "limitlist"}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "APPROVE",
+      "labelkey": "REVIEW",
+      "outcomes": [{"name": "limitlist"}],
+      "label": "APPROVE",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "limitlist"}],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "_id": "approvelimit_CR",
+  "labelKey": "APPROVE_LIMIT",
+  "fields": [
+    [{
+      "style": {"width": "350px"},
+      "formItemStyle": {"margin-right": "15px"},
+      "suffix": "",
+      "key": "amount"
+    }],
+    [{
+      "style": {"width": "350px"},
+      "formItemStyle": {"margin-right": "15px"},
+      "suffix": "",
+      "key": "remarks"
+    }]
+  ],
+  "taskId": "approvelimit",
+  "object": "26e782e8-89e5-40ea-a3be-63b320260b7d",
+  "sys__UUID":"7edddb1d-6da7-4be5-9ba1-ae088cd8d72b"
+}

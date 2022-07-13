@@ -1,0 +1,23 @@
+{
+	"_id":"counterparty_policy_creditrisk",
+    "type" : "policy",
+    "app_UUID" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "refType" : "object",
+    "refTypeId" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

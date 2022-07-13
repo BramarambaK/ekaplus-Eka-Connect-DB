@@ -1,0 +1,11 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "_id": "_ST_EDIT_CREDITSTOP_CR",
+  "type": "workflow",
+  "taskId": "_ST_EDIT_CREDITSTOP",
+  "object": "26a63eb4-79f9-4585-ab6a-6633fd19b8ea",
+  "sys__UUID":"543278e9-7cf2-4ecc-828f-8a464003716d"
+}

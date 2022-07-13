@@ -1,0 +1,102 @@
+{
+    "_id" : "counterpartyinfopopup_CR_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "e6ede9fb-a7a4-4ec5-818c-378d941294df"
+    },
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "Counterparty Status Log",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "lifecycle",
+        "options" : {
+            "hideRowHeader" : true,
+            "message" : "No versioning history available"
+        }
+    },
+    "decisions" : [],
+    "labelKey" : "COUNTERPARTY_STATUS_LOG",
+    "fields" : [ 
+        {
+            "placement" : "topHeading",
+            "key" : "Counterparty Status Log"
+        }, 
+        {
+            "placement" : "topHeading",
+            "key" : "counterpartyName"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "counterpartyName"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "counterpartyGroup"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "crmStatus"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "contactName"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "contactemail"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "contactphone"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "statusDate",
+            "dateformat" : "MM/DD/YYYY HH:mm:ss"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "sys__createdOnDate",
+            "dateformat" : "MM/DD/YYYY"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "sys__createdOnTime",
+            "dateformat" : "HH:mm:ss"
+        }, 
+        {
+            "placement" : "row2",
+            "key" : "creditRiskStatusDisplayName"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "reference"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "debtorNumber"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "annexNumber"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "dateDecision"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "decisionRemarks"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "sys__createdBy"
+        }
+    ],
+    "taskId" : "counterpartyinfopopup",
+    "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+	"sys__UUID":"c1e0bb86-67bc-49a8-bf9f-7e584f64bd21",
+    "deviceType" : "mobile"
+}

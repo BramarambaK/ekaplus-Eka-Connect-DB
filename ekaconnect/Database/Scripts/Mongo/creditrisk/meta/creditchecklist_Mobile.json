@@ -1,0 +1,97 @@
+{
+    "_id" : "creditchecklist_CR_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "Credit Check Request List",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [],
+    "labelKey" : "COUNTERPARTY_MAINTAINANCE_LISTING",
+    "fields" : [ 
+        {
+            "key" : "requestID"
+        }, 
+        {
+            "key" : "entityRefNo"
+        }, 
+        {
+            "key" : "operationType"
+        }, 
+        {
+            "key" : "eventName"
+        }, 
+        {
+            "key" : "counterParty"
+        }, 
+        {
+            "key" : "counterPartyGroup"
+        }, 
+        {
+            "key" : "limitRefNo"
+        }, 
+        {
+            "key" : "contractType"
+        }, 
+        {
+            "key" : "paymenTerm"
+        }, 
+        {
+            "key" : "contractRefNo"
+        }, 
+        {
+            "key" : "contractItemRefNo"
+        }, 
+        {
+            "key" : "value"
+        }, 
+        {
+            "key" : "fromPeriod"
+        }, 
+        {
+            "key" : "toPeriod"
+        }, 
+        {
+            "key" : "invoiceCounterParty"
+        }, 
+        {
+            "key" : "GMRRefNo"
+        }, 
+        {
+            "key" : "responseStatus"
+        }, 
+        {
+            "key" : "responseBlockType"
+        }, 
+        {
+            "key" : "responseMessage"
+        }, 
+        {
+            "key" : "requestBy"
+        }, 
+        {
+            "key" : "requestedOn"
+        }
+    ],
+    "taskId" : "creditchecklist",
+    "object" : "23061404-dc0e-4773-a073-0ba41f1d6f62",
+	"sys__UUID":"85ee1f04-7cc5-44be-a816-a4094d4c1196",
+    "deviceType" : "mobile"
+}

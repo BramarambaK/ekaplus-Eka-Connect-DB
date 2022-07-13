@@ -1,0 +1,9 @@
+{
+  "_id": "dropdown_creditLimitType-PrepaymentContractPartialTerm",
+  "key": "creditLimitType-014",
+  "value": "Prepayment Contract (Partial Term)",
+  "object": "creditLimitType",
+  "type": "connectmdm",
+  "creditLimitSource": ["creditLimitSource-003"],
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89"
+}

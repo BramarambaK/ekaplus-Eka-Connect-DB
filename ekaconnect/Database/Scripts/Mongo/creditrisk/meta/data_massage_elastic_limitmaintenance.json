@@ -1,0 +1,11 @@
+{
+    "_id" : "data_massage_elastic_limitmaintenance",
+    "componentType" : "ElasticDataMasssageTask",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "taskId" : "ElasticSearchDataMassageLimitMaintenance",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"40773682-c49a-4bef-997b-1c7d2ccc2c3c",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

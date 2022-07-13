@@ -1,0 +1,191 @@
+{
+    "_id" : "object_credit_check_request_response",
+    "name" : "creditCheckRequest",
+    "label" : "Credit Check Request",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "uniqueFields" : [],
+    "translatableKeys" : [],
+    "fields" : {
+        "requestID" : {
+            "requestID" : "Request ID",
+            "labelKey" : "requestID",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "entityRefNo" : {
+            "entityRefNo" : "Entity Ref No",
+            "labelKey" : "entityRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "operationType" : {
+            "operationType" : "Operation Type",
+            "labelKey" : "operationType",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "eventName" : {
+            "eventName" : "Event Name",
+            "labelKey" : "eventName",
+            "type" : "terxtbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "counterParty" : {
+            "counterParty" : "Counter Party",
+            "labelKey" : "counterParty",
+            "type" : "terxtbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "counterPartyGroup" : {
+            "counterPartyGroup" : "Counter Party Group",
+            "labelKey" : "counterPartyGroup",
+            "type" : "terxtbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "limitRefNo" : {
+            "limitRefNo" : "Limit Ref No",
+            "labelKey" : "limitRefNo",
+            "type" : "terxtbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "contractType" : {
+            "contractType" : "Contract Type",
+            "labelKey" : "contractType",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "paymenTerm" : {
+            "paymenTerm" : "Paymen Term",
+            "labelKey" : "paymenTerm",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "contractRefNo" : {
+            "contractRefNo" : "Contract Ref No",
+            "labelKey" : "contractRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "contractItemRefNo" : {
+            "contractItemRefNo" : "Contract Item Ref No",
+            "labelKey" : "contractItemRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "value" : {
+            "value" : "Value",
+            "labelKey" : "value",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "number"
+        },
+        "fromPeriod" : {
+            "fromPeriod" : "From Period",
+            "labelKey" : "fromPeriod",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "date",
+            "format" : "yyyy-MM-dd",
+            "comparison" : [ 
+                {
+                    "compareTo" : "toPeriod",
+                    "operator" : "<="
+                }
+            ]
+        },
+        "toPeriod" : {
+            "toPeriod" : "To Period",
+            "labelKey" : "toPeriod",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "invoiceCounterParty" : {
+            "invoiceCounterParty" : "Invoice Counter Party",
+            "labelKey" : "invoiceCounterParty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "GMRRefNo" : {
+            "GMRRefNo" : "GMR Ref No",
+            "labelKey" : "GMRRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "responseStatus" : {
+            "responseStatus" : "Response Status",
+            "labelKey" : "responseStatus",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "responseBlockType" : {
+            "responseBlockType" : "Response Block Type",
+            "labelKey" : "responseBlockType",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "responseMessage" : {
+            "responseMessage" : "Response Message",
+            "labelKey" : "responseMessage",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "requestBy" : {
+            "requestBy" : "Request By",
+            "labelKey" : "requestBy",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "requestedOn" : {
+            "requestedOn" : "Requested On",
+            "labelKey" : "requestedOn",
+            "type" : "datepicker",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "23061404-dc0e-4773-a073-0ba41f1d6f62"
+}

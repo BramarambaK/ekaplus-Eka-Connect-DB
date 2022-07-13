@@ -1,0 +1,171 @@
+{
+  "_id": "limitlist_CR_Mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+   "version" : "V2",
+  "inputData": {
+    "type": "elasticSearch",
+	"config":{
+	"hasStatusFlag" : true
+	}
+  },
+  "processorInfo1": {
+    "processorId": "511464ed-6403-4296-9419-30f5d7248919"
+  },
+  "refType": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "label": "Limit Maintenance",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "refreshData": {
+      "time": 300000
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "EDIT_LIMITINFO",
+      "position": "top",
+      "selection": "row",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.limitlist",
+          "popupClass": "limitinfopopup",
+          "name": "limitinfopopup"
+        }
+      ],
+      "label": "Info"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editlimitlist",
+      "selection": "row",
+      "data": "selected.limitlist",
+      "position": "top",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Limit list data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Limit list data got replaced with some errors"
+            }
+          },
+          "displayType": "inlineEdit",
+          "data": "output.editlimitlist",
+          "appendMsg": true,
+          "name": "_ST_EDIT_LIMIT"
+        },
+        {
+          "name": "limitlist",
+          "showPopUp": false
+        }
+      ],
+      "label": " Update"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "position": "top",
+      "selection": "row",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.limitlist",
+          "popupClass": "deleteclass",
+          "name": "deletelimitlist"
+        }
+      ],
+      "label": "Delete"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_LIMITLIST",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modal700px",
+          "name": "createmaintenance"
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create",
+      "position": "top"
+    }
+  ],
+  "labelKey": "LIMIT_LIST",
+  "fields": [
+    {
+      "key": "limitRefNo"
+    },
+    {
+      "key": "counterpartyName"
+    },
+    {
+      "key": "creditLimitSourceDisplayName"
+    },
+    {
+      "key": "creditLimitTypeDisplayName"
+    },
+    {
+      "key": "fromPeriod",
+      "dateformat": "YYYY-MM-DD"
+    },
+    {
+      "key": "toPeriod",
+      "dateformat": "YYYY-MM-DD"
+    },
+    {
+      "key": "amount"
+    },
+    {
+      "key": "currency"
+    },
+    {
+      "key": "limitStatus"
+    },
+    {
+      "key": "referenceNo"
+    },
+    {
+      "key": "coverPercentage"
+    },
+    {
+      "key": "maxPaymentTerm"
+    },
+    {
+      "key": "remarks"
+    }
+  ],
+  "taskId": "limitlist",
+  "object": "26e782e8-89e5-40ea-a3be-63b320260b7d",
+  "sys__UUID":"a52121f3-9f18-4ad7-b5a0-df5daac164e1",
+  "deviceType": "mobile"
+}
