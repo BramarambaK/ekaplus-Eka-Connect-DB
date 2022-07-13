@@ -1,0 +1,89 @@
+{
+  "_id": "viewticketsplithistorycardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Tickets details  Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "theme": "ticket-details splithistory-details"
+  },
+  "fields": [
+    [
+      {
+        "key": "cardHeading",
+        "type": "heading",
+        "class": "header",
+        "filterType": "tabs",
+        "filterBy": "cardHeading",
+        "valueExpression": "return 'Split history'",
+        "style": {
+          "width": "99px"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Delivered tickets",
+        "type": "details",
+        "key": "parentticketRefNo",
+        "valueExpression": " return '${parentticketRefNo}'.length==0?'-':'${parentticketRefNo}'",
+        "decisionName": "viewLink",
+        "config": {
+          "decisionNameExpression": "return ('${parentticketRefNo}'.length!=0 && '${parentticketRefNo}'!='-') ? 'viewLink' : 'details-value'; ",
+          "classExpression": "return ('${parentticketRefNo}'.length!=0 && '${parentticketRefNo}'!='-') ? 'link' : ''; "
+        }
+      }
+    ],
+    [
+      {
+        "label": "Split tickets",
+        "type": "detailsArray",
+        "key": "formatedSplitTickets",
+        "class": "links-group",
+        "valueExpression": " return ${splitTickets}.map(i => ({value: i}))",
+        "decisionName": "viewSplit"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "decisionName": "viewLink",
+      "task": "viewLink",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "selected.viewticketwarehousedcomposite.parentTicket",
+          "name": "viewticketwarehousedcomposite"
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "decisionName": "viewSplit",
+      "task": "viewSplit",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.viewticketsplithistorycardview",
+          "name": "_ST_VIEW_SPLITTICKET_PREPROCESSOR"
+        },
+        {
+          "data": "output._ST_VIEW_SPLITTICKET_PREPROCESSOR",
+          "name": "splitticketwarehousedcomposite",
+          "setSelected": ["selected.splitticketwarehousedcomposite"]
+        }
+      ]
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "viewticketsplithistorycardview",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

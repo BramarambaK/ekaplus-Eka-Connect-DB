@@ -1,0 +1,155 @@
+{
+  "_id": "volumelistingprevious_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "volumelistingprevious",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "bfe2369e-6849-4a98-abc6-58e6d5d4b6bf",
+  "type": "workflow",
+  "label": "Manage tonnage limits",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "mdmPayload": {},
+    "name": "list",
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. daily limit",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true,
+    "dropdownDecisions": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "season",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Port zone",
+      "sort": true,
+      "key": "region"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Site",
+      "sort": true,
+      "key": "site"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Daily limit (MT)",
+      "sort": true,
+      "key": "dailyLimit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Daily purchased (MT)",
+      "sort": true,
+      "key": "dailypurchased",
+      "format": "decimal",
+      "roundoff": "2"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.volumelistingcomposite.volumelistingprevious",
+          "name": "updatevolumelimitsprevious"
+        }
+      ],
+      "position": "top",
+      "label": "Update limit",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "data": "selected.volumelistingcomposite.volumelistingprevious",
+          "name": "volumelimitdelete",
+          "setSelected": [
+            "selected.volumelistingcomposite.volumelistingprevious"
+          ],
+          "transform": "return ${data}.map(i => ({ ...i, clientTimezoneOffset : new Date().getTimezoneOffset()}))"
+        }
+      ],
+      "position": "top",
+      "label": "Delete limit",
+      "iconClass": "createicon"
+    }
+  ],
+  "labelKey": "LIST",
+  "deviceType": "mobile"
+}

@@ -1,0 +1,85 @@
+{
+  "_id": "viewtickettransferdetails_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract details Card View",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "header": "Ticket transfer details",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "rowGroup": false,
+    "class": "submitamend-detailtickettable",
+    "footer": {
+      "description": "return '<span> Total transferred quantity</span>' + '<span>'  + ${data}.reduce((acc, curr) => (acc + curr.quantity), 0).toFixed(2) + ' MT</span>'",
+      "class": "ticket-transfer-step-1-footer",
+      "style": {
+        "text-align": "right"
+      }
+    }
+  },
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo",
+      "hidden": false,
+      "task": "viewLink",
+      "class": "col-flex mobile-full-width details-item-highlight-value",
+      "category": "link"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product",
+      "primaryFilter": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear",
+      "primaryFilter": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Qty (MT)",
+      "sort": true,
+      "key": "quantity",
+      "primaryFilter": false
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "decisionName": "viewLink",
+      "task": "viewLink",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite.ticketlistingrequests[0].selectedTicketList",
+          "name": "viewticketwarehousedcomposite"
+        }
+      ]
+    }
+  ],
+  "labelKey": "EDITABLETABLE",
+  "taskId": "viewtickettransferdetails",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "510a0cbb-d5b7-4941-968b-df949298b4f5"
+}

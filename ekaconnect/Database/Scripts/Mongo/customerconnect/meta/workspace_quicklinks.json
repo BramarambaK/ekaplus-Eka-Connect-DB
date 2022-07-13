@@ -1,0 +1,36 @@
+{
+    "_id" : "workspacequicklink_workflow",
+    "componentType" : "UserTask",
+    "version" : "V2",
+    "decisions" : [],
+    "fields" : [],
+    "inputData" : {
+        "type" : "menuObject",
+        "config" : {
+            "menuId" : "fac7cd70-c261-4781-980c-1c0b9c1a0397"
+        }
+    },
+    "label" : "Quick Link",
+    "labelKey" : "Quick Link",
+    "layout" : {
+        "name" : "flexible-menu",
+        "component" : "",
+        "header" : {
+            "label" : "Quick links",
+            "style" : {
+                "color" : "#3B4047",
+                "font-size" : "18px",
+                "font-weight" : "600",
+                "padding" : "0px 10px 10px 20px",
+                "margin" : "0 5px",
+                "border-bottom" : "solid 1px #DBE1EB"
+            }
+        }
+    },
+    "object" : "742916fc-416c-4a9c-9d79-d55ec427099f",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "workspacequicklinks",
+    "type" : "workflow"
+}

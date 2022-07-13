@@ -1,0 +1,84 @@
+{
+  "_id": "viewticketcommoditydetailscardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Tickets details  Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "theme": "ticket-details commodity-ticketdetails"
+  },
+  "fields": [
+    [
+      {
+        "key": "cardHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "cardHeading",
+        "class": "header",
+        "valueExpression": "return 'Commodity details '",
+        "style": {
+          "width": "157px"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Commodity",
+        "type": "details",
+        "key": "product",
+        "valueExpression": "return '${product}'.length == 0 ? '-' : '${product}'",
+        "style": {
+          "position": "absolute",
+          "width": "79px"
+        }
+      },
+      {
+        "label": "Variety",
+        "type": "details",
+        "key": "varietyName",
+        "valueExpression": "return '${varietyName}'.length == 0 ? '-' : '${varietyName}'",
+        "style": {
+          "position": "absolute",
+          "width": "46px"
+        }
+      },
+      {
+        "label": "Grade",
+        "type": "details",
+        "key": "quality",
+        "config": {
+          "classExpression": "return '${upgradeStatus}'.toLowerCase() == 'upgraded' ? 'upgrade' : ''"
+        },
+        "valueExpression": "return '${quality}'.length == 0 ? '-' : '${quality}'",
+        "style": {
+          "position": "absolute",
+          "width": "65px"
+        }
+      },
+      {
+        "label": "Quantity",
+        "type": "details",
+        "key": "quantity",
+        "suffix": "'${quantityUnit}'",
+        "roundOff": "1.2-2",
+        "valueExpression": "return '${quantity}'.length == 0 ? '-' : '${quantity}'",
+        "style": {
+          "position": "absolute",
+          "width": "57px"
+        },
+        "format": "Number"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "viewticketcommoditydetailscardview",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

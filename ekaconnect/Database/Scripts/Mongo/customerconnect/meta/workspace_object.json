@@ -1,0 +1,27 @@
+{
+  "_id": "workspace_obj",
+  "name": "workspace",
+  "label": "Workspace Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {},
+  "sys__UUID": "742916fc-416c-4a9c-9d79-d55ec427099f",
+  "additionalProperties": {},
+  "sys__createdOn": "2019-02-07T19:21:17.926Z",
+  "sys__createdBy": "Monika"
+}

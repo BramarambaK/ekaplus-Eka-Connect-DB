@@ -1,0 +1,56 @@
+{
+  "_id": "viewcontractwithoutoriginalpickup_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request Contract spread  Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "return 'Review you allocation summary for '",
+      "style": {
+        "margin-left": "10px"
+      }
+    },
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card contract-details-padding-32"
+  },
+  "version": "V2",
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Original pick-up instructions' "
+      }
+    ],
+    [
+      {
+        "label": "-",
+        "type": "detailsFlex",
+        "key": "pickuplocation",
+        "style": {
+          "width": "50%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return ''"
+      }
+    ]
+  ],
+  "labelKey": "Cards View",
+  "taskId": "viewcontractwithoutoriginalpickup",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}
