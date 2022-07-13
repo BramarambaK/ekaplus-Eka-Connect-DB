@@ -1,0 +1,171 @@
+{
+  "_id": "enterpriselistingcomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Manage requests",
+  "version": "V2",
+  "processorInfo": {
+    "processorId": "0510ed18-70f4-45f7-b837-394b5d7138d1",
+    "isProcessorOnly": true
+  },
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "0510ed18-70f4-45f7-b837-394b5d7138d1"
+    }
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "style": {
+            "width": "100%",
+            "margin-top": "-30px"
+          },
+          "workflows": [
+            {
+              "display": "tabs",
+              "styleClass": "tabview-1",
+              "workflows": [
+                {
+                  "tabHeader": "GROWER CONTRACTS",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no grower contract requests",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "enterpriselistingcomposite.enterprisegrowercontractsquery",
+                    "tabHeader": "return 'GROWER CONTRACTS (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "enterprisegrowercontracts",
+                          "data": "selected.enterpriselistingcomposite.enterprisegrowercontractsquery"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.enterpriselistingcomposite.enterprisegrowercontractsquery"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "GROWER TICKETS",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no ticket requests",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "enterpriselistingcomposite.enterprisegrowerticketsquery",
+                    "tabHeader": "return 'GROWER TICKETS (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "enterprisegrowertickets",
+                          "data": "selected.enterpriselistingcomposite.enterprisegrowerticketsquery"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.enterpriselistingcomposite.enterprisegrowerticketsquery"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Manage Requests"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "footerClass": "custom-footer display-none",
+    "menu": false,
+    "customMenu": true,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string",
+        "task": "ticketsmainhome"
+      },
+      {
+        "label": "Manage requests",
+        "type": "string"
+      }
+    ],
+    "supportCustomization": true,
+    "headerClass": "enterprise-header",
+    "clearSelected": [
+      "selected"
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketsmainhome",
+      "outcomes": [
+        {
+          "name": "ticketscomposite",
+          "clearSelected": [
+            "selected.ticketscomposite",
+            "selected",
+            "menuDetails"
+          ]
+        }
+      ]
+    }
+  ],
+  "taskId": "enterpriselistingcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys_UUID": "e514a664-59b2-4ae9-baea-2603f87b841d"
+}

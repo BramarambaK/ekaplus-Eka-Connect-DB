@@ -1,0 +1,11 @@
+{
+  "_id": "CUSTOMERCONNECT_ST_CREATE_DOCUMENT_BULKOPERATION",
+  "componentType": "SystemTask",
+  "object": "900fcf0a-cbc5-4de1-ad8c-c2987f196cd5",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "CUSTOMERCONNECT_ST_CREATE_DOCUMENT_BULKOPERATION",
+  "label": "Create Document in System",
+  "type": "workflow"
+}

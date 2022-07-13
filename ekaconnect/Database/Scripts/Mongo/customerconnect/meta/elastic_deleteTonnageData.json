@@ -1,0 +1,47 @@
+{
+    "_id" : "elastic_deleteTonnageData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "objectAction" : "DELETE",
+    "taskId" : "elastic_deleteTonnageData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "config" : {
+        "listingWorkflow" : "volumelisting"
+    },
+    "tags" : "notifyDataChange",
+    "chainedTasks" : [ 
+	    {
+            "name" : "_ST_PROCESS_TONNAGE_NOTIFY_DELETE",
+            "appendMsg" : false,
+            "data" : "output.elastic_deleteTonnageData"
+        },
+        {
+            "name" : "_ST_DELETE_VOLUME_LIMIT",
+            "appendMsg" : false,
+            "data" : "output._ST_PROCESS_TONNAGE_NOTIFY_DELETE"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_TONNAGE",
+            "appendMsg" : false,
+            "data" : "output._ST_DELETE_VOLUME_LIMIT"
+        },
+		{
+            "name" : "_ST_PROCESSOR_RESET_LIMITBREACHSTATUS",
+            "appendMsg" : false,
+            "data" : "output._ST_DELETE_VOLUME_LIMIT"
+        },
+        {
+            "name" : "_ST_UPDATE_VOLUME_LIMIT",
+            "appendMsg" : false,
+            "data" : "output._ST_PROCESSOR_RESET_LIMITBREACHSTATUS"
+        },
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_TONNAGE",
+            "appendMsg" : false,
+            "data" : "output._ST_UPDATE_VOLUME_LIMIT"
+        }
+    ]
+}

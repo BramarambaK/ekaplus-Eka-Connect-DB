@@ -1,0 +1,10 @@
+{
+  "_id": "download-file-cst",
+  "name": "download-file-cst",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "  res.status(200).send({\r\n      customUrl: '/connect/assets/customer-connect/pricenlimits/Cargill Price File Generator.xlsm',\r\n      extension: '.xlsm',\r\n      filename: 'Cargill price file generator'\r\n    });",
+  "sys__UUID": "6111d9ef-91de-4024-8d83-5c5c0c59eeb8",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

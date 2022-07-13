@@ -1,0 +1,34 @@
+{
+    "_id" : "elastic_updateVolumeLimitData_UpdateDailyPurchase_internal",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "objectAction" : "UPDATE",
+    "taskId" : "elastic_updateVolumeLimitData_UpdateDailyPurchase_internal",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "sys__UUID": "a0125ce4-5521-467c-bb32-684d36a8bb38",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_UPDATE_VOLUME_LIMIT",
+            "appendMsg" : false,
+            "data" : "output.elastic_updateVolumeLimitData_UpdateDailyPurchase_internal"
+        },
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_TONNAGE",
+            "appendMsg" : false,
+            "data" : "output._ST_UPDATE_VOLUME_LIMIT"
+        },
+		{
+            "name" : "_ST_PROCESSOR_FORMAT_DATA_GPS_VOLUMELIMIT",
+            "appendMsg" : false,
+            "data" : "output._ST_UPDATE_VOLUME_LIMIT"
+        },
+		{
+            "name" : "EXTERNAL_GPS_VOLUMELIMIT_PUSH",
+            "appendMsg" : false,
+            "data" : "output._ST_PROCESSOR_FORMAT_DATA_GPS_VOLUMELIMIT"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "elastic_updatePriceData_internal",
+  "version": "V2",
+  "componentType": "ChainedSystemTask",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "objectAction": "UPDATE",
+  "taskId": "elastic_updatePriceData_internal",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "sys__UUID": "d21aae29-0315-4615-b438-f7e51492ee9b",
+  "chainedTasks": [
+    {
+      "name": "_ST_UPDATE_PRICE_LIMIT",
+      "appendMsg": false,
+      "data": "output.elastic_updatePriceData_internal"
+    },
+    {
+      "name": "ELASTIC_BULK_UPLOAD_PRICE",
+      "appendMsg": false,
+      "data": "output._ST_UPDATE_PRICE_LIMIT"
+    },
+    {
+      "name": "_ST_PROCESSOR_EXPIRE_PRICES",
+      "appendMsg": false,
+      "data": "output._ST_UPDATE_PRICE_LIMIT"
+    },
+    {
+      "name": "_ST_PROCESSOR_FORMAT_DATA_GPS_PRICE",
+      "appendMsg": false,
+      "data": "output._ST_UPDATE_PRICE_LIMIT"
+    },
+    {
+      "name": "EXTERNAL_GPS_PRICE_PUSH",
+      "appendMsg": false,
+      "data": "output._ST_PROCESSOR_FORMAT_DATA_GPS_PRICE"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "_id" : "delete_productVarietyMasterData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "c7e068e2-a9ba-11ec-b909-0242ac120002",
+    "objectAction" : "DELETE",
+    "taskId" : "delete_productVarietyMasterData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+	"sys__UUID" : "b8f9a0d6-aa74-11ec-b909-0242ac120002",
+    "type" : "workflow",
+    "tags" : "notifyDataChange",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_PROCESS_PRODUCT_VARIETY_MASTER_DATA_NOTIFY_DELETE",
+            "appendMsg" : false,
+            "data" : "output.delete_productVarietyMasterData"
+        }, 
+        {
+            "name" : "_ST_DELETE_PRODUCT_VARIETY_MASTER_DATA",
+            "appendMsg" : false,
+            "data" : "output._ST_PROCESS_PRODUCT_VARIETY_MASTER_DATA_NOTIFY_DELETE"
+        }
+    ]
+}

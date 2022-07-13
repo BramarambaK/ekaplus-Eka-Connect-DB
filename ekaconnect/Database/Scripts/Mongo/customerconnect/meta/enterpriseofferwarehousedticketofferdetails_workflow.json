@@ -1,0 +1,75 @@
+{
+  "_id": "enterpriseofferwarehousedticketofferdetails_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Offer details card view",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card",
+    "theme": "cargill-contract-details-card contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "key": "cardHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "cardHeading",
+        "class": "header",
+        "valueExpression": "return 'Offer details'",
+        "style": {
+          "width": "157px"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Offer quantity (MT)",
+        "type": "detailsFlex",
+        "key": "quantity",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "valueExpression": " return '${quantity}' ? '${quantity}' : '-' "
+      },
+      {
+        "label": "Offer price (/MT)",
+        "type": "detailsFlex",
+        "key": "offerPrice",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "valueExpression": " return '${offerPrice}'== ''?'-':'$'+'${offerPrice}'"
+      },
+      {
+        "label": "Offer expiry",
+        "type": "detailsFlex",
+        "key": "offerExpiryDate",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "valueExpression": "return '${offerExpiryDate}' ? moment('${offerExpiryDate}').format('DD/MM/YYYY') : '-'"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "enterpriseofferwarehousedticketofferdetails",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

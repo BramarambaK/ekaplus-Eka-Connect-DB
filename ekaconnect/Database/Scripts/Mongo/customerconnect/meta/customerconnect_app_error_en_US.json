@@ -1,0 +1,10 @@
+{
+    "_id" : "customerconnect_app_error_en_US",
+    "title" : "CustomerConnect App Level Error",
+    "name" : "customerconnect",
+    "tenantID" : "",
+    "type" : "error",
+    "locale" : "en",
+    "132" : "Document not available. Please contact the Grower Services team on 1800 447 246 if this issue persists.",
+    "defaulterror" : "Internal Server Error. Please contact Customer Connect Admin  "
+}

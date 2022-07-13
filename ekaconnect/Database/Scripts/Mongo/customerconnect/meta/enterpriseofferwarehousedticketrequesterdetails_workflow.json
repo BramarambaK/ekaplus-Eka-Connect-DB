@@ -1,0 +1,86 @@
+{
+  "_id": "enterpriseofferwarehousedticketrequesterdetails_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Requestor details card view",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "key": "cardHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "cardHeading",
+        "class": "header",
+        "valueExpression": "return 'Requestor details'"
+      }
+    ],
+    [
+      {
+        "label": "Name",
+        "type": "detailsFlex",
+        "key": "requestBy",
+        "valueExpression": "return '${requestBy}' ? '${requestBy}' : '-'",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        }
+      },
+      {
+        "label": "NGR",
+        "type": "detailsFlex",
+        "key": "bpRefNo",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": "return '${bpRefNo}' ? '${bpRefNo}' : '-'"
+      },
+      {
+        "label": "NGR trading name",
+        "type": "detailsFlex",
+        "key": "bpName",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "valueExpression": "return '${bpName}' ? '${bpName}' : '-'"
+      },
+      {
+        "label": "Payee name(s)",
+        "type": "detailsFlex",
+        "key": "payeeName",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "valueExpression": "return '${payeeName}'.length == 0 ? '-' : '${payeeName}'"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "enterpriseofferwarehousedticketrequesterdetails",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "0f208f15-9194-476f-9a93-8b76a797c039"
+}
