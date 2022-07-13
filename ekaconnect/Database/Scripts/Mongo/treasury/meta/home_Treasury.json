@@ -1,0 +1,16 @@
+{
+    "_id" : "home_Treasury",
+    "layout" : {
+        "name" : "customv2"
+    },
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "workflow" : "transactionlistingcompositev1",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "decisions" : [],
+    "type" : "workflow",
+    "taskId" : "home",
+    "object" : "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35",
+    "label" : "Home"
+}

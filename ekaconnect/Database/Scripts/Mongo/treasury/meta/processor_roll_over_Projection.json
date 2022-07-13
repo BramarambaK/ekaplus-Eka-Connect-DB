@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_roll_over_Projection",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "9164be0f-d7f8-457d-ba06-f3795a6957eb"
+    },
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "rolloverprojectionprocessor",
+    "label" : "Roll using Processor",
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d"
+}

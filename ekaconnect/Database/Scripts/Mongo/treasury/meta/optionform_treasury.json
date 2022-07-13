@@ -1,0 +1,76 @@
+{
+    "_id" : "optionform_treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-outline-dark custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EXPORT",
+            "task" : "calltransactionlist",
+            "decisionName" : "calltransaction",
+            "outcomes" : [ 
+                {
+                    "name" : "RELOADACTION",
+                    "action" : "reload",
+                    "reload" : [ 
+                        "projectionlist"
+                    ],
+                    "type" : "client"
+                }
+            ],
+            "label" : "EXPORT",
+            "style" : {
+                "margin-right" : "auto"
+            }
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "add",
+                "type" : "hidden",
+                "style" : {
+                    "visibility" : "hidden"
+                },
+                "formItemStyle" : {
+                    "width" : "90%"
+                },
+                "decision" : "calltransaction",
+                "label" : "ADD",
+                "iconClass" : "fa fa-download",
+                "btnClass" : "btn"
+            }, 
+            {
+                "key" : "mappingType",
+                "filter" : true,
+                "autoDisplayFirst" : true,
+                "event" : "external",
+                "formItemStyle" : {
+                    "width" : "10%"
+                },
+                "label" : " "
+            }
+        ]
+    ],
+    "label" : "",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "margin-top" : "-25px",
+            "margin-bottom" : "-10px",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "eventingRequired" : false,
+        "backbutton" : true,
+        "name" : "create",
+        "formLayoutStyle" : {},
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "optionform",
+    "type" : "workflow"
+}

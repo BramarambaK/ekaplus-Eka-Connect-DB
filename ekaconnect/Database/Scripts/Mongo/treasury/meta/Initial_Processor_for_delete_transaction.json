@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_for_delete_transaction",
+    "name" : "Initial_Processor_for_delete_transaction",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "res.status(200).send({\"transactionRefNo\" : (req.body.selectedData.data.map((item)=>item.transactionRefNo)).toString()})",
+    "sys__UUID" : "a58a552c-148d-4f01-9ae9-4f87f4c88d6d",
+    "sys__createdBy" : "Jay"
+}

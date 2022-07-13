@@ -1,0 +1,186 @@
+{
+  "_id": "Projection_Object",
+  "name": "Projection",
+  "label": "Projection",
+  "type": "object",
+  "version": "3",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "projectionDate": {
+      "labelKey": "projectionDate",
+      "projectionDate": "Projection Date",
+      "isRequired": true,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "yearNavigator" : true,
+      "monthNavigator" : true,
+      "yearRange" : "2000:2030",
+      "showButtonBar" : true
+    },
+    "bankName": {
+      "labelKey": "bankName",
+      "bankName": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankName",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true"
+      },
+      "dataType": "String"
+    },
+    "bankId": {
+      "labelKey": "bankId",
+      "bankId": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankId",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true",
+        "value": "if('${bankAccount}' != 'null') { return '${bankId}' } else {return null}"
+      },
+      "dataType": "String"
+    },
+    "bankAccount": {
+      "labelKey": "bankAccount",
+      "bankAccount": "Bank Account",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankAccount",
+      "parent": ["entity"],
+      "children": ["bankName", "bankId", "currencyhidden"],
+      "dataType": "String"
+    },
+    "classification": {
+      "labelKey": "classification",
+      "classification": "Classiﬁcation",
+      "type": "dropdown",
+      "serviceKey": "classification",
+      "dataType": "String"
+    },
+    "currency": {
+      "labelKey": "currency",
+      "currency": "Currency",
+      "isRequired": true,
+      "type": "dropdown",
+      "serviceKey": "currency",
+      "parent": ["entity"],
+      "UIupdates": {
+        "value": "if('${currencyhidden}' !='null') return '${currencyhidden}'"
+      },
+      "dataType": "String"
+    },
+    "currencyhidden": {
+      "labelKey": "currencyhidden",
+      "currencyhidden": "",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "currencyhidden",
+      "parent": ["entity", "bankAccount"],
+      "dataType": "String"
+    },
+    "Direction": {
+      "labelKey": "Direction",
+      "Direction": "Direction",
+      "isRequired": true,
+      "type": "dropdown",
+      "propertyKey": "Direction",
+      "dataType": "String"
+    },
+    "amount": {
+      "labelKey": "amount",
+      "amount": "Amount",
+      "type": "textbox",
+      "isRequired": true,
+      "UIupdates": {
+        "listValue": "return Number('${amount}').toLocaleString('en-US', {maximumFractionDigits:2})"
+      },
+      "valueCheck": "if(${amount}==0) {return 'T-100'} else if(${amount} < 0) {return 'T-101'} else { return true}",
+      "validationRegex": "^\\d+\\.?\\d{0,2}$",
+      "autocomplete": "off"
+    },
+    "projectionId": {
+      "projectionId": "Projection ID",
+      "labelKey": "projectionId",
+      "type": "String",
+      "isRequired": false
+    },
+    "tags": {
+      "tags": "Remarks",
+      "labelKey": "tags",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "isRequired": false
+    },
+	"message" : {
+		"message" : "",
+		"labelKey" : "message",
+		"type" : "textbox",
+		"isRequired" : false
+    },
+    "entity": {
+      "entity": "Entity",
+      "labelKey": "entity",
+      "type": "dropdown",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": true,
+      "children": [
+        "currency",
+        "bankName",
+        "bankAccount",
+        "currencyhidden",
+        "bankId",
+        "strategy",
+        "profileCenter",
+        "classification"
+      ]
+    },
+    "profileCenter": {
+      "profileCenter": "Profit Center",
+      "labelKey": "profileCenter",
+      "dataType": "String",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "profitCenter"
+    },
+    "strategy": {
+      "labelKey": "strategy",
+      "strategy": "Strategy",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "strategy"
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "e833e4b5-e278-4769-b02e-d7f9483a230d"
+}

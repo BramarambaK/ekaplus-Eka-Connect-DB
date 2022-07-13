@@ -1,0 +1,206 @@
+{
+    "_id" : "ediprojection_treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "projections",
+                    "clearSelected" : [ 
+                        "selected.ediprojection", 
+                        "selected.projections"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "ediprojection",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.ediprojection",
+                    "name" : "_ST_VALIDATE_PROJECTION",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.ediprojection",
+                    "result" : {
+                        "success" : {
+                            "message" : "Status"
+                        },
+                        "failure" : {
+                            "message" : "Status"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "name" : "editprojectionprocessor",
+                    "clearSelected" : [ 
+                        "selected.ediprojection", 
+                        "selected.projections"
+                    ],
+                    "appendMsg" : false
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "name" : "projections"
+                }
+            ],
+            "label" : "SAVE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "projections",
+                    "clearSelected" : [ 
+                        "selected.ediprojection", 
+                        "selected.projections"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "entity",
+				"disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "bankAccount"
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox"
+            }
+        ], 
+        [ 
+            {
+                "key" : "projectionDate",
+                "class" : "treasury-date",
+                "disabled" : true
+            }, 
+            {
+                "key" : "amount",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "0px",
+                    "margin-bottom" : "16px",
+                    "width" : "18%"
+                }
+            }, 
+            {
+                "key" : "currency",
+                "formItemStyle" : {
+                    "margin-right" : "22px",
+                    "margin-bottom" : "16px",
+                    "width" : "11.5%"
+                }
+            }, 
+            {
+                "key" : "classification"
+            }
+        ], 
+        [ 
+            {
+                "key" : "Direction"
+            }, 
+            {
+                "key" : "strategy"
+            }, 
+            {
+                "key" : "profileCenter"
+            }, 
+            {
+                "key" : "bankId",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "projectionId",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "currencyhidden",
+                "type" : "hidden",
+                "event" : "if(value){data.currency =  {value:value,disable:true}} else {data.currency =  {value:data.c9,disable:false}}",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "status",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "tags"
+            }
+        ]
+    ],
+    "label" : "Edit: ${projections[0].projectionId}",
+	"processorInfo" : {
+        "processorId" : "9fca9f4a-31a1-43df-b1a7-03f052c2063e"
+    },
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "29%",
+            "margin-right" : "26px",
+            "margin-bottom" : "16px"
+        },
+        "processorInfo" : {
+            "processorId" : "b4d72471-d9b2-4efc-a8e8-7270aec001d2"
+        },
+        "name" : "create",
+        "type" : "row"
+    },
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "ediprojection",
+    "type" : "workflow"
+}

@@ -1,0 +1,23 @@
+{
+    "_id" : "treasury_app_eka_balances_policy",
+    "type" : "policy",
+    "app_UUID" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "refType" : "object",
+    "refTypeId" : "0d7bc6cb-b976-4522-8c26-234df4b4d1c6",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

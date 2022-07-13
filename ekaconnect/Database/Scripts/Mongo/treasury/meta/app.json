@@ -1,0 +1,48 @@
+
+ {
+    "_id" : "treasury_app",
+    "title" : "Cash Management",
+    "name" : "treasury",
+    "tenantID" : "qareference",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "platform_id" : "57",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60,
+                "height" : 20,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "menu" : [ 
+                            {
+                                "handler" : "/app/basicapp/basiclisting",
+                                "text" : "Treasury Listing",
+                                "iconCls" : ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "e4ba81fc-1304-4f01-b641-7425da52a666"
+}

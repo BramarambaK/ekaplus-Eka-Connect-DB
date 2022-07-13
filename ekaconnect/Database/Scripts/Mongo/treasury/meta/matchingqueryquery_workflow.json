@@ -1,0 +1,49 @@
+{
+    "_id" : "matchingqueryquery_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "label" : "Query",
+    "type" : "workflow",
+    "rows" : 10000,
+    "payLoad" : "selected.globalfilter",
+    "processorInfo" : {
+        "processorId" : "da108de5-ff30-4c96-86eb-ec3497ba7cdb"
+    },
+    "layout" : {
+        "header" : {
+            "label" : "Entity",
+            "style" : {
+                "font-size" : "22px"
+            }
+        },
+        "processorInfo" : {
+            "processorId" : "cfd87fc2-0317-446c-a4e5-5b30a1407238",
+            "isProcessorOnly" : true
+        },
+        "getInitialData" : true,
+        "name" : "query"
+    },
+    "fields" : [ 
+        {
+            "key" : "ngrFilter",
+            "filterBy" : "Entity",
+            "filterType" : "dropdown",
+            "multiple" : true,
+            "selectedAll" : "return '${userInfo.customerType}' !== 'Grower' ? 'All ABNs' : 'All NGRs'",
+            "placeholder" : "return '${userInfo.customerType}' !== 'Grower' ? 'Select a ABN' : 'Select a NGR'",
+            "persistInGlobal" : true,
+            "useGlobalValue" : true
+        }, 
+        {
+            "key" : "tabsView",
+            "filterBy" : "matchingStatus",
+            "filterType" : "tabs"
+        }
+    ],
+    "decisions" : [],
+    "labelKey" : "QUERY",
+    "taskId" : "matchingquery",
+    "object" : "58a41093-cee2-4a4a-9ed6-9b9d1b76cf4d"
+}

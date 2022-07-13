@@ -1,0 +1,108 @@
+{
+  "_id": "matchinglistdynamic_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+  "taskId": "matchinglistdynamic",
+  "label": "Transactions",
+  "object": "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "list",
+    "getInitialData": false,
+    "header": true,
+    "searchPlaceHolder1": "Search e.g. contract Id",
+    "messages1": {
+      "emptyText": "You have no Open contracts"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": false,
+      "search": false,
+      "reload": false,
+      "reset": true,
+      "export": false,
+      "operationV2": false,
+      "customization": false,
+      "showFilterHeader" : true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-white",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "limitHeight": true
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "matchingId"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "bankName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "bankAccount"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "transactionId"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "projectionId"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "classification"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width" : "8%",
+      "key": "currency"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width" : "8%",
+      "align": "right",
+      "key": "amount"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "matchingType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "variance"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

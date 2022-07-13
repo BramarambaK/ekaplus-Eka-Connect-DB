@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_edit_Projection",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "3a9a5dc0-c1e4-44bd-82c2-c34de53eba7b"
+    },
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "editprojectionprocessor",
+    "label" : "Edit using Processor",
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d"
+}

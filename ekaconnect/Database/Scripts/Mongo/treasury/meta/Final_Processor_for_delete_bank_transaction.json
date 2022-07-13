@@ -1,0 +1,10 @@
+{
+    "_id" : "Final_Processor_for_delete_bank_transaction",
+    "name" : "Final_Processor_for_delete_bank_transaction",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "var moment = require(\"moment\");\r\nvar ids = req.body.transactionRefNo;\r\nvar ekabanktransaction =\r\n  req.body.propertyList.platform_url +\r\n  \"/spring/cashManagement/transaction?transactionIds=\"+ ids;\r\nvar ekabanktransactionurl = {\r\n  method: \"DELETE\",\r\n  url: ekabanktransaction,\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    \"Content-Type\": \"application/json\",\r\n  },\r\n  json: true,\r\n};\r\nvar get_platformbanktransaction = function get_platformbanktransaction() {\r\n  return new Promise(function (resolve, reject) {\r\n    request(ekabanktransactionurl, function (err, response, body) {\r\n      if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n        resolve(body);\r\n      } else {\r\n        reject(body);\r\n      }\r\n    });\r\n  });\r\n};\r\nget_platformbanktransaction()\r\n  .then(function (ent) {\r\n    res.status(200).send({ msg: \"Bank Transaction Deleted Successfully\" });\r\n  })\r\n  .catch((err) => {\r\n    console.error(err);\r\n\tlet message = 'Failed to Delete';\r\n\tif(err.message.includes(\"Transaction not found\")) \r\n\tmessage = 'Transaction not found';\t\r\n    else if(err.message.includes(\"Matched transactions cannot be deleted\")) \r\n\tmessage = 'Matched transactions cannot be deleted';\r\n    res.status(500).send(message);\r\n  });\r\n",
+    "sys__UUID" : "30075134-ba47-4abd-84b5-e4e1b33a705e",
+    "sys__createdBy" : "jay"
+}

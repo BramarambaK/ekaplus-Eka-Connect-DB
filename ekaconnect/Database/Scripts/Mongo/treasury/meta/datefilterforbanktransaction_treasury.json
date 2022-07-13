@@ -1,0 +1,134 @@
+{
+    "_id" : "datefilterforbanktransaction_treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "listingtransactions"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "globalfilter",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "setSelected" : [ 
+                        "selected.datefilterforbanktransaction", 
+                        "selected.datefilters", 
+                        "selected.datefilterformfrommatching", 
+                        "selected.datefilterform"
+                    ],
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "selected.datefilterforbanktransaction",
+                    "name" : "listingtransactions"
+                }
+            ],
+            "label" : "UPDATE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "listingtransactions"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "filterDate",
+                "label" : "Date",
+                "class" : "treasury-date",
+                "value" : "currentDate",
+                "style" : {
+                    "width" : "90%",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "100px"
+                },
+                "yearNavigator" : true,
+                "monthNavigator" : true,
+                "yearRange" : "2000:2030",
+                "showButtonBar" : true
+            }, 
+            {
+                "key" : "toDate",
+                "label" : "Date",
+                "class" : "treasury-date",
+                "value" : "currentDate",
+                "style" : {
+                    "width" : "130%",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "30px"
+                },
+                "yearNavigator" : true,
+                "monthNavigator" : true,
+                "yearRange" : "2000:2030",
+                "showButtonBar" : true
+            }
+        ], 
+        [ 
+            {
+                "key" : "formcheckbox",
+                "style" : {
+                    "width" : "100%",
+                    "margin-bottom" : "10px"
+                },
+                "class" : "radio-button-alignment-treasury"
+            }
+        ]
+    ],
+    "label" : "Global Filter",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formLayoutStyle" : {},
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "processorInfo" : {
+            "processorId" : "cfd87fc2-0317-446c-a4e5-5b30a1407238"
+        }
+    },
+    "payLoad" : "selected.datefilters",
+    "processorInfo" : {
+        "processorId" : "c9446ff2-d98a-47fc-8dab-de047accdcbc"
+    },
+    "object" : "1064d9f3-395a-46d3-967b-8c2bcec15363",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "datefilterforbanktransaction",
+    "type" : "workflow"
+}

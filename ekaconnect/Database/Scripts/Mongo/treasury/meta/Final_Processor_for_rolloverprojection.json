@@ -1,0 +1,10 @@
+{
+    "_id" : "Final_Processor_for_rolloverprojection",
+    "name" : "Final_Processor_for_rolloverprojection",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "\r\n    var moment = require('moment');\r\n    function findbody(data) {\r\n      return {\r\n        rolledOverAmount: data.rolloverAmount,\r\n        rolledOverFromDate: data.rolloverDate,\r\n        rollOverType: data.rolloverType\r\n      };\r\n    }\r\n    var ekaprojection =\r\n      req.body.propertyList.platform_url + '/spring/cashManagement/projection/' + req.body.projectionId;\r\n    var ekaprojectionurl = {\r\n      method: 'PATCH',\r\n      url: ekaprojection,\r\n      body: findbody(req.body),\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'Content-Type': 'application/json'\r\n      },\r\n      json: true\r\n    };\r\n    var get_platformProjection = function get_platformProjection() {\r\n      console.log(JSON.stringify(ekaprojectionurl.body));\r\n      return new Promise(function(resolve, reject) {\r\n        request(ekaprojectionurl, function(err, response, body) {\r\n          if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n            resolve(body);\r\n          } else {\r\n            reject(body);\r\n          }\r\n        });\r\n      });\r\n    };\r\n    get_platformProjection()\r\n      .then(function(ent) {\r\n        res.status(200).send({ msg: 'Projection Updated Successfully' });\r\n      })\r\n      .catch(err => {\r\n        console.error(err);\r\n\t\tlet message = 'Failed to update';\r\n\t\tif(err.message.includes(\"Invalid Rollover Date or type\")) {\r\n\t\t\tmessage = 'Invalid Rollover Date or type';\r\n\t\t}\r\n        res.status(500).send(message);\r\n      });\r\n  ",
+    "sys__UUID" : "9164be0f-d7f8-457d-ba06-f3795a6957eb",
+    "sys__createdBy" : "avinash"
+}

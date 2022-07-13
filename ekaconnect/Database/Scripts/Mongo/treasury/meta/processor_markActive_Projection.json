@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_markActive_Projection",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "29b17600-2e9d-4784-9a08-390ab0a4d900"
+    },
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_ST_MARKACTIVE_PROJECTION",
+    "label" : "Activate using Processor",
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d"
+}

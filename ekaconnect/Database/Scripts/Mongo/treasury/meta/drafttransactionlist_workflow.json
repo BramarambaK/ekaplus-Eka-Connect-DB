@@ -1,0 +1,94 @@
+{
+    "_id" : "drafttransactionlist_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "drafttransactionlist",
+    "label" : "Transactions",
+    "object" : "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35",
+    "type" : "workflow",
+    "lazyLoading" : false,
+    "rows" : 20,
+    "layout" : {
+        "name" : "list",
+        "getInitialData" : false,
+        "pagination" : false,
+        "footer" : false,
+        "accordion" : {
+            "label" : "let debitData = data.reduce((a,b)=>{  if(b.Direction == 'Debit')(a = a + Number(b.amount)); return a},0) \r\nlet creditData = data.reduce((a,b)=>{if(b.Direction == 'Credit')(a = a + Number(b.amount)); return a},0)\r\nlet total = ''\r\nif(creditData >= debitData){\r\n    total = ' | Credit : ' +Number(Number(creditData - debitData).toFixed(2)).toLocaleString() + ' ' + data[0]['currency']\r\n}\r\nelse if(debitData > creditData){\r\n    total = ' | Debit : ' +Number(Number(debitData - creditData).toFixed(2)).toLocaleString() + ' ' +data[0]['currency']\r\n}\r\n'Transactions to be matched' + ' ( ' + data.length + ' ) ' + total"
+        },
+        "rows" : 20,
+        "searchPlaceHolder1" : "Search e.g. contract Id",
+        "messages1" : {
+            "emptyText" : "You have no Open contracts"
+        },
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "columnFilter" : false,
+            "search" : false,
+            "reload" : false,
+            "reset" : false,
+            "export" : false,
+            "operationV2" : false,
+            "customization" : false
+        },
+        "lazyLoading" : false,
+        "showCheckbox" : false,
+        "selectAll" : false,
+        "theme" : "theme-grid-white grid-disable-alternate-row-color accordion-list",
+        "selectionMode" : "none",
+        "resetSelection" : true,
+        "limitHeight" : true
+    },
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "bankName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "bankAccount"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "transactionId"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "classification"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "8%",
+            "key" : "currency"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "8%",
+            "align" : "right",
+            "key" : "amount"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Direction"
+        }
+    ],
+    "decisions" : [],
+    "labelKey" : "LIST"
+}

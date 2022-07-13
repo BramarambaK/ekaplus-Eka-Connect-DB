@@ -1,0 +1,22 @@
+{
+    "_id" : "Direction_type_treasury",
+    "type" : "property",
+    "name" : "Direction",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Direction",
+    "defaultValue" : [ 
+        {
+            "key" : "Debit",
+            "value" : "Debit"
+        }, 
+        {
+            "key" : "Credit",
+            "value" : "Credit"
+        }
+    ],
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "description" : "Values available for Direction"
+}

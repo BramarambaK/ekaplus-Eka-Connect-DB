@@ -1,0 +1,39 @@
+{
+    "_id" : "Entity_type_treasury",
+    "type" : "property",
+    "name" : "Entities",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Entities",
+    "defaultValue" : [ 
+        {
+            "key" : "Entity_1",
+            "value" : "Entity_1"
+        } , 
+        {
+            "key" : "Entity_2",
+            "value" : "Entity_2"
+        },
+        {
+            "key" : "Entity_3",
+            "value" : "Entity_3"
+        },
+        {
+            "key" : "Entity_4",
+            "value" : "Entity_4"
+        },
+        {
+            "key" : "Entity_5",
+            "value" : "Entity_5"
+        },
+        {
+            "key" : "Entity_6",
+            "value" : "Entity_6"
+        }
+         
+    ],
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "description" : "Values available for Entity Type"
+}

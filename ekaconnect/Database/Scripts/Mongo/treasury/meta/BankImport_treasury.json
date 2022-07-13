@@ -1,0 +1,94 @@
+{
+    "_id" : "BankImport_treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/apps/platform/?isApp=true#home",
+                    "name" : "matching"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "Cancel",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "globalfilter",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "selected.bankimport",
+                    "name" : "matching",
+                    "targetPath" : "${properties.platform_url}/apps/platform/?isApp=true#home"
+                }
+            ],
+            "label" : "RUN"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/apps/platform/?isApp=true#home",
+                    "name" : "matching"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [  
+        [ 
+            {
+                "key" : "engine",
+                "style" : {
+                    "width" : "100%",
+                    "margin-bottom" : "10px"
+                }
+            }
+        ]
+    ],
+    "label" : "Bank Import",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formLayoutStyle" : {},
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "processorInfo" : {
+            "processorId" : "d0737358-3b5d-493e-8053-3ef2754ab6a5"
+        }
+    },
+    "object" : "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "bankimport",
+    "type" : "workflow"
+}

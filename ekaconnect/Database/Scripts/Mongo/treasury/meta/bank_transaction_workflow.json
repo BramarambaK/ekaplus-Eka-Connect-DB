@@ -1,0 +1,310 @@
+{
+    "_id" : "bank_transaction_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "listingtransactions",
+    "label" : "List of Bank Transactions",
+    "object" : "1064d9f3-395a-46d3-967b-8c2bcec15363",
+    "type" : "workflow",
+    "payLoad" : "selected.datefilters",
+    "processorInfo" : {
+        "processorId" : "b56d0fda-b828-4a51-ab3d-7d799050d336"
+    },
+    "template" : [ 
+        {
+            "deviceType" : "web",
+            "template" : "cargill-web",
+            "config" : {
+                "aside" : ""
+            }
+        }, 
+        {
+            "deviceType" : "mobile",
+            "template" : "cargill-mobile",
+            "config" : {
+                "aside" : ""
+            }
+        }
+    ],
+    "lazyLoading" : false,
+    "rows" : 20,
+    "header" : {
+        "label" : "List of Bank Transactions",
+        "style" : {
+            "font-size" : "18px"
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "getInitialData" : true,
+        "showCheckbox" : true,
+        "dropdownDecisions" : true,
+        "preserveSelectedData" : true,
+        "selectionMode" : "multiple",
+        "selectAll" : true,
+        "rows" : 20,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : true,
+            "export" : false,
+            "showFilterHeader" : true
+        },
+        "layoutProcessor" : {
+            "processorId" : "51a4e3cd-82d6-40c8-af11-385d6a01938a"
+        },
+        "lazyLoading" : false,
+        "theme" : "theme-grid-white"
+    },
+    "fields" : [ 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Transaction Number",
+            "key" : "transactionRefNo",
+            "task" : "custom-link",
+            "category" : "link"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Entity",
+            "key" : "entity"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Bank Name",
+            "key" : "bankName"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Bank Account",
+            "key" : "accountNumber"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Transaction Date",
+            "key" : "valueDate"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Amount",
+            "align" : "right",
+            "key" : "transactionAmount",
+            "dataType" : "String"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Currency",
+            "key" : "currencyCode"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Direction",
+            "key" : "direction"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Classification",
+            "key" : "classification"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "External Ref Number",
+            "key" : "customerRefNo"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Status",
+            "key" : "status"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Remarks",
+            "key" : "comments"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Source",
+            "key" : "source"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Source Name",
+            "key" : "sourceID"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Updated By",
+            "key" : "updatedBy"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Updated Date",
+            "key" : "updatedDate"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "treasurymodal",
+                    "name" : "addnewbanktransaction"
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "CREATE",
+            "position" : "top",
+            "task" : "addbanktransaction",
+            "outsideOperations" : true
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass1" : "cr-edit-icon-treasury",
+            "position" : "top",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listingtransactions",
+                    "displayType" : "popup",
+                    "popupClass" : "treasurymodal",
+                    "name" : "editbanktransaction"
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "disabled" : "var arrData = record\r\nvar flag = true;\r\nif((Array.isArray(arrData) && arrData.length ==1 )&& (arrData[0].status == 'ACT')){\r\n flag=true   \r\n      }\r\n\t  else if (Array.isArray(arrData) && arrData.length !=1){\r\n\t\t  flag=false\r\n\t  }else {\r\n\t\tflag=false  \r\n\t  }\r\n\t  flag===false",
+            "label" : "Edit",
+            "task" : "editbanktransaction"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass1" : "cr-delete-icon-treasury",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.listingtransactions",
+                    "popupClass" : "treasurymodal custom-eka-modal",
+                    "name" : "deletebanktransaction"
+                }
+            ],
+            "disabled" : "var arrData = record\r\nvar flag = false;\r\nif (Array.isArray(arrData)){\r\n\tvar insideFlag = false;\r\n\tfor(let i=0;i < arrData.length;i++) {\r\n\t\tif(arrData[i].status != 'INA' && arrData[i].status != 'MAT' ) {\r\n\t\t\tinsideFlag=true\r\n\t\t} else {\r\n\t\t\tinsideFlag=false\r\n\t\t\tbreak;\r\n\t\t}\r\n\t}\r\n\tflag=insideFlag\r\n\r\n}\r\n\t  flag===false",
+            "position" : "top",
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "Delete",
+            "task" : "deletebanktransaction"
+        }, 
+        {
+            "btnClass" : "link p-0 treasury-order-first",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "labelExpression" : "return '${datefilters}'!='' && '${datefilters}'!='{}' ? ((JSON.parse('${datefilters.formcheckbox}') || []).join(', ') || 'No Entity') : 'All Entities'",
+            "label" : "All Entities",
+            "position" : "top",
+            "style" : {
+                "pointer-events" : "none",
+                "border-left" : "1px solid  #CCCCCC",
+                "border-top" : "1px solid  #CCCCCC",
+                "border-bottom" : "1px solid  #CCCCCC",
+                "border-top-left-radius" : "3px",
+                "border-bottom-left-radius" : "3px",
+                "padding" : "0 5px",
+                "height" : "35px"
+            },
+            "task" : "text",
+            "outsideOperations" : true
+        }, 
+        {
+            "btnClass" : "link p-0 treasury-order-second",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "labelExpression" : "return '${datefilters}' && moment('${datefilters.filterDate}').isValid() && moment('${datefilters.toDate}').isValid() ? (moment('${datefilters.filterDate}').format('DD-MMM-YYYY') +' '+'to'+' '+  moment('${datefilters.toDate}').format('DD-MMM-YYYY')) : moment(new Date()).format('DD-MMM-YYYY') + ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')",
+            "label" : "Unselected",
+            "style" : {
+                "margin-right" : "auto",
+                "pointer-events" : "none",
+                "border-left" : "1px solid  #CCCCCC",
+                "border-top" : "1px solid  #CCCCCC",
+                "border-bottom" : "1px solid  #CCCCCC",
+                "padding" : "0 5px",
+                "height" : "35px"
+            },
+            "position" : "top",
+            "task" : "text",
+            "outsideOperations" : true
+        }, 
+        {
+            "btnClass" : "cr-edi-icon-treasury treasury-order-third",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "globalfilter",
+                    "name" : "datefilterforbanktransaction"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto",
+                "border-right" : "1px solid  #CCCCCC",
+                "border-top" : "1px solid  #CCCCCC",
+                "border-left" : "1px solid  #CCCCCC",
+                "border-bottom" : "1px solid  #CCCCCC",
+                "border-top-right-radius" : "3px",
+                "border-bottom-right-radius" : "3px",
+                "padding" : "0 5px",
+                "height" : "35px",
+                "width" : "30px"
+            },
+            "label" : " ",
+            "position" : "top",
+            "task" : "text",
+            "outsideOperations" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "selection" : "custom-link",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.listingtransactions",
+                    "popupClass" : "treasurymodal",
+                    "name" : "viewtransactions"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "LIST"
+}

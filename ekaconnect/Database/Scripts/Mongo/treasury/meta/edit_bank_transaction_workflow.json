@@ -1,0 +1,220 @@
+{
+    "_id" : "edit_bank_transaction_workflow",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "listingtransactions",
+                    "clearSelected" : [ 
+                        "selected.editbanktransaction"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editbanktransaction",
+            "type" : "submit",
+            "style" : {
+                "margin-top" : "2px"
+            },
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.editbanktransaction",
+                    "name" : "_ST_VALIDATE_BANK_TRANSACTION",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.editbanktransaction",
+                    "result" : {
+                        "success" : {
+                            "message" : "Status"
+                        },
+                        "failure" : {
+                            "message" : "Status"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "name" : "editbanktransactionprocessor",
+                    "clearSelected" : [ 
+                        "selected.editbanktransaction"
+                    ],
+                    "appendMsg" : false
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "resetForm" : true,
+                    "name" : "listingtransactions"
+                }
+            ],
+            "label" : "SAVE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "listingtransactions",
+                    "clearSelected" : [ 
+                        "selected.editbanktransaction"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "entity",
+                "disabled" : true,
+				"UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "accountNumber",
+				"disabled" : true,
+				"UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox",
+                "disabled" : true,
+                "isRequired" : false
+            }
+        ], 
+        [ 
+            {
+                "key" : "transactionRefNo",
+                "disabled" : true
+            }, 
+            {
+                "key" : "valueDate",
+                "class" : "treasury-date",
+                "disabled" : true
+            }, 
+            {
+                "key" : "transactionAmount",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "0px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                },
+                "isRequired" : true
+            }, 
+            {
+                "key" : "currencyCode",
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                },
+                "isRequired" : false
+            }
+        ], 
+        [ 
+            {
+                "key" : "direction",
+                "disabled" : true,
+				"UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "classification",
+                "type" : "dropdown"
+            }, 
+            {
+                "key" : "comments"
+            }
+        ], 
+        [ 
+            {
+                "key" : "bankID",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "currencyhidden",
+                "type" : "textbox",
+                "event" : "if(value){data.currencyCode =  {value:value,disable:true}} else {data.currencyCode =  {value:data.c7,disable:false}}",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "transactionRefNo",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "status",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }
+        ]
+    ],
+    "label" : "Edit: ${listingtransactions[0].transactionRefNo}",
+	"processorInfo" : {
+        "processorId" : "f990913d-e1b2-408d-bf7a-e945bfa8bad5"
+    },
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "178px",
+            "margin-right" : "24px",
+            "margin-bottom" : "6px"
+        },
+        "processorInfo" : {
+            "processorId" : "e5b22971-e0e1-4907-8116-6eb73a3e9eff"
+        },
+        "name" : "create",
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "1064d9f3-395a-46d3-967b-8c2bcec15363",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "editbanktransaction",
+    "type" : "workflow"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_for_datefilter",
+    "name" : "Initial_Processor_for_datefilter",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "\r\n    var ekaEntity = req.body.propertyList.platform_url + '\/spring\/cashManagement\/entity';\r\n    var platformEntity = {\r\n      method: 'GET',\r\n      url: ekaEntity,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'Content-Type': 'application\/json',\r\n        ttl: 300,\r\n        'X-TenantID': req.headers['x-tenantid'],\r\n        'X-Remote-User': 'ekaApp'\r\n      },\r\n      json: true\r\n    };\r\n    var get_platformEntity = function get_platformEntity() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(platformEntity, function(err, response, body) {\r\n          if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n            resolve(body);\r\n          } else {\r\n            reject(body);\r\n          }\r\n        });\r\n      });\r\n    };\r\n    if (req.body.hasOwnProperty('selectedData')) {\r\n      res.status(200).send(req.body['selectedData']);\r\n      return;\r\n    } else {\r\n      get_platformEntity().then(function(ent) {\r\n        var entity = ent.map(function(res) {\r\n          return res['c1'];\r\n        });\r\n        res.status(200).send({ 'filterDate' : new Date(), 'toDate' : new Date(), formcheckbox: entity});\r\n      });\r\n    }\r\n  ",
+    "sys__UUID" : "c9446ff2-d98a-47fc-8dab-de047accdcbc",
+    "sys__createdBy" : "avinash"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_bulkprocess_projection",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "b924d0f0-199c-451b-9ff7-b04acb5959a2"
+    },
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_ST_BULKPROCESS_PROJECTION",
+    "label" : "Using Processor",
+    "object" : "3b99ce3f-d6e4-4308-9602-bc6ffc783e22"
+}

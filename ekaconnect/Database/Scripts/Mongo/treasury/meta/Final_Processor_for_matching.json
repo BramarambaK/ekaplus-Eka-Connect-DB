@@ -1,0 +1,10 @@
+{
+    "_id" : "Final_Processor_for_matching",
+    "name" : "Final_Processor_for_matching",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "\r\n\r\n    var ekaunmatched = req.body.propertyList.platform_url + '/spring/cashManagement/unmatch';\r\n    var unmatchedbody = [];\r\n    if (\r\n      req.body.hasOwnProperty('matching') &&\r\n      req.body.matching.hasOwnProperty('matchinglistdynamic') &&\r\n      Array.isArray(req.body.matching.matchinglistdynamic)\r\n    ) {\r\n      unmatchedbody = req.body.matching.matchinglistdynamic.map(item => {return item.d1});\r\n    }\r\n\r\n    var platformMatchedURL = {\r\n      method: 'DELETE',\r\n      url: ekaunmatched,\r\n      body: unmatchedbody,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'Content-Type': 'application/json',\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    var platformMatched = function get_platformEntitySummaryData() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(platformMatchedURL, function(err, response, body) {\r\n          if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n            resolve(body);\r\n          } else {\r\n            reject(body);\r\n          }\r\n        });\r\n      });\r\n    };\r\n    platformMatched().then(function(response) {\r\n      res.status(200).send({ msg: 'Transaction(s) Unmatched successfully !' });\r\n    }).catch(err=>{\r\n      res.status(500).send('Transaction(s) UnMatching  failed !' );\r\n    });",
+    "sys__UUID" : "b3b7723b-897c-4994-bc88-8d793cd7ce705",
+    "sys__createdBy" : "avinash"
+}

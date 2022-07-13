@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_delete_Projection",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "6688deb8-ce2c-414f-a148-83747e4dde56"
+    },
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_PROJECTION",
+    "label" : "Delete using Processor",
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d"
+}

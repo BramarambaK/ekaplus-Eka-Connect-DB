@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_Edit_for_transactions",
+    "name" : "Initial_Processor_Edit_for_transactions",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "res.status(200).send(req.body.selectedData.data[0])",
+    "sys__UUID" : "f990913d-e1b2-408d-bf7a-e945bfa8bad5",
+    "sys__createdBy" : "Jay"
+}

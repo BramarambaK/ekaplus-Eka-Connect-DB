@@ -1,0 +1,10 @@
+{
+    "_id" : "Final_Processor_for_markactive",
+    "name" : "Final_Processor_for_markactive",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "var moment = require(\"moment\");\r\nvar ids = req.body.projectionId;\r\nvar ekaprojection =\r\n  req.body.propertyList.platform_url +\r\n  \"/spring/cashManagement/projection?projectionIds=\" +\r\n  ids;\r\nvar ekaprojectionurl = {\r\n  method: \"PATCH\",\r\n  url: ekaprojection,\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    \"Content-Type\": \"application/json\",\r\n  },\r\n  json: true,\r\n};\r\nvar get_platformProjection = function get_platformProjection() {\r\n  return new Promise(function (resolve, reject) {\r\n    request(ekaprojectionurl, function (err, response, body) {\r\n      if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n        resolve(body);\r\n      } else {\r\n        reject(body);\r\n      }\r\n    });\r\n  });\r\n};\r\nget_platformProjection()\r\n  .then(function (ent) {\r\n    res.status(200).send({ msg: \"Projection Activated Successfully\" });\r\n  })\r\n  .catch((err) => {\r\n\tconsole.error(err);\r\n\tlet message = \"Failed to activate\";\r\n    if (err.message.includes(\"System allows to delete only 20 records at a time\")) {\r\n         message = \"System allows to delete only 20 records at a time\";\r\n    } else if (err.message.includes(\"One of the record status is Active. Please select only Inactive records.\")) {\r\n         message = \"One of the record status is Active. Please select only Inactive records.\";\r\n    }\r\n    res.status(500).send(message);\r\n  });\r\n",
+    "sys__UUID" : "29b17600-2e9d-4784-9a08-390ab0a4d900",
+    "sys__createdBy" : "avinash"
+}

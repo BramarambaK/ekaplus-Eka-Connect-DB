@@ -1,0 +1,121 @@
+{
+    "_id" : "listing_status_log_projection_platform_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "projectionStatusLogPlatform",
+    "label" : "List of Bulk Process Status Log - Projections",
+    "object" : "3b99ce3f-d6e4-4308-9602-bc6ffc783e22",
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "d6103711-141f-4909-adea-c92c8618b957"
+    },
+    "lazyLoading" : false,
+    "rows" : 20,
+    "header" : {
+        "label" : "List of Bulk Process Status Log - Projections",
+        "style" : {
+            "font-size" : "18px"
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "getInitialData" : true,
+        "preserveSelectedData" : true,
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "rows" : 20,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : false,
+            "reset" : true,
+            "export" : false
+        },
+        "lazyLoading" : false,
+		"routeOnRefresh" : "projectionStatusLog",
+        "theme" : "theme-grid-white"
+    },
+    "fields" : [ 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "10%",
+            "label" : "Process ID",
+            "key" : "processID"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "10%",
+            "label" : "Total Records",
+            "key" : "totalRecords",
+            "dataType" : "String"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "15%",
+            "label" : "Successful Records",
+            "key" : "successfulRecords"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "15%",
+            "label" : "Failed Records",
+            "key" : "failedRecords"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "10%",
+            "label" : "Status",
+            "key" : "status",
+            "highlight" : {
+                "default" : "status-icon"
+            }
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "10%",
+            "label" : "Created By",
+            "key" : "user"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "15%",
+            "label" : "Created Date",
+            "key" : "createdDate"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "width" : "15%",
+            "label" : "Error Status",
+            "key" : "errorLog",
+			"category" : "link",
+            "task" : "download-error-document",
+            "highlight" : {
+                "default" : "icon-download"
+            }
+        }
+    ],
+    "decisions" : [
+	    {
+            "objectAction" : "CREATE",
+            "autoExecute" : true,
+            "outcomes" : [ 
+                {
+                  "name" : "projectionStatusLog"
+                }
+            ]
+        }
+	],
+    "labelKey" : "LIST"
+}

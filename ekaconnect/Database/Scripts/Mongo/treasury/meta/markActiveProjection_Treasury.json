@@ -1,0 +1,122 @@
+{
+    "_id" : "markActiveProjection_Treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "projections",
+                    "clearSelected" : [ 
+                        "selected.markActiveProjection", 
+                        "selected.projections"
+                    ]
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "DELETE",
+            "task" : "markActiveProjection",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Projection Activated successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "data" : "output.markActiveProjection",
+                    "clearSelected" : [ 
+                        "selected.markActiveProjection", 
+                        "selected.projections"
+                    ],
+                    "appendMsg" : true,
+                    "name" : "_ST_MARKACTIVE_PROJECTION"
+                }, 
+                {
+                    "name" : "projections",
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CONFIRM",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "projections",
+                    "clearSelected" : [ 
+                        "selected.markActiveProjection", 
+                        "selected.projections"
+                    ]
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "message",
+                "type" : "readOnly",
+                "value" : "Are you sure you want to mark projections are Active?",
+                "disabled" : "true",
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "360px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "projectionId",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                }
+            }
+        ]
+    ],
+    "label" : "Mark Active Projection",
+    "processorInfo" : {
+        "processorId" : "15b0e189-2717-49ee-a570-df52fd949103"
+    },
+    "labelKey" : "DELETE_OFFER",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "defaultFormItemStyle" : {
+            "width" : "10px",
+            "margin-right" : "26px",
+            "margin-bottom" : "10px"
+        },
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "taskId" : "markActiveProjection",
+    "type" : "workflow"
+}

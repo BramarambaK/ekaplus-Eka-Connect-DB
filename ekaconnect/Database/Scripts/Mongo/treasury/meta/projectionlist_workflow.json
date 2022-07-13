@@ -1,0 +1,132 @@
+{
+  "_id": "projectionlist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+  "taskId": "projectionlist",
+  "label": "Un-matched Projection List",
+  "object": "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "69567b8d-a93e-49f7-be50-f0646adb0bac"
+  },
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "list",
+    "pagination": true,
+    "header": true,
+    "processorInfo": {
+      "processorId": "a4668ced-7ba8-4f25-87c5-4d8a516339b8"
+    },
+    "getInitialData": true,
+    "rows": 20,
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "columnFilter": false,
+      "search": false,
+      "reload": false,
+      "reset": false,
+      "export": false,
+      "operationV2": false,
+      "customization": false
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "tableEditing": true,
+    "selectAll": true,
+    "theme": "theme-grid-white",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "limitHeight": true,
+    "deleteRow": {
+      "action": "remove"
+    }
+  },
+  "fields": [
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Bank Name",
+      "key": "bankName"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Bank Account",
+      "key": "bankAccount"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Projection ID",
+      "key": "projectionId"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Classification",
+      "key": "classification"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Currency",
+      "key": "currency"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Amount",
+      "key": "amount"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Direction",
+      "key": "Direction"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Transaction ID",
+      "key": "transactionId"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Remarks",
+      "key": "remarks"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "type": "hidden",
+      "label": " ",
+      "event": "if (data.hasOwnProperty(\"projectionlist\") && data.projectionlist.length == 1) {\r\n  for (let i = 0; i < data.projectionlist.length; i++) {\r\n    if (data.projectionlist[i][\"sys__state\"][\"transactionId\"][\"edit\"])\r\n      data.projectionlist[i][\"sys__state\"][\"transactionId\"][\"disable\"] = true;\r\n    if (\r\n      !data.projectionlist[i][\"sys__state\"][\"transactionId\"].hasOwnProperty(\r\n        \"edit\"\r\n      )\r\n    )\r\n      data.projectionlist[i][\"sys__state\"][\"transactionId\"][\"disable\"] = false;\r\n  }\r\n} else if (\r\n  data.hasOwnProperty(\"projectionlist\") &&\r\n  data.projectionlist.length == 0\r\n) {\r\n  record[\"sys__state\"][\"transactionId\"][\"disable\"] = false;\r\n} else {\r\n  for (let i = 0; i < data.projectionlist.length; i++) {\r\n    data.projectionlist[i][\"sys__state\"][\"transactionId\"][\"disable\"] = false;\r\n  }\r\n}\r\n\r\nrecord[\"sys__state\"][\"remarks\"][\"edit\"] =\r\n  previousvalue[index] && previousvalue[index] == true ? true : false;\r\n  record[\"remarks\"] = previousvalue[index] && previousvalue[index] == true ? '' : '-';\r\n",
+      "key": "sys__state"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-primary project-btn",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "reload": ["projectionlist"],
+          "type": "client"
+        }
+      ],
+      "position": "top",
+      "label": "ADD PROJECTION",
+      "iconClass": "createicon"
+    }
+  ],
+  "labelKey": "LIST"
+}

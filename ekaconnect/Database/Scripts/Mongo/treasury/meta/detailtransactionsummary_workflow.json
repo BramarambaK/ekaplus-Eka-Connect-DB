@@ -1,0 +1,45 @@
+{
+  "_id": "detailtransactionsummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+  "label": " summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false
+  },
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "TotalTransactionValue",
+        "aggregateFunction": "value",
+        "label": "return 'Total Transaction Value'",
+        "prefix": "$"
+      },
+      {
+        "key": "TotalProjectionValue",
+        "label": "return 'Total Projection Value'",
+        "aggregateFunction": "value",
+        "prefix": "$"
+      },
+      {
+        "key": "MacthedValue",
+        "label": "return 'Matched Value'",
+        "aggregateFunction": "value",
+        "prefix": "$"
+      },
+      {
+        "key": "RollOverTransactionValue",
+        "label": "return 'Rollover Value'",
+        "aggregateFunction": "value",
+        "prefix": "$"
+      }
+    ]
+  ],
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "detailtransactionsummary",
+  "object": "58a41093-cee2-4a4a-9ed6-9b9d1b76cf4d"
+}

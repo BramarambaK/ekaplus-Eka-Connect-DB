@@ -1,0 +1,23 @@
+{
+    "_id" : "treasury_app_eka_rollover_policy",
+    "type" : "policy",
+    "app_UUID" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "refType" : "object",
+    "refTypeId" : "3faf590c-d172-42e7-82ff-3c63863c1f98",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

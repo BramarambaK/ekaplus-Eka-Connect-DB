@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_for_projection_status_log",
+    "name" : "Initial_Processor_for_projection_status_log",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "var moment = require(\"moment\");\r\nvar ekaprojection =\r\n  req.body.propertyList.platform_url +\r\n  \"\/spring\/cashManagement\/projection\/bulkProcess\";\r\nvar ekaprojectionurl = {\r\n  method: \"POST\",\r\n  url: ekaprojection,\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    \"Content-Type\": \"application\/json\",\r\n  },\r\n  json: true,\r\n};\r\nvar get_platformProjection = function get_platformProjection() {\r\n  return new Promise(function (resolve, reject) {\r\n    request(ekaprojectionurl, function (err, response, body) {\r\n      if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n        resolve(body);\r\n      } else {\r\n        reject(body);\r\n      }\r\n    });\r\n  });\r\n};\r\nget_platformProjection()\r\n  .then(function (ent) {\r\n    res.status(200).send({ msg: \"Bulk processing of the Projection has been done successfully\" });\r\n  })\r\n  .catch((err) => {\r\n    console.error(err);\r\n    res.status(500).send({ msg: \"failed to create\" });\r\n  });\r\n",
+    "sys__UUID" : "b924d0f0-199c-451b-9ff7-b04acb5959a2",
+    "sys__createdBy" : "Jay"
+}

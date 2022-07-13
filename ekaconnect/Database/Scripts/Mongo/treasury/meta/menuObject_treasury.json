@@ -1,0 +1,106 @@
+{
+    "_id" : "menuObject_treasury",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Transactions",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "Engine",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "bankimport",
+                                    "text" : "Bank Import",
+                                    "displayType" : "popup",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }, 
+                        {
+                            "text" : "Bulk Process Status Log",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "transactionlistingcompositev1",
+                                    "clearSelected" : [ 
+                                        "selected.projectionlistingcompositev1"
+                                    ],
+                                    "text" : "Bank Transactions",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "projectionStatusLog",
+                                    "clearSelected" : [ 
+                                        "selected.projectionStatusLog"
+                                    ],
+                                    "text" : "Projections",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }, 
+                        {
+                            "text" : "Bank Transactions",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "listingtransactions",
+                                    "text" : "List All",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }, 
+                        {
+                            "text" : "Project Cash",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "projections",
+                                    "clearSelected" : [ 
+                                        "selected.projectionlistingcompositev1"
+                                    ],
+                                    "text" : "List All",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "projectionstatuslogs",
+									"displayType" : "popup",
+                                    "popupClass" : "popup-w350-h160",
+                                    "text" : "Bulk Process",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }, 
+                        {
+                            "text" : "Matching",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "transactionlistingcompositev1",
+                                    "clearSelected" : [ 
+                                        "selected.projectionlistingcompositev1"
+                                    ],
+                                    "text" : "Bank Reconciliation",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "matching",
+                                    "text" : "List All Matched Items",
+                                    "clearSelected" : [ 
+                                        "selected.projectionlistingcompositev1"
+                                    ],
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "menuObject"
+}

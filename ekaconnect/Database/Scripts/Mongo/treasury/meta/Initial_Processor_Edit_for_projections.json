@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_Edit_for_projections",
+    "name" : "Initial_Processor_Edit_for_projections",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "res.status(200).send(req.body.selectedData.data[0])",
+    "sys__UUID" : "9fca9f4a-31a1-43df-b1a7-03f052c2063e",
+    "sys__createdBy" : "Jay"
+}

@@ -1,0 +1,42 @@
+{
+    "_id" : "Filter_Object",
+    "name" : "filter Entity",
+    "label" : "filter Data",
+    "type" : "object",
+    "version" : "3",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [],
+    "fields" : {
+        "filterDate" : {
+            "labelKey" : "filterDate",
+            "filterDate" : "Date",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "fb6f1d14-aa83-4cc1-885b-525acc32001c"
+}

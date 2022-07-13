@@ -1,0 +1,10 @@
+{
+    "_id" : "MDM_Processor_for_projectionlistingcompositev1",
+    "name" : "MDM_Processor_for_projectionlistingcompositev1",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "\r\n    let mdmbody = JSON.parse(req.body.mdmProcessorServiceKey);\r\n    req.body.mdmProcessorServiceKey = JSON.parse(req.body.mdmProcessorServiceKey);\r\n    async function promiseHandler(promise) {\r\n      return promise.then(data => [null, data]).catch(err => [err]);\r\n    }\r\n    function findindex(serviceKey) {\r\n      return req.body.mdmProcessorServiceKey.findIndex(x => x.serviceKey == serviceKey);\r\n    }\r\n    async function main() {\r\n      let mdmdata = {\r\n        transactions: []\r\n      };\r\n      if (req.body.selectedData.hasOwnProperty('transactionlistdynamic') && findindex('transactions') != -1 && Array.isArray(req.body.selectedData.transactionlistdynamic)){\r\n        mdmdata.transactions = req.body.selectedData.transactionlistdynamic.map((item)=>{\r\n           return {key:item['transactionId'],value:item['transactionId']}\r\n        })\r\n      }\r\n      else if (req.body.selectedData.hasOwnProperty('transactionlistingcompositev1') && findindex('transactions') != -1 && Array.isArray(req.body.selectedData.transactionlistingcompositev1.transactionlistdynamic)){\r\n        mdmdata.transactions = req.body.selectedData.transactionlistingcompositev1.transactionlistdynamic.map((item)=>{\r\n           return {key:item['transactionId'],value:item['transactionId']}\r\n        })\r\n      }\r\n      return mdmdata \r\n    }\r\n    main().then(mdmdata => {\r\n      res.status(200).send(mdmdata);\r\n    });\r\n   ",
+    "sys__UUID" : "a4668ced-7ba8-4f25-87c5-4d8a516339b8",
+    "sys__createdBy" : "avinash"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "layout_Processor_for_projections",
+    "name" : "layout_Processor_for_projections",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "snippet" : "var moment = require('moment');\r\nlet flow = req.body.flow;\r\n flow.projections.decisions = flow.projections.decisions.map(decision=>{\r\n     if(decision.label ==='Unselected'){\r\n         decision.label = moment(new Date()).format('DD-MMM-YYYY')+ ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')\r\n         return decision\r\n     }\r\n     else return decision\r\n })\r\n  res.status(200).send( {\r\n    appId: req.body.appId,\r\n    flow: flow,\r\n    object: req.body.object,\r\n    objectMeta: req.body.objectMeta,\r\n    properties: req.body.properties\r\n  });\r\n",
+    "sys__UUID" : "4123e2ab-8dc2-4205-bcba-6e7dee535e9b",
+    "sys__createdBy" : "avinash"
+}

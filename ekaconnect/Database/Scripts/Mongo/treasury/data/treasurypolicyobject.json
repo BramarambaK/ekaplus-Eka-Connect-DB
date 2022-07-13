@@ -1,0 +1,23 @@
+  {
+    "_id" : "treasury_app_policy",
+    "type" : "policy",
+    "app_UUID" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "refType" : "object",
+    "refTypeId" : "608b3583-d387-4cea-8acd-cc97f397cc8e",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

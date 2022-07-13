@@ -1,0 +1,241 @@
+{
+    "_id" : "Bank_Transaction_Object",
+    "name" : "banktransactions",
+    "label" : "bank transaction Data",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [],
+    "fields" : {
+        "entity" : {
+            "entity" : "Entity",
+            "labelKey" : "entity",
+            "type" : "dropdown",
+            "serviceKey" : "ngrFilterKey",
+            "isRequired" : true,
+            "children" : [ 
+                "currencyCode", 
+                "bankName", 
+                "accountNumber", 
+                "currencyhidden", 
+                "bankID",
+				"classification"
+				
+            ]
+        },
+        "classification" : {
+            "classification" : "Classification",
+            "labelKey" : "classification",
+            "isRequired" : false,
+            "dataType" : "dropdown",
+            "type" : "textbox",
+            "serviceKey" : "classification"
+        },
+        "customerRefNo" : {
+            "customerRefNo" : "External Ref No",
+            "labelKey" : "customerRefNo",
+            "isRequired" : false,
+            "dataType" : "String",
+            "type" : "textbox"
+        },
+        "transactionRefNo" : {
+            "transactionRefNo" : "Transaction Number",
+            "labelKey" : "transactionRefNo",
+            "isRequired" : true,
+            "dataType" : "String",
+            "type" : "textbox"
+        },
+        "bankName" : {
+            "labelKey" : "bankName",
+            "bankName" : "Bank Name",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "serviceKey" : "bankName",
+            "parent" : [ 
+                "entity", 
+                "accountNumber"
+            ],
+            "UIupdates" : {
+                "disability" : "return  true"
+            },
+            "dataType" : "String"
+        },
+        "bankID" : {
+            "labelKey" : "bankID",
+            "bankID" : "Bank Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankId",
+            "parent" : [ 
+                "entity", 
+                "accountNumber"
+            ],
+            "UIupdates" : {
+                "disability" : "return  true"
+            },
+            "dataType" : "String"
+        },
+        "accountNumber" : {
+            "labelKey" : "accountNumber",
+            "accountNumber" : "Bank Account",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "serviceKey" : "bankAccount",
+            "parent" : [ 
+                "entity"
+            ],
+            "children" : [ 
+                "bankName", 
+                "bankID", 
+                "currencyhidden"
+            ],
+            "dataType" : "String"
+        },
+        "filterDate" : {
+            "labelKey" : "filterDate",
+            "filterDate" : "Date Range",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "maximumDate" : " if('${toDate}') {return '${toDate}'} else{return new Date(8640000000000000)} "
+        },
+        "toDate" : {
+            "labelKey" : "toDate",
+            "toDate" : " ",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "minimumDate" : " if('${filterDate}')  {return '${filterDate}'}  else{return true}"
+        },
+        "valueDate" : {
+            "labelKey" : "valueDate",
+            "valueDate" : "Transaction Date",
+            "isRequired" : true,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "class" : "treasury-date",
+            "yearNavigator" : true,
+            "monthNavigator" : true,
+            "yearRange" : "2000:2030",
+            "showButtonBar" : true
+        },
+        "currencyCode" : {
+            "labelKey" : "currencyCode",
+            "currencyCode" : " ",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currency",
+            "parent" : [ 
+                "entity"
+            ],
+            "UIupdates" : {
+                "value" : "if('${currencyhidden}' !='null') return '${currencyhidden}'"
+            },
+            "dataType" : "String"
+        },
+        "currencyhidden" : {
+            "labelKey" : "currencyhidden",
+            "currencyhidden" : "",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currencyhidden",
+            "parent" : [ 
+                "entity", 
+                "accountNumber"
+            ],
+            "dataType" : "String"
+        },
+        "status" : {
+            "labelKey" : "status",
+            "status" : "Status",
+            "isRequired" : false,
+            "dataType" : "String",
+            "type" : "dropdown"
+        },
+        "direction" : {
+            "labelKey" : "direction",
+            "direction" : "Direction",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "Direction"
+        },
+        "transactionAmount" : {
+            "labelKey" : "transactionAmount",
+            "transactionAmount" : "Amount",
+            "isRequired" : true,
+            "type" : "textbox",
+            "UIupdates" : {
+                "listValue" : "return Number('${transactionAmount}').toLocaleString('en-US', {maximumFractionDigits:2})"
+            },
+            "valueCheck" : "if(${transactionAmount}==0) {return 'T-100'} else if(${transactionAmount} < 0) {return 'T-101'} else { return true}",
+            "validationRegex" : "^\\d+\\.?\\d{0,2}$",
+            "autocomplete" : "off"
+        },
+        "ngrFilter" : {
+            "ngrFilter" : " ",
+            "labelKey" : "ngrFilter",
+            "type" : "multiselect",
+            "serviceKey" : "ngrFilterKey",
+            "isRequired" : false
+        },
+        "formcheckbox" : {
+            "formcheckbox" : "Entity",
+            "labelKey" : "formcheckbox",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey" : "ngrFilterKey"
+        },
+        "add" : {
+            "add" : "Add",
+            "labelKey" : "add",
+            "type" : "button",
+            "isRequired" : false
+        },
+        "comments" : {
+            "labelKey" : "comments",
+            "comments" : "Remarks",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+		"message" : {
+            "labelKey" : "message",
+            "message" : "",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "source" : {
+            "labelKey" : "source",
+            "source" : "Source",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "1064d9f3-395a-46d3-967b-8c2bcec15363"
+}

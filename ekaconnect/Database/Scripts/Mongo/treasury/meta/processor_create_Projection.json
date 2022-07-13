@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_create_Projection",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "16471a71-ed43-4649-83c7-694c788ce11d"
+    },
+    "refType" : "app",
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "type" : "workflow",
+    "taskId" : "createprojection",
+    "label" : "Save using Processor",
+    "object" : "e833e4b5-e278-4769-b02e-d7f9483a230d"
+}

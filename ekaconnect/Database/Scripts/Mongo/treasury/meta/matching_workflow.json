@@ -1,0 +1,200 @@
+{
+  "_id": "matching_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "payLoad": "selected.datefilters",
+  "processorInfo": {
+    "processorId": "da108de5-ff30-4c96-86eb-ec3497ba7cdb"
+  },
+  "refTypeId": "e4ba81fc-1304-4f01-b641-7425da52a666",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "workflows": [
+        {
+          "style": {
+            "width": "100%"
+          },
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "summaryofcash",
+                  "data": "selected.matching.summaryofcash"
+                }
+              ]
+            },
+            {
+              "workflows": [
+                {
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "matchinglistdynamic",
+                          "data": "selected.matching.data"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "label": "Matched Items",
+  "layout": {
+    "name": "customv2",
+    "menu": false,
+    "supportCustomization": true,
+    "customScrollBar": true,
+    "ignoreUserInfo": true
+  },
+  "decisions": [
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "return '${datefilters}'!='' && '${datefilters}'!='{}' ? ((JSON.parse('${datefilters.formcheckbox}') || []).join(', ') || 'No Entity') : 'All Entities'",
+      "label": "All Entities",
+      "position": "top",
+      "style": {
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-left-radius": "3px",
+        "border-bottom-left-radius": "3px",
+        "padding": "0 5px",
+        "height": "33px"
+      },
+      "task": "text"
+    },
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "if('${datefilters}' ) return moment('${datefilters.filterDate}').format('DD-MMM-YYYY') ; else return moment(new Date()).format('DD-MMM-YYYY')",
+      "label": "Unselected",
+      "style": {
+        "margin-right": "auto",
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "padding": "0 5px",
+        "height": "33px"
+      },
+      "position": "top",
+      "task": "text"
+    },
+    {
+      "btnClass": "cr-edi-icon-treasury",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "globalfilter",
+          "name": "datefilterformfrommatching"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "border-right": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-left": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-right-radius": "3px",
+        "border-bottom-right-radius": "3px",
+        "padding": "0 5px",
+        "height": "33px",
+        "width": "30px"
+      },
+      "label": " ",
+      "position": "top",
+      "task": "text"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "matching",
+      "passSelectedData": "selected",
+      "type": "submit",
+      "position": "bottom",
+      "disabled": "!(Array.isArray(selected.matching.matchinglistdynamic)) || selected.matching.matchinglistdynamic.length == 0",
+      "outcomes": [
+        {
+          "data": "output.matching",
+          "result": {
+            "success": {
+              "message": "Status"
+            },
+            "failure": {
+              "message": "Status"
+            },
+            "successWithWarning": {
+              "message": ""
+            }
+          },
+          "name": "unmatchtransaction",
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output.unmatchtransaction",
+              "value": "msg"
+            }
+          ]
+        },
+        {
+          "result": {
+            "success": {
+              "message": "data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "data got replaced with some errors"
+            }
+          },
+          "showToaster": true,
+          "data": "output.unmatchtransaction",
+          "name": "transactionlistingcompositev1"
+        }
+      ],
+      "label": "UNMATCH",
+      "iconClass": "cr-edit-icon"
+    }
+  ],
+  "taskId": "matching",
+  "object": "3bf1d9c3-1c7e-45d6-a9c3-7860959f4f35"
+}

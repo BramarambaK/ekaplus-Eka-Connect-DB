@@ -1,0 +1,23 @@
+{
+    "_id" : "mappingType_type_treasury",
+    "type" : "property",
+    "name" : "mappingType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "mappingType Type",
+    "defaultValue" : [ 
+        {
+            "key" : "Default",
+            "value" : "Default"
+        } , 
+        {
+            "key" : "One to One Match",
+            "value" : "One to One Match"
+        }
+         
+    ],
+    "refTypeId" : "e4ba81fc-1304-4f01-b641-7425da52a666",
+    "description" : "Values available for Transaction Type"
+}
