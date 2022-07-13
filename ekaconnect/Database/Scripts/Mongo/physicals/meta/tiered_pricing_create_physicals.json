@@ -1,0 +1,44 @@
+{
+    "_id" : "tiered_pricing_sc",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "Tiered_Pricing_Save",
+            "outcomes" : [ 
+                {
+                    "data" : "output.Tiered_Pricing_Save",
+                    "name" : "_ST_CREATE_TIERED_PRICING",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Tiered Pricing is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Tiered Pricing is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._ST_CREATE_TIERED_PRICING",
+                    "name" : "Tiered_Pricing_Save"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "Tiered Pricing object",
+    "labelKey" : "Tiered_Pricing_object",
+    "layout" : {},
+    "object" : "fb40488f-e9bb-4c92-8299-618177d8da99",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "Tiered_Pricing_Save",
+    "type" : "workflow"
+}

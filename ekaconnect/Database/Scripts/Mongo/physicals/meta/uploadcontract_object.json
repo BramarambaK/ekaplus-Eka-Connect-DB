@@ -1,0 +1,279 @@
+{
+  "_id": "uploadcontract_object",
+  "name": "uploadcontract_object",
+  "label": "Upload Contracts",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["seqNo"],
+  "translatableKeys": [],
+  "fields": {
+    "seqNo": {
+      "seqNo": "Seq No",
+      "labelKey": "seqNo",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "issueDate": {
+      "issueDate": "Issue Date",
+      "labelKey": "issueDate",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "traderName": {
+      "traderName": "Trader Name",
+      "labelKey": "traderName",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "cpName": {
+      "cpName": "CP Name",
+      "labelKey": "cpName",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "contractType": {
+      "contractType": "Contract Type",
+      "labelKey": "contractType",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "itemQuantity": {
+      "itemQuantity": "Item Quantity",
+      "labelKey": "itemQuantity",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "quantityUnit": {
+      "quantityUnit": "Quantity Unit",
+      "labelKey": "quantityUnit",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "deliveryPeriodFrom": {
+      "deliveryPeriodFrom": "Delivery Period From",
+      "labelKey": "deliveryPeriodFrom",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "deliveryPeriodTo": {
+      "deliveryPeriodTo": "Delivery Period To",
+      "labelKey": "deliveryPeriodTo",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "payInCurrency": {
+      "payInCurrency": "Pay In Currency",
+      "labelKey": "payInCurrency",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "incoTerm": {
+      "incoTerm": "IncoTerm",
+      "labelKey": "incoTerm",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "contractQuantityUnit": {
+      "contractQuantityUnit": "Contract Quantity Unit",
+      "labelKey": "contractQuantityUnit",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "loadingCountry": {
+      "loadingCountry": "Loading Country",
+      "labelKey": "loadingCountry",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "loadingType": {
+      "loadingType": "Loading Type",
+      "labelKey": "loadingType",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "loadingLocation": {
+      "loadingLocation": "Loading Location",
+      "labelKey": "loadingLocation",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "dischargeCountry": {
+      "dischargeCountry": "Discharge Country",
+      "labelKey": "dischargeCountry",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "dischargeType": {
+      "dischargeType": "Discharge Type",
+      "labelKey": "dischargeType",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "dischargeLocation": {
+      "dischargeLocation": "Discharge Location",
+      "labelKey": "dischargeLocation",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "priceType": {
+      "priceType": "Price Type",
+      "labelKey": "priceType",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "contractPrice": {
+      "contractPrice": "Contract Price",
+      "labelKey": "contractPrice",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "contractPriceUnit": {
+      "contractPriceUnit": "Contract Price Unit",
+      "labelKey": "contractPriceUnit",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "toleranceMin": {
+      "toleranceMin": "Tolerance Min",
+      "labelKey": "toleranceMin",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "toleranceMax": {
+      "toleranceMax": "Tolerance Max",
+      "labelKey": "toleranceMax",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "toleranceType": {
+      "toleranceType": "Tolerance Type",
+      "labelKey": "toleranceType",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "toleranceLevel": {
+      "toleranceLevel": "Tolerance Level",
+      "labelKey": "toleranceLevel",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "transportationMode": {
+      "transportationMode": "Transportation Mode",
+      "labelKey": "transportationMode",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "paymentTerm": {
+      "paymentTerm": "Payment Term",
+      "labelKey": "paymentTerm",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "paymentDueDate": {
+      "paymentDueDate": "Payment Due Date",
+      "labelKey": "paymentDueDate",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "arbitration": {
+      "arbitration": "Arbitration",
+      "labelKey": "arbitration",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "applicableLawContract": {
+      "applicableLawContract": "Applicable Law Contract",
+      "labelKey": "applicableLawContract",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "taxScheduleApplicableCountry": {
+      "taxScheduleApplicableCountry": "Tax Schedule Applicable Country",
+      "labelKey": "taxScheduleApplicableCountry",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "taxSchedule": {
+      "taxSchedule": "Tax Schedule",
+      "labelKey": "taxSchedule",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "strategy": {
+      "strategy": "Strategy",
+      "labelKey": "strategy",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "profitCentre": {
+      "profitCentre": "Profit Centre",
+      "labelKey": "profitCentre",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "dealType": {
+      "dealType": "Deal Type",
+      "labelKey": "dealType",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "origin": {
+      "origin": "Origin",
+      "labelKey": "origin",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "cropYear": {
+      "cropYear": "Crop Year",
+      "labelKey": "cropYear",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "contractRefNo": {
+      "contractRefNo": "Contract Ref No",
+      "labelKey": "contractRefNo",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "contractStatus": {
+      "contractStatus": "Contract Status",
+      "labelKey": "contractStatus",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "errorMessage": {
+      "errorMessage": "Error Message",
+      "labelKey": "errorMessage",
+      "type": "textbox",
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "90ad1ce4-1bf3-41a4-844a-625617f8c967"
+}

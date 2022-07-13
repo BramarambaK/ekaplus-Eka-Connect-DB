@@ -1,0 +1,67 @@
+{
+    "_id" : "workflow_physicals_all_contract_GMRs_PNG",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract GMRs Listing",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true
+    },
+    "decisions" : [],
+    "labelKey" : "LIMIT_LIST",
+    "fields" : [
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "internalContractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "internalContractItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "internalGMRRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "openQuantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "executedQuantity"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "estimatedPrice"
+        }
+    ],
+    "taskId" : "allContractGMRs",
+    "object" : "0a58c051-99ad-491d-8d05-400bd90bffe9"
+}

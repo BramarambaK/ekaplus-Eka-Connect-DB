@@ -1,0 +1,23 @@
+{
+    "_id" : "physicals_workflow_recommendation",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "recommendation",
+    "object" : "contract",
+    "labelKey" : "recommendation",
+    "label" : "recommendation",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "task" : "recommendation",
+            "outcomes" : []
+        }
+    ]
+}

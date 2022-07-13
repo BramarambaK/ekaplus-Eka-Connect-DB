@@ -1,0 +1,33 @@
+{
+    "_id" : "tiered_pricing_edit_physicals",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "Tiered_Pricing_edit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.Tiered_Pricing_edit",
+                    "name" : "_ST_UPDATE_TIERED_PRICING",
+                    "appendMsg" : true
+                }, 
+                {
+                    "data" : "output._ST_UPDATE_TIERED_PRICING",
+                    "name" : "Tiered_Pricing_edit"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "Tiered Pricing edit",
+    "labelKey" : "Tiered_Pricing_edit",
+    "layout" : {},
+    "object" : "fb40488f-e9bb-4c92-8299-618177d8da99",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "Tiered_Pricing_edit",
+    "type" : "workflow"
+}

@@ -1,0 +1,19 @@
+{
+    "_id" : "train__contract_recommedation_trigger_workflow",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "objectAction" : "CREATE",
+    "taskId" : "train__contract_recommedation_trigger_workflow",
+    "refType" : "app",
+    "tags":"recommendation",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "isScheduled" : false,
+    "type" : "workflow",
+    "chainedTasks" : [
+				{
+                    "name" : "_EXT_CALL_TRAIN_CONTRACT_RECOMMENDATION_API",
+                    "appendMsg" : false
+                }
+    ]
+} 

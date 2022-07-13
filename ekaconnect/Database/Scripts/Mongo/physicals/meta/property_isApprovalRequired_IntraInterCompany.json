@@ -1,0 +1,14 @@
+{
+    "_id" : "IS_INTER_INTRA_COMP_APPROVAL_REQ",
+    "type" : "property",
+    "name" : "IS_INTER_INTRA_COMP_APPROVAL_REQ",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "length" : "10",
+    "label" : "INTER/INTRA COMPANY APPROVAL REQUIRED",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "defaultValue" : true,
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "description" : "If true - Validate user for approval if inter/intra deal is selected from Oil UI, will allow inter/intra company deal only if there is 1 level of approval and 1 level of sub approval with self approval for the loggedIn user; If false - approval validation for user and approval popup are skipped for inter/intra company deals"
+}

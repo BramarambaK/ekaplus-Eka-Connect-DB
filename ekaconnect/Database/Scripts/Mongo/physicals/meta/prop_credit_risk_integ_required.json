@@ -1,0 +1,14 @@
+{
+    "_id" : "credit_risk_integ_required",
+    "name" : "credit_risk_integ_required",
+    "label" : "Credit Risk Integration Required",
+    "type" : "property",
+    "propertyLevel" : "tenant,app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "5",
+    "defaultValue" : "false",
+    "editSupportedInUI " : true,
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "description" : "Property to indicate if CP Credit check is required or not"
+}

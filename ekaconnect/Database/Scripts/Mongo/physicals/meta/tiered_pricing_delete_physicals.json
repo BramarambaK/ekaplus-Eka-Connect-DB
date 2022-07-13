@@ -1,0 +1,33 @@
+{
+    "_id" : "tiered_pricing_delete_physicals",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "DELETE",
+            "label" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "Tiered_Pricing_delete",
+            "outcomes" : [ 
+                {
+                    "data" : "output.Tiered_Pricing_delete",
+                    "name" : "_ST_DELETE_TIERED_PRICING",
+                    "appendMsg" : true
+                }, 
+                {
+                    "data" : "output._ST_DELETE_TIERED_PRICING",
+                    "name" : "Tiered_Pricing_delete"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "Tiered Pricing delete",
+    "labelKey" : "Tiered_Pricing_delete",
+    "layout" : {},
+    "object" : "fb40488f-e9bb-4c92-8299-618177d8da99",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "Tiered_Pricing_delete",
+    "type" : "workflow"
+}

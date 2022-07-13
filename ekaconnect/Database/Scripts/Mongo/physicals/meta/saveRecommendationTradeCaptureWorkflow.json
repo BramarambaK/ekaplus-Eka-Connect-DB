@@ -1,0 +1,26 @@
+{
+    "_id" : "saveRecommendationData_trade_capture",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "saveRecommendationData_trade_capture",
+    "object" : "75e55d43-3a9f-4240-9916-0716e53ee5ec",
+    "sys__UUID" : "89566cc7-400c-449b-898c-a40cafbeadfd",
+    "type" : "workflow",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "type" : "submit",
+            "task" : "saveRecommendationData_trade_capture",
+            "outcomes" : [ 
+                {
+                    "name" : "saveRecommendatationDataTradeCaptureSystemTask",
+		    "data":"output.saveRecommendationData_trade_capture",
+                    "appendMsg" : false
+                }
+            ]
+        }
+    ]
+}

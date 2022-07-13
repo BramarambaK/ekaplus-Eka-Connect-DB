@@ -1,0 +1,11 @@
+{
+"_id" : "document_listing",
+"name" : "document_listing",
+"type" : "processor",
+"refType" : "app",
+"refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+"snippet" : "var defaultDataURL =\r\n req.body.propertyList.eka_connect_host + '/file/list/v2';\r\n \r\n \r\n \r\n var defaultdata = {\r\n method: 'POST',\r\n url: defaultDataURL,\r\n\tbody:req.body.selectedData,\r\n headers: {\r\n Authorization: req.headers.authorization,\r\n 'X-TenantID': req.headers['x-tenantid'],\r\n\t \"storageType\" : \"trmAGS\"\r\n },\r\n json: true\r\n };\r\n function get_defaultData() {\r\n return new Promise(function(resolve, reject) {\r\n request(defaultdata, function(err, response, body) {\r\n if (err || body.error) reject(body);\r\n else {\r\n resolve(body);\r\n }\r\n });\r\n });\r\n }\r\n get_defaultData().then(function(result) {\r\n res.status(200).send(result);\r\n })",
+"sys__UUID" : "6f7412e5-194f-4678-8355-ede365c07981",
+"sys__createdOn" : ISODate("2019-12-26T05:17:29.849Z"),
+"sys__createdBy" : "Bravo"
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "saveRecommendatationDataTradeCaptureSystemTask",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "saveRecommendatationDataTradeCaptureSystemTask",
+    "object" : "75e55d43-3a9f-4240-9916-0716e53ee5ec",
+    "sys__UUID" : "34380a4d-df46-4569-b643-f6b73d7a67ae"
+}

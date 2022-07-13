@@ -1,0 +1,23 @@
+{
+    "_id" : "physicals_workflow_nlp",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "nlp",
+    "object" : "contract",
+    "labelKey" : "nlp",
+    "label" : "nlp",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "task" : "nlp",
+            "outcomes" : []
+        }
+    ]
+}

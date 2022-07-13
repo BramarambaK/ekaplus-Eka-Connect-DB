@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_CREATE_COMPONENT_pricing",
+    "componentType" : "SystemTask",
+    "object" : "a17ad3d2-8c98-461d-98c7-d91e953aa819",
+    "objectAction" : "UPDATE",
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "_ST_CREATE_COMPONENT_PRICING",
+    "sys__createdOn" : ISODate("2019-12-12T07:12:18.780Z"),
+    "sys__createdBy" : "Bravo"
+}

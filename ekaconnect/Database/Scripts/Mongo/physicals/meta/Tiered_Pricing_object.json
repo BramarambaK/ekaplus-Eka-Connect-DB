@@ -1,0 +1,75 @@
+{
+    "_id" : "Tiered_Pricing",
+    "fields" : {
+        "internalContractRefNo" : {
+            "isRequired" : false,
+			"type":"hidden"
+        },
+        "internalContractItemRefNo" : {
+            "isRequired" : false,
+			"type":"hidden"
+        },
+        "splitId" : {
+            "isRequired" : false,
+			"type":"hidden"
+        },
+        "splitFloor" : {
+            "splitFloor" : "",
+            "labelKey" : "splitFloor",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "splitCeiling" : {
+            "splitCeiling" : "",
+            "labelKey" : "splitCeiling",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+		"formulaName" : {
+            "formulaName" : "",
+            "labelKey" : "formulaName",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+		"formulaId" : {
+            "formulaId" : "",
+            "labelKey" : "formulaId",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+		"itemNumber" : {
+            "itemNumber" : "",
+            "labelKey" : "itemNumber",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+		"contractDraftId" : {
+            "contractDraftId" : "",
+            "labelKey" : "contractDraftId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "label" : "Tiered Pricing",
+    "name" : "Tiered_Pricing_object",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "sys__UUID" : "fb40488f-e9bb-4c92-8299-618177d8da99",
+    "type" : "object",
+    "uniqueFields" : [
+	    
+	]
+}

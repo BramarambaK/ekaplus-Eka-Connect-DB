@@ -1,0 +1,10 @@
+{
+    "_id" : "validationBulkAMendment1",
+    "name" : "validationBulkAMendment1",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "       var moment = require('moment');\r\n    let validate = req.body.bulkcontractitemsupdate ? req.body.bulkcontractitemsupdate.editcontractitem : req.body.bulkcontractsupdate.editcontract\r\n    if(!validate['amendmentDate']||!validate['amendmentReason'] ){\r\n      res.status(500).send('Please fill Mandatory Fields');\r\n    }\r\n  \r\n    let listingData = req.body.bulkcontractitemsupdate ? req.body.bulkcontractitemsupdate.listingcontractitem : req.body.bulkcontractsupdate.listingcontract\r\n     let latestissuedate = new Date(Math.max.apply(null, listingData.map(function(e) {\r\n      return new Date(e.issueDate);\r\n    })));\r\n    if(new Date(latestissuedate) > new Date(validate['amendmentDate']) ){\r\n      res.status(500).send('Amendment Date cannot be lesser than latest Issue Date');\r\n    }\r\n\t\r\n    if(new Date() < new Date(validate['amendmentDate'])){\r\n      res.status(500).send('Amendment Date cannot be in Future');\r\n    }\r\n\t  if(req.body.bulkcontractitemsupdate && validate['periodToDate'] && validate['periodFromDate'] ){\r\n\t if(new Date(validate['periodToDate']) < new Date(validate['periodFromDate']) ){\r\n      res.status(500).send('Period from date cannot be less than Period end date');\r\n    }\r\n\t\r\n\t  validate['amendmentDate']=moment(validate['amendmentDate']).format('YYYY-MM-DD')\r\n\t  if(new Date(validate['amendmentDate']) > new Date(validate['periodFromDate']) ){\r\n      res.status(500).send('Period From Date cannot be lesser than Amendment Date');\r\n    }\r\n\t}\r\n\tif(req.body.bulkcontractitemsupdate && (validate['qualityId'] ||  validate['originId']) ){\r\n\t if(!validate['cropYearId']){\r\n      res.status(500).send('Crop Year is Mandatory if Quality Or Origin Wants to update');\r\n    }}\r\n    res.status(200).send({}); \r\n ",
+    "sys__UUID" : "d19e4508-9952-40e8-84ca-b69720125437",
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

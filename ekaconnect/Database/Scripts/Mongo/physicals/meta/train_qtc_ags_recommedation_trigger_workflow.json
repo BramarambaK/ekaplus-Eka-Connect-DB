@@ -1,0 +1,19 @@
+{
+    "_id" : "train_qtc_ags_recommendation_trigger_workflow",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "objectAction" : "CREATE",
+    "taskId" : "train_qtc_ags_recommendation_trigger_workflow",
+    "refType" : "app",
+    "tags":"recommendation",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "isScheduled" : false,
+    "type" : "workflow",
+    "chainedTasks" : [  
+				{
+                    "name" : "_EXT_CALL_TRAIN_QTC_AGS_RECOMMENDATION_API",
+                    "appendMsg" : false
+                }
+    ]
+} 

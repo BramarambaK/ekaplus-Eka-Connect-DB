@@ -1,0 +1,35 @@
+{
+    "_id" : "recommendation_object",
+
+        "fields" : {
+            "userId" : {
+                "labelKey" : "userId",
+                "isRequired" : false
+            },
+            "sourceRefId" : {
+                "labelKey" : "sourceRefId",
+                "isRequired" : false
+            },
+            "sourceObjectId" : {
+                "labelKey" : "sourceObjectId",
+                "isRequired" : false
+            },
+            "data" : {
+                "labelKey" : "data",
+                "isRequired" : false
+            }
+        },
+        "objectAction" : {
+            "CREATE" : "POST",
+            "UPDATE" : "PUT",
+            "READ" : "GET",
+            "LISTVIEW" : "GET",
+            "DELETE" : "DELETE",
+            "APPROVE" : "PUT",
+            "REJECT" : "PUT"
+        },
+        "name" : "recommendation",
+        "sys__UUID" : "1b4c080c-b109-4d12-9a4d-006566968b36",
+        "type" : "object"
+    
+}
