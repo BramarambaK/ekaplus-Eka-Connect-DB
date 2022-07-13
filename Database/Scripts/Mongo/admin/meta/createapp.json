@@ -1,0 +1,19 @@
+{
+    "_id" : "createapp",
+    "type" : "workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "APP_TABS",
+    "label" : "App tabs",
+    "object" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+    "processorInfo" : {
+        "processorId" : "cf5007eb-0a2a-4c3c-8dab-09aa848c38e0"
+    },
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "objectAction" : "UPDATE",
+    "getDataFromExternalAPI" : false,
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "taskId" : "createapp"
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "getworkflow_processor",
+    "name" : "getworkflow",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "snippet" : "var workflowUrl = req.body.propertyList.eka_connect_host + '/meta/workflow/' + req.body.selectedData.app_uuid;\r\n    var workflow = {\r\n      method: 'GET',\r\n      url: workflowUrl,\r\n      headers: {\r\n        'Content-Type': 'application/json',\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_workflow() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(workflow, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_workflow().then(result => {\r\n      var data = result;\r\n      res.status(200).send(data);\r\n    });",
+    "sys__UUID" : "92a4f8a4-d7d3-4dd5-989a-f445d9b518ed",
+    "sys__createdOn" : ISODate("2019-06-26T08:50:01.556Z"),
+    "sys__createdBy" : "Bravo"
+}

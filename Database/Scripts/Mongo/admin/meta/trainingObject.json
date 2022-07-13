@@ -1,0 +1,78 @@
+{
+    "_id" : ObjectId("5f6c360666acad13b3939ef8"),
+    "type" : "object",
+    "name" : "training",
+    "label" : "Training",
+    "sys__UUID" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [ 
+        "targetObject", 
+        "typeOfData"
+    ],
+    "fields" : {
+        "admin" : {
+            "admin" : "Admin",
+            "labelKey" : "admin",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "type" : {
+            "type" : "type",
+            "labelKey" : "type",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "app_UUID" : {
+            "app_UUID" : "app_UUID",
+            "labelKey" : "app_UUID",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "targetObject" : {
+            "targetObject" : "targetObject",
+            "labelKey" : "targetObject",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "file" : {
+            "file" : "file",
+            "labelKey" : "file",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "typeOfData" : {
+            "typeOfData" : "Type Of Data",
+            "labelKey" : "typeOfData",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "trainingData" : {
+            "trainingData" : "Training Data",
+            "labelKey" : "trainingData",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "mappingData" : {
+            "mappingData" : "Mapping Data",
+            "labelKey" : "mappingData",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    }
+}

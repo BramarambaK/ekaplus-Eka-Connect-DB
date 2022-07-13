@@ -1,0 +1,141 @@
+{
+  "_id": "chart_Config",
+  "name": "chart_Config",
+  "label": "Chart Config",
+  "type": "layoutTypeConfig",
+  "sys__UUID": "chart_Config",
+  "meta": {
+    "fields": {
+      "getInitialData": {
+        "getInitialData": "Get Initial Data",
+        "labelKey": "getInitialData",
+        "type": "checkbox"
+      },
+      "type": {
+        "type1": "Type",
+        "labelKey": "type1",
+        "type": "dropdown"
+      },
+      "label": {
+        "label": "Label",
+        "labelKey": "label",
+        "type": "dropdown"
+      },
+      "xAxesTickDisplay": {
+        "xAxesTickDisplay": "xAxes Tick",
+        "labelKey": "xAxesTickDisplay",
+        "type": "checkbox"
+      },
+      "legendDisplay": {
+        "legendDisplay": "Legend Display",
+        "labelKey": "legendDisplay",
+        "type": "checkbox"
+      },
+      "legendPosition": {
+        "legendPosition": "Legend Position",
+        "labelKey": "legendPosition",
+        "type": "dropdown"
+      },
+      "headerMessage": {
+        "headerMessage": "Header Message",
+        "labelKey": "headerMessage",
+        "type": "textarea"
+      },
+      "headerStyle": {
+        "headerStyle": "Header Style",
+        "labelKey": "headerStyle",
+        "type": "textarea"
+      }
+    }
+  },
+  "workflowData": {
+    "workFlowTask": "workflowData",
+    "layout": {
+      "name": "create",
+      "type": "row"
+    },
+    "decisions": [
+      {
+        "decisionName": "executeDeleteField"
+      }
+    ],
+    "fields": [
+      {
+        "fields": [
+          {
+            "key": "getInitialData",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "type",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "label",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "xAxesTickDisplay",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "legendDisplay",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "legendPosition",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "headerMessage",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "headerStyle",
+            "style": {
+              "width": "192px"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "dropdown": {
+    "type": {
+      "options": [
+        { "value": "bar", "label": "Bar" },
+        { "value": "horizontalBar", "label": "Horizontal Bar" },
+        { "value": "doughnut", "label": "Doughnut" },
+        { "value": "line", "label": "Line" },
+        { "value": "polarArea", "label": "Polar Area" },
+        { "value": "pie", "label": "Pie" },
+        { "value": "radar", "label": "Radar" }
+      ]
+    },
+    "legendPosition": {
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "bottom", "label": "Bottom" }
+      ]
+    },
+    "label": {
+      "options": []
+    }
+  },
+  "tabsVisibility": { "fields": true, "field": true, "decision": true },
+  "activeTab": "fields"
+}

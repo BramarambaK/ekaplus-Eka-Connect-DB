@@ -1,0 +1,22 @@
+{
+  "_id": "seeded_apps_tabs",
+  "type": "property",
+  "name": "seeded_apps_tabs",
+  "propertyLevel": "tenant",
+  "dataType": "JSON",
+  "fieldtype": "textbox",
+  "length": 120,
+  "label": "Seeded App Tabs",
+  "description": "App level tabs to be shown to the user for seeded apps. Set to ['*'] by default, denoting all tabs visible. To enable tabs of your choice, replace * and add text as mentioned, to the array: GENERAL,MENU,SECURITY,WORKFLOW,PROPERTY,PROCESSOR,HEALTHCHECK,NLP,CONFIG,SCHEDULER,ASYNCTASKSCHECK",
+  "defaultValue": [
+    "GENERAL",
+    "SECURITY",
+    "PROPERTY",
+    "HEALTHCHECK",
+    "NLP",
+    "CONFIG",
+    "SCHEDULER",
+    "ASYNCTASKSCHECK",
+    "USERACTIVITY"
+  ]
+}

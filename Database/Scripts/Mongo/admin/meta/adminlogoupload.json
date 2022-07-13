@@ -1,0 +1,129 @@
+{
+    "_id" : "adminlogoupload",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldocumentlisting"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "adminlogoupload",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "File uploaded successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.adminlogoupload",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_GENERAL_DOCUMENT"
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "generalUpload" : true,
+            "type" : "submit"
+        }, 
+        {
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "DOCUMENT_UPLOAD_VALIDATE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.generaldocumentupload",
+                    "appendMsg" : false,
+                    "name" : "DOCUMENT_UPLOAD_VALIDATE"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldocumentlisting"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "layoutdescription"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "file"
+            }
+        ]
+    ],
+    "getDataFromExternalAPI" : true,
+    "input" : [ 
+        "internalGMRRefNo", 
+        {
+            "internalGMRRefNo" : "internalRefNo"
+        }
+    ],
+    "label" : "Upload Document",
+    "labelKey" : "DOCUMENT_UPLOAD",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "eventingRequired" : false,
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : "Document Upload - "
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "column"
+    },
+    "object" : "08422746-480f-4104-89a0-3fe47d276386",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "taskId" : "adminlogoupload",
+    "type" : "workflow"
+}

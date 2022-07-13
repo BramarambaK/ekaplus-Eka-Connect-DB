@@ -1,0 +1,1 @@
+kafka-topics --bootstrap-server 172.16.5.127:39092 --create --replication-factor 1 --partitions 3 --topic formula_price_details_topic_${eka_connect_env}

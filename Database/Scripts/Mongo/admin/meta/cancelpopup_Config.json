@@ -1,0 +1,73 @@
+{
+  "_id": "cancelpopup_Config",
+  "name": "cancelpopup_Config",
+  "label": "Cancel Popup Config",
+  "type": "layoutTypeConfig",
+  "sys__UUID": "cancelpopup_Config",
+  "meta": {
+    "fields": {
+      "headerMessage": {
+        "headerMessage": "Header",
+        "labelKey": "headerMessage",
+        "type": "textbox"
+      },
+      "bodyMessage": {
+        "bodyMessage": "Body",
+        "labelKey": "bodyMessage",
+        "type": "textarea"
+      }
+    }
+  },
+  "workflowData": {
+    "workFlowTask": "workflowData",
+    "layout": {
+      "name": "create",
+      "type": "row"
+    },
+    "decisions": [],
+    "fields": [
+      {
+        "fields": [
+          {
+            "key": "headerMessage",
+            "placeholder": "Header message",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "bodyMessage",
+            "placeholder": "Write the message of the popup",
+            "style": {
+              "width": "192px"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "dropdown": {
+    "theme": {
+      "options": [
+        { "value": "theme-grid-white", "label": "White Theme" },
+        { "value": "theme-grid-dark", "label": "Dark Theme" }
+      ]
+    },
+    "placement": {
+      "options": [
+        { "value": "Row1", "label": "Row 1" },
+        { "value": "Row2", "label": "Row 2" },
+        { "value": "Row3", "label": "Row 3" }
+      ]
+    },
+    "selectionMode": {
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "single", "label": "Single" },
+        { "value": "multiple", "label": "Multiple" }
+      ]
+    }
+  },
+  "tabsVisibility": { "fields": false, "field": true },
+  "activeTab": "field"
+}

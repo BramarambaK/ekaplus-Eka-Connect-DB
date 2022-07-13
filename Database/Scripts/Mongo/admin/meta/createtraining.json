@@ -1,0 +1,19 @@
+{
+    "_id" : "createtraining_admin",
+    "type" : "workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "createtraining",
+    "label" : "createtraining",
+    "object" : "be3d3584-9653-4714-a6bd-adfce03fde24",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "e85e4d21-1b6b-449d-aa2d-3d22d8fb6efa"
+    },
+    "getDataFromExternalAPI" : false,
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "taskId" : "createtraining"
+}

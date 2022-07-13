@@ -1,0 +1,23 @@
+{
+    "_id" : "admin_policy",
+    "type" : "policy",
+    "app_UUID" : "admin",
+    "refType" : "object",
+    "refTypeId" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

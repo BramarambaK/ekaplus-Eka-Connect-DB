@@ -1,0 +1,19 @@
+{
+  "_id": "createnlpmapping_admin",
+  "type": "workflow",
+  "componentType": "UserTask",
+  "labelKey": "createnlpmapping",
+  "label": "createnlpmapping",
+  "object": "be3d3584-9653-4714-a6bd-adfce03fde24",
+  "refType": "app",
+  "refTypeId": "admin",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "fc48d4ee-92c2-446a-b331-215bc03c29e3"
+  },
+  "getDataFromExternalAPI": false,
+  "layout": {},
+  "fields": [],
+  "decisions": [],
+  "taskId": "createnlpmapping"
+}

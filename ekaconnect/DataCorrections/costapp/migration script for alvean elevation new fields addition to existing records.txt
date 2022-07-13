@@ -1,0 +1,21 @@
+//1. To take backup of respective _Data Collection.
+
+var collectionName = "9120qa1_Data";//Collection name changes according to the enviroment this script is executed
+
+//2. To find the Cost Estimates count without new Elevation New fields
+db.getCollection('collectionName').count({"object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90","refType":"app", "fxToAccuralType":{$exists:false}})
+
+
+//3. To run the below mongo script for Alvean Elevation Field addition to existing Cost Estimates
+
+db.getCollection(collectionName).find({"object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90","refType":"app", "fxToAccuralType":{$exists:false}})
+.forEach(function(doc){
+    doc.fxToAccuralType = "Fixed";
+    doc.fxEstimateToAccural = 1;
+    doc.estimateValue = doc.costValue;
+    doc.estimateValueUnitId = doc.costPriceUnitId;
+    doc.estimateCostAmount = doc.costAmountInBaseCurrency;
+    doc.estimateCostCurrency = doc.costAmountInBaseCurrencyUnitId;
+    db.getCollection(collectionName).save(doc);});
+	
+//4. To run step2 again and ensure record count now is 0, else execute step 3 again until the count for step 2 becomes 0

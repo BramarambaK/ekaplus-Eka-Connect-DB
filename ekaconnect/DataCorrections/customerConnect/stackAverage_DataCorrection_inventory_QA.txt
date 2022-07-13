@@ -1,0 +1,68 @@
+//1. To run the below mongo script for data correction.
+
+var collectionName = "account28_Data";//it will be cargillfc_Data or account28_Data
+var wheatQuality =["PRGR","SCN2.2","TWT"];
+var barleyQuality =["PRGR","SCN2.2","TWT"];
+var canolaQuality =["ADM","COIL","TWT",];
+var anyOther=["ADM","PRGR","TWT"];
+db.getCollection(collectionName).find({stackAverage:{$exists:true},
+stackAverageOriginal:{$exists:false}
+,refType:'app',object:'f895de3c-5f05-4671-b70d-4c180078fc07'})
+.forEach(function(doc){
+    var stackString= doc.stackAverage;
+    doc.stackAverageOriginal = doc.stackAverage;
+    print("stackAverageOriginal      -->"+doc.product +" --> " +stackString);
+    var stackArray  = stackString.split(",").map(String.trim);
+    var qualityArray = []; 
+    if(doc.product=='Wheat'){
+        qualityArray = wheatQuality;
+        } 
+         else if(doc.product=='Canola'){
+        qualityArray = canolaQuality;
+        } 
+         else if(doc.product=='Barley'){
+        qualityArray = barleyQuality;
+        } else
+        {
+            qualityArray = anyOther;
+          } 
+          
+          var filteredQuality  = [];
+          for(let i =0;i<qualityArray.length;i++){ 
+              
+              for (let j = 0;j <stackArray.length;j++){ 
+                  if(stackArray[j].contains(qualityArray[i])){
+                      
+                      filteredQuality.push(stackArray[j]);
+                      }
+                 
+                  }
+              
+              }       
+    print("stackAverage(new value)   -->"+doc.product +"--> "+filteredQuality.join(", "));
+    print("--------------------------------------------------------");
+       doc.stackAverage = filteredQuality.join(", ");
+	  // this line should be enabled to save the changes.
+           db.getCollection(collectionName).save(doc); 
+  
+    });
+	
+	
+
+2. To run the elastic delete index command for inventory
+---------------------------------------------------------
+	
+	curl -X DELETE http://172.16.0.116:9200/vbshtoob5v1f
+	
+	
+3. To recrawl the data from connect db to elastic search server.
+----------------------------------------------------------------
+	
+	curl -X POST 'https://account28.ekaplus.com/connect/api/workflow/data' \
+--header 'Content-Type: application/json' \
+--header 'authorization: <VALID_TOKEN>' \
+--header 'x-tenantid: account28' \
+--header 'requestid: vvvvvvvvsdvvvvvv' \
+--data '{"appId":"12325a98-a959-4939-9005-4158d136afcd","workFlowTask":"crawlerinventorylist","qP":{"from":0,"size":100},"payLoadData":"","params":{}}'
+	
+	//

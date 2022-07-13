@@ -1,0 +1,11 @@
+{
+    "_id" : "getobject_processor",
+    "name" : "getobject",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "snippet" : "var objectUrl = req.body.propertyList.eka_connect_host + '/meta/object';\r\n    var object = {\r\n      method: 'GET',\r\n      url: objectUrl,\r\n      headers: {\r\n        'Content-Type': 'application/json',\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_object() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(object, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_object().then(result => {\r\n      var data = result;\r\n      res.status(200).send(data);\r\n    });",
+    "sys__UUID" : "5ad4933a-e449-4065-a37a-0ead01b61dd3",
+    "sys__createdOn" : ISODate("2019-06-26T08:50:01.556Z"),
+    "sys__createdBy" : "Bravo"
+}

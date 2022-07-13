@@ -1,0 +1,53 @@
+{
+  "_id": ObjectId("5cc7cdbb10f7f68b9369e558"),
+  "title": "Admin",
+  "name": "admin",
+  "description": "Admin App",
+  "tenantID": "",
+  "type": "app",
+  "appType": "CONNECT",
+  "config": {
+    "header": {
+      "brand": {
+        "src": "assets/img/brand/eka-login-logo.png",
+        "width": 60,
+        "height": 20,
+        "alt": "Eka"
+      },     
+      "sidebarToggler": true,
+      "asideMenuToggler": false
+    },
+    "sidebar": {
+      "fixed": true,
+      "display": false
+    },
+    "navbar": [
+      {
+        "apiMenuData": [
+          {
+            "label": "Admin",
+            "iconCls": "insights-icon",
+            "menuItems": [
+              {
+                "text": "Admin",
+                "iconCls": "",
+                "items": [
+                  {
+                    "handler": "/admin/applist",
+                    "text": "Apps list",
+                    "iconCls": ""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "aside": {
+      "fixed": true,
+      "display": false
+    }
+  },
+  "sys__UUID": "admin"
+}

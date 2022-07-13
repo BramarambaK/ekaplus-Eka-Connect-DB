@@ -1,0 +1,184 @@
+{
+  "_id": "customv2_Config",
+  "name": "customv2_Config",
+  "label": "Custom V2 Config",
+  "type": "layoutTypeConfig",
+  "sys__UUID": "customv2_Config",
+  "meta": {
+    "fields": {
+      "data": {
+        "data": "Pass data from",
+        "labelKey": "data",
+        "type": "textbox"
+      },
+      "name": {
+        "name": "Name",
+        "labelKey": "name",
+        "type": "textbox"
+      },
+      "visibility": {
+        "visibility": "Visibility Expression",
+        "labelKey": "visibility",
+        "type": "textarea"
+      }
+    }
+  },
+  "workflowData": {
+    "workFlowTask": "workflowData",
+    "layout": {
+      "name": "create",
+      "type": "row"
+    },
+    "decisions": [],
+    "fields": [
+      {
+        "fields": [
+          {
+            "key": "name",
+            "placeholder": "Workflow task name",
+            "style": {
+              "width": "192px"
+            },
+            "disabled": true
+          },
+          {
+            "key": "data",
+            "placeholder": "Get data from a previous task",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "visibility",
+            "placeholder": "Visibility expression...",
+            "style": {
+              "width": "192px"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "decisionworkflow": {
+    "workFlowTask": "decisionWorkflowSettings",
+    "layout": {
+      "name": "create",
+      "type": "row"
+    },
+    "decisions": [
+      {
+        "decisionName": "executeOutcome"
+      },
+      {
+        "decisionName": "executeDeleteOutcome"
+      }
+    ],
+    "fields": [
+      {
+        "fields": [
+          {
+            "key": "objectAction",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "label",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "task",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "type",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "executeDecision",
+            "style": {
+              "justify-content": "space-between",
+              "display": "flex",
+              "width": "205px"
+            },
+            "formLabelStyle": {
+              "width": "875px",
+              "margin-right": "63px"
+            }
+          },
+          {
+            "key": "position",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "btnClass",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "style",
+            "style": {
+              "display": "flex"
+            },
+            "fields": [
+              {
+                "key": "styleProperty",
+                "style": {
+                  "width": "105px",
+                  "margin": "-10px 10px 0px 0px"
+                }
+              },
+              {
+                "key": "styleValue",
+                "style": {
+                  "width": "75px",
+                  "margin": "-10px 0px 0px"
+                }
+              }
+            ]
+          },
+          {
+            "key": "outcomesbtn",
+            "type": "button",
+            "label": "Add/Edit Outcomes",
+            "btnClass": "btn btn-link p-0",
+            "decision": "executeOutcome",
+            "style": {
+              "width": "122px",
+              "margin": "-10px 0px 0px"
+            }
+          },
+          {
+            "key": "deletebtn",
+            "type": "button",
+            "label": "Delete Decision",
+            "btnClass": "btn btn-outline-danger",
+            "decision": "executeDeleteOutcome",
+            "style": {
+              "width": "122px",
+              "margin": "-8px 22px 0px",
+              "padding": "0px 10px"
+            }
+          },
+          {
+            "key": "index",
+            "style": {
+              "display": "none"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "tabsVisibility": { "fields": false, "workflows": true },
+  "activeTab": "workflows"
+}

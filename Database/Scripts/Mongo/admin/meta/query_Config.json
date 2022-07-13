@@ -1,0 +1,109 @@
+{
+  "_id": "query_Config",
+  "name": "query_Config",
+  "label": "Query Config",
+  "type": "layoutTypeConfig",
+  "sys__UUID": "query_Config",
+  "meta": {
+    "fields": {
+      "key": {
+        "key": "Key",
+        "labelKey": "key",
+        "type": "textbox"
+      },
+      "filterBy": {
+        "filterBy1": "Filter By",
+        "labelKey": "filterBy1",
+        "type": "dropdown"
+      },
+      "filterType": {
+        "filterType": "Filter Type",
+        "labelKey": "filterType",
+        "type": "textbox"
+      },
+      "multiple": {
+        "multiple": "Multi Select",
+        "labelKey": "multiple",
+        "type": "checkbox"
+      },
+      "selectedAll": {
+        "selectedAll": "Selected All",
+        "labelKey": "selectedAll",
+        "type": "textbox"
+      },
+      "placeholder": {
+        "placeholder": "Placeholder",
+        "labelKey": "placeholder",
+        "type": "textbox"
+      }
+    }
+  },
+  "workflowData": {
+    "layout": {
+      "name": "create",
+      "type": "row",
+      "defaultFormLabelStyle": {
+        "width": "1000%"
+      }
+    },
+    "decisions": [],
+    "fields": [
+      {
+        "fields": [
+          {
+            "key": "key",
+            "style": {
+              "width": "192px"
+            },
+            "value": "ngrFilter",
+            "disabled": true
+          },
+          {
+            "key": "filterBy",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "filterType",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "multiple",
+            "style": {
+              "justify-content": "flex-start",
+              "display": "flex",
+              "width": "100px",
+              "margin": "-5px 0 15px"
+            },
+            "formLabelStyle": {
+              "width": "180px",
+              "line-height": 1,
+              "padding-right": "70px"
+            }
+          },
+          {
+            "key": "selectedAll",
+            "style": {
+              "width": "192px"
+            }
+          },
+          {
+            "key": "placeholder",
+            "style": {
+              "width": "192px"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "dropdown": {
+    "filterBy": {
+      "options": []
+    }
+  },
+  "activeTab": "fields"
+}

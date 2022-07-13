@@ -1,0 +1,19 @@
+{
+    "_id" : "gettrainingdata",
+    "type" : "workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "APP_TABS",
+    "label" : "App tabs",
+    "object" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "ab94dc91-13d4-48ee-bfe9-2876ece751a6"
+    },
+    "getDataFromExternalAPI" : false,
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "taskId" : "gettrainingdata"
+}

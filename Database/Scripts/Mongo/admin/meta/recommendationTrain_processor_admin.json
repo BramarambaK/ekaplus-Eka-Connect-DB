@@ -1,0 +1,19 @@
+{
+    "_id" : "recommendationTrain_processor_admin",
+    "type" : "workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "recommendationTrain",
+    "label" : "nlpApi",
+    "object" : "be3d3584-9653-4714-a6bd-adfce03fde24",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "9501e123-3129-4468-8141-a3b396955291"
+    },
+    "getDataFromExternalAPI" : false,
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "taskId" : "recommendationTrain"
+}
