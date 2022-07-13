@@ -1,0 +1,11 @@
+{
+    "_id" : "generaldocumentdownload_SC",
+    "action" : "downloadLink",
+    "componentType" : "client",
+    "object" : "2b28674d-c7ba-4661-ae32-f9b86d8c1007",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId" : "generaldocumentdownload",
+    "type" : "workflow"
+}

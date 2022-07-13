@@ -1,0 +1,12 @@
+{
+    "_id" : ObjectId("5d032bef8759a21903451f19"),
+    "type" : "property",
+    "name" : "month_picker_format",
+	"label" : "MONTH PICKER FORMAT",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+	"visibility" : "public",
+	"defaultValue" : "MMM-YYYY"
+}

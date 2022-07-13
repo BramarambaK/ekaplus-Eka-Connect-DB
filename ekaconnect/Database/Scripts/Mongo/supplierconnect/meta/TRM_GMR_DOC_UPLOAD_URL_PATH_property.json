@@ -1,0 +1,14 @@
+{
+    "_id" : "TRM_GMR_DOC_UPLOAD_URL_PATH_property",
+    "type" : "property",
+    "name" : "trm_gmr_doc_upload_url_path",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "/api/logistic/uploadDocument",
+    "length" : "100",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "visibility" : "public",    
+    "label" : "TRM_GMR_DOC_UPLOAD_URL_PATH",
+    "description" : "TRM URL path to upload GMR doc."
+}

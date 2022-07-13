@@ -1,0 +1,35 @@
+{
+    "_id" : "uploadSupplierAssay_object",
+    "type" : "object",
+    "name" : "UploadSupplierAssay",
+    "label" : "Upload Supplier Assay",
+    "sys__UUID" : "a62e5abe-44e0-4c5c-845c-f2b55f764dc6",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "2",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+	"description" : "Upload Supplier Assay(Delivery).",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [],
+    "fields" : {},
+    "layout" : {
+        "fields" : []
+    }
+}

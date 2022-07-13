@@ -1,0 +1,94 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "processorInfo": {"processorId": "e0a1bd51-54e8-4d91-a9d6-8b5d9e6a14eb"},
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "label": "User Profile",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {"display": true},
+    "backbutton": true,
+    "name": "viewprofile",
+    "formStyle": {
+      "border-right-style": "solid",
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%",
+      "border-top-width": "1px",
+      "border-left-style": "solid",
+      "border-right-width": "1px",
+      "border-left-color": "#dee2e5",
+      "border-top-color": "#dee2e5",
+      "border-right-color": "#dee2e5",
+      "border-left-width": "1px",
+      "border-top-style": "solid"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "menu": true
+  },
+  "decisions": [
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes" : [ 
+                {
+                    "name" : "default"
+                }
+            ],
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes" : [ 
+                {
+                    "name" : "default"
+                }
+            ],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "_id": "viewprofile_SC",
+  "labelKey": "VIEW_PROFILE",
+  "fields": [
+    {
+      "placement": "row1",
+      "key": "firstName"
+    },
+    {
+      "placement": "row1",
+      "key": "lastName"
+    },
+    {
+      "placement": "row1",
+      "key": "email"
+    },
+    {
+      "placement": "row1",
+      "key": "mobile"
+    },
+    {
+      "placement": "row1",
+      "key": "phone"
+    },
+	{
+      "placement" : "row1",
+      "key" : "userRole"
+    }, 
+    {
+       "placement" : "row2",
+       "key" : "company"
+    }
+  ],
+  "taskId": "viewprofile",
+  "object": "User_Info"
+}

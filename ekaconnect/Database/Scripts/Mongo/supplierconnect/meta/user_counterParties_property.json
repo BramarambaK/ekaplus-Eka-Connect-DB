@@ -1,0 +1,11 @@
+{
+    "_id" : ObjectId("5d03a90873fec74eb84758d6"),
+    "type" : "property",
+    "name" : "user_counterParties",
+    "propertyLevel" : "tenant, app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "50",
+	"refTypeId" : "allApps",
+    "description" : "user counterparties for user info"	
+}

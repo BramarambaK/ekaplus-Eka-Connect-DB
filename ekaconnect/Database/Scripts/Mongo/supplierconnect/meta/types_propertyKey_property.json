@@ -1,0 +1,42 @@
+{
+    "_id" : ObjectId("5d032bef8759a21903451f19"),
+    "type" : "property",
+    "name" : "types_propertyKey",
+	"label" : "TYPES PROPERTYKEY",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+	"defaultValue": [
+	{
+		"key" : "annexIB",
+		"value" : "Annex IB"
+	}, 
+	{
+		"key" : "annexVII",
+		"value" : "Annex VII"
+	}, 
+	{
+      "key": "billoflading",
+      "value": "Bill of Lading"
+    },
+	{
+      "key": "packinglist",
+      "value": "Packing List"
+    },
+	{
+		"key" : "photoofMaterial",
+		"value" : "Photo of Material"
+	}, 
+	{
+		"key" : "transportDocument",
+		"value" : "Transport Document"
+	}, 
+	{
+		"key" : "other",
+		"value" : "Other"
+	}
+  ],
+  "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "description" : "types propertykey for document types"
+}

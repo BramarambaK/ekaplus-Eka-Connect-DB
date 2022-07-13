@@ -1,0 +1,15 @@
+{
+    "_id" : "gmr_approval_updated_mailbody_property",
+    "type" : "property",
+    "name" : "gmr_approval_updated_mailbody",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "The following GMR is updated after approval and must be reviewed again.<br><br><table><tr><td>GMR:</td><td><b><GmrRefNo></b></td></tr><tr> <td> Supplier: </td><td> <b><cpName></b></td></tr><tr> <td> Quality: </td><td><b><qualityName></b></td></tr><tr> <td>Loading Date:  </td><td><b><loadingDate></b></td></tr><tr> <td>&nbsp;</td></tr><tr> <td>Estimated Arrival Date: </td><td> <b><estimatedArrivalDate></b></td></tr><tr> <td>Destination (Smelter): </td><td> <b><destination></b></td></tr><tr> <td>Country of Origin:  </td> <td><b><countryOfOrigin></b></td></tr><tr> <td>Country of Loading:</td><td><b><countryOfLoading></b></td></tr><tr> <td>&nbsp;</td></tr><tr> <td>Set to Ready for Approval by:</td><td> <b><supplierName></b></td></tr><tr> <td>email:</td><td><b><u><font color='blue'><email></font></u></b></td></tr><tr><td>Date: </td><td><b><approval_date></b></td></tr></table><br><br>",
+    "length" : "1000",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "GMR APPROVAL UPDATED MAILBODY",
+    "description" : "mail body when gmr is updated to ready for approvalstatus."
+}

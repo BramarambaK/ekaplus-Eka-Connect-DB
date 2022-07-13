@@ -1,0 +1,61 @@
+{
+    "_id" : ObjectId("622adbd15c58f40f4d646484"),
+    "name" : "gmrPricingSC",
+    "type" : "object",
+    "sys__UUID" : "45893377-0e80-4c1b-b8c2-d482d66f689b",
+    "description" : "This object represents the Ready for Pricing and Price Fixation UI",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "fields" : {
+        "gmrNo" : {
+            "GmrNo" : "GMR No",
+            "labelKey" : "GmrNo"
+        },
+        "supplierReferenceId" : {
+            "supplierReferenceId" : "Supplier Reference ID",
+            "labelKey" : "supplierReferenceId"
+        },
+        "contractDeliveryItem" : {
+            "contractDeliveryItem" : "Contract Delivery Item",
+            "labelKey" : "contractDeliveryItem"
+        },
+        "earliestPriceFixation" : {
+            "earliestPriceFixation" : "Earliest Price Fixation",
+            "labelKey" : "earliestPriceFixation"
+        },
+        "loadingDate" : {
+            "loadingDate" : "Loading Date",
+            "labelKey" : "loadingDate"
+        },
+        "arrivalDate" : {
+            "arrivalDate" : "Arrival Date",
+            "labelKey" : "arrivalDate"
+        },
+        "latestPricing" : {
+            "latestPricing" : "Latest Pricing",
+            "labelKey" : "latestPricing"
+        },
+        "latestAssayStatus" : {
+            "latestAssayStatus" : "Latest Assay Status",
+            "labelKey" : "latestAssayStatus"
+        },
+        "finalAssayReadyForPricing" : {
+            "finalAssayReadyForPricing" : "Final Assay Ready For Pricing",
+            "labelKey" : "finalAssayReadyForPricing"
+        },
+        "supplier" : {
+            "supplier" : "Supplier",
+            "labelKey" : "supplier"
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

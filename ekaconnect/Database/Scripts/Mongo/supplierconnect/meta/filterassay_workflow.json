@@ -1,0 +1,116 @@
+{
+  "_id": "filterassay",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "objectAction": "UPDATE",
+      "labelkey": "EXPORT",
+      "task": "exportassay",
+      "decisionName": "export",
+      "outcomes": [
+        {
+          "name": "EXPORTACTION",
+          "action": "export",
+          "actionWorkflow": "finalassaylistdynamic",
+          "type": "client"
+        }
+      ],
+      "label": "EXPORT",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "255px"
+        },
+        "formItemStyle": {
+          "margin": "-25px 10px -10px auto"
+        },
+        "key": "supplier",
+        "filter": true,
+        "event": "external",
+        "label": " ",
+        "autoDisplayFirst": true,
+        "removeEmptyOption": true
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin": "-25px 10px -10px auto"
+        },
+        "key": "contractItem",
+        "event": "external",
+        "label": " ",
+        "placeholder": "Select Contract",
+        "autoDisplayFirst": true
+      },
+      {
+        "style": {
+          "width": "40px",
+          "background-color": "#002d49",
+          "color": "white",
+          "height": "30px"
+        },
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "key": "export",
+        "decision": "export",
+        "label": "",
+        "iconClass": "fa fa-download",
+        "formItemStyle": {
+          "margin-top": "-5px",
+          "padding-right": "11px"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "dropdownValuesupplier"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "dropdownValueContract"
+      }
+    ]
+  ],
+  "label": "",
+  "layout": {
+    "defaultFormItemStyle1": {
+      "margin-top": "-25px",
+      "margin-bottom": "-10px",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formLayoutStyle": {
+      "position": "absolute",
+      "right": "-38px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "processorInfo": {
+      "processorId": "5344c53d-5f44-4c40-aeba-afc5a19779c1"
+    }
+  },
+  "object": "6f46a4d0-401c-4b7b-b542-b3d3eafe4aad",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "taskId": "filterassay",
+  "type": "workflow",
+  "sys__UUID": "cbe9f01d-4060-486a-aa6a-c4c47f8ff262"
+}

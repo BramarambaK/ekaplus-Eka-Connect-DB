@@ -1,0 +1,18 @@
+{
+    "_id" : "EXTERNAL_API_VIEWGMR",
+    "componentType" : "ExtSystemTask",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.eka_ctrm_host}",
+        "path" : "/api/logistic/viewGmr",
+        "headers" : {},
+        "method" : "POST",
+        "body" : {}
+    },
+    "taskId" : "EXTERNAL_API_VIEWGMR",
+    "object" : "c05cacf5-200c-4d97-8e8d-a67329ff286c"
+}

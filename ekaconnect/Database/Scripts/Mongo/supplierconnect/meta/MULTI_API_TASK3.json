@@ -1,0 +1,18 @@
+{
+    "_id" : "MULTI_API_TASK3",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId" : "MULTI_API_TASK3",
+    "object" : "b77d3e1e-4005-4b90-8a24-5a4cc69b918e",
+    "type" : "workflow",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_API2"
+            }
+        ],
+         "query" : "select e.PRIMARY_ID as \"PRIMARY_ID\",e.WEIGHTUNIT as \"weightUnit\",e.QUALITY as \"quality\",substr(e.WNSDATE,0,instr(e.WNSDATE,' ')-1) as \"wnsDate\",e.GMRREFNO as \"gmrRefNo\",e.ARRIVALDATE as \"arrivalDate\",e.SUPPLIER as \"supplier\",e.MOISTURE as \"moisture\",e.SUPPLIERREFERENCEID as \"supplierReferenceId\",e.AVISEDNETWEIGHT as \"avisedNetWeight\",e.WETWEIGHT as \"wetWeight\",e.LATESTASSAYTYPE as \"latestAssayType\",e.CONTRACTDELIVERYITEM as \"contractDeliveryItem\",e.DRYWEIGHT as \"dryWeight\",e.INTERNALGMRREFNO as \"internalGmrRefNo\" ,substr(e.gmrRefNo,instr(e.gmrRefNo,'-')+1,instr(e.gmrRefNo,'-')+1) gmrNo_Substr from EXTERNAL_API2 e"
+    }
+}

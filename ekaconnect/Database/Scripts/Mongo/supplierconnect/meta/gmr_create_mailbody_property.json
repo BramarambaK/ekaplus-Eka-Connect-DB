@@ -1,0 +1,15 @@
+{
+    "_id" : "gmr_create_mailbody_property",
+    "type" : "property",
+    "name" : "gmr_create_mailbody",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "Hi,<br>The following GMR was successfully created from Supplier Connect: <b><GmrRefNo></b><br>  Supplier:  <b><cpName></b><br> Quality: <b><qualityName></b><br><br>Country of Origin:  <b><countryOfOrigin></b><br>Country of Loading: <b><countryOfLoading></b><br>Loading Date:  <b><loadingDate></b><br>Estimated Arrival Date: <b><estimatedArrivalDate></b><br><br>Created by: <b><supplierName></b><br>email: <b><email></b><br>Created Date: <b><gmr_create_date></b>",
+    "length" : "1000",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "GMR CREATE MAILBODY",
+    "description" : "mail body in create gmr"
+}

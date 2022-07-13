@@ -1,0 +1,116 @@
+{
+  "_id": "finalassaylistdynamic_SC",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "label": "",
+  "type": "workflow",
+  "payLoad": "selected",
+  "processorInfo": {
+    "processorId": "b404df77-f031-4a6c-98e9-068b66cc46ed"
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "showCheckbox": false,
+    "limitHeight": false,
+    "selectionMode": "none",
+    "tableEditing": false,
+    "scrollHeight": "calc(100vh - 300px)",
+    "layoutProcessor": {
+      "processorId": "c3436352-c4f0-4eaf-9ff5-608c9a5d2bff"
+    },
+    "columnResizeMode" : "expand"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "name": "viewgmrfinalassay",
+          "setSelected": [
+            "selected.viewgmrfinalassayUpdated"
+          ]
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "key": "gmrRefNo",
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "task": "custom-link",
+      "category": "link",
+      "label": "GMR No"
+    },
+    {
+      "key": "lotNumberColum",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "senderRefNo",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key" : "deliveryItemRefNo",
+      "filter" : true,
+      "edit" : false,
+      "sort" : true
+    }, 
+    {
+      "key": "qualityName",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "loadingDate",
+      "filter": true,
+      "dateformat": "DD-MMM-YYYY",
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "arrivalDate",
+      "dateformat": "DD-MMM-YYYY",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "dryWeight",
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "align": "right"
+    },
+    {
+      "key": "qtyUnit",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    }
+  ],
+  "taskId": "finalassaylistdynamic",
+  "object": "6f46a4d0-401c-4b7b-b542-b3d3eafe4aad"
+}

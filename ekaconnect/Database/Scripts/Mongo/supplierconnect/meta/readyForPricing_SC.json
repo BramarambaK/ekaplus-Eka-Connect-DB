@@ -1,0 +1,184 @@
+{
+    "_id" : "readyForPricing_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "version" : "V2",
+    "taskId" : "readyForPricing",
+    "object" : "45893377-0e80-4c1b-b8c2-d482d66f689b",
+    "sys__UUID" : "0dfe9d1b-37b2-440f-b90f-e968d6b59191",
+    "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "getDataFromExternalAPI" : false,
+    "inputData" : {
+        "type" : "elasticSearch",
+        "queryParamMapping" : {
+            "from" : "startLimit",
+            "size" : "endLimit"
+        },
+        "config" : {
+            "postRunTask" : [ 
+                {
+                    "id" : "EXTERNAL_SUPPLIER_POSTOP_CALL"
+                }
+            ],
+            "defaultOptions" : {
+                "sort" : [ 
+                    {
+                        "column" : "gmrRefNo_hidden.raw",
+                        "order" : "desc"
+                    }
+                ],
+                "missingColumns" : {
+                    "asc" : "first",
+                    "desc" : "last"
+                }
+            }
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Ready For Pricing",
+    "type" : "workflow",
+    "rows" : "50",
+    "layout" : {
+        "name" : "list",
+        "lazyLoading" : true,
+        "cache" : false,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "serverSearch" : true,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : true,
+            "export" : true,
+            "customization" : true,
+            "showFilterHeader" : true,
+            "headerFilter" : {
+                "label" : "All (Loaded, Not Loaded)",
+                "field" : "isShipmentLoaded",
+                "isCustomOptions" : true,
+                "options" : [ 
+                    {
+                        "label" : "Not Loaded",
+                        "value" : "Not Loaded"
+                    }
+                ]
+            }
+        },
+        "theme" : "theme-grid-white",
+        "columnResizeMode" : "expand"
+    },
+    "theme" : "theme-grid-light",
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "selection" : "custom-link",
+            "outcomes" : [ 
+                {
+                    "name" : "viewgmrbasic",
+                    "setSelected" : [ 
+                        "selected.supplierlisting"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EDIT_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.supplierlisting",
+                    "name" : "editgmrbasic"
+                }
+            ],
+            "label" : "Update",
+            "iconClass" : "cr-edit-icon"
+        }
+    ],
+    "labelKey" : "GMR_LISTING",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "task" : "custom-link",
+            "edit" : false,
+            "label" : "GMR No",
+            "sort" : true,
+            "category" : "link",
+            "sortColumn" : "gmrRefNo_hidden",
+            "key" : "gmrNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Supplier Reference ID",
+            "sort" : true,
+            "key" : "supplierReferenceId"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Contract Delivery Item",
+            "sort" : true,
+            "key" : "contractDeliveryItem"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Earliest Price Fixation",
+            "sort" : true,
+            "key" : "earliestPriceFixation"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Loading Date",
+            "sort" : true,
+            "key" : "loadingDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Arrival Date",
+            "sort" : true,
+            "hidden" : true,
+            "key" : "arrivalDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Latest Pricing",
+            "sort" : true,
+            "key" : "latestPricing"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Latest Assay Status",
+            "sort" : true,
+            "key" : "latestAssayStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Final Assay Ready For Pricing",
+            "sort" : true,
+            "key" : "finalAssayReadyForPricing"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Supplier",
+            "sort" : true,
+            "key" : "supplier"
+        }
+    ]
+}

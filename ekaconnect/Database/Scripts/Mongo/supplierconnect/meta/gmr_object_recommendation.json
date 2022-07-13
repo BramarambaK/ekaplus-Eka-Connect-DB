@@ -1,0 +1,74 @@
+{
+    "_id" : "gmrObject_SC",
+    "componentType" : "UserTask",
+	"description" : "-N/A-",
+    "tags":"trainingData",
+    "decisions" : [         
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EDIT_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.gmrObject",
+                    "name" : "gmrObject"                   
+                }
+            ],
+            "label" : "GMR"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "deliveryItemRefNo",
+            "sort" : true,
+            "key" : "deliveryItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "cpName",
+            "sort" : true,
+            "key" : "cpName"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "labelKey" : "GMROBJECT",
+    "layout" : {
+	    "header" : {
+            "title" : "GMR Object"
+        },
+		"footer" : false,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : false,
+        "menu" : false,
+        "refreshData" : true,
+        "showErrorInPopUp" : {
+            "navigateURL" : "supplierlisting",
+            "buttonLabel" : "Update Later"
+        }
+    },
+    "object" : "c05cacf5-200c-4d97-8e8d-a67329ff286c",
+    "objectAction" : "LISTVIEW",
+    "payLoad" : "",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "rows" : "100",
+    "taskId" : "gmrObject",
+    "theme" : "theme-grid-light",
+    "type" : "workflow"
+}

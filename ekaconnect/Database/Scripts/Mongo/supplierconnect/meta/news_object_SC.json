@@ -1,0 +1,32 @@
+{
+  "_id": "news_object_SC",
+  "name": "news",
+  "type": "object",
+  "sys__UUID": "abd361ed-18c4-438e-93e3-fa0f83cf4fdd",
+  "description" : "View News.",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "fields": {
+    "Title" : {
+      "Title" : "Title",
+      "labelKey" : "Title"
+  },
+  "Description" : {
+      "Description" : "Description",
+      "labelKey" : "Description"
+  }, 
+  "Date": {
+	"Date": "Date",
+	"labelKey": "Date"
+  }
+   
+  },
+  "layout": {
+    "fields": []
+  }
+}

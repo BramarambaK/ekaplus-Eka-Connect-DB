@@ -1,0 +1,138 @@
+{
+    "_id" : "setforapproval_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Set Approval Status",
+    "type" : "workflow",
+    "payLoad" : "selected",
+    "processorInfo" : {
+        "processorId" : "f8374346-1a21-4ff4-a28d-04092cbf3ff6"
+    },
+    "layout" : {
+        "processorInfo" : {
+            "processorId" : "d904fdf2-8407-4499-85cc-79e33565c9df"
+        },
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "data" : "selected.viewgmrbasic",
+        "formStyle" : {},
+        "header" : {
+            "title" : "Set Approval Status"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "valueMouseHover" : false
+    },
+    "input" : [],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewgmrbasic",
+                    "clearSelected" : ["selected.setforapproval"],
+                    "resetForm" : false
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "setforapproval",
+            "outcomes" : [ 
+                {
+                    "data" : "output.setforapproval",
+                    "name" : "_ST_VALIDATE_SET_FOR_APPROVAL_"
+                },
+                {
+                    "data" : "output.setforapproval",
+                    "name" : "_SET_FOR_APPROVAL_CALL"
+                }, 
+                {
+                    "data" : "output._SET_FOR_APPROVAL_CALL",
+                    "name" : "viewgmrbasic",
+                    "clearSelected" : [ 
+                        "selected.setforapproval"
+                    ],
+                    "resetForm" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "SET_FOR_APPROVAL",
+    "fields" : [ 
+        [
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGmrRefNo"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGMRRefNo"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "intGmrRefNo"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "gmrRefNo"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "suffix" : "",
+                "key" : "gmrApprovalStatus",
+                "value" : "select"
+            },
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "approveSelectedData"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "300px"
+                },
+                "key" : "gmrIncompleteReason",
+                "placeholder" : "Select"
+            }
+        ]
+    ],
+    "taskId" : "setforapproval",
+    "object" : "0800a667-67c8-4f79-b124-b6b422aff8a0"
+}

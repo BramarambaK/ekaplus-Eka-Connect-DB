@@ -1,0 +1,85 @@
+{
+    "_id": "generaldocumentdelete_SC",
+    "componentType": "UserTask",
+    "decisions": [
+        {
+            "btnClass": "btn btn-outline-dark custom-btn",
+            "objectAction": "READ",
+            "outcomes": [
+                {
+                    "name": "generaldocumentlisting"
+                }
+            ],
+            "label": "CANCEL",
+            "position": "bottom"
+        },
+        {
+            "btnClass": "btn-primary custom-btn",
+            "objectAction": "UPDATE",
+            "task": "generaldocumentdelete",
+            "outcomes": [
+                {
+                    "result": {
+                        "success": {
+                            "message": "Document deleted successfully"
+                        },
+                        "failure": {
+                            "message": "Please fix errors in external task"
+                        },
+                        "successWithWarning": {
+                            "message": "Document deleted with some errors"
+                        }
+                    },
+                    "data": "output.generaldocumentdelete",
+                    "appendMsg": true,
+                    "name": "_EXT_DELETE_DOCUMENT"
+                },
+                {
+                    "data": "output.generaldocumentdelete",
+                    "appendMsg": false,
+                    "name": "_ST_DELETE_DOCUMENT"
+                },
+                {
+                    "name": "generaldocumentlisting",
+                    "showToaster": true
+                }
+            ],
+            "style": {
+                "margin-left": "auto"
+            },
+            "label": "DELETE",
+            "position": "bottom",
+            "type": "submit"
+        },
+        {
+            "btnClass": "close-icon btn",
+            "objectAction": "READ",
+            "outcomes": [
+                {
+                    "name": "generaldocumentlisting"
+                }
+            ],
+            "position": "top",
+            "type": "close"
+        }
+    ],
+    "getDataFromExternalAPI": true,
+    "label": "DELETE DOCUMENT",
+    "labelKey": "DELETE_DOCUMENT",
+    "layout": {
+        "topLine": {
+            "display": true
+        },
+        "name": "cancelpopup",
+        "option": {
+            "bodyMessage": "Do you want to delete document ${fileName}?",
+            "headerMessage": "Delete Document: ${fileName}"
+        }
+    },
+    "object": "2b28674d-c7ba-4661-ae32-f9b86d8c1007",
+    "objectAction": "DELETE",
+    "refType": "app",
+    "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId": "generaldocumentdelete",
+    "type": "workflow"
+}

@@ -1,0 +1,17 @@
+{
+    "_id" : "MULTI_API_TASK4",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId" : "MULTI_API_TASK4",
+    "object" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec",
+    "type" : "workflow",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_API_GMRLIST"
+            }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "_id" : "uploadSupplierAssayEconomic_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Edit Assaying Listing",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "assay",
+        "menu" : false,
+        "details" : true,
+        "options" : {
+            "filter" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "edit" : true,
+            "reset" : false,
+            "export" : false
+        },
+        "header" : {
+            "field" : "gmrRefNo",
+            "title" : "Edit Assay - "
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "task" : "editassayinglistinggmrdetails",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_CAL_ECONOMIC_VALUE_API_SC",
+                    "data" : "output.uploadSupplierAssayEconomic_SC"
+                }, 
+                {
+                    "name" : "editassayinglistinggmrdetails",
+                    "data" : "output._ST_CAL_ECONOMIC_VALUE_API_SC"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "Edit_Assaying_LISTING",
+    "fields" : [],
+    "taskId" : "uploadSupplierAssayEconomic_SC",
+    "object" : "7bd6f722-684f-4b92-9f75-1fb94857ed85"
+}

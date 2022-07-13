@@ -1,0 +1,220 @@
+{
+  "_id": "invoicelisting_SC",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "version": "V2",
+  "listingDataOptions": {
+    "filterOptions": {
+      "type": "elasticSearch"
+    }
+  },
+  "getDataFromExternalAPI": false,
+  "inputData": {
+    "type": "SystemTask",
+    "queryParamMapping": {
+      "from": "startLimit",
+      "size": "endLimit"
+    },
+    "config": {
+      "id": "crawler_chainedInvoicelist",
+      "isAsynchCallRequired": "Y",
+      "ttl": 5,
+      "isElasticCumSystemTask": true,
+      "statusFlagToBeUpdated": true,
+      "statusFlagWorklowTask": "invoicelisting",
+      "hasStatusFlag": true,
+      "backupIndex": false,
+      "reIndex": false,
+      "defaultOptions": {
+        "sort": [
+          {
+            "column": "invoiceIssueDate.raw",
+            "order": "desc"
+          }
+        ],
+                "missingColumns" : {
+                    "asc" : "first",
+                    "desc" : "last"
+                }
+      }
+    }
+  },
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "label": "Invoices",
+  "type": "workflow",
+  "rows": "50",
+  "layout": {
+    "name": "list",
+    "selection": "row",
+    "lazyLoading": true,
+    "cache": true,
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "serverSearch": true,
+      "columnFilter": true,
+      "serverFilter": true,
+      "sortFilter": true,
+      "reset": true,
+      "export": true,
+      "customization": true,
+      "showFilterHeader": true
+    },
+    "theme": "theme-grid-white",
+    "columnResizeMode" : "expand"
+  },
+  "theme": "theme-grid-light",
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.invoicelisting",
+          "name": "viewinvoicegmrbasic"
+        }
+      ]
+    }
+  ],
+  "labelKey": "INVOICE_LISTING",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Invoice No",
+      "sort": true,
+      "key": "invoiceRefNo"
+    },
+    {
+      "filter": true,
+      "task": "custom-link",
+      "edit": false,
+      "label": "GMR No",
+      "sort": true,
+      "sortColumn": "gmrRefNo_hidden",
+      "category": "link",
+      "key": "gmrRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Supplier Reference ID",
+      "sort": true,
+      "key": "supplierRefId"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Contract Delivery Item",
+      "sort": true,
+      "sortColumn": "deliveryItemRefNo_hidden",
+      "key": "contractDeliveryRefNo"
+    },
+    {
+      "filter": true,
+      "filterType": "dateOperations",
+      "edit": false,
+      "label": "Invoice Issue Date",
+      "sort": true,
+      "key": "invoiceIssueDate",
+      "dataType": "date",
+      "sourceDateFormat": "DD-MMM-YYYY",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "filterType": "dateOperations",
+      "edit": false,
+      "label": "Invoice Due Date",
+      "sort": true,
+      "key": "invoiceDueDate",
+      "dataType": "date",
+      "sourceDateFormat": "DD-MMM-YYYY",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Amount",
+      "sort": true,
+      "sortColumn": "invoiceAmount_hidden",
+      "key": "invoiceAmount",
+      "align": "right"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Currency",
+      "sort": true,
+      "key": "invoiceCurrency"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Invoice Type",
+      "sort": true,
+      "key": "invoiceType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Invoiced Weight",
+      "sort": true,
+      "sortColumn": "invoicedWeight_hidden",
+      "key": "invoicedWeight",
+      "align": "right"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Weight Unit",
+      "sort": true,
+      "key": "invoicedWeightUnit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Supplier",
+      "sort": true,
+      "key": "supplierName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Bill To",
+      "sort": true,
+      "key": "billToAddress"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Smelter",
+      "sort": true,
+      "key": "smelterName"
+    },
+    {
+      "filter": true,
+      "filterType": "dateOperations",
+      "edit": false,
+      "label": "Approval Date",
+      "sort": true,
+      "key": "approvalDate",
+      "dataType": "date",
+      "sourceDateFormat": "DD-MMM-YYYY",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Supplier Invoice No",
+      "sort": true,
+      "key": "suppierInvoiceNo"
+    }
+  ],
+  "taskId": "invoicelisting",
+  "object": "c02555d6-307d-46de-b98d-17c48aea7daa",
+  "sys__UUID": "baff89bf-66c7-4edf-af02-74b46e8b1ef2"
+}

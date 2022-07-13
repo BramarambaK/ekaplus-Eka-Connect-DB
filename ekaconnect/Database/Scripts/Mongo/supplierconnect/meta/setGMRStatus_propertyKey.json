@@ -1,0 +1,22 @@
+{
+    "_id" : "setGMRStatus_propertyKey",
+    "type" : "property",
+    "name" : "setGMRStatus_propertyKey",
+    "label" : "Set Approval Label Dropdown",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [
+        {
+            "key" : "Approved",
+            "value" : "Approved"
+        }, 
+        {
+            "key" : "Incomplete",
+            "value" : "Incomplete"
+        }
+    ],
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "description" : "Property is used to show dropdown values of set approval status"
+}

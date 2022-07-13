@@ -1,0 +1,177 @@
+{
+    "_id" : "viewinvoicegmrbasic_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "600875fd-c1ec-4c63-ab5a-61ddf64d2ec1"
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Delivery",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "gmr",
+        "key" : "GMR Ref No",
+        "header" : {
+            "title" : "Delivery"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "decisionName" : "document",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.invoicelisting",
+                    "popupClass" : "uploadpopupcss",
+                    "name" : "editdocumentuploadinvoice",
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Add Document",
+            "position" : "header"
+        }, 
+        {
+            "btnClass" : "",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "decisionName" : "assaying",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.invoicelisting",
+                    "name" : "editdocumentuploadinvoice",
+                    "resetForm" : true
+                }
+            ],
+            "label" : " ",
+            "iconClass" : "fa fa-edit",
+            "position" : "header"
+        }, 
+        {
+            "btnClass" : "",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "decisionName" : "delivery",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.invoicelisting",
+                    "name" : "editgmrbasicgmrdetails",
+                    "resetForm" : true
+                }
+            ],
+            "label" : " ",
+            "iconClass" : "fa fa-edit",
+            "position" : "header"
+        }, 
+        {
+            "btnClass" : "",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "decisionName" : "packaging",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.invoicelisting",
+                    "name" : "editpackaginggmrdetail",
+                    "resetForm" : true
+                }
+            ],
+            "label" : " ",
+            "iconClass" : "fa fa-edit",
+            "position" : "header"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "decisionName" : "delievery",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.invoicelisting",
+                    "popupClass" : "uploadpopupcss",
+                    "name" : "editdocumentuploadinvoice",
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Add Document",
+            "position" : "header"
+        }
+    ],
+    "labelKey" : "VIEW_GMR_BASIC",
+    "fields" : [ 
+        {
+            "placement" : "topHeading",
+            "key" : "Order Status Log"
+        }, 
+        {
+            "placement" : "topHeading",
+            "key" : "orderNo"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "tradeType"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "instrumentType"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "instrument"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "source"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "symbol"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "tradeDate"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "transactTime"
+        }, 
+        {
+            "placement" : "row2",
+            "key" : "orderStatus"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "tradeId"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "orderType"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "limitPrice"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "orderQuantity"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "filledQuantity"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "lastPx"
+        }
+    ],
+    "taskId" : "viewinvoicegmrbasic",
+    "object" : "c05cacf5-200c-4d97-8e8d-a67329ff286c"
+}

@@ -1,0 +1,130 @@
+{
+    "_id" : "readyforapproval_SC",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Ready For Approval",
+    "type" : "workflow",
+    "payLoad" : "selected",
+    "processorInfo" : {
+        "processorId" : "92acb6a1-f575-49da-983a-3c67fce7d663"
+    },
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "data1" : "selected.viewgmrbasic",
+        "formStyle" : {},
+        "header" : {
+            "title" : "Ready For Approval"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "input" : [],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewgmrbasic",
+                    "resetForm" : false
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "readyforapproval",
+            "outcomes" : [ 
+                {
+                    "data" : "output.readyforapproval",
+                    "name" : "_READY_FOR_APPROVAL_CALL"
+                }, 
+                {
+                    "data1" : "output._READY_FOR_APPROVAL_CALL",
+                    "name" : "viewgmrbasic",
+                    "resetForm" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "READY_FOR_APPROVAL",
+    "fields" : [ 
+        [
+            {
+                "style" : {
+                    "width" : "400px"
+                },
+                "suffix" : "",
+                "formLabelStyle" : {
+                    "line-width" : "100px",
+                    "line-height" : "30px",
+                    "font-family" : "Helvetica Neue LT W05 65 Medium",
+                    "font-size" : "14px"
+                },
+                "type" : "hidden",
+                "key" : "approvalNote"
+            },
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGmrRefNo"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGMRRefNo"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "gmrRefNo"
+            },
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "gmrIncompleteReason"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "gmrApprovalStatus"
+            },
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "mail_body"
+            }
+        ]
+    ],
+    "taskId" : "readyforapproval",
+    "object" : "0800a667-67c8-4f79-b124-b6b422aff8a0"
+}

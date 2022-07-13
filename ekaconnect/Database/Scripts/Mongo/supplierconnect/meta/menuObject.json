@@ -1,0 +1,51 @@
+{
+  "_id": "menuObject_supplierconnect",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "handler": "news",
+              "text": "News",
+              "iconCls": "app-menu-icon"
+            },
+            {
+              "handler": "deliveryItemlisting",
+              "text": "Advice Delivery",
+              "iconCls": "app-create-icon"
+            },
+            {
+              "handler": "supplierlisting",
+              "text": "Deliveries",
+              "iconCls": "app-menu-icon"
+            },
+			{
+                            "handler" : "invoicelisting",
+                            "text" : "Invoices",
+                            "iconCls" : "app-menu-icon"
+             }, 
+            {
+              "handler": "finalassaycomposite",
+              "text": "Final Assays",
+              "iconCls": "app-menu-icon"
+            },
+            {
+              "handler": "generaldocumentlisting",
+              "text": "General Documents & Templates",
+              "iconCls": "templates-icon"
+            },
+            {
+              "handler": "contactinformationlisting",
+              "text": "Contact Information",
+              "iconCls": "contact-icon"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

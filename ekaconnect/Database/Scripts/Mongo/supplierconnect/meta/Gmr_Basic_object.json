@@ -1,0 +1,539 @@
+{
+    "_id" : ObjectId("5ccb0eba03ca42b76b34762a"),
+    "type" : "object",
+    "name" : "Gmr_Basic",
+    "label" : "GMR_BASIC",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "2",
+    "sys__UUID" : "c05cacf5-200c-4d97-8e8d-a67329ff286c",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+	"description" : "Advice Delivery + Edit Delivery.",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT",
+        "SWITCH" : "SWITCH",
+        "SETAPPROVAL" : "SETAPPROVAL",
+        "READYAPPROVAL" : "READYAPPROVAL",
+        "UPLOAD_SUPPLIERASSAY" : "UPLOAD_SUPPLIERASSAY"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [ 
+        "gmrBasicContractDeliveryItem", 
+        "gmrBasicParticleSize", 
+        "gmrBasicLotSize", 
+        "gmrBasicIncoterm", 
+        "gmrBasicSupplier", 
+        "gmrBasicSupplierAddress", 
+        "gmrBasicSupplierReference", 
+        "gmrBasicQuality", 
+        "gmrBasicExpectedArrivalDate", 
+        "gmrBasicDestination", 
+        "gmrBasicAdvicedNetWeight", 
+        "gmrBasicAdvicedNetWeightUnit", 
+        "gmrBasicMaterialDescription", 
+        "gmrBasicLoadingDate", 
+        "gmrBasicLoadingLocationCountry", 
+        "gmrBasicLoadingLocationCity", 
+        "gmrBasicCountryOfOrigin", 
+        "gmrBasicModeOfTransport", 
+        "gmrBasicContainerFlag", 
+        "gmrBasicSupplierRepresentative", 
+        "gmrBasicSpecialInstructionsToSmelter", 
+        "gmrBasicMaterialClassification"
+    ],
+    "fields" : {
+        "toDate" : {
+            "toDate" : "To Date",
+            "labelKey" : "toDate",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "fromDate" : {
+            "fromDate" : "From Date",
+            "labelKey" : "fromDate",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "pcdiId" : {
+            "pcdiId" : "Internal Delivery Item",
+            "labelKey" : "pcdiId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false,
+            "isReqInDropDownFilter" : true,
+            "value" : "selected.deliveryItemlisting.pcdiId"
+        },
+        "deliveryItemRefNo1" : {
+            "deliveryItemRefNo" : "Internal Delivery Item",
+            "labelKey" : "deliveryItemRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false,
+            "isReqInDropDownFilter" : true,
+            "value" : "selected.deliveryItemlisting.deliveryItemRefNo"
+        },
+        "city" : {
+            "city" : "City",
+            "labelKey" : "city",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "qualityName" : {
+            "qualityName" : "Quality Name",
+            "labelKey" : "qualityName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false,
+            "length" : "50"
+        },
+        "dischargeCountryId" : {
+            "dischargeCountryId" : "",
+            "labelKey" : "dischargeCountryId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "dischargeCityId" : {
+            "dischargeCityId" : "",
+            "labelKey" : "dischargeCityId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "deliveryItemRefNo" : {
+            "gmrBasicContractDeliveryItem" : "Contract Delivery Item",
+            "labelKey" : "gmrBasicContractDeliveryItem",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "length" : "60"
+        },
+        "particleSize" : {
+            "gmrBasicParticleSize" : "Particle Size",
+            "labelKey" : "gmrBasicParticleSize",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "materialClassification" : {
+            "gmrBasicMaterialClassification" : "Material Classification",
+            "labelKey" : "gmrBasicMaterialClassification",
+            "serviceKey" : "materialClassification",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : true
+        },
+        "LotSize" : {
+            "gmrBasicLotSize" : "Lot Size",
+            "labelKey" : "gmrBasicLotSize",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "incoTermId" : {
+            "gmrBasicIncoterm" : "Incoterm",
+            "labelKey" : "gmrBasicIncoterm",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "cpName" : {
+            "gmrBasicSupplier" : "Supplier",
+            "labelKey" : "gmrBasicSupplier",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "cpAddress" : {
+            "gmrBasicSupplierAddress" : "Supplier Address",
+            "labelKey" : "gmrBasicSupplierAddress",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false,
+            "length" : "4000"
+        },
+        "SupplierReference" : {
+            "gmrBasicSupplierReference" : "Supplier Reference Id",
+            "labelKey" : "gmrBasicSupplierReference",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : true,
+            "length" : "30",
+            "excludeRegex" : "[~!@$^&\\=\\[\\]{}\"\\\\|?]",
+            "excludeRegexMsg" : "Special characters other than / ‘ < > * ( ) % # . , ; : - _ + are not allowed"
+        },
+        "Quality" : {
+            "gmrBasicQuality" : "Quality",
+            "labelKey" : "gmrBasicQuality",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : true,
+            "dropdownValue" : "qualityName",
+            "serviceKey" : "contractQuality",
+            "parentFromPrevScreen" : true,
+            "parent" : [ 
+                "pcdiId", 
+                "deliveryItemRefNo1"
+            ],
+            "children" : [ 
+                "particleSize", 
+                "maxLotSize", 
+                "qtyUnitId", 
+                "qtyUnitName", 
+                "supplierId", 
+                "supplierName"
+            ]
+        },
+        "ExpectedArrivalDate" : {
+            "gmrBasicExpectedArrivalDate" : "Expected Arrival Date",
+            "labelKey" : "gmrBasicExpectedArrivalDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "format" : "yyyy-MM-dd",
+            "minimumDate" : "return '${LoadingDate}' ? new Date('${LoadingDate}') < new Date('${fromDate}') ? '${fromDate}' : '${LoadingDate}' : new Date('${fromDate}') > new Date() ? '${fromDate}' : moment().format('DD-MMM-YYYY')",
+            "maximumDate" : "return '${toDate}' ? '${toDate}' : false",
+            "comparison1" : [ 
+                {
+                    "compareTo" : "LoadingDate",
+                    "operator" : "=>"
+                }
+            ],
+            "dataType" : "date",
+            "fieldCompareTo" : "Loading Date",
+            "valueCheck" : "if( new Date('${LoadingDate}').getTime() <=  new Date('${ExpectedArrivalDate}').getTime() && new Date('${ExpectedArrivalDate}').getTime() <=  new Date('${toDate}').getTime()){return true;} else {return 'SC004';}",
+            "UIupdates" : {
+                "value" : "if('${LoadingDate}' && '${ExpectedArrivalDate}' && new Date('${LoadingDate}') > new Date('${ExpectedArrivalDate}') ) return '${ExpectedArrivalDate}'",
+                "disability" : "return '${LoadingDate}' && '${LoadingDate}'!='null' ? false : true"
+            }
+        },
+        "incoLocation" : {
+            "gmrBasicDestination" : "Destination (Smelter)",
+            "labelKey" : "gmrBasicDestination",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dropdownValue" : "incoLocationDisplayName",
+            "serviceKey" : "incoTermDestination",
+            "parentFromPrevScreen" : true,
+            "parent" : [ 
+                "pcdiId", 
+                "deliveryItemRefNo1"
+            ],
+            "children" : [ 
+                "incoterm", 
+                "incoTermId", 
+                "city", 
+                "dischargeCountryId", 
+                "dischargeCityId"
+            ],
+            "length" : "30"
+        },
+        "incoLocationDisplayName" : {
+            "incoLocationDisplayName" : "",
+            "labelKey" : "incoLocationDisplayName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "AdvicedNetWeight" : {
+            "gmrBasicAdvicedNetWeight" : "Adviced Net Weight",
+            "labelKey" : "gmrBasicAdvicedNetWeight",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "AdvicedNetWeightUnit" : {
+            "gmrBasicAdvicedNetWeightUnit" : "Adviced Net Weight Unit",
+            "labelKey" : "gmrBasicAdvicedNetWeightUnit",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "MaterialDescription" : {
+            "gmrBasicMaterialDescription" : "Material Description",
+            "labelKey" : "gmrBasicMaterialDescription",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "4000",
+            "excludeRegex" : "[~!@$^&\\=\\[\\]{}\"\\\\|?]",
+            "excludeRegexMsg" : "Special characters other than / ‘ < > * ( ) % # . , ; : - _ + are not allowed"
+        },
+        "LoadingDate" : {
+            "gmrBasicLoadingDate" : "Loading Date",
+            "labelKey" : "gmrBasicLoadingDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "format" : "yyyy-MM-dd",
+            "minimumDate" : "return moment().format('DD-MMM-YYYY')",
+            "maximumDate" : "return '${toDate}' ? '${toDate}' : false",
+            "comparison1" : [ 
+                {
+                    "compareTo" : "currentDate",
+                    "operator" : "=>"
+                }
+            ],
+            "dataType" : "date",
+            "errorCode" : "012",
+            "valueCheck" : "if(new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()) <=  new Date('${LoadingDate}') && new Date('${LoadingDate}').getTime() <=  new Date('${toDate}').getTime()){return true;} else {return false;}",
+            "children" : [ 
+                "ExpectedArrivalDate"
+            ]
+        },
+        "LoadingLocationCountry" : {
+            "gmrBasicLoadingLocationCountry" : "Loading Country",
+            "labelKey" : "gmrBasicLoadingLocationCountry",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dropdownValue" : "LoadingLocationCountryDisplayName",
+            "serviceKey" : "countriesComboDataFromDB",
+            "children" : [ 
+                "LoadingLocationCity"
+            ],
+            "length" : "15"
+        },
+        "LoadingLocationCountryDisplayName" : {
+            "LoadingLocationCountryDisplayName" : "",
+            "labelKey" : "LoadingLocationCountryDisplayName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "LoadingLocationCity" : {
+            "gmrBasicLoadingLocationCity" : "Loading City",
+            "labelKey" : "gmrBasicLoadingLocationCity",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dropdownValue" : "LoadingLocationCityDisplayName",
+            "serviceKey" : "cityComboDataFromDB",
+            "parent" : [ 
+                "LoadingLocationCountry", 
+                "city"
+            ]
+        },
+        "LoadingLocationCityDisplayName" : {
+            "LoadingLocationCityDisplayName" : "",
+            "labelKey" : "LoadingLocationCityDisplayName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "EditLocationCity" : {
+            "editgmrBasicLoadingLocationCity" : "Loading City",
+            "labelKey" : "editgmrBasicLoadingLocationCity",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "CountryOfOrigin" : {
+            "gmrBasicCountryOfOrigin" : "Country of Origin",
+            "labelKey" : "gmrBasicCountryOfOrigin",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dropdownValue" : "CountryOfOriginDisplayName",
+            "serviceKey" : "countriesComboDataFromDB"
+        },
+        "CountryOfOriginDisplayName" : {
+            "CountryOfOriginDisplayName" : "",
+            "labelKey" : "CountryOfOriginDisplayName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerFlag" : {
+            "gmrBasicContainerFlag" : "Container",
+            "labelKey" : "gmrBasicContainerFlag",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dropdownValue" : "containerFlagDisplayName",
+            "serviceKey" : "loose"
+        },
+        "containerFlagDisplayName" : {
+            "containerFlagDisplayName" : "",
+            "labelKey" : "containerFlagDisplayName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "SupplierRepresentative" : {
+            "gmrBasicSupplierRepresentative" : "Supplier Representative",
+            "labelKey" : "gmrBasicSupplierRepresentative",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dropdownValue" : "SupplierRepresentativeDisplayName",
+            "serviceKey" : "businesspartnercontactpersoncustom",
+            "dependsOn" : [ 
+                "INSPECTIONAGENCY"
+            ]
+        },
+        "SupplierRepresentativeDisplayName" : {
+            "SupplierRepresentativeDisplayName" : "",
+            "labelKey" : "SupplierRepresentativeDisplayName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "SpecialInstructionsToSmelter" : {
+            "gmrBasicSpecialInstructionsToSmelter" : "Special Instructions to Smelter",
+            "labelKey" : "gmrBasicSpecialInstructionsToSmelter",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Element" : {
+            "assayingElements" : "Elements",
+            "labelKey" : "assayingElements",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "EstimatedValue" : {
+            "assayingEstimatedValues" : "Estimated Values",
+            "labelKey" : "assayingEstimatedValues",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "modeOfTransport" : {
+            "modeOfTransport" : "Mode Of Transport ",
+            "labelKey" : "modeOfTransport",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "maxLotSize" : {
+            "maxLotSize" : "Max Lot Size",
+            "labelKey" : "maxLotSize",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "qtyUnitId" : {
+            "qtyUnitId" : "Quantity Unit Id",
+            "labelKey" : "qtyUnitId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "qtyUnitName" : {
+            "qtyUnitName" : "Quanity Unit Name",
+            "labelKey" : "qtyUnitName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "supplierId" : {
+            "supplierId" : "Supplier Id",
+            "labelKey" : "supplierId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false,
+            "length" : "15"
+        },
+        "advicedNetweight" : {
+            "advicedNetweight" : "Adviced Netweight",
+            "labelKey" : "advicedNetweight",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "noOfContainers" : {
+            "noOfContainers" : "No Of Containers",
+            "labelKey" : "noOfContainers",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerDetails" : {
+            "containerDetails" : "Container Details",
+            "labelKey" : "containerDetails",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "assaying" : {
+            "assaying" : "Assaying",
+            "labelKey" : "assaying",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "response" : {
+            "response" : "response",
+            "labelKey" : "response",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "currentDate" : {
+            "currentDate" : "Current Date",
+            "labelKey" : "currentDate",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "layout" : {
+        "fields" : [ 
+            [ 
+                "pcdiId", 
+                "city", 
+                "qualityName", 
+                "deliveryItemRefNo", 
+                "deliveryItemRefNo1", 
+                "maxLotSize", 
+                "qtyUnitId", 
+                "qtyUnitName", 
+                "supplierId", 
+                "particleSize", 
+                "materialClassification", 
+                "LotSize", 
+                "incoTermId", 
+                "cpName", 
+                "cpAddress", 
+                "SupplierReference", 
+                "Quality", 
+                "ExpectedArrivalDate", 
+                "incoLocation", 
+                "Element", 
+                "EstimatedValue", 
+                "dischargeCityId", 
+                "dischargeCountryId"
+            ], 
+            [ 
+                "AdvicedNetWeight", 
+                "AdvicedNetWeightUnit", 
+                "MaterialDescription", 
+                "LoadingDate", 
+                "LoadingLocationCountry", 
+                "LoadingLocationCity", 
+                "CountryOfOrigin", 
+                "ModeOfTransport", 
+                "containerFlag", 
+                "SupplierRepresentative", 
+                "SpecialInstructionsToSmelter"
+            ]
+        ]
+    }
+}

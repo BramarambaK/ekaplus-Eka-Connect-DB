@@ -1,0 +1,141 @@
+{
+    "_id" : "EXTERNAL_API_GMRLIST",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.eka_ctrm_host}",
+        "path" : "/api/logistic/viewGmrListing",
+        "headers" : {},
+        "method" : "POST",
+        "responseDataKey" : "",
+        "body" : {}, 
+		"queryParams" : {
+            "from" : "startLimit",
+            "size" : "endLimit"
+        },		
+        "columns" : [ 
+           {
+                "name" : "gmrRefNo",
+                "type" : "VARCHAR",
+                "primary" : "y"
+            }, 
+            {
+                "name" : "senderRefNo",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "qualityName",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "deliveryItemRefNo",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "quantity",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "quantityUnit",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "shipmentdate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "loadingCountry",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "countryOfOrigin",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "modeOfTransport",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "eta",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "incoLocation",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "containerNo",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "containerSize",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "landingDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "assayDueDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "latestAssayType",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "currentPricingStatus",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "markedForUmpire",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "gmrDueDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "latestInvoiceType",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "invoiceDueDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "cpName",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "gmrCreatedDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "createdBy",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "updatedDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "updatedBy",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "bolidenAssayAsFinal",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "earliestPriceFixation",
+                "type" : "VARCHAR"
+            }
+        ]
+    },
+    "taskId" : "EXTERNAL_API_GMRLIST",
+    "object" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec"
+}

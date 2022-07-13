@@ -1,0 +1,26 @@
+{
+    "_id" : "EXTERNAL_SUPPLIER_POSTOP_CALL",
+    "componentType" : "ExtSystemTask",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/workflow/data",
+        "headers" : {},
+        "method" : "POST",
+        "body" : {
+            "appId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+            "workFlowTask" : "supplierlisting_Scheduler",
+            "qP" : {
+                "from" : 0,
+                "size" : 400
+            },
+            "operation" : []
+        }
+    },
+    "taskId" : "EXTERNAL_SUPPLIER_POSTOP_CALL",
+    "object" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec"
+}

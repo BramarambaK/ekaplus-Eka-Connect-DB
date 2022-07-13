@@ -1,0 +1,18 @@
+{
+    "_id" : ObjectId("5d0b310c92574aeb77151b57"),
+    "type" : "object",
+    "name" : "Recommendation",
+    "fields" : {
+        "generalDetails" : {
+            "generalDetails" : "generalDetails",
+            "labelKey" : "generalDetails",
+            "isRequired" : false
+        },
+        "itemDetails" : {
+            "itemDetails" : "itemDetails",
+            "labelKey" : "itemDetails",
+            "isRequired" : false
+        }
+    },
+    "sys__UUID" : "6b84c5c5-c015-4dc0-91f2-386f50cb391c"
+}

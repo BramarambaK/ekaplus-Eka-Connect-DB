@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5d0b36ad92574aeb7715471f"),
+    "key" : "modeOfTransport-001",
+    "value" : "Rail",
+    "object" : "modeOfTransport",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "connectmdm"
+}

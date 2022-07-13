@@ -1,0 +1,9 @@
+{
+    "_id" : "validate_setforapproval_processor",
+    "name" : "validate_setforapproval_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "snippet" : " \/\/  Validation for Approval process\r\n    let data = req.body;\r\n    if (req.body.gmrApprovalStatus == 'Incomplete' || req.body.gmrApprovalStatus == 'Approved') {\r\n      if (req.body.gmrApprovalStatus == 'Incomplete' &&(req.body.gmrIncompleteReason == null || req.body.gmrIncompleteReason.length == 0)) {\r\n        let err = 'Please select applicable incomplete reason(s) to proceed';\r\n        return res.status(500).send(err);\r\n      }\r\n      return res.status(200).send({ data });\r\n    } else {\r\n      let err = 'Please select an approval status to proceed';\r\n      return res.status(500).send(err);\r\n    }",
+    "sys__UUID" : "ad96e22d-7f41-41a2-a99c-c8e9ffceebfe"
+}

@@ -1,0 +1,23 @@
+{
+    "_id" : "EXTERNAL_API_INVOICELIST",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.eka_ctrm_host}",
+        "path" : "/api/logistic/invoiceList",
+        "headers" : {},
+        "method" : "POST",
+        "responseDataKey" : "",
+        "body" : {},
+        "queryParams" : {
+            "from" : "startLimit",
+            "size" : "endLimit"
+        }
+        
+    },
+    "taskId" : "EXTERNAL_API_INVOICELIST",
+    "object" : "c02555d6-307d-46de-b98d-17c48aea7daa"
+}

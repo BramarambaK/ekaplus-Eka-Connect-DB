@@ -1,0 +1,314 @@
+{
+    "_id" : "supplierlisting_SC_V2_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "version" : "V2",
+    "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "getDataFromExternalAPI" : false,
+    "inputData" : {
+        "type" : "elasticSearch",
+        "queryParamMapping" : {
+            "from" : "startLimit",
+            "size" : "endLimit"
+        },
+        "config" : {
+            "id" : "crawler_chainedgmrlist",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : true,
+            "statusFlagWorklowTask" : "supplierlisting",
+            "hasStatusFlag" : true,
+			"defaultOptions" : {
+                "sort" : [ 
+                    {
+                        "column" : "gmrRefNo_hidden.raw",
+                        "order" : "desc"
+                    }
+                ],
+				 "missingColumns" :  {
+                    "asc" : "first",
+                    "desc" : "last"
+                }
+            }
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label" : "Deliveries",
+    "type" : "workflow",
+    "rows" : "100",
+    "layout" : {
+        "name" : "list",
+        "lazyLoading" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "serverSearch" : true,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "theme" : "theme-grid-light",
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "selection" : "custom-link",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.supplierlisting",
+                    "name" : "viewgmrbasic"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EDIT_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.supplierlisting",
+                    "name" : "editgmrbasic"
+                }
+            ],
+            "label" : "Update",
+            "iconClass" : "cr-edit-icon"
+        }
+    ],
+    "labelKey" : "GMR_LISTING",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "task" : "custom-link",
+            "edit" : false,
+            "label" : "GMR No",
+            "sort" : true,
+            "category" : "link",
+            "key" : "gmrRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Sender Ref No",
+            "sort" : true,
+            "key" : "senderRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Quality",
+            "sort" : true,
+            "key" : "qualityName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Contract Delivery Item",
+            "sort" : true,
+            "key" : "deliveryItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Advised Net Weight",
+            "sort" : true,
+            "roundoff" : "5",
+            "key" : "quantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Weight Unit",
+            "sort" : true,
+            "key" : "quantityUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Loading Date",
+            "sort" : true,
+            "key" : "shipmentdate",
+            "dataType" : "date",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Country of Loading",
+            "sort" : true,
+            "key" : "loadingCountry"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Country of Origin",
+            "sort" : true,
+            "key" : "countryOfOrigin"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Mode of Transport",
+            "sort" : true,
+            "key" : "modeOfTransport"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Expected Arrival Date",
+            "sort" : true,
+            "key" : "eta",
+            "dataType" : "date",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Destination (Smelter)",
+            "sort" : true,
+            "key" : "incoLocation"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Container No/ Transport ID",
+            "sort" : true,
+            "key" : "containerNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Container Size",
+            "sort" : true,
+            "key" : "containerSize"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Arrival Date",
+            "sort" : true,
+            "key" : "landingDate",
+            "dataType" : "date",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Assay Due Date",
+            "sort" : true,
+            "key" : "assayDueDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Latest Assay Type",
+            "sort" : true,
+            "key" : "latestAssayType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Latest Pricing Status",
+            "sort" : true,
+            "key" : "currentPricingStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Marked For Umpire",
+            "sort" : true,
+            "key" : "markedForUmpire"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Gmr Due Date",
+            "sort" : true,
+            "key" : "gmrDueDate",
+            "dataType" : "date",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Latest Invoice Type",
+            "sort" : true,
+            "key" : "latestInvoiceType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Invoice Due Date",
+            "sort" : true,
+            "key" : "invoiceDueDate",
+            "dataType" : "date",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Supplier",
+            "sort" : true,
+            "key" : "cpName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Created Date",
+            "sort" : true,
+            "key" : "gmrCreatedDate",
+            "dataType" : "date",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Created By",
+            "sort" : true,
+            "key" : "createdBy"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Updated Date",
+            "sort" : true,
+            "key" : "updatedDate",
+            "dataType" : "date",
+            "dateformat" : "DD-MMM-YYYY HH:MM"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Updated By",
+            "sort" : true,
+            "key" : "updatedBy"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Boliden Assay as Final",
+            "sort" : true,
+            "key" : "bolidenAssayAsFinal"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Earliest Price Fixation",
+            "sort" : true,
+            "key" : "earliestPriceFixation"
+        }
+    ],
+    "taskId" : "supplierlisting",
+    "object" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec",
+    "deviceType" : "mobile"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "gmr_approval_incomplete_mailbody_property",
+    "type" : "property",
+    "name" : "gmr_approval_incomplete_mailbody",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "The following Delivery is incomplete and needs to be completed before Loading Date.<br><br><table><tr><td>GMR:</td><td><b><GmrRefNo></b></td></tr><tr> <td>Incomplete Reason:</td><td> <b><incompleteReason></b></td></tr><tr> <td> Loading Date:</td><td><b><loadingDate></b></td></tr></table><br><br>Please add all required documentation and set the Delivery to &quot;Ready for Approval&quot;<br><br>Kind Regards,<br>Boliden<br><u><font color='blue'><email></font></u><br><br>",
+    "length" : "1000",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "GMR APPROVAL INCOMPLETE MAILBODY",
+    "description" : "mail body when ready for approval status is incomplete."
+}

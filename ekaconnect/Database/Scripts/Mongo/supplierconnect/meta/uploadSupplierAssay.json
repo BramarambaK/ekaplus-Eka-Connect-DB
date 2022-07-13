@@ -1,0 +1,48 @@
+{
+    "_id": "uploadSupplierAssay",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "processorInfo": {
+        "processorId": "600875fd-c1ec-4c63-ab5a-61ddf64d2ec1"
+    },
+    "refType": "app",
+    "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "label": "Delivery",
+    "type": "workflow",
+    "layout": {
+        "name": "uploadSupplierAssay",
+        "key": "GMR Ref No",
+        "header": {
+            "title": "Delivery"
+        }
+    },
+    "decisions": [{
+        "btnClass" : "btn btn-outline-dark custom-btn",
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "viewgmrbasic",
+                "cache" : true
+            }
+        ],
+        "style" : {
+            "margin-right" : "auto"
+        },
+        "label" : "CANCEL",
+        "position" : "bottom"
+    }, 
+    {
+        "btnClass" : "btn-primary custom-btn",
+        "objectAction" : "UPDATE",
+        "labelkey" : "REVIEW",
+        "task" : "uploadSupplierAssay_popup",
+        "outcomes" : [],
+        "label" : "SAVE",
+        "position" : "bottom",
+        "type" : "submit"
+    }],
+    "labelKey": "VIEW_GMR_BASIC",
+    "fields": [],
+    "taskId": "uploadSupplierAssay",
+    "object": "a62e5abe-44e0-4c5c-845c-f2b55f764dc6"
+}

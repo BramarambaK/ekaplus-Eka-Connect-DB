@@ -1,0 +1,143 @@
+{
+    "_id" : ObjectId("5d0b317b92574aeb77151e01"),
+    "name" : "View_Registration",
+    "description" : "View Registration in Supplier Connect",
+    "label" : "View_Registration",
+    "type" : "object",
+    "sys__UUID" : "051755e6-c3a6-4310-8bf5-0cfa44a3b7a7",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "fields" : {
+        "firstName" : {
+            "firstName" : "First Name",
+            "labelKey" : "firstName",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "name" : {
+            "name" : "Name",
+            "labelKey" : "name",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "tax" : {
+            "tax" : "Tax",
+            "labelKey" : "tax",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "lastName" : {
+            "lastName" : "Last Name",
+            "labelKey" : "lastName",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "userName" : {
+            "userName" : "Username",
+            "labelKey" : "userName",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "email" : {
+            "email" : "Email",
+            "labelKey" : "email",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "referenceno" : {
+            "referenceno" : "Reference No.",
+            "labelKey" : "referenceno",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "userRole" : {
+            "userRole" : "User Role",
+            "labelKey" : "userRole",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "userrole"
+        },
+        "mobile" : {
+            "mobile" : "Mobile",
+            "labelKey" : "mobile",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "phone" : {
+            "phone" : "Phone",
+            "labelKey" : "phone",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "fax" : {
+            "fax" : "Fax",
+            "labelKey" : "fax",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "website" : {
+            "website" : "Website",
+            "labelKey" : "website",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "company" : {
+            "company" : "Company Name",
+            "labelKey" : "company",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "housenoStreetname" : {
+            "housenoStreetname" : "House no., Street name",
+            "labelKey" : "housenoStreetname",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "broker" : {
+            "broker" : "Country",
+            "labelKey" : "broker",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "broker",
+            "children" : [ 
+                "state"
+            ]
+        },
+        "state" : {
+            "state" : "State",
+            "labelKey" : "state",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "parent" : [ 
+                "broker"
+            ],
+            "children" : [ 
+                "city"
+            ]
+        },
+        "city" : {
+            "city" : "City",
+            "labelKey" : "city",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "parent" : [ 
+                "broker", 
+                "state"
+            ]
+        },
+        "zipcode" : {
+            "zipcode" : "Zip Code",
+            "labelKey" : "zipcode",
+            "type" : "textbox",
+            "dataType" : "String"
+        }
+    }
+}

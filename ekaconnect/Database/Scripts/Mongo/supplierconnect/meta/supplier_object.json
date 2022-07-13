@@ -1,0 +1,275 @@
+{
+    "_id" : ObjectId("5ccb0eb803ca42b76b347627"),
+    "name" : "supplier",
+    "type" : "object",
+    "sys__UUID" : "e18e966f-6fcd-4523-b035-e02c2bc4b5ec",
+	"description" : "View Deliveries.",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "fields" : {
+        "moisture" : {
+            "moisture" : "Moisture",
+            "labelKey" : "moisture"
+        },
+        "assaydate" : {
+            "assaydate" : "Assay Rule",
+            "labelKey" : "assaydate"
+        },
+        "bolidenAssayAsFinal" : {
+            "bolidenAssayAsFinal" : "Boliden Assay as Final",
+            "labelKey" : "bolidenAssayAsFinal"
+        },
+        "bolidenAssayAsFinalDisplay" : {
+            "bolidenAssayAsFinalDisplay" : "Boliden Assay as Final",
+            "labelKey" : "bolidenAssayAsFinalDisplay"
+        },
+        "automaticpricing" : {
+            "automaticpricing" : "Automatic Pricing",
+            "labelKey" : "automaticpricing"
+        },
+        "earliestPriceFixation" : {
+            "earliestPriceFixation" : "Earliest Price Fixation",
+            "labelKey" : "earliestPriceFixation"
+        },
+        "finalpricing" : {
+            "finalpricing" : "Final Assay Ready for Pricing",
+            "labelKey" : "finalpricing"
+        },
+        "shipmentdate" : {
+            "shipmentdate" : "Loading Date",
+            "dataType" : "date",
+            "labelKey" : "shipmentdate",
+            "sourceDateFormat" : "yyyy-MM-dd",
+            "defaultValue" : "<blank>"
+        },
+        "isShipmentLoaded" : {
+            "isShipmentLoaded" : "Shipment Loaded",
+            "labelKey" : "isShipmentLoaded",
+			"expression" : "let today = moment().format('YYYY-MM-DD'); if ('${[0]}' === 'Not Loaded') { return { range: { 'shipmentdate.raw': { gte: today } } } } else return null;"
+        },
+        "eta" : {
+            "eta" : "Expected Arrival Date",
+            "dataType" : "date",
+            "labelKey" : "eta",
+            "defaultValue" : "<blank>"
+        },
+        "deliveryItemRefNo" : {
+            "deliveryItemRefNo" : "Contract Delivery Item",
+            "labelKey" : "deliveryItemRefNo"
+        },
+        "deliveryItemRefNo_hidden" : {
+            "deliveryItemRefNo_hidden" : "Contract No",
+            "labelKey" : "deliveryItemRefNo_hidden",
+            "dataType" : "Number"
+        },
+        "particleSize" : {
+            "particleSize" : "Particle Size",
+            "labelKey" : "particleSize"
+        },
+        "MaterialDescription" : {
+            "MaterialDescription" : "Material Description",
+            "labelKey" : "MaterialDescription"
+        },
+        "materialClassification" : {
+            "materialClassification" : "Material Classification",
+            "labelKey" : "materialClassification"
+        },
+        "incoLocation" : {
+            "incoLocation" : "Destination (Smelter)",
+            "labelKey" : "incoLocation"
+        },
+        "incoLocation_concat" : {
+            "incoLocation_concat" : "Destination (Smelter)",
+            "labelKey" : "incoLocation_concat"
+        },
+        "contractRefNo" : {
+            "contractRefNo" : "Contract Ref No",
+            "labelKey" : "contractRefNo"
+        },
+        "quantity" : {
+            "quantity" : "Adviced Net Weight",
+            "labelKey" : "quantity",
+            "dataType" : "Number"
+        },
+        "product" : {
+            "product" : "Product",
+            "labelKey" : "product"
+        },
+        "shippedQuantity" : {
+            "shippedQuantity" : "Shipped Quantity",
+            "labelKey" : "shippedQuantity"
+        },
+        "numberOfContainers" : {
+            "numberOfContainers" : "Number of Containers",
+            "labelKey" : "numberOfContainers"
+        },
+        "warehouse" : {
+            "warehouse" : "Warehouse",
+            "labelKey" : "warehouse"
+        },
+        "Expected Arrival Date" : {
+            "Expected Arrival Date" : "Expected Arrival Date",
+            "labelKey" : "Expected Arrival Date",
+            "defaultValue" : "<blank>"
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "GMR No",
+            "labelKey" : "gmrRefNo"
+        },
+        "gmrRefNo_hidden" : {
+            "gmrRefNo_hidden" : "GMR No",
+            "labelKey" : "gmrRefNo_hidden",
+            "dataType" : "Number"
+        },
+        "gmrApprovalStatus" : {
+            "gmrApprovalStatus" : "gmrApprovalStatus",
+            "labelKey" : "gmrApprovalStatus",
+            "dataType" : "String"
+        },
+        "senderRefNo" : {
+            "senderRefNo" : "Supplier Reference ID",
+            "labelKey" : "senderRefNo"
+        },
+        "qualityName" : {
+            "qualityName" : "Quality",
+            "labelKey" : "qualityName"
+        },
+        "quantityUnit" : {
+            "quantityUnit" : "Weight Unit",
+            "labelKey" : "quantityUnit"
+        },
+        "loadingCountry" : {
+            "loadingCountry" : "Country of Loading",
+            "labelKey" : "loadingCountry"
+        },
+        "countryOfOrigin" : {
+            "countryOfOrigin" : "Country of Origin",
+            "labelKey" : "countryOfOrigin"
+        },
+        "modeOfTransport" : {
+            "modeOfTransport" : "Mode of Transport",
+            "labelKey" : "modeOfTransport"
+        },
+        "containerNo" : {
+            "containerNo" : "Container No/ Transport ID",
+            "labelKey" : "containerNo"
+        },
+        "containerSize" : {
+            "containerSize" : "Container Size",
+            "labelKey" : "containerSize"
+        },
+        "landingDate" : {
+            "landingDate" : "Arrival Date",
+            "dataType" : "date",
+            "labelKey" : "landingDate",
+            "defaultValue" : "<blank>"
+        },
+        "wetWeight" : {
+            "wetWeight" : "Wet Weight",
+            "labelKey" : "wetWeight"
+        },
+        "dryWeight" : {
+            "dryWeight" : "Dry Weight",
+            "labelKey" : "dryWeight"
+        },
+        "wnsDate" : {
+            "wnsDate" : "W&S Date",
+            "labelKey" : "wnsDate"
+        },
+        "assayDueDate" : {
+            "assayDueDate" : "Assay Due Date",
+            "labelKey" : "assayDueDate",
+            "dataType" : "date",
+            "sourceDateFormat" : "dd-MMM-yyyy",
+            "defaultValue" : "<blank>"
+        },
+        "latestAssayType" : {
+            "latestAssayType" : "Latest Assay Type",
+            "labelKey" : "latestAssayType"
+        },
+        "currentPricingStatus" : {
+            "currentPricingStatus" : "Latest Pricing Status",
+            "labelKey" : "currentPricingStatus"
+        },
+        "markedForUmpire" : {
+            "markedForUmpire" : "Marked For Umpire",
+            "labelKey" : "markedForUmpire"
+        },
+        "markedForUmpireDisplay" : {
+            "markedForUmpireDisplay" : "Marked For Umpire",
+            "labelKey" : "markedForUmpireDisplay"
+        },
+        "gmrDueDate" : {
+            "gmrDueDate" : "GMR Due Date",
+            "dataType" : "date",
+            "labelKey" : "gmrDueDate",
+            "defaultValue" : "<blank>"
+        },
+        "latestInvoiceType" : {
+            "latestInvoiceType" : "Latest Invoice Type",
+            "labelKey" : "latestInvoiceType"
+        },
+		"invoiceStatus" : {
+            "invoiceStatus" : "Invoice Status",
+            "labelKey" : "invoiceStatus"
+        },
+        "invoiceDueDate" : {
+            "invoiceDueDate" : "Invoice Due Date",
+            "dataType" : "date",
+            "labelKey" : "invoiceDueDate",
+            "defaultValue" : "<blank>"
+        },
+        "cpName" : {
+            "cpName" : "Supplier",
+            "labelKey" : "cpName"
+        },
+        "gmrCreatedDate" : {
+            "gmrCreatedDate" : "Created Date",
+            "dataType" : "date",
+            "labelKey" : "gmrCreatedDate",
+            "defaultValue" : "<blank>"
+        },
+        "createdBy" : {
+            "createdBy" : "Created By",
+            "labelKey" : "createdBy"
+        },
+        "updatedDate" : {
+            "updatedDate" : "Updated Date",
+            "labelKey" : "updatedDate"
+        },
+        "updatedBy" : {
+            "updatedBy" : "Updated By",
+            "labelKey" : "updatedBy"
+        },
+        "portalCreatedUser" : {
+            "portalCreatedUser" : "Portal Created User",
+            "labelKey" : "portalCreatedUser"
+        },
+        "portalUpdatedUser" : {
+            "portalUpdatedUser" : "Portal Updated User",
+            "labelKey" : "portalUpdatedUser"
+        },
+        "dischargeCity" : {
+            "dischargeCity" : "City of Discharge",
+            "labelKey" : "dischargeCity"
+        },
+        "dischargeCountry" : {
+            "dischargeCountry" : "Country of Discharge",
+            "labelKey" : "dischargeCountry"
+        },
+        "assayRule" : {
+            "assayRule" : "Assay Rule",
+            "labelKey" : "assayRule"
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "gmr_approval_incomplete_subject_property",
+    "type" : "property",
+    "name" : "gmr_approval_incomplete_subject",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "Incomplete: <GmrRefNo> - <qualityName> - Loading Date <loadingDate>",
+    "length" : "500",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "GMR DRAFT TO APPROVAL SUBJECT",
+    "description" : "email subject for ready for approval with incomplete process."
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "mail_toaddr_default_property",
+    "type" : "property",
+    "name" : "mail_toaddr_default",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "",
+    "length" : "100",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+	"visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "Ready For Approval - To Mail Default",
+    "description" : "To email address for other locations(default)."
+}

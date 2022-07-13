@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5d0b36df92574aeb77154946"),
+    "key" : "loose-001",
+    "value" : "Yes",
+    "object" : "loose",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "connectmdm"
+}

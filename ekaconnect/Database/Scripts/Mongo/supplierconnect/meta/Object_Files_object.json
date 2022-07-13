@@ -1,0 +1,179 @@
+{
+  "_id" : ObjectId("5d07829610f7f68b9382a55c"),
+  "type" : "object",
+  "name" : "object_Files",
+  "label" : "OBJECT_FILES",
+  "label_key" : "",
+  "tenantID" : "",
+  "version" : "1",
+  "sys__UUID" : "12ff0fa0-c5e5-4fa5-bbe5-2bb5f1da7715",
+  "createdOn" : "",
+  "createdBy" : "Test",
+  "lastModifiedOn" : "",
+  "lastModifiey" : "Test",
+  "description" : "Add Document(Delivery).",
+  "objectAction" : {
+      "CREATE" : "POST",
+      "UPDATE" : "PUT",
+      "READ" : "GET",
+      "LISTVIEW" : "GET",
+      "DELETE" : "DELETE",
+      "APPROVE" : "PUT",
+      "REJECT" : "PUT"
+  },
+  "versionHistory" : [],
+  "translatableKeys" : [],
+  "fields" : {
+      "downloadUri" : {
+          "downloadUri" : "downloadUri",
+          "labelKey" : "downloadUri",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "internalRefNo" : {
+          "internalRefNo" : "internalRefNo",
+          "labelKey" : "internalRefNo",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "id" : {
+          "id" : "id",
+          "labelKey" : "id",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "name" : {
+          "name" : "name",
+          "labelKey" : "name",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "otherAttributes" : {
+          "otherAttributes" : "otherAttributes",
+          "labelKey" : "otherAttributes",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "refObject" : {
+          "refObject" : "refObject",
+          "labelKey" : "refObject",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "refObjectId" : {
+          "refObjectId" : "refObjectId",
+          "labelKey" : "refObjectId",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "size" : {
+          "size" : "size",
+          "labelKey" : "size",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "uploadedBy" : {
+          "uploadedBy" : "uploadedBy",
+          "labelKey" : "uploadedBy",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "uploadedDate" : {
+          "uploadedDate" : "uploadedDate",
+          "labelKey" : "uploadedDate",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "file" : {
+          "file" : "Upload File (PDF format only) ",
+          "labelKey" : "file",
+          "type" : "file",
+          "dataType" : "String",
+          "fileType" : "application/pdf",
+          "isMandatory" : "if(${file}) { return true} else { return 'SC005'}"
+      },
+      "actionId" : {
+          "actionId" : "Action ID",
+          "labelKey" : "actionId",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "internalGMRRefNo" : {
+          "internalGMRRefNo" : "Internal GMR Ref No",
+          "labelKey" : "internalGMRRefNo",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "internalGmrRefNo" : {
+          "internalGmrRefNo" : "Internal GMR Ref No",
+          "labelKey" : "internalGmrRefNo",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "fileName" : {
+          "fileName" : "Document",
+          "labelKey" : "fileName",
+          "type" : "textbox",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "documentId" : {
+          "documentId" : "documentId",
+          "labelKey" : "documentId",
+          "type" : "hidden",
+          "dataType" : "String",
+          "isRequired" : false
+      },
+      "types" : {
+          "types" : "Type",
+          "labelKey" : "types",
+          "type" : "dropdown",
+          "dataType" : "String",
+          "isRequired" : true,
+          "propertyKey" : "types_propertyKey"
+      },
+      "layoutdescription" : {
+          "layoutdescription" : "Description",
+          "labelKey" : "layoutdescription",
+          "type" : "textbox",
+          "dataType" : "String",
+          "isMandatory" : "if('${types}' == 'other') { return true} else { return false}"
+      },
+      "description" : {
+          "description" : "Description",
+          "labelKey" : "description",
+          "type" : "textbox",
+          "dataType" : "String"
+      },
+      "uploadedByName" : {
+          "uploadedByName" : "Added By",
+          "labelKey" : "uploadedByName",
+          "type" : "textbox",
+          "dataType" : "String"
+      },
+      "dateForDisplay" : {
+          "dateForDisplay" : "Added Date",
+          "labelKey" : "dateForDisplay",
+          "type" : "textbox",
+          "dataType" : "String"
+      }
+  },
+  "layout" : {
+      "fields" : [ 
+          []
+      ]
+  }
+}

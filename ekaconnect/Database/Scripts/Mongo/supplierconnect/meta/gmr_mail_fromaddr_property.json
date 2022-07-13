@@ -1,0 +1,12 @@
+{
+    "_id" : "gmr_mail_fromAddr_property",
+    "type" : "property",
+    "name" : "gmr_mail_fromAddr",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "noreply@ekaplus.com",
+    "length" : "100",
+	"refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+	"description" : "mail from address for gmr"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "supplier_assay_save_url_path_property",
+    "type" : "property",
+    "name" : "supplier_assay_save_url_path",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "/api/logistic/saveSADetailsAndDoc",
+    "length" : "100",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "visibility" : "public",    
+    "label" : "SUPPLIER ASSAY SAVE URL PATH",
+    "description" : "TRM URL path to create or upload the supplier assay."
+}

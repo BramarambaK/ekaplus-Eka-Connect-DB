@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5cf0db86ff0598c9d0358ac6"),
+    "type" : "property",
+    "name" : "stock_url",
+	"label" : "STOCK URL",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "150"
+}

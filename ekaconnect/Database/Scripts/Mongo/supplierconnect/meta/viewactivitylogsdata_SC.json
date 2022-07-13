@@ -1,0 +1,39 @@
+{
+    "_id" : "viewactivitylogsdata_SC",
+    "componentType" : "UserTask",
+    "version" : "V2",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "data" : "output.viewactivitylogsdata_SC",
+                    "name" : "EXTERNAL_API_ACTIVITYLOGS",
+                    "returnData" : "Y"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }
+    ],
+    "label" : "Activity logs",
+    "labelKey" : "VIEW_ACTIVITYLOGS_BASIC",
+    "layout" : {
+        "name" : "gmr",
+        "key" : "GMR Ref No",
+        "backButton" : true,
+        "header" : {
+            "field" : "gmrRefNo"
+        }
+    },
+    "object" : "c05cacf5-200c-4d97-8e8d-a67329ff286c",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId" : "viewactivitylogsdata_SC",
+    "type" : "workflow"
+}

@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5d0b36c892574aeb77154826"),
+    "key" : "modeOfTransport-003",
+    "value" : "Ship",
+    "object" : "modeOfTransport",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "connectmdm"
+}

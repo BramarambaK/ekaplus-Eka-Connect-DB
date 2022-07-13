@@ -1,0 +1,199 @@
+{
+    "_id": "generaldocumentupload_SC",
+    "componentType": "UserTask",
+    "decisions": [
+        {
+            "btnClass": "btn btn-outline-dark",
+            "objectAction": "READ",
+            "outcomes": [
+                {
+                    "name": "generaldocumentlisting"
+                }
+            ],
+            "style": {
+                "margin-right": "auto"
+            },
+            "label": "CANCEL",
+            "position": "bottom"
+        },
+        {
+            "btnClass": "btn-primary custom-btn",
+            "objectAction": "UPDATE",
+            "labelkey": "REVIEW",
+            "task": "generaldocumentupload",
+            "outcomes": [
+                {
+                    "result": {
+                        "success": {
+                            "message": "File uploaded successfully"
+                        },
+                        "failure": {
+                            "message": "Please fix errors in ext"
+                        },
+                        "successWithWarning": {
+                            "message": "File uploaded with some errors"
+                        }
+                    },
+                    "data": "output.generaldocumentupload",
+                    "appendMsg": true,
+                    "name": "_ST_CREATE_GENERAL_DOCUMENT"
+                },
+                {
+                    "data": "output._ST_CREATE_GENERAL_DOCUMENT",
+                    "name": "generaldocumentlisting",
+                    "showToaster": true
+                }
+            ],
+            "label": "SAVE",
+            "position": "bottom",
+            "headers": {
+                "storageType": "awsS3",
+                "folderInS3": "generalDocs"
+            },
+            "type": "submit"
+        },
+        {
+            "objectAction": "CREATE",
+            "labelkey": "REVIEW",
+            "task": "DOCUMENT_UPLOAD_VALIDATE",
+            "type": "submit",
+            "outcomes": [
+                {
+                    "data": "output.generaldocumentupload",
+                    "appendMsg": false,
+                    "name": "DOCUMENT_UPLOAD_VALIDATE"
+                }
+            ]
+        },
+        {
+            "btnClass": "close-icon btn",
+            "objectAction": "READ",
+            "outcomes": [
+                {
+                    "name": "generaldocumentlisting"
+                }
+            ],
+            "position": "top",
+            "type": "close"
+        }
+    ],
+    "fields": [
+        [
+            {
+                "style": {
+                    "width": "400px"
+                },
+                "formItemStyle": {
+                    "margin-top": "10px",
+                    "margin-right": "20px"
+                },
+                "suffix": "",
+                "key": "layoutdescription"
+            },
+            {
+                "style": {
+                    "width": "200px"
+                },
+                "formItemStyle": {
+                    "margin-top": "10px",
+                    "margin-right": "20px"
+                },
+                "suffix": "",
+                "key": "file"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "fileName"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "documentId"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "uploadedBy"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "uploadedDate"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "fileContentType"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "id"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "type"
+            },
+            {
+                "style": {
+                    "display": "none"
+                },
+                "key": "size"
+            },
+            {
+                "type": "hidden",
+                "style": {
+                    "display": "none"
+                },
+                "key": "refObject"
+            },
+            {
+                "type": "hidden",
+                "style": {
+                    "display": "none"
+                },
+                "key": "refObjectId"
+            }
+        ]
+    ],
+    "getDataFromExternalAPI": true,
+    "input": [
+        "internalGMRRefNo",
+        {
+            "internalGMRRefNo": "internalRefNo"
+        }
+    ],
+    "label": "Add Document",
+    "labelKey": "DOCUMENT_UPLOAD",
+    "layout": {
+        "defaultFormItemStyle": {},
+        "defaultFormLabelStyle": {},
+        "topLine": {
+            "display": true
+        },
+        "eventingRequired": false,
+        "backbutton": true,
+        "name": "create",
+        "formStyle": {},
+        "header": {
+            "title": "Document Upload - "
+        },
+        "defaultFormValueStyle": {},
+        "type": "row"
+    },
+    "object": "2b28674d-c7ba-4661-ae32-f9b86d8c1007",
+    "objectAction": "CREATE",
+    "refType": "app",
+    "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "taskId": "generaldocumentupload",
+    "type": "workflow"
+}

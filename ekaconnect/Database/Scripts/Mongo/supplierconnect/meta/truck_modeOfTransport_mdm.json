@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5d0b36bb92574aeb77154781"),
+    "key" : "modeOfTransport-002",
+    "value" : "Truck",
+    "object" : "modeOfTransport",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "connectmdm"
+}

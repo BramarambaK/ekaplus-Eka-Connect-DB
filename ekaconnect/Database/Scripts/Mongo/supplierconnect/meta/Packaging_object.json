@@ -1,0 +1,165 @@
+{
+    "_id" : ObjectId("5ccb0ebc03ca42b76b34762c"),
+    "type" : "object",
+    "name" : "Packaging",
+    "label" : "PACKAGING",
+    "sys__UUID" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "2",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+	"description" : "Add/Edit Packaging Details(Delivery).",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [],
+    "fields" : {
+        "modeOfTransport" : {
+            "modeOfTransport" : "Mode of Transport",
+            "labelKey" : "modeOfTransport",
+            "type" : "hidden",
+            "dataType" : "String",
+            "serviceKey" : "modeOfTransport",
+            "isRequired" : false
+        },
+        "transportId" : {
+            "transportId" : "Transport Id",
+            "labelKey" : "transportId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "noOfContainers" : {
+            "noOfContainers" : "Number Of Containers",
+            "labelKey" : "noOfContainers",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "advicedNetweight" : {
+            "advicedNetweight" : "Adviced Net Weight",
+            "labelKey" : "advicedNetweight",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "maxLotSize" : {
+            "maxLotSize" : "Max Lot Size",
+            "labelKey" : "maxLotSize",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerDetails" : {
+            "containerDetails" : "Container",
+            "labelKey" : "containerDetails",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerNo" : {
+            "containerNo" : "Container No",
+            "labelKey" : "containerNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerSize" : {
+            "containerSize" : "Container Size",
+            "labelKey" : "containerSize",
+            "type" : "hidden",
+            "dataType" : "String",
+            "serviceKey" : "containerSize",
+            "isRequired" : false
+        },
+        "sealNo" : {
+            "sealNo" : "Seal No",
+            "labelKey" : "sealNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "loose" : {
+            "loose" : "Loose",
+            "labelKey" : "loose",
+            "type" : "hidden",
+            "dataType" : "String",
+            "serviceKey" : "loose",
+            "isRequired" : false
+        },
+        "bags" : {
+            "bags" : "Bags",
+            "labelKey" : "bags",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "pallets" : {
+            "pallets" : "Pallets",
+            "labelKey" : "pallets",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "drums" : {
+            "drums" : "Drums",
+            "labelKey" : "drums",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "totalPackage" : {
+            "totalPackage" : "Total Packages",
+            "labelKey" : "totalPackage",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "netWeight" : {
+            "netWeight" : "Net Weight",
+            "labelKey" : "netWeight",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "grossWeight" : {
+            "grossWeight" : "Gross Weight",
+            "labelKey" : "grossWeight",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "tareWeight" : {
+            "tareWeight" : "Tare Weight",
+            "labelKey" : "tareWeight",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "boxes" : {
+            "boxes" : "Boxes",
+            "labelKey" : "boxes",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

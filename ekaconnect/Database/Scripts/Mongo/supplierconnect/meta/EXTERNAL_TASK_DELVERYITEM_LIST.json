@@ -1,0 +1,22 @@
+{
+    "_id" : "EXTERNAL_TASK_DELVERYITEM_LIST",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+    "type" : "workflow",
+    "version" : "V2",
+    "apiInfo" : {
+        "host" : "${properties.eka_supplierconnect_host}",
+        "path" : "/collection/fetchDeliveryItems",
+        "headers" : {
+            "username" : "e-bolprpa"
+        },
+        "method" : "GET",
+        "responseDataKey" : "",
+        "body" : {},
+        "columns" : []
+    },
+    "taskId" : "EXTERNAL_TASK_DELVERYITEM_LIST",
+    "object" : "6413bd7c-d358-4cfd-9bac-00a857b7f3f7"
+}

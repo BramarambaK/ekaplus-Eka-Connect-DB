@@ -1,0 +1,12 @@
+{
+    "_id" : ObjectId("5d0b3adc92574aeb77156a2d"),
+    "type" : "property",
+    "name" : "upload_url",
+	"label" : "UPLOAD URL",
+    "propertyLevel" : "tenant, app, user",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "100",
+    "sys__createdOn" : ISODate("2019-04-17T04:48:10.805Z"),
+    "sys__createdBy" : "Joseph@mail.com"
+}

@@ -1,0 +1,78 @@
+{
+  "_id": "finalassaycomposite",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "filterassay",
+      "selection": "external",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": ["finalassaylistdynamic"]
+        }
+      ],
+      "label": "FILTER",
+      "type1": "submit"
+    }
+  ],
+  "label": "Final Assays",
+  "layout": {
+    "name": "customv2",
+    "preserveSelectedData1": true,
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "dropdownDecisions": false
+  },
+  "object": "6f46a4d0-401c-4b7b-b542-b3d3eafe4aad",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "467a28cc-bc93-4e38-8ff5-0a56ae128f3b",
+  "taskId": "finalassaycomposite",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "style": {
+        "padding": "0 27px 0 20px"
+      },
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "name": "filterassay"
+            }
+          ],
+          "style": {
+            "margin-top": "-12px"
+          }
+        },
+        {
+          "workflows": [
+            {
+              "name": "finalassaylistdynamic",
+              "data": "selected.finalassaycomposite.filterassay",
+              "visibility1": "return ${finalassaycomposite.finalassaylistdynamic}.length == 0 ? false : true",
+              "cache": false
+            }
+          ],
+          "style": {
+            "margin": "62px -7px 10px -9px"
+          }
+        }
+      ]
+    }
+  ],
+  "sys__UUID": "81b40d72-64b5-4fe1-a083-61e3cf4185ae"
+}
