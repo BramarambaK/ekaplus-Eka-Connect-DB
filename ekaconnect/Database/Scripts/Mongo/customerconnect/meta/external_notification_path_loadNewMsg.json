@@ -1,0 +1,12 @@
+{
+    "_id" : "external_notification_path_loadNewMsg",
+    "type" : "property",
+    "name" : "external_notification_path_loadNewMsg",
+    "propertyLevel" : "tenant,app,user",
+    "editSupportedInUI" : true,
+	"label":"API path for loading new notification messages",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "/api/cacp-r2/v1/signup/notification/loadNewMsg",
+    "length" : "120"
+}

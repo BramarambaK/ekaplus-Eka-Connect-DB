@@ -1,0 +1,207 @@
+{
+  "_id": "financedatas_accountstatements_object",
+  "name": "financedatas_accountstatements_object",
+  "label": "FinanceDatas AccountStatements Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["financeDatasAccountStatementsId"],
+  "fields": {
+    "financeDatasAccountStatementsId": {
+      "financeDatasAccountStatementsId": "FinanceDatas AccountStatements Id",
+      "labelKey": "financeDatasAccountStatementsId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "userType": {
+      "userType": "userType",
+      "labelKey": "userType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpRefNo": {
+      "bpRefNo": "BP Ref No",
+      "labelKey": "bpRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpName": {
+      "bpName": "BP Name",
+      "labelKey": "bpName",
+      "type": "String",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "payeeID": {
+      "payeeID": "payee ID",
+      "labelKey": "payeeID",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "payeeName": {
+      "payeeName": "Payee Name",
+      "labelKey": "payeeName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Type": {
+      "Type": "Type",
+      "labelKey": "Type",
+      "type": "String",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "documentType": {
+      "documentType": "Document Type",
+      "labelKey": "documentType",
+      "type": "String",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "documentId": {
+      "documentId": "document Id",
+      "labelKey": "documentId",
+      "type": "String",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "monthAndYear": {
+      "monthAndYear": "Month And Year",
+      "labelKey": "monthAndYear",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "date": {
+      "date": "Date Issued",
+      "labelKey": "date",
+      "type": "date",
+      "sourceDateFormat": "dd-MM-yyyy",
+      "isRequired": false,
+      "dataType": "Date",
+      "customDateFilter": "datefilter"
+    },
+    "dueDate": {
+      "dueDate": "Due Date",
+      "labelKey": "dueDate",
+      "type": "date",
+      "sourceDateFormat": "dd-MM-yyyy",
+      "isRequired": false,
+      "dataType": "Date",
+      "customDateFilter": "datefilter"
+    },
+    "currency": {
+      "currency": "Currency",
+      "labelKey": "currency",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "totalAmount": {
+      "totalAmount": "Total Amount",
+      "labelKey": "totalAmount",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "customRangeFilter": "rangefilter"
+    },
+    "amountDue": {
+      "amountDue": "Amount due",
+      "labelKey": "amountDue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "customRangeFilter": "rangefilter"
+    },
+    "amountPaidReceived": {
+      "amountPaidReceived": "Amount received",
+      "labelKey": "amountPaidReceived",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "customRangeFilter": "rangefilter"
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "fileId": {
+      "fileId": "File Id",
+      "labelKey": "fileId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractId": {
+      "contractId": "Contract Id",
+      "labelKey": "contractId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "paymentReceiptNo": {
+      "paymentReceiptNo": "Payment Receipt No",
+      "labelKey": "paymentReceiptNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "addressBookNumber": {
+      "addressBookNumber": "Address Book Number",
+      "labelKey": "addressBookNumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "clientCode": {
+      "clientCode": "Client Code",
+      "labelKey": "clientCode",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ABN": {
+      "ABN": "ABN",
+      "labelKey": "ABN",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "accountStatus": {
+      "accountStatus": "Account Status",
+      "labelKey": "accountStatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ngrFinanceFilter": {
+      "ngrFinanceFilter": "Filter",
+      "labelKey": "ngrFinanceFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFinanceFilter"
+    },
+	"filterKey": {
+      "filterKey": "filterKey",
+      "labelKey": "filterKey",
+      "type" : "textbox",
+      "isRequired" : false,
+      "dataType" : "String"
+    }
+  },
+  "sys__UUID": "c406a257-7104-46ae-9c73-f901a9874d11"
+}

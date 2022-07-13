@@ -1,0 +1,12 @@
+{
+    "_id" : "external_aua_api_version",
+    "type" : "property",
+    "name" : "external_aua_api_version",
+    "propertyLevel" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "editSupportedInUI" : true,
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "v1",
+    "length" : "120"
+}

@@ -1,0 +1,523 @@
+{
+  "_id": "entersellingoptions_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Select selling option",
+  "type": "workflow",
+  "layout": {
+    "mdmPayload": {
+      "ticketlistingcomposite.ticketlistingwarehoused": "selected.ticketlistingcomposite.ticketlistingwarehoused",
+      "allocateticketscomposite.entersellingoptions": "selected.allocateticketscomposite.entersellingoptions"
+    },
+    "processorInfo": {
+      "processorId": "7ebfbc54-f2e0-4d09-9eb3-37066d01e721"
+    },
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+      "width": "auto"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "font-size": "13px",
+      "font-family": "Helvetica Neue LT W05 65 Medium",
+      "line-height": "24px !important"
+    },
+    "name": "create",
+    "formStyle": {
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "cardClass": "cargill-form allocate-form allocate-sellingform",
+    "description": "Selling options are shown based on tickets selected to allocate. Selecting tickets of various sites, grades, and seasons may reduce the available selling options",
+    "descriptionStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 45 Light'",
+      "padding": "24px 16px 6px 0px"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "label": "Next",
+      "decisionName": "compositeSave",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.entersellingoptions",
+          "appendMsg": false,
+          "name": "_ST_PROCESS_ALLOCATE_TICKETS"
+        },
+        {
+          "data": "output._ST_PROCESS_ALLOCATE_TICKETS",
+          "name": "_ST_PROCESS_VALIDATE_ALLOCATE_TICKETS"
+        },
+        {
+          "data": "output._ST_PROCESS_VALIDATE_ALLOCATE_TICKETS",
+          "name": "allocateticketquantitycomposite",
+          "dirtyCheckFulfilled": true,
+          "setSelected": [
+            "selected.allocateticketquantitycomposite.warehousedtickets"
+          ]
+        }
+      ]
+    }
+  ],
+  "labelKey": "ENTER_SELLING_OPTIONS",
+  "fields": [
+    [
+      {
+        "formItemStyle": {
+          "margin-top": "1px"
+        },
+        "suffix": "",
+        "placeholder": "Select",
+        "key": "sellingOption"
+      }
+    ],
+    [
+      {
+        "formItemStyle": {
+          "margin-bottom": "-25px",
+          "margin-top": "2px"
+        },
+        "formLabelStyle": {
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "18px"
+        },
+        "key": "acquirerHeader"
+      },
+      {
+        "formItemStyle": {
+          "margin-bottom": "-9px",
+          "margin-top": "47px"
+        },
+        "formLabelStyle": {
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "18px"
+        },
+        "key": "cashPoolAcquirerHeader"
+      }
+    ],
+    [
+      {
+        "formItemStyle": {
+          "margin": "14px 0 8px 0"
+        },
+        "formLabelStyle": {
+          "font": "15px 'Helvetica Neue LT W05 45 Light'",
+          "color": "#5D646F",
+          "margin": "14px 0 8px 0",
+          "white-space": "break-spaces"
+        },
+        "key": "acquirerSubHeader"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "isSustainable",
+        "placeholder": "Select",
+        "appendTo": "null",
+        "layout": "layout1"
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "cashAcquirer",
+        "placeholder": "Select",
+        "appendTo": "null",
+        "layout": "layout1",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "acquirer",
+        "placeholder": "Select",
+        "appendTo": "null",
+        "layout": "layout1",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "poolpricingoption",
+        "placeholder": "Select",
+        "appendTo": "null",
+        "layout": "layout1",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "contractNumber",
+        "placeholder": "Select",
+        "appendTo": "null",
+        "layout": "layout1",
+        "errorTooltip": true,
+        "filter": true,
+        "filterMatchMode": "contains"
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "externalContractNumber",
+        "editable": true,
+        "errorTooltip": true,
+        "removeEmptyOption": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "cashPrice",
+        "appendTo": "null",
+        "layout": "layout1",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "poolPrice",
+        "appendTo": "null",
+        "layout": "layout1",
+        "errorTooltip": true
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "price",
+        "appendTo": "null",
+        "layout": "layout1",
+        "info": "This helps calculate your estimated revenue for the quality allocated",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "externalPrice",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "contractQuantity",
+        "info": "This helps prevent overallocating inventory to this contract",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "1px",
+          "margin-right": "20px",
+          "color": "#5D646F",
+          "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "suffix": "",
+        "key": "externalQuantity",
+        "errorTooltip": true
+      }
+    ],
+    [
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "currentdate"
+      },
+      {
+        "suffix": "",
+        "key": "shipmentPeriodTo"
+      },
+      {
+        "suffix": "",
+        "key": "shipmentPeriodFrom"
+      },
+      {
+        "suffix": "",
+        "key": "isMultiGrade"
+      },
+      {
+        "suffix": "",
+        "key": "priceType"
+      },
+      {
+        "suffix": "",
+        "key": "spread"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "maxQuantityToAllocate"
+      },
+      {
+        "suffix": "",
+        "key": "approvalStatus"
+      },
+      {
+        "suffix": "",
+        "key": "cashClientCode"
+      },
+      {
+        "suffix": "",
+        "key": "poolClientCode"
+      },
+      {
+        "suffix": "",
+        "key": "cashBpRefNumber"
+      },
+      {
+        "suffix": "",
+        "key": "poolBpRefNumber"
+      },
+      {
+        "suffix": "",
+        "key": "disableCheck"
+      },
+      {
+        "suffix": "",
+        "key": "isInternalBpCash"
+      },
+      {
+        "suffix": "",
+        "key": "isInternalBpPool"
+      }
+    ],
+    [
+      {
+        "key": "ticketlistingwarehoused",
+        "style": {
+          "display": "none"
+        },
+        "type": "formarray",
+        "addButton": {
+          "style": {
+            "display": "none"
+          }
+        },
+        "fields": [
+          {
+            "suffix": "",
+            "placeholder": "Select",
+            "key": "ticketRefNo"
+          },
+          {
+            "suffix": "",
+            "placeholder": "Select",
+            "key": "quality"
+          },
+          {
+            "suffix": "",
+            "key": "cropYear",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "location",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "testResultsLong",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "quantity",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "pricingOption",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "ticketHandlerBpRefNo",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "ticketHandlerName",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "contractId",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "basePrice",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "allocatedBy",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "tonnesSold",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "ticketHandlerCode",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "product",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "bpRefNo",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "bpName",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "bulkHandler",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "suffix": "",
+            "key": "testResultsShort",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          }
+        ]
+      }
+    ]
+  ],
+  "taskId": "entersellingoptions",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "deviceType": "mobile",
+  "sys__UUID": "27171650-44a8-4fc0-8624-4d8604cdf8a3"
+}

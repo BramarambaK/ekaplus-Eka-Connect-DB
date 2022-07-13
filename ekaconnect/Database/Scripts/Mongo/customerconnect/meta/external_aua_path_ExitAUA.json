@@ -1,0 +1,12 @@
+{
+    "_id" : "external_aua_path_ExitAUA",
+    "type" : "property",
+    "name" : "external_aua_path_ExitAUA",
+    "propertyLevel" : "tenant,app,user",
+    "editSupportedInUI" : true,
+    "label":"API path for Exit AUA",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "/api/cacp-r2/v1/signup/aua/exitAua",
+    "length" : "120"
+}

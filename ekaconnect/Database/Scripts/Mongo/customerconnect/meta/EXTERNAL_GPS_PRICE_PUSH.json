@@ -1,0 +1,25 @@
+{
+    "_id" : "EXTERNAL_GPS_PRICE_PUSH",
+    "componentType" : "ExtSystemTask",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+	"object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${cargil_GPS_Price_externalApiHost}",
+        "path" : "${cargil_GPS_Price_externalApiPath}",
+        "method" : "POST",
+        "body" : {},
+        "authConfig" : {
+            "type" : "graining",
+            "method" : "POST",
+            "scope" : "api.grainpricing",
+            "authUrl" : "${authUrl}"
+        },
+        "headers" : {}
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXTERNAL_GPS_PRICE_PUSH",
+	"sys__UUID": "de278c54-a635-4850-8495-17d5cf336038"
+}

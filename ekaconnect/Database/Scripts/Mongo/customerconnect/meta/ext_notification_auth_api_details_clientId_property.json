@@ -1,0 +1,12 @@
+{
+    "_id" : "ext_notification_auth_api_details_clientId",
+    "type" : "property",
+    "name" : "ext_notification_auth_api_details_clientId",
+    "propertyLevel" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "editSupportedInUI" : true,
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "0oaw09dslqI7A7ieP0h7",
+    "length" : "120"
+}

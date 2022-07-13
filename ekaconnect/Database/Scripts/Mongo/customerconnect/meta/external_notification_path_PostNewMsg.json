@@ -1,0 +1,12 @@
+{
+    "_id" : "external_notification_path_PostNewMsg",
+    "type" : "property",
+    "name" : "external_notification_path_PostNewMsg",
+    "propertyLevel" : "tenant,app,user",
+    "editSupportedInUI" : true,
+	"label":"API path for posting notification message",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "/api/cacp-r2/v1/signup/notification/postNewMsg",
+    "length" : "120"
+}

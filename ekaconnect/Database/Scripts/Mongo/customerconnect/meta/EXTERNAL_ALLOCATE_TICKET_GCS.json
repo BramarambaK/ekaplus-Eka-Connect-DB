@@ -1,0 +1,28 @@
+{
+    "_id" : "EXTERNAL_GCS_ALLOCATE_TICKETS",
+    "componentType" : "ExtSystemTask",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${allocate_ticket_gcs_externalApiHost}",
+        "path" : "${allocate_ticket_gcs_externalApiPath}",
+        "method" : "POST",
+        "body" : {},
+        "authConfig" : {
+            "type" : "layer7_gcs",
+            "authUrl" : "${layer7_token_externalApiHost}",
+            "method" : "POST",
+            "Content-Type" : "application/x-www-form-urlencoded",
+            "client_id" : "${properties.layer7_gcs_externalClientId}",
+            "scope" : "${properties.layer7_gcs_externalApiScope}",
+            "grant_type" : "client_credentials",
+            "token_cachettl" : "${layer7_token_cachettl}"
+        },
+        "headers" : {}
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXTERNAL_GCS_ALLOCATE_TICKETS",
+	"sys__UUID": "79abc6b6-63d0-436c-91d9-36c924ea03fb"
+}

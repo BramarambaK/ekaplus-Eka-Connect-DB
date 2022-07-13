@@ -1,0 +1,174 @@
+{
+    "_id" : "EXTERNAL_FINANCE_FINANCEDATAS",
+    "componentType" : "ExtSystemTask",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${cargil_financedatas_externalApiHost}",
+        "path" : "${cargil_financedatas_externalApiPath}",
+        "method" : "GET",
+        "body" : {},
+        "authConfig" : {
+            "type" : "graining",
+            "method" : "POST",
+            "scope" : "api.grainpricing",
+            "authUrl" : "${authUrl}"
+        },
+        "responseKey" : "value",
+        "inputMapping" : {},
+        "headers" : {},
+        "responseDataKey" : "data",
+		"replaceFilter" : 
+		[ 
+            {
+                "filterKey" : "##user.cp",
+                "script" : "var s = '';\r\nvar d = \"\";\r\nvar user = ${user}\r\nif (user.customerType == \"Grower\") {\r\n  d = user.payeeIds;\r\n} else {\r\n  d = user.payeeIds;\r\n}\r\nfor (var i = 0; i < d.length; i++) {\r\n  if (i == 0) {\r\n    if (user.customerType == \"Grower\") {\r\n      s = 'payeeId in ( \\'' + d[i] +'\\'';\r\n    } else {\r\n      s = 'AddressBookNumber in (\\'' + d[i]+ '\\'';\r\n    }\r\n  } else {\r\n    if (user.customerType == \"Grower\") {\r\n        s = s+' ,\\'' + d[i]+ '\\'';\r\n    } else {\r\n      s =s+' ,\\'' + d[i]+ '\\'';\r\n    }\r\n  }\r\n}\r\n if(s !== ''){s=s+')'};\r\nreturn s;\r\n"
+            }
+        ],
+		"columns" : [ 
+            {
+                "name" : "financeDataAccountStatementId",
+                "type" : "VARCHAR",
+                "collectionCol" : "financeDataAccountStatementId",
+				"primary" : "y"
+            },
+            {
+                "name" : "FinanceDataId",
+                "type" : "VARCHAR",
+                "collectionCol" : "FinanceDataId",
+				"primary" : "n"
+            },
+            {
+                "name" : "UserType",
+                "type" : "VARCHAR",
+                "collectionCol" : "UserType",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "BpRefNo",
+                "collectionCol" : "BpRefNo",
+                "type" : "VARCHAR",
+                "primary" : "n"
+            }, 
+            {
+                "name" : "BPNAME",
+                "collectionCol" : "BPNAME",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "PayeeID",
+                "collectionCol" : "PayeeID",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "PAYEENAME",
+                "collectionCol" : "PAYEENAME",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "Type",
+                "collectionCol" : "Type",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            },
+			{
+                "name" : "DocumentType",
+                "collectionCol" : "DocumentType",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            },
+            {
+                "name" : "DocumentId",
+                "collectionCol" : "DocumentId",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            },
+            {
+                "name" : "MonthAndYear",
+                "collectionCol" : "MonthAndYear",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "Date",
+                "collectionCol" : "Date",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+			{
+                "name" : "DueDate",
+                "collectionCol" : "DueDate",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            },
+            {
+                "name" : "Currency",
+                "collectionCol" : "Currency",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "TotalAmount",
+                "collectionCol" : "TotalAmount",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "AmountDue",
+                "collectionCol" : "AmountDue",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "AmountPaidReceived",
+                "collectionCol" : "AmountPaidReceived",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "Status",
+                "collectionCol" : "Status",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "FileId",
+                "collectionCol" : "FileId",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "ContractIds",
+                "collectionCol" : "ContractIds",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "RAInvoiceNumbers",
+                "collectionCol" : "RAInvoiceNumbers",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "AddressBookNumber",
+                "collectionCol" : "AddressBookNumber",
+                "type" : "VARCHAR",
+				"primary" : "n"
+            }, 
+            {
+                "name" : "CDDocumentType",
+                "collectionCol" : "CDDocumentType",
+                "type" : "VARCHAR",
+                "primary" : "n"
+            }
+        ]
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXTERNAL_FINANCE_FINANCEDATAS",
+    "sys__UUID": "0d88fcee-f54f-4d5a-89ff-6261e113a3e6"
+}

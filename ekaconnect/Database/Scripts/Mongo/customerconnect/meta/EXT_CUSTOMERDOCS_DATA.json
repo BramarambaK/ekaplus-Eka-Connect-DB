@@ -1,0 +1,35 @@
+{
+    "_id" : "EXT_CUSTOMERDOCS_DATA",
+    "componentType" : "ExtSystemTask",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "version" : "V2",
+    "objectAction" : "LISTVIEW",
+    "apiInfo" : {
+        "host" : "${cargil_CustomerDocs_externalApiHost}",
+        "path" : "${cargil_CustomerDocs_externalApiPath}",
+        "method" : "GET",
+        "body" : {},
+        "authConfig" : {
+            "type" : "external",
+            "authUrl" : "${cargil_oktaAuthURL}",
+            "method" : "GET",
+            "headers" : {
+                "Content-Type" : "application/json",
+                "Authorization" : "default"
+            },
+            "queryParams" : {},
+            "tokenExtractKey" : [ 
+                "access_token","id_token"
+            ]
+        },
+        "inputMapping" : {},
+        "headers" : {
+		
+		
+		}
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXT_CUSTOMERDOCS_DATA"
+}

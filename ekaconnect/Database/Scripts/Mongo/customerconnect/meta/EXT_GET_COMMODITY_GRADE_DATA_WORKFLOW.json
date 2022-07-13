@@ -1,0 +1,35 @@
+{
+    "_id" : "EXT_GET_COMMODITY_GRADE_DATA_WORKFLOW",
+    "componentType" : "ExtSystemTask",
+    "version" : "V2",
+    "object" : "d5c07a6e-6583-44b1-abcd-91c417c80977",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "sys__UUID" : "1256cf32-6b37-469c-82dd-f09b64acafd9",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${cdp_commoditygrade_externalApiHost}",
+        "path" : "${cdp_commoditygrade_externalApiPath}",
+        "method" : "GET",
+        "body" : {},
+        "authConfig" : {
+            "type" : "cdp",
+            "authUrl" : "${cdp_token_externalApiHost}",
+            "method" : "POST",
+            "Content-Type" : "application/x-www-form-urlencoded",
+            "client_id" : "${properties.cdp_externalClientId}",
+            "scope" : "${properties.cdp_externalApiScope}",
+            "grant_type" : "client_credentials",
+            "token_cachettl" : "${cdp_token_cachettl}"
+        },
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "user-agent" : "Application"
+        },
+        "responseDataKey" : "commodity_grade"
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXT_GET_COMMODITY_GRADE_DATA"
+}
