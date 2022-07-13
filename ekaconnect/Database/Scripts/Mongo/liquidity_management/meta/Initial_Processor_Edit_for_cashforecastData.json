@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_Edit_for_cashforecastData",
+    "name" : "Initial_Processor_Edit_for_cashforecastData",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "snippet" : "res.status(200).send(req.body.selectedData.data[0])",
+    "sys__UUID" : "e2b149f4-10ee-4973-8299-4c2c87f07952",
+    "sys__createdBy" : "Jay"
+}

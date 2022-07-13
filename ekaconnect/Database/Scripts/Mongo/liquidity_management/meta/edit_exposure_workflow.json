@@ -1,0 +1,212 @@
+{
+    "_id" : "edit_exposure_workflow",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "exposures",
+                    "clearSelected" : [ 
+                        "selected.editexposure",
+                        "selected.exposures"  
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editexposure",
+            "type" : "submit",
+            "style" : {
+                "margin-top" : "2px"
+            },
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.editexposure",
+                    "name" : "_ST_VALIDATE_EXPOSURE",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.editexposure",
+                    "result" : {
+                        "success" : {
+                            "message" : "Status"
+                        },
+                        "failure" : {
+                            "message" : "Status"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "name" : "editexposureprocessor",
+                    "clearSelected" : [ 
+                        "selected.editexposure",
+                        "selected.exposures"  
+                    ],
+                    "appendMsg" : false
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "resetForm" : true,
+                    "name" : "exposures"
+                }
+            ],
+            "label" : "SAVE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "exposures",
+                    "clearSelected" : [ 
+                        "selected.editexposure",
+                        "selected.exposures"  
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "entity",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "bankAccount"
+            }, 
+            {
+                "key" : "bank",
+                "type" : "textbox"
+            }
+        ], 
+        [ 
+            {
+                "key" : "amount",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "5px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                }
+            }, 
+            {
+                "key" : "currency",
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "85px"
+                },
+                "isRequired" : true
+            }, 
+            {
+                "key" : "exposureDate"
+            }, 
+            {
+                "key" : "classification"
+            }
+        ], 
+        [ 
+            {
+                "key" : "direction"
+            }, 
+            {
+                "key" : "externalRefNo"
+            }, 
+            {
+                "key" : "strategy"
+            }, 
+            {
+                "key" : "profitCenter"
+            }
+        ], 
+        [ 
+            {
+                "key" : "remarks"
+            }
+        ], 
+        [ 
+            {
+                "key" : "bankId",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "currencyhidden",
+                "type" : "textbox",
+                "event" : "if(value){data.currency =  {value:value,disable:true}} else {data.currency =  {value:data.c7,disable:false}}",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "exposureRefNo",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "status",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }
+        ]
+    ],
+    "label" : "Edit Exposure: ${exposureRefNo}",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "180px",
+            "margin-right" : "26px",
+            "margin-bottom" : "10px"
+        },
+        "processorInfo" : {
+            "processorId" : "4c170524-77a5-4d6a-b738-b8c31989ad36"
+        },
+        "name" : "create",
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "3a9a29f8-9488-43f0-9b07-30e53c594a4a",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "editexposure",
+    "type" : "workflow"
+}

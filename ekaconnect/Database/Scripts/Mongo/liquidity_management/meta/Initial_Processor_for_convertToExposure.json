@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_for_convertToExposure",
+    "name" : "Initial_Processor_for_convertToExposure",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "snippet" : "   res.status(200).send(\r\n {\"forecastId\" : req.body.selectedData.data.map((item)=>item.forecastId),\r\n \"externalRefNo\" : req.body.selectedData.data[0].externalRefNo,\r\n \"transactionDate\" : req.body.selectedData.data[0].transactionDate,\r\n \"amount\" : req.body.selectedData.data[0].amount,\r\n \"remarks\" : req.body.selectedData.data[0].remarks,\r\n \"allData\" : req.body.selectedData.data,\r\n \"attributes\" : ['Currency', 'Entity', 'Transaction Date']}) ",
+    "sys__UUID" : "b5412bc9-1aee-4f46-a18c-2d70c3e0fa4b",
+    "sys__createdBy" : "Jay"
+}

@@ -1,0 +1,203 @@
+{
+    "_id" : "addnewcashforecast_treasury",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.addnewcashforecast"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "addnewcashforecast",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.addnewcashforecast",
+                    "name" : "_ST_VALIDATE_CASHFORECAST",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.addnewcashforecast",
+                    "result" : {
+                        "success" : {
+                            "message" : "Status"
+                        },
+                        "failure" : {
+                            "message" : "Status"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "name" : "createcashforecast",
+                    "clearSelected" : [ 
+                        "selected.addnewcashforecast"
+                    ],
+                    "appendMsg" : false
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "resetForm" : true,
+                    "name" : "cashforecasts"
+                }
+            ],
+            "label" : "SAVE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.addnewcashforecast"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "entity",
+                "removeEmptyOption" : true
+            }, 
+            {
+                "key" : "bankAccount",
+                "removeEmptyOption" : true
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox"
+            }
+        ], 
+        [ 
+            {
+                "key" : "liquidityPlanName",
+                "removeEmptyOption" : true
+            }, 
+            {
+                "key" : "amount",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "5px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                }
+            }, 
+            {
+                "key" : "currency",
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "85px"
+                },
+                "removeEmptyOption" : true
+            }, 
+            {
+                "key" : "transactionDate"
+            }, 
+            {
+                "key" : "classification",
+                "removeEmptyOption" : true
+            }
+        ], 
+        [ 
+            {
+                "key" : "direction",
+                "removeEmptyOption" : true
+            }, 
+            {
+                "key" : "externalRefNo"
+            }, 
+            {
+                "key" : "strategy",
+                "removeEmptyOption" : true
+            }, 
+            {
+                "key" : "profileCenter",
+                "removeEmptyOption" : true
+            }
+        ], 
+        [ 
+            {
+                "key" : "remarks"
+            }, 
+            {
+                "key" : "bankId",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }, 
+            {
+                "key" : "currencyhidden",
+                "type" : "textbox",
+                "event" : "data.currency =  {value:value,disable:true}",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "planStartEndDate",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "visibility" : "hidden"
+                }
+            }
+        ]
+    ],
+    "label" : "Add Cash Forecast",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "180px",
+            "margin-right" : "26px",
+            "margin-bottom" : "10px"
+        },
+        "processorInfo" : {
+            "processorId" : "76aa5ab6-81d0-4029-af3b-9e45a4877808"
+        },
+        "name" : "create",
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "1be3e47e-69d5-4314-9f0f-738a28e2350a",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "addnewcashforecast",
+    "type" : "workflow"
+}

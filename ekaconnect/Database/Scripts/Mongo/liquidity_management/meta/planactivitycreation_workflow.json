@@ -1,0 +1,256 @@
+{
+  "_id": "planactivitycreation_workflow",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-primary project-btn",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "task": "planactivitycreation",
+      "decisionName": "Update",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "reload": ["planactivitysummarytable"],
+          "type": "client"
+        }
+      ],
+      "label": "Update",
+      "iconClass": "createicon"
+    },
+    {
+      "decisionName": "rolloverbackdate",
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "rolloverBackDate",
+      "individualCompositeTask": true,
+      "type": "submit",
+      "additionalSelectedData": {
+        "activityData": "selected.planactivity.planactivitycreation"
+      },
+      "outcomes": [
+        {
+          "name": "setRolloverBackDate",
+          "data": "output.planactivitycreation"
+        },
+        {
+          "data": "output.setRolloverBackDate",
+          "name": "planactivitycreation",
+          "setSelected": ["selected.planactivity.planactivitycreation"]
+        }
+      ]
+    },
+    {
+      "decisionName": "rolloverforwarddate",
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "rolloverForwardDate",
+      "individualCompositeTask": true,
+      "type": "submit",
+      "additionalSelectedData": {
+        "activityData": "selected.planactivity.planactivitycreation"
+      },
+      "outcomes": [
+        {
+          "name": "setRolloverForwardDate",
+          "data": "output.planactivitycreation"
+        },
+        {
+          "data": "output.setRolloverForwardDate",
+          "name": "planactivitycreation",
+          "setSelected": ["selected.planactivity.planactivitycreation"]
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "key": "entity",
+        "removeEmptyOption": true,
+        "formItemStyle": {
+          "margin-right": "20px",
+          "margin-bottom": "0",
+          "width": "160px"
+        }
+      },
+      {
+        "key": "liquidityPlanName",
+        "filter": true,
+        "removeEmptyOption": true,
+        "formItemStyle": {
+          "margin-bottom": "0",
+          "width": "160px"
+        }
+      },
+      {
+        "key": "planDisplayName",
+        "type": "hidden",
+        "formItemStyle": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "currency",
+        "disabled": true,
+        "type": "readOnly",
+        "formItemStyle": {
+          "width": "60px"
+        },
+        "class": "currency-button"
+      },
+      {
+        "key": "status",
+        "disabled": true,
+        "type": "readOnly",
+        "formItemStyle": {
+          "width": "150px"
+        },
+        "class": "statusBtn-planactivity fieldInfoicon",
+        "infoTooltipExpression": "return'<div><p>Plan Start Date:</p>${formattedStartDate}</div><div> <p>Plan End Date:</p>${formattedPlanEndDate}</div><div> <p>Plan Frequency:</p>${liquidityPlanPeriod}</div>'",
+        "infoIconPositionedByField": true,
+        "tooltipPosition": "right",
+        "tooltipStyleClass": "treasurystatusInfotooltip",
+        "escapeTooltipContent": false
+      },
+      {
+        "key": "liquidityPlanPeriod",
+        "type": "radio",
+        "class": "radio-toggle-button",
+        "formItemStyle": {
+          "width": "260px"
+        },
+        "infoTooltip": "<div>Maximum View Range</div><div><p>Daily:</p>14 Days</div><div><p>Weekly:</p>13 Weeks</div><div><p>Monthly:</p>12 Months</div>",
+        "tooltipPosition": "right",
+        "tooltipStyleClass": "treasuryviewrangeTooltip",
+        "escapeTooltipContent": false
+      },
+      {
+        "key": "liquidityPlanPeriodHidden",
+        "type": "hidden",
+        "formItemStyle": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "backDate",
+        "type": "button",
+        "label": "",
+        "btnClass": "rollover-back-date-icon",
+        "decision": "rolloverbackdate",
+        "formItemStyle": {
+          "width": "30px",
+          "margin-left": "10px",
+          "margin-right": "10px"
+        }
+      },
+      {
+        "key": "planStartDate",
+        "type": "datepicker",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "margin-bottom": "0",
+          "width": "145px"
+        },
+        "children": ["formattedStartDate", "formattedPlanEndDate"]
+      },
+      {
+        "key": "planStartDateHidden",
+        "type": "hidden",
+        "formItemStyle": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "planEndDate",
+        "type": "datepicker",
+        "class": "dash-before treasury-date",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "margin-bottom": "0px",
+          "margin-top": "26px",
+          "width": "145px"
+        },
+        "children": ["formattedStartDate", "formattedPlanEndDate"]
+      },
+      {
+        "key": "forwardDate",
+        "type": "button",
+        "label": "",
+        "btnClass": "rollover-forward-date-icon",
+        "decision": "rolloverforwarddate",
+        "formItemStyle": {
+          "width": "30px",
+          "margin-right": "30px"
+        }
+      },
+      {
+        "key": "planEndDateHidden",
+        "type": "hidden",
+        "formItemStyle": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "UpdateLoadPage",
+        "type": "button",
+        "label": "VIEW",
+        "btnClass": "btn btn-update p-0",
+        "decision": "Update",
+        "formItemStyle": {
+          "width": "95px",
+          "margin-right": "0"
+        }
+      },
+      {
+        "key": "formattedPlanEndDate",
+        "type": "hidden",
+        "formItemStyle": {
+          "display": "none"
+        },
+        "UIupdates": {
+          "value": "if(${planEndDateHidden}) {return moment('${planEndDateHidden}').format('DD-MMM-YYYY')} else {return ''}"
+        }
+      },
+      {
+        "key": "formattedStartDate",
+        "type": "hidden",
+        "formItemStyle": {
+          "display": "none"
+        },
+        "UIupdates": {
+          "value": "if(${planStartDateHidden}) {return moment('${planStartDateHidden}').format('DD-MMM-YYYY')} else {return ''}"
+        }
+      }
+    ]
+  ],
+  "label": "",
+  "processorInfo": {
+    "processorId": "b2a9d14d-ad95-4c40-8054-aab01f4b2bb2"
+  },
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "defaultFormItemStyle": {
+      "width": "180px",
+      "margin-right": "26px"
+    },
+    "processorInfo": {
+      "processorId": "92a4efd5-efc1-40a5-92a5-8ca2b790ee92"
+    },
+    "name": "create",
+    "theme": "treasury",
+    "type": "row",
+    "cardClass": "liquidity-plan"
+  },
+  "object": "0b37b24b-3cf1-4c3e-82bf-404b3d1fffbe",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "taskId": "planactivitycreation",
+  "type": "workflow"
+}

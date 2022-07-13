@@ -1,0 +1,118 @@
+{
+  "_id": "listing_lp_platform_status_log_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "taskId": "liquidityplanstatuslogsplatform",
+  "label": "List of Bulk Process Status Log - Liquidity Plan",
+  "object": "f83c83e4-5c0e-49b5-b392-79f5e8281fda",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "d680b8ea-8290-4f27-966e-e3461a82c2c7"
+  },
+  "lazyLoading": false,
+  "rows": 20,
+  "header": {
+    "label": "List of Bulk Process Status Log - Liquidity Plan",
+    "style": {
+      "font-size": "18px"
+    }
+  },
+  "layout": {
+    "name": "list",
+    "getInitialData": true,
+    "preserveSelectedData": true,
+    "dropdownDecisions": true,
+    "showCheckbox": false,
+    "rows": 20,
+    "routeOnRefresh" : "liquidityplanstatuslogs",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": false,
+      "reset": true,
+      "export": false
+    },
+    "lazyLoading": false,
+    "theme": "theme-grid-white"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "sort": true,
+      "width": "10%",
+      "label": "Process ID",
+      "key": "processID"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width": "10%",
+      "label": "Total Records",
+      "key": "totalRecords",
+      "dataType": "String"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width": "15%",
+      "label": "Successful Records",
+      "key": "successfulRecords"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width": "15%",
+      "label": "Failed Records",
+      "key": "failedRecords"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width": "10%",
+      "label": "Status",
+      "key": "status"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width": "10%",
+      "label": "Created By",
+      "key": "createdBy"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width": "15%",
+      "label": "Created Date",
+      "key": "createdDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width": "15%",
+      "label": "Error Status",
+      "key" : "errorStatus",
+      "category" : "link",
+      "task" : "download-error-document",
+      "highlight" : {
+          "default" : "icon-download"
+      }
+    }
+  ],
+  "decisions" : [ 
+    {
+      "objectAction" : "CREATE",
+      "autoExecute" : true,
+      "outcomes" : [ 
+          {
+            "name" : "liquidityplanstatuslogs"
+          }
+      ]
+    }
+  ],
+  "labelKey": "LIST"
+}

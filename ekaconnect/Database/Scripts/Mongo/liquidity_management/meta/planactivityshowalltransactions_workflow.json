@@ -1,0 +1,123 @@
+{
+  "_id": "planactivityshowalltransactions_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "taskId": "planactivityshowalltransactions",
+  "label": "Forecast",
+  "object": "0b37b24b-3cf1-4c3e-82bf-404b3d1fffbe",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "b485335f-7427-4d36-a353-c2d143bd5264"
+  },
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "dynamicsummarytableversion2",
+    "fields": "dynamic"
+  },
+  "fields": [
+    {
+      "type": "group",
+      "label": "Forecast",
+      "children": [
+        {
+          "type": "field",
+          "label": "Period",
+          "key": "period"
+        },
+        {
+          "type": "field",
+          "label": "Start Date",
+          "key": "startDate"
+        },
+        {
+          "type": "field",
+          "label": "End Date",
+          "key": "endDate"
+        },
+        {
+          "type": "field",
+          "label": "Opening Balance",
+          "key": "openingBalance"
+        },
+        {
+          "type": "group",
+          "label": "Operation",
+          "children": [
+            {
+              "type": "group",
+              "label": "Receipts",
+              "children": [
+                {
+                  "type": "field",
+                  "class": "",
+                  "key": "expenses.Operational.Debit.Investment/Deposit",
+                  "label": "Subscription"
+                },
+                {
+                  "type": "field",
+                  "key": "expenses.Operational.Debit.Investment/Fx",
+                  "label": "Discount"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "label": "Total Receipts"
+            },
+            {
+              "type": "group",
+              "label": "Payments",
+              "children": [
+                {
+                  "type": "field",
+                  "label": "Salary"
+                },
+                {
+                  "type": "field",
+                  "label": "Rent"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "label": "Total Payments"
+            },
+            {
+              "type": "field",
+              "label": "Net operational cashflows"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": "Investments",
+          "children": [
+            {
+              "type": "group",
+              "label": "Receipts",
+              "children": [
+                {
+                  "type": "field",
+                  "label": "Income"
+                },
+                {
+                  "type": "field",
+                  "label": "Dividents"
+                }
+              ]
+            },
+            {
+              "type": "field",
+              "label": "Total Receipts"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

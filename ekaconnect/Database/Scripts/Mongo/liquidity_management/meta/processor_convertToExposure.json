@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_convertToExposure",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "73c1b7b6-2923-4c33-a4c2-f8e43bda75f6"
+    },
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "type" : "workflow",
+    "taskId" : "_ST_CONVERT_TO_EXPOSURE",
+    "label" : "Convert To Exposure using Processor",
+    "object" : "c7a24518-22d4-49b9-952a-1624d3f954db"
+}

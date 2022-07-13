@@ -1,0 +1,30 @@
+{
+    "_id" : "Plan_Frequency_Liquidity",
+    "type" : "property",
+    "name" : "PlanFrequency",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "PlanFrequency",
+    "defaultValue" : [ 
+        {
+            "key" : "Daily",
+            "value" : "Daily"
+        }, 
+        {
+            "key" : "Weekly",
+            "value" : "Weekly"
+        },
+		{
+            "key" : "Monthly",
+            "value" : "Monthly"
+        }, 
+        {
+            "key" : "Yearly",
+            "value" : "Yearly"
+        }
+    ],
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "description" : "Values available for Plan Frequency"
+}

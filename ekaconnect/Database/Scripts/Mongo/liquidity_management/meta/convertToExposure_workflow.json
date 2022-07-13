@@ -1,0 +1,210 @@
+{
+    "_id" : "convertToExposure_workflow",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.convertToExposure"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary convert-to-exposure-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "convertToExposure",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "data" : "output.convertToExposure",
+                    "name" : "_ST_VALIDATE_CONVERTTOEXPOSURE",
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.convertToExposure",
+                    "result" : {
+                        "success" : {
+                            "message" : "Forecast converted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "name" : "_ST_CONVERT_TO_EXPOSURE",
+                    "clearSelected" : [ 
+                        "selected.convertToExposure"
+                    ],
+                    "appendMsg" : false
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Forecast converted to Exposure successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Please fix errors in external task"
+                        }
+                    },
+                    "appendMsg" : true,
+                    "resetForm" : true,
+                    "name" : "cashforecasts",
+                    "showToaster" : true
+                }
+            ],
+            "label" : "CONVERT"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.convertToExposure"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [
+        [ 
+            {
+                "key" : "attributes",
+                "style" : {
+                    "width" : "594px",
+                    "margin-right" : "10px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "categorization",
+                "value" : "Exposure",
+                "disabled" : true
+            }, 
+            {
+                "key" : "entity"
+            }, 
+            {
+                "key" : "bankAccount"
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox"
+            }
+        ], 
+        [ 
+            {
+                "key" : "referencePlanName"
+            }, 
+            {
+                "key" : "currency",
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "180px"
+                }
+            }, 
+            {
+                "key" : "transactionDate",
+                "disabled" : true
+            }, 
+            {
+                "key" : "classification"
+            }
+        ], 
+        [ 
+            {
+                "key" : "direction",
+                "type" : "textbox",
+                "disabled" : true
+            }, 
+            {
+                "key" : "externalRefNo",
+                "type" : "textbox",
+                "disabled" : true
+            }, 
+            {
+                "key" : "strategy"
+            }, 
+            {
+                "key" : "profileCenter"
+            }, 
+            {
+                "key" : "forecastId",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "amount",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                }
+            },
+            {
+                "key" : "remarks",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "allData",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                }
+            }
+        ]
+    ],
+    "label" : "Convert To Exposure",
+    "processorInfo" : {
+        "processorId" : "b5412bc9-1aee-4f46-a18c-2d70c3e0fa4b"
+    },
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "180px",
+            "margin-right" : "26px",
+            "margin-bottom" : "10px"
+        },
+        "processorInfo" : {
+            "processorId" : "d6c8a249-011b-4405-aa11-fef8ac384376"
+        },
+        "name" : "create",
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "c7a24518-22d4-49b9-952a-1624d3f954db",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "convertToExposure",
+    "type" : "workflow"
+}

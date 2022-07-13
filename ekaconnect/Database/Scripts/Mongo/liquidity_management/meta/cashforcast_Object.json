@@ -1,0 +1,313 @@
+{
+  "_id": "cashforcast_Object",
+  "name": "cashforcast",
+  "label": "cashforcast Data",
+  "type": "object",
+  "version": "1",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "filterDate": {
+      "labelKey": "filterDate",
+      "filterDate": "Date Range",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "maximumDate": " if('${toDate}') {return '${toDate}'} else{return new Date(8640000000000000)} "
+    },
+    "toDate": {
+      "labelKey": "toDate",
+      "toDate": " ",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "minimumDate": " if('${filterDate}')  {return '${filterDate}'}  else{return true}"
+    },
+    "transactionDate": {
+      "labelKey": "transactionDate",
+      "transactionDate": "Transaction Date",
+      "isRequired": true,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "class": "treasury-date",
+      "maximumDate": " if('${planStartEndDate}') {return '${planStartEndDate}'.split(\"%%%\")[1]} else{return new Date(8640000000000000)}",
+      "minimumDate": " if('${planStartEndDate}')  {return '${planStartEndDate}'.split(\"%%%\")[0]} else{return new Date(-8640000000000000)}",
+      "yearNavigator" : true,
+      "monthNavigator" : true,
+      "yearRange" : "2000:2030",
+      "showButtonBar" : true
+    },
+    "forecastId": {
+      "labelKey": "forecastId",
+      "forecastId": "Forecast ID",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "externalRefNo": {
+      "labelKey": "externalRefNo",
+      "externalRefNo": "External Ref ID",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "entity": {
+      "entity": "Entity",
+      "labelKey": "entity",
+      "type": "dropdown",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": true,
+      "children": [
+        "currency",
+        "bankName",
+        "bankAccount",
+        "currencyhidden",
+        "bankId",
+        "liquidityPlanName",
+        "planStartEndDate",
+        "strategy",
+        "profileCenter",
+        "classification",
+        "direction"
+      ]
+    },
+    "bankName": {
+      "labelKey": "bankName",
+      "bankName": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankName",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true"
+      },
+      "dataType": "String"
+    },
+    "bankId": {
+      "labelKey": "bankId",
+      "bankId": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankId",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true"
+      },
+      "dataType": "String"
+    },
+    "planStartEndDate": {
+      "labelKey": "planStartEndDate",
+      "planStartEndDate": "Plan Start End Date",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "planStartEndDate",
+      "parent": ["entity", "liquidityPlanName"],
+      "children": ["transactionDate"],
+      "dataType": "String"
+    },
+    "bankAccount": {
+      "labelKey": "bankAccount",
+      "bankAccount": "Bank Account",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankAccount",
+      "parent": ["entity"],
+      "children": ["bankName", "bankId", "currencyhidden"],
+      "dataType": "String"
+    },
+    "liquidityPlanName": {
+      "labelKey": "liquidityPlanName",
+      "liquidityPlanName": "Liquidity Plan Name",
+      "isRequired": true,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "liquidityPlanName",
+      "parent": ["entity"],
+      "children": ["transactionDate", "planStartEndDate"]
+    },
+    "strategy": {
+      "labelKey": "strategy",
+      "strategy": "Strategy",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "strategy",
+      "parent": ["entity"]
+    },
+    "classification": {
+      "labelKey": "classification",
+      "classification": "Classiﬁcation",
+      "isRequired": true,
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "classification",
+      "parent": ["entity"]
+    },
+    "currency": {
+      "labelKey": "currency",
+      "currency": "Currency",
+      "isRequired": true,
+      "type": "dropdown",
+      "serviceKey": "currency",
+      "parent": ["entity"],
+      "UIupdates": {
+        "value": "if('${currencyhidden}' !='null') return '${currencyhidden}'"
+      },
+      "dataType": "String"
+    },
+    "currencyhidden": {
+      "labelKey": "currencyhidden",
+      "currencyhidden": "",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "currencyhidden",
+      "parent": ["entity", "bankAccount"],
+      "dataType": "String"
+    },
+    "direction": {
+      "labelKey": "direction",
+      "direction": "Direction",
+      "isRequired": true,
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "Direction"
+    },
+    "amount": {
+      "labelKey": "amount",
+      "amount": "Amount",
+      "isRequired": true,
+      "type": "textbox",
+      "UIupdates": {
+        "listValue": "return Number('${amount}').toLocaleString('en-US', {maximumFractionDigits:2})"
+      },
+      "dataType": "Number",
+      "validationRegex": "^\\d+\\.?\\d{0,2}$",
+      "autocomplete": "off"
+    },
+    "profileCenter": {
+      "profileCenter": "Profit Center",
+      "labelKey": "profileCenter",
+      "dataType": "String",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "profitCenter",
+      "parent": ["entity"]
+    },
+    "attributes": {
+      "attributes": "Attributes",
+      "labelKey": "attributes",
+      "dataType": "String",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "remarks": {
+      "remarks": "Remarks",
+      "labelKey": "remarks",
+      "dataType": "String",
+      "type": "textbox",
+      "isRequired": true
+    },
+    "expenseGroup": {
+      "expenseGroup": "Expense Group",
+      "labelKey": "expenseGroup",
+      "dataType": "String",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "String",
+      "isRequired": false
+    },
+    "baseCurrency": {
+      "baseCurrency": "Base Currency",
+      "labelKey": "baseCurrency",
+      "type": "String",
+      "isRequired": false,
+      "type": "textbox"
+    },
+    "amountInBaseCurrency": {
+      "amountInBaseCurrency": "Amount In Base Currency",
+      "labelKey": "amountInBaseCurrency",
+      "type": "String",
+      "isRequired": false,
+      "type": "textbox",
+      "UIupdates": {
+        "listValue": "return Number('${amountInBaseCurrency}').toLocaleString('en-US', {maximumFractionDigits:2})"
+      },
+      "dataType": "Number"
+    },
+    "convertedToExposure": {
+      "convertedToExposure": "Converted To Exposure",
+      "labelKey": "convertedToExposure",
+      "isRequired": false,
+      "type": "textbox"
+    },
+    "IsValidForConversion": {
+      "IsValidForConversion": "Available to Process",
+      "labelKey": "IsValidForConversion",
+      "isRequired": false,
+      "type": "textbox"
+    },
+    "planActivityStatus": {
+      "labelKey": "planActivityStatus",
+      "planActivityStatus": "Plan Activity Status",
+      "isRequired": false,
+      "type": "textbox"
+    },
+    "ngrFilter": {
+      "ngrFilter": " ",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": false
+    },
+    "formcheckbox": {
+      "formcheckbox": "Entity",
+      "labelKey": "formcheckbox",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "ngrFilterKey"
+    },
+	"message" : {
+		"message" : "",
+		"labelKey" : "message",
+		"isRequired" : false,
+		"type" : "textbox"
+    },
+    "add": {
+      "add": "Add",
+      "labelKey": "add",
+      "type": "button",
+      "isRequired": false
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "1be3e47e-69d5-4314-9f0f-738a28e2350a"
+}

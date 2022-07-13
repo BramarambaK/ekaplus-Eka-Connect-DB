@@ -1,0 +1,227 @@
+{
+  "_id": "edit_cash_forecast_worklow",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark treasury-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "name": "cashforecasts",
+          "clearSelected": [
+            "selected.editcashforecast",
+            "selected.cashforecasts"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary treasury-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editcashforecast",
+      "type": "submit",
+      "position": "bottom",
+      "outcomes": [
+        {
+          "data": "output.editcashforecast",
+          "name": "_ST_VALIDATE_CASHFORECAST",
+          "appendMsg": false
+        },
+        {
+          "data": "output.editcashforecast",
+          "result": {
+            "success": {
+              "message": "Status"
+            },
+            "failure": {
+              "message": "Status"
+            },
+            "successWithWarning": {
+              "message": ""
+            }
+          },
+          "name": "editcashforecastprocessor",
+          "clearSelected": [
+            "selected.editcashforecast",
+            "selected.cashforecasts"
+          ],
+          "appendMsg": false
+        },
+        {
+          "result": {
+            "success": {
+              "message": "data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "data got replaced with some errors"
+            }
+          },
+          "appendMsg": false,
+          "resetForm": true,
+          "name": "cashforecasts"
+        }
+      ],
+      "label": "SAVE"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "UPDATE",
+      "outcomes": [
+        {
+          "name": "cashforecasts",
+          "clearSelected": [
+            "selected.editcashforecast",
+            "selected.cashforecasts"
+          ]
+        }
+      ],
+      "position": "header",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "key": "entity",
+        "disabled": true,
+        "UIupdates": {
+          "disability": "return  true"
+        },
+        "isRequired": false
+      },
+      {
+        "key": "bankAccount"
+      },
+      {
+        "key": "bankName",
+        "type": "textbox"
+      }
+    ],
+    [
+      {
+        "key": "liquidityPlanName",
+        "type": "textbox",
+        "disabled": true,
+        "UIupdates": {
+          "disability": "return  true"
+        },
+        "isRequired": false
+      },
+      {
+        "key": "amount",
+        "type": "textbox",
+        "formItemStyle": {
+          "margin-right": "0px",
+          "margin-bottom": "16px",
+          "width": "90px"
+        }
+      },
+      {
+        "key": "currency",
+        "formItemStyle": {
+          "margin-right": "24px",
+          "margin-bottom": "16px",
+          "width": "90px"
+        }
+      },
+      {
+        "key": "transactionDate"
+      },
+      {
+        "key": "classification"
+      }
+    ],
+    [
+      {
+        "key": "direction"
+      },
+      {
+        "key": "externalRefNo",
+        "isRequired": false
+      },
+      {
+        "key": "strategy"
+      },
+      {
+        "key": "profileCenter"
+      }
+    ],
+    [
+      {
+        "key": "remarks"
+      },
+      {
+        "key": "bankId",
+        "type": "textbox",
+        "formItemStyle": {
+          "visibility": "hidden"
+        }
+      },
+      {
+        "key": "currencyhidden",
+        "type": "textbox",
+        "event": "if(value){data.currency =  {value:value,disable:true}} else {data.currency =  {value:data.c15,disable:false}}",
+        "formItemStyle": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "planStartEndDate",
+        "type": "textbox",
+        "formItemStyle": {
+          "visibility": "hidden"
+        }
+      },
+      {
+        "key": "forecastId",
+        "type": "textbox",
+        "formItemStyle": {
+          "visibility": "hidden"
+        }
+      },
+      {
+        "key": "status",
+        "type": "textbox",
+        "formItemStyle": {
+          "visibility": "hidden"
+        }
+      }
+    ]
+  ],
+  "label": "Edit Forecast: ${cashforecasts[0].forecastId}",
+  "processorInfo": {
+    "processorId": "e2b149f4-10ee-4973-8299-4c2c87f07952"
+  },
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "defaultFormItemStyle": {
+      "width": "180px",
+      "margin-right": "26px",
+      "margin-bottom": "10px"
+    },
+    "processorInfo": {
+      "processorId": "76aa5ab6-81d0-4029-af3b-9e45a4877808"
+    },
+    "name": "create",
+    "theme": "treasury",
+    "type": "row"
+  },
+  "object": "1be3e47e-69d5-4314-9f0f-738a28e2350a",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "taskId": "editcashforecast",
+  "type": "workflow"
+}

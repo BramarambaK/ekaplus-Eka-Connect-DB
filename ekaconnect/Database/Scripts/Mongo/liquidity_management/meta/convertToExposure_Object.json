@@ -1,0 +1,303 @@
+{
+    "_id" : "convertToExposure_Object",
+    "name" : "convertToExposure",
+    "label" : "convertToExposure Data",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [],
+    "fields" : {
+        "categorization" : {
+            "labelKey" : "categorization",
+            "categorization" : "Categorization",
+            "isRequired" : false,
+            "dataType" : "String",
+            "type" : "textbox",
+            "UIupdates" : {
+                "disability" : "return  true",
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            }
+        },
+        "referencePlanName" : {
+            "labelKey" : "referencePlanName",
+            "referencePlanName" : "Reference Plan Name",
+            "isRequired" : false,
+            "dataType" : "String",
+            "type" : "dropdown",
+            "serviceKey" : "referencePlanName",
+            "UIupdates" : {
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            }
+        },
+        "filterDate" : {
+            "labelKey" : "filterDate",
+            "filterDate" : "Date Range",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "maximumDate" : " if('${toDate}') {return '${toDate}'} else{return new Date(8640000000000000)} "
+        },
+        "toDate" : {
+            "labelKey" : "toDate",
+            "toDate" : " ",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "minimumDate" : " if('${filterDate}')  {return '${filterDate}'}  else{return true}"
+        },
+        "transactionDate" : {
+            "labelKey" : "transactionDate",
+            "transactionDate" : "Transaction Date",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "class" : "treasury-date",
+            "UIupdates" : {
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            }
+        },
+        "forecastId" : {
+            "labelKey" : "forecastId",
+            "forecastId" : "Forecast ID",
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "externalRefNo" : {
+            "labelKey" : "externalRefNo",
+            "externalRefNo" : "External Ref ID",
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "entity" : {
+            "entity" : "Entity",
+            "labelKey" : "entity",
+            "type" : "dropdown",
+            "serviceKey" : "ngrFilterKey",
+            "isRequired" : false,
+            "children" : [ 
+                "currency", 
+                "bankName", 
+                "bankAccount", 
+                "currencyhidden", 
+                "bankId", 
+                "liquidityPlanName", 
+                "planStartEndDate"
+            ],
+            "UIupdates" : {
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            }
+        },
+        "bankName" : {
+            "labelKey" : "bankName",
+            "bankName" : "Bank Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankName",
+            "parent" : [ 
+                "entity", 
+                "bankAccount"
+            ],
+            "UIupdates" : {
+                "disability" : "return  true",
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            },
+            "dataType" : "String"
+        },
+        "bankId" : {
+            "labelKey" : "bankId",
+            "bankId" : "Bank Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankId",
+            "parent" : [ 
+                "entity", 
+                "bankAccount"
+            ],
+            "UIupdates" : {
+                "disability" : "return  true"
+            },
+            "dataType" : "String"
+        },
+        "bankAccount" : {
+            "labelKey" : "bankAccount",
+            "bankAccount" : "Bank Account",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankAccount",
+            "parent" : [ 
+                "entity"
+            ],
+            "children" : [ 
+                "bankName", 
+                "bankId", 
+                "currencyhidden"
+            ],
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            }
+        },
+        "strategy" : {
+            "labelKey" : "strategy",
+            "strategy" : "Strategy",
+            "isRequired" : false,
+            "dataType" : "String",
+            "type" : "dropdown",
+            "serviceKey" : "strategy"
+        },
+        "classification" : {
+            "labelKey" : "classification",
+            "classification" : "Classiﬁcation",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "classification"
+        },
+        "currency" : {
+            "labelKey" : "currency",
+            "currency" : "Currency",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currency",
+            "parent" : [ 
+                "entity"
+            ],
+            "UIupdates" : {
+                "value" : "if('${currencyhidden}' !='null') return '${currencyhidden}'",
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            },
+            "dataType" : "String"
+        },
+        "currencyhidden" : {
+            "labelKey" : "currencyhidden",
+            "currencyhidden" : "",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currencyhidden",
+            "parent" : [ 
+                "entity", 
+                "bankAccount"
+            ],
+            "dataType" : "String"
+        },
+        "direction" : {
+            "labelKey" : "direction",
+            "direction" : "Direction",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "direction",
+            "UIupdates" : {
+                "disability" : "return  true",
+                "visibility" : "return ${allData.length} == 1 ? true : false"
+            }
+        },
+        "amount" : {
+            "labelKey" : "amount",
+            "amount" : "Amount",
+            "isRequired" : false,
+            "type" : "textbox",
+            "UIupdates" : {
+                "listValue" : "return Number('${amount}').toLocaleString('en-US', {maximumFractionDigits:2})"
+            },
+            "dataType" : "dataType"
+        },
+        "profileCenter" : {
+            "profileCenter" : "Profit Center",
+            "labelKey" : "profileCenter",
+            "dataType" : "String",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "profitCenter"
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "dataType" : "String",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "status" : {
+            "status" : "Status",
+            "labelKey" : "status",
+            "type" : "String",
+            "isRequired" : false
+        },
+        "ngrFilter" : {
+            "ngrFilter" : " ",
+            "labelKey" : "ngrFilter",
+            "type" : "multiselect",
+            "serviceKey" : "ngrFilterKey",
+            "isRequired" : false
+        },
+        "formcheckbox" : {
+            "formcheckbox" : "Entity",
+            "labelKey" : "formcheckbox",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey" : "ngrFilterKey"
+        },
+        "add" : {
+            "add" : "Add",
+            "labelKey" : "add",
+            "type" : "button",
+            "isRequired" : false
+        },
+        "allData" : {
+            "allData" : "allData",
+            "labelKey" : "allData",
+            "type" : "textbox",
+            "isRequired" : false,
+            "children" : [ 
+                "attributes", 
+                "direction", 
+                "categorization", 
+                "transactionDate", 
+                "referencePlanName", 
+                "entity", 
+                "bankName", 
+                "bankAccount"
+            ]
+        },
+        "attributes" : {
+            "attributes" : "Add Attributes to Group",
+            "labelKey" : "attributes",
+            "type" : "multiselect",
+            "isRequired" : false,
+            "dataType" : "String",
+            "propertyKey" : "attributesLM",
+            "UIupdates" : {
+                "visibility" : "return ${allData.length} > 1 ? true : false"
+            }
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "c7a24518-22d4-49b9-952a-1624d3f954db"
+}

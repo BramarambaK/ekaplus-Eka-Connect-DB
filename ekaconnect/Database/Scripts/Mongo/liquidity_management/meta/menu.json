@@ -1,0 +1,91 @@
+{
+  "_id": "menuObject_liquidity",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Transactions",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "Liquidity Plan",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "liquidityplans",
+                  "text": "List All",
+                  "iconCls": "",
+                  "clearSelected": ["selected.liquidityplans"]
+                },
+                {
+                  "handler": "liquidityplanStatusLog",
+                  "text": "Bulk Process",
+                  "displayType": "popup",
+                  "popupClass": "popup-w350-h160",
+                  "iconCls": ""
+                },
+                {
+                  "handler": "planactivity",
+                  "text": "Plan Activity",
+                  "iconCls": "",
+                  "clearSelected": [
+                    "selected.planactivity.planactivitycreation"
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Cash Forecast",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "cashforecasts",
+                  "text": "List All",
+                  "iconCls": "",
+                  "clearSelected": ["selected.cashforecasts"]
+                },
+                {
+                  "handler": "cashForecastStatusLog",
+                  "text": "Bulk Process",
+                  "displayType": "popup",
+                  "iconCls": ""
+                }
+              ]
+            },
+            {
+              "text": "Bulk Process Status Log",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "liquidityplanstatuslogs",
+                  "text": "Liquidity Plan",
+                  "iconCls": ""
+                },
+                {
+                  "handler": "cashforecaststatuslogs",
+                  "text": "Cash Forecast",
+                  "iconCls": ""
+                }
+              ]
+            },
+            {
+              "text": "Exposures",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "exposures",
+                  "text": "List All",
+                  "iconCls": "",
+                  "clearSelected": ["selected.exposures"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "type": "menuObject"
+}

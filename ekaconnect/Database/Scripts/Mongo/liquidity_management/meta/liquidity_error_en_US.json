@@ -1,0 +1,13 @@
+{
+    "_id" : "liquidity_error_en_US",
+    "title" : "Liquidity Management App Level Error",
+    "name" : "liquidity",
+    "tenantID" : "",
+    "type" : "error",
+    "locale" : "en",
+    "022" : "Please enter values for all the mandatory fields",
+	"004" : "%s is a mandatory field",
+    "128" : "Please enter the %s",
+    "129" : "Please enter the %s in correct format",
+    "130" : "Please select the %s (mandatory)"
+}

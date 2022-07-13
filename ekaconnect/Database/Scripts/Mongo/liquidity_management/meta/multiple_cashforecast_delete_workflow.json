@@ -1,0 +1,119 @@
+{
+    "_id" : "multiple_cashforecast_delete_workflow",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-outline-dark custom-btn-liquidity-app-cancel",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.deletemultiplecashforecast", 
+                        "selected.cashforecasts"
+                    ]
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn-liquidity-app-confirm",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "DELETE",
+            "task" : "deletemultiplecashforecast",
+            "outcomes" : [ 
+                {
+                    "data" : "output.deletemultiplecashforecast",
+                    "result" : {
+                        "success" : {
+                            "message" : "Cash Forecast deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "appendMsg" : true,
+                    "name" : "_ST_DELETE_CASHFORECAST"
+                }, 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.deletemultiplecashforecast", 
+                        "selected.cashforecasts"
+                    ],
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CONFIRM",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.deletemultiplecashforecast", 
+                        "selected.cashforecasts"
+                    ]
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "message",
+                "type" : "readOnly",
+                "value" : "Are you sure you want to Delete Cash Forecasts?",
+                "disabled" : "true",
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "360px"
+                }
+            }, 
+            {
+                "key" : "forecastId",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none",
+                    "width" : "0px"
+                },
+                "formItemStyle" : {
+                    "width" : "0px"
+                }
+            }
+        ]
+    ],
+    "label" : "Delete Cash Forecast",
+    "processorInfo" : {
+        "processorId" : "8309c970-0e85-4d52-bd62-0cb70ffaad08"
+    },
+    "labelKey" : "DELETE_OFFER",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "1be3e47e-69d5-4314-9f0f-738a28e2350a",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "deletemultiplecashforecast",
+    "type" : "workflow"
+}

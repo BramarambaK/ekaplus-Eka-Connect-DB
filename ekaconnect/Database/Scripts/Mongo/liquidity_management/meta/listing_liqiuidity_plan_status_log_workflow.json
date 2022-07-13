@@ -1,0 +1,116 @@
+{
+    "_id" : "listing_liqiuidity_plan_status_log_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "liquidityplanstatuslogs",
+    "label" : "List of Bulk Process Status Log - Liquidity Plan",
+    "object" : "f83c83e4-5c0e-49b5-b392-79f5e8281fda",
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "6c127071-61c8-4093-853c-7932f262ce85"
+    },
+    "lazyLoading" : false,
+    "rows" : 20,
+    "header" : {
+        "label" : "List of Bulk Process Status Log - Liquidity Plan",
+        "style" : {
+            "font-size" : "18px"
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "getInitialData" : true,
+        "preserveSelectedData" : true,
+        "dropdownDecisions" : true,
+        "showCheckbox" : false,
+        "rows" : 20,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : false,
+            "reset" : true,
+            "export" : false,
+            "showFilterHeader" : true
+        },
+        "lazyLoading" : false,
+        "theme" : "theme-grid-white"
+    },
+    "fields" : [ 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Process ID",
+            "key" : "processID"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Total Records",
+            "key" : "totalRecords",
+            "dataType" : "String"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Successful Records",
+            "key" : "successfulRecords"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Failed Records",
+            "key" : "failedRecords"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Status",
+            "key" : "status",
+            "highlight" : {
+                "default" : "status-icon"
+            }
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Created By",
+            "key" : "createdBy"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Created Date",
+            "key" : "createdDate"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Error Status",
+            "key" : "errorStatus",
+            "category": "link",
+            "task": "download-error-document",
+            "highlight" : {
+                "default" : "icon-download"
+            }
+        }
+    ],
+    "decisions" : [{
+        "objectAction": "CREATE",
+        "selection": "download-link",
+        "decisionName": "download-error-document",
+        "task": "ERROR_DOCUMENT_DOWNLOAD",
+        "workflowTaskName": "ERROR_DOCUMENT_DOWNLOAD",
+        "outcomes": [
+          {
+            "type": "downloadCST",
+            "workflowTaskName": "ERROR_DOCUMENT_DOWNLOAD",
+            "setSelected": ["selected.listing_liqiuidity_plan_status_log_workflow"]
+          }
+        ]
+      }],
+    "labelKey" : "LIST"
+}

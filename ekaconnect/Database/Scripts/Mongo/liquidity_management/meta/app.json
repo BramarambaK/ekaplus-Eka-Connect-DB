@@ -1,0 +1,48 @@
+
+ {
+    "_id" : "liquidity_management_app",
+    "title" : "Liquidity Management",
+    "name" : "liquidity",
+    "tenantID" : "qareference",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "platform_id" : "58",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60,
+                "height" : 20,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "menu" : [ 
+                            {
+                                "handler" : "/app/basicapp/basiclisting",
+                                "text" : "Treasury Listing",
+                                "iconCls" : ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e"
+}

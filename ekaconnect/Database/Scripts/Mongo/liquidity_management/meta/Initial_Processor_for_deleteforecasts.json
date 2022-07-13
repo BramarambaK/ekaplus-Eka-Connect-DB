@@ -1,0 +1,10 @@
+{
+    "_id" : "Initial_Processor_for_deleteforecasts",
+    "name" : "Initial_Processor_for_deleteforecasts",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "snippet" : "res.status(200).send({\"forecastId\" : (req.body.selectedData.data.map((item)=>item.forecastId)).toString()})",
+    "sys__UUID" : "8309c970-0e85-4d52-bd62-0cb70ffaad08",
+    "sys__createdBy" : "Jay"
+}

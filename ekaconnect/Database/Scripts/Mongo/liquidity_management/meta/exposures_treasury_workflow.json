@@ -1,0 +1,275 @@
+{
+  "_id": "exposures_treasury_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "taskId": "exposures",
+  "label": "List of Exposures",
+  "object": "3a9a29f8-9488-43f0-9b07-30e53c594a4a",
+  "type": "workflow",
+  "payLoad": "selected.datefilterforexposure",
+  "executeOutsideDecisionExpression" : true,
+  "processorInfo": {
+    "processorId": "ac047c40-9013-4478-9280-02841b0707a7"
+  },
+  "lazyLoading": false,
+  "rows": 20,
+  "header": {
+    "label": "List of Exposures",
+    "style": {
+      "font-size": "18px"
+    }
+  },
+  "layout": {
+    "name": "list",
+    "getInitialData": true,
+    "preserveSelectedData": true,
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "rows": 20,
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": true,
+      "export": false,
+      "showFilterHeader" : true
+    },
+    "lazyLoading": false,
+    "theme": "theme-grid-white"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "liqtreasurymodal eka-app-form",
+          "name": "addnewexposure"
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "CREATE",
+      "position": "top",
+      "task": "addprojection",
+      "outsideOperations": true
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "data": "selected.exposures",
+          "displayType": "popup",
+          "popupClass": "liqtreasurymodal eka-app-form",
+          "name": "editexposure"
+        }
+      ],
+      "label": "Edit",
+      "position": "top",
+      "disabled": "  var arrData = record;\r\n      var flag = true;\r\n      if ((arrData!== null) && (arrData.status == \"ACT\" || arrData.status == \"ROL\")) {\r\n        flag = true;\r\n      } else {\r\n        flag = false;\r\n      }\r\n      flag === false;",
+      "task": "editexposure"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.exposures",
+          "popupClass": "treasurymodal",
+          "name": "deleteExposure"
+        }
+      ],
+      "label": "Delete",
+      "disabled": "  var arrData = record;\r\n      var flag = true;\r\n      if ((arrData!== null) && (arrData.status == \"ACT\" || arrData.status == \"ROL\")) {\r\n        flag = true;\r\n      } else {\r\n        flag = false;\r\n      }\r\n      flag === false;",
+      "position": "top",
+      "task": "deleteExposure"
+    },
+    {
+      "btnClass": "link p-0 treasury-order-first",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "return '${datefilterforexposure}'!='' && '${datefilterforexposure}'!='{}' ? ((JSON.parse('${datefilterforexposure.formcheckbox}') || []).join(', ') || 'No Entity') : 'All Entities'",
+      "label": "All Entities",
+      "position": "top",
+      "style": {
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-left-radius": "3px",
+        "border-bottom-left-radius": "3px",
+        "padding": "0 5px",
+        "height": "35px"
+      },
+      "task": "text",
+      "outsideOperations": true
+    },
+    {
+      "btnClass": "link p-0 treasury-order-second",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "return '${datefilterforliquidityplan}' && moment('${datefilterforliquidityplan.filterDate}').isValid() && moment('${datefilterforliquidityplan.toDate}').isValid() ? (moment('${datefilterforliquidityplan.filterDate}').format('DD-MMM-YYYY') +' '+'to'+' '+  moment('${datefilterforliquidityplan.toDate}').format('DD-MMM-YYYY')) :  moment(new Date()).format('DD-MMM-YYYY') + ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')",
+      "style": {
+        "margin-right": "auto",
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "padding": "0 5px",
+        "height": "35px"
+      },
+      "position": "top",
+      "task": "text",
+      "outsideOperations": true
+    },
+    {
+      "btnClass": "cr-edi-icon-treasury treasury-order-third",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "globalfilter eka-app-form",
+          "name": "datefilterforexposure"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "border-right": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-left": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-right-radius": "3px",
+        "border-bottom-right-radius": "3px",
+        "padding": "0 5px",
+        "height": "35px",
+        "width": "30px"
+      },
+      "label": " ",
+      "position": "top",
+      "task": "text",
+      "outsideOperations": true
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Exposure Ref No",
+      "key": "exposureRefNo"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "External Ref No",
+      "key": "externalRefNo"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Entity",
+      "key": "entity"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Bank Account",
+      "key": "bankAccount"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Bank Name",
+      "key": "bank"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Reference Plan Name",
+      "key": "referencePlanName"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Exposure Date",
+      "key": "exposureDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Amount",
+      "align": "right",
+      "key": "amount",
+      "dataType": "String"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Currency",
+      "key": "currency"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Classification",
+      "key": "classification"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Direction",
+      "key": "direction"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Remarks",
+      "key": "remarks"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Strategy",
+      "key": "strategy"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Profit Center",
+      "key": "profitCenter"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Status",
+      "key": "status"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Updated By",
+      "key": "updatedBy"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Updated Date",
+      "key": "updatedDate"
+    }
+  ],
+  "labelKey": "LIST"
+}

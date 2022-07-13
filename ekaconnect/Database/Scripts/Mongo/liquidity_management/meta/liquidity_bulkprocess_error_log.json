@@ -1,0 +1,28 @@
+{
+    "_id" : "liquidity_bulkprocess_error_log",
+    "componentType" : "ExtSystemTask",
+    "object" : "f83c83e4-5c0e-49b5-b392-79f5e8281fda",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "version" : "V2",
+    "objectAction" : "LISTVIEW",
+    "apiInfo" : {
+        "host" : "${properties.platform_url}",
+        "path" : "/spring/bulkProcess/errors/export?processID={0}",
+        "headers" : {
+            "Content-Type" : "application/x-www-form-urlencoded",
+            "Accept" : "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+            "accept-language" : "en-US,en;q=0.9",
+            "Authorization" : "Bearer ${authResponse.access_token}"
+        },
+        "method" : "GET",
+        "body" : {},
+        "inputMapping" : {},
+        "useInputMapping" : false,
+        "pathParams" : [ 
+            "##output.processID"
+        ]
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "ERROR_DOCUMENT_DOWNLOAD"
+}

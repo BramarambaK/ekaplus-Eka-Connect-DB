@@ -1,0 +1,10 @@
+{
+    "_id" : "layout_Processor_for_exposures",
+    "name" : "layout_Processor_for_exposures",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "snippet" : "var moment = require('moment');\r\nlet flow = req.body.flow;\r\n flow.exposures.decisions = flow.exposures.decisions.map(decision=>{\r\n     if(decision.label ==='Unselected'){\r\n         decision.label = moment(new Date()).format('DD-MMM-YYYY')+ ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')\r\n         return decision\r\n     }\r\n     else return decision\r\n })\r\n  res.status(200).send( {\r\n    appId: req.body.appId,\r\n    flow: flow,\r\n    object: req.body.object,\r\n    objectMeta: req.body.objectMeta,\r\n    properties: req.body.properties\r\n  });\r\n",
+    "sys__UUID" : "956cab7d-288b-4eec-8e93-0f70b7b198b0",
+    "sys__createdBy" : "jay"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "layout_Processor_for_liquidity_plan",
+    "name" : "layout_Processor_for_liquidity_plan",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "snippet" : "var moment = require('moment');\r\nlet flow = req.body.flow;\r\n flow.liquidityplans.decisions = flow.liquidityplans.decisions.map(decision=>{\r\n     if(decision.label ==='Unselected'){\r\n         decision.label = moment(new Date()).format('DD-MMM-YYYY')+ ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')\r\n         return decision\r\n     }\r\n     else return decision\r\n })\r\n  res.status(200).send( {\r\n    appId: req.body.appId,\r\n    flow: flow,\r\n    object: req.body.object,\r\n    objectMeta: req.body.objectMeta,\r\n    properties: req.body.properties\r\n  });\r\n",
+    "sys__UUID" : "e761b310-0a7b-42e7-9755-30fbb2683914",
+    "sys__createdBy" : "jay"
+}

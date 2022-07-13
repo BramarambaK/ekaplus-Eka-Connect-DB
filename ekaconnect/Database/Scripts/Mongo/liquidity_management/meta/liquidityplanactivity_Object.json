@@ -1,0 +1,376 @@
+{
+  "_id": "liquidityplanactivity_Object",
+  "name": "liquidityplanactivity",
+  "label": "Liquidityplanactivity Data",
+  "type": "object",
+  "version": "1",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "liquidityPlanId": {
+      "liquidityPlanId": "Liquidity Plan ID",
+      "labelKey": "liquidityPlanId",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    },
+    "period": {
+      "period": "Period",
+      "labelKey": "period",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    },
+    "startDate": {
+      "startDate": "Start Date",
+      "labelKey": "startDate",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    },
+    "endDate": {
+      "endDate": "End Date",
+      "labelKey": "endDate",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    },
+    "openingBalance": {
+      "openingBalance": "Opening Balance",
+      "labelKey": "openingBalance",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    },
+    "closingBalance": {
+      "closingBalance": "Closing Balance",
+      "labelKey": "closingBalance",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    },
+    "planDisplayName": {
+      "planDisplayName": "Liquidity Plan",
+      "labelKey": "planDisplayName",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "liquidityPlanName": {
+      "labelKey": "liquidityPlanName",
+      "liquidityPlanName": "Liquidity Plan",
+      "isRequired": true,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "liquidityPlanName",
+      "parent": ["entity"],
+      "dropdownValue": "planDisplayName",
+      "children": [
+        "currency",
+        "status",
+        "planStartDate",
+        "planEndDate",
+        "planactivityfrequency",
+        "liquidityPlanPeriod",
+        "liquidityPlanPeriodHidden",
+        "planStartDateHidden",
+        "planEndDateHidden"
+      ]
+    },
+    "filterDate": {
+      "labelKey": "filterDate",
+      "filterDate": "Date Range",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "maximumDate": " if('${toDate}') {return '${toDate}'} else{return new Date(8640000000000000)} "
+    },
+    "toDate": {
+      "labelKey": "toDate",
+      "toDate": " ",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "minimumDate": " if('${filterDate}')  {return '${filterDate}'}  else{return true}"
+    },
+    "planactivityfrequency": {
+      "labelKey": "planactivityfrequency",
+      "planactivityfrequency": "View Frequency",
+      "isRequired": false,
+      "type": "dropdown",
+      "dataType": "String",
+      "propertyKey": "planactivityfrequency",
+      "parent": ["liquidityPlanName"]
+    },
+    "liquidityPlanDescription": {
+      "labelKey": "liquidityPlanDescription",
+      "liquidityPlanDescription": "Plan Description",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "entity": {
+      "entity": "Entity",
+      "labelKey": "entity",
+      "type": "dropdown",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": false,
+      "children": [
+        "currency",
+        "bankName",
+        "bankAccount",
+        "currencyhidden",
+        "bankId",
+        "liquidityPlanName"
+      ]
+    },
+    "bankName": {
+      "labelKey": "bankName",
+      "bankName": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankName",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true"
+      },
+      "dataType": "String"
+    },
+    "bankId": {
+      "labelKey": "bankId",
+      "bankId": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankId",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true"
+      },
+      "dataType": "String"
+    },
+    "bankAccount": {
+      "labelKey": "bankAccount",
+      "bankAccount": "Bank Account",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankAccount",
+      "parent": ["entity"],
+      "children": ["bankName", "bankId", "currencyhidden"],
+      "dataType": "String"
+    },
+    "liquidityPlanPeriod": {
+      "labelKey": "liquidityPlanPeriod",
+      "liquidityPlanPeriod": "View Frequency",
+      "isRequired": true,
+      "type": "dropdown",
+      "dataType": "String",
+      "propertyKey": "planactivityfrequency",
+      "UIupdates": {
+        "value": "if('${liquidityPlanPeriodHidden}' !='null') return '${liquidityPlanPeriodHidden}'"
+      },
+      "children": [
+        "planStartDate",
+        "planEndDate",
+        "planStartDateHidden",
+        "planEndDateHidden"
+      ]
+    },
+    "liquidityPlanPeriodHidden": {
+      "labelKey": "liquidityPlanPeriodHidden",
+      "liquidityPlanPeriodHidden": " ",
+      "isRequired": true,
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "frequency",
+      "parent": ["liquidityPlanName"],
+      "children": ["liquidityPlanPeriod"]
+    },
+    "planStartDate": {
+      "labelKey": "planStartDate",
+      "planStartDate": "View Period",
+      "isRequired": true,
+      "type": "dropdown",
+      "format": "yyyy-MM-dd",
+      "serviceKey": "planStartDate",
+      "dataType": "date",
+      "class": "treasury-date",
+      "maximumDate": " if('${planEndDateHidden}') {return '${planEndDateHidden}'} else{return new Date(8640000000000000)} ",
+      "minimumDate": "if ('${planStartDate}' != 'null' && '${planStartDateHidden}' != 'null') {let selectedEndDate = new Date('${planEndDate}');let startDateHidden = new Date('${planStartDateHidden}');var daysDiff = (selectedEndDate - startDateHidden) / 1000;var days = Math.floor(daysDiff / (24 * 60 * 60));var monthDiff =(selectedEndDate.getFullYear() - startDateHidden.getFullYear()) * 12;monthDiff -= selectedEndDate.getMonth();monthDiff += startDateHidden.getMonth(); var weekdiff = Math.round((selectedEndDate - startDateHidden) / (7 * 24 * 60 * 60 * 1000)  );if ('${liquidityPlanPeriod}' == 'Daily') {if (days < 13) {return moment(startDateHidden).format('YYYY-MM-DD');} else {var subDays = selectedEndDate.setDate(selectedEndDate.getDate() - 13);return moment(selectedEndDate).format('YYYY-MM-DD');}} else if ('${liquidityPlanPeriod}' == 'Monthly') {if (monthDiff < 11) {return moment(startDateHidden).format('YYYY-MM-DD');} else {var subMonths = selectedEndDate.setMonth(selectedEndDate.getMonth() - 11);return moment(selectedEndDate).format('YYYY-MM-DD');}} else if ('${liquidityPlanPeriod}' == 'Weekly') {if (weekdiff <= 12) {return moment(startDateHidden).format('YYYY-MM-DD');} else {var subWeeks = selectedEndDate.setDate(        selectedEndDate.getDate() - 12 * 7);return moment(selectedEndDate).format('YYYY-MM-DD');}}}",
+      "UIupdates": {
+        "value": "if('${planStartDateHidden}' !='null') return '${planStartDateHidden}'"
+      }
+    },
+    "planStartDateHidden": {
+      "labelKey": "planStartDateHidden",
+      "planStartDateHidden": " ",
+      "isRequired": true,
+      "type": "dropdown",
+      "format": "yyyy-MM-dd",
+      "class": "treasury-date",
+      "serviceKey": "planStartDate",
+      "dataType": "date",
+      "maximumDate": " if('${planEndDateHidden}') {return '${planEndDateHidden}'} else{return new Date(8640000000000000)} ",
+      "parent": ["liquidityPlanName", "liquidityPlanPeriod"],
+      "children": ["planStartDate"]
+    },
+    "planEndDate": {
+      "labelKey": "planEndDate",
+      "planEndDate": "",
+      "type": "dropdown",
+      "serviceKey": "planEndDate",
+      "dataType": "date",
+      "class": "treasury-date",
+      "minimumDate": " if('${planStartDateHidden}')  {return '${planStartDateHidden}'}  else{return true}",
+      "maximumDate": "if ('${planStartDate}' != 'null' && '${planStartDateHidden}' != 'null') {let selectedDate = new Date('${planStartDate}');let endDate = new Date('${planEndDate}');let endDateHidden = new Date('${planEndDateHidden}'); var daysDiff = (endDateHidden - selectedDate) / 1000;var monthDiff =    (endDateHidden.getFullYear() - selectedDate.getFullYear()) * 12; var weekdiff = Math.round((endDateHidden - selectedDate) / (7 * 24 * 60 * 60 * 1000)); monthDiff -= selectedDate.getMonth(); monthDiff += endDateHidden.getMonth();if ('${liquidityPlanPeriod}' == 'Daily') { var daysDiff = Math.abs(Math.floor(daysDiff)); var days = Math.floor(daysDiff / (24 * 60 * 60));if (days <= 13) { return moment(endDateHidden).format('YYYY-MM-DD'); } else return moment(selectedDate).add(13, 'd').format('YYYY-MM-DD');  } else if ('${liquidityPlanPeriod}' == 'Monthly') {if (monthDiff < 11) {return moment(endDateHidden).format('YYYY-MM-DD');} else return moment(selectedDate).add(11, 'M').format('YYYY-MM-DD');} else if ('${liquidityPlanPeriod}' == 'Weekly') {if (weekdiff <= 12) { return moment(endDateHidden).format('YYYY-MM-DD');} else {let addedWeek = selectedDate.setDate(selectedDate.getDate() + 12 * 7);return moment(selectedDate).format('YYYY-MM-DD');}}}",
+      "isRequired": true,
+      "UIupdates": {
+        "value": "if ('${planEndDateHidden}' != 'null' &&'${planStartDateHidden}' != 'null' && '${liquidityPlanPeriod}' == 'Monthly') {let startDate = new Date('${planStartDateHidden}');let endDate = new Date('${planEndDateHidden}'); var diff = (endDate.getFullYear() - startDate.getFullYear()) * 12; diff -= startDate.getMonth(); diff += endDate.getMonth(); return diff <= 12 ? moment(endDate).format('YYYY-MM-DD'): moment(startDate).add(11, 'M').format('YYYY-MM-DD');} else if ('${planEndDateHidden}' != 'null' && '${planStartDateHidden}' != 'null' &&'${liquidityPlanPeriod}' == 'Weekly') {let startDate = new Date('${planStartDateHidden}');let endDate = new Date('${planEndDateHidden}'); var weekdiff = Math.round((endDate - startDate) / (7 * 24 * 60 * 60 * 1000));if (weekdiff >= 12) {let addedWeek = startDate.setDate(startDate.getDate() + 12 * 7); return moment(startDate).format('YYYY-MM-DD');} else return moment(endDate).format('YYYY-MM-DD');} else if ('${planEndDateHidden}' != 'null' &&'${planStartDateHidden}' != 'null' && '${liquidityPlanPeriod}' == 'Daily') { let startDate = new Date('${planStartDateHidden}');let endDate = new Date('${planEndDateHidden}'); var diff = (endDate - startDate) / 1000;var diff = Math.abs(Math.floor(diff)); var days = Math.floor(diff / (24 * 60 * 60));return days <= 13 ? moment(endDate).format('YYYY-MM-DD'):moment(startDate).add(13, 'd').format('YYYY-MM-DD');}"
+      }
+    },
+    "planEndDateHidden": {
+      "labelKey": "planEndDateHidden",
+      "planEndDateHidden": " ",
+      "isRequired": true,
+      "type": "dropdown",
+      "format": "yyyy-MM-dd",
+      "class": "treasury-date",
+      "serviceKey": "planEndDate",
+      "dataType": "date",
+      "maximumDate": " if('${planStartDateHidden}') {return '${planStartDateHidden}'} else{return new Date(8640000000000000)} ",
+      "parent": ["liquidityPlanName", "liquidityPlanPeriod"],
+      "children": ["planEndDate"]
+    },
+    "liquidityPlanFunction": {
+      "labelKey": "liquidityPlanFunction",
+      "liquidityPlanFunction": "Function",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "textbox"
+    },
+    "currency": {
+      "labelKey": "currency",
+      "currency": "",
+      "isRequired": true,
+      "type": "dropdown",
+      "serviceKey": "currency",
+      "parent": ["liquidityPlanName"],
+      "UIupdates": {
+        "value": "if('${currencyhidden}' !='null') return '${currencyhidden}'"
+      },
+      "dataType": "String"
+    },
+    "currencyhidden": {
+      "labelKey": "currencyhidden",
+      "currencyhidden": "",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "currencyhidden",
+      "parent": ["entity", "bankAccount"],
+      "dataType": "String"
+    },
+    "submittedDate": {
+      "labelKey": "submittedDate",
+      "submittedDate": "Submission Date",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date"
+    },
+    "submittedBy": {
+      "labelKey": "submittedBy",
+      "submittedBy": "Submission By",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "approvedDate": {
+      "labelKey": "approvedDate",
+      "approvedDate": "Approval Date",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date"
+    },
+    "approvedBy": {
+      "approvedBy": "Approval By",
+      "labelKey": "approvedBy",
+      "dataType": "String",
+      "isRequired": false,
+      "type": "dropdown"
+    },
+    "status": {
+      "status": "",
+      "labelKey": "status",
+      "type": "dropdown",
+      "isRequired": false,
+      "serviceKey": "status",
+      "parent": ["liquidityPlanName"]
+    },
+    "ngrFilter": {
+      "ngrFilter": " ",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": false
+    },
+    "formcheckbox": {
+      "formcheckbox": "Entity",
+      "labelKey": "formcheckbox",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "ngrFilterKey"
+    },
+    "add": {
+      "add": "Add",
+      "labelKey": "add",
+      "type": "button",
+      "isRequired": false
+    },
+    "planactivitystart": {
+      "labelKey": "planactivitystart",
+      "planactivitystart": "View Period",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "class": "treasury-date",
+      "maximumDate": " if('${planactivityend}') {return '${planactivityend}'} else{return new Date(8640000000000000)} "
+    },
+    "planactivityend": {
+      "labelKey": "planactivityend",
+      "planactivityend": "",
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "class": "treasury-date",
+      "minimumDate": " if('${planactivitystart}')  {return '${planactivitystart}'}  else{return true}",
+      "isRequired": false
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "0b37b24b-3cf1-4c3e-82bf-404b3d1fffbe"
+}

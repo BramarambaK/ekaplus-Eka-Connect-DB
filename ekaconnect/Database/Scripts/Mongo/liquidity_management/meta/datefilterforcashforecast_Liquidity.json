@@ -1,0 +1,134 @@
+{
+    "_id" : "datefilterforcashforecast_Liquidity",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "globalfilter",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "setSelected" : [ 
+                        "selected.datefilters", 
+                        "selected.datefilterformfrommatching", 
+                        "selected.datefilterform",
+                        "selected.datefilterforexposure",
+                        "selected.datefilterforliquidityplan"
+                    ],
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "selected.datefilterforcashforecast",
+                    "name" : "cashforecasts"
+                }
+            ],
+            "label" : "UPDATE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "filterDate",
+                "label" : "Date",
+                "class" : "treasury-date",
+                "value" : "currentDate",
+                "style" : {
+                    "width" : "90%",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "100px"
+                },
+                "yearNavigator" : true,
+                "monthNavigator" : true,
+                "yearRange" : "2000:2030",
+                "showButtonBar" : true
+            }, 
+            {
+                "key" : "toDate",
+                "label" : "Date",
+                "class" : "treasury-date",
+                "value" : "currentDate",
+                "style" : {
+                    "width" : "130%",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "30px"
+                },
+                "yearNavigator" : true,
+                "monthNavigator" : true,
+                "yearRange" : "2000:2030",
+                "showButtonBar" : true
+            }
+        ], 
+        [ 
+            {
+                "key" : "formcheckbox",
+                "style" : {
+                    "width" : "100%",
+                    "margin-bottom" : "10px"
+                },
+                "class" : "radio-button-alignment-treasury"
+            }
+        ]
+    ],
+    "label" : "Global Filter",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formLayoutStyle" : {},
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "processorInfo" : {
+            "processorId" : "53f12567-3db5-40ef-b122-01c21cf3db35"
+        }
+    },
+    "processorInfo" : {
+        "processorId" : "95d43cf0-0224-4044-b40b-640140fbe48f"
+    },
+    "object" : "1be3e47e-69d5-4314-9f0f-738a28e2350a",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "datefilterforcashforecast",
+    "type" : "workflow"
+}

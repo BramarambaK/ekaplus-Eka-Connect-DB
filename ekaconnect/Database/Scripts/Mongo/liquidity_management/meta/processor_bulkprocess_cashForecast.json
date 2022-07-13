@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_bulkprocess_cashForecast",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "4f126cb1-f5aa-4a63-a2e4-3ef12f982768"
+    },
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "type" : "workflow",
+    "taskId" : "_ST_BULKPROCESS_FORECAST",
+    "label" : "Using Processor",
+    "object" : "f83c83e4-5c0e-49b5-b392-79f5e8281fda"
+}

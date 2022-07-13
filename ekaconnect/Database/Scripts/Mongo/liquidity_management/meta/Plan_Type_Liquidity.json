@@ -1,0 +1,22 @@
+{
+  "_id": "Plan_Type_Liquidity",
+  "type": "property",
+  "name": "PlanType",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "label": "PlanType",
+  "defaultValue": [
+    {
+      "key": "Business",
+      "value": "Business"
+    },
+    {
+      "key": "Scenario",
+      "value": "Scenario"
+    }
+  ],
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "description": "Values available for Plan Type"
+}

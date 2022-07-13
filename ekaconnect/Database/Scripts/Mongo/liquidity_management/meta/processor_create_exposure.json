@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_create_exposure",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "fc7af762-1ec4-431d-a455-a0590b0dd10c"
+    },
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "type" : "workflow",
+    "taskId" : "createexposure",
+    "label" : "Save using Processor",
+    "object" : "3a9a29f8-9488-43f0-9b07-30e53c594a4a"
+}

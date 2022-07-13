@@ -1,0 +1,177 @@
+{
+  "_id": "listing_liquidity_plan",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark treasury-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "name": "liquidityplans",
+          "clearSelected": ["selected.listingliquidityplan"]
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary treasury-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "listingliquidityplan",
+      "type": "submit",
+      "position": "bottom",
+      "outcomes": [
+        {
+          "data": "output.listingliquidityplan",
+          "name": "_ST_VALIDATE_LIQUIDITYPLAN",
+          "appendMsg": false
+        },
+        {
+          "data": "output.listingliquidityplan",
+          "result": {
+            "success": {
+              "message": "Status"
+            },
+            "failure": {
+              "message": "Status"
+            },
+            "successWithWarning": {
+              "message": ""
+            }
+          },
+          "name": "createliquidityplan",
+          "clearSelected": ["selected.listingliquidityplan"],
+          "appendMsg": false
+        },
+        {
+          "result": {
+            "success": {
+              "message": "data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "data got replaced with some errors"
+            }
+          },
+          "appendMsg": false,
+          "resetForm": true,
+          "name": "liquidityplans"
+        }
+      ],
+      "label": "SAVE"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "UPDATE",
+      "outcomes": [
+        {
+          "name": "liquidityplans",
+          "clearSelected": ["selected.listingliquidityplan"]
+        }
+      ],
+      "position": "header",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "key": "entity",
+        "removeEmptyOption": true,
+        "autoDisplayFirst": false
+      },
+      {
+        "key": "liquidityPlanName"
+      },
+      {
+        "key": "liquidityPlanDescription"
+      },
+      {
+        "key": "planType",
+        "autoDisplayFirst": true,
+        "removeEmptyOption": true
+      }
+    ],
+    [
+      {
+        "key": "liquidityPlanFunction"
+      },
+      {
+        "key": "liquidityPlanPeriod",
+        "removeEmptyOption": true
+      },
+      {
+        "key": "planStartDate"
+      },
+      {
+        "key": "planEndDate"
+      }
+    ],
+    [
+      {
+        "key": "currency",
+        "removeEmptyOption": true
+      },
+      {
+        "key": "planRollOver",
+        "autoDisplayFirst": true,
+        "removeEmptyOption": true
+      },
+      {
+        "key": "planSource",
+        "removeEmptyOption": true,
+        "autoDisplayFirst": true
+      },
+      {
+        "key": "remarks"
+      }
+    ],
+    [
+      {
+        "key": "bankId",
+        "type": "textbox",
+        "formItemStyle": {
+          "visibility": "hidden"
+        }
+      },
+      {
+        "key": "currencyhidden",
+        "type": "textbox",
+        "event": "data.currency =  {value:value,disable:true}",
+        "formItemStyle": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "label": "Create Liquidity Plan",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "defaultFormItemStyle": {
+      "width": "180px",
+      "margin-right": "26px",
+      "margin-bottom": "10px"
+    },
+    "processorInfo": {
+      "processorId": "e60e28cf-ca45-4a6a-a646-9695c0a8fef5"
+    },
+    "name": "create",
+    "theme": "treasury",
+    "type": "row"
+  },
+  "object": "ef3b0d46-11cc-4a06-a520-c7e335dfd499",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "taskId": "listingliquidityplan",
+  "type": "workflow"
+}

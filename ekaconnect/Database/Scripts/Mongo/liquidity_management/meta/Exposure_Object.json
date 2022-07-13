@@ -1,0 +1,234 @@
+{
+  "_id": "Exposure_Object",
+  "name": "exposure",
+  "label": "exposure Data",
+  "type": "object",
+  "version": "1",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "exposureRefNo": {
+      "exposureRefNo": "Exposure Ref No",
+      "labelKey": "exposureRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "filterDate": {
+      "labelKey": "filterDate",
+      "filterDate": " ",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "maximumDate": " if('${toDate}') {return '${toDate}'} else{return new Date(8640000000000000)} "
+    },
+    "toDate": {
+      "labelKey": "toDate",
+      "toDate": " ",
+      "isRequired": false,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "minimumDate": " if('${filterDate}')  {return '${filterDate}'}  else{return true}"
+    },
+    "exposureDate": {
+      "labelKey": "exposureDate",
+      "exposureDate": "Exposure Date",
+      "isRequired": true,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "dataType": "date",
+      "class": "treasury-date"
+    },
+    "externalRefNo": {
+      "labelKey": "externalRefNo",
+      "externalRefNo": "External Ref ID",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "entity": {
+      "entity": "Entity",
+      "labelKey": "entity",
+      "type": "dropdown",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": true,
+      "children": [
+        "currency",
+        "bank",
+        "bankAccount",
+        "currencyhidden",
+        "bankID"
+      ]
+    },
+    "bank": {
+      "labelKey": "bank",
+      "bank": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankName",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true"
+      },
+      "dataType": "String"
+    },
+    "bankID": {
+      "labelKey": "bankID",
+      "bankID": "Bank Name",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankId",
+      "parent": ["entity", "bankAccount"],
+      "UIupdates": {
+        "disability": "return  true"
+      },
+      "dataType": "String"
+    },
+    "bankAccount": {
+      "labelKey": "bankAccount",
+      "bankAccount": "Bank Account",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "bankAccount",
+      "parent": ["entity"],
+      "children": ["bank", "bankID", "currencyhidden"],
+      "dataType": "String"
+    },
+    "referencePlanName": {
+      "labelKey": "referencePlanName",
+      "referencePlanName": "Reference Plan Name",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "referencePlanName"
+    },
+    "remarks": {
+      "labelKey": "remarks",
+      "remarks": "Remarks",
+      "isRequired": false,
+      "type": "textbox"
+    },
+    "strategy": {
+      "labelKey": "strategy",
+      "strategy": "Strategy",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "strategy"
+    },
+    "classification": {
+      "labelKey": "classification",
+      "classification": "Classiﬁcation",
+      "type": "dropdown",
+      "isRequired": true,
+      "serviceKey": "classification",
+      "dataType": "String"
+    },
+    "currency": {
+      "labelKey": "currency",
+      "currency": "Currency",
+      "isRequired": true,
+      "type": "dropdown",
+      "serviceKey": "currency",
+      "parent": ["entity"],
+      "UIupdates": {
+        "value": "if('${currencyhidden}' !='null') return '${currencyhidden}'"
+      },
+      "dataType": "String"
+    },
+    "currencyhidden": {
+      "labelKey": "currencyhidden",
+      "currencyhidden": "",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "currencyhidden",
+      "parent": ["entity", "bankAccount"],
+      "dataType": "String"
+    },
+    "direction": {
+      "labelKey": "direction",
+      "direction": "Direction",
+      "isRequired": true,
+      "type": "dropdown",
+      "propertyKey": "Direction",
+      "dataType": "String"
+    },
+    "amount": {
+      "labelKey": "amount",
+      "amount": "Amount",
+      "isRequired": true,
+      "type": "textbox",
+      "UIupdates": {
+        "listValue": "return Number('${amount}').toLocaleString('en-US', {maximumFractionDigits:2})"
+      },
+      "dataType": "Number"
+    },
+    "profitCenter": {
+      "profitCenter": "Profit Center",
+      "labelKey": "profitCenter",
+      "dataType": "String",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "profitCenter"
+    },
+    "attributes": {
+      "attributes": "Attributes",
+      "labelKey": "attributes",
+      "dataType": "String",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "String",
+      "isRequired": false
+    },
+    "ngrFilter": {
+      "ngrFilter": " ",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": false
+    },
+    "formcheckbox": {
+      "formcheckbox": "Entity",
+      "labelKey": "formcheckbox",
+      "type": "checkbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "ngrFilterKey"
+    },
+    "add": {
+      "add": "Add",
+      "labelKey": "add",
+      "type": "button",
+      "isRequired": false
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "3a9a29f8-9488-43f0-9b07-30e53c594a4a"
+}

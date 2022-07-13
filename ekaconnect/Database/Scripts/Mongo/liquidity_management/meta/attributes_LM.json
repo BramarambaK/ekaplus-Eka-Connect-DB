@@ -1,0 +1,26 @@
+{
+    "_id" : "attributes_LM",
+    "type" : "property",
+    "name" : "attributesLM",
+    "label" : "Attributes List",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Currency",
+            "value" : "Currency"
+        }, 
+        {
+            "key" : "Entity",
+            "value" : "Entity"
+        }, 
+        {
+            "key" : "Transaction Date",
+            "value" : "Transaction Date"
+        }
+    ],
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "description" : "List of attributes"
+}

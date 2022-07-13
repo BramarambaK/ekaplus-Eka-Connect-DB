@@ -1,0 +1,375 @@
+{
+  "_id": "liquidity_plan_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "taskId": "liquidityplans",
+  "label": "List of Liquidity Plan",
+  "object": "ef3b0d46-11cc-4a06-a520-c7e335dfd499",
+  "type": "workflow",
+  "payLoad": "selected.datefilterforliquidityplan",
+  "executeOutsideDecisionExpression": true,
+  "processorInfo": {
+    "processorId": "2fbf071a-e88b-4352-ad53-02698baf5c9b"
+  },
+  "lazyLoading": false,
+  "rows": 20,
+  "header": {
+    "label": "List of Liquidity Plan",
+    "style": {
+      "font-size": "18px"
+    }
+  },
+  "layout": {
+    "name": "list",
+    "getInitialData": true,
+    "preserveSelectedData": true,
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "rows": 20,
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": true,
+      "export": false
+    },
+    "lazyLoading": false,
+    "theme": "theme-grid-white"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "task": "custom-link",
+      "category": "link",
+      "sort": true,
+      "label": "Liquidity Plan ID",
+      "key": "liquidityPlanId"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Liquidity Plan Name",
+      "key": "liquidityPlanName"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Liquidity Plan Description",
+      "key": "liquidityPlanDescription"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Entity",
+      "key": "entity"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Plan Type",
+      "key": "planType"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Plan Frequency",
+      "key": "liquidityPlanPeriod"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Plan Start Date",
+      "key": "planStartDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Plan End Date",
+      "key": "planEndDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Currency",
+      "key": "currency"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Plan Rollover",
+      "key": "planRollOver"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Plan Source",
+      "key": "planSource"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Function",
+      "key": "liquidityPlanFunction"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Remarks",
+      "key": "remarks"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Plan Activity Status",
+      "key": "planActivityStatus"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Status",
+      "key": "status"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Source",
+      "key": "source"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Source Name",
+      "key": "sourceId"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Updated By",
+      "key": "updatedBy"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Updated Date",
+      "key": "updatedDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Approved By",
+      "key": "approvedBy"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Approved Date",
+      "key": "approvedDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Submitted By",
+      "key": "submittedBy"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "label": "Submitted Date",
+      "key": "submittedDate"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "liqtreasurymodal eka-app-form",
+          "name": "listingliquidityplan"
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "CREATE",
+      "position": "top",
+      "task": "addprojection",
+      "outsideOperations": true
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "data": "selected.liquidityplans",
+          "displayType": "popup",
+          "popupClass": "liqtreasurymodal eka-app-form",
+          "name": "editliquidityplan"
+        }
+      ],
+      "label": "Edit",
+      "position": "top",
+      "disabled": "var arrData = record;\r\nvar flag = true;\r\nif ((arrData!== null) && (arrData.status == \"OPEN\" || arrData.status == \"ROLLED BACK\")) {\r\n  flag = true;\r\n} else {\r\n  flag = false;\r\n}\r\nflag === false;",
+      "task": "editliquidityplan"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.liquidityplans",
+          "popupClass": "treasurymodal",
+          "name": "deleteLiquidityplan"
+        }
+      ],
+      "label": "Delete",
+      "position": "top",
+      "disabled": "var arrData = record;\r\nvar flag = true;\r\nif ((arrData!== null) && (arrData.status == \"OPEN\" || arrData.status == \"ROLLED BACK\")) {\r\n  flag = true;\r\n} else {\r\n  flag = false;\r\n}\r\nflag === false;",
+      "task": "deleteLiquidityplan"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "treasurymodal",
+          "name": "listingliquidityplan"
+        }
+      ],
+      "label": "View Forecast",
+      "position": "top",
+      "disabled": true,
+      "task": "addprojection"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.liquidityplans",
+          "popupClass": "liqsubmittreasurymodal",
+          "name": "submitliquidityplan"
+        }
+      ],
+      "label": "Submit",
+      "disabled": "var arrData = record;\r\nvar flag = true;\r\nif ((arrData!== null) && (arrData.status == \"OPEN\" || arrData.status == \"ROLLED BACK\")) {\r\n  flag = true;\r\n} else {\r\n  flag = false;\r\n}\r\nflag === false;",
+      "position": "top",
+      "task": "addprojection"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.liquidityplans",
+          "popupClass": "treasurymodal",
+          "name": "rollbackliquidityplan"
+        }
+      ],
+      "label": "Rollback",
+      "disabled": "var arrData = record;\r\n        var flag = true;\r\n        if ((arrData!== null) && (arrData.status == \"SUBMITTED\" && (new Date()).setHours(0,0,0,0) <= (new Date(arrData.planStartDate)).setHours(0,0,0,0))) {\r\n        flag = true;\r\n        } else {\r\n        flag = false;\r\n        }\r\n        flag === false;",
+      "position": "top",
+      "task": "addprojection"
+    },
+    {
+      "btnClass": "link p-0 treasury-order-first",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "return '${datefilterforliquidityplan}'!='' && '${datefilterforliquidityplan}'!='{}' ? ((JSON.parse('${datefilterforliquidityplan.formcheckbox}') || []).join(', ') || 'No Entity') : 'All Entities'",
+      "label": "All Entities",
+      "position": "top",
+      "style": {
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-left-radius": "3px",
+        "border-bottom-left-radius": "3px",
+        "padding": "0 5px",
+        "height": "35px"
+      },
+      "task": "text",
+      "outsideOperations": true
+    },
+    {
+      "btnClass": "link p-0 treasury-order-second",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression": "return '${datefilterforliquidityplan}' && moment('${datefilterforliquidityplan.filterDate}').isValid() && moment('${datefilterforliquidityplan.toDate}').isValid() ? (moment('${datefilterforliquidityplan.filterDate}').format('DD-MMM-YYYY') +' '+'to'+' '+  moment('${datefilterforliquidityplan.toDate}').format('DD-MMM-YYYY')) : moment(new Date()).format('DD-MMM-YYYY') + ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')",
+      "style": {
+        "margin-right": "auto",
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "padding": "0 5px",
+        "height": "35px"
+      },
+      "position": "top",
+      "task": "text",
+      "outsideOperations": true
+    },
+    {
+      "btnClass": "cr-edi-icon-treasury treasury-order-third",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "globalfilter eka-app-form",
+          "name": "datefilterforliquidityplan"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "border-right": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-left": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-right-radius": "3px",
+        "border-bottom-right-radius": "3px",
+        "padding": "0 5px",
+        "height": "35px",
+        "width": "30px"
+      },
+      "label": " ",
+      "position": "top",
+      "task": "text",
+      "outsideOperations": true
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.liquidityplans",
+          "popupClass": "liqtreasurymodal eka-app-form",
+          "name": "viewliquidityplan"
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST"
+}

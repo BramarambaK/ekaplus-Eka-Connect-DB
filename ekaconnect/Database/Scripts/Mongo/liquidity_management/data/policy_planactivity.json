@@ -1,0 +1,17 @@
+{
+  "_id": "policy_planactivity",
+  "app_UUID": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "userGrants": {},
+  "refType": "object",
+  "refTypeId": "0b37b24b-3cf1-4c3e-82bf-404b3d1fffbe",
+  "name": "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+  "tenantId": "980qa",
+  "type": "policy",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["UPDATE", "READ", "LISTVIEW", "DELETE"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE"]
+    }
+  }
+}
