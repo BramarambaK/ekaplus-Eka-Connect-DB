@@ -1,0 +1,11 @@
+{
+  "_id": ObjectId("5d2ee1f310f7f68b93999381"),
+  "name": "edittenantproperties",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "admin",
+  "snippet": "var name = req.body.selectedData.name;\r\n    var property = req.body.selectedData.property;\r\n    var edittenant = {\r\n      method: 'PUT',\r\n      url: req.body.propertyList.eka_connect_host + '/property/' + name,\r\n      headers: {\r\n        'Content-Type': 'application/json',\r\n        Accept: 'application/json',\r\n        username: 'e-bolprpa',\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      body: property,\r\n      json: true\r\n    };\r\n\r\n    function edit_tenant() {\r\n      return new Promise(function(resolve, reject) {\r\n        console.log('Request - ' + edittenant.url);\r\n        console.log('Payload -' + JSON.stringify(edittenant));\r\n        request(edittenant, function(err, response, body) {\r\n          console.log('Request Body - ' + JSON.stringify(body));\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n\r\n    edit_tenant()\r\n      .then(result => {\r\n        console.log('Response - ' + JSON.stringify(result));\r\n        res.status(200).send(result);\r\n      })\r\n      .catch(err => {\r\n        console.log('Error Executing Processor -' + err);\r\n        res.status(500).send(err);\r\n      });",
+  "sys__UUID": "f9d0bf22-76d4-4edd-a8f6-2e780dedbc24",
+  "sys__createdOn": ISODate("2019-06-26T08:50:01.556Z"),
+  "sys__createdBy": "Bravo"
+}

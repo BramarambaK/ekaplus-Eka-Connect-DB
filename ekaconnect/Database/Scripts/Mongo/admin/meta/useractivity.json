@@ -1,0 +1,19 @@
+{
+  "_id": "useractivity",
+  "type": "workflow",
+  "componentType": "UserTask",
+  "labelKey": "APP_TABS",
+  "label": "App tabs",
+  "object": "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+  "refType": "app",
+  "refTypeId": "admin",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "172455ad-d45b-4707-a325-e82ea9c9150d"
+  },
+  "getDataFromExternalAPI": false,
+  "layout": {},
+  "fields": [],
+  "decisions": [],
+  "taskId": "useractivity"
+}

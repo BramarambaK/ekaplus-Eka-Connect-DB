@@ -1,0 +1,19 @@
+{
+  "_id": "getconfig",
+  "type": "workflow",
+  "componentType": "UserTask",
+  "labelKey": "APP_TABS",
+  "label": "App tabs",
+  "object": "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+  "refType": "app",
+  "refTypeId": "admin",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "65ff2f3a-deba-456e-8c10-6140b22d72e4"
+  },
+  "getDataFromExternalAPI": false,
+  "layout": {},
+  "fields": [],
+  "decisions": [],
+  "taskId": "getconfig"
+}

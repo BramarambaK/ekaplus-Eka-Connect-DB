@@ -1,0 +1,54 @@
+{
+  "_id": ObjectId("5d28437a10f7f68b93960214"),
+  "type": "object",
+  "name": "admin",
+  "label": "ADMIN",
+  "sys__UUID": "be3d3584-9653-4714-a6bd-adfce03fde24",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": ["app_UUID", "objectUUID"],
+  "fields": {
+    "admin": {
+      "admin": "Admin",
+      "labelKey": "admin",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "type": {
+      "type": "type",
+      "labelKey": "type",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "app_UUID": {
+      "app_UUID": "app_UUID",
+      "labelKey": "app_UUID",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "objectUUID": {
+      "objectUUID": "objectUUID",
+      "labelKey": "objectUUID",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "file": {
+      "file": "file",
+      "labelKey": "file",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  }
+}

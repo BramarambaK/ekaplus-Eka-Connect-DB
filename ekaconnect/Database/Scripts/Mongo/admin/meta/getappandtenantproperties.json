@@ -1,0 +1,19 @@
+{
+    "_id" : "getappandtenantproperties",
+    "type" : "workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "APP_TABS",
+    "label" : "App tabs",
+    "object" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "644c90cf-0ee4-421d-acdc-11481fd33e4b"
+    },
+    "getDataFromExternalAPI" : false,
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "taskId" : "getappandtenantproperties"
+}

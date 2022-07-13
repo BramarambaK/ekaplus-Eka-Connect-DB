@@ -1,0 +1,12 @@
+{
+    "_id" : "recommendationTestadmin",
+    "name" : "recommendationTest",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "version" : "V2",
+    "snippet" : "\r\n    var objectid = req.body.selectedData.object;\r\n    const appid = req.body.selectedData.appId;\r\n    var objectUrl =\r\n      req.body.propertyList.eka_connect_host +\r\n      '/data/' +\r\n      req.body.selectedData.appId +\r\n      '/75e55d43-3a9f-4240-9916-0716e53ee5ec';\r\n    var object = {\r\n      method: 'GET',\r\n      url: objectUrl,\r\n      headers: {\r\n        'Content-Type': 'application/json',\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_object() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(object, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_object().then(result => {\r\n      var data = result;\r\n      var dataforobject = data.filter(wf => wf.source_object_id == objectid);\r\n    \r\nsuccess(dataforobject,200);\r\n    });\r\n",
+    "sys__UUID" : "d6f0212a-e895-43b6-b839-6295e4d73798",
+    "sys__createdOn" : ISODate("2019-06-26T08:50:01.556Z"),
+    "sys__createdBy" : "Bravo"
+}

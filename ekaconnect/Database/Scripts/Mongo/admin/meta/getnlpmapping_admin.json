@@ -1,0 +1,19 @@
+{
+  "_id": "getnlpmapping_admin",
+  "type": "workflow",
+  "componentType": "UserTask",
+  "labelKey": "getnlpmapping",
+  "label": "getnlpmapping",
+  "object": "be3d3584-9653-4714-a6bd-adfce03fde24",
+  "refType": "app",
+  "refTypeId": "admin",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "f6c60535-4022-463e-9836-5c51410ede25"
+  },
+  "getDataFromExternalAPI": false,
+  "layout": {},
+  "fields": [],
+  "decisions": [],
+  "taskId": "getnlpmapping"
+}

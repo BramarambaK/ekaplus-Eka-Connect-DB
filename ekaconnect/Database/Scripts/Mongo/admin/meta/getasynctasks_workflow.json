@@ -1,0 +1,19 @@
+{
+    "_id" : "getasynctasks",
+    "type" : "workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "APP_TABS",
+    "label" : "App tabs",
+    "object" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "5b5a060e-50d5-11eb-ae93-0242ac130002"
+    },
+    "getDataFromExternalAPI" : false,
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "taskId" : "getasynctasks"
+}

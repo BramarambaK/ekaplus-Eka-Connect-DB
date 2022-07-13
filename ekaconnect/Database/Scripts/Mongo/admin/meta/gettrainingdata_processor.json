@@ -1,0 +1,11 @@
+{
+    "_id" : "gettrainingdata_processor",
+    "name" : "gettrainingdata",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "snippet" : "\r\n    var objectUrl =\r\n      req.body.propertyList.eka_connect_host +\r\n      '\/data\/' +\r\n      req.body.selectedData.appid +\r\n      '\/088d4fab-1461-4bcb-b820-9267fcf7ce46';\r\n    var object = {\r\n      method: 'GET',\r\n      url: objectUrl,\r\n      headers: {\r\n        'Content-Type': 'application\/json',\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_object() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(object, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_object().then(result => {\r\n      var data = result;\r\n      res.status(200).send(data);\r\n    });\r\n ",
+    "sys__UUID" : "ab94dc91-13d4-48ee-bfe9-2876ece751a6",
+    "sys__createdOn" : ISODate("2019-06-26T08:50:01.556Z"),
+    "sys__createdBy" : "Bravo"
+}

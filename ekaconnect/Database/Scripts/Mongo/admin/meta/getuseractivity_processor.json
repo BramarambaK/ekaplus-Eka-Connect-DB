@@ -1,0 +1,9 @@
+{
+  "_id": "getuseractivity_processor",
+  "name": "getuseractivity",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "admin",
+  "snippet": "let app_uuid = req.body.selectedData.app_uuid;\r\n\r\n var config = {\r\n      method: \"GET\",\r\n      url: req.body.propertyList.platform_url + \"/connect/api/workflow/userActivity\",\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        \"X-TenantID\": req.headers[\"x-tenantid\"],\r\n        \"Content-Type\": \"text/plain\"\r\n      },\r\n      json: true,\r\n      body: { \"apps\": [app_uuid] }\r\n    };\r\n\t\r\nfunction get_config() {\r\n  return new Promise(function (resolve, reject) {\r\n    request(config, function (err, response, body) {\r\n      if (err || body.error) reject(body);\r\n      else resolve(body);\r\n    });\r\n  });\r\n}\r\n  get_config()\r\n    .then((result) => {\r\n\t console.log('result',result);\r\n     res.status(200).send(result);\r\n    \r\n    })\r\n\t.catch((err) => {\r\n        console.log(err);\r\n        res.status(500).send(err);\r\n      });",
+  "sys__UUID": "172455ad-d45b-4707-a325-e82ea9c9150d"
+}

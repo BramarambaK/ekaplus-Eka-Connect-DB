@@ -1,0 +1,19 @@
+{
+    "_id" : "createsecurity",
+    "type" : "workflow",
+    "componentType" : "UserTask",
+    "labelKey" : "APP_TABS",
+    "label" : "App tabs",
+    "object" : "66c97e4d-4168-4fd2-a79c-319c5d43b1db",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "3ba29dfa-47bc-4e12-9a11-bf678231464c"
+    },
+    "getDataFromExternalAPI" : false,
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "taskId" : "createsecurity"
+}
