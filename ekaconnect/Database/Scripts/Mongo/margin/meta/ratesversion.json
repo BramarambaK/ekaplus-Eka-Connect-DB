@@ -1,0 +1,52 @@
+{
+    "_id" : "ratesversion_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Rates version",
+    "type" : "workflow",
+    "layout" : {
+        "toggleheader" : true,
+        "tableEditing" : true,
+        "pagination" : false,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "messages" : {
+            "emptyText" : "No Fx Rates available"
+        },
+        "theme" : "theme-grid-white",
+        "refreshData" : false,
+        "selectionMode" : "none",
+        "scrollHeight" : "136px"
+    },
+    "decisions" : [],
+    "labelKey" : "VIEW_MARGIN",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "50%",
+            "sort" : false,
+            "key" : "fxpair"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "50%",
+            "sort" : false,
+            "key" : "fxvalue"
+        }
+    ],
+    "taskId" : "ratesversion",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

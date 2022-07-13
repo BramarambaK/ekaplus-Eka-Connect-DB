@@ -1,0 +1,174 @@
+{
+    "_id" : "compositeViewInterestEdit_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "403b0948-6e4b-44a2-bc8c-223658f3bd6d"
+    },
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Budget Margin Details",
+    "workflows" : [ 
+        {
+            "data" : "selected.compositeViewInterestEdit.viewmarginInterestEdit",
+            "name" : "viewmarginInterestEdit"
+        }, 
+        {
+           
+            "name" : "listingmargin"
+        }, 
+        {
+            "class" : "composite-row",
+            "workflows" : [ 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.compositeViewInterestEdit.tradeMargin",
+                            "name" : "tradeMargin"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.compositeViewInterestEdit.shares",
+                            "name" : "shares"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "style" : {
+                        "flex" : 1
+                    },
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.compositeViewInterestEdit.ratesinput",
+                            "name" : "ratesinput"
+                        }, 
+                        {
+                            "data" : "selected.compositeViewInterestEdit.rates",
+                            "name" : "ratesedit"
+                        }
+                    ]
+                }, 
+                {
+                    "data" : "selected.compositeViewInterestEdit.remark",
+                    "name" : "remark",
+                    "style" : {
+                        "flex" : 1
+                    }
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-link",
+            "objectAction" : "CREATE",
+            "labelkey" : "Create",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.listing",
+                    "popupClass" : "versionpopup",
+                    "name" : "versionmarginInterestEdit"
+                }
+            ],
+            "label" : "Previous versions",
+            "position" : "top",
+            "iconClass" : "fa fa-plus"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "calculatecompositeView",
+            "outcomes" : [ 
+                {
+                    "data" : "output.compositeViewInterestEdit",
+                    "name" : "_ST_PROCESS_MARGIN_CALCULATE"
+                }, 
+                {
+                    "data" : "output._ST_PROCESS_MARGIN_CALCULATE",
+                    "name" : "compositeViewInterestEdit"
+                }
+            ],
+            "label" : "CALCULATE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "compositeView",
+            "outcomes" : [ 
+                {
+                    "data" : "output.compositeViewInterestEdit",
+                    "name" : "_ST_PROCESS_MARGIN_DATA"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Trade Margin got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Trade Margin got replaced with some errors"
+                        }
+                    },
+                    "data" : "output._ST_PROCESS_MARGIN_DATA",
+                    "appendMsg" : true,
+                    "name" : "_ST_EDIT_MARGIN"
+                }, 
+                {
+                    "data" : "output.compositeViewInterestEdit",
+                    "name" : "_ST_CALCULATE_COLLECTIONPOOL"
+                }, 
+                {
+                    "data" : "output._ST_CALCULATE_COLLECTIONPOOL",
+                    "appendMsg" : true,
+                    "name" : "_ST_EDIT_MARGIN_CURRENCY"
+                }, 
+                {
+                    "name" : "listing",
+                    "showPopUp" : "true"
+                }
+            ],
+            "disabled" : "field.saveflag",
+            "label" : " SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "taskId" : "compositeViewInterestEdit",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_CALCULATE_COLLECTIONPOOL_TM",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "dddb1e94-4fd0-4d56-affc-c94888b37d9a"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "type" : "workflow",
+	  "label": "CollectionPool by using processor",
+    "taskId" : "_ST_CALCULATE_COLLECTIONPOOL",
+    "object" : "81e9220b-76e0-4f38-8c35-fe08107355df"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_VERSION_VIEW_ACTUAL_MARGIN_TM",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "bd90f393-c705-47d9-a335-478d3c8b1850"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "type" : "workflow",
+    "taskId" : "_ST_VERSION_VIEW_ACTUAL_MARGIN",
+	"label": "Version ACtual Margin operation by Processor",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

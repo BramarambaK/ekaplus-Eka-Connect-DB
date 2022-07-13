@@ -1,0 +1,12 @@
+{
+    "_id" : "closeaction_processor",
+    "name" : "closeaction",
+    "type" : "processor",
+    "refType" : "app",
+    "version" : "V2",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "snippet" : "\r\n    var data=req.body;\r\nif(data.status==\"Active\"){\r\ndata.status=\"Closing\";\r\n}else\r\nif(data.status==\"Closing\"){\r\n  data.status=\"Closed\";\r\n  }else\r\n  if(data.status==\"Closed\"){\r\n    data.status=\"Active\";\r\n    }\r\n    delete data.appId;\r\n    delete data.processorId;\r\n    delete data.processorDetails;\r\n    delete data.propertyList;\r\n    delete data.refTypeId;\r\n    delete data.sys__UUID;\r\n     success(data,200);\r\n\r\n ",
+    "sys__createdOn" : ISODate("2019-06-03T13:38:13.102Z"),
+    "sys__UUID" : "4a6b24ac-3da2-4dc9-b039-5ce9748b141a",
+    "sys__createdBy" : "admin@ekaplus.com"
+}

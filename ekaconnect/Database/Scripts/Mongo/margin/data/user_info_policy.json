@@ -1,0 +1,23 @@
+{
+	"_id":"user_info_policy_trademargin",
+    "type" : "policy",
+    "app_UUID" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "refType" : "object",
+    "refTypeId" : "User_Info",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

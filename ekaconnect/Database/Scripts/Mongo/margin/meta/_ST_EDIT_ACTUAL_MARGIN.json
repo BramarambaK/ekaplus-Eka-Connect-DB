@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_EDIT_ACTUAL_MARGIN_TM",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "type" : "workflow",
+    "taskId" : "_ST_EDIT_ACTUAL_MARGIN",
+	"label": "Edit operation in System",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

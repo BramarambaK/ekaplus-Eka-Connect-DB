@@ -1,0 +1,149 @@
+{
+    "_id" : "listingactualmarginVersion_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Actual Margin Version",
+    "type" : "workflow",
+    "rows" : "10",
+    "refreshData" : false,
+    "layout" : {
+        "tableEditing" : true,
+        "pagination" : false,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "limitHeight" : true,
+        "refreshData" : false,
+        "selectionMode" : "none"
+    },
+    "decisions" : [],
+    "labelKey" : "Budget Margin Listing",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "COST GROUP NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "REF NO INCOTERM"
+        }, 
+		{
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "Payment_Term"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "COST COMPONENT NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "CP NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "unitprice"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "costUom"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "totalAmount",
+			  "format":"decimal",
+               "roundoff" : 2
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "roundoff" : 2,
+			 "format":"decimal",
+            "key" : "totalAmountMarginCurrency",
+            "currencyFormat" : true
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "financingdays"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "financingdate"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "paymentsplit"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "roundoff" : 2,
+			 "format":"decimal",
+            "key" : "financing",
+            "currencyFormat" : true
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "TITLE TRANSFER DATE"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "COST CLASS"
+        }
+    ],
+    "taskId" : "listingactualmarginVersion",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

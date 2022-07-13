@@ -1,0 +1,53 @@
+{
+    "_id" : "rates_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "",
+    "type" : "workflow",
+    "layout" : {
+        "toggleheader" : true,
+        "tableEditing" : true,
+        "pagination" : false,
+        "selection" : "row",
+        "name" : "list",
+        "messages" : {
+            "emptyText" : "No Fx Rates available"
+        },
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "refreshData" : false,
+        "selectionMode" : "none",
+        "scrollHeight" : "136px"
+    },
+    "decisions" : [],
+    "labelKey" : "VIEW_MARGIN",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "50%",
+            "sort" : false,
+            "key" : "fxpair"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "50%",
+            "sort" : false,
+            "key" : "fxvalue",
+            "event" : "var sum = 0;\r\n\r\n      var sumfin = 0;\r\n\r\n      var sumfinancingDays = 0;\r\n\r\n      var sumtotalAmt = 0;\r\n      var prodtotalAmtFdays = 0;\r\n      var dataall = data;\r\nif(data.listingmargin.length==0){\r\n   data = data.listingactualmargin;}\r\nelse{\r\n   data = data.listingmargin;}\r\n   \r\n\r\n      for (var f = 0; f < data.length; f++) {\r\n        var from = dataall.rates[index].fxpair.split('-')[0];\r\n        var to = dataall.rates[index].fxpair.split('-')[1];\r\n        if (data[f]['COST GROUP NAME'] !== 'Expense Total' && data[f]['COST GROUP NAME'] !== 'Income Total') {\r\n          if (data[f].costUom.split('/')[0] == from && dataall.viewmargin.contractValueUOM == to) {\r\n            data[f].totalAmountMarginCurrency = data[f].totalAmount * dataall.rates[index].fxvalue;\r\n            data[f].financing =\r\n              (-1 *\r\n                data[f].totalAmountMarginCurrency *\r\n                (data[f].paymentsplit / 100) *\r\n                data[f].financingdays *\r\n                (data[f].interest / 100)) /\r\n              360;\r\n          }\r\n        }\r\n      }\r\n      for (let i = 0; i < data.length; i++) {\r\n        if (data[i]['COST GROUP NAME'] !== 'Expense Total' && data[i]['COST GROUP NAME'] !== 'Income Total') {\r\n          sumfin = sumfin + data[i].financing;\r\n          sumfinancingDays = sumfinancingDays + Number(data[i].financingdays);\r\n          sumtotalAmt = sumtotalAmt + data[i].totalAmount;\r\n          prodtotalAmtFdays = prodtotalAmtFdays + data[i].prodtotalAmtFdays;\r\n          sum = sum + data[i].totalAmountMarginCurrency;\r\n        }\r\n        if (data[i]['COST GROUP NAME'] === 'Expense Total') {\r\n          data[i].totalAmountMarginCurrency.value = sum;\r\n          sum = 0;\r\n          data[i].financing.value = sumfin;\r\n          data[i].financingdays.value = sumfinancingDays;\r\n          data[i].totalAmount.value = sumtotalAmt;\r\n          data[i].prodtotalAmtFdays.value = prodtotalAmtFdays;\r\n          sumfinancingDays = 0;\r\n          sumtotalAmt = 0;\r\n          sumfin = 0;\r\n          prodtotalAmtFdays = 0;\r\n        }\r\n        if (data[i]['COST GROUP NAME'] === 'Income Total') {\r\n          data[i].totalAmountMarginCurrency.value = sum;\r\n          sum = 0;\r\n          data[i].financing.value = sumfin;\r\n          data[i].financingdays.value = sumfinancingDays;\r\n          data[i].totalAmount.value = sumtotalAmt;\r\n          data[i].prodtotalAmtFdays.value = prodtotalAmtFdays;\r\n          sumtotalAmt = 0;\r\n          sumfinancingDays = 0;\r\n          sumfin = 0;\r\n          prodtotalAmtFdays = 0;\r\n        }\r\n      }"
+        }
+    ],
+    "taskId" : "rates",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

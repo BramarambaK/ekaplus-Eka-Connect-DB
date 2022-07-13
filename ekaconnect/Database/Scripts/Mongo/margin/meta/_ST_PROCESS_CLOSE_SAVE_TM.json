@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_PROCESS_CLOSE_SAVE_TM",
+    "componentType" : "ProcessTask",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "4a6b24ac-3da2-4dc9-b039-5ce9748b141a"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "taskId" : "_ST_PROCESS_CLOSE_SAVE",
+	"label": "Close operation by Processor",
+    "type" : "workflow"
+}

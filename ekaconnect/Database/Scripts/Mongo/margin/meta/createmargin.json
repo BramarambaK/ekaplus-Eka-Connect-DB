@@ -1,0 +1,125 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "New MARGIN",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {"display": true},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "column"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "listing"}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "createmargin",
+      "outcomes": [
+        {
+          "result": {
+            "success": {"message": "Margin got created successfully"},
+            "failure": {"message": "Please fix errors in ext"},
+            "successWithWarning": {"message": "Margin got created with some errors"}
+          },
+          "data": "output.createmargin",
+          "appendMsg": true,
+          "name": "_ST_CREATE_MARGIN",
+          "appendPlaceHolderToPopUpMsg": [{
+            "outputTask": "output._ST_CREATE_MARGIN",
+            "value": "CORPORATEID"
+          }]
+        },
+        {
+          "data": "output.createmargin",
+          "name": "listing",
+          "showPopUp": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "compositeView"}],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "_id": "createmargin_TM",
+  "labelKey": "CREATE_NEW_MARGIN",
+  "fields": [[
+    {
+      "suffix": "",
+      "key": "CORPORATEID"
+    },
+    {
+      "suffix": "",
+      "key": "PROFIT_CENTER_NAME"
+    },
+    {
+      "suffix": "",
+      "key": "CONTRACT_ITEM_NO"
+    },
+    {
+      "suffix": "",
+      "key": "ALLOCATION_GROUP_NO"
+    },
+    {
+      "suffix": "",
+      "key": "ALLOC_DATE"
+    },
+    {
+      "suffix": "",
+      "key": "EXECUTION_STATUS"
+    },
+    {
+      "suffix": "",
+      "key": "CP_NAME"
+    },
+    {
+      "suffix": "",
+      "key": "NET_QTY"
+    },
+    {
+      "suffix": "",
+      "key": "quantityr"
+    },
+    {
+      "suffix": "",
+      "key": "budgetmargin"
+    },
+    {
+      "suffix": "",
+      "key": "actualmargin"
+    },
+    {
+      "suffix": "",
+      "key": "status"
+    }
+  ]],
+  "taskId": "createmargin",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

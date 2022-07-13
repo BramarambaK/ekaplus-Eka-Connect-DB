@@ -1,0 +1,47 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {"font-size": "15px"},
+    "name": "view",
+    "formStyle": {
+      "margin": "auto",
+      "flex-direction": "column",
+      "width": "100%",
+      "margin-bottom": "20px"
+    },
+    "formLayoutStyle": {
+      "background-color": "#ffffff",
+      "height": "225px"
+    },
+    "defaultFormValueStyle": {
+      "font-weight": 600,
+      "font-size": "17px"
+    },
+    "type": "column"
+  },
+  "decisions": [],
+  "_id": "tradeMargin_TM",
+  "labelKey": "VIEW_MARGIN",
+  "fields": [[
+    {
+      "suffix": "",
+      "key": "trademargin"
+    },
+    {
+      "suffix": "",
+      "key": "roce"
+    }
+  ]],
+  "taskId": "tradeMargin",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

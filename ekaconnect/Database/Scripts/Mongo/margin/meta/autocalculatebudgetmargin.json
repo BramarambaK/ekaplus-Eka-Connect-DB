@@ -1,0 +1,42 @@
+{
+    "_id" : "autocalculatebudgetmargin_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "processorInfo" : {
+        "processorId" : "13bae328-e147-476b-b55b-d71453a83856"
+    },
+    "label" : "Currency Pool Listing",
+    "type" : "workflow",
+    "refreshData" : false,
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "limitHeight" : true,
+        "refreshData" : false
+    },
+    "decisions" : [],
+    "labelKey" : "Currency Pool Listing",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "debittotal"
+        }
+    ],
+    "taskId" : "autocalculatebudgetmargin",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

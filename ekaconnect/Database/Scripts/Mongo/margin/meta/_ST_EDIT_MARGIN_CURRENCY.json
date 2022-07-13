@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_EDIT_MARGIN_CURRENCY",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "type" : "workflow",
+    "taskId" : "_ST_EDIT_MARGIN_CURRENCY",
+	"label": "Edit operation in currency in System",
+    "object" : "81e9220b-76e0-4f38-8c35-fe08107355df"
+}

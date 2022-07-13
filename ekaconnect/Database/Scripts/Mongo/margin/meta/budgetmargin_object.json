@@ -1,0 +1,605 @@
+{
+    "_id" : ObjectId("5ccab1648f7d130001373882"),
+    "name" : "budgetmargin",
+    "label" : "Budget Margin",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "INTEREST_RATE_EDIT" : "GET"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "2",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [ 
+        "corporate", 
+        "profitcenter", 
+        "contractitemreference"
+    ],
+    "fields" : {
+        "CORPORATE_NAME" : {
+            "CORPORATE_NAME" : "Corporate",
+            "labelKey" : "CORPORATE_NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "PROFIT CENTER NAME" : {
+            "PROFIT CENTER NAME" : "Profit Center",
+            "labelKey" : "PROFIT CENTER NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "CONTRACT ITEM NO" : {
+            "CONTRACT ITEM NO" : "Contract Reference No",
+            "labelKey" : "CONTRACT ITEM NO",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "ALLOCATION GROUP NO" : {
+            "ALLOCATION GROUP NO" : "Allocation Group",
+            "labelKey" : "ALLOCATION GROUP NO",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "ALLOCATION_DATE" : {
+            "ALLOCATION_DATE" : "Allocation Date",
+            "labelKey" : "ALLOCATION_DATE",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "Date"
+        },
+        "EXECUTION_STATUS" : {
+            "EXECUTION_STATUS" : "Allocation Status",
+            "labelKey" : "EXECUTION_STATUS",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "INT ALLOC GROUP ID" : {
+            "INT ALLOC GROUP ID" : "Allocation Group Id",
+            "labelKey" : "INT ALLOC GROUP ID",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "INT ENTITY REFNO" : {
+            "INT ENTITY REFNO" : "Entity REF no",
+            "labelKey" : "INT ENTITY REFNO",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxBase" : {
+            "fxBase" : "Fx Base",
+            "labelKey" : "fxBase",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "cpname" : {
+            "cpname" : "Sale CP Name",
+            "labelKey" : "cpname",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "NET QTY" : {
+            "NET QTY" : "Quantity Allocated",
+            "labelKey" : "NET QTY",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quantityr" : {
+            "quantityr" : "Quantity Released",
+            "labelKey" : "quantityr",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "budgetmargin" : {
+            "budgetmargin" : "Budget Margin",
+            "labelKey" : "budgetmargin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "actualmargin" : {
+            "actualmargin" : "Actual Margin",
+            "labelKey" : "actualmargin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "status" : {
+            "status" : "Status",
+            "labelKey" : "status",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "allocGrpName" : {
+            "allocGrpName" : "Allocation Group:",
+            "labelKey" : "allocGrpName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "contractValueUOM" : {
+            "contractValueUOM" : "Margin Currency:",
+            "labelKey" : "contractValueUOM",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "finalCustomer" : {
+            "finalCustomer" : "Final Customer:",
+            "labelKey" : "finalCustomer",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "interest" : {
+            "interest" : "Interest %:",
+            "labelKey" : "interest",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+        "personIncharge" : {
+            "personIncharge" : "Person Incharge:",
+            "labelKey" : "personIncharge",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "product" : {
+            "product" : "Product Specs:",
+            "labelKey" : "product",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quantity" : {
+            "quantity" : "Net Quantity:",
+            "labelKey" : "quantity",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quantityUnitUOM" : {
+            "quantityUnitUOM" : "Quantity Unit UOM",
+            "labelKey" : "quantityUnitUOM",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "salesContractItemRefNo" : {
+            "salesContractItemRefNo" : "Sale Contract Ref. No.:",
+            "labelKey" : "salesContractItemRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "shipmentFromDate" : {
+            "shipmentFromDate" : "Latest Shipment Date:",
+            "labelKey" : "shipmentFromDate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "titleTransferDate" : {
+            "titleTransferDate" : "Title Transfer Date:",
+            "labelKey" : "titleTransferDate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "traderName" : {
+            "traderName" : "Trader:",
+            "labelKey" : "traderName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "REF NO INCOTERM" : {
+            "REF NO INCOTERM" : "Ref No. - Incoterm",
+            "labelKey" : "REF NO INCOTERM",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "COST GROUP NAME" : {
+            "COST GROUP NAME" : "Cost Group",
+            "labelKey" : "COST GROUP NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "COST COMPONENT NAME" : {
+            "COST COMPONENT NAME" : "Cost Name",
+            "labelKey" : "COST COMPONENT NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "CP NAME" : {
+            "CP NAME" : "CP",
+            "labelKey" : "CP NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "unitprice" : {
+            "unitprice" : "Unit Price",
+            "labelKey" : "unitprice",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "costUom" : {
+            "costUom" : "Cost UoM",
+            "labelKey" : "costUom",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxBase" : {
+            "fxBase" : "Fx Base",
+            "labelKey" : "fxBase",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "totalAmount" : {
+            "totalAmount" : "Total Amount",
+            "labelKey" : "totalAmount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "totalAmountMarginCurrency" : {
+            "totalAmountMarginCurrency" : "Total Amount (Margin Currency) ",
+            "labelKey" : "totalAmountMarginCurrency",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "financingdays" : {
+            "financingdays" : "Financing Days",
+            "labelKey" : "financingdays",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "number",
+            "pattern" : "^([-+])?[0-9]*$"
+        },
+        "financingdate" : {
+            "financingdate" : "Financing Date",
+            "labelKey" : "financingdate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "paymentsplit" : {
+            "paymentsplit" : "Payment Split %",
+            "labelKey" : "paymentsplit",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "financing" : {
+            "financing" : "Financing",
+            "labelKey" : "financing",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "version" : {
+            "version" : "",
+            "labelKey" : "version",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey" : "version"
+        },
+        "fxrates" : {
+            "fxrates" : "Fx Rates",
+            "labelKey" : "fxrates",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "remark" : {
+            "remark" : "Remark",
+            "labelKey" : "remark",
+            "type" : "textarea",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "trademargin" : {
+            "trademargin" : "Trade Margin",
+            "labelKey" : "trademargin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "roce" : {
+            "roce" : "ROCE",
+            "labelKey" : "roce",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "roceaftershare" : {
+            "roceaftershare" : "ROCE",
+            "labelKey" : "roceaftershare",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "margindata" : {
+            "margindata" : "Margin Data",
+            "labelKey" : "margindata",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxvalues" : {
+            "fxvalues" : "Fx Values",
+            "labelKey" : "fxvalues",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "uniqueno" : {
+            "uniqueno" : "Unique no",
+            "labelKey" : "uniqueno",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "TRADER NAME" : {
+            "TRADER NAME" : "Trader Name",
+            "labelKey" : "TRADER NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "TOT AMOUNT" : {
+            "TOT AMOUNT" : "TOT AMOUNT",
+            "labelKey" : "TOT AMOUNT",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "PERSON INCHARGE" : {
+            "PERSON INCHARGE" : "Person Incharge",
+            "labelKey" : "PERSON INCHARGE",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "PRODUCT DESC" : {
+            "PRODUCT DESC" : "PRODUCT DESC",
+            "labelKey" : "PRODUCT DESC",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "PRODUCT SPECS" : {
+            "PRODUCT SPECS" : "Product Specs",
+            "labelKey" : "PRODUCT SPECS",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "LATEST SHIPMENT DATE" : {
+            "LATEST SHIPMENT DATE" : "LATEST SHIPMENT DATE",
+            "labelKey" : "LATEST SHIPMENT DATE",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "STRATEGY NAME" : {
+            "STRATEGY NAME" : "STRATEGY NAME",
+            "labelKey" : "STRATEGY NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "ITEM PRICE" : {
+            "ITEM PRICE" : "ITEM PRICE",
+            "labelKey" : "ITEM PRICE",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "shares" : {
+            "shares" : "Shares",
+            "labelKey" : "shares",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey" : "shares",
+            "children" : [ 
+                "sharepercentage"
+            ]
+        },
+        "sharepercentage" : {
+            "sharepercentage" : "",
+            "labelKey" : "sharepercentage",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "Number",
+            "serviceKey" : "sharepercentage",
+            "parent" : [ 
+                "shares"
+            ]
+        },
+        "sharevalue" : {
+            "sharevalue" : "",
+            "labelKey" : "sharevalue",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+        "trademarginaftershare" : {
+            "trademarginaftershare" : "Trade Margin After Share",
+            "labelKey" : "trademarginaftershare",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "versionsharemerge" : {
+            "versionsharemerge" : "Shares:",
+            "labelKey" : "versionsharemerge",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "margin" : {
+            "margin" : "Margin",
+            "labelKey" : "margin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "INTERNAL CONTRACT REF NO" : {
+            "INTERNAL CONTRACT REF NO" : "INTERNAL CONTRACT REF NO",
+            "labelKey" : "INTERNAL CONTRACT REF NO",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxpair" : {
+            "fxpair" : "Fx Pair",
+            "labelKey" : "fxpair",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxvalue" : {
+            "fxvalue" : "Fx Value",
+            "labelKey" : "fxvalue",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "BROKER NAME" : {
+            "BROKER NAME" : "BROKER NAME",
+            "labelKey" : "BROKER NAME",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "RELEASED QTY" : {
+            "RELEASED QTY" : "RELEASED QTY",
+            "labelKey" : "RELEASED QTY",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quality" : {
+            "quality" : "Quality",
+            "labelKey" : "quality",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "PROFIT CENTER" : {
+            "PROFIT CENTER" : "PROFIT CENTER",
+            "labelKey" : "PROFIT CENTER",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "LEGAL ENTITY" : {
+            "LEGAL ENTITY" : "LEGAL ENTITY",
+            "labelKey" : "LEGAL ENTITY",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "actualmarginsysuuid" : {
+            "actualmarginsysuuid" : "Actual Margin Sysuuid",
+            "labelKey" : "actualmarginsysuuid",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "actualmargindata" : {
+            "actualmargindata" : "Actual Margin Data",
+            "labelKey" : "actualmargindata",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "history" : {
+            "history" : "",
+            "labelKey" : "history",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "CONTRACT ISSUE DATE" : {
+            "CONTRACT ISSUE DATE" : "Sales Contract Issue Date",
+            "labelKey" : "CONTRACT ISSUE DATE",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxrefno" : {
+            "fxrefno" : "Fx Ref No",
+            "labelKey" : "fxrefno",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "statusremark" : {
+            "statusremark" : "Status Remark",
+            "labelKey" : "statusremark",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+		 "time" : {
+            "time" : "Created/Updated On",
+            "labelKey" : "time",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "paymentterm" : {
+            "paymentterm" : "Payment Term",
+            "labelKey" : "paymentterm",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "notrequireduniquefield" : true,
+    "uniqueFields" : [ 
+        "INT ALLOC GROUP ID", 
+        "INTERNAL CONTRACT REF NO", 
+        "PRODUCT SPECS"
+    ],
+    "sys__UUID" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b",
+    "sys__createdOn" : ISODate("2019-05-02T08:59:16.451Z"),
+    "sys__createdBy" : "Bravo"
+}

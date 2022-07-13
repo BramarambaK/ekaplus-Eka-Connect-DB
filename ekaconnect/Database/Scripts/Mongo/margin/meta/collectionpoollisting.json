@@ -1,0 +1,200 @@
+{
+    "_id" : "collectionpoollisting_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "dddb1e94-4fd0-4d56-affc-c94888b37d9a"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Collection Pool Listing",
+    "type" : "workflow",
+    "rows" : "10",
+    "refreshData" : false,
+    "layout" : {
+        "showCheckbox" : true,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "lazyLoading" : false,
+        "refreshData" : true
+    },
+    "decisions" : [ 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.actuallisting",
+                    "popupClass" : "edit-modal700px",
+                    "name" : "compositeViewactualmargin"
+                }
+            ],
+            "disabled" : "field.status == 'Closed'",
+            "label" : "Actual Margin",
+            "position" : "top",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "collectionpoolcalculation",
+            "selection" : "external",
+            "outcomes" : [ 
+                {
+                    "data" : "output.collectionpoollisting",
+                    "name" : "_ST_CALCULATE_COLLECTIONPOOL"
+                }, 
+                {
+                    "data" : "output._ST_CALCULATE_COLLECTIONPOOL",
+                    "name" : "collectionpoollisting"
+                }
+            ],
+            "label" : "Calculate Collection Pool",
+            "position" : "top",
+            "type" : "submit",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CLOSE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.listing",
+                    "name" : "closemarginobject"
+                }
+            ],
+            "disabled" : "field.status == 'Closed'",
+            "label" : "Close",
+            "position" : "top",
+            "iconClass" : "fa fa-plus"
+        }
+    ],
+    "labelKey" : "Margin Listing",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "CORPORATE_NAME"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "PROFIT CENTER NAME"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "CONTRACT ITEM NO"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "TRADER NAME"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "PERSON INCHARGE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "ALLOCATION GROUP NO"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "ALLOCATION_DATE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "EXECUTION_STATUS"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "cpname"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "NET QTY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "quantityr"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "budgetmargin"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "actualmargin"
+        }, 
+        {
+            "filter" : true,
+            "highlight" : {
+                "default" : "bg-transparent",
+                "Active" : "text-success",
+                "Closed" : "danger-bg",
+                "Failed" : "danger-bg"
+            },
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "status"
+        }
+    ],
+    "taskId" : "collectionpoollisting",
+    "object" : "81e9220b-76e0-4f38-8c35-fe08107355df"
+}

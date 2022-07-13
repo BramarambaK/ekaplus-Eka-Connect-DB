@@ -1,0 +1,150 @@
+{
+    "_id" : "listingactualmargin_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Actual Margin Listing",
+    "type" : "workflow",
+    "rows" : "10",
+    "refreshData" : false,
+    "layout" : {
+        "tableEditing" : true,
+        "pagination" : false,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "limitHeight" : true,
+        "refreshData" : false,
+        "selectionMode" : "none"
+    },
+    "decisions" : [],
+    "labelKey" : "Budget Margin Listing",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "COST GROUP NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "REF NO INCOTERM"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "Payment_Term"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "COST COMPONENT NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "CP NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "unitprice"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "costUom"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "decimal" : true,
+            "key" : "totalAmount",
+            "roundoff" : 2
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "roundoff" : 2,
+            "format" : "decimal",
+            "key" : "totalAmountMarginCurrency",
+            "currencyFormat" : true
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "width" : "12%",
+            "sort" : false,
+            "key" : "financingdays",
+            "event" : "   var theEvent = record.financingdays|| window.event;\r\nvar key;\r\n if (theEvent.type === 'paste') {\r\n  key = event.clipboardData.getData('text/plain');\r\n } else {\r\n   key = theEvent;\r\n}\r\nif(record.financingdays==\"-\"){}\r\nelse{\r\nlet regex = /^([+,-]?([0-9]{1,6}))$|^$/;\r\nlet result = regex.test(record.financingdays);\r\nif (result === true) {\r\n\r\n\r\nlet sum = 0;\r\n\r\n\r\nlet sumfin = 0;\r\n\r\nlet sumfinancingDays = 0;\r\n\r\nlet sumtotalAmt = 0;\r\nlet prodtotalAmtFdays = 0;\r\nvar dataall = data;\r\ndata = data.listingactualmargin;\r\n  if(previousvalue=='' && dataall.saveflag==false){\r\n        dataall.saveflag=false;\r\n    \r\n    }\r\n    else{\r\n        dataall.saveflag=true;\r\n    }\r\nfunction addDays(myDate, days) {\r\nreturn new Date(myDate.getTime() + days * 24 * 60 * 60 * 1000).toISOString().split('T')[0];\r\n}\r\n\r\nif (data[index]['COST GROUP NAME'] !== 'Expense Total' && data[index]['COST GROUP NAME'] !== 'Income Total') {\r\nif (\r\n  data[index]['COST CLASS'] == 'Accrual' &&\r\n  (data[index]['Cost Category'] == 'Purchase Material Cost' ||\r\n    data[index]['Cost Category'] == 'Sales Material Cost' ||\r\n    data[index]['Cost Category'] == 'Secondary Cost')\r\n) {\r\n  let myDate = new Date(data[index]['Sales GMR Date'].split('T')[0]);\r\n\r\n  var financingDate = addDays(myDate, data[index].financingdays);\r\n  var financingDateSplit = financingDate.split('-');\r\n  data[index].financingdate = financingDateSplit[2] + '-' + financingDateSplit[1] + '-' + financingDateSplit[0];\r\n}\r\nconsole.log(data[index].totalAmount);\r\n\r\ndata[index].financing =\r\n  (-1 *\r\n    data[index].totalAmountMarginCurrency *\r\n    data[index].financingdays *\r\n    (data[index].interest / 100)) /\r\n  360;\r\n  if( data[index].financing==\"-0\" || data[index].financing==-0){\r\n    data[index].financing=0\r\n  }\r\n}\r\nfor (let i = 0; i < data.length; i++) {\r\nif (data[i]['COST GROUP NAME'] !== 'Expense Total' && data[i]['COST GROUP NAME'] !== 'Income Total') {\r\n  sumfin = sumfin + data[i].financing;\r\n  sumfinancingDays = sumfinancingDays + Number(data[i].financingdays);\r\n  sumtotalAmt = sumtotalAmt + data[i].totalAmount;\r\n  prodtotalAmtFdays = prodtotalAmtFdays + data[i].prodtotalAmtFdays;\r\n  sum = sum + data[i].totalAmountMarginCurrency;\r\n}\r\nif (data[i]['COST GROUP NAME'] === 'Expense Total') {\r\n  data[i].totalAmountMarginCurrency.value = sum;\r\n  sum = 0;\r\n  data[i].financing.value = sumfin;\r\n  data[i].financingdays.value = sumfinancingDays;\r\n  data[i].totalAmount.value = sumtotalAmt;\r\n  data[i].prodtotalAmtFdays.value = prodtotalAmtFdays;\r\n  sumfinancingDays = 0;\r\n  sumtotalAmt = 0;\r\n  sumfin = 0;\r\n  prodtotalAmtFdays = 0;\r\n}\r\nif (data[i]['COST GROUP NAME'] === 'Income Total') {\r\n  data[i].totalAmountMarginCurrency.value = sum;\r\n  sum = 0;\r\n  data[i].financing.value = sumfin;\r\n  data[i].financingdays.value = sumfinancingDays;\r\n  data[i].totalAmount.value = sumtotalAmt;\r\n  data[i].prodtotalAmtFdays.value = prodtotalAmtFdays;\r\n  sumtotalAmt = 0;\r\n  sumfinancingDays = 0;\r\n  sumfin = 0;\r\n  prodtotalAmtFdays = 0;\r\n}\r\n}\r\n}\r\nelse{\r\nrecord.financingdays= previousvalue;\r\n}  \r\n}"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "financingdate"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "paymentsplit"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "roundoff" : 2,
+            "format" : "decimal",
+            "key" : "financing",
+            "currencyFormat" : true
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "TITLE TRANSFER DATE"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "COST CLASS"
+        }
+    ],
+    "taskId" : "listingactualmargin",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

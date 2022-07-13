@@ -1,0 +1,18 @@
+{
+    "_id" : "_ST_FAILED_ACTUALMARGIN_OBJECT_TM",
+    "implicitActions" : [ 
+        {
+            "field" : "status",
+            "type" : "fieldUpdate",
+            "value" : "Failed"
+        }
+    ],
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "type" : "workflow",
+    "taskId" : "_ST_FAILED_ACTUALMARGIN_OBJECT",
+    "label" : "Failed operation in System",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

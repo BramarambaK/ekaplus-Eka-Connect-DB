@@ -1,0 +1,159 @@
+{
+    "_id" : ObjectId("5d81cf7f4392954a9a0b765b"),
+    "name" : "collectionpool",
+    "label" : "Collection Pool",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "INTEREST_RATE_EDIT" : "GET"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "2",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [ 
+        "corporate", 
+        "profitcenter", 
+        "contractitemreference"
+    ],
+    "fields" : {
+        "debittotal" : {
+            "debittotal" : "debittotal",
+            "labelKey" : "debittotal",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "credittotal" : {
+            "credittotal" : "credittotal",
+            "labelKey" : "credittotal",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "currentcostcurrency" : {
+            "currentcostcurrency" : "Current Cost Currency",
+            "labelKey" : "currentcostcurrency",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "previouscostcurrency" : {
+            "previouscostcurrency" : "Previous Cost Currency",
+            "labelKey" : "previouscostcurrency",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "costcurrencychange" : {
+            "costcurrencychange" : "costcurrencychange",
+            "labelKey" : "costcurrencychange",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxrate" : {
+            "fxrate" : "fxrate",
+            "labelKey" : "fxrate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "currentmargincurrencytotal" : {
+            "currentmargincurrencytotal" : "currentmargincurrencytotal",
+            "labelKey" : "currentmargincurrencytotal",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "previousmargincurrencytotal" : {
+            "previousmargincurrencytotal" : "previousmargincurrencytotal",
+            "labelKey" : "previousmargincurrencytotal",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "margincurrencyamount" : {
+            "margincurrencyamount" : "margincurrencyamount",
+            "labelKey" : "margincurrencyamount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "corporate" : {
+            "corporate" : "Corporate",
+            "labelKey" : "corporate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "profitcentername" : {
+            "profitcentername" : "Profit Center Name",
+            "labelKey" : "profitcentername",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "allocationgroup" : {
+            "allocationgroup" : "Allocation group",
+            "labelKey" : "allocationgroup",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "salesContractItemRefNo" : {
+            "salesContractItemRefNo" : "Sales Contract Item RefNo",
+            "labelKey" : "salesContractItemRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "margin" : {
+            "margin" : "Margin",
+            "labelKey" : "margin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "legalentity" : {
+            "legalentity" : "Legal Entity",
+            "labelKey" : "legalentity",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "costcurrency" : {
+            "costcurrency" : "Cost Currency",
+            "labelKey" : "costcurrency",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "notrequireduniquefield" : true,
+   "uniqueFields" : [ 
+        "allocationgroup"
+    ],
+    "sys__UUID" : "81e9220b-76e0-4f38-8c35-fe08107355df",
+    "sys__createdOn" : ISODate("2019-05-02T08:59:16.451Z"),
+    "sys__createdBy" : "Bravo"
+}

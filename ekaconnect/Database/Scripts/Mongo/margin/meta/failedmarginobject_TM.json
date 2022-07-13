@@ -1,0 +1,84 @@
+{
+    "_id" : "failedmarginobject_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Close",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "On closing no further modifications can be made. Would you like to continue.?",
+            "headerMessage" : "Close Transaction"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "UPDATE",
+            "task" : "failedmarginobject",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Margin data got closed successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Margin data got closed with some errors"
+                        }
+                    },
+                    "data" : "output.failedmarginobject",
+                    "appendMsg" : false,
+                    "name" : "_ST_FAILED_MARGIN_OBJECT"
+                }, 
+                {
+                    "name" : "listing",
+                    "showPopUp" : false
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "YES",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Failed_margin",
+    "fields" : [ 
+        {
+            "heading" : "CORPORATEID"
+        }
+    ],
+    "taskId" : "failedmarginobject",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

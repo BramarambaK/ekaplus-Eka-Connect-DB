@@ -1,0 +1,56 @@
+{
+    "_id" : ObjectId("5ccaabf48f7d130001373880"),
+    "title" : "Trade Margin",
+    "name" : "trademargin",
+    "tenantID" : "",
+    "type" : "app",
+    "platform_id" : "41",
+    "appType" : "CONNECT",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "label" : "Trade Margin App",
+                        "iconCls" : "insights-icon",
+                        "menuItems" : [ 
+                            {
+                                "text" : "Margin Listing",
+                                "iconCls" : "",
+                                "items" : [ 
+                                    {
+                                        "handler" : "/app/trademargin/listing",
+                                        "text" : "Margin Listing",
+                                        "iconCls" : ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "sys__createdOn" : ISODate("2019-05-02T08:36:04.424Z"),
+    "sys__createdBy" : "Bravo"
+}

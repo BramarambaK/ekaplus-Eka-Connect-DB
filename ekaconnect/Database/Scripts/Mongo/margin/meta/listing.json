@@ -1,0 +1,301 @@
+{
+    "_id" : "listing_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "99482286-6030-4c40-b1ec-3fd7522b688e"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Margin Listing",
+    "type" : "workflow",
+    "rows" : 15,
+    "refreshData" : false,
+    "layout" : {
+        "showCheckbox" : true,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : false,
+            "export" : false,
+			"customization": true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "lazyLoading" : false,
+        "refreshData" : true
+    },
+    "decisions" : [ 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listing",
+                    "popupClass" : "edit-modal700px",
+                    "name" : "compositeView"
+                }
+            ],
+            "disabled" : "field.status == 'Closed'",
+            "label" : "Calculate",
+            "position" : "top",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listing",
+                    "popupClass" : "edit-modal700px",
+                    "name" : "viewmarginlisting"
+                }
+            ],
+            "disabled" : "field.budgetmargin == '-'",
+            "label" : "Budget View",
+            "position" : "top",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listing",
+                    "popupClass" : "edit-modal700px",
+                    "name" : "viewactualmargin"
+                }
+            ],
+            "disabled" : "field.actualmargindata == '-'",
+            "label" : "Actual View",
+            "position" : "top",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "objectAction" : "INTEREST_RATE_EDIT",
+            "label" : "Special Edit",
+            "labelkey" : "UPDATE",
+            "btnClass" : "btn-success",
+            "iconClass" : "fa fa-edit",
+            "selection" : "global",
+            "position" : "top",
+            "disabled" : "field.status == 'Closed' ||   field.budgetmargin == '-'",
+            "displayed" : "field.status == 'Closed'",
+            "outcomes" : [ 
+                {
+                    "name" : "compositeViewInterestEdit",
+                    "popupClass" : "edit-modal700px",
+                    "data" : "selected.listing"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "autocalculate",
+            "selection" : "external",
+            "outcomes" : [ 
+                {
+                    "data" : "output.listing",
+                    "name" : "_ST_AUTO_CALCULATE"
+                }, 
+                {
+                    "data" : "output._ST_AUTO_CALCULATE",
+                    "name" : "listing"
+                }
+            ],
+            "label" : "Auto calculate",
+            "position" : "top",
+            "type" : "submit",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CLOSE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.listing",
+                    "popupClass" : "edit-modal",
+                    "name" : "closemarginobject"
+                }
+            ],
+            "label" : "Update Status",
+            "position" : "top",
+            "iconClass" : "fa fa-plus"
+        }, 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "Failed",
+            "labelkey" : "Failed",
+            "btnClass" : "btn-success",
+            "iconClass" : "fa fa-plus",
+            "selection" : "external",
+            "position" : "top",
+            "type" : "submit",
+            "task" : "failedmarginobject",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_FAILED_MARGIN_OBJECT",
+                    "appendMsg" : false,
+                    "data" : "output.failedmarginobject"
+                }, 
+                {
+                    "name" : "listing",
+                    "data" : "output._ST_FAILED_MARGIN_OBJECT"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "Margin Listing",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CORPORATE_NAME"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "PROFIT CENTER NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CONTRACT ITEM NO"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "PRODUCT SPECS"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "TRADER NAME"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "PERSON INCHARGE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "ALLOCATION GROUP NO"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "ALLOCATION_DATE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "EXECUTION_STATUS"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CONTRACT ISSUE DATE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cpname"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "NET QTY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "quantityr"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fxrefno"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "budgetmargin",
+            "roundoff" : 2,
+			 "format":"decimal",
+            "currencyFormat" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "actualmargin",
+            "roundoff" : 2,
+			 "format":"decimal",
+            "currencyFormat" : true
+        }, {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "statusremark"
+        }, 
+		   {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "dateformat" : "MM/DD/YYYY HH:mm:ss",
+            "key" : "time"
+        }, 
+        {
+            "filter" : true,
+            "highlight" : {
+                "default" : "bg-transparent",
+                "Active" : "text-success",
+                "Closing" : "danger-bg",
+                "Closed" : "danger-bg",
+                "Failed" : "danger-bg"
+            },
+            "edit" : false,
+            "sort" : true,
+            "key" : "status"
+        }
+    ],
+    "taskId" : "listing",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b",
+	"sys__UUID": "f52e7c73-d07e-463d-8192-cb9c2580ee7e"
+}

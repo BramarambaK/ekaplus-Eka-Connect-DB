@@ -1,0 +1,33 @@
+{
+    "_id" : ObjectId("5d8317524392954a9a0bf6f1"),
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "SAVE",
+    "type" : "workflow",
+    "refreshData" : false,
+    "layout" : {
+        "showCheckbox" : true,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "lazyLoading" : false,
+        "refreshData" : true
+    },
+    "decisions" : [],
+    "labelKey" : "SAVE",
+    "fields" : [],
+    "taskId" : "collection_pool_save",
+    "object" : "81e9220b-76e0-4f38-8c35-fe08107355df"
+}

@@ -1,0 +1,24 @@
+{
+	"_id":"budgetmargin_policy_trademargin",
+    "type" : "policy",
+    "app_UUID" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "refType" : "object",
+    "refTypeId" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW",
+		"INTEREST_RATE_EDIT"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

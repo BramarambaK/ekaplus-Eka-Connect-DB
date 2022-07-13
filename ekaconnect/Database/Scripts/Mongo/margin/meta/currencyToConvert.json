@@ -1,0 +1,18 @@
+{
+    "_id" : ObjectId("5d36d6cd5064b968e2906649"),
+    "type" : "property",
+    "name" : "currencyToConvert",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "100",
+    "visibility" : "public",
+	"label":"Currency To Convert",
+	"defaultValue":"de-DE",
+	"description": "It is used to change the calculations curreny",
+	"editSupportedInUI": true,
+	"listOfValues": "de-DE,en-US,jp-JP,zh-CN",
+	 "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+	"sys__createdOn" : ISODate("2019-04-17T04:48:10.805Z"),
+    "sys__createdBy" : "Joseph@mail.com"
+}

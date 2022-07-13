@@ -1,0 +1,29 @@
+{
+  "_id": "menuObject_trademargin",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Trade Margin App",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "Margin Listing",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "listing",
+                  "text": "Margin Listing",
+                  "iconCls": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

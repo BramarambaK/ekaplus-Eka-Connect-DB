@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_CALCULATE_COLLECTIONPOOL_Actual_data_TM",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "fed13b2a-594f-457f-84f3-222ed32fb879"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "type" : "workflow",
+	  "label": "Collection Pool Actual Margin by using processor",
+    "taskId" : "_ST_CALCULATE_COLLECTIONPOOL_Actual_data",
+    "object" : "81e9220b-76e0-4f38-8c35-fe08107355df"
+}

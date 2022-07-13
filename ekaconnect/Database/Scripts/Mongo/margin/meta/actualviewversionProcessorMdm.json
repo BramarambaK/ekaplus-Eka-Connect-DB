@@ -1,0 +1,12 @@
+{
+    "_id" : "actualviewversionProcessorMdm",
+    "name" : "actualviewversionProcessorMdm",
+    "type" : "processor",
+    "version" : "V2",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "snippet" : "   \r\n    if (req.body.selectedData) {\r\n      var sel = req.body.selectedData.actualmarginsysuuid;\r\n      if (req.body.selectedData.compositeViewactualmargin) {\r\n        var versionUT = '_UT_VIEW_VERSION_HISTORY_ACTUAL_MARGIN';\r\n      } else {\r\n        var versionUT = '_UT_VIEW_VERSION_HISTORY';\r\n      }\r\n    } else {\r\n      if (req.body.actuallisting) {\r\n        var sel = req.body.actuallisting.sys__UUID;\r\n      } else {\r\n        var sel = req.body.listing.sys__UUID;\r\n      }\r\n    }\r\n    var versioningData = {\r\n      method: 'GET',\r\n      url:\r\n        req.body.propertyList.eka_connect_host +\r\n        '/workflow/' +\r\n        '40a27e7f-3f50-406f-a872-2ee7d9436df9/' +\r\n        versionUT +\r\n        '/data/' +\r\n        sel +\r\n        '/versions',\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid'],\r\n        json: true\r\n      }\r\n    };\r\n\r\n    function get_versions() {\r\n      return new Promise(function(resolve, reject) {\r\n        // console.log('Request - ' + versioningData.url);\r\n        request(versioningData, function(err, response, body) {\r\n          // console.log('Response - ' + body);\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            // console.log('Success');\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    var versiondata = [];\r\n    get_versions().then(data => {\r\n      versiondata.push(data);\r\n      versiondata = JSON.parse(versiondata[0]);\r\n      var versiondropdown = [];\r\n      for (var y = 0; y < versiondata.versions.length; y++) {\r\n        versiondropdown.push({ key:'version' + (y + 1), value: 'version' + (y + 1) });\r\n      }\r\n      success({ version: versiondropdown },200);\r\n    });\r\n  \r\n   ",
+    "sys__createdOn" : ISODate("2019-06-03T13:38:13.102Z"),
+    "sys__UUID" : "19dc83e5-356e-4076-afdf-2ffdede5c0ac",
+    "sys__createdBy" : "admin@ekaplus.com"
+}

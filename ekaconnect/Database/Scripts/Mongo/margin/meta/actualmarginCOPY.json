@@ -1,0 +1,40 @@
+{
+    "_id" : "actualmarginCOPY_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Actual list",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "showCheckbox" : true,
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [],
+    "labelKey" : "ACTUAL_LIST",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "actualmargindata"
+        }
+    ],
+    "taskId" : "actualmarginCOPY",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

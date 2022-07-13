@@ -1,0 +1,18 @@
+{
+    "_id" : ObjectId("5d95af3e4392954a9a1448cd"),
+    "type" : "property",
+    "name" : "autocalculationflag",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "100",
+    "visibility" : "public",
+	"label":"Auto Calculation Flag",
+	"defaultValue":false,
+	"editSupportedInUI": true,
+	 "description": "It is used for enabling/disabling autocalculation of Trade margin app",
+	 "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+	  "listOfValues": "true,false",
+    "sys__createdOn" : ISODate("2019-04-17T04:48:10.805Z"),
+    "sys__createdBy" : "Joseph@mail.com"
+}

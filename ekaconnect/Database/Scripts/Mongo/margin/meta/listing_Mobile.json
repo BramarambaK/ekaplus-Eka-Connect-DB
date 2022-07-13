@@ -1,0 +1,208 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "processorInfo": {"processorId": "99482286-6030-4c40-b1ec-3fd7522b688e"},
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "Margin Listing",
+  "type": "workflow",
+  "rows": "10",
+  "refreshData": false,
+  "layout": {
+    "showCheckbox": true,
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "lazyLoading": false,
+    "refreshData": true
+  },
+  "decisions": [
+    {
+      "displayed": "field.status == 'Closed'",
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "selection": "global",
+      "outcomes": [{
+        "data": "selected.listing",
+        "popupClass": "edit-modal700px",
+        "name": "compositeView"
+      }],
+      "disabled": "field.status == 'Closed'",
+      "label": "Calculate",
+      "position": "top",
+      "iconClass": "fa fa-edit"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "autocalculate",
+      "selection": "external",
+      "outcomes": [
+        {
+          "data": "output.listing",
+          "name": "_ST_AUTO_CALCULATE"
+        },
+        {
+          "data": "output._ST_AUTO_CALCULATE",
+          "name": "listing"
+        }
+      ],
+      "label": "Auto calculate",
+      "position": "top",
+      "type": "submit",
+      "iconClass": "fa fa-edit"
+    },
+	{
+            "objectAction" : "INTEREST_RATE_EDIT",
+            "label" : "Special Edit",
+            "labelkey" : "UPDATE",
+            "btnClass" : "btn-success",
+            "iconClass" : "fa fa-edit",
+            "selection" : "global",
+            "position" : "top",
+            "disabled" : "field.status == 'Closed'",
+            "displayed" : "field.status == 'Closed'",
+            "outcomes" : [ 
+                {
+                    "name" : "compositeViewInterestEdit",
+                    "popupClass" : "edit-modal700px",
+                    "data" : "selected.listing"
+                }
+            ]
+        }, 
+    {
+      "displayed": "field.status == 'Closed'",
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "CLOSE",
+      "selection": "global",
+      "outcomes": [{
+        "displayType": "popup",
+        "data": "selected.listing",
+        "name": "closemarginobject"
+      }],
+      "disabled": "field.status == 'Closed'",
+      "label": "Close",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    }
+  ],
+  "_id": "listing_TM_Mobile",
+  "labelKey": "Margin Listing",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "CORPORATE_NAME",
+      "placement": "Row1"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "PROFIT CENTER NAME",
+      "placement": "Row1"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "CONTRACT ITEM NO",
+      "placement": "Row1"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "ALLOCATION GROUP NO",
+      "placement": "Row2"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "width": "10%",
+      "sort": true,
+      "key": "ALLOCATION_DATE",
+      "placement": "Row2"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "EXECUTION_STATUS",
+      "placement": "Row2"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "cpname",
+      "placement": "Row3"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "NET QTY",
+      "placement": "Row3"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "quantityr",
+      "placement": "Row3"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "budgetmargin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "actualmargin"
+    },
+    {
+      "filter": true,
+      "highlight": {
+        "default": "bg-transparent",
+        "Active": "text-success",
+        "Closed": "danger-bg",
+        "Failed": "danger-bg"
+      },
+      "edit": false,
+      "width": "10%",
+      "sort": true,
+      "key": "status"
+    }
+  ],
+  "taskId": "listing",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b",
+  "deviceType": "mobile"
+}

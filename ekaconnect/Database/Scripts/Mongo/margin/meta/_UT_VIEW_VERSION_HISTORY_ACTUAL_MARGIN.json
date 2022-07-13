@@ -1,0 +1,12 @@
+{
+    "_id" : "_UT_VIEW_VERSION_HISTORY_ACTUAL_MARGIN_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "decisions" : [],
+    "type" : "workflow",
+	"label": "UserTask Version history",
+    "taskId" : "_UT_VIEW_VERSION_HISTORY_ACTUAL_MARGIN",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

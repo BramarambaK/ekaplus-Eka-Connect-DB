@@ -1,0 +1,81 @@
+{
+    "_id" : "actualviewversiondropdown_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Actual View dropdown",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {
+            "font-size" : "18px",
+            "height" : "10px"
+        },
+        "processorInfo" : {
+            "processorId" : "19dc83e5-356e-4076-afdf-2ffdede5c0ac"
+        },
+        "name" : "create",
+        "formStyle" : {
+            "flex-direction" : "row",
+            "width" : "100%",
+            "margin" : "auto auto 0px",
+            "font-weight" : 700,
+            "font-size" : "15px"
+        },
+        "formLayoutStyle" : {
+            "padding" : " 0px",
+            "padding-left" : "10px",
+            "height" : "50px"
+        },
+        "defaultFormValueStyle" : {
+            "font-weight" : 600,
+            "font-size" : "18px"
+        },
+        "type" : "row"
+    },
+    "decisions" : [],
+    "labelKey" : "VIEW_MARGIN",
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "event" : "external",
+                "key" : "version",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px",
+                    "margin-top" : "10px"
+                }
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex",
+                    "width" : "100%",
+                    "flex-direction" : "column"
+                },
+                "formItemStyle" : {
+                    "width" : "88%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "history"
+            }
+        ]
+    ],
+    "taskId" : "actualviewversiondropdown",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

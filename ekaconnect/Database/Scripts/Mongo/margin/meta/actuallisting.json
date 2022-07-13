@@ -1,0 +1,244 @@
+{
+    "_id" : "actuallisting_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "fc8d8c22-f892-4be2-a619-77911eaae416"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Margin Listing",
+    "type" : "workflow",
+    "rows" : 15,
+    "refreshData" : false,
+    "layout" : {
+        "showCheckbox" : true,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "lazyLoading" : false,
+        "refreshData" : true
+    },
+    "decisions" : [ 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.actuallisting",
+                    "popupClass" : "edit-modal700px",
+                    "name" : "compositeViewactualmargin"
+                }
+            ],
+            "disabled" : "field.status == 'Closed'",
+            "label" : "Actual Margin",
+            "position" : "top",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "autocalculateactualmargin",
+            "selection" : "external",
+            "outcomes" : [ 
+                {
+                    "data" : "output.actuallisting",
+                    "name" : "_ST_AUTO_CALCULATE_ACTUAL_MARGIN"
+                }, 
+                {
+                    "data" : "output._ST_AUTO_CALCULATE_ACTUAL_MARGIN",
+                    "name" : "actuallisting"
+                }
+            ],
+            "label" : "Auto calculate",
+            "position" : "top",
+            "type" : "submit",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "displayed" : "field.status == 'Closed'",
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CLOSE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.actuallisting",
+                    "name" : "closemarginobject"
+                }
+            ],
+            "disabled" : "field.status == 'Closed'",
+            "label" : "Close",
+            "position" : "top",
+            "iconClass" : "fa fa-plus"
+        }, 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "Failed",
+            "labelkey" : "Failed",
+            "btnClass" : "btn-success",
+            "iconClass" : "fa fa-plus",
+            "selection" : "external",
+            "position" : "top",
+            "type" : "submit",
+            "task" : "failedactualmarginobject",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_FAILED_ACTUALMARGIN_OBJECT",
+                    "appendMsg" : false,
+                    "data" : "output.failedactualmarginobject"
+                }, 
+                {
+                    "name" : "listing",
+                    "data" : "output._ST_FAILED_ACTUALMARGIN_OBJECT"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "Margin Listing",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CORPORATE_NAME"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "PROFIT CENTER NAME"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : true,
+            "key" : "CONTRACT ITEM NO"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "TRADER NAME"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "PRODUCT SPECS"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "PERSON INCHARGE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "ALLOCATION GROUP NO"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "ALLOCATION_DATE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "EXECUTION_STATUS"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CONTRACT ISSUE DATE"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cpname"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "NET QTY"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "quantityr"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fxrefno"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "budgetmargin",
+            "roundoff" : 2,
+            "currencyFormat" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "actualmargin",
+            "roundoff" : 2,
+            "currencyFormat" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "statusremark"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "dateformat" : "MM/DD/YYYY HH:mm:ss",
+            "key" : "time"
+        }, 
+        {
+            "filter" : true,
+            "highlight" : {
+                "default" : "bg-transparent",
+                "Active" : "text-success",
+                "Closed" : "danger-bg",
+                "Failed" : "danger-bg"
+            },
+            "edit" : false,
+            "sort" : true,
+            "key" : "status"
+        }
+    ],
+    "taskId" : "actuallisting",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

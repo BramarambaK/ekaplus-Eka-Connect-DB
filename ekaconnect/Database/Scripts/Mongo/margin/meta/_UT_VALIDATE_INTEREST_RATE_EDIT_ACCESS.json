@@ -1,0 +1,14 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "INTEREST_RATE_EDIT",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "decisions": [],
+  "_id": "_UT_VALIDATE_INTEREST_RATE_EDIT_ACCESS_TM",
+  "type": "workflow",
+  "apiInfo": {"responseDataKey": ""},
+  "label": "Interest rate System",
+  "taskId": "_UT_VALIDATE_INTEREST_RATE_EDIT_ACCESS",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

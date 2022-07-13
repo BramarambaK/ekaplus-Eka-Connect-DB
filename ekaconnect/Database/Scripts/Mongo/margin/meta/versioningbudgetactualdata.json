@@ -1,0 +1,43 @@
+{
+    "_id" : "versioningbudgetactualdata_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "4cc62d85-7459-4650-b220-3591444cfd88"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "List",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "showCheckbox" : true,
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [],
+    "labelKey" : "VERSIONS",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "limitRefNo"
+        }
+    ],
+    "taskId" : "versioningbudgetactualdata",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

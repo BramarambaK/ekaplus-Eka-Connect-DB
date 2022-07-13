@@ -1,0 +1,97 @@
+{
+
+    "_id" : "listingcurrencypool_TM",
+
+    "componentType" : "UserTask",
+
+    "objectAction" : "READ",
+
+    "refType" : "app",
+
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+
+    "processorInfo" : {
+
+        "processorId" : "54ce313a-ef11-49dd-8a18-033f4001121e"
+
+    },
+
+    "label" : "Currency Pool Listing",
+
+    "type" : "workflow",
+
+    "refreshData" : false,
+
+    "layout" : {
+
+        "selection" : "row",
+
+        "name" : "list",
+
+        "options" : {
+
+            "filter" : true,
+
+            "lastUpdated" : true,
+
+            "search" : true,
+
+            "reload" : true,
+
+            "columnFilter" : true,
+
+            "reset" : true,
+
+            "export" : true
+
+        },
+
+        "theme" : "theme-grid-white",
+
+        "limitHeight" : true,
+
+        "refreshData" : false
+
+    },
+
+    "decisions" : [],
+
+    "labelKey" : "Currency Pool Listing",
+
+    "fields" : [
+
+        {
+
+            "filter" : false,
+
+            "edit" : false,
+
+            "width" : "10%",
+
+            "sort" : false,
+
+            "key" : "debittotal"
+
+        },
+
+        {
+
+            "filter" : false,
+
+            "edit" : false,
+
+            "width" : "10%",
+
+            "sort" : false,
+
+            "key" : "credittotal"
+
+        }
+
+    ],
+
+    "taskId" : "listingcurrencypool",
+
+    "object" : "81e9220b-76e0-4f38-8c35-fe08107355df"
+
+}

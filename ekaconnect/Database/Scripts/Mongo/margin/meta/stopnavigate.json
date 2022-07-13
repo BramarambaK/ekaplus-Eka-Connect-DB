@@ -1,0 +1,10 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "_id": "stopnavigate_TM",
+  "type": "workflow",
+  "taskId": "stopnavigate",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

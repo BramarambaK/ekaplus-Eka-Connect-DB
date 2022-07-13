@@ -1,0 +1,12 @@
+{
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {"processorId": "ca29df8d-c982-45fd-9660-804727675018"},
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "_id": "_ST_PROCESS_MARGIN_DATA_TM",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_MARGIN_DATA",
+  "label": "Save data operation by Processor",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

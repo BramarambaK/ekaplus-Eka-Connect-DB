@@ -1,0 +1,124 @@
+{
+    "_id" : "versionactualmargin_TM",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "3301982c-8666-4108-b94f-2e498ee6c270"
+    },
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Margin Details",
+    "workflows" : [ 
+        {
+            "data" : "selected.versionactualmargin.versiondropdown",
+            "name" : "versiondropdown"
+        }, 
+        {
+            "data" : "selected.versionactualmargin.listingactualmargin",
+            "name" : "listingactualmarginVersion"
+        }, 
+        {
+            "class" : "composite-row",
+            "workflows" : [ 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionactualmargin.tradeMargin",
+                            "name" : "tradeMarginVersion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionactualmargin.shares",
+                            "name" : "sharesversion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "style" : {
+                        "flex" : 1
+                    },
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionactualmargin.rates",
+                            "name" : "ratesversion"
+                        }
+                    ]
+                }, 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionactualmargin.remark",
+                            "name" : "remarkversion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "isPopUp" : true,
+        "footer" : false,
+        "name" : "customv2"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "compositeViewactualmargin"
+                }
+            ],
+            "style" : {
+                "margin" : "5px auto 5px 5px"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "compositeViewactualmargin"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }, 
+        {
+            "objectAction" : "READ",
+            "task" : "versionactualmargin",
+            "selection" : "external",
+            "outcomes" : [ 
+                {
+                    "data" : "output.versionactualmargin",
+                    "name" : "_ST_VERSION_MARGIN"
+                }, 
+                {
+                    "data" : "output._ST_VERSION_MARGIN",
+                    "name" : "versionactualmargin"
+                }
+            ]
+        }
+    ],
+    "taskId" : "versionactualmargin",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

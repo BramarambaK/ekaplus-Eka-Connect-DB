@@ -1,0 +1,12 @@
+{
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {"processorId": "b613f52e-0482-4bcd-9fb3-d6420847d316"},
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "_id": "_ST_PROCESS_MARGIN_CALCULATE_TM",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_MARGIN_CALCULATE",
+  "label": "Calculate data operation by Processor",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

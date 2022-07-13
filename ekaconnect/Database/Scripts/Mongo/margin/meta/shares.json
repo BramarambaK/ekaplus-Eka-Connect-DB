@@ -1,0 +1,71 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "Shares",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "processorInfo": {"processorId": "03375fe9-5ce8-4419-a2fa-c4cfe55ff499"},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "formLayoutStyle": {"height": "225px"},
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "events": {"compare": {"handler": "if(formData.sharepercentage > 2) {\r\nformData.sharevalue = 20;\r\nenable.push(\"sharevalue\");\r\n} else {\r\nformData.sharevalue = \"\";\r\ndisable.push(\"sharevalue\");\r\n}"}}
+  },
+  "decisions": [],
+  "_id": "shares_TM",
+  "labelKey": "VIEW_MARGIN",
+  "fields": [[
+    {
+      "style": {"width": "120px"},
+      "placeholder": "Select CP",
+      "suffix": "",
+      "key": "shares"
+    },
+    {
+      "style": {"width": "150px"},
+      "label": "",
+      "placeholder": "Share percentage",
+      "type": "textbox",
+      "suffix": "",
+      "event": "var theEvent = value || value === 0 ? value : window.event;\r\nvar key;\r\nif (theEvent.type === 'paste') {\r\n  key = event.clipboardData.getData('text\/plain');\r\n} else {\r\n  key = theEvent;\r\n}\r\nlet regex = new RegExp(\/^\\d{1,3}(?:\\.\\d{0,2})?$\/);\r\nlet result = regex.test(key);\r\nif (value === '' || value === null) {\r\n  (data.shares.sharepercentage = {\r\n    value: '',\r\n    disable: false\r\n  }),\r\n    (data.shares.shares = {\r\n      value: null,\r\n      disable: false\r\n    }),\r\n    (data.shares.sharevalue = {\r\n      value: '',\r\n      disable: false\r\n    }),\r\n    (data.shares.trademarginaftershare = ''),\r\n    (data.shares.roceaftershare = '');\r\n} else {\r\n  if (result === true) {\r\n    if (!data.tradeMargin.trademargin) {\r\n      data.shares.sharevalue = '';\r\n\r\n      (data.shares.sharepercentage = {\r\n        value: '',\r\n        disable: true\r\n      }),\r\n        (data.shares.shares = {\r\n          value: null,\r\n          disable: true\r\n        }),\r\n        (data.shares.sharevalue = {\r\n          value: '',\r\n          disable: true\r\n        }),\r\n        (data.shares.trademarginaftershare = ''),\r\n        (data.shares.roceaftershare = '');\r\n    } else {\r\n      data.shares.sharevalue = ((value * data.tradeMargin.trademarginroundoff) \/ 100).toFixed(2);\r\n      var eventtrade = parseFloat(data.tradeMargin.trademarginroundoff) - parseFloat(data.shares.sharevalue);\r\n      var percentage = (eventtrade \/ parseFloat(data.tradeMargin.totalsalematerial)) * 100;\r\n\r\n      var roceshare =\r\n        ((eventtrade + data.tradeMargin.sumDaysPurchaseSale) * 100 * 0.6601) \/\r\n        (data.tradeMargin.totalSale \/ 365 +\r\n          data.tradeMargin.totalPurchase \/ 365 +\r\n          data.tradeMargin.totalMaintransport \/ 365);\r\n\r\n      percentage = Number(percentage.toFixed(2));\r\n      roceshare = Number(roceshare.toFixed(2));\r\n      eventtrade = Number(eventtrade.toFixed(2));\r\n\r\n      if (isNaN(percentage)) {\r\n        percentage = 0;\r\n      }\r\n      if (isNaN(roceshare)) {\r\n        roceshare = 0;\r\n      }\r\n\r\n      var d = new Intl.NumberFormat('de-DE').format(eventtrade);\r\n      var percentageformat = new Intl.NumberFormat('de-DE').format(percentage);\r\n      if (roceshare == 'Infinity' || roceshare == '-Infinity') {\r\n        var roceformat = roceshare;\r\n      } else {\r\n        roceformat = new Intl.NumberFormat('de-DE').format(roceshare);\r\n      }\r\n\r\n      data.shares.trademarginaftershare =\r\n        d + ' ' + data.viewmargin.contractValueUOM + ' | ' + percentageformat + '%';\r\n      data.shares.roceaftershare = roceformat + '%';\r\n    }\r\n  } else {\r\n    value = value === '' ? '' : data.shares.sharepercentage || '';\r\n  }\r\n}",
+      "key": "sharepercentage"
+    },
+    {
+      "style": {"width": "120px"},
+      "label": "",
+      "placeholder": "Share value",
+      "type": "textbox",
+      "suffix": "",
+      "event": "var theEvent = (value || value ===0) ? value : window.event;\r\nvar key;\r\nif (theEvent.type === 'paste') {\r\n  key = event.clipboardData.getData('text\/plain');\r\n} else {\r\n  key = theEvent;\r\n}\r\nlet regex = \/^(?=.)([+-]?([0-9]+)(\\.([0-9]{0,2}))?)$\/g;\r\nvar sharevflag = false;\r\n\r\nlet result = regex.test(key);\r\nif (value == '' || value == null) {\r\n  (data.shares.sharepercentage = {\r\n    value: '',\r\n    disable: false\r\n  }),\r\n    (data.shares.shares = {\r\n      value: null,\r\n      disable: false\r\n    }),\r\n    (data.shares.sharevalue = {\r\n      value: '',\r\n      disable: false\r\n    }),\r\n    (data.shares.trademarginaftershare = ''),\r\n    (data.shares.roceaftershare = '');\r\n} else if (value == '-') {\r\n} else {\r\n  if (value.includes('-')) {\r\n    if (value > data.tradeMargin.trademarginroundoff * 10) {\r\n      sharevflag = true;\r\n    }\r\n  } else {\r\n    if (value < data.tradeMargin.trademarginroundoff * 10) {\r\n      sharevflag = true;\r\n    }\r\n  }\r\n  if (result === true && sharevflag) {\r\n    if (!data.tradeMargin.trademargin) {\r\n      data.shares.sharevalue = '';\r\n\r\n      (data.shares.sharepercentage = {\r\n        value: '',\r\n        disable: true\r\n      }),\r\n        (data.shares.shares = {\r\n          value: null,\r\n          disable: true\r\n        }),\r\n        (data.shares.sharevalue = {\r\n          value: '',\r\n          disable: true\r\n        }),\r\n        (data.shares.trademarginaftershare = ''),\r\n        (data.shares.roceaftershare = '');\r\n    } else {\r\n      var eventtrade = parseFloat(data.tradeMargin.trademarginroundoff) - parseFloat(value);\r\n      data.shares.sharepercentage = (value * 100) \/ data.tradeMargin.trademarginroundoff;\r\n      data.shares.sharepercentage = data.shares.sharepercentage.toFixed(2);\r\n      \/\/data.shares.sharepercentage = parseFloat(data.shares.sharepercentage);\r\n      if (isNaN(data.shares.sharepercentage)) {\r\n        data.shares.sharepercentage = 0;\r\n      }\r\n      if (data.shares.sharepercentage == 'Infinity') {\r\n        data.shares.sharepercentage = 0;\r\n      }\r\n      var percentage =\r\n        (parseFloat(eventtrade.toFixed(2)) \/ parseFloat(data.tradeMargin.totalsalematerial)) * 100;\r\n      percentage = Number(percentage.toFixed(2));\r\n      var roceaff =\r\n        ((eventtrade + data.tradeMargin.sumDaysPurchaseSale) * 100 * 0.6601) \/\r\n        (data.tradeMargin.totalSale \/ 365 -\r\n          data.tradeMargin.totalPurchase \/ 365 -\r\n          data.tradeMargin.totalMaintransport \/ 365);\r\n      roceaff = Number(roceaff.toFixed(2));\r\n      if (isNaN(roceaff)) {\r\n        roceaff = 0;\r\n      }\r\n      var d = new Intl.NumberFormat('de-DE').format(eventtrade);\r\n      var percentageformat = new Intl.NumberFormat('de-DE').format(percentage);\r\n      if (roceaff == 'Infinity' || roceaff == '-Infinity') {\r\n        var roceformat = roceaff;\r\n      } else {\r\n        var roceformat = new Intl.NumberFormat('de-DE').format(roceaff);\r\n      }\r\n      var roceformat = new Intl.NumberFormat('de-DE').format(roceaff);\r\n\r\n      data.shares.trademarginaftershare =\r\n        d + ' ' + data.viewmargin.contractValueUOM + ' | ' + percentageformat + '%';\r\n\r\n      data.shares.roceaftershare = roceformat + '%';\r\n    }\r\n  } else {\r\n    value = value === '' ? '' : data.shares.sharevalue || '';\r\n  }\r\n}",
+      "key": "sharevalue"
+    },
+    {
+      "disabled": true,
+      "style": {"width": "410px"},
+      "type": "readOnly",
+      "suffix": "",
+      "key": "trademarginaftershare"
+    },
+    {
+      "disabled": true,
+      "style": {"width": "410px"},
+      "type": "readOnly",
+      "suffix": "",
+      "key": "roceaftershare"
+    }
+  ]],
+  "taskId": "shares",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

@@ -1,0 +1,131 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "Budget Margin Edit",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {"font-size": "8px"},
+    "topLine": {"display": true},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "width": "30%",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {"font-size": "8px"},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [{"name": "listing"}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "editmargin",
+      "outcomes": [
+        {
+          "result": {
+            "success": {"message": "Margin got replaced successfully"},
+            "failure": {"message": "Please fix errors "},
+            "successWithWarning": {"message": "Margin got replaced with some errors"}
+          },
+          "data": "output.editmargin",
+          "appendMsg": true,
+          "name": "_ST_EDIT_MARGIN",
+          "appendPlaceHolderToPopUpMsg": [{
+            "outputTask": "output._ST_EDIT_MARGIN",
+            "value": "corporate"
+          }]
+        },
+        {
+          "name": "listing",
+          "showPopUp": "true"
+        }
+      ],
+      "label": " Update",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "editmargin_TM",
+  "labelKey": "EDIT Budget Margin",
+  "fields": [
+    {
+      "style": {},
+      "placement": "row1",
+      "suffix": "",
+      "key": "CORPORATEID"
+    },
+    {
+      "placement": "row1",
+      "suffix": "",
+      "key": "PROFIT_CENTER_NAME"
+    },
+    {
+      "placement": "row1",
+      "suffix": "",
+      "key": "CONTRACT_ITEM_NO"
+    },
+    {
+      "placement": "row2",
+      "suffix": "",
+      "key": "ALLOCATION_GROUP_NO"
+    },
+    {
+      "placement": "row2",
+      "suffix": "",
+      "key": "ALLOC_DATE"
+    },
+    {
+      "placement": "row2",
+      "suffix": "",
+      "key": "EXECUTION_STATUS"
+    },
+    {
+      "placement": "row3",
+      "suffix": "",
+      "key": "CP_NAME"
+    },
+    {
+      "placement": "row3",
+      "suffix": "",
+      "key": "NET_QTY"
+    },
+    {
+      "placement": "row3",
+      "suffix": "",
+      "key": "quantityr"
+    },
+    {
+      "placement": "row4",
+      "suffix": "",
+      "key": "budgetmargin"
+    },
+    {
+      "placement": "row4",
+      "suffix": "",
+      "key": "actualmargin"
+    },
+    {
+      "placement": "row4",
+      "suffix": "",
+      "key": "status"
+    }
+  ],
+  "taskId": "editmargin",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

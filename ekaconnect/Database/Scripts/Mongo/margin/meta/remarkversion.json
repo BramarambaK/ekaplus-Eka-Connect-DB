@@ -1,0 +1,44 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {"font-size": "15px"},
+    "name": "view",
+    "formStyle": {
+      "margin": "auto",
+      "flex-direction": "column",
+      "width": "100%",
+      "margin-bottom": "20px"
+    },
+    "formLayoutStyle": {"height": "225px",    "background-color" : "#ffffff"},
+    "defaultFormValueStyle": {
+      "font-weight": 400,
+      "font-size": "14px"
+    },
+    "type": "row"
+  },
+  "decisions": [],
+  "_id": "remarkversion_TM",
+  "labelKey": "VIEW_MARGIN",
+  "fields": [[{
+    "disabled": true,
+    "suffix": "",
+    "type": "readOnly",
+    "key": "remark",
+	 "style" : {
+                    "white-space" : "normal",
+                    "word-break" : "break-all"
+                }
+  }]],
+  "taskId": "remarkversion",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

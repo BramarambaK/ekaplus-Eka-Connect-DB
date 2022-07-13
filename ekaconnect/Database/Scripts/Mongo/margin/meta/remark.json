@@ -1,0 +1,41 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "Remark",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {"font-size": "15px"},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "flex-direction": "column",
+      "width": "100%",
+      "margin-bottom": "20px"
+    },
+    "formLayoutStyle": {"height": "225px"},
+    "defaultFormValueStyle": {
+      "font-weight": 600,
+      "font-size": "18px"
+    },
+    "type": "row"
+  },
+  "decisions": [],
+  "_id": "remark_TM",
+  "labelKey": "VIEW_MARGIN",
+  "fields": [[{
+    "suffix": "",
+	"event" : " var theEvent = value || window.event;\r\n        var key;\r\n         if (theEvent.type === 'paste') {\r\n          key = event.clipboardData.getData('text/plain');\r\n         } else {\r\n           key = theEvent;\r\n        }\r\n        let regex =/^.{1,256}$|^$/;\r\n        let result = regex.test(value);\r\n        if (result === true) {\r\n\r\n        }else{\r\n            value= data.remark.remark;\r\n}  ",
+    "key": "remark",
+	 "cols" : 25,
+                "rows" : 3
+  }]],
+  "taskId": "remark",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

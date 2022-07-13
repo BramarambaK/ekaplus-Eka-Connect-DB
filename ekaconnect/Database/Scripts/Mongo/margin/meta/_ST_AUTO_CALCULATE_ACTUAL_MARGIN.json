@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_AUTO_CALCULATE_ACTUAL_MARGIN_TM",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "0085b657-041c-4ee1-b79f-8d6f9eb44df3"
+    },
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "type" : "workflow",
+	  "label": "Autocalculation by using processor",
+    "taskId" : "_ST_AUTO_CALCULATE_ACTUAL_MARGIN",
+    "object" : "a094c021-4870-4b9c-940e-3858e2405e9e"
+}

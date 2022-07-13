@@ -1,0 +1,128 @@
+{
+    "_id" : "versionmarginInterestEdit",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "3301982c-8666-4108-b94f-2e498ee6c270"
+    },
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "label" : "Margin Details Interest Edit",
+    "workflows" : [ 
+        {
+            "data" : "selected.versionmarginInterestEdit.versiondropdown",
+            "name" : "versiondropdown"
+        }, 
+        {
+            
+            "name" : "listingmarginversion"
+        }, 
+        {
+            "class" : "composite-row",
+            "workflows" : [ 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionmarginInterestEdit.tradeMargin",
+                            "name" : "tradeMarginVersion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionmarginInterestEdit.shares",
+                            "name" : "sharesversion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }, 
+                {
+                    "style" : {
+                        "flex" : 1
+                    },
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionmarginInterestEdit.ratesinput",
+                            "name" : "ratesinputversion"
+                        }, 
+                        {
+                            "data" : "selected.versionmarginInterestEdit.rates",
+                            "name" : "ratesversion"
+                        }
+                    ]
+                }, 
+                {
+                    "workflows" : [ 
+                        {
+                            "data" : "selected.versionmarginInterestEdit.remark",
+                            "name" : "remarkversion"
+                        }
+                    ],
+                    "style" : {
+                        "flex" : 1
+                    }
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "isPopUp" : true,
+        "footer" : false,
+        "name" : "customv2"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "compositeViewInterestEdit"
+                }
+            ],
+            "style" : {
+                "margin" : "5px auto 5px 5px"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "compositeViewInterestEdit"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }, 
+        {
+            "objectAction" : "READ",
+            "task" : "versionmarginInterestEdit",
+            "selection" : "external",
+            "outcomes" : [ 
+                {
+                    "data" : "output.versionmarginInterestEdit",
+                    "name" : "_ST_VERSION_MARGIN"
+                }, 
+                {
+                    "data" : "output._ST_VERSION_MARGIN",
+                    "name" : "versionmarginInterestEdit"
+                }
+            ]
+        }
+    ],
+    "taskId" : "versionmarginInterestEdit",
+    "object" : "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

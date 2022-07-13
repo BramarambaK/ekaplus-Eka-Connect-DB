@@ -1,0 +1,23 @@
+{
+    "_id" : "collectionpool_policy_trademargin",
+    "type" : "policy",
+    "app_UUID" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "refType" : "object",
+    "refTypeId" : "81e9220b-76e0-4f38-8c35-fe08107355df",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

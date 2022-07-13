@@ -1,0 +1,12 @@
+{
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {"processorId": "3301982c-8666-4108-b94f-2e498ee6c270"},
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "_id": "_ST_VERSION_MARGIN_TM",
+  "type": "workflow",
+  "taskId": "_ST_VERSION_MARGIN",
+  "label": "Version operation by Processor",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

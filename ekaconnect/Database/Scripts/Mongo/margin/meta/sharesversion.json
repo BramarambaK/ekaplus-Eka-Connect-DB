@@ -1,0 +1,53 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "label": "Shares version",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "formLayoutStyle": {"height": "225px"},
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [],
+  "_id": "sharesversion_TM",
+  "labelKey": "VIEW_MARGIN",
+  "fields": [[
+    {
+      "style": {"width": "410px"},
+      "disabled": true,
+      "type": "readOnly",
+      "suffix": "",
+      "key": "versionsharemerge"
+    },
+    
+    {
+      "disabled": true,
+      "style": {"width": "410px"},
+      "type": "readOnly",
+      "suffix": "",
+      "key": "trademarginaftershare"
+    },
+    {
+      "disabled": true,
+      "style": {"width": "410px"},
+      "type": "readOnly",
+      "suffix": "",
+      "key": "roceaftershare"
+    }
+  ]],
+  "taskId": "sharesversion",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

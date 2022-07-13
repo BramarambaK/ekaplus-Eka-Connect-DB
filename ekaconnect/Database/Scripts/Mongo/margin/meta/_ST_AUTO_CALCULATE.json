@@ -1,0 +1,12 @@
+{
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+    "label": "Autocalculation  using Processor",
+  "processorInfo": {"processorId": "13bae328-e147-476b-b55b-d71453a83856"},
+  "refType": "app",
+  "refTypeId": "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+  "_id": "_ST_AUTO_CALCULATE_TM",
+  "type": "workflow",
+  "taskId": "_ST_AUTO_CALCULATE",
+  "object": "3ef370f9-febe-41a0-8e43-4ef6ce769b3b"
+}

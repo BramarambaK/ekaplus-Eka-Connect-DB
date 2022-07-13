@@ -1,0 +1,265 @@
+{
+    "_id" : ObjectId("5d1c724a0dd90a09def1eda3"),
+    "type" : "property",
+    "propertyValue" : {
+        "data" : [ 
+            {
+                "Counterparty" : "MARSH N.V.",
+                "Financing Days" : 45
+            }, 
+            {
+                "Counterparty" : "NATIONALE DELCREDEREDIENST",
+                "Financing Days" : 60
+            }, 
+            {
+                "Counterparty" : "DSV BELGIUM NV",
+                "Financing Days" : 120
+            }, 
+            {
+                "Counterparty" : "BELFIUS LEASE SERVICES NV",
+                "Financing Days" : 45
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Supplier",
+                "Cost Group" : "Supplier"
+            }, 
+            {
+                "Financing Days" : 60,
+                "Cost Component Name" : "Import L/C",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Counterparty" : "First Belgian Bank",
+                "Financing Days" : 45,
+                "Cost Component Name" : "Import L/C",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Counterparty" : "Second Belgian Bank",
+                "Financing Days" : 45,
+                "Cost Component Name" : "Import L/C",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Counterparty" : "Third Belgian Bank",
+                "Financing Days" : 45,
+                "Cost Component Name" : "Import L/C",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 30,
+                "Cost Component Name" : "Main transport",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Cost Component Name" : "Insurance",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Credimundi",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Customer",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Banking cost",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Credimundi prefinancing",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Customer extra",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Export L/C",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Pre transport",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Post transport",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Pre transp. & repack",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Post transp. & repack",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Broker",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Repacking",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Supplier backorder",
+                "Cost Group" : "Supplier"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Customer backorder",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Customer overprice",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Customs",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Formalities",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "UAPL Unilever rebate",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Waiver",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Inspection",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Pre transport extra $",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Pre transport extra €",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Discharge",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Import documentary collection",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Export documentary collection",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Customer agent commission",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Share (stock)",
+                "Cost Group" : "Shares"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Share (purchase)",
+                "Cost Group" : "Shares"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Share (sales)",
+                "Cost Group" : "Shares"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Freight rebate Unilever",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Volume rebate Unilever",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Discounting Interests",
+                "Cost Group" : "Finance"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Forecasting accuracy rebate Unilever",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Combined rebate Unilever",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Customer Interest",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Customer Claim",
+                "Cost Group" : "Customer"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Insurance Claim",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 180,
+                "Cost Component Name" : "Warehouse",
+                "Cost Group" : "Logistics"
+            }, 
+            {
+                "Financing Days" : 45,
+                "Cost Component Name" : "Coface",
+                "Cost Group" : "Finance"
+            }
+        ],
+        "TotalPages" : 2,
+        "nextURL" : "http://manuchar.integ.ekaanalytics.com:99/spring/smartapp/collection/data?start%3D50%26limit%3D50%26collectionName%3DFinancing+Days",
+        "totalCount" : "54"
+    },
+    "propertyLevel" : "app",
+    "app" : "trademargin",
+    "propertyName" : "financingdays",
+    "refTypeId" : "40a27e7f-3f50-406f-a872-2ee7d9436df9",
+    "sys__createdOn" : ISODate("2019-04-21T21:02:21.811Z"),
+    "sys__createdBy" : "Joseph@mail.com"
+}
