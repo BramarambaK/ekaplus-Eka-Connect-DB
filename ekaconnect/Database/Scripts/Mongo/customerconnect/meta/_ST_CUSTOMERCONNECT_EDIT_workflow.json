@@ -1,0 +1,12 @@
+{
+    "_id": "_ST_CUSTOMERCONNECT_EDIT_workflow",
+    "componentType": "SystemTask",
+    "objectAction": "UPDATE",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "type": "workflow",
+    "taskId": "_ST_CUSTOMERCONNECT_EDIT",
+    "object": "ed0e1ad9-1120-4148-9fa3-4f21839424fa",
+    "sys__UUID": "748374bc-16c3-4307-a356-407c299f8df9"
+  }
+  

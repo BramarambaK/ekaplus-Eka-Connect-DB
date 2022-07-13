@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_CREATE_SEASON_MASTER_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_SEASON_MASTER_DATA",
+    "object" : "4aa9caf8-8dd8-49a7-8fad-a229c376327c",
+    "label": "Create SEASON_MASTER_DATA in system"
+}

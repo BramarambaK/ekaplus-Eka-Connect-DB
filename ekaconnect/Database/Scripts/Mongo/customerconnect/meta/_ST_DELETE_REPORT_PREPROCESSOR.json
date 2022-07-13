@@ -1,0 +1,9 @@
+{
+  "_id": "_ST_DELETE_REPORT_PREPROCESSOR",
+  "name": "_ST_DELETE_REPORT_PREPROCESSOR",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const appId = '12325a98-a959-4939-9005-4158d136afcd'; const objectId = '5058fd57-6ff8-4be8-8598-27250a75f029';  const getConnectData = (id) =>   new Promise((resolve, reject) => {     request(       {         method: 'GET',         url: `${req.body.propertyList.eka_connect_host}/data/${appId}/${objectId}?insightId=${id}`,         headers: {           Authorization: req.headers.authorization,           'X-TenantID': req.headers['x-tenantid'],         },         json: true,       },       function (err, response, body) {         if (err || body.error) {           reject(body);         } else {           resolve(body);         }       }     );   });  const data = req.body.bulkPayLoadData; console.log(data);  if (data) {   const promises = data.map((i) => getConnectData(i.insightId));    Promise.all(promises)     .then((result) => {       res.status(200).send(         result.map((i) => ({           ...i,           sys__data__state: 'Delete',           id: i._id,         }))       );     })     .catch((err) => {       res.status(500).send(err);     }); }",
+  "sys__UUID": "67037e28-2827-41ad-8b72-86813b3f191b"
+}

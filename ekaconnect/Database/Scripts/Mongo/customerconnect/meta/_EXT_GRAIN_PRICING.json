@@ -1,0 +1,30 @@
+{
+    "_id" : "_EXT_GRAIN_PRICING",
+    "componentType" : "ExtSystemTask",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${cargil_JDEExtracts_externalApiHost}",
+        "path" : "${cargil_JDEExtracts_externalApiPath}",
+        "method" : "GET",
+        "body" : {},
+        "authConfig" : {
+			"type" : "graining",
+            "scope" : "api.grainpricing",
+			"authUrl" : "${authUrl}"
+        },
+        "responseKey" : "value",
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "ttl" : "0"
+        },
+        "responseDataKey" : "data"
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXT_GRAIN_PRICING"
+}

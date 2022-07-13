@@ -1,0 +1,14 @@
+{
+    "_id": "_ST_ALLOCATE_FROM_CONTRACT",
+    "componentType": "ProcessTask",
+    "objectAction": "UPDATE",
+    "processorInfo": {
+      "processorId": "4b64a5ca-5118-4fc9-a5be-77eb67a127e1"
+    },
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "type": "workflow",
+    "taskId": "_ST_ALLOCATE_FROM_CONTRACT",
+    "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+  }
+    

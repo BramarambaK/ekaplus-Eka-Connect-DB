@@ -1,0 +1,84 @@
+{
+  "_id": "_ST_CONNECT_PAYMENT",
+  "componentType": "SystemTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "CONNECT_PAYMENT",
+  "object": "4465c36c-84ab-403b-a61e-cf73a37705fe",
+  "columns": [
+    {
+      "name": "userType",
+      "type": "VARCHAR",
+	  "collectionCol" : "userType"
+    },
+    {
+      "name": "bpRefNo",
+	  "collectionCol" : "bpRefNo",
+      "type": "VARCHAR",
+      "primary": "y"
+    },
+    {
+      "name": "bpName",
+	   "collectionCol" : "bpName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "payeeID",
+	   "collectionCol" : "payeeID",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "payeeName",
+	  "collectionCol" : "payeeName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "type",
+	  "collectionCol" : "type",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "paymentreceiptNo",
+	  "collectionCol" : "paymentreceiptNo",
+      "type": "VARCHAR",
+      "primary": "y"
+    },
+    {
+      "name": "documentNo",
+	  "collectionCol" : "documentNo",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "documentDate",
+	  "collectionCol" : "documentDate",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "documentCount",
+	  "collectionCol" : "documentCount",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "currency",
+	  "collectionCol" : "currency",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "totalAmount",
+	  "collectionCol" : "totalAmount",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "totalAmountInForeignCurrency",
+	  "collectionCol" : "totalAmountInForeignCurrency",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "fileId",
+	  "collectionCol" : "fileId",
+      "type": "VARCHAR"
+    }
+  ]
+}

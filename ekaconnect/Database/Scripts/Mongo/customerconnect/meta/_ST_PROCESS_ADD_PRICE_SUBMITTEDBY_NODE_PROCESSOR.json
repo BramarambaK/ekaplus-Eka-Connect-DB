@@ -1,0 +1,10 @@
+{
+  "_id": "bulkupload_submit_prices_node_processor",
+  "name": "bulkupload_submit_prices_node_processor",
+  "type": "processor",
+  "refType": "app",
+  "isNode":true,
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "",
+  "sys__UUID": "86f36443-e160-43cd-a0da-ad23ada851b1"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_ADD_CONTRACT",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "4075dbd6-0800-44ba-b03b-b3a3a392d858"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_ADD_CONTRACT",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

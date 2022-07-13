@@ -1,0 +1,15 @@
+{
+  "_id": "_CONTRACT_PRICE_CHECK_INTEGRATION_REQ",
+  "type": "property",
+  "name": "CONTRACT_PRICE_CHECK_INTEGRATION_REQ",
+  "label": "CONTRACT_PRICE_CHECK_INTEGRATION_REQ",
+  "propertyLevel": "tenant",
+  "dataType": "boolean",
+  "fieldtype": "textbox",
+  "length": "10",
+  "defaultValue": true,
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Contract price check from GPS",
+  "editSupportedInUI": true,
+  "listOfValues": "true,false"
+}

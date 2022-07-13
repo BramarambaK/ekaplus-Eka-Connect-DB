@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_NOTIFY_EMAIL_PRODUCT_VARIETY_DATA",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "171f7a1e-a381-11ec-b909-0242ac120002"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_NOTIFY_EMAIL_PRODUCT_VARIETY_DATA",
+    "label" : "API FOR AUTO TRIGGER EMAIL FOR NOTIFY DATA CHANGE FAILURE",
+    "object" : "c7e068e2-a9ba-11ec-b909-0242ac120002",
+	"sys__UUID" : "7b5aa900-aa74-11ec-b909-0242ac120002"
+}

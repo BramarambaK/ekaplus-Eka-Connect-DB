@@ -1,0 +1,12 @@
+{
+  "_id": "_REQ_CONTRACTS_CORPORATE",
+  "type": "property",
+  "name": "REQ_CONTRACTS_CORPORATE",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "CALAU",
+  "label": "Request Contracts Corporate",
+  "editSupportedInUI": true
+}

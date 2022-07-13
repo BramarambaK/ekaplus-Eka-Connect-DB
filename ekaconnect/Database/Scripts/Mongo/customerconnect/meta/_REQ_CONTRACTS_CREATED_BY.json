@@ -1,0 +1,12 @@
+{
+  "_id": "_REQ_CONTRACTS_CREATED_BY",
+  "type": "property",
+  "name": "_REQ_CONTRACTS_CREATED_BY",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "Customer Hub",
+  "label": "Request Contracts Grower Created by",
+  "editSupportedInUI": true
+}

@@ -1,0 +1,46 @@
+{
+    "_id" : "INVENTORY_EXTERNAL_LINK_TASK",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "INVENTORY_EXTERNAL_LINK_TASK",
+    "object" : "f895de3c-5f05-4671-b70d-4c180078fc07",
+    "sys__UUID" : "5538b3be-f27e-4bc9-9bf9-1f37ea3bdc98",
+    "type" : "workflow",
+    "version" : "V2",
+    "layout" : {},
+    "template" : [ 
+        {
+            "deviceType" : "web",
+            "template" : "cargill-web",
+            "config" : {
+                "aside" : ""
+            }
+        }, 
+        {
+            "deviceType" : "mobile",
+            "template" : "cargill-mobile",
+            "config" : {
+                "aside" : ""
+            }
+        }
+    ],
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "task" : "openinventory",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.INVENTORY_EXTERNAL_LINK_TASK",
+                    "name" : "LOAD_INVENTORY_DATA"
+                }, 
+                {
+                    "data" : "output.LOAD_INVENTORY_DATA",
+                    "name" : "INVENTORY_EXTERNAL_LINK_TASK"
+                }
+            ]
+        }
+    ]
+}

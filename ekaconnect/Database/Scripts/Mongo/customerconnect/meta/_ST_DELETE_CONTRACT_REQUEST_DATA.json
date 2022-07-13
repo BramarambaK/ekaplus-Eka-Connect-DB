@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_DELETE_CONTRACT_REQUEST_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_CONTRACT_REQUEST_DATA",
+    "object" : "3725efac-7f2a-462b-8af0-5462e33cf544",
+    "sys__UUID": "25e277c0-1cb3-4e3e-bfcf-ee5816525e6d",
+    "label": "Delete CONTRACT REQUEST in system"
+}

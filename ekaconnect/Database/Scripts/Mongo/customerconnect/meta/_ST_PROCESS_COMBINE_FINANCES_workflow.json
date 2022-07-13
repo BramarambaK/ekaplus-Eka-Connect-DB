@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_COMBINE_FINANCES_workflow",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "b62ccc68-eec0-40d7-95d2-8015bf0fea03"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_COMBINE_FINANCES",
+  "object": "d59b8c10-8c94-4b87-a430-f6fd69888a37"
+}

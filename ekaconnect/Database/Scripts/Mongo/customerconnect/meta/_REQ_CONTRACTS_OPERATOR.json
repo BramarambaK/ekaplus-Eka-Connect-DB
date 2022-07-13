@@ -1,0 +1,12 @@
+{
+  "_id": "_REQ_CONTRACTS_OPERATOR",
+  "type": "property",
+  "name": "_REQ_CONTRACTS_OPERATOR",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "Customer Hub",
+  "label": "Request Contracts Grower Operator",
+  "editSupportedInUI": true
+}

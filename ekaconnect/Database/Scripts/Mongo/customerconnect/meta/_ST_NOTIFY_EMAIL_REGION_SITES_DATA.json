@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_NOTIFY_EMAIL_REGION_SITES_DATA",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "53633010-0dff-4e48-8e2d-c4cff20f7875"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_NOTIFY_EMAIL_REGION_SITES_DATA",
+    "label" : "API FOR AUTO TRIGGER EMAIL FOR NOTIFY DATA CHANGE FAILURE",
+    "object" : "ac4bf583-a9a4-446d-b6f9-3c083c3e1030"
+}

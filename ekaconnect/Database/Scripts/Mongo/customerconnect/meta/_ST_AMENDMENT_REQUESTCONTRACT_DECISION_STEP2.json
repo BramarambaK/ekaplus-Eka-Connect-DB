@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_AMENDMENT_REQUESTCONTRACT_DECISION_STEP2",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "397fb09e-4910-42cb-ad3d-6220e9442914"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_AMENDMENT_REQUESTCONTRACT_DECISION_STEP2",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

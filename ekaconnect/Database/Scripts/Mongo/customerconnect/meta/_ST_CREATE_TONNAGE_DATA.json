@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_CREATE_TONNAGE_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_TONNAGE_DATA",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "label" : "System Tonnage"
+}

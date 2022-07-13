@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_GET_PROGAM_NAME",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "f401f436-8dc4-4399-bc9e-b388354901a0"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "sys__UUID": "62d72f83-e620-454f-b4bf-d8a65dce0ea2",
+  "type": "workflow",
+  "taskId": "_ST_GET_PROGAM_NAME",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

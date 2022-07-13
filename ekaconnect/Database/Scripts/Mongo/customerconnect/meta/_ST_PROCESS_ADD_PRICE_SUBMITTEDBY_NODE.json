@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_ADD_PRICE_SUBMITTEDBY_NODE",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "86f36443-e160-43cd-a0da-ad23ada851b1"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_ADD_PRICE_SUBMITTEDBY_NODE",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}

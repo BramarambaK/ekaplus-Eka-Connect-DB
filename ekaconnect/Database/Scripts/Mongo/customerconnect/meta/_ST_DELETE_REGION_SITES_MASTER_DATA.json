@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_DELETE_REGION_SITES_MASTER_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_REGION_SITES_MASTER_DATA",
+    "object" : "ac4bf583-a9a4-446d-b6f9-3c083c3e1030",
+    "label": "Delete REGION_SITES_MASTER_DATA in system"
+}

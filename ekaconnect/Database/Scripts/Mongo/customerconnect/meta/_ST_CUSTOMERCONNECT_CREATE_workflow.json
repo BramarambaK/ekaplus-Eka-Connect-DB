@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CUSTOMERCONNECT_CREATE_workflow",
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_CUSTOMERCONNECT_CREATE",
+  "object": "ed0e1ad9-1120-4148-9fa3-4f21839424fa",
+  "sys__UUID": "5d5d73db-26d1-4ebe-8180-20747e2c4d12"
+}

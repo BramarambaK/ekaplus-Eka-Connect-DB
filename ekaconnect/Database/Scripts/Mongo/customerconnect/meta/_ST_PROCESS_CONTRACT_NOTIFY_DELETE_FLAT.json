@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_CONTRACT_NOTIFY_DELETE_FLAT",
+  "componentType": "ProcessTask",
+  "objectAction": "DELETE",
+  "processorInfo": {
+    "processorId": "924bf59f-f374-4c18-a41e-074eeb6a6770"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_CONTRACT_NOTIFY_DELETE_FLAT",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

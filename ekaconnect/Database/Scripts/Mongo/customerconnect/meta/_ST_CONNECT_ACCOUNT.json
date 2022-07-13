@@ -1,0 +1,89 @@
+{
+  "_id": "_ST_CONNECT_ACCOUNT",
+  "componentType": "SystemTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "CONNECT_ACCOUNT",
+  "object": "967db9f1-f006-400f-8dee-e81692973390",
+  "columns": [
+    {
+      "name": "userType",
+      "type": "VARCHAR",
+	  "collectionCol" : "userType"
+    },
+    {
+      "name": "bpRefNo",
+	  "collectionCol" : "bpRefNo",
+      "type": "VARCHAR",
+      "primary": "y"
+    },
+    {
+      "name": "bpName",
+	   "collectionCol" : "bpName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "payeeID",
+	   "collectionCol" : "payeeID",
+      "type": "VARCHAR",
+      "primary": "y"
+    },
+    {
+      "name": "payeeName",
+	  "collectionCol" : "payeeName",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "type",
+	  "collectionCol" : "type",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "monthAndYear",
+	  "collectionCol" : "monthAndYear",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "financialYearAndQuarter",
+	  "collectionCol" : "financialYearAndQuarter",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "currency",
+	  "collectionCol" : "currency",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "totalAmount",
+	  "collectionCol" : "totalAmount",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "openAmount",
+	  "collectionCol" : "openAmount",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "documentCount",
+	  "collectionCol" : "documentCount",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "totalAmountInForeignCurrency",
+	  "collectionCol" : "totalAmountInForeignCurrency",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "openAmountInForeignCurrency",
+	  "collectionCol" : "openAmountInForeignCurrency",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "ngrFilter",
+	  "collectionCol" : "ngrFilter",
+      "type": "VARCHAR"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_DELETE_PRICE_LIMIT",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_PRICE_LIMIT",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40"
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "_CONTRACT_BROWSE_BIDS_URL",
+  "type": "property",
+  "name": "CONTRACT_BROWSE_BIDS_URL",
+  "label": "CONTRACT_BROWSE_BIDS_URL",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "length": "200",
+  "fieldtype": "textbox",
+  "visibility": "public",
+  "defaultValue": "https://cacpuirtwo.dev.dev-cglcloud.com/Landing",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Contract price check failed browse bids redirection URL",
+  "editSupportedInUI": true
+}

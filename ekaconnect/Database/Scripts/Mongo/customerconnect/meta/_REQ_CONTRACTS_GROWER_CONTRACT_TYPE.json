@@ -1,0 +1,12 @@
+{
+  "_id": "_REQ_CONTRACTS_GROWER_CONTRACT_TYPE",
+  "type": "property",
+  "name": "REQ_CONTRACTS_GROWER_CONTRACT_TYPE",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "P",
+  "label": "Request Contracts Grower Contract Type",
+  "editSupportedInUI": true
+}

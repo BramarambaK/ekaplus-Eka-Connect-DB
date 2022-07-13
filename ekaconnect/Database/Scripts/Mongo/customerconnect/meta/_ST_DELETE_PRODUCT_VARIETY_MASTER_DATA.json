@@ -1,0 +1,12 @@
+{
+    "_id" : "_ST_DELETE_PRODUCT_VARIETY_MASTER_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_PRODUCT_VARIETY_MASTER_DATA",
+    "object" : "c7e068e2-a9ba-11ec-b909-0242ac120002",
+    "label" : "Delete PRODUCT VARIETY MASTER DATA in system",
+	"sys__UUID" : "54d16076-aa74-11ec-b909-0242ac120002"
+}

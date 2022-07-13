@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_AMENDMENT_SUBMIT_REQUEST_CONTRACTS",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "8e124e05-50b7-4da6-be79-f5f234ec3a72"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_AMENDMENT_SUBMIT_REQUEST_CONTRACTS",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

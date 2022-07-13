@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_DELETE_PRODUCT_QUALITY_MASTER_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_PRODUCT_QUALITY_MASTER_DATA",
+    "object" : "ae5f314e-c377-419e-9dfa-1f296f6fccfa",
+    "label": "Delete PRODUCT_QUALITY_MASTER_DATA in system"
+}

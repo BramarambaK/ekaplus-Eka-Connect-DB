@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_ACCOUNTS_TAB",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "2e7dd2bb-bb35-4f49-ab9d-759e1491d3a7"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_ACCOUNTS_TAB",
+  "object": "d59b8c10-8c94-4b87-a430-f6fd69888a37"
+}

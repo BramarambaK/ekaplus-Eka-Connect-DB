@@ -1,0 +1,12 @@
+{
+  "_id": "_REQ_CONTRACTS_PRICE_UNIT",
+  "type": "property",
+  "name": "REQ_CONTRACTS_PRICE_UNIT",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "AUD",
+  "label": "Request Contracts Price unit",
+  "editSupportedInUI": true
+}

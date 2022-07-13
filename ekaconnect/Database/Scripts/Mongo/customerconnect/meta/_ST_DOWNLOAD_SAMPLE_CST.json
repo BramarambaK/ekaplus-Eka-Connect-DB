@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_DOWNLOAD_SAMPLE_CST",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "6111d9ef-91de-4024-8d83-5c5c0c59eeb8"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_DOWNLOAD_SAMPLE_CST",
+  "object": "900fcf0a-cbc5-4de1-ad8c-c2987f196cd5"
+}

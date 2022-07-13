@@ -1,0 +1,12 @@
+{
+  "_id": "_REQ_CONTRACTS_TRADER_NAME",
+  "type": "property",
+  "name": "REQ_CONTRACTS_TRADER_NAME",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "ADMIN JHON",
+  "label": "Request Contracts Trader name",
+  "editSupportedInUI": true
+}

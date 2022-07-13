@@ -1,0 +1,18 @@
+{
+    "_id" : "_ST_CONNECT_FAVOURITE",
+    "componentType" : "SystemTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "ST_CONNECT_FAVOURITE",
+    "object" : "1e6570a0-e47d-492f-ac87-ae7cf91d0682",
+    "columns" : [ 
+        {
+            "name" : "refObjFavouriteId",
+            "type" : "VARCHAR",
+            "collectionCol" : "refObjFavouriteId",
+            "primary" : "y"
+        }
+    ]
+}

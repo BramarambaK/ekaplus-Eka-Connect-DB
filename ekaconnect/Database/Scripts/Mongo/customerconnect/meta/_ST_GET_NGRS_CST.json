@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_GET_NGRS_CST",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "b2304c8d-ed2a-4ff0-b695-56f78c6b8a2b"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_GET_NGRS_CST",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

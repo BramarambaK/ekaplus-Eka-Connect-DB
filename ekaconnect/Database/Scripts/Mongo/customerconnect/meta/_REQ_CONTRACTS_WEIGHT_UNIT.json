@@ -1,0 +1,12 @@
+{
+  "_id": "_REQ_CONTRACTS_WEIGHT_UNIT",
+  "type": "property",
+  "name": "REQ_CONTRACTS_WEIGHT_UNIT",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "MT",
+  "label": "Request Contracts Weight unit",
+  "editSupportedInUI": true
+}

@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_ALLOCATE_TICKETS",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "fc2a444c-4a05-4893-a9c0-7bccf8198d15"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_ALLOCATE_TICKETS",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}
+  

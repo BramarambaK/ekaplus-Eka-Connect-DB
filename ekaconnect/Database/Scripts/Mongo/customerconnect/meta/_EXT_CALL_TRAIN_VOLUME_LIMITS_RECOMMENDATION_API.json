@@ -1,0 +1,27 @@
+{
+    "_id" : "_EXT_CALL_TRAIN_VOLUME_LIMITS_RECOMMENDATION_API",
+    "componentType" : "ExtSystemTask",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/lambdagatewayapi",
+        "method" : "POST",
+        "body" : {
+            "appId" : "12325a98-a959-4939-9005-4158d136afcd",
+            "method" : "POST",
+            "workFlowTask" : "volumelisting",
+            "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+        },
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "endPoint" : "/train-recommendation-for-all-users/"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "_EXT_CALL_TRAIN_VOLUME_LIMITS_RECOMMENDATION_API"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "Navigation",
+    "type" : "property",
+    "name" : "Navigation",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "length" : "5",
+    "label" : "Navigation Property",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "defaultValue" : "5",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "Decision to Navigation delay in seconds"
+}

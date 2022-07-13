@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_DOWNLOAD_LOGS_CST",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "d0f7a416-86e0-4b79-bb1d-4efbdbff5c34"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_DOWNLOAD_LOGS",
+  "object": "89492129-3a53-40ab-a6f2-cd3cedb33780"
+}
