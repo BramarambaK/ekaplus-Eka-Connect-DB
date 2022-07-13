@@ -1,0 +1,16 @@
+{
+  "_id": "home_SMP",
+  "layout": {
+    "name": "list"
+  },
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "workflow": "samplinginstructionlist",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "decisions": [],
+  "type": "workflow",
+  "taskId": "home",
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+  "label": "Home"
+}

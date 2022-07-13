@@ -1,0 +1,78 @@
+{
+  "_id": "_ST_CONNECT_SAMPLE",
+  "componentType": "SystemTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "CONNECT_SAMPLE",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175",
+  "columns": [
+    {
+      "name": "sample_instruction_id",
+      "type": "VARCHAR",
+      "primary": "y"
+    },
+    {
+      "name": "sample_no",
+      "type": "VARCHAR",
+      "primary": "y"
+    },
+    {
+      "name": "ref_no",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_quantity",
+      "type": "VARCHAR"
+    },
+    {
+      "name" : "sample_quantity_value",
+      "type" : "VARCHAR"
+    }, 
+    {
+      "name": "origin",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "product",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_sent_to",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_drawn_from",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "allocated_to",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "linked_to",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_approval_status",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quality_result_status",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_status",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_result",
+      "type": "VARCHAR"
+    },
+    {
+      "name" : "sample_associated_ref_no",
+      "type" : "VARCHAR"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "_id": "editcreatequalitycompositelistview_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "label": "",
+  "payLoad": "completeData",
+  "layout": {
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px"
+    },
+    "formLayoutStyle": {
+      "height": "124px",
+      "padding-left": "6px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["quality_ref_no"]
+      }
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositequality",
+      "label": "SAVE",
+      "decisionName": "compositequality",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.editcreatequalitycompositelistview",
+          "appendMsg": false,
+          "name": "_ST_QUALITY_SAVE"
+        },
+        {
+          "data": "output._ST_QUALITY_SAVE",
+          "name": "qualitylist",
+          "dirtyCheckFulfilled": true
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "quality_analysis_by",
+        "event": "data.editcreatequalitydynamic[0].quality_analysis_by=value"
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "quality_analysis_by_box",
+        "event": "data.editcreatequalitydynamic[0].quality_analysis_by_box=value"
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "quality_date",
+        "event": "data.editcreatequalitydynamic[0].quality_date=value",
+        "disabled": true
+      },
+      {
+        "style": {
+          "width": "310px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "internal_comments",
+        "event": "data.editcreatequalitydynamic[0].internal_comments=value"
+      },
+      {
+        "style": {
+          "width": "310px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "external_comments",
+        "event": "data.editcreatequalitydynamic[0].external_comments=value"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "40px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "quality_ref_no": "",
+        "key": "quality_ref_no",
+        "event": "data.editcreatequalitydynamic[0].quality_ref_no=value"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "40px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "Quality_results_against": "",
+        "key": "Quality_results_against",
+        "event": "data.editcreatequalitydynamic[0].Quality_results_against=value"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "40px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "forqualitymandatory": "",
+        "key": "forqualitymandatory",
+        "value": "forqualitymandatory"
+      }
+    ]
+  ],
+  "taskId": "editcreatequalitycompositelistview",
+  "object": "ddec290e-71ee-4538-8ec9-37bbcc0cdca1"
+}

@@ -1,0 +1,16 @@
+{
+  "_id": "sampling_quality_details_policy",
+  "app_UUID": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "userGrants": {},
+  "refType": "object",
+  "refTypeId": "aacbf12d-7d98-469a-b149-1ec66e9ecb8c",
+  "name": "sampling_quality_details_policy",
+  "type": "policy",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["UPDATE", "READ", "DELETE"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE"]
+    }
+  }
+}

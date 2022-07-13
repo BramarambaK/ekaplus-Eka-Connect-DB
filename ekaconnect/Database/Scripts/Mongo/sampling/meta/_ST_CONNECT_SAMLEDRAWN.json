@@ -1,0 +1,41 @@
+{
+    "_id" : "_ST_CONNECT_SAMLEDRAWN",
+    "componentType" : "SystemTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "workflow",
+    "taskId" : "CONNECT_SAMLEDRAWN",
+    "object" : "4638683b-aa06-474c-8cd6-66b8a463b769",
+    "columns" : [ 
+        {
+            "name" : "ref_no",
+            "type" : "VARCHAR",
+            "primary" : "y"
+        }, 
+        {
+            "name" : "sample_instruction_id",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "allocation_group_no",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "drawn_from_uom",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "allocated_quantity",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "quantity_represented",
+            "type" : "VARCHAR"
+        }, 
+        {
+            "name" : "sample_no",
+            "type" : "VARCHAR"
+        }
+    ]
+}

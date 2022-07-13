@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_VALIDATE_SAMPLE_SMP",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "ba3249cd-2232-41c7-ac36-ea9dcf0e65ef"
+  },
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_VALIDATE_SAMPLE",
+  "label": "Validate Samples",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

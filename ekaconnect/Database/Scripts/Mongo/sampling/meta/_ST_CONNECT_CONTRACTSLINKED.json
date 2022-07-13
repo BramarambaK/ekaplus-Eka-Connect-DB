@@ -1,0 +1,38 @@
+{
+  "_id": "_ST_CONNECT_CONTRACTSLINKED",
+  "componentType": "SystemTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "CONNECT_CONTRACTSLINKED",
+  "object": "1275fcd2-38bc-4db6-a5d1-94ab426c92a0",
+  "columns": [
+    {
+      "name": "Ref_No",
+      "type": "VARCHAR",
+	  "collectionCol" : "Ref No",
+      "primary": "y"
+    },
+    {
+      "name": "Business_Partner",
+	  "collectionCol" : "Business Partner",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Allocated_Quantity",
+	   "collectionCol" : "Allocated Quantity",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Open_Quantity",
+	   "collectionCol" : "Open Quantity",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "link",
+	  "collectionCol" : "link",
+      "type": "boolean"
+    }
+  ]
+}

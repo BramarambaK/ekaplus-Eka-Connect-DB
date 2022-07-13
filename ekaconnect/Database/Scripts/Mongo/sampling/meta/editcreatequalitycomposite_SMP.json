@@ -1,0 +1,70 @@
+{
+  "_id": "editcreatequalitycomposite_SMP",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "qualitylist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositequality",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "data": "output.editcreatequalitycomposite",
+          "name": "editcreatequalitycomposite",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "label": "Quality Results",
+  "layout": {
+    "name": "customv2",
+    "useQueryParams": true,
+    "preserveSelectedData": true
+  },
+  "object": "ddec290e-71ee-4538-8ec9-37bbcc0cdca1",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "taskId": "editcreatequalitycomposite",
+  "type": "workflow",
+  "viewAction": "composite",
+  "payLoad": "selected.editcreatequalitycomposite",
+  "workflows": [
+    {
+      "data": "selected.qualitylist",
+      "name": "editcreatequalitycompositeform"
+    },
+    {
+      "data": "selected.qualitylist",
+      "name": "editcreatequalitycompositeview"
+    },
+    {
+      "data": "selected.qualitylist",
+      "name": "editcreatequalitycompositelistview"
+    },
+    {
+      "name": "editcreatequalitydynamic",
+      "cache": false,
+      "data": "selected"
+    }
+  ]
+}

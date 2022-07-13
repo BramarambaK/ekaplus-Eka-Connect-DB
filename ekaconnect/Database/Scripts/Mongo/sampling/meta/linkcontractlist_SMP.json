@@ -1,0 +1,111 @@
+{
+  "_id": "linkcontractlist_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "Link Contract Listing",
+  "getDataFromExternalAPI": false,
+  "processorInfo": {
+    "processorId": "70ae7d64-48b6-4073-a627-7a0ff040d146"
+  },
+  "apiInfo1": {
+    "path": "/collection/v1?collectionName=TRM_List of Stocks",
+    "headers": {},
+    "inputMapping": {},
+    "method": "GET",
+    "useInputMapping": false,
+    "host": "${properties.platform_url}",
+    "body": {}
+  },
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "getInitialData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "task": "editlinkcontractlist",
+      "selection": "row",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got replaced with some errors"
+            }
+          },
+          "displayType": "inlineEdit",
+          "appendMsg": true,
+          "name": "_ST_EDIT_LINKCONTRACT",
+          "data": "output.editlinkcontractlist"
+        },
+        {
+          "name": "EXT_LINK_CONTRACT",
+          "data": "output.editlinkcontractlist"
+        },
+        {
+          "name": "contractlinkcomposite",
+          "showPopUp": false
+        }
+      ],
+      "label": " Update",
+      "position": "top",
+      "type": "submit"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": false,
+      "key": "ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": false,
+      "key": "CP_Name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "open_Quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "link"
+    }
+  ],
+  "taskId": "linkcontractlistV1",
+  "object": "3735443c-d38b-43cb-9402-eb9351da6ec4"
+}

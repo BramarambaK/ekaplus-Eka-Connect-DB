@@ -1,0 +1,33 @@
+{
+    "_id" : "MULTI_API_SALESSTOCKSALLOCATED",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_SALESSTOCKSALLOCATED",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_API_SALESALLOCATEDSTOCKALLOCATIONDETAILS",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Purchase Ref No",
+                        "operator" : "like",
+                        "value" : "STK",
+                        "type" : "static"
+                    }
+                ]
+            }, 
+            {
+                "id" : "EXTERNAL_API_PHYSICALDETAILS"
+            }, 
+            {
+                "id" : "EXTERNAL_API_ALLOCATIONHEADERS"
+            }
+        ],
+        "query" : "select aa.SALES_CONTRACT_ITEM_REF_NO as \"Ref_No\",aa.ALLOCATED_QUANTITY as \"Allocated Quantity\",aa.PROFIT_CENTER as \"Profit Center\",aa.ALLOCATION_GROUP_NO as \"Allocation Group No\",aa.ALLOCATION_DATE as \"Allocation Date\",aa.SALES_STRATEGY as \"Strategy\",aa.PRODUCT as \"Product\",aa.ORIGIN as \"Origin\",aa.QUALITY as \"Quality\",aa.CROP_YEAR as \"CropYear\",aa.PURCHASE_REF_NO as \"Stock_Ref_No\",aa.PURCHASE_REF_NO as \"Purchase_Ref_No\",b.BUSINESS_PARTNER as \"Sales CP Name\",b.REF_NO as \"RefNo\",b.PRODUCT_ID as \"PRODUCT_ID\",b.QTY_UNIT_ID as \"QTY_UNIT_ID\",aa.QUANTITY_UNIT as \"Quantity Unit\",aa.STATUS as \"AllocationStatus\" from (select a.SALES_CONTRACT_ITEM_REF_NO,a.ALLOCATED_QUANTITY,a.PROFIT_CENTER, a.ALLOCATION_GROUP_NO,a.ALLOCATION_DATE,a.SALES_STRATEGY,a.PRODUCT,a.ORIGIN,a.QUALITY ,a.CROP_YEAR,a.PURCHASE_REF_NO,a.QUANTITY_UNIT,ah.STATUS from EXTERNAL_API_SALESALLOCATEDSTOCKALLOCATIONDETAILS a  left join EXTERNAL_API_ALLOCATIONHEADERS ah on (ah.SALES_CONTRACT_ITEM_REF_NO=a.SALES_CONTRACT_ITEM_REF_NO) ) aa left join  EXTERNAL_API_PHYSICALDETAILS b  on ( aa.SALES_CONTRACT_ITEM_REF_NO=b.REF_NO)"
+    }
+}

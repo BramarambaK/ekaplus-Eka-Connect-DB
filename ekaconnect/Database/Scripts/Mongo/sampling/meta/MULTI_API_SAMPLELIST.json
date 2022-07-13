@@ -1,0 +1,33 @@
+{
+  "_id" : "MULTI_API_SAMPLELIST",
+  "componentType" : "MULTI_API_TASK",
+  "objectAction" : "CREATE",
+  "refType" : "app",
+  "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "taskId" : "MULTI_API_SAMPLELIST",
+  "object" : "3735443c-d38b-43cb-9402-eb9351da6ec4",
+  "type" : "workflow",
+  "returnData" : "Y",
+  "mergeParams" : {
+      "sources" : [ 
+          {
+              "id" : "CONNECT_SAMPLE"
+          }, 
+          {
+              "id" : "CONNECT_LINKCONTRACT"
+          }, 
+          {
+              "id" : "CONNECT_SAMPLEINSTRUCTION",
+              "filterBy" : [ 
+                  {
+                      "fieldName" : "sys__data__state",
+                      "operator" : "ne",
+                      "value" : "Delete",
+                      "type" : "static"
+                  }
+              ]
+          }
+      ],
+      "query" : "select\r\n   AAA.SAMPLE_INSTRUCTION_ID as \"sample_instruction_id\",\r\n   AAA.SAMPLE_NO as \"sample_no\",\r\n   AAA.REF_NO as \"ref_no\",\r\n   AAA.SAMPLE_QUANTITY as \"sample_quantity\",\r\n   AAA.SAMPLE_QUANTITY_VALUE as \"sample_quantity_value\",\r\n   AAA.QUALITY_RESULT_STATUS as \"quality_result_status\",\r\n   AAA.SAMPLE_STATUS as \"sample_status\",\r\n   AAA.SAMPLE_RESULT as \"sample_result\",\r\n   d.SAMPLE_DRAWNFROMVALUE as \"sample_drawn_from\",\r\n   AAA.linkedto as \"linked_to\",\r\n    CASE\r\n            WHEN\r\n               AAA.SAMPLE_ASSOCIATED_REF_NO is null \r\n            THEN\r\n               d.INSTRUCTION_AGAINST_REF_NO\r\n            ELSE\r\n               AAA.SAMPLE_ASSOCIATED_REF_NO\r\n         END\r\n         as \"allocated_to\",\r\n   d.ORIGIN as \"origin\",\r\n   d.QUALITY as \"quality\",\r\n   d.SEND_SAMPLE_TO_NAME as \"sample_sent_to\",\r\n   d.PRODUCT as \"product\",\r\n   d.SAMPLE_INSTRUCTION_ID_DISPLAY as \"sample_instruction_id_display\" \r\nfrom\r\n   (\r\n      select\r\n         a.SAMPLE_INSTRUCTION_ID,\r\n         a.SAMPLE_NO,\r\n         a.REF_NO,\r\n         a.SAMPLE_QUANTITY_VALUE,\r\n         a.SAMPLE_QUANTITY,\r\n         a.QUALITY_RESULT_STATUS,\r\n\t\t CASE\r\n            WHEN\r\n               a.SAMPLE_ASSOCIATED_REF_NO is null \r\n            THEN\r\n               null \r\n            ELSE\r\n                a.SAMPLE_ASSOCIATED_REF_NO \r\n         END\r\n         as SAMPLE_ASSOCIATED_REF_NO,\r\n         CASE\r\n            WHEN\r\n               a.SAMPLE_STATUS is null \r\n            THEN\r\n               'Pending' \r\n            ELSE\r\n               a.SAMPLE_STATUS \r\n         END\r\n         as SAMPLE_STATUS, a.SAMPLE_RESULT, GROUP_CONCAT(b.REF_NO SEPARATOR ',')as allocated_to, c.* \r\n      from\r\n         CONNECT_SAMPLE a \r\n         left join\r\n            CONNECT_LINKCONTRACT b \r\n            on (a.SAMPLE_INSTRUCTION_ID = b.SAMPLE_INSTRUCTION_ID \r\n            and a.SAMPLE_NO = b.SAMPLE_NO) \r\n         left join\r\n            (\r\n               select\r\n                  SAMPLE_INSTRUCTION_ID AS \"SII\",\r\n                  SAMPLE_NO AS \"SNO\",\r\n                  GROUP_CONCAT(REF_NO SEPARATOR ',') as linkedto \r\n               from\r\n                  CONNECT_LINKCONTRACT \r\n               where\r\n                  lower(LINK) = 'true' \r\n               group by\r\n                  SAMPLE_INSTRUCTION_ID,\r\n                  SAMPLE_NO\r\n            )\r\n            c \r\n            on (a.SAMPLE_INSTRUCTION_ID = c.SII \r\n            and a.SAMPLE_NO = c.SNO) \r\n      group by\r\n         a.SAMPLE_INSTRUCTION_ID,\r\n         a.SAMPLE_NO,\r\n         a.SAMPLE_QUANTITY,\r\n         a.QUALITY_RESULT_STATUS,\r\n         a.SAMPLE_STATUS,\r\n         a.SAMPLE_RESULT\r\n   )\r\n   AAA \r\n   join\r\n      CONNECT_SAMPLEINSTRUCTION d \r\n      on (AAA.SAMPLE_INSTRUCTION_ID = d.SAMPLE_INSTRUCTION_ID)"
+  }
+}

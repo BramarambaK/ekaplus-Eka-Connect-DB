@@ -1,0 +1,88 @@
+{
+  "_id": "deletequalitylist_SMP",
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "Remove Quality",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to remove the quality ${quality_ref_no}?",
+      "headerMessage": "Remove : ${quality_ref_no}"
+    }
+  },
+  "input": ["quality_ref_no"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "qualitylist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "deletequalitylist",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Quality got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Quality got deleted with some errors"
+            }
+          },
+          "data": "output.deletequalitylist",
+          "appendMsg": true,
+          "name": "_ST_DELETE_QUALITY"
+        },
+        {
+          "data": "output._ST_DELETE_QUALITY",
+          "appendMsg": true,
+          "name": "qualitylist",
+          "showPopUp": false
+        }
+      ],
+      "label": "DELETE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "qualitylist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Delete_Quality",
+  "fields": [
+    {
+      "heading": "quality_ref_no"
+    }
+  ],
+  "taskId": "deletequalitylist",
+  "object": "ddec290e-71ee-4538-8ec9-37bbcc0cdca1"
+}

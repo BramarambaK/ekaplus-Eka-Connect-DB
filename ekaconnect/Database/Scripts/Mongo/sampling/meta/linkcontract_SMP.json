@@ -1,0 +1,110 @@
+{
+  "_id": "linkcontract_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "Sample Instruction Details",
+  "type": "workflow",
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "638a08b2-14f3-49ab-9eff-51af77bfddde"
+    }
+  },
+  "version": "V2",
+  "payLoad": "completeData",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "showCheckbox": false,
+    "tableEditing": false,
+    "pagination": false,
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "limitHeight": true,
+    "dropdownDecisions": true,
+    "preserveSelectedData": true,
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["sample_instruction_id", "sample_no"]
+      }
+    }
+  },
+  "decisions": [],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_instruction_id",
+      "width": "2px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_no",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "origin",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "quality",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_sent_to",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_drawn_from",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "allocated_to",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_approval_status",
+      "width": "180px"
+    }
+  ],
+  "taskId": "linkcontract",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

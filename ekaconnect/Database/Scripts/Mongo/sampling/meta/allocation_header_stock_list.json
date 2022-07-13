@@ -1,0 +1,197 @@
+{
+    "_id" : "allocation_header_stock_list",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : true,
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/collectionmapper/bcb79287-04fb-4af2-ae97-61af272b2c45/d6df33f0-0e8d-46de-91b4-9968484b5fba/fetchCollectionRecords",
+        "headers" : {
+            "ttl" : "60"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "mergePayload" : true,
+        "useInputMapping" : false,
+        "body" : {
+            "collectionName" : "Stock_unallocated_lookup",
+            "getAllRecords" : true
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "List Of Stock-Unallocated",
+    "type" : "workflow",
+    "payLoad" : "selected.sampleallocationstockslist",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "header" : true,
+        "headerOperations" : true,
+        "options" : {
+            "columnFilter" : false,
+            "sortFilter" : false,
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "reset" : true,
+            "export" : false,
+            "sessionStateDisable" : true
+        },
+        "theme" : "theme-grid-white",
+        "selectionMode" : "multiple",
+        "showCheckbox" : true,
+        "preserveSelectedData" : true,
+        "scrollHeight" : "336px",
+        "selectionFilter" : [ 
+            "warehouse", 
+            "product specs"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "sampleagainst"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-success",
+            "objectAction" : "CREATE",
+            "task" : "sampleallocationstockslist",
+            "outcomes" : [ 
+                {
+                    "data" : "output.sampleallocationstockslist",
+                    "name" : "_ST_PROCESSOR_VALIDATE_ALLOCATIONS"
+                }, 
+                {
+                    "data" : "selected.sampleallocationstockslist",
+                    "name" : "sampleagainst",
+                    "setSelected" : [ 
+                        "selected.sampleagainst.samplingparticularlist", 
+                        "selected.sampleagainst.samplingparticularform.listingData"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "ADD",
+            "type" : "submit",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "Sampling Instruction List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true,
+            "value" : "${selected.sampleagainst.samplingparticularform.sample_instruction_id}"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Stock_Ref_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Contract_Ref_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Profit Center"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Strategy"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "To Be Planned Qty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Quantity Unit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Container_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "warehouse"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "shed"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "hidden" : true,
+            "key" : "product specs"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Product"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Origin"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CropYear"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "External_Stock_Ref_No"
+        }
+    ],
+    "taskId" : "sampleallocationstockslist",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

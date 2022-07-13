@@ -1,0 +1,8 @@
+{
+    "_id" : "eka_ctrm_host_sampling",
+    "propertyLevel" : "app",
+    "propertyName" : "eka_ctrm_host",
+    "propertyValue" : "http://172.16.5.131:9101",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "property"
+}

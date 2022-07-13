@@ -1,0 +1,48 @@
+{
+    "_id" : "printsample_composite",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "samplinginstructionlist"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CLOSE",
+            "position" : "bottom"
+        }
+    ],
+    "label" : "Generate Sampling Instruction",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : true,
+        "preserveSelectedData" : true,
+        "routeOnRefresh" : "samplinginstructionlist"
+    },
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "printsample",
+    "type" : "workflow",
+    "viewAction" : "composite",
+    "workflows" : [ 
+        {
+            "data" : "selected.samplinginstructionlist",
+            "name" : "sampleinstructiondetails"
+        }, 
+        {
+            "data" : "selected.samplinginstructionlist",
+            "name" : "generatedocument"
+        }, 
+        {
+            "data" : "selected.samplinginstructionlist",
+            "name" : "instructiondocumentlisting"
+        }
+    ]
+}

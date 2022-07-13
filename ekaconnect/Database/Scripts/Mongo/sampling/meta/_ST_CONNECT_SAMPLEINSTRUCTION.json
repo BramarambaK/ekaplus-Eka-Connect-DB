@@ -1,0 +1,166 @@
+{
+  "_id": "_ST_CONNECT_SAMPLEINSTRUCTION",
+  "componentType": "SystemTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "CONNECT_SAMPLEINSTRUCTION",
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+  "columns": [
+    {
+      "name": "sample_instruction_id",
+      "type": "VARCHAR",
+      "primary": "y"
+    },
+    {
+      "name": "id",
+      "type": "VARCHAR",
+      "collectionCol": "_id"
+    },
+    {
+      "name": "sample_instruction_to",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "send_sample_to",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_type",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sampling_date",
+      "type": "Date"
+    },
+    {
+      "name": "sample_drawnfromvalue",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "instruction_against_ref_no",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_status",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "product",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "origin",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quality",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "instructionagainst",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "issue_date",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quantity_per_sample",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quantity_uom",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sampling_instruction_remarks",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "reserve_stock",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "attention",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "address",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "note_to_sample_receiver",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_instruction_id_display",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sys__updatedBy",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sys__updatedOn",
+      "type": "BIGINT"
+    },
+    {
+      "name": "send_sample_to_name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "mandatory",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "mandatoryFields",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_instruction_id_display_UI",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "send_sample_to_unallocated",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "productId",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quality_uom_name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_drawn_from",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "allocatedqty",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sampledetailsflag",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_type_name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_drawn_from_cp",
+      "type": "VARCHAR"
+    }, 
+    {
+        "name" : "send_sample_to_custom_cp",
+        "type" : "VARCHAR"
+    }, 
+    {
+        "name" : "send_sample_to_custom_cp_address",
+        "type" : "VARCHAR"
+    }
+  ]
+}

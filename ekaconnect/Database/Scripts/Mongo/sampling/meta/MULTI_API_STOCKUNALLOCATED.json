@@ -1,0 +1,33 @@
+{
+    "_id" : "MULTI_API_STOCKUNALLOCATED",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_STOCKUNALLOCATED",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_LOGISTIC",
+				"filterBy" : [ 
+                    {
+                        "fieldName" : "Stock Status",
+                        "operator" : "eq",
+                        "value" : "In Warehouse",
+                        "type" : "static"
+                    }, 
+                    {
+                        "fieldName" : "Stock Type",
+                        "operator" : "eq",
+                        "value" : "Discrete Stock",
+                        "type" : "static"
+                    }
+                ]
+            }
+        ],
+        "query" : "select b.WAREHOUSE as \"warehouse\",b.STOCK_REF_NO as \"Ref_No\",b.CONTRACT_REF_NO as \"Contract_Ref_No\",b.STOCK_REF_NO as \"Stock_Ref_No\",b.PROFIT_CENTER as \"Profit Center\",b.STRATEGY as \"Strategy\",b.UNALLOCATED_QUANTITY as \"To Be Planned Qty\",b.QUANTITY_UOM as \"Quantity Unit\",b.PRODUCT as \"Product\",b.ORIGIN as \"Origin\",b.QUALITY as \"Quality\",b.CROP_YEAR as \"CropYear\",b.SHED as \"shed\" from  EXTERNAL_LOGISTIC b where b.CURRENT_QUANTITY=b.UNALLOCATED_QUANTITY"
+    }
+}

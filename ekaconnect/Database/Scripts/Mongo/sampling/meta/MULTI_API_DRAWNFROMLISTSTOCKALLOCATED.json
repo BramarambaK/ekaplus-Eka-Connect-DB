@@ -1,0 +1,83 @@
+{
+    "_id" : "MULTI_API_DRAWNFROMLISTSTOCKALLOCATED",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_DRAWNFROMLISTSTOCKALLOCATED",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_API_ALLOCATIONDETAILS",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Purchase Ref No",
+                        "operator" : "in",
+                        "value" : "${Purchase_Ref_No}"
+                    },
+                     {
+                        "fieldName" : "Allocation Group No",
+                        "operator" : "in",
+                        "value" : "${Allocation Group No}"
+                    }
+                ]
+            }, 
+            {
+                "id" : "EXTERNAL_LOGISTIC",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Stock Status",
+                        "operator" : "eq",
+                        "value" : "In Warehouse",
+                        "type" : "static"
+                    }, 
+                    {
+                        "fieldName" : "Stock Type",
+                        "operator" : "eq",
+                        "value" : "Discrete Stock",
+                        "type" : "static"
+                    }, 
+                    {
+                        "fieldName" : "Stock Ref No",
+                        "operator" : "in",
+                        "value" : "${Purchase_Ref_No}"
+                    }
+                ]
+            }, 
+            {
+                "id" : "CONNECT_SAMLEDRAWN",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "ref_no",
+                        "operator" : "in",
+                        "value" : "${Purchase_Ref_No}"
+                    }, 
+                    {
+                        "fieldName" : "sample_instruction_id",
+                        "operator" : "in",
+                        "value" : "${sample_instruction_id}"
+                    }
+                ]
+            }, 
+            {
+                "id" : "CONNECT_PARTICULAR",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Purchase_Ref_No",
+                        "operator" : "in",
+                        "value" : "${Purchase_Ref_No}"
+                    }, 
+                    {
+                        "fieldName" : "sample_instruction_id",
+                        "operator" : "in",
+                        "value" : "${sample_instruction_id}"
+                    }
+                ]
+            }
+        ],
+        "query" : "select b.STOCK_REF_NO as \"ref_no\",a.PURCHASE_REF_NO as \"Linked_Ref_No\",a.ALLOCATED_QUANTITY as \"allocated_quantity\",a.PROFIT_CENTER as \"Sales Profit Center\",a.ALLOCATION_GROUP_NO as \"allocation_group_no\",a.SALES_STRATEGY as \"Sales Strategy\",b.WAREHOUSE as \"warehouse\",b.UNALLOCATED_QUANTITY as \"Open Quantity\",a.QUANTITY_REPRESENTED as \"quantity_represented\",a.SAMPLE_NO as \"sample_no\",b.CONTAINER_No as \"Container_No\",b.EXTERNAL_STOCK_REF_NO as \"External_Stock_Ref_No\",b.PACKING_SIZE as \"Packing_Size\",b.PACKING_TYPE as \"Packing_Type\" from CONNECT_PARTICULAR CP left join (select CASE WHEN cl.REF_NO is null THEN ad.ALLOCATED_QUANTITY ELSE cl.ALLOCATED_QUANTITY END as ALLOCATED_QUANTITY ,CASE WHEN cl.REF_NO is null THEN ad.PROFIT_CENTER ELSE null END as PROFIT_CENTER ,CASE WHEN cl.REF_NO is null THEN ad.ALLOCATION_GROUP_NO ELSE cl.ALLOCATION_GROUP_NO END as ALLOCATION_GROUP_NO ,CASE WHEN cl.REF_NO is null THEN ad.SALES_STRATEGY ELSE null END as SALES_STRATEGY,CASE WHEN cl.REF_NO is null THEN ad.PURCHASE_REF_NO ELSE cl.REF_NO END as PURCHASE_REF_NO,CASE WHEN cl.REF_NO is null THEN null ELSE cl.QUANTITY_REPRESENTED END as QUANTITY_REPRESENTED,CASE WHEN cl.REF_NO is null THEN null ELSE cl.SAMPLE_NO END as SAMPLE_NO from EXTERNAL_API_ALLOCATIONDETAILS ad left join CONNECT_SAMLEDRAWN cl on cl.REF_NO=ad.PURCHASE_REF_NO AND cl.ALLOCATION_GROUP_NO=ad.ALLOCATION_GROUP_NO) a on (CP.PURCHASE_REF_NO = a.PURCHASE_REF_NO) left join  ( select * from EXTERNAL_LOGISTIC where STOCK_STATUS = 'In Warehouse' AND STOCK_TYPE='Discrete Stock') b on (a.PURCHASE_REF_NO=b.STOCK_REF_NO)"
+    }
+}

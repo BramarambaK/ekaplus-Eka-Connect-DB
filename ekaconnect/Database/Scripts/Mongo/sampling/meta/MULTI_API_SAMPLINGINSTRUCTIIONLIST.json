@@ -1,0 +1,27 @@
+{
+    "_id" : "MULTI_API_SAMPLINGINSTRUCTIIONLIST",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_SAMPLINGINSTRUCTIIONLIST",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "CONNECT_SAMPLEINSTRUCTION",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "status",
+                        "operator" : "eq",
+                        "value" : "active",
+                        "type" : "static"
+                    }
+                ]
+            }
+        ],
+        "query" : "SELECT\r\n  a.SYS__UPDATEDBY as \"sys__updatedBy\",a.id as \"id\",a.sample_drawn_from_cp as \"sample_drawn_from_cp\",a.send_sample_to_custom_cp as \"send_sample_to_custom_cp\",a.send_sample_to_custom_cp_address as \"send_sample_to_custom_cp_address\",a.SAMPLEDETAILSFLAG as \"sampledetailsflag\",a.ALLOCATEDQTY as \"allocatedqty\",a.sample_drawn_from as \"sample_drawn_from\",a.quality_uom_name as \"quality_uom_name\",a.productId as \"productId\",a.send_sample_to_unallocated as \"send_sample_to_unallocated\",a.SAMPLE_INSTRUCTION_ID_DISPLAY_UI as \"sample_instruction_id_display_UI\",a.MANDATORYFIELDS as \"mandatoryFields\",a.MANDATORY as \"mandatory\",a.INSTRUCTION_AGAINST_REF_NO as \"instruction_against_ref_no\",a.SYS__UPDATEDON as \"sys__updatedOn\",a.SEND_SAMPLE_TO_NAME as \"send_sample_to_name\",a.SAMPLE_TYPE_NAME as \"sample_type_name\",a.PRODUCT as \"product\",\r\n  a.ADDRESS as \"address\",a.sample_st as \"sample_status\",\r\n  a.INSTRUCTIONAGAINST as \"instructionagainst\",\r\n  a.ISSUE_DATE as \"issue_date\",\r\n  a.ORIGIN as \"origin\",\r\n  a.PRODUCT as \"Sales CP Name\",\r\n  a.QUALITY as \"quality\",\r\n  a.QUANTITY_PER_SAMPLE as \"quantity_per_sample\",\r\n  a.QUANTITY_UOM as \"quantity_uom\",\r\n  a.SAMPLE_DRAWNFROMVALUE as \"sample_drawnfromvalue\",\r\n  a.SAMPLE_INSTRUCTION_ID as \"sample_instruction_id\",\r\n  a.SAMPLE_INSTRUCTION_ID_DISPLAY as \"sample_instruction_id_display\",\r\n  a.SAMPLE_INSTRUCTION_TO as \"sample_instruction_to\",\r\n  a.SAMPLE_TYPE as \"sample_type\",\r\n  a.SEND_SAMPLE_TO as \"send_sample_to\"\r\nfrom\r\n  (\r\n    SELECT\r\n      CASE WHEN b.SAMPLE_STATUS = 'Pending' THEN 'Pending' ELSE 'Fulfilled' END sample_st,\r\n      b.*\r\n    FROM\r\n      CONNECT_SAMPLEINSTRUCTION b\r\n  ) a \r\n  order by a.SYS__UPDATEDON DESC\r\n"
+    }
+}

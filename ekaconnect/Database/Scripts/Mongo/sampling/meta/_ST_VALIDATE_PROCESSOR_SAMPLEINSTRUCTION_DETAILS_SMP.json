@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_VALIDATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS_SMP",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "8b42e66e-d562-45a5-a516-2134a6f7b3e6"
+  },
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "_ST_VALIDATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS",
+  "label": "Validation error using Processor",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

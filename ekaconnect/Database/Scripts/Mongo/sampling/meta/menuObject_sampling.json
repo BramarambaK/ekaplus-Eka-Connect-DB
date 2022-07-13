@@ -1,0 +1,65 @@
+{
+    "_id" : "menuObject_sampling",
+    "type" : "menuObject",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Sampling",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "Sampling Instructions",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "sampleagainst",
+                                    "text" : "Create New",
+                                    "resetForm" : true,
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "samplinginstructionlist",
+                                    "text" : "List of Sampling Instruction",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }, 
+                        {}, 
+                        {
+                            "text" : "Sample Details",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "samplelist",
+                                    "text" : "List of Samples",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }, 
+                        {}, 
+                        {
+                            "text" : "Sample Quality Results",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "createqualitycomposite",
+                                    "text" : "Create New",
+                                    "resetForm" : true,
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "qualitylist",
+                                    "text" : "List of Quality Results",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

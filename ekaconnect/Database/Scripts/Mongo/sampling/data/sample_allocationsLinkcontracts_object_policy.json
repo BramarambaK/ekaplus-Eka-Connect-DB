@@ -1,0 +1,17 @@
+{
+  "_id": "sample_allocationsLinkcontracts_object_policy",
+  "app_UUID": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "userGrants": {},
+  "refType": "object",
+  "refTypeId": "1275fcd2-38bc-4db6-a5d1-94ab426c92a0",
+  "name": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "tenantId": "review7",
+  "type": "policy",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE"]
+    }
+  }
+}

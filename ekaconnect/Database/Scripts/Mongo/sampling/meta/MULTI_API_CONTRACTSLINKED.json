@@ -1,0 +1,41 @@
+{
+  "_id": "MULTI_API_CONTRACTSLINKED",
+  "componentType": "MULTI_API_TASK",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "taskId": "MULTI_API_CONTRACTSLINKED",
+  "object": "1275fcd2-38bc-4db6-a5d1-94ab426c92a0",
+  "type": "workflow",
+  "returnData": "Y",
+  "mergeParams": {
+    "sources": [
+      {
+        "id": "EXTERNAL_API_CONTRACTSLINKED",
+        "filterBy": [
+          {
+            "fieldName": "Ref No",
+            "operator": "in",
+            "value": "${allocated_to}"
+          }
+        ]
+      },
+      {
+        "id": "CONNECT_CONTRACTSLINKED",
+        "filterBy": [
+          {
+            "fieldName": "sample_instruction_id",
+            "operator": "eq",
+            "value": "${sample_instruction_id}"
+          },
+          {
+            "fieldName": "sample_no",
+            "operator": "eq",
+            "value": "${sample_no}"
+          }
+        ]
+      }
+    ],
+    "query": "select a.PRIMARY_ID as \"PRIMARY_ID\",a.REF_NO as \"Ref No\",a.BUSINESS_PARTNER as \"Business Partner\",a.ALLOCATED_QUANTITY as \"Allocated Quantity\",a.OPEN_QUANTITY as \"Open Quantity\",a.OPEN_QUANTITY_UNIT as \"open_Quantity_Unit\",b.link as \"link\" from EXTERNAL_API_CONTRACTSLINKED a left outer join CONNECT_CONTRACTSLINKED b on (a.Ref_No=b.Ref_No)"
+  }
+}

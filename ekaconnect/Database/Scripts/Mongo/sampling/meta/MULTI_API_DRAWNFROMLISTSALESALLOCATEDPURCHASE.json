@@ -1,0 +1,56 @@
+{
+    "_id" : "MULTI_API_DRAWNFROMLISTSALESALLOCATEDPURCHASE",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_DRAWNFROMLISTSALESALLOCATEDPURCHASE",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_API_PHYSICALDETAILS",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Ref No",
+                        "operator" : "in",
+                        "value" : "${Ref_No}"
+                    }
+                ]
+            }, 
+            {
+                "id" : "CONNECT_SAMLEDRAWN",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "ref_no",
+                        "operator" : "in",
+                        "value" : "${Ref_No}"
+                    }, 
+                    {
+                        "fieldName" : "sample_instruction_id",
+                        "operator" : "in",
+                        "value" : "${sample_instruction_id}"
+                    }
+                ]
+            }, 
+            {
+                "id" : "CONNECT_PARTICULAR",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Ref_No",
+                        "operator" : "in",
+                        "value" : "${Ref_No}"
+                    }, 
+                    {
+                        "fieldName" : "sample_instruction_id",
+                        "operator" : "in",
+                        "value" : "${sample_instruction_id}"
+                    }
+                ]
+            }
+        ],
+        "query" : "select b.REF_NO as \"ref_no\",b.REF_NO as \"Linked_Ref_No\",b.BUSINESS_PARTNER as \"Sales CP Name\",b.OPEN_QUANTITY as \"Open Quantity\",b.QUANTITY_REPRESENTED as \"quantity_represented\",b.SAMPLE_NO as \"sample_no\",b.PACKING_SIZE as \"Packing_Size\",b.PACKING_TYPE as \"Packing_Type\" from CONNECT_PARTICULAR CP left join (select CASE WHEN cl.REF_NO is null THEN ad.REF_NO ELSE cl.REF_NO END as REF_NO,CASE WHEN cl.REF_NO is null THEN ad.BUSINESS_PARTNER ELSE ad.BUSINESS_PARTNER END as BUSINESS_PARTNER,CASE WHEN cl.REF_NO is null THEN ad.OPEN_QUANTITY ELSE ad.OPEN_QUANTITY END as OPEN_QUANTITY,CASE WHEN cl.REF_NO is null THEN null ELSE cl.QUANTITY_REPRESENTED END as QUANTITY_REPRESENTED,CASE WHEN cl.REF_NO is null THEN null ELSE cl.SAMPLE_NO END as SAMPLE_NO,CASE WHEN cl.REF_NO is null THEN ad.PACKING_SIZE ELSE ad.PACKING_SIZE END as PACKING_SIZE,CASE WHEN cl.REF_NO is null THEN ad.PACKING_TYPE ELSE ad.PACKING_TYPE END as PACKING_TYPE from EXTERNAL_API_PHYSICALDETAILS ad left join CONNECT_SAMLEDRAWN cl on cl.REF_NO=ad.REF_NO) b on (CP.REF_NO = b.REF_NO) "
+    }
+}

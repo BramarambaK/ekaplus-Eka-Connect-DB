@@ -1,0 +1,67 @@
+{
+    "_id" : "generatedocument_SMP",
+    "componentType" : "UserTask",
+    "version" : "V2",
+    "decisions" : [ 
+        {
+            "btnClass" : "link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "generateNew",
+            "decisionName" : "generateNew",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.samplinginstructionlist",
+                    "name" : "printsampleinstruction",
+                    "popupClass" : "versionpopup",
+                    "displayType" : "popup"
+                }
+            ],
+            "style" : {
+                "pointer-events" : "none"
+            },
+            "label" : "Generate New",
+            "position123" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "generateNew",
+                "type" : "button",
+                "label" : "Generate New",
+                "btnClass" : "link p-0",
+                "decision" : "generateNew",
+                "style" : {
+                    "margin-bottom" : "0px"
+                }
+            }
+        ]
+    ],
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {
+            "height" : "0px"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "eventingRequired" : false,
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : ""
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "label" : "",
+     "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "generatedocument",
+    "type" : "workflow"
+}

@@ -1,0 +1,46 @@
+{
+    "_id" : "EXTERNAL_CONTRACT",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "apiInfo" : {
+        "path" : "/collectionmapper/bcb79287-04fb-4af2-ae97-61af272b2c45/4638683b-aa06-474c-8cd6-66b8a463b769/fetchCollectionRecords",
+        "headers" : {
+            "ttl" : "60",
+            "Content-Type" : "application/json"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "useInputMapping" : false,
+        "host" : "${properties.eka_connect_host}",
+        "body" : {
+            "collectionName" : "Sampling Contract item attribute",
+            "start" : "",
+            "limit" : "",
+			"getAllRecords" : true,
+            "criteria" : {}
+        },
+        "columns" : [ 
+            {
+                "name" : "INTERNAL_CONTRACT_ITEM_REF_NO",
+                "type" : "VARCHAR",
+                "collectionCol" : "INTERNAL CONTRACT ITEM REF NO"
+            }, 
+            {
+                "name" : "ATTRIBUTE_DISPLAY_TEXT",
+                "type" : "VARCHAR",
+                "collectionCol" : "ATTRIBUTE DISPLAY TEXT"
+            },
+			{
+                "name" : "CONTRACT_ITEM_REF_NO",
+                "type" : "VARCHAR",
+                "collectionCol" : "CONTRACT ITEM REF NO"
+            }
+        ]
+    },
+    "taskId" : "EXTERNAL_CONTRACT",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

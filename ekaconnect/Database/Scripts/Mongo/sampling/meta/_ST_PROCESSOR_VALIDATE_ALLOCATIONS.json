@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_PROCESSOR_VALIDATE_ALLOCATIONS",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "ed7f7f28-3621-477a-ac39-2d6d1995bd8b"
+    },
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_VALIDATE_ALLOCATIONS",
+    "label" : "Validate Samples",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

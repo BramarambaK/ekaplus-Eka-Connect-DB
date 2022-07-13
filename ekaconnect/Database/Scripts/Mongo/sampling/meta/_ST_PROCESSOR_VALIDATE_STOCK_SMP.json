@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESSOR_VALIDATE_STOCK_SMP",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "0a685d6b-8890-45ca-9e1c-3d6af3173976"
+  },
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_VALIDATE_STOCK",
+  "label": "Validate Stocks",
+  "object": "c59fd690-8c85-43ea-9a98-74af388002e1"
+}

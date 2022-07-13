@@ -1,0 +1,93 @@
+{
+  "_id": "_ST_CONNECT_LINKCONTRACT",
+  "componentType": "SystemTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "CONNECT_LINKCONTRACT",
+  "object": "1275fcd2-38bc-4db6-a5d1-94ab426c92a0",
+  "columns": [
+    {
+      "name": "sample_instruction_id",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sales_contract_no",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "product_specs",
+      "type": "VARCHAR"
+    },
+     {
+      "name": "Ref_No",
+      "type": "VARCHAR",
+	  "collectionCol" : "Ref No"      
+    },
+    {
+      "name": "link",
+      "type": "boolean"
+    },
+    {
+      "name": "sample_no",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "open_Quantity",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quantity",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "CP_Name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "allocated_to",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "supplier_CP_name",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_approval_status",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_sent_to",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quality",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "origin",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "sample_term",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "shipment_delivery_period",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "openQuantity",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "profit_center",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "Sales_CP_Name",
+      "type": "VARCHAR"
+    }
+  ]
+}

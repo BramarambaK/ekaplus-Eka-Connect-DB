@@ -1,0 +1,62 @@
+{
+    "_id" : "MULTI_API_PARTCULARLISTPHYSICALS",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_PARTCULARLISTPHYSICALS",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_API_PHYSICALDETAILS",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Ref No",
+                        "operator" : "in",
+                        "value" : "${Ref_No}"
+                    }
+                ]
+            }, 
+            {
+                "id" : "EXTERNAL_CONTRACT",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "CONTRACT ITEM REF NO",
+                        "operator" : "in",
+                        "value" : "${Ref_No}"
+                    }, 
+                    {
+                        "fieldName" : "ATTRIBUTE NAME",
+                        "operator" : "eq",
+                        "value" : "Sample Term",
+                        "type" : "static"
+                    }
+                ]
+            }, 
+            {
+                "id" : "EXTERNAL_API_ALLOCATIONDETAILS",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "Sales Contract Item Ref No",
+                        "operator" : "in",
+                        "value" : "${Ref_No}"
+                    }, 
+                    {
+                        "fieldName" : "Purchase Ref No",
+                        "operator" : "in",
+                        "value" : "${Purchase_Ref_No}"
+                    }, 
+                    {
+                        "fieldName" : "Allocation Group No",
+                        "operator" : "in",
+                        "value" : "${Allocation Group No}"
+                    }
+                ]
+            }
+        ],
+        "query" : "select a.BUSINESS_PARTNER as \"Sales CP Name\",a.REF_NO as \"Ref_No\",a.DELIVERY_PERIOD as \"Delivery Period\",a.OPEN_QUANTITY as \"Open Quantity\",b.ATTRIBUTE_DISPLAY_TEXT as \"sample term\", a.OPEN_QUANTITY_UNIT as \"Open Quantity Unit\",a.PRODUCT as \"Product\",a.ORIGIN as \"Origin\",a.QUALITY as \"Quality\",a.CROP_YEAR as \"CropYear\",a.PURCHASE_REF_NO as \"Purchase_Ref_No\",a.ALLOCATION_GROUP_NO as \"Allocation Group No\" from (select aa.BUSINESS_PARTNER,aa.REF_NO,aa.DELIVERY_PERIOD, aa.OPEN_QUANTITY,aa.OPEN_QUANTITY_UNIT,aa.PRODUCT,aa.ORIGIN,aa.QUALITY ,aa.CROP_YEAR,bb.PURCHASE_REF_NO,bb.ALLOCATION_GROUP_NO from EXTERNAL_API_PHYSICALDETAILS aa left join EXTERNAL_API_ALLOCATIONDETAILS bb on (aa.REF_NO=bb.SALES_CONTRACT_ITEM_REF_NO) )  a left join  EXTERNAL_CONTRACT b  on (a.REF_NO=b.CONTRACT_ITEM_REF_NO) "
+    }
+}

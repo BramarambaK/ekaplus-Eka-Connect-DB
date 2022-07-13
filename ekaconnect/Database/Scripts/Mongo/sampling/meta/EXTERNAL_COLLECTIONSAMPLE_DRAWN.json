@@ -1,0 +1,29 @@
+{
+    "_id" : "EXTERNAL_COLLECTIONSAMPLE_DRAWN",
+    "componentType" : "CollectionTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+	"returnData":"Y",
+    "type" : "workflow",        
+        "collectionName" : "trmSMP_purchasedrawnfrom2",       
+        "columns" : [ 
+            {
+                "name" : "plannedBulkShipmentNo",
+                "type" : "String",
+                "collectionCol" : "plannedBulkShipmentNo"
+            }, 
+            {
+                "name" : "Confirmed_book",
+                "type" : "String",
+                "collectionCol" : "Confirmed_book"
+            }, 
+            {
+                "name" : "Carrier_booking_date",
+                "type" : "String",
+                "collectionCol" : "Carrier_booking_date"
+            }
+        ],    
+    "taskId" : "EXTERNAL_COLLECTIONSAMPLE_DRAWN",
+    "object" : "4638683b-aa06-474c-8cd6-66b8a463b769"
+}

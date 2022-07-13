@@ -1,0 +1,43 @@
+{
+  "_id": "contractlinkcomposite_SMP",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "samplelist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "label": "Link The Contract",
+  "layout": {
+    "name": "customv2",
+    "useQueryParams": true,
+    "preserveSelectedData": true
+  },
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "taskId": "contractlinkcomposite",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "data": "selected.samplelist",
+      "name": "linkcontract"
+    },
+    {
+      "data": "selected.samplelist",
+      "name": "linkcontractlist"
+    }
+  ]
+}

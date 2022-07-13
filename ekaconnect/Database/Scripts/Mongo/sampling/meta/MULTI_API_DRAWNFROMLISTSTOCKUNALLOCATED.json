@@ -1,0 +1,53 @@
+{
+    "_id" : "MULTI_API_DRAWNFROMLISTSTOCKUNALLOCATED",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_DRAWNFROMLISTSTOCKUNALLOCATED",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_LOGISTIC",
+                "filterBy" : [ 
+				{
+                        "fieldName" : "Stock Status",
+                        "operator" : "eq",
+                        "value" : "In Warehouse",
+                        "type" : "static"
+                    }, 
+                    {
+                        "fieldName" : "Stock Type",
+                        "operator" : "eq",
+                        "value" : "Discrete Stock",
+                        "type" : "static"
+                    }, 
+                    {
+                        "fieldName" : "Stock Ref No",
+                        "operator" : "in",
+                        "value" : "${Ref No}"
+                    }
+                ]
+            }, 
+            {
+                "id" : "CONNECT_SAMLEDRAWN",
+                "filterBy" : [ 
+                    {
+                        "fieldName" : "ref_no",
+                        "operator" : "in",
+                        "value" : "${Ref No}"
+                    }, 
+                    {
+                        "fieldName" : "sample_instruction_id",
+                        "operator" : "in",
+                        "value" : "${sample_instruction_id}"
+                    }
+                ]
+            }
+        ],
+        "query" : "select b.WAREHOUSE as \"warehouse\",b.REF_NO as \"ref_no\",b.UNALLOCATED_QUANTITY as \"Open Quantity\",b.INTERNAL_GRD_DGRD_REF_NO as \"INTERNAL_GRD_DGRD_REF_NO\",b.QUANTITY_REPRESENTED as \"quantity_represented\",b.SAMPLE_NO as \"sample_no\",b.CONTAINER_NO as \"Container_No\",b.EXTERNAL_STOCK_REF_NO as \"External_Stock_Ref_No\",b.PACKING_SIZE as \"Packing_Size\",b.PACKING_TYPE as \"Packing_Type\" from (select CASE WHEN cl.REF_NO is null THEN ad.STOCK_REF_NO ELSE cl.REF_NO END as REF_NO,CASE WHEN cl.REF_NO is null THEN ad.WAREHOUSE ELSE ad.WAREHOUSE END as WAREHOUSE,CASE WHEN cl.REF_NO is null THEN ad.UNALLOCATED_QUANTITY ELSE ad.UNALLOCATED_QUANTITY END as UNALLOCATED_QUANTITY,CASE WHEN cl.REF_NO is null THEN ad.INTERNAL_GRD_DGRD_REF_NO ELSE ad.INTERNAL_GRD_DGRD_REF_NO END as INTERNAL_GRD_DGRD_REF_NO,CASE WHEN cl.REF_NO is null THEN null ELSE cl.QUANTITY_REPRESENTED END as QUANTITY_REPRESENTED,CASE WHEN cl.REF_NO is null THEN null ELSE cl.SAMPLE_NO END as SAMPLE_NO,CASE WHEN cl.REF_NO is null THEN ad.STOCK_TYPE ELSE ad.STOCK_TYPE END as STOCK_TYPE,CASE WHEN cl.REF_NO is null THEN ad.STOCK_STATUS ELSE ad.STOCK_STATUS END as STOCK_STATUS,CASE WHEN cl.REF_NO is null THEN ad.CONTAINER_NO ELSE ad.CONTAINER_NO END as CONTAINER_NO, CASE WHEN cl.REF_NO is null THEN ad.EXTERNAL_STOCK_REF_NO ELSE ad.EXTERNAL_STOCK_REF_NO END as EXTERNAL_STOCK_REF_NO,CASE WHEN cl.REF_NO is null THEN ad.PACKING_SIZE ELSE ad.PACKING_SIZE END as PACKING_SIZE, CASE WHEN cl.REF_NO is null THEN ad.PACKING_TYPE ELSE ad.PACKING_TYPE END as PACKING_TYPE  from EXTERNAL_LOGISTIC ad left join CONNECT_SAMLEDRAWN cl on cl.REF_NO=ad.STOCK_REF_NO)  b where (b.STOCK_TYPE='Discrete Stock'  AND STOCK_STATUS = 'In Warehouse')"
+    }
+}

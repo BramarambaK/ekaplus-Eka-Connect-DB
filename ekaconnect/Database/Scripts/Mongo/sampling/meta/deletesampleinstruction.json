@@ -1,0 +1,106 @@
+{
+    "_id" : "deletesampleinstruction_SMP",
+    "componentType" : "UserTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "Remove Quality",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to remove the sample instruction ${sample_instruction_id_display}?",
+            "headerMessage" : "Remove : ${sample_instruction_id_display}"
+        }
+    },
+    "input" : [ 
+        "quality_ref_no"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "samplinginstructionlist"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "deletesampleinstruction",
+            "outcomes" : [ 
+			 {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.deletesampleinstruction",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_SAMPLE_TO_TRM"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deletesampleinstruction",
+                    "appendMsg" : true,
+                    "name" : "_ST_DELETE_SAMPLE_INSTRUCTION"
+                }, 
+                {
+                    "data" : "output._ST_DELETE_SAMPLE_INSTRUCTION",
+                    "appendMsg" : true,
+                    "name" : "samplinginstructionlist",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "DELETE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "samplinginstructionlist"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Delete_Sample",
+    "fields" : [ 
+        {
+            "heading" : "sample_instruction_id"
+        }
+    ],
+    "taskId" : "deletesampleinstruction",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

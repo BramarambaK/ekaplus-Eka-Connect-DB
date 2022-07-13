@@ -1,0 +1,17 @@
+{
+  "_id": "stocks_policy",
+  "app_UUID": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "userGrants": {},
+  "refType": "object",
+  "refTypeId": "c59fd690-8c85-43ea-9a98-74af388002e1",
+  "name": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "tenantId": "review7",
+  "type": "policy",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE"]
+    }
+  }
+}

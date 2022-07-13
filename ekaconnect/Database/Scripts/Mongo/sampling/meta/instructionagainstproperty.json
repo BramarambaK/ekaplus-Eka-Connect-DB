@@ -1,0 +1,32 @@
+{
+    "_id" : "instructionagainst",
+    "type" : "property",
+    "name" : "instructionagainst",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Instruction Against",
+    "defaultValue" : [ 
+        {
+            "key" : "Sales Contract-Allocated to Purchase",
+            "value" : "Sales Contract-Allocated to Purchase"
+        }, 
+        {
+            "key" : "Sales Contract-Allocated to Stock",
+            "value" : "Sales Contract-Allocated to Stock"
+        }, 
+        {
+            "key" : "Sales Contract-Unallocated",
+            "value" : "Sales Contract-Unallocated"
+        }, 
+        {
+            "key" : "Purchase-Unallocated",
+            "value" : "Purchase-Unallocated"
+        }, 
+        {
+            "key" : "Stock-Unallocated",
+            "value" : "Stock-Unallocated"
+        }
+    ]
+}

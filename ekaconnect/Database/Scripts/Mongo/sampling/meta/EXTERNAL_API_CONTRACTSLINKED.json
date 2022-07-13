@@ -1,0 +1,56 @@
+{
+  "_id": "EXTERNAL_API_CONTRACTSLINKED",
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "apiInfo": {
+    "path": "/collectionmapper/bcb79287-04fb-4af2-ae97-61af272b2c45/3735443c-d38b-43cb-9402-eb9351da6ec4/fetchCollectionRecords",
+    "headers": {
+      "ttl": "60",
+      "Content-Type": "application/json"
+    },
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+    "body": {
+      "collectionName": "Sampling Physical trade details",
+      "start": "",
+      "limit": "",
+      "criteria": {}
+    },
+    "columns": [
+      {
+        "name": "Ref_No",
+        "type": "VARCHAR",
+        "collectionCol": "Ref No",
+        "primary": "y"
+      },
+      {
+        "name": "Business_Partner",
+        "type": "VARCHAR",
+        "collectionCol": "Business Partner",
+        "primary": "y"
+      },
+      {
+        "name": "Allocated_Quantity",
+        "type": "VARCHAR",
+        "collectionCol": "Allocated Quantity"
+      },
+      {
+        "name": "Open_Quantity",
+        "type": "VARCHAR",
+        "collectionCol": "Open Quantity"
+      },
+      {
+        "name" : "open_Quantity_Unit",
+        "type" : "VARCHAR",
+        "collectionCol" : "Open Quantity Unit"
+    }
+    ]
+  },
+  "taskId": "EXTERNAL_API_CONTRACTSLINKED",
+  "object": "1275fcd2-38bc-4db6-a5d1-94ab426c92a0"
+}

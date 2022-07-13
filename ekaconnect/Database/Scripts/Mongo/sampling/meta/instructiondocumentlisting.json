@@ -1,0 +1,79 @@
+{
+    "_id" : "instructiondocumentlisting_SMP",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EDIT DOCUMENT",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.printsample.instructiondocumentlisting",
+                    "name" : "sampledocumentdownload",
+                    "headers" : {
+                        "storageType" : "awsS3",
+                        "folderInS3" : "temppdfs"
+                    },
+                    "forceDownload" : true,
+                    "type" : "downloadLink"
+                }
+            ],
+            "label" : "Download",
+            "iconClass" : "download-icon"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sys__createdOn",
+            "dateformat" : "DD-MMM-YYYY HH:MM:ss.SSS"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sys__createdBy"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "labelKey" : "FILE_LISTING1",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "refreshData" : true,
+        "dropdownDecisions" : true,
+        "getInitialData" : {
+            "filterBy" : {
+                "payLoadData" : [ 
+                    "sample_instruction_id"
+                ]
+            }
+        },
+        "useQueryParams" : false,
+        "preserveSelectedData" : true,
+        "selectionMode" : "none"
+    },
+    "object" : "81665f85-aebb-4436-b8fd-ab3ccbb3d497",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "rows" : "100",
+    "taskId" : "instructiondocumentlisting",
+    "label" : "Sampling Document Listing",
+    "payLoad123" : "selected.instructiondocumentlisting",
+    "theme" : "theme-grid-light",
+    "type" : "workflow"
+}

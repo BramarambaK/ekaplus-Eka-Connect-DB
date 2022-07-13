@@ -1,0 +1,131 @@
+{
+    "_id" : "EXTERNAL_LOGISTIC",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "apiInfo" : {
+        "path" : "/collectionmapper/bcb79287-04fb-4af2-ae97-61af272b2c45/4638683b-aa06-474c-8cd6-66b8a463b769/fetchCollectionRecords",
+        "headers" : {
+            "ttl" : "60",
+            "Content-Type" : "application/json"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "useInputMapping" : false,
+        "host" : "${properties.eka_connect_host}",
+        "body" : {
+            "collectionName" : "Sampling Logistics details",
+            "start" : "",
+            "limit" : "",
+            "getAllRecords" : true,
+            "criteria" : {}
+        },
+        "columns" : [ 
+            {
+                "name" : "Stock_Ref_No",
+                "type" : "VARCHAR",
+                "collectionCol" : "Stock Ref No"
+            }, 
+            {
+                "name" : "Unallocated_Quantity",
+                "type" : "VARCHAR",
+                "collectionCol" : "Unallocated Quantity"
+            }, 
+            {
+                "name" : "Contract_Ref_No",
+                "type" : "VARCHAR",
+                "collectionCol" : "Contract Ref No"
+            }, 
+            {
+                "name" : "Warehouse",
+                "type" : "VARCHAR",
+                "collectionCol" : "Warehouse"
+            }, 
+            {
+                "name" : "Stock_Type",
+                "type" : "VARCHAR",
+                "collectionCol" : "Stock Type"
+            }, 
+            {
+                "name" : "Stock_Status",
+                "type" : "VARCHAR",
+                "collectionCol" : "Stock Status"
+            }, 
+            {
+                "name" : "Current_Quantity",
+                "type" : "VARCHAR",
+                "collectionCol" : "Current Quantity"
+            }, 
+            {
+                "name" : "Profit_Center",
+                "type" : "VARCHAR",
+                "collectionCol" : "Profit Center"
+            }, 
+            {
+                "name" : "Strategy",
+                "type" : "VARCHAR",
+                "collectionCol" : "Strategy"
+            }, 
+            {
+                "name" : "Quantity_UOM",
+                "type" : "VARCHAR",
+                "collectionCol" : "Quantity UOM"
+            }, 
+            {
+                "name" : "Shed",
+                "type" : "VARCHAR",
+                "collectionCol" : "Shed"
+            }, 
+            {
+                "name" : "Product",
+                "type" : "VARCHAR",
+                "collectionCol" : "Product"
+            }, 
+            {
+                "name" : "Origin",
+                "type" : "VARCHAR",
+                "collectionCol" : "Origin"
+            }, 
+            {
+                "name" : "Quality",
+                "type" : "VARCHAR",
+                "collectionCol" : "Quality"
+            }, 
+            {
+                "name" : "Crop_Year",
+                "type" : "VARCHAR",
+                "collectionCol" : "Crop Year"
+            }, 
+            {
+                "name" : "INTERNAL_GRD_DGRD_REF_NO",
+                "type" : "VARCHAR",
+                "collectionCol" : "INTERNAL GRD DGRD REF NO"
+            }, 
+            {
+                "name" : "Container_No",
+                "type" : "VARCHAR",
+                "collectionCol" : "Container No"
+            }, 
+            {
+                "name" : "External_Stock_Ref_No",
+                "type" : "VARCHAR",
+                "collectionCol" : "External Stock Ref No"
+            }, 
+            {
+                "name" : "Packing_Type",
+                "type" : "VARCHAR",
+                "collectionCol" : "Packing Type"
+            }, 
+            {
+                "name" : "Packing_Size",
+                "type" : "VARCHAR",
+                "collectionCol" : "Packing Size"
+            }
+        ]
+    },
+    "taskId" : "EXTERNAL_LOGISTIC",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

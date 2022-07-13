@@ -1,0 +1,87 @@
+{
+  "_id": "editcreatequalitycompositeview_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "List of Quality Results",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false,
+	  "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "showCheckbox": false,
+    "limitHeight": true,
+    "pagination": false,
+    "selectionMode": "none",
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["quality_ref_no"]
+      }
+    }
+  },
+  "decisions": [],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "container_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product_specs"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_sent_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_approval_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "allocated_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "supplier_CP_name"
+    }
+  ],
+  "taskId": "editcreatequalitycompositeview",
+  "object": "aacbf12d-7d98-469a-b149-1ec66e9ecb8c"
+}

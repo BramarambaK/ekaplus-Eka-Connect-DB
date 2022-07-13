@@ -1,0 +1,19 @@
+{
+    "_id" : "MULTI_API_PURCHASEUNALLOCATED",
+    "componentType" : "MULTI_API_TASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "MULTI_API_PURCHASEUNALLOCATED",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba",
+    "type" : "workflow",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_API_PHYSICALDETAILS"
+            }
+        ],
+        "query" : "select b.BUSINESS_PARTNER as \"Sales CP Name\",b.REF_NO as \"Purchase_Ref_No\",b.REF_NO as \"Ref_No\",b.Status as \"Status\",b.PRODUCT as \"Product\",b.ORIGIN as \"Origin\",b.QUALITY as \"Quality\",b.CROP_YEAR as \"CropYear\",b.PROFIT_CENTER as \"Profit Center\",b.STRATEGY as \"Strategy\",b.TO_BE_PLANNED_QTY as \"To Be Planned Qty\",b.OPEN_QUANTITY_UNIT as \"Quantity Unit\" from  EXTERNAL_API_PHYSICALDETAILS b where (b.CONTRACT_TYPE='P' AND b.TO_BE_PLANNED_QTY!='0')"
+    }
+}

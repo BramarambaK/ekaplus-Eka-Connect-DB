@@ -1,0 +1,151 @@
+{
+  "_id": "createqualitycompositeform_SMP",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [
+    {
+      "decisionName": "searchstockref",
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "searchstockreflist",
+      "outcomes": [
+        {
+          "data": "output.createqualitycompositeform",
+          "popupClass": "edit-modal907px",
+          "name": "searchstockreflist",
+          "displayType": "popup"
+        }
+      ]
+    },
+    {
+      "decisionName": "searchsampleref",
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "searchsamplereflist",
+      "outcomes": [
+        {
+          "data": "output.createqualitycompositeform",
+          "popupClass": "edit-modal907px",
+          "name": "searchsamplereflist",
+          "displayType": "popup"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "CREATE",
+      "labelkey": "UPDATE",
+      "task": "savequality1",
+      "decisionName": "savequality1",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.createqualitycompositeform",
+          "appendMsg": false,
+          "name": "_ST_QUALITY_SAVE"
+        },
+        {
+          "data": "output._ST_QUALITY_SAVE",
+          "name": "createqualitycompositeform"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "Quality_results_against",
+        "event": "data.createqualitycompositelistview.Quality_results_against = value;\r\ndata.createqualitycompositelistview.quality_ref_no =data.createqualitycompositeform.quality_ref_no;\r\ndata.createqualitydynamic[0].Quality_results_against = value;\r\ndata.createqualitydynamic[0].quality_ref_no =data.createqualitycompositeform.quality_ref_no;\r\ndata.createqualitycompositelistview.external_comments =''\r\ndata.createqualitycompositelistview.internal_comments ='';\r\ndata.createqualitycompositelistview.quality_analysis_by ='';\r\ndata.createqualitycompositelistview.quality_analysis_by_box ='';\r\ndata.createqualitycompositelistview.quality_date ='';\r\n\r\n"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "key": "quality_ref_no"
+      },
+      {
+        "key": "searchstockref",
+        "type": "button",
+        "btnClass": "search-icon",
+        "decision": "searchstockref",
+        "formLabelStyle": {
+          "background-color": "white",
+          "margin-top": "-2px"
+        },
+        "style1": {
+          "padding-top": "10px"
+        }
+      },
+      {
+        "key": "searchsampleref",
+        "type": "button",
+        "btnClass": "search-icon",
+        "decision": "searchsampleref",
+        "formLabelStyle": {
+          "background-color": "white",
+          "margin-top": "-2px"
+        },
+        "style1": {
+          "padding-top": "10px"
+        }
+      }
+    ]
+  ],
+  "labelKey": "",
+  "label": "",
+  "layout": {
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px"
+    },
+    "formLayoutStyle": {
+      "padding-left": "6px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "object": "ddec290e-71ee-4538-8ec9-37bbcc0cdca1",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "taskId": "createqualitycompositeform",
+  "type": "workflow"
+}

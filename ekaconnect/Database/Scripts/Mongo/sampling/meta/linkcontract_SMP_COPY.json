@@ -1,0 +1,14 @@
+{
+  "_id": "linkcontract_SMP_COPY",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "Sample Instruction Details COPY",
+  "type": "workflow",
+  "layout": {},
+  "decisions": [],
+  "fields": [],
+  "taskId": "linkcontractCOPY",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

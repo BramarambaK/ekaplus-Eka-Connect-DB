@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_PROCESSOR_SAMPLE_TO_TRM_SMP",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "b2aba0b6-9b3d-4ce8-bf1b-ea4ae23c0635"
+    },
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_SAMPLE_TO_TRM",
+    "label" : "Validate Samples",
+    "object" : "4638683b-aa06-474c-8cd6-66b8a463b769"
+}

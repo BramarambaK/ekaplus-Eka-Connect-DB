@@ -1,0 +1,23 @@
+{
+    "_id" : ObjectId("5ea238cf69f23f12b9d1b1a3"),
+    "app_UUID" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "userGrants" : {},
+    "refType" : "object",
+    "refTypeId" : "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+    "name" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "tenantId" : "review7",
+    "type" : "policy",
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "DELETE", 
+                "READ"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE"
+            ]
+        }
+    }
+}

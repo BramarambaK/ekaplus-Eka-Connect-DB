@@ -1,0 +1,12 @@
+{
+  "_id" : "PROCESSOR_CREATE_SAMPLE_NO_SMP",
+  "name" : "PROCESSOR_CREATE_SAMPLE_NO",
+  "type" : "processor",
+  "refType" : "app",
+  "version" : "V2",
+  "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet" : "\r\n    var response = [];\r\n    var data = req.body.bulkPayLoadData;\r\n    for (var i = 0; i < data.length; i++) {\r\n      if (data && data[i] && data[i]['sample_no'])\r\n        response.push({\r\n          sample_instruction_id: data[i]['sample_instruction_id'],\r\n          sample_no: data[i]['sample_no'],\r\n\t\t  sample_associated_ref_no: data[i]['ALLOCATED_REF_NO'],\r\n          sample_quantity_value: data[i]['drawn_from_uom']\r\n        });\r\n    }\r\n    const map = new Map();\r\n    const result = [];\r\n\r\n    for (const item of response) {\r\n      if (!map.has(item.sample_no)) {\r\n        map.set(item.sample_no, true);\r\n        result.push({\r\n          sample_instruction_id: item.sample_instruction_id,\r\n          sample_no: item.sample_no,\r\n\t\t  sample_associated_ref_no: item.sample_associated_ref_no,\r\n          sample_quantity_value: item.sample_quantity_value,\r\n          forsampledetails: 'for',\r\n          forsamplestatus: 'for',\r\n date_sample_sent:'not saved',\r\n   quality_result_status: 'Not Available'\r\n        });\r\n      }\r\n    }\r\n   success(result,200);\r\n  ",
+  "sys__UUID" : "40eb845d-c8d8-41dd-8663-fb2b954917c2",
+  "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy" : "srini@ekaplus.com"
+}

@@ -1,0 +1,128 @@
+{
+  "_id": "linkcontractlist_SMP_V2",
+  "componentType": "UserTask",
+  "version": "V2",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "Link Contract Listing",
+  "getDataFromExternalAPI": false,
+  "payLoad": "completeData",
+  "inputData": {
+    "type": "SystemTask",
+    "config": {
+      "id": "MULTI_API_CONTRACTSLINKED"
+    }
+  },
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["sample_instruction_id", "sample_no"]
+      }
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "task": "editlinkcontractlist",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got replaced with some errors"
+            }
+          },
+          "displayType": "inlineEdit",
+          "appendMsg": true,
+          "name": "_ST_EDIT_LINKCONTRACT",
+          "data": "output.editlinkcontractlist"
+        },
+        {
+          "name": "contractlinkcomposite",
+          "showPopUp": false
+        }
+      ],
+      "label": " Update",
+      "position": "top",
+      "type": "submit"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": false,
+      "key": "sample_instruction_id",
+      "value": "${selected.samplelist.sample_instruction_id}",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": false,
+      "key": "sample_no",
+      "value": "${selected.samplelist.sample_no}",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": false,
+      "key": "Ref No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": false,
+      "key": "Business Partner"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Allocated Quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Open Quantity"
+    },
+    {
+      "filter" : true,
+      "edit" : false,
+      "sort" : true,
+      "key" : "open_Quantity_Unit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "link"
+    }
+  ],
+  "taskId": "linkcontractlist",
+  "object": "1275fcd2-38bc-4db6-a5d1-94ab426c92a0"
+}

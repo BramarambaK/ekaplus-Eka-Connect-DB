@@ -1,0 +1,185 @@
+{
+    "_id" : "collectionExampleSampleDrawn",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+	"version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "EXTERNAL_COLLECTIONSAMPLE_DRAWN",
+			"queryParamMapping" : {
+				"from" : "start",
+				"size" : "limit"
+			},
+			"queryParams" : {
+				"from" : "start",
+				"size" : "limit"
+			},
+			 "filterBy" : [                 
+                    {
+					"fieldName": "sales_contract_no",						
+					"operator": "in",
+					"value":"${sales contract no}"
+                    }
+                ]
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "getInitialData" : true,
+        "options" : {
+            "serverSearch" : true,
+            "serverFilter" : true,
+            "columnFilter" : true,
+            "sortFilter" : true,
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : false,
+        "lazyLoading" : true,
+        "showCheckbox" : false,
+        "tableEditing" : true,
+        "limitHeight" : true,
+        "pagination" : false,
+        "selectionMode" : "none"
+    },
+    "labelKey" : "Sample Drawn From List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true,
+            "value" : "${selected.sampleagainst.samplingparticularform.sample_instruction_id}"
+        }, 
+        {
+            "key" : "ref_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "event" : "if(data.sampledrawnfromform.instructionagainst=='Sales Contract-Allocated to Purchase' || data.sampledrawnfromform.instructionagainst=='Purchase-Unallocated'){(data.sampledrawnfromform.sample_instruction_to = {'value':record.sales_cp_name,'disable':'true'});}else if(data.sampledrawnfromform.instructionagainst=='Sales Contract-Allocated to Stock'|| data.sampledrawnfromform.instructionagainst=='Stock-Unallocated'){(data.sampledrawnfromform.sample_instruction_to = {'value':record.warehouse,'disable':'true'})};var val=''; for(var i=0;i<data.sampledrawnfromlist.length;i++){data.sampledrawnfromlist[i].sys__state.drawn_from_uom={'show':true,'disable':false}; if(i!=data.sampledrawnfromlist.length-1){val=val+data.sampledrawnfromlist[i].ref_no +','}else{val=val+data.sampledrawnfromlist[i].ref_no}} data.sampledrawnfromform.sample_drawnfromvalue=val;"
+        }, 
+        {
+            "key" : "allocation_group_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "available_quantity",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "allocated_quantity",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "quantity_represented",
+            "filter" : true,
+            "sort" : true,
+            "edit" : true
+        }, 
+        {
+            "key" : "drawn_from_uom",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "value" : "${selected.sampleagainst.samplingparticularform.quality_uom_name}"
+        }, 
+        {
+            "key" : "sample_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : true
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "label" : "Delete",
+            "selection" : "row",
+            "position" : "bottom",
+            "iconClass" : "fa fa-times",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.sampledrawnfrom.sampledrawnfromlist",
+                    "name" : "sampledrawnfrom"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstfromcompositesave",
+            "label" : "SAVE",
+            "decisionName" : "sampleagainstfromcompositesave",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlist",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_DRAWNFROM"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlist",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_CREATE_SAMPLE_NO_SMP"
+                }, 
+                {
+                    "data" : "output._ST_PROCESSOR_CREATE_SAMPLE_NO_SMP",
+                    "name" : "_ST_CREATE_SAMPLEINSTRUCTION_DETAILS",
+                    "appendMsg" : false
+                }, 
+                {
+                    "name" : "samplinginstructionlist"
+                }
+            ]
+        }
+    ],
+    "taskId" : "collectionExampleSampleDrawn",
+    "object" : "4638683b-aa06-474c-8cd6-66b8a463b769",
+    "sys__data__state" : "Modify",
+    "sys__updatedBy" : "Madhu.s@ekaplus.com",
+    "sys__updatedOn" : ISODate("2020-04-22T10:51:04.062Z")
+}
