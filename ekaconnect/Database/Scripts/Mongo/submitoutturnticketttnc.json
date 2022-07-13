@@ -1,0 +1,70 @@
+{
+    "_id" : "submitoutturnticketttnc",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Authorise transaction",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "dirtyBG" : "#fff",
+            "untouchedBG" : "#fff",
+            "validBG" : "#fff",
+            "invalidBG" : "#fff",
+            "color" : "#5D646F",
+            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+            "width" : "100%"
+        },
+        "defaultFormLabelStyle" : {
+            "color" : "#3B4047",
+            "margin-bottom" : "24px",
+            "font" : "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "name" : "create",
+        "formStyle" : {
+            "padding" : "7px",
+            "margin" : "auto",
+            "max-width" : "100%"
+        },
+        "defaultFormValueStyle" : {
+            "color" : "#5D646F",
+            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "type" : "row",
+        "cardClass" : "cargill-form checkbox-cargill submit-amend-ticket-tnc"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "compositeSave",
+            "label" : "Next",
+            "decisionName" : "compositeSave",
+            "type" : "submit",
+            "outcomes" : []
+        }
+    ],
+    "labelKey" : "ENTER_LIMITS",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "auto",
+                    "display" : "block"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "25px",
+                    "width" : "100%"
+                },
+                "suffix" : "",
+                "class" : "vertical-checkbox",
+                "key" : "otnc"
+            }
+        ]
+    ],
+    "taskId" : "submitoutturnticketttnc",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

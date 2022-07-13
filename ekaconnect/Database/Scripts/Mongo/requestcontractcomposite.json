@@ -1,0 +1,135 @@
+{
+  "_id": "requestcontractcomposite",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request contract",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenurequestcontract",
+      "data": "selected.requestcontractcomposite.queryParams"
+    },
+    {
+      "style": {
+        "padding-bottom": "0px"
+      },
+      "workflows": [
+        {
+          "name": "requestcontractdetailsform",
+          "data": "selected"
+        }
+      ]
+    },
+    {
+      "style": {
+        "border": "1px solid #c8ced3",
+        "margin": "-19px 10px -9px 10px",
+        "border-top": "none",
+        "padding": "25px",
+        "padding-left": "21px",
+        "border-bottom": "none"
+      },
+      "workflows": [
+        {
+          "name": "requestcontractquantity",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Request Contract"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home ",
+        "type": "string",
+        "task": "listinghome"
+      },
+      {
+        "label": "Request contract",
+        "type": "string",
+        "value": null
+      }
+    ],
+    "queryParam": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "listinghome",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelpopup_requestContract",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelpopup_requestContract",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "submitrequestcontractcomposite",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform"
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "requestcontractcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "daa5e48e-cc01-46c8-a339-d28e82a40fd3"
+}

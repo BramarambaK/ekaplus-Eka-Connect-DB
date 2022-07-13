@@ -1,0 +1,38 @@
+{
+    "_id" : "storageTypes_propertyKey",
+    "type" : "property",
+    "name" : "storageTypes",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "24",
+    "label" : "Enter time",
+    "defaultValue" : [ 
+        {
+            "key" : "Bunker",
+            "value" : "Bunker"
+        }, 
+        {
+            "key" : "Field bin",
+            "value" : "Field bin"
+        }, 
+        {
+            "key" : "Shed",
+            "value" : "Shed"
+        }, 
+        {
+            "key" : "Silo",
+            "value" : "Silo"
+        }, 
+        {
+            "key" : "Silo bag",
+            "value" : "Silo bag"
+        }, 
+        {
+            "key" : "Other",
+            "value" : "Other"
+        }
+    ],
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "Please enter the time"
+}

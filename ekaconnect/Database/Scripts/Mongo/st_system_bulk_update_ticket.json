@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_SYTEM_BULK_TICKETS_DATA",
+    "componentType" : "SystemBulkUploadTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_SYTEM_BULK_TICKETS_DATA",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "label" : "System Bulk Create Ticket"
+}

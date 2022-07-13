@@ -1,0 +1,461 @@
+{
+  "_id": "requestcontractdetailsform_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "version": "V2",
+  "processorInfo": {
+    "processorId": "af19319b-6519-4ff2-8a90-29bd018bb9d5",
+    "isProcessorOnly": true
+  },
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "af19319b-6519-4ff2-8a90-29bd018bb9d5"
+    }
+  },
+  "label": "",
+  "layout": {
+    "mdmPayload": {},
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+      "width": "100%"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "14px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "name": "create",
+    "formStyle": {
+      "margin": "10px",
+      "margin-right": "0px",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "cardClass": "cargill-form request-contract-form-mobile",
+    "processorInfo": {
+      "processorId": "57f3daf7-a662-4084-b313-b4dde9a3d915"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "type": "submit",
+      "label": "Next",
+      "outcomes": [
+        {
+          "data": "output.requestcontractdetailsform",
+          "appendMsg": false,
+          "name": "_ST_REQUESTCONTRACT_WORKFLOW_DECISION"
+        },
+        {
+          "data": "output._ST_REQUESTCONTRACT_WORKFLOW_DECISION",
+          "name": "requestcontractspreadcomposite",
+          "condition": "return ${isMultiGrade} == true",
+          "dirtyCheckFulfilled": true,
+          "updateSelected": [
+            "selected.requestcontractspreadcomposite.data",
+            "selected.requestDetails.requestcontractdetailsform"
+          ]
+        },
+        {
+          "data": "output._ST_REQUESTCONTRACT_WORKFLOW_DECISION",
+          "name": "requestcontractfreightcomposite",
+          "condition": "return (${isMultiGrade} == false && ${isFreightDetails} == true)",
+          "dirtyCheckFulfilled": true,
+          "updateSelected": [
+            "selected.requestcontractfreightcomposite.data",
+            "selected.requestDetails.requestcontractdetailsform"
+          ]
+        },
+        {
+          "data": "output._ST_REQUESTCONTRACT_WORKFLOW_DECISION",
+          "name": "submitrequestcontractcomposite",
+          "condition": "return (${isMultiGrade} == false && ${isFreightDetails} == false)",
+          "dirtyCheckFulfilled": true,
+          "updateSelected": [
+            "selected.submitrequestcontractcomposite.data",
+            "selected.requestDetails.requestcontractdetailsform"
+          ]
+        }
+      ]
+    }
+  ],
+  "labelKey": "ENTER_LIMITS",
+  "fields": [
+    [
+      {
+        "formItemStyle": {
+          "margin-bottom": "-15px",
+          "margin-top": "9px"
+        },
+        "formLabelStyle": {
+          "line-height": "24px",
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "18px",
+          "margin": "-10px auto 1px -14px",
+          "height": "24px",
+          "margin-top": "-15px"
+        },
+        "key": "ngrHeader"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "100%",
+          "margin-top": "12px"
+        },
+        "labelStyle": {
+          "color": "#3B4047",
+          "font-weight": "normal",
+          "font-size": "18px",
+          "font-family": "'Helvetica Neue LT W05 65 Medium'"
+        },
+        "formItemStyle": {
+          "margin-top": "-8px",
+          "margin-right": "5px",
+          "margin-left": "-14px",
+          "width": "100%"
+        },
+        "formLabelStyle": {
+          "margin-top": "-1px",
+          "margin-bottom": "6px"
+        },
+        "suffix": "",
+        "placeholder": "Select",
+        "key": "counterPartyName",
+        "restoreStateQuery": "contractlistingcomposite.contractlistingquery"
+      }
+    ],
+    [
+      {
+        "style": {
+          "margin-top": "-27px",
+          "width": "100%"
+        },
+        "formItemStyle": {
+          "margin-top": "20px",
+          "margin-right": "5px",
+          "margin-left": "-14px",
+          "width": "100%"
+        },
+        "formLabelStyle": {
+          "margin-bottom": "7px"
+        },
+        "suffix": "",
+        "maxlength": 30,
+        "placeholder": "Enter broker reference",
+        "key": "brokerReferenceNo"
+      }
+    ],
+    [
+      {
+        "formItemStyle": {
+          "margin-bottom": "-15px",
+          "margin-top": "9px"
+        },
+        "formLabelStyle": {
+          "line-height": "24px",
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "18px",
+          "margin": "0px auto 1px -14px",
+          "height": "24px",
+          "margin-top": "-3px"
+        },
+        "key": "contractFormHeader"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "200px",
+          "margin": "-6px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "product",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px",
+          "padding-top": "0px"
+        },
+        "suffix": "",
+        "key": "quality",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "cropYear",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "placeholder": "Enter quantity",
+        "key": "contractItemQuantity",
+        "errorTooltip": true
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "contractPrice",
+        "type": "readOnly",
+        "class": ["form-input-readonly", "request-contract-price-value"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "paymentTerms",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "INCOTerm",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "dischargeLocationCountryCity",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "shipmentPeriodFromDate",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      },
+      {
+        "style": {
+          "width": "200px",
+          "margin": "8px auto 1px -14px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "shipmentPeriodToDate",
+        "type": "readOnly",
+        "class": ["form-input-readonly"]
+      }
+    ],
+    [
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "dischargeLocationCountry"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "isMultiGrade"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "dischargeLocationType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "multiGradeDifferentialDetails"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "userType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "BPRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "submitrequestcontractcardview"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "dischargeLocationState"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "dischargeLocationCity"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "shipmentPeriodFrom"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "shipmentPeriodTo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "profitCentre"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "bulkHandler"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "locationGroupType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "corporate"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "appHome"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "issustainable"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "markettype"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "bidid"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "userRole"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "refNo"
+      }
+    ]
+  ],
+  "taskId": "requestcontractdetailsform",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "e69c3676-d2e5-4a78-81f8-6e4f500fbf1a",
+  "deviceType": "mobile"
+}

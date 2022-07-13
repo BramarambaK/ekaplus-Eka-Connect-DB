@@ -1,0 +1,9 @@
+{
+  "_id": "requestcontract_workflow_decision_step2_processor",
+  "name": "requestcontract_workflow_decision_step2_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": " var data = req.body;\r\n    var output = {};\r\n\r\n    data = {\r\n      spread: data.requestcontractspreadcomposite.requestcontractspreadquestion.spread,\r\n      INCOTerm: data.requestcontractspreadcomposite.requestcontractspreadquestion.INCOTerm\r\n    };\r\n\r\n    \/\/ let multiGrade;\r\n    let freightDetails;\r\n\r\n    if (\r\n      data.isFreightDetails == true ||\r\n      ((data.INCOTerm + '' ).toLowerCase() == 'ex-farm' || (data.INCOTerm + '').toLowerCase() == 'db')\r\n    ) {\r\n      freightDetails = true;\r\n    } else {\r\n      freightDetails = false;\r\n    }\r\n\r\n    output = {\r\n      ...data,\r\n      ...req.body.requestcontractspreadcomposite.data,\r\n      isFreightDetails: freightDetails\r\n    };\r\n\r\n    var spreadErrorData = req.body.requestcontractspreadcomposite;\r\n\r\n    if (\r\n      spreadErrorData.requestcontractspreadquestion.spread == null ||\r\n      spreadErrorData.requestcontractspreadquestion.spread == undefined ||\r\n      spreadErrorData.requestcontractspreadquestion.spread == ''\r\n    ) {\r\n      res.status(400).send('Please select any one option to fix the spreads.');\r\n    } else {\r\n      const t = { data: output, isFreightDetails: freightDetails };\r\n      res.status(200).send(t);\r\n    }",
+  "sys__UUID": "d706e1fa-5008-4e05-bfef-645356ae5583"
+}
