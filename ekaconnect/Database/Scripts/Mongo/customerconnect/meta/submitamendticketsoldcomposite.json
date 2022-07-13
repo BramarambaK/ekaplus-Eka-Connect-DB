@@ -1,0 +1,213 @@
+{
+  "_id": "submitamendticketsoldcomposite",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Amend Tickets",
+  "version": "V2",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenu_amendticket_sold"
+    },
+    {
+      "style": {
+        "padding": "22px 26px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "0px 5px"
+      },
+      "workflows": [
+        {
+          "name": "submitamendsoldtickettableview",
+          "data": "selected.submitamendticketsoldcomposite.submitamendsoldtickettableview"
+        }
+      ]
+    },
+    {
+      "name": "submitamendticketttnc"
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Amend tickets",
+      "style": {
+        "margin-bottom": "16px"
+      }
+    },
+    "customClass": true,
+    "name": "customv2",
+    "footerClass": "custom-footer",
+    "menu": false,
+    "customMenu": true,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketslist"
+      },
+      {
+        "label": "Amend tickets",
+        "type": "string"
+      }
+    ],
+    "clearSelected":[
+        "selected.amendticketsold.ticketlistingquery",
+        "selected.submitamendticketsoldcomposite.ticketlistingquery"
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketslist",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "clearSelected": [
+            "selected.ticketlistingcomposite",
+            "selected.amendticketwarehoused",
+            "selected.amendticketsold",
+            "selected.submitamendticketsoldcomposite"
+          ]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "name": "cancelpopup_soldAmendTicket_submit",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "37px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "task": "submitamendticketsoldcomposite",
+      "executeDecision": false,
+      "pickSelectedData": {
+          "submitamendticketsoldcomposite.submitamendtickettableview": "selected.submitamendticketsoldcomposite.submitamendtickettableview"
+      },
+      "outcomes": [
+        {
+          "data": "output.submitamendticketsoldcomposite",
+          "appendMsg": false,
+          "name": "_ST_AMENDS_SUBMIT_PREV"
+        },
+        {
+          "data": "output._ST_AMENDS_SUBMIT_PREV",
+          "name": "amendticketsold",
+          "setSelected": [
+            "selected.amendticketsold.amendticket_sold_details.amendticketlist"
+          ],
+          "clearSelected": ["selected.submitamendticketsoldcomposite"]
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "label": "Previous",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "CREATE",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": false,
+      "disabled": "selected.submitamendticketsoldcomposite.submitamendticketttnc.atnc.length < '2'",
+      "pickSelectedData": {
+        "submitamendticketsoldcomposite": "selected.submitamendticketsoldcomposite.submitamendsoldtickettableview"
+      },
+      "outcomes": [
+        {
+          "data" : "output.submitamendticketsoldcomposite",
+          "appendMsg" : true,
+          "result" : {
+              "success" : {
+                  "message" : "Request Id sent successfully"
+              },
+              "failure" : {
+                  "message" : "Please fix errors in ext"
+              },
+              "successWithWarning" : {
+                  "message" : "Data got created with some errors"
+              }
+          },
+          "name" : "_ST_PROCESS_SUBMIT_AMEND_SOLD_TICKETS"
+      }, 
+      {
+          "data" : "output._ST_PROCESS_SUBMIT_AMEND_SOLD_TICKETS",
+          "name" : "ticketlistingcomposite",
+          "restoreStateQuery" : "ticketlistingcomposite",
+          "restoreState" : true,
+          "showToaster" : true,
+          "appendMsg" : true,
+          "result" : {
+              "success" : {
+                  "message" : "Request successfully submitted ",
+                  "messageExpression" : "return '${requestId}' + ' has been successfully sent.'"
+              },
+              "failure" : {
+                  "message" : "Please fix errors in ext"
+              },
+              "successWithWarning" : {
+                  "message" : "Data got created with some errors"
+              }
+          },
+          "clearSelected" : [ 
+              "selected.submitamendticketsoldcomposite", 
+              "selected.amendticketsold", 
+              "menuDetails"
+          ],
+          "isDelay":true
+      }
+      ],
+      "formLoader": {
+        "text": "Submitting ammend tickets",
+        "secondaryText": "Please do not close or refresh your browser as this may take a few minutes"
+      },
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Submit",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "submitamendticketsoldcomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys_UUID": "25c0c126-db07-4f81-b305-20728c9b49bf"
+}

@@ -1,0 +1,162 @@
+{
+  "_id": "requestcontractspread_composite_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request contract",
+  "version": "V2",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenurequestcontract",
+      "data": "selected.requestcontractcomposite.requestcontractdetailsform"
+    },
+    {
+      "style": {
+        "padding": "1px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "0px 10px",
+        "margin-top": "-10px"
+      },
+      "workflows": [
+        {
+          "name": "requestcontractspread",
+          "data": "selected.requestcontractspreadcomposite.data"
+        }
+      ]
+    },
+    {
+      "workflows": [
+        {
+          "name": "requestcontractspreadquestion",
+          "data": "selected.requestcontractspreadcomposite.data"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "listinghome",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelpopup_requestContract_spread",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelpopup_requestContract_spread",
+          "data": "selected.requestDetails.requestcontractdetailsform",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "requestcontractcomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": false,
+      "pickSelectedData": {
+        "requestcontractspreadcomposite": "selected.requestcontractspreadcomposite"
+      },
+      "outcomes": [
+        {
+          "data": "output.requestcontractspreadcomposite",
+          "name": "_ST_REQUESTCONTRACT_WORKFLOW_DECISION_STEP2"
+        },
+        {
+          "data": "output._ST_REQUESTCONTRACT_WORKFLOW_DECISION_STEP2",
+          "name": "requestcontractfreightcomposite",
+          "condition": "return (${isFreightDetails} == true)",
+          "updateSelected": ["selected.requestcontractfreightcomposite.data"]
+        },
+        {
+          "data": "output._ST_REQUESTCONTRACT_WORKFLOW_DECISION_STEP2",
+          "name": "submitrequestcontractcomposite",
+          "condition": "return (${isFreightDetails} == false)",
+          "updateSelected": ["selected.submitrequestcontractcomposite.data"]
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Request contract Spread"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home ",
+        "type": "string",
+        "task": "listinghome"
+      },
+      {
+        "label": "Request Contract",
+        "type": "string",
+        "value": null
+      }
+    ]
+  },
+  "payLoad": "selected.requestcontractspreadcomposite.data",
+  "taskId": "requestcontractspreadcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "92bc3ac3-cbec-4f37-bbe8-847666a33eb0",
+  "deviceType": "mobile"
+}

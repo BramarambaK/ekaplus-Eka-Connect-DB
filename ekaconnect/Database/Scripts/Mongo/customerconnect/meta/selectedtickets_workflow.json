@@ -1,0 +1,96 @@
+{
+  "_id": "selectedtickets_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "selectedtickets",
+  "label": "Transfer tickets",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "5c86ab14-a1aa-410c-8e05-e8923ddabeda",
+  "type": "workflow",
+  "lazyLoading": false,
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Tickets selected",
+    "descriptionExpression": "return 'Below are the tickets you have selected to transfer from <b>'  + '${bpName}' + ' - ' + '${bpRefNo}' + '</b>'",
+    "rowGroup": true,
+    "class": "tansfertickets-table",
+    "footer": {
+      "description": "return '<span> Total transferrable quantity </span>' + '<span>' + ${data}.reduce((acc, curr) => (acc + Number(curr.quantity)), 0).toFixed(2)  + ' MT' + '</span>'",
+      "class": "ticket-transfer-step-1-footer",
+      "style": {
+        "text-align": "right"
+      }
+    }
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": false,
+      "key": "ticketRefNo",
+      "hidden": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Commodity",
+      "sort": false,
+      "key": "product",
+      "primaryFilter": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Grade",
+      "sort": false,
+      "key": "quality"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Season",
+      "sort": false,
+      "key": "cropYear",
+      "primaryFilter": false
+    },
+    {
+      "key": "quantity",
+      "type": "hidden"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Qty (MT)",
+      "headerClass": "th-align-right",
+      "cellClass": "td-align-right",
+      "sort": false,
+      "key": "formattedquantity",
+      "UIupdates": {
+        "listValue": "return Number('${quantity}').toFixed(2)"
+      }
+    }
+  ],
+  "decisions": [],
+  "labelKey": "EDITABLETABLE"
+}

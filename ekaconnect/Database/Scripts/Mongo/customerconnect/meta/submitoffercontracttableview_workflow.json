@@ -1,0 +1,143 @@
+{
+  "_id": "submitoffercontracttableview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "submitoffercontracttableview",
+  "label": "Offer for Contracts",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "7882bc87-53c5-4843-b809-a5b0487f9ae2",
+  "type": "workflow",
+  "lazyLoading": false,
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header" : "Summary",
+    "descriptionExpression" : "return 'Review and confirm offer contract details for <b>'  + '${counterPartyName}' + ' - ' + '${BPRefNo}' + '</b>'",
+    "rowGroup": true,
+    "class": "submitoffer-contracttable"
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract type",
+      "sort": false,
+      "key": "contractType",
+      "hidden": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Commodity",
+      "sort": false,
+      "key": "product",
+      "primaryFilter": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Grade",
+      "sort": false,
+      "key": "quality"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Season",
+      "sort": false,
+      "key": "cropYear",
+      "primaryFilter": false
+    }, 
+    {
+      "filter" : false,
+      "edit" : false,
+      "label" : "Sustainable",
+      "sort" : false,
+      "key" : "offersustainable",
+      "primaryFilter" : false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Portzone",
+      "sort": false,
+      "key": "dischargeLocationCity",
+      "primaryFilter": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Site/Region",
+      "sort": false,
+      "key": "offersite"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Delivery term",
+      "sort": false,
+      "key": "INCOTerm"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Delivery period",
+      "sort": false,
+      "key": "offerdeliveryperiod",
+      "primaryFilter": false,
+      "width": "160px",
+      "UIupdates" : {
+          "listValue" : "return '${INCOTerm}'==='DB' ?'${offerdeliveryperiod}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Offer qty (MT)",
+      "sort": false,
+      "key": "contractItemQuantity"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Offer price (/MT)",
+      "sort": false,
+      "key": "contractPrice"
+    },
+    {
+      "type": "hidden",
+      "key": "offerExpiryDate"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Offer expiry",
+      "sort": false,
+      "key": "formattedOfferExpiryDate",
+      "UIupdates": {
+        "listValue": "return '${offerExpiryDate}' ?moment('${offerExpiryDate}').format('DD/MM/YYYY'): '-'"
+      }
+    }
+  ],
+  "decisions": [],
+  "labelKey": "EDITABLETABLE"
+}

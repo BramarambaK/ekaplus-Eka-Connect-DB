@@ -1,0 +1,54 @@
+{
+  "_id": "submitrequestcontracts_popup",
+  "name": "submitrequestcontracts_popup",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Price no longer available",
+  "type": "workflow",
+  "sys__UUID": "db63c84b-f77c-4cf6-b125-8ad5901a8fc1",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "You may no longer request for a contract as the price has been updated and is no longer available.",
+      "headerMessage": "Published bid expired or changed",
+      "information": ""
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn cargill-outline-btn request-contract-cancel",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "submitrequestcontractcomposite",
+          "restoreState": false
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "externalLinkSameTab",
+          "data": "selected.submitrequestcontracts_popup",
+          "targetPath": "${appHome}"
+        }
+      ],
+      "label": "Browse bids",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "Price no longer available",
+  "fields": [],
+  "taskId": "submitrequestcontracts_popup"
+}

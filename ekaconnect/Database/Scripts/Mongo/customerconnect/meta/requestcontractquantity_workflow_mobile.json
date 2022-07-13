@@ -1,0 +1,46 @@
+{
+  "_id": "requestcontractquantity_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request Contract quantity Summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false,
+    "cardClass": "contract-quantity-summary",
+    "theme": "contract-quantity-summary"
+  },
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "contractItemQuantity",
+        "filterExpression": "return '${contractItemQuantity}'",
+        "roundOff": "1.2-2",
+        "type": "hidden"
+      },
+      {
+        "key": "contractPrice",
+        "label": "return 'Estimated contract value for base grade. Excludes GST, fees and charges'",
+        "aggregateFunction": "product",
+        "prefix": "'$'",
+        "filterExpression": "return  '${contractPrice}' * '${contractItemQuantity}'",
+        "roundOff": "1.2-2",
+        "style": {
+          "display": "block",
+          "text-align": "left",
+          "flex": "auto",
+          "height": "32px",
+          "padding-right": "0px",
+          "margin-left": "0px"
+        }
+      }
+    ]
+  ],
+  "labelKey": "ACCOUNT_QUANTITY_SUMMARY",
+  "taskId": "requestcontractquantity",
+  "object": "92bc3ac3-cbec-4f37-bbe8-847666a33eb0",
+  "deviceType": "mobile"
+}

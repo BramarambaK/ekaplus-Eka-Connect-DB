@@ -1,0 +1,24 @@
+{
+    "_id" : "SCHEDULAR_DELETE_PRICES_OLDER_THAN_TODAY",
+    "componentType" : "ChainedSystemTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "taskId" : "SCHEDULAR_DELETE_PRICES_OLDER_THAN_TODAY",
+    "refType" : "app",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "isAsynchCallRequired" : "Y",
+	"disableCheckScheduledInProgress" : true,
+    "schedulerConfig" : {
+        "cronExpression" : "1 30 13 * * ?"
+    },
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_PROCESSOR_DELETE_PRICES_OLDER_THAN_TODAY",
+            "data" : "output.SCHEDULAR_DELETE_PRICES_OLDER_THAN_TODAY"
+        }
+    ],
+    "sys__UUID" : "7d6b2a09-6375-4501-a547-fcbd62aada49"
+}

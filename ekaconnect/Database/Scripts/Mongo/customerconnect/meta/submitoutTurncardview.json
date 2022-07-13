@@ -1,0 +1,122 @@
+{
+    "_id" : "submitoutTurncardview",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Outturn Tickets Card View",
+    "type" : "workflow",
+    "layout" : {
+        "header" : {
+            "descriptionExpression" : "return 'Review your outturn summary for <b>'+ ${data}[0].bpName +','+( (${data}[4].OutturnQty < '200') ? '</b> Grain must be picked up from '+${data}[1].site+' by transport organised by grower in a single lot (same day). Grain can only be picked up when coinciding with the outturning of that grade of grain from the site.':(${data}[4].OutturnQty > '200' && ${data}[4].OutturnQty < '251') ?'</b> Grain must be picked up from '+${data}[1].site+' by transport organised by grower at a minimum of 200 tonne lots (until the last lot). Grain can only be picked up when coinciding with the outturning of that grade of grain from the site.':(${data}[4].OutturnQty > '250' && ${data}[4].OutturnQty < '300') ?'</b> Grain must be picked up from '+${data}[1].site+' by transport organised by grower at a minimum of 200 tonne lots (until the last lot). Grain can only be picked up when coinciding with the outturning of that grade of grain from the site.':'</b> The grower will be invoiced for the following charges which must be paid prior to the outturning of any stock.')",
+            "label" : "Summary",
+            "style" : {
+                "margin-bottom" : "16px"
+            }
+        },
+        "hideTabs" : true,
+        "name" : "cards-view",
+        "pagination" : {
+            "rowCount" : 8
+        },
+        "theme" : "cargil-allocate-ticket",
+        "cardsListClass" : "card-view-tickets",
+        "submitTickets" : true
+    },
+    "fields" : [ 
+        [ 
+            {
+                "key" : "ticketsCardTypeFormatted",
+                "type" : "description",
+                "valueExpression" : "return '${cardType}'.toLowerCase() == 'count' ? 'Tickets' : '${cardType}'.toLowerCase() == 'site' ? 'Site' : '${cardType}'.toLowerCase() == 'commodity' ? 'Commodity' : '${cardType}'.toLowerCase() == 'grade' ? 'Grade' : '${cardType}'.toLowerCase() == 'outturnqty' ? 'Total Outturn Quantity' : '${cardType}'.toLowerCase() == 'formattedestimatedprice' ? 'Estimated outturn fee':'Base Price'",
+                "style" : {
+                    "font-color" : "#5D646F",
+                    "line-height" : "24px",
+                    "height" : "24px",
+                    "padding" : "0",
+                    "display" : "flex",
+                    "flex-direction" : "row",
+                    "align-items" : "center"
+                },
+                "config" : {
+                    "iconClassExpression" : "return ('${cardType}'.toLowerCase() == 'count' ? 'ticket' : '${cardType}'.toLowerCase() == 'site' ? 'site' : '${cardType}'.toLowerCase() == 'commodity' ? 'commodity' : '${cardType}'.toLowerCase() == 'grade' ? 'grade' : '${cardType}'.toLowerCase() == 'outturnqty' ? 'total-quantity' : '${cardType}'.toLowerCase() == 'formattedestimatedprice' ? 'base-price':'base-price') + '-icon'"
+                }
+            }, 
+            {
+                "key" : "count",
+                "type" : "description",
+                "class" : "bold",
+                "style" : {
+                    "padding" : "0",
+                    "margin-top" : "4px"
+                },
+                "visibility" : "return '${cardType}'.toLowerCase() == 'count'"
+            }, 
+            {
+                "key" : "site",
+                "type" : "description",
+                "class" : "bold",
+                "style" : {
+                    "padding" : "0",
+                    "margin-top" : "4px"
+                },
+                "visibility" : "return '${cardType}'.toLowerCase() == 'site'"
+            }, 
+            {
+                "key" : "commodity",
+                "type" : "description",
+                "class" : "bold",
+                "style" : {
+                    "padding" : "0",
+                    "margin-top" : "4px"
+                },
+                "visibility" : "return '${cardType}'.toLowerCase() == 'commodity'"
+            }, 
+            {
+                "key" : "grades",
+                "type" : "description",
+                "class" : "bold suffixed",
+                "style" : {
+                    "padding" : "0",
+                    "margin-top" : "4px",
+                    "display" : "flex"
+                },
+                "visibility" : "return '${cardType}'.toLowerCase() == 'grade'"
+            }, 
+            {
+                "key" : "OutturnQty",
+                "type" : "description",
+                "class" : "bold",
+                "style" : {
+                    "padding" : "0",
+                    "margin-top" : "4px"
+                },
+                "visibility" : "return '${cardType}'.toLowerCase() == 'outturnqty'"
+            }, 
+            {
+                "key" : "formattedEstimatedPrice",
+                "type" : "description",
+                "class" : "bold",
+                "style" : {
+                    "padding" : "0",
+                    "margin-top" : "4px"
+                },
+                "visibility" : "return '${cardType}'.toLowerCase() == 'formattedestimatedprice'"
+            }
+        ], 
+        [ 
+            {
+                "key" : "dummyTab",
+                "type" : "hidden",
+                "filterType" : "tabs",
+                "filterBy" : "dummyTab",
+                "valueExpression" : "return 'tab'"
+            }
+        ]
+    ],
+    "decisions" : [],
+    "labelKey" : "Cards View",
+    "taskId" : "submitoutTurncardview",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "sys_UUID" : "693463b1-3a9b-4ab6-97a2-6fba6d06435c"
+}

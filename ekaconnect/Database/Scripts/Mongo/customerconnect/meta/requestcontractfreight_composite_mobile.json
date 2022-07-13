@@ -1,0 +1,139 @@
+{
+  "_id": "requestcontractfreight_composite_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request contract",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "workflows": [
+        {
+          "name": "topmenurequestcontract"
+        }
+      ],
+      "style": {
+        "padding": "0px"
+      }
+    },
+    {
+      "name": "requestcontractfreightdetails",
+      "data": "selected.requestcontractfreightcomposite",
+      "classExpression": "return (${requestcontractfreightcomposite.requestcontractfreightdetails}['freightOrganise'].toLowerCase().includes('cargill')) ? '' : 'freight-logistics-selection'"
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Add price limits"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home ",
+        "type": "string",
+        "task": "listinghome"
+      },
+      {
+        "label": "Request contract",
+        "type": "string",
+        "value": null
+      }
+    ]
+  },
+  "payLoad": "selected.submitrequestcontractcomposite.data",
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "listinghome",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "name": "cancelpopup_requestContract_freight",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform",
+          "restoreState": true
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "name": "cancelpopup_requestContract_freight",
+          "data": "selected.requestcontractcomposite.requestcontractdetailsform",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "backHistory"
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "data": "output.requestcontractfreightcomposite",
+          "name": "_ST_REQUESTCONTRACT_WORKFLOW_DECISION_STEP3"
+        },
+        {
+          "data": "output._ST_REQUESTCONTRACT_WORKFLOW_DECISION_STEP3",
+          "name": "submitrequestcontractcomposite",
+          "updateSelected": ["selected.submitrequestcontractcomposite.data"]
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "requestcontractfreightcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "daa5e48e-cc01-46c8-a339-d28e82a40fd3",
+  "deviceType": "mobile"
+}

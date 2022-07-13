@@ -1,0 +1,44 @@
+{
+  "_id": "season_master_data_object",
+  "name": "season_master_data_object",
+  "label": "Season Master Data Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["season"],
+  "fields": {
+    "season": {
+      "season": "Season",
+      "labelKey": "season",
+      "type": "textbox",
+      "sourceTextFormat" : {
+            "textFormatLabel": "yyyy/yyyy",
+            "textFormat": "[0-9]{4}/[0-9]{4}$"
+	  },
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "startDate": {
+      "startDate": "Start Date",
+      "labelKey": "startDate",
+      "type": "date",
+      "sourceDateFormat": "dd-MM-yyyy",
+      "isRequired": true
+    },
+    "endDate": {
+      "endDate": "End Date",
+      "labelKey": "endDate",
+      "type": "date",
+      "sourceDateFormat": "dd-MM-yyyy",
+      "isRequired": true
+    }
+  },
+  "sys__UUID": "4aa9caf8-8dd8-49a7-8fad-a229c376327c"
+}

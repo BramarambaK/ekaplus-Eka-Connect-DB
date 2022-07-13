@@ -1,0 +1,38 @@
+{
+    "_id" : "SCHEDULAR_EXPIRE_LOAD_LOCATIONS_COMMODITYGRADE",
+    "componentType" : "ChainedSystemTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "taskId" : "SCHEDULAR_EXPIRE_LOAD_LOCATIONS_COMMODITYGRADE",
+    "refType" : "app",
+    "object" : "704d4d38-6ec2-4378-9ec0-639f4237a89a",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "isAsynchCallRequired" : "Y",
+	"disableCheckScheduledInProgress" : true,
+    "schedulerConfig" : {
+        "cronExpression" : "1 0 0 * * ?"
+    },
+    "chainedTasks" : [
+        {
+            "name" : "EXT_GET_LOCATIONS_DATA",
+            "data" : "output.SCHEDULAR_EXPIRE_LOAD_LOCATIONS_COMMODITYGRADE"
+        },
+		{
+			"name" : "ELASTIC_BULK_UPLOAD_LOCATIONS",
+			"appendMsg" : false,
+			"data" : "output.EXT_GET_LOCATIONS_DATA"
+		},		
+		{
+            "name" : "EXT_GET_COMMODITY_GRADE_DATA",
+            "data" : "output.SCHEDULAR_EXPIRE_LOAD_LOCATIONS_COMMODITYGRADE"
+        },
+		{
+			"name" : "ELASTIC_BULK_UPLOAD_COMMODITY_GRADE",
+			"appendMsg" : false,
+			"data" : "output.EXT_GET_COMMODITY_GRADE_DATA"
+		}
+	],
+    "sys__UUID" : "f0dd7d23-93e9-411f-8e36-962aab88f7af"
+}
