@@ -1,0 +1,135 @@
+{
+  "_id": "pricelimitscomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Add prices",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenuprice"
+    },
+    {
+      "name": "enterpricelimits"
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Add price limits"
+    },
+    "customClass": true,
+    "footerClass": "price-limits-footer",
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Prices and limits",
+        "type": "string",
+        "task": "priceandlimitshome"
+      },
+      {
+        "label": "Add prices",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "priceandlimitshome",
+      "outcomes": [
+        {
+          "name": "pricelimitsdomaincomposite",
+          "clearSelected": [
+            "selected.pricelimitsdomaincomposite",
+            "selected.pricelimitscomposite"
+          ]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "name": "cancelpopup_price",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "37px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "summarypricelimitscomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "36px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    },
+    {
+      "type": "reload",
+      "objectAction": "READ",
+      "btnClass": "cargil-tab-btn   active-tab",
+      "outcomes": [
+        {
+          "name": "pricelimitscomposite"
+        }
+      ],
+      "position": "tab",
+      "label": "MANUAL ENTRY"
+    },
+    {
+      "type": "reload",
+      "objectAction": "READ",
+      "btnClass": "cargil-tab-btn",
+      "outcomes": [
+        {
+          "name": "pricelimitsbulkcomposite"
+        }
+      ],
+      "position": "tab",
+      "label": "BULK UPLOAD"
+    }
+  ],
+  "taskId": "pricelimitscomposite",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "daa5e48e-cc01-46c8-a339-d28e82a40fd3"
+}

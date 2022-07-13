@@ -1,0 +1,52 @@
+{
+  "_id": "pricelistingquery_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "type": "workflow",
+  "rows": 10000,
+  "processorInfo": {
+    "processorId": "2729f428-7838-4428-aaf7-796f7aa8dcc9",
+    "isProcessorOnly": true,
+    "isClientTimeZone": true
+  },
+  "layout": {
+    "header": {
+      "label": "Manage prices",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "processorInfo": {
+      "processorId": "248783d1-1167-4d08-808a-43dde17b6100",
+      "isProcessorOnly": true
+    },
+    "getInitialData": true,
+    "name": "query",
+    "mdmPayload": {},
+    "dataPayload": {}
+  },
+  "fields": [
+    {
+      "key": "ngrGCSFilter",
+      "filterBy": "bpExternalCode",
+      "filterType": "dropdown",
+      "multiple": false,
+      "selectedAll": "return '${userInfo.customerType}' !== 'Grower' ? 'All ABNs' : 'All NGRs'",
+      "placeholder": "return '${userInfo.customerType}' !== 'Grower' ? 'Select a ABN' : 'Select a NGR'",
+      "persistInGlobal": true,
+      "useGlobalValue": true
+    },
+    {
+      "key": "tabsView",
+      "filterBy": "status",
+      "filterType": "tabs"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "pricelistingquery",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40"
+}

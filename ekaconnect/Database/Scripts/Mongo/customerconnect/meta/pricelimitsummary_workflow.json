@@ -1,0 +1,124 @@
+{
+  "_id": "pricelimitsummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Summary",
+    "descriptionExpression": "return 'Review and confirm daily tonnage limits entered for <b>${bpName} - ${bpRefNo}' + ('${bpExternalName}' ? (' - ' + '${bpExternalName}') : '') + '</b>, season <b>${season}</b>'",
+    "rowGroup": true,
+    "class": "pricelimits-summary"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "outcomes": [
+        {
+          "data": "output.pricelimitsummary",
+          "result": {
+            "success": {
+              "message": "Tonnage limits have been successfully created",
+              "messageExpression": "return ${data}.length + ' tonnage limit' + (${data}.length > 1 ? 's' : '') +' have been successfully added.'"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "appendMsg": true,
+          "name": "_ST_PROCESSOR_ELASTIC_UPDATE_VOLUMELIMIT_DATA_INTERNAL"
+        },
+        {
+          "name": "volumelistingcomposite",
+          "showToaster": true,
+          "restoreState": true,
+          "clearSelected": ["selected.volumelimitscomposite", "menuDetails"]
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "disableButtonTime": 3000,
+      "label": "Submit",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": false,
+      "key": "region",
+      "label": "Port zone",
+      "group": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "product",
+      "label": "Commodity",
+      "group": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "site",
+      "label": "Site"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quality",
+      "label": "Grade"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedDailypurchased",
+      "label": "Daily purchased (MT)",
+      "UIupdates" : {
+        "listValue" : "return (('${dailypurchased}' == '-'||'${dailypurchased}' === '0.00')?'0.00': '${dailypurchased}')"
+    }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedOldDailylimit",
+      "label": "Current daily limit (MT)",
+      "UIupdates": {
+        "listValue": "return '${oldDailylimit}' == '' ? '-' : '${oldDailylimit}'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "oldDailylimit",
+      "label": "Current daily limit (MT)",
+      "type": "hidden",
+      "UIupdates": {
+        "listValue": "return '${dailyLimit}' == '' ? '-' : ${dailyLimit}"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "dailyLimit",
+      "label": "New limit (MT)"
+    }
+  ],
+  "taskId": "pricelimitsummary",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "7e8b6c97-a065-4820-b1e3-53eac1795012"
+}

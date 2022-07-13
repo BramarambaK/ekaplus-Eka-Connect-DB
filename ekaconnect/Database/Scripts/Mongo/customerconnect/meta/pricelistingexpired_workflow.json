@@ -1,0 +1,198 @@
+{
+  "_id": "pricelistingexpired_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "pricelistingexpired",
+  "label": "Manage Prices",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "sys__UUID": "1ef46cc7-6c7a-471c-8fc3-eddb1f0a2a8c",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "mdmPayload": {},
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. price Id",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Price ID",
+      "sort": true,
+      "key": "priceId",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Port zone",
+      "sort": true,
+      "key": "region",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Site",
+      "sort": true,
+      "key": "site",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Pricing option",
+      "sort": true,
+      "key": "pricingOption"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Sustainable",
+      "sort": true,
+      "key": "formattedSustainable"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Price (/MT)",
+      "sort": true,
+      "key": "price",
+      "format": "decimal",
+      "roundoff": "2"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Purchased (MT)",
+      "sort": true,
+      "key": "purchased",
+      "UIupdates": {
+        "listValue": "return Number('${purchased}').toFixed(2)"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Start date",
+      "sort": true,
+      "key": "formattedStartDate",
+      "UIupdates": {
+        "listValue": "return moment('${startDateTime}').format('DD/MM/YYYY')"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Start time",
+      "sort": true,
+      "key": "formattedStarttime",
+      "UIupdates": {
+        "listValue": "return moment('${startDateTime}').format('HH:mm')"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "End date",
+      "sort": true,
+      "key": "formattedEnddate",
+      "UIupdates": {
+        "listValue": "return moment('${endDateTime}').format('DD/MM/YYYY')"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "End time",
+      "sort": true,
+      "key": "formattedEndtime",
+      "UIupdates": {
+        "listValue": "return moment('${endDateTime}').format('HH:mm')"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Submitted by",
+      "sort": true,
+      "key": "submittedBy"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Withdrawn by",
+      "sort": true,
+      "key": "withdrawnBy",
+      "UIupdates": {
+        "listValue": "return '${withdrawnBy}' || '-'"
+      }
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

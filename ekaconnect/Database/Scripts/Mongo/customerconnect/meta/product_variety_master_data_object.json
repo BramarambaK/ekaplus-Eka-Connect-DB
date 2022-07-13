@@ -1,0 +1,48 @@
+{
+    "_id" : "product_variety_master_data_object",
+    "name" : "product_variety_master_data_object",
+    "label" : "Product Variety Master Data Object",
+    "type" : "object",
+    "version" : "1",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [ 
+        "product", 
+        "varietyName",
+		"cropYear"
+    ],
+    "fields" : {
+        "product" : {
+            "product" : "Product",
+            "labelKey" : "product",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "varietyName" : {
+            "varietyName" : "Variety Name",
+            "labelKey" : "varietyName",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "cropYear" : {
+            "cropYear" : "Crop Year",
+            "labelKey" : "cropYear",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+			"sourceTextFormat": {
+				"textFormatLabel": "yyyy/yyyy",
+				"textFormat": "[0-9]{4}/[0-9]{4}$"
+           }
+        }
+    },
+    "sys__UUID" : "c7e068e2-a9ba-11ec-b909-0242ac120002"
+}

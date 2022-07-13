@@ -1,0 +1,41 @@
+{
+  "_id": "pricelimitsquicklink_workflow",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "inputData": {
+    "type": "menuObject",
+    "config": {
+      "menuId": "ebab5078-8b77-40b9-acfc-8f60e5aff548"
+    }
+  },
+  "label": "Quick Link",
+  "labelKey": "Quick Link",
+  "layout": {
+    "name": "flexible-menu",
+    "component": "FlexibleMenuComponent",
+    "header": {
+      "label": "Quick links",
+      "style": {
+        "color": "#3B4047",
+        "font-size": "18px",
+        "font-weight": "600",
+        "padding": "0px 10px 10px 20px",
+        "margin": "0 5px",
+        "border-bottom": "solid 1px #DBE1EB"
+      }
+    },
+    "quickLinkMenuStyle": {
+      "style": {
+        "margin-bottom": "-18px"
+      }
+    }
+  },
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "pricelimitsquicklink",
+  "type": "workflow"
+}

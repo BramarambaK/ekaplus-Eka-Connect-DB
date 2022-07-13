@@ -1,0 +1,24 @@
+{
+    "_id" : "push_movementData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+    "objectAction" : "CREATE",
+    "taskId" : "push_movementData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",       
+    "chainedTasks" : [ 
+        {
+            "name" : "ST_GET_MOVEMENTDATA",
+            "appendMsg" : false,
+            "data" : "output.push_movementData",
+            "returnData":"Y"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_MOVEMENT_ORDERS",
+            "appendMsg" : false,
+            "data" : "output.ST_GET_MOVEMENTDATA"
+        }
+    ]
+}

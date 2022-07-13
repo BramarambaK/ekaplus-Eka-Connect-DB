@@ -1,0 +1,94 @@
+{
+  "_id": "pricelimitsdomaincomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Prices and limits composite",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": "pricelimitsdomainquicklink"
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": "pricelimitsdomainquicklink"
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 39px 0"
+              },
+              "workflows": [
+                {
+                  "name": "pricelimitsdomainquery"
+                }
+              ]
+            },
+            {
+              "style": {
+                "margin": "2rem 0 57px"
+              },
+              "workflows": [
+                {
+                  "name": "pricelimitsdomainsummary",
+                  "data": "selected.pricelimitsdomaincomposite.pricelimitsdomainquery"
+                }
+              ]
+            },
+            {
+              "name": "pricelimitsdomaincharts",
+              "data": "selected.pricelimitsdomaincomposite.pricelimitsdomainquery"
+            },
+            {
+              "name": "pricelimitsdomaincardview",
+              "data": "selected.pricelimitsdomaincomposite.pricelimitsdomaincharts"
+            },
+            {
+              "style": {
+                "display": "flex"
+              },
+              "workflows": [
+                {
+                  "name": "lastUpdated",
+                  "data": "selected.pricelimitsdomaincomposite.pricelimitsdomainquery"
+                }
+              ]
+            }
+          ],
+          "style": {
+            "width": "100%"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Open contracts"
+    },
+    "name": "customv2",
+    "menu": false,
+    "clearSelected": ["selected"],
+    "customScrollBar": true
+  },
+  "decisions": [],
+  "taskId": "pricelimitsdomaincomposite",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "ce3a26ed-e47c-4842-a5d0-2f0a2ea8b831"
+}

@@ -1,0 +1,99 @@
+{
+  "_id": "remittanceadvicecardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Remittance Advice Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "var sum = ${data}.reduce((a, v) => a + parseInt(v.quantity), 0); return '${data.length} paymentreceipt'; "
+    },
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 8
+    }
+  },
+  "fields": [
+    [
+      {
+        "key": "documentHeading",
+        "type": "heading",
+        "class": "header",
+        "valueExpression": "return 'Remittance advice'"
+      },
+      {
+        "key": "monthAndYear",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "monthAndYear",
+        "style": {
+          "display": "none"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Statement",
+        "key": "paymentreceiptNo",
+        "aggregateFunction": "sum",
+        "type": "details"
+      },
+      {
+        "label": "Document(s)",
+        "key": "documentCount",
+        "aggregateFunction": "sum",
+        "type": "details"
+      },
+
+      {
+        "label": "Date Issued",
+        "key": "documentDate",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "valueExpression": "if ( '${cardType}'.toLowerCase() === 'remittance advice') {  let str = '${documentDate}' ; let arr = str.split('-'); let res = []; for(let i=arr.length-1;i>=0;i--){ res.push(arr[i]+'/'); } let final = res.toString().replace(/,/g, '').slice(0, -1); return final;  } else {return '${documentDate}'} "
+      },
+      {
+        "label": "Receivables Paid",
+        "key": "totalAmount",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "roundOff": "1.0-2"
+      }
+    ],
+    [
+      {
+        "label": "View Documents",
+        "type": "footer",
+        "iconClass": "rightGreen-arrow-icon"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "chart",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": ["costestimatelistplatform"]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "remittanceadviceinvoicecardview",
+  "object": "4465c36c-84ab-403b-a61e-cf73a37705fe"
+}

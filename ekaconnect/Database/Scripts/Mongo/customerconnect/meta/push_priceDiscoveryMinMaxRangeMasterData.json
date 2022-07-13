@@ -1,0 +1,19 @@
+{
+    "_id" : "push_priceDiscoveryMinMaxRangeMasterData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "8f13785a-0475-47c5-ab59-f42c132d6a33",
+    "objectAction" : "CREATE",
+    "taskId" : "push_priceDiscoveryMinMaxRangeMasterData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "tags" : "notifyDataChange",    
+    "chainedTasks" : [ 
+		{
+            "name" : "_ST_CREATE_PRICE_DISCOVERY_MIN_MAX_RANGE_MASTER_DATA",
+            "appendMsg" : false,
+            "data" : "output.push_priceDiscoveryMinMaxRangeMasterData"
+        }
+    ]
+}

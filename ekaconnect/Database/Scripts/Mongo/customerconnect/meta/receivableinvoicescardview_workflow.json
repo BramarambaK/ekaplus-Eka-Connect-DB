@@ -1,0 +1,100 @@
+{
+  "_id": "receivableinvoicescardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Account Receivable Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "var sum = ${data}.reduce((a, v) => a + parseInt(v.quantity), 0); return '${data.length} paymentreceipt'; "
+    },
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 8
+    }
+  },
+  "fields": [
+    [
+      {
+        "key": "documentHeading",
+        "type": "heading",
+        "class": "header",
+        "valueExpression": "return 'Receivable Invoices'"
+      },
+      {
+        "key": "monthAndYear",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "monthAndYear",
+        "style": {
+          "display": "none"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Document(s)",
+        "key": "documentCount",
+        "aggregateFunction": "sum",
+        "type": "details"
+      },
+      {
+        "label": "Receivables Due",
+        "key": "openAmount",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "roundOff": "1.0-2"
+      },
+      {
+        "label": "Receivables Paid",
+        "key": "amount",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "valueExpression": "return ${totalAmount} - ${openAmount}",
+        "roundOff": "1.0-2"
+      },
+      {
+        "label": "Total Receivables",
+        "key": "totalAmount",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "roundOff": "1.0-2"
+      }
+    ],
+    [
+      {
+        "label": "View Documents",
+        "type": "footer",
+        "iconClass": "rightGreen-arrow-icon"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "chart",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": ["costestimatelistplatform"]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "receivableinvoicecardview",
+  "object": "967db9f1-f006-400f-8dee-e81692973390"
+}

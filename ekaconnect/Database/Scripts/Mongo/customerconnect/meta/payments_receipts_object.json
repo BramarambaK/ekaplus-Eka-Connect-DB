@@ -1,0 +1,170 @@
+{
+    "_id" : "paymentreceipt_object",
+    "name" : "paymentreceipt_object",
+    "label" : "Payment Receipt Object",
+    "type" : "object",
+    "version" : "1",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [ 
+        "payeeId", 
+        "bpRefNo",
+		"remittanceNo"
+    ],
+    "fields" : {
+        "userType" : {
+            "userType" : "User Type",
+            "labelKey" : "userType",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "bpRefNo" : {
+            "bpRefNo" : "BP Ref No",
+            "labelKey" : "bpRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "bpName" : {
+            "bpName" : "BP Name",
+            "labelKey" : "bpName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "payeeId" : {
+            "payeeId" : "Payee ID",
+            "labelKey" : "payeeId",
+            "type" : "String",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "payeeName" : {
+            "payeeName" : "Payee Name",
+            "labelKey" : "payeeName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "type" : {
+            "type" : "Type",
+            "labelKey" : "type",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "paymentreceiptNo" : {
+            "paymentreceiptNo" : "Payment Receipt No",
+            "labelKey" : "paymentreceiptNo",
+            "type" : "String",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "documentNo" : {
+            "documentNo" : "Document No",
+            "labelKey" : "documentNo",
+            "type" : "String",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "documentDate" : {
+            "documentDate" : "Document Date",
+            "labelKey" : "documentDate",
+            "type" : "String",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "documentCount" : {
+            "documentCount" : "Document Count",
+            "labelKey" : "documentCount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "currency" : {
+            "currency" : "Currency",
+            "labelKey" : "currency",
+            "type" : "String",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "totalAmount" : {
+            "totalAmount" : "Total Amount",
+            "labelKey" : "totalAmount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "totalAmountInForeignCurrency" : {
+            "totalAmountInForeignCurrency" : "Total Amount In Foreign Currency",
+            "labelKey" : "totalAmountInForeignCurrency",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fileId" : {
+            "fileId" : "File Id",
+            "labelKey" : "fileId",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "RemittanceId" : {
+            "RemittanceId" : "Remittance Id",
+            "labelKey" : "RemittanceId",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "DocumentValues" : {
+            "DocumentValues" : "Document Values",
+            "labelKey" : "DocumentValues",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "CDPayeeId" : {
+            "CDPayeeId" : "CD Payee Id",
+            "labelKey" : "CDPayeeId",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "CDPayeeName" : {
+            "CDPayeeName" : "CDPayeeName",
+            "labelKey" : "CDPayeeName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "remittanceNo" : {
+            "remittanceNo" : "Remittance No",
+            "labelKey" : "remittanceNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "documentNumber" : {
+            "documentNumber" : "Document Number",
+            "labelKey" : "documentNumber",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "AddressBookNumber" : {
+            "AddressBookNumber" : "Address Book Number",
+            "labelKey" : "AddressBookNumber",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "sys__UUID" : "4465c36c-84ab-403b-a61e-cf73a37705fe"
+}

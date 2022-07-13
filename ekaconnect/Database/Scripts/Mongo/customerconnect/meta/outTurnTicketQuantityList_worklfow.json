@@ -1,0 +1,114 @@
+{
+  "_id": "outTurnTicketQuantityList_worklfow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "getDataFromExternalAPI": false,
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Outturn quantity",
+    "description": "Enter a quantity for each ticket you wish to outturn.",
+    "class": "allocate-form table-scrollable-body"
+  },
+  "decisions": [],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": true,
+      "key": "ticketRefNo",
+      "label": "Ticket ID"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quality",
+      "label": "Grade"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "cropYear",
+      "label": "Season"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "location",
+      "label": "Site"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quantity",
+      "label": "Qty(MT)"
+    },
+    {
+      "edit": true,
+      "sort": false,
+      "key": "outturnTransferQty",
+      "label": "Transfer qty (MT)",
+      "cellClass": "cell-icon-class",
+      "placeholder": " ",
+      "children": [
+        "outturnQty",
+        "estimatedOutturnFee",
+        "formattedEstimatedOutturnFee"
+      ],
+      "UIupdates": {
+        "listValue": "return (${outturnTransferQty} || ${outturnTransferQty} > 0) ? '${outturnTransferQty}' : '${quantity}'"
+      },
+      "UIvalidation": {
+        "errorClass": "return ${outturnTransferQty} > ${quantity} || ${outturnTransferQty} <= 0 ? 'error-border' : ''",
+        "cellIcon": "return (${outturnTransferQty} < ${quantity} && ${outturnTransferQty} > 0) ? 'split' : ''",
+        "icontooltip": "return 'Outturning a portion of this ticket will create a split ticket. The split ticket will be available in your warehoused inventory'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "shrink",
+      "label": "Shrink(/MT)",
+      "UIupdates": {
+        "listValue": "return  '${shrink}'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "outturnQty",
+      "label": "Outturn qty (MT)",
+      "tooltip": "Based on transfer quantity and shrink for commodity per tonne.",
+      "UIupdates": {
+        "listValue": "return Number('${outturnTransferQty}' - '${shrink}').toFixed(2);"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "label": "Outturn fee (/MT)",
+      "key": "outturnFee",
+      "UIupdates": {
+        "listValue": "return '$' + '${outturnFee}'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedEstimatedOutturnFee",
+      "label": "Est. outturn fee",
+      "tooltip": "Based on outturn fee for commodity per tonne",
+      "UIupdates": {
+        "listValue": "return Number('${outturnQty}' * '${outturnFee}').toFixed(2);"
+      }
+    }
+  ],
+  "taskId": "outTurnTicketQuantityList",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "a70fc7ab-e167-4709-8984-d901c186039d"
+}
