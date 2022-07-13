@@ -1,0 +1,55 @@
+{
+    "_id" : "cancelcontract_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "getDataFromExternalAPI" : true,
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Cancel",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to cancel contract ${contractRefNo}?"
+        }
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "Yes",
+            "labelkey" : "DELETE",
+            "task" : "cancelcontract",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.cancelcontract",
+                    "name" : "cancelprocessor",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Contract is Cancelled"
+                        },
+                        "failure" : {
+                            "message" : "Contract Cancellation failed"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output.cancelprocessor",
+                    "name" : "cancelcontract",
+                    "showPopUp" : true
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CANCEL_CONTRACT",
+    "taskId" : "cancelcontract",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "deviceType" : "mobile"
+}

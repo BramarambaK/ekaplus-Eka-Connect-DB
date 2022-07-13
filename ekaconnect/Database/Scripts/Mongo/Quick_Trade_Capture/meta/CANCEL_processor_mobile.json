@@ -1,0 +1,11 @@
+{
+    "_id" : "CANCEL_Process_mobile_QTC",
+    "name" : "CANCEL_Process_mobile_QTC",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : " var moment = require(\"moment\");\r\nvar today = new Date();\r\ntoday = moment(today).format(\"DD-MMM-YYYY\");\r\nvar defaultDataURL =\r\n  req.body.propertyList.eka_trm_physicals_api_host + \"\/contract\/cancel\";\r\nvar defaultdata = {\r\n  method: \"POST\",\r\n  url: defaultDataURL,\r\n  body: {\r\n    internalContractRefNo: req.body.internalContractRefNo,\r\n    reasonToCancel: \"testing\",\r\n    cancellationDate: today,\r\n  },\r\n  headers: {\r\n    \"Content-type\": \"application\/json\",\r\n    Connection: 'keep-alive',\r\n    Authorization: req.headers.authorization,\r\n    \"X-TenantID\": req.headers[\"x-tenantid\"],\r\n  },\r\n  json: true,\r\n};\r\nif (req.headers.hasOwnProperty(\"device-id\")) {\r\n  defaultdata.headers[\"Device-Id\"] = req.headers[\"device-id\"];\r\n}\r\nfunction get_defaultData() {\r\n  return new Promise(function (resolve, reject) {\r\n    request(defaultdata, function (err, response, body) {\r\n      if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n        resolve(body); \/\/Success\r\n      } else {\r\n        reject(body); \/\/Failure\r\n      }\r\n    });\r\n  });\r\n}\r\n\r\nif (\r\n  req.body.allocatedQtyString.split(\" \")[0] == \"0\" &&\r\n  req.body.executedQty == 0 &&\r\n  req.body.plannedQty.split(\" \")[0] == \"0\"\r\n) {\r\n  get_defaultData()\r\n    .then(function (Response) {\r\n      res.status(200).send({ message: \"contract is cancelled\" });\r\n    })\r\n    .catch((err) => {\r\n      console.log(err);\r\n      res.status(500).send({ message: err });\r\n    });\r\n} else {\r\n  res\r\n    .status(200)\r\n    .send({\r\n      message:\r\n        \"This contract has participated in planning\/execution. Hence, cancellation is not allowed on this contract\",\r\n    });\r\n}\r\n",
+    "sys__UUID" : "e7377adf-7762-435b-8554-3a7d33e2dedd",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

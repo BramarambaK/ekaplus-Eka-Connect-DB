@@ -1,0 +1,64 @@
+{
+    "_id" : "draftContract_QTC_Ags_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Draft Contracts",
+    "type" : "workflow",
+    "version" : "V2",
+    "layout" : {
+        "name" : "list",
+        "offlineSupport" : true,
+        "offlinetask" : "createtradeags"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "READ",
+            "labelkey" : "View",
+            "position" : "row-selection",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.draftontractags",
+                    "name" : "createtradeags"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        {
+            "key" : "contractTypeDisplayName",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "productIdDisplayName",
+            "placement" : "Row1",
+            "label" : "Product"
+        }, 
+        {
+            "key" : "incotermIdDisplayName",
+            "placement" : "Row2",
+            "label" : "INCO Term"
+        }, 
+        {
+            "key" : "cpNameDisplayName",
+            "placement" : "Row2",
+            "label" : "CP Name"
+        }, 
+        {
+            "key" : "contractApprovalStatus",
+            "placement" : "Row3",
+            "label" : "Approval Status"
+        }, 
+        {
+            "key" : "traderUserIdDisplayName",
+            "placement" : "Row3",
+            "label" :"Trader Name"
+        }
+    ],
+    "taskId" : "draftcontractags",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "deviceType" : "mobile"
+}

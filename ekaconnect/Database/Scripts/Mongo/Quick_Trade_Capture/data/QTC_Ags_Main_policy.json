@@ -1,0 +1,23 @@
+{
+  "_id": "QTC_Ags_Main_policy",
+  "type": "policy",
+  "app_UUID": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "refType": "object",
+  "refTypeId": "5335f2cf-8169-48af-bc38-d52a551d7be1",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": [
+        "READ",
+        "UPDATE",
+        "DELETE",
+        "LISTVIEW"
+      ],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": [
+        "CREATE",
+        "UPLOAD"
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "_id" : "menuObject_qtc_mobile",
+    "type" : "menuObject",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Contract",
+                    "menuItems" : [ 
+                        {
+                            "items" : [ 
+                                {
+                                    "handler" : "listingcontractags",
+                                    "text" : "Open Contracts",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "pendingcontractlisting_ags_composite",
+                                    "text" : "Pending Approval",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "createtradeags",
+                                    "text" : "Ags New Contract",
+                                    "iconCls" : ""
+                                },
+                                {
+                                    "handler" : "createtrade",
+                                    "text" : "Oil New Contract",
+                                    "iconCls" : ""
+                                },  
+                                {
+                                    "handler" : "defaultsettingags",
+                                    "text" : "Default settings",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "deviceType" : "mobile"
+}

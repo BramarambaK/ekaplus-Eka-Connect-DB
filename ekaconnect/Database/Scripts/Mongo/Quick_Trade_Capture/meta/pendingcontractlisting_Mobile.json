@@ -1,0 +1,71 @@
+{
+    "_id" : "pendingcontractlisting_QTC_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Pending Contract",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true,
+            "serverSearch" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "processorInfo" : {
+        "processorId" : "3328d7c9-1b59-4d61-a001-b31a5eda624c"
+    },
+    "decisions" : [
+    {
+            "btnClass" : "btn-success",
+            "objectAction" : "READ",
+            "labelkey" : "View",
+            "selection" : "row-selection",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listingContract",
+                    "name" : "contractdetailview"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        {
+            "key" : "contractType",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "incotermId",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "cpProfileId",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "contractStatus",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "contractRefNo",
+            "placement" : "Row3"
+        }
+    ],
+    "taskId" : "pendingcontractlisting",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "deviceType" : "mobile"
+}

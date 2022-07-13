@@ -1,0 +1,40 @@
+{
+    "_id" : "contractdetails_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract Details",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "view"
+    },
+    "decisions" : [ ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        [
+            {
+                "key" : "contractType"
+            }, 
+            {
+                "key" : "incotermId"
+            }, 
+            {
+                "key" : "cpProfileId"
+            }, 
+            {
+                "key" : "contractStatus"
+            }, 
+            {
+                "key" : "contractRefNo"
+            },
+            {
+                "key" : "remark",
+                "label" : "Remarks"
+            }
+        ]
+    ],
+    "taskId" : "contractdetails",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "deviceType" : "mobile"
+}

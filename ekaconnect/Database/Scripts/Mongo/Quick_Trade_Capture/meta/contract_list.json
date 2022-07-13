@@ -1,0 +1,17 @@
+{
+    "_id":"contract_list_qtc",
+    "componentType" : "UserTask",
+    "labelKey" : "contract_list",
+    "label" : "Contract List",
+    "object" : "contract",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "contract_list",
+    "sys__createdOn" : ISODate("2019-12-17T07:26:38.562Z"),
+    "sys__createdBy" : "Bravo"
+}

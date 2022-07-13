@@ -1,0 +1,224 @@
+{
+    "_id" : "object_Default_Ags_QTC",
+    "additionalProperties" : {},
+    "createdBy" : "",
+    "createdOn" : "",
+    "fields" : {
+        "defaultKey" : {
+            "defaultKey" : "",
+            "labelKey" : "defaultKey",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "traderUserId" : {
+            "traderUserId" : "Trader Name",
+            "labelKey" : "traderUserId",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "children" : [ 
+                "profitCenterId"
+            ],
+            "serviceKey" : "userListByRole",
+            "dataType" : "String",
+            "dropdownValue" : "traderUserIdDisplayName"
+        },
+        "traderUserIdDisplayName" : {
+            "labelKey" : "traderUserIdDisplayName",
+            "isRequired" : false,
+            "type" : "hidden",
+            "dataType" : "String",
+            "traderUserIdDisplayName" : ""
+        },
+        "tolerance" : {
+            "labelKey" : "tolerance",
+            "isRequired" : false,
+            "tolerance" : "Tolerance",
+            "type" : "textbox",
+            "dataType" : "number"
+        },
+        "toleranceMin" : {
+            "labelKey" : "toleranceMin",
+            "isRequired" : true,
+            "toleranceMin" : "Tolerance",
+            "type" : "textbox",
+            "dataType" : "number"
+        },
+        "toleranceMax" : {
+            "labelKey" : "toleranceMax",
+            "isRequired" : true,
+            "toleranceMax" : "",
+            "type" : "textbox",
+            "dataType" : "number"
+        },
+        "toleranceType" : {
+            "labelKey" : "toleranceType",
+            "serviceKey" : "AbsolutePercentage",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "toleranceType" : " "
+        },
+        "toleranceLevel" : {
+            "labelKey" : "toleranceLevel",
+            "toleranceLevel" : " ",
+            "serviceKey" : "Tolerance",
+            "isRequired" : false,
+            "type" : "dropdown"
+        },
+        "shipmentMode" : {
+            "type" : "dropdown",
+            "labelKey" : "shipmentMode",
+            "shipmentMode" : "Transportation mode",
+            "serviceKey" : "ticketModeOfTransport",
+            "isRequired" : false
+        },
+        "paymentTermId" : {
+            "type" : "dropdown",
+            "labelKey" : "paymentTermId",
+            "paymentTermId" : "Payment Terms",
+            "serviceKey" : "paytermlist_phy",
+            "dropdownValue" : "paymentTermIdDisplayName",
+            "isRequired" : true
+        },
+        "paymentTermIdDisplayName" : {
+            "labelKey" : "paymentTermIdDisplayName",
+            "isRequired" : false,
+            "type" : "hidden",
+            "dataType" : "String",
+            "paymentTermIdDisplayName" : ""
+        },
+        "applicableLawId" : {
+            "type" : "dropdown",
+            "labelKey" : "applicableLawId",
+            "applicableLawId" : "Applicable Law/Contract",
+            "serviceKey" : "applicableLaw",
+            "dropdownValue" : "applicableLawIdDisplayName",
+            "isRequired" : true
+        },
+        "applicableLawIdDisplayName" : {
+            "labelKey" : "applicableLawIdDisplayName",
+            "isRequired" : false,
+            "type" : "hidden",
+            "dataType" : "String",
+            "applicableLawIdDisplayName" : ""
+        },
+        "arbitrationId" : {
+            "type" : "dropdown",
+            "labelKey" : "arbitrationId",
+            "arbitrationId" : "Arbitration",
+            "serviceKey" : "ContractRulesAndArbitrationList",
+            "isRequired" : true
+        },
+        "paymentDueDate" : {
+            "labelKey" : "paymentDueDate",
+            "isRequired" : false,
+            "paymentDueDate" : "Payment Due Date",
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "taxScheduleCountryId" : {
+            "labelKey" : "taxScheduleCountryId",
+            "taxScheduleCountryId" : "Tax Schedule Applicable Country",
+            "serviceKey" : "taxScheduleCountrystate",
+            "dropdownValue" : "taxScheduleCountryIdDisplayName",
+            "type" : "dropdown",
+            "children" : [ 
+                "taxScheduleId", 
+                "taxScheduleStateId"
+            ],
+            "isRequired" : true
+        },
+        "taxScheduleStateId" : {
+            "options" : [],
+            "labelKey" : "taxScheduleStateId",
+            "taxScheduleStateId" : "Tax Applicable State",
+            "serviceKey" : "cityComboDataFromDB",
+            "dropdownValue" : "taxScheduleStateIdDisplayName",
+            "type" : "dropdown",
+            "parent" : [ 
+                "taxScheduleCountryId"
+            ],
+            "isRequired" : false
+        },
+        "taxScheduleId" : {
+            "labelKey" : "taxScheduleId",
+            "taxScheduleId" : "Tax Schedule",
+            "serviceKey" : "listOfTaxSchedules",
+            "dropdownValue" : "taxScheduleIdDisplayName",
+            "type" : "dropdown",
+            "parent" : [ 
+                "taxScheduleCountryId"
+            ],
+            "isRequired" : true
+        },
+        "qualityFinalAt" : {
+            "labelKey" : "qualityFinalAt",
+            "propertyKey" : "qualityFinalAt",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "qualityFinalAt" : "Quality Final At"
+        },
+        "weightFinalAt" : {
+            "labelKey" : "weightFinalAt",
+            "propertyKey" : "qualityFinalAt",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "weightFinalAt" : "Weight Final At"
+        },
+        "legalEntityId" : {
+            "legalEntityId" : "Legal Entity",
+            "labelKey" : "legalEntityId",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "serviceKey" : "legalEntityList",
+            "dataType" : "String"
+        },
+        "strategyAccId" : {
+            "labelKey" : "strategyAccId",
+            "serviceKey" : "corporateStrategy",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "strategyAccId" : "Strategy"
+        },
+        "profitCenterId" : {
+            "labelKey" : "profitCenterId",
+            "serviceKey" : "userProfitCenterList",
+            "isRequired" : true,
+            "parent" : [ 
+                "traderUserId"
+            ],
+            "type" : "dropdown",
+            "profitCenterId" : "Profit Center"
+        }
+    },
+    "label" : "Default_Form_Ags",
+    "lastModifiedBy" : "",
+    "lastModifiedOn" : "",
+    "name" : "defaultformags",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "sys__UUID" : "ad612d3a-45d0-4b8a-919f-94f4b503e7dc",
+    "sys__createdBy" : "admin",
+    "tenantID" : "",
+    "translatableKeys" : [],
+    "type" : "object",
+    "uniqueFields" : [ 
+        "traderUserId"
+    ],
+    "version" : "1",
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ]
+}

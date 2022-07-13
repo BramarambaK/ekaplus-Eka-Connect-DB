@@ -1,0 +1,13 @@
+{
+    "_id" : "APPROVE_ProcessTask_QTC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "77dd3149-09cb-47b8-b2b9-9058c2a3f289"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "approveprocessor",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

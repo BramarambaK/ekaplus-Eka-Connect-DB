@@ -1,0 +1,88 @@
+{
+    "_id" : "pendingcontractlisting_QTC_Ags_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Pending Approval",
+    "type" : "workflow",
+    "version" : "V2",
+    "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "inputData" : {
+        "type" : "SystemTask",
+        "queryParamMapping" : {
+            "from" : "from",
+            "size" : "size"
+        },
+        "config" : {
+            "id" : "crawler_chainedpendingcontractlistags",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+			      "hasStatusFlag" : true,
+            "defaultOptions" : {
+                "sort" : [ 
+                    {
+                        "column" : "dateSent.raw",
+                        "order" : "desc"
+                    }
+                ]
+            }
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "lazyLoading" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true,
+            "serverSearch" : true
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "READ",
+            "labelkey" : "View",
+            "selection" : "row-selection",
+            "position" : "row-selection",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listingContractags",
+                    "name" : "contractdetailviewags"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        {
+            "key" : "contractTypeForDisplay",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "contractRefNo",
+            "placement" : "Row1",
+            "label" : "Ref No"
+        }, 
+        {
+            "key" : "cpName",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "suggestedApprover",
+            "placement" : "Row2"
+        }
+    ],
+    "taskId" : "pendingcontractlistingags",
+    "object" : "c20c3bc3-cd0c-4faa-8e94-d1ec7814d581",
+    "deviceType" : "mobile"
+}

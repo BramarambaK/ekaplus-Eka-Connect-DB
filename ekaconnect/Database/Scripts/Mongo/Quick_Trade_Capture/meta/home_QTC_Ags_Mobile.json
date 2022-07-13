@@ -1,0 +1,16 @@
+{
+    "_id" : "home_QTC_Ags_Mobile",
+    "layout" : {
+        "name" : "list"
+    },
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "workflow" : "createtradeags",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "decisions" : [],
+    "type" : "workflow",
+    "taskId" : "home",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "deviceType" : "mobile"
+}

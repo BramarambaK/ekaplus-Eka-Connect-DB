@@ -1,0 +1,68 @@
+{
+    "_id" : "contractdetailview_composite_Ags_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract Details",
+    "type" : "workflow",
+    "viewAction" : "composite",
+    "layout" : {
+        "name" : "customv2"
+    },
+    "workflows" : [ 
+        {
+            "name" : "contractdetailsags"
+        }, 
+        {
+            "data" : "selected.contractdetailviewags",
+            "name" : "itemListingags"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CANCEL_CONTRACT",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "name" : "cancelcontractags"
+                }
+            ],
+            "label" : "Cancel",
+            "displayed" : "approvalStatus != Pending"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "APPROVE_CONTRACT",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "name" : "approvecontractags"
+                }
+            ],
+            "label" : "Approve",
+            "displayed" : "approvalStatus == Pending"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "REJECT_CONTRACT",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "rejectcontractags"
+                }
+            ],
+            "label" : "Reject",
+            "displayed" : "approvalStatus == Pending"
+        }
+    ],
+    "taskId" : "contractdetailviewags",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "deviceType" : "mobile"
+}

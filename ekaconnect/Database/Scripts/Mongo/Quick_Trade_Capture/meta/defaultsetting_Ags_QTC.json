@@ -1,0 +1,241 @@
+{
+    "_id" : "defaultsetting_Ags_QTC",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "task" : "defaultsettingprocessor",
+            "selection" : "external",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.defaultsettingags",
+                    "name" : "_ST_PROCESSOR_TASK_DEFAULT_AGS"
+                }, 
+                {
+                    "data" : "output._ST_PROCESSOR_TASK_DEFAULT_AGS",
+                    "name" : "defaultsettingags"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createtradeags"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "defaultsettingags",
+            "outcomes" : [ 
+                {
+                    "data" : "output.defaultsettingags",
+                    "name" : "_ST_PROCESS_DEFAULT_QTC_AGS",
+                    "appendMsg" : true,
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output._ST_PROCESS_DEFAULT_QTC_AGS",
+                            "value" : "_id"
+                        }
+                    ]
+                }, 
+                {
+                    "name" : "createtradeags",
+                    "showPopUp" : false,
+                    "showToaster" : false
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createtradeags"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "key" : "traderUserId",
+                "event" : "external",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "toleranceMin",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "2.5px"
+                }
+            }, 
+            {
+                "key" : "toleranceMax",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "2.5px"
+                }
+            }, 
+            {
+                "key" : "toleranceType",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "0px"
+                }
+            }, 
+            {
+                "key" : "toleranceLevel",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "5px"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "arbitrationId"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "applicableLawId"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "key" : "paymentTermId",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "paymentDueDate"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "qualityFinalAt"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "weightFinalAt",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "key" : "legalEntityId",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "taxScheduleCountryId"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "taxScheduleId"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "strategyAccId"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "24%",
+                    "margin-right" : "5px"
+                },
+                "key" : "profitCenterId"
+            }
+        ]
+    ],
+    "label" : "Default Value",
+    "labelKey" : "Default_SET",
+    "layout" : {
+        "recommedationNeed" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "ad612d3a-45d0-4b8a-919f-94f4b503e7dc",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "defaultsettingags",
+    "type" : "workflow"
+}

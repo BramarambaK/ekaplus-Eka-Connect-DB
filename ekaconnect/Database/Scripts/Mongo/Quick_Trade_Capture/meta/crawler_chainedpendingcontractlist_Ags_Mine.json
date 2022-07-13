@@ -1,0 +1,26 @@
+{
+    "_id" : "crawler_chainedpendingcontractlist_Ags_Mine",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_PROCESSOR_PENDINGCONTRACT_LISTING_AGS_Mine",
+            "data" : "output.crawler_chainedpendingcontractlistags_Mine",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "Elastic_Bulk_Upload_PendingContractLISTAGS_Mine",
+            "data" : "output._ST_PROCESSOR_PENDINGCONTRACT_LISTING_AGS_Mine",
+            "config" : {
+                "primaryKeyColumn" : "contractRefNo"
+            }
+        }
+    ],
+    "componentType" : "ChainedSystemTask",
+    "isAsynchCallRequired" : "Y",
+    "object" : "9e3726e5-4ad0-4388-96e2-bef2a8b3e815",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "crawler_chainedpendingcontractlistags_Mine",
+    "type" : "workflow",
+    "version" : "V2"
+}

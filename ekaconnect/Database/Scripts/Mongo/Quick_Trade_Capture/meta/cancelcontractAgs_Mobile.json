@@ -1,0 +1,61 @@
+{
+    "_id" : "cancelcontract_Ags_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "getDataFromExternalAPI" : true,
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Cancel",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to cancel contract ${contractRefNo}?"
+        }
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "Yes",
+            "labelkey" : "DELETE",
+            "task" : "cancelcontractags",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.cancelcontractags",
+                    "name" : "cancelprocessorags",
+                    "appendMsg" : true,
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output.cancelprocessorags",
+                            "value" : "message"
+                        }
+                    ],
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : "Contract Cancellation failed"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output.cancelprocessorags",
+                    "name" : "cancelcontractags",
+                    "showPopUp" : true
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CANCEL_CONTRACT",
+    "taskId" : "cancelcontractags",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "deviceType" : "mobile"
+}

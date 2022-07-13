@@ -1,0 +1,22 @@
+{
+    "_id" : "contractType_Property_QTC",
+    "type" : "property",
+    "name" : "contractType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+      "defaultValue":[{
+        "key" : "P",
+        "value" : "Purchase"
+    }, 
+    {
+        "key" : "S",
+        "value" : "Sale"
+    }
+    ],
+    "description": "Dropdown value for Contract Type",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label": "Contract Type",
+    "editSupportedInUI" : false
+}

@@ -1,0 +1,26 @@
+{
+    "_id" : "crawler_chainedcontractlist_Ags",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_PROCESSOR_CONTRACT_LISTING_AGS",
+            "data" : "output.crawler_chainedcontractlistags",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "Elastic_Bulk_Upload_ContractLISTAGS",
+            "data" : "output._ST_PROCESSOR_CONTRACT_LISTING_AGS",
+            "config" : {
+                "primaryKeyColumn" : "contractRefNo"
+            }
+        }
+    ],
+    "componentType" : "ChainedSystemTask",
+    "isAsynchCallRequired" : "Y",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "crawler_chainedcontractlistags",
+    "type" : "workflow",
+    "version" : "V2"
+}

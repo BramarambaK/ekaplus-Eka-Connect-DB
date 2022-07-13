@@ -1,0 +1,26 @@
+{
+    "_id" : "_EXT_PROCESS_CONTRACT_SAVE_QTC",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "processorInfo" : {
+        "processorId" : "1675540a-5a52-4117-b7f9-81a7fee3048f"
+    },
+    "type" : "workflow",
+    "taskId" : "_EXT_PROCESS_CONTRACT_SAVE",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "apiInfo" : {
+        "host" : "${properties.eka_trm_physicals_api_host}",
+        "path" : "/contract",
+        "method" : "POST",
+        "body" : {},
+        "useInputMapping" : false,
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        }
+    }
+}

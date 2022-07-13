@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_CONTRACT_LISTING_QTC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "060cf957-a2e9-4eed-badb-67802087d1e5"
+    },
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_CONTRACT_LISTING",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

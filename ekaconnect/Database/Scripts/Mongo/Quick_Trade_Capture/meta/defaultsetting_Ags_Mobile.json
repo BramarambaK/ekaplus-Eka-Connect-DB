@@ -1,0 +1,141 @@
+{
+  "_id": "defaultsetting_Ags_QTC_Mobile",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "object": "ad612d3a-45d0-4b8a-919f-94f4b503e7dc",
+  "label": "Default Value",
+  "type": "workflow",
+  "layout": {
+    "recommedationNeed": false,
+    "name": "create",
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "task": "defaultsettingprocessor",
+      "selection": "external",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.defaultsettingags",
+          "name": "_ST_PROCESSOR_TASK_DEFAULT_AGS",
+          "appendMsg": true
+        },
+        {
+          "data": "output._ST_PROCESSOR_TASK_DEFAULT_AGS",
+          "name": "defaultsettingags",
+          "appendMsg": true
+        }
+      ]
+    },
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createtrade",
+          "action": "Cancel"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "TopLeft"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "defaultsettingags",
+      "outcomes": [
+        {
+          "data": "output.defaultsettingags",
+          "name": "_ST_PROCESS_DEFAULT_QTC_AGS",
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_PROCESS_DEFAULT_QTC_AGS",
+              "value": "_id"
+            }
+          ]
+        },
+        {
+          "name": "createtradeags",
+          "action": "Cancel",
+          "showPopUp": false,
+          "showToaster": false
+        }
+      ],
+      "label": "SAVE",
+      "position": "TopRight",
+      "type": "submit"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "key": "traderUserId",
+        "event": "external"
+      },
+      {
+        "key": "legalEntityId"
+      },
+      {
+        "key": "paymentTermId"
+      },
+      {
+        "key": "profitCenterId"
+      },
+      {
+        "key": "strategyAccId"
+      },
+      {},
+      {
+        "key": "toleranceMin",
+        "label": "Tolerance Min"
+      },
+      {
+        "key": "toleranceMax",
+        "label": "Tolerance Max"
+      },
+      {
+        "key": "toleranceType",
+        "label": "Tolerance Type"
+      },
+      {
+        "key": "toleranceLevel",
+        "label": "Tolerance Level"
+      },
+      {},
+      {
+        "key": "taxScheduleCountryId"
+      },
+      {
+        "key": "taxScheduleStateId"
+      },
+      {
+        "key": "taxScheduleId"
+      },
+      {},
+      {
+        "key": "weightFinalAt"
+      },
+      {
+        "key": "qualityFinalAt"
+      },
+      {
+        "key": "arbitrationId"
+      },
+      {
+        "key": "applicableLawId"
+      }
+    ]
+  ],
+  "labelKey": "Default_SET",
+  "taskId": "defaultsettingags",
+  "deviceType": "mobile"
+}

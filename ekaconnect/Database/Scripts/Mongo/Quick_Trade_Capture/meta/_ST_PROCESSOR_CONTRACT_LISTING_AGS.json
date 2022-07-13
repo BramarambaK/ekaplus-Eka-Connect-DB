@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_CONTRACT_LISTING_AGS",
+    "componentType" : "ProcessTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "97b40701-3bd5-4111-bb47-caeb1525df61"
+    },
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_CONTRACT_LISTING_AGS",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1"
+}

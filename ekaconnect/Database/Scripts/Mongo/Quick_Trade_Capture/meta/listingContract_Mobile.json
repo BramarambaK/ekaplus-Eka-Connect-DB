@@ -1,0 +1,96 @@
+{
+    "_id" : "listingContract_QTC_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract Listing",
+    "type" : "workflow",
+    "version" : "V2",
+    "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "inputData" : {
+        "type" : "SystemTask",
+        "queryParamMapping" : {
+            "from" : "from",
+            "size" : "size"
+        },
+        "config" : {
+            "id" : "crawler_chainedcontractlist",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "lazyLoading" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "serverSearch" : true,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : true,
+            "export" : true
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_QUICKTRADE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "createtrade"
+                }
+            ],
+            "label" : "Create"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "READ",
+            "labelkey" : "View",
+            "selection" : "row-selection",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listingContract",
+                    "name" : "contractdetailview"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        {
+            "key" : "contractType",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "incotermId",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "cpProfileId",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "contractStatus",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "contractRefNo",
+            "placement" : "Row3",
+            "sort" : true
+        }
+    ],
+    "taskId" : "listingContract",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "deviceType" : "mobile"
+}

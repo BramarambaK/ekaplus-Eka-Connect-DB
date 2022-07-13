@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_PROCESS_DEFAULT_QTC_AGS",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_DEFAULT_QTC_AGS",
+    "object" : "ad612d3a-45d0-4b8a-919f-94f4b503e7dc"
+}

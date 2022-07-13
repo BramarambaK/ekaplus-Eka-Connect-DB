@@ -1,0 +1,13 @@
+{
+    "_id" : "CANCEL_ProcessTask_QTC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "e7377adf-7762-435b-8554-3a7d33e2dedd"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "cancelprocessor",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

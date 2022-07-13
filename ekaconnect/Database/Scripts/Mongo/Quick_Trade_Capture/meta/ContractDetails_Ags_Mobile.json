@@ -1,0 +1,50 @@
+{
+    "_id" : "contractdetails_Ags_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract Details",
+    "processorInfo" : {
+        "processorId" : "6a44f696-a19b-4da1-bd25-1de7dfb4fbeb"
+    },
+    "type" : "workflow",
+    "layout" : {
+        "name" : "view",
+        "getInitialData" : true
+    },
+    "decisions" : [],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        [ 
+            {
+                "key" : "contractType"
+            }, 
+            {
+                "key" : "incoTerm"
+            }, 
+            {
+                "key" : "traderUserId"
+            }, 
+            {
+                "key" : "approvalStatus"
+            }, 
+            {
+                "key" : "contractRefNo",
+                "label" : "Contract Ref.No"
+            }, 
+            {
+                "key" : "remark",
+                "label" : "Remarks"
+            }, 
+            {
+                "key" : "suggestedApprover",
+                "label" : "Suggested Approver",
+                "type" : "hidden"
+            }
+        ]
+    ],
+    "taskId" : "contractdetailsags",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "deviceType" : "mobile"
+}

@@ -1,0 +1,32 @@
+{
+    "_id" : "pendingcontract_composite_ags_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Pending Approval",
+    "type" : "workflow",
+    "viewAction" : "composite",
+    "layout" : {
+        "name" : "customv2"
+    },
+    "workflows" : [ 
+        {
+            "display" : "tabs",
+            "workflows" : [ 
+                {
+                    "tabHeader" : "My Contracts",
+                    "name" : "pendingcontractlistingags_Mine"
+                }, 
+                {
+                    "tabHeader" : "All Contracts",
+                    "name" : "pendingcontractlistingags"
+                }
+            ]
+        }
+    ],
+    "decisions" : [],
+    "taskId" : "pendingcontractlisting_ags_composite",
+    "object" : "c20c3bc3-cd0c-4faa-8e94-d1ec7814d581",
+    "deviceType" : "mobile"
+}

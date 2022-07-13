@@ -1,0 +1,17 @@
+{
+    "_id" : "Listing_Default_ags",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Default list",
+    "type" : "workflow",
+    "layout" : {
+    },
+    "decisions" : [],
+    "labelKey" : "Default_LIST",
+    "fields" : [ 
+    ],
+    "taskId" : "defaultdataags",
+    "object" : "ad612d3a-45d0-4b8a-919f-94f4b503e7dc"
+}

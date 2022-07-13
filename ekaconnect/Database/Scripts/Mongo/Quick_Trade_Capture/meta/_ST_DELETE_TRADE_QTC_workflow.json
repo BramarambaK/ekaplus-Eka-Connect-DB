@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_DELETE_TRADE_QTC",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_TRADE",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

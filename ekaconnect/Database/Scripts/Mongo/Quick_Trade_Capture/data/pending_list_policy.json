@@ -1,0 +1,25 @@
+{
+    "_id" : "pending_list_policy",
+    "type" : "policy",
+    "app_UUID" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "refType" : "object",
+    "refTypeId" : "c20c3bc3-cd0c-4faa-8e94-d1ec7814d581",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    },
+    "sys__createdOn" : ISODate("2019-12-26T05:17:39.219Z"),
+    "sys__createdBy" : "Bravo"
+}

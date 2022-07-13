@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_QUICK_TRADE_CAPTURE_AGS",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_QUICK_TRADE_CAPTURE_AGS",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1"
+}

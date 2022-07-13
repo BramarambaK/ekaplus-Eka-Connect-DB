@@ -1,0 +1,101 @@
+{
+    "_id" : "listingtrade_QTC",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract List",
+    "type" : "workflow",
+    "tags":"trainingData",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_QUICKTRADE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "createtrade"
+                }
+            ],
+            "label" : "Create",
+            "position" : "top"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.listingtrade",
+                    "popupClass" : "deleteclass",
+                    "name" : "deletetrade"
+                }
+            ],
+            "label" : "Delete",
+            "iconClass" : "cr-delete-icon"
+        }
+    ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractTypeDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cpNameDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "productIdDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "qualityDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fxRate"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "tolerance"
+        }
+    ],
+    "taskId" : "listingtrade",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

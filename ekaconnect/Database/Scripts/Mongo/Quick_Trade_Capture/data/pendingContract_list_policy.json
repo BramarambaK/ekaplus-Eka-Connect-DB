@@ -1,0 +1,25 @@
+{
+    "_id" : "pendingContract_list_policy",
+    "type" : "policy",
+    "app_UUID" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "refType" : "object",
+    "refTypeId" : "9e3726e5-4ad0-4388-96e2-bef2a8b3e815",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    },
+    "sys__createdOn" : ISODate("2019-12-26T05:17:39.219Z"),
+    "sys__createdBy" : "Bravo"
+}

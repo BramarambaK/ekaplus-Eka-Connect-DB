@@ -1,0 +1,52 @@
+{
+    "_id" : "approvecontract_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Approve",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to approve the contract ${contractRefNo}?"
+        }
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "Yes",
+            "task" : "approvecontract",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.approvecontract",
+                    "name" : "approveprocessor",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Contract is approved"
+                        },
+                        "failure" : {
+                            "message" : "Approval of contract failed"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output.approveprocessor",
+                    "name" : "approvecontract"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "APPROVE_CONTRACT",
+    "taskId" : "approvecontract",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "deviceType" : "mobile"
+}

@@ -1,0 +1,104 @@
+{
+    "_id" : "listingContract_QTC_Ags_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Open Contracts",
+    "type" : "workflow",
+    "version" : "V2",
+    "listingDataOptions" : {
+        "filterOptions" : {
+            "type" : "elasticSearch"
+        }
+    },
+    "inputData" : {
+        "type" : "SystemTask",
+        "queryParamMapping" : {
+            "from" : "from",
+            "size" : "size"
+        },
+        "config" : {
+            "id" : "crawler_chainedcontractlistags",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+            "hasStatusFlag" : true,
+            "defaultOptions" : {
+                "sort" : [ 
+                    {
+                        "column" : "createdDate.raw",
+                        "order" : "desc"
+                    }
+                ]
+            }
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "lazyLoading" : true,
+        "footer" : true,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "serverSearch" : true,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : true,
+            "export" : true
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "READ",
+            "labelkey" : "View",
+            "position" : "row-selection",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.listingcontractags",
+                    "name" : "contractdetailviewags"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CONTRACT_LIST",
+    "fields" : [ 
+        {
+            "key" : "contractTypeForDisplay",
+            "placement" : "Row1"
+        }, 
+        {
+            "key" : "contractRefNo",
+            "placement" : "Row1",
+            "label" : "Ref No"
+        }, 
+        {
+            "key" : "contractStatus",
+            "placement" : "Row1",
+            "label" : "Position Status"
+        }, 
+        {
+            "key" : "incoTerm",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "noOfItems",
+            "placement" : "Row2"
+        }, 
+        {
+            "key" : "contractApprovalStatus",
+            "placement" : "Row3",
+            "label" : "Approval Status"
+        }, 
+        {
+            "key" : "trader",
+            "placement" : "Row3"
+        }
+    ],
+    "taskId" : "listingcontractags",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "deviceType" : "mobile"
+}

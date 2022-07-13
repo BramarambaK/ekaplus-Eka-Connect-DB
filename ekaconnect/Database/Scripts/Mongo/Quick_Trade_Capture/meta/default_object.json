@@ -1,0 +1,164 @@
+{
+    "_id" : "object_Default_QTC",
+    "additionalProperties" : {},
+    "createdBy" : "",
+    "createdOn" : "",
+    "fields" : {
+        "defaultKey" : {
+            "defaultKey" : "",
+            "labelKey" : "defaultKey",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "traderUserId" : {
+            "traderUserId" : "Trader Name",
+            "labelKey" : "traderUserId",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "children" : [ 
+                "profitCenterId"
+            ],
+            "serviceKey" : "userListByRole",
+            "dataType" : "String"
+        },
+        "tolerance" : {
+            "labelKey" : "tolerance",
+            "isRequired" : false,
+            "tolerance" : "Tolerance",
+            "type" : "textbox",
+            "dataType" : "number"
+        },
+        "toleranceMin" : {
+            "labelKey" : "toleranceMin",
+            "isRequired" : true,
+            "toleranceMin" : "Tolerance",
+            "type" : "textbox",
+            "dataType" : "number"
+        },
+        "toleranceMax" : {
+            "labelKey" : "toleranceMax",
+            "isRequired" : true,
+            "toleranceMax" : "",
+            "type" : "textbox",
+            "dataType" : "number"
+        },
+        "toleranceType" : {
+            "labelKey" : "toleranceType",
+            "serviceKey" : "AbsolutePercentage",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "toleranceType" : " "
+        },
+        "toleranceLevel" : {
+            "labelKey" : "toleranceLevel",
+            "toleranceLevel" : " ",
+            "serviceKey" : "Tolerance",
+            "isRequired" : false,
+            "type" : "dropdown"
+        },
+        "shipmentMode" : {
+            "type" : "dropdown",
+            "labelKey" : "shipmentMode",
+            "shipmentMode" : "Transportation mode",
+            "serviceKey" : "ticketModeOfTransport",
+            "isRequired" : true
+        },
+        "paymentTermId" : {
+            "type" : "dropdown",
+            "labelKey" : "paymentTermId",
+            "paymentTermId" : "Payment Terms",
+            "serviceKey" : "paytermlist_phy",
+            "isRequired" : true
+        },
+        "applicableLawId" : {
+            "type" : "dropdown",
+            "labelKey" : "applicableLawId",
+            "applicableLawId" : "Applicable Law/Contract",
+            "serviceKey" : "applicableLaw",
+            "isRequired" : true
+        },
+        "arbitrationId" : {
+            "type" : "dropdown",
+            "labelKey" : "arbitrationId",
+            "arbitrationId" : "Arbitration",
+            "serviceKey" : "ContractRulesAndArbitrationList",
+            "isRequired" : true
+        },
+        "paymentDueDate" : {
+            "labelKey" : "paymentDueDate",
+            "isRequired" : true,
+            "paymentDueDate" : "Payment Due Date",
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "taxScheduleCountryId" : {
+            "labelKey" : "taxScheduleCountryId",
+            "taxScheduleCountryId" : "Tax Schedule Applicable Country",
+            "serviceKey" : "taxScheduleCountrystate",
+            "type" : "dropdown",
+            "children" : [ 
+                "taxScheduleId"
+            ],
+            "isRequired" : true
+        },
+        "taxScheduleId" : {
+            "labelKey" : "taxScheduleId",
+            "taxScheduleId" : "Tax Schedule",
+            "serviceKey" : "listOfTaxSchedules",
+            "type" : "dropdown",
+            "parent" : [ 
+                "taxScheduleCountryId"
+            ],
+            "isRequired" : true
+        },
+        "strategyAccId" : {
+            "labelKey" : "strategyAccId",
+            "serviceKey" : "corporateStrategy",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "strategyAccId" : "Strategy"
+        },
+        "profitCenterId" : {
+            "labelKey" : "profitCenterId",
+            "serviceKey" : "userProfitCenterList",
+            "isRequired" : true,
+            "parent" : [ 
+                "traderUserId"
+            ],
+            "type" : "dropdown",
+            "profitCenterId" : "Profit Center"
+        }
+    },
+    "label" : "Default_Form_Oil",
+    "lastModifiedBy" : "",
+    "lastModifiedOn" : "",
+    "name" : "defaultform",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "sys__UUID" : "beb81e60-4766-4b24-b22f-ce26b7d66cdf",
+    "sys__createdBy" : "admin",
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "tenantID" : "",
+    "translatableKeys" : [],
+    "type" : "object",
+    "uniqueFields" : [ 
+        "traderUserId"
+    ],
+    "version" : "1",
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ]
+}

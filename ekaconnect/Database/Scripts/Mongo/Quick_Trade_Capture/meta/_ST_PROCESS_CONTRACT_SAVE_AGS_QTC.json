@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESS_CONTRACT_SAVE_AGS_QTC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "18837b0c-4c11-4ab3-b005-e7a7eb7ce3fa"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_CONTRACT_SAVE_AGS",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1"
+}

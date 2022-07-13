@@ -1,0 +1,10 @@
+{
+    "_id" : "Elastic_Bulk_Upload_ContractLISTAGS",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "Elastic_Bulk_Upload_ContractLISTAGS",
+    "object" : "5335f2cf-8169-48af-bc38-d52a551d7be1",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

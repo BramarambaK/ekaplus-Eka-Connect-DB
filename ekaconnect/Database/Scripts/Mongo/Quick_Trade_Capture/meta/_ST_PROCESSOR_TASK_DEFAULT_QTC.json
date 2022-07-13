@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_TASK_DEFAULT_QTC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "cca84124-acc0-4c2d-aca0-0762e78293fe"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_TASK_DEFAULT",
+    "object" : "beb81e60-4766-4b24-b22f-ce26b7d66cdf"
+}

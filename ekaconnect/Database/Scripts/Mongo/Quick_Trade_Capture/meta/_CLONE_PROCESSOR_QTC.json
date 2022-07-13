@@ -1,0 +1,11 @@
+{
+    "_id" : "_CLONE_PROCESSOR_QTC",
+    "name" : "_CLONE_PROCESSOR_QTC",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : " var defaultDataURL =\r\n    req.body.propertyList.eka_trm_physicals_api_host + '/contract/PCM-21835';\r\n    var defaultdata = {\r\n      method: 'GET',\r\n      url: defaultDataURL,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_defaultData() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(defaultdata, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n  \r\n    Promise.all([get_defaultData()]).then(function(result) {\r\n    var data = {}\r\n\t var item = result[0].itemDetails[0]\r\n\t data['contractType'] = result[0].contractType\r\n\t data['incotermId'] = result[0].incotermId\r\n\t data['cpProfileId'] = result[0].cpProfileId\r\n\t data['deliveryFromDate'] = item.deliveryFromDate\r\n\t data['deliveryToDate'] = item.deliveryToDate\r\n\t data['itemQty'] = item.itemQty\r\n\t data['itemQtyUnitId'] = item.itemQtyUnitId\r\n\t data['loadingLocationGroupTypeId'] = item.loadingLocationGroupTypeId\r\n\t data['originationCityId'] = item.originationCityId\r\n\t data['originationCountryId'] = item.originationCountryId\r\n\t data['payInCurId'] = item.payInCurId\r\n\t data['priceTypeId'] = item.priceTypeId\r\n\t data['priceUnitId'] = item.priceUnitId\r\n\t data['pricingFormulaId'] = item.pricingFormulaId\r\n\t data['productId'] = item.productId\r\n\t data['quality'] = item.quality\r\n      // res.status(200).send(data);\r\n      // data['productId'] = 'PDM-21792'\r\n      // data['quality'] = 'QAT-65105'\r\n      res.status(200).send(data);\r\n    });\r\n   ",
+    "sys__UUID" : "0d7e9072-b1ff-4ce1-878b-0233a3a0c9f5",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "srini@ekaplus.com"
+}

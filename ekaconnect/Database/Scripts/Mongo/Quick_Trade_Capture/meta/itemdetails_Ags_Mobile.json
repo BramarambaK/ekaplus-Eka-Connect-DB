@@ -1,0 +1,51 @@
+{
+  "_id": "itemdetails_Ags_Mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "label": "Item Details",
+  "type": "workflow",
+  "layout": {
+    "name": "view",
+    "processorInfo": {
+      "processorId": " 9f3f3827-e195-45be-902e-e56a8668a404"
+    }
+  },
+  "decisions": [],
+  "labelKey": "ITEM_DETAILS",
+  "fields": [
+    [
+      {
+        "key": "productId",
+        "label": "Product"
+      },
+      {
+        "key": "quality"
+      },
+      {
+        "key": "itemQty"
+      },
+      {
+        "key": "internalItemRefNo",
+        "label": "Ref.No",
+        "valueExpression": "return '${contractRefNo},${itemNo}'"
+      },
+      {
+        "key": "originationCountryId"
+      },
+      {
+        "key": "destinationCountryId"
+      },
+      {
+        "key": "priceTypeId"
+      },
+      {
+        "key": "priceString"
+      }
+    ]
+  ],
+  "taskId": "itemdetailsags",
+  "object": "5335f2cf-8169-48af-bc38-d52a551d7be1",
+  "deviceType": "mobile"
+}

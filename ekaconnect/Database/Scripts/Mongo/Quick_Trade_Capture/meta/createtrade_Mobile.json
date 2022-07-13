@@ -1,0 +1,444 @@
+{
+  "_id": "createTrade_QTC_Mobile",
+  "type": "workflow",
+  "refType": "app",
+  "componentType": "UserTask",
+  "labelKey": "createTrade",
+  "label": "New Contract",
+  "object": "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+  "objectAction": "CREATE",
+  "layout": {
+    "name": "create",
+    "type": "row",
+    "recommedationNeed": true,
+    "layoutProcessor": {
+      "processorId": "1e57cc47-33c7-478c-933d-0a9d041966c4"
+    },
+    "processorInfo": {
+      "processorId": "9f3f3827-e195-45be-902e-e56a8668a404"
+    }
+  },
+  "fields": [
+    [
+      {
+        "key": "traderUserId"
+      },
+      {
+        "key": "cpProfileId"
+      },
+      {
+        "key": "contractType"
+      },
+      {
+        "key": "productId",
+        "label": "Product"
+      },
+      {
+        "key": "quality"
+      },
+      {},
+      {
+        "key": "itemQty"
+      },
+      {
+        "key": "itemQtyUnitId",
+        "label": "Quantity Unit"
+      },
+      {
+        "key": "deliveryFromDate",
+        "label": "Delivery From Date"
+      },
+      {
+        "key": "deliveryToDate",
+        "label": "Delivery To Date"
+      },
+      {
+        "key": "payInCurId"
+      },
+      {
+        "key": "incotermId"
+      },
+      {
+        "key": "totalQtyUnitId"
+      }
+    ],
+    [
+      {
+        "key": "originationCountryId"
+      },
+      {
+        "key": "loadingLocationGroupTypeId"
+      },
+      {
+        "key": "originationCityId",
+        "label": "Loading City"
+      },
+      {
+        "key": "destinationCountryId"
+      },
+      {
+        "key": "destinationLocationGroupTypeId"
+      },
+      {
+        "key": "destinationCityId",
+        "label": "Discharge City"
+      },
+      {},
+      {
+        "key": "priceTypeId"
+      },
+      {
+        "key": "priceContractDefId",
+        "type": "hidden"
+      },
+      {
+        "key": "priceFutureContractId",
+        "type": "hidden"
+      },
+      {
+        "key": "futurePrice",
+        "type": "hidden"
+      },
+      {
+        "key": "futurePriceUnitId",
+        "type": "hidden"
+      },
+      {
+        "key": "basisPrice",
+        "type": "hidden"
+      },
+      {
+        "key": "basisPriceUnitId",
+        "type": "hidden"
+      },
+      {
+        "key": "fxFutureToBasis",
+        "type": "hidden"
+      },
+      {
+        "key": "priceDf",
+        "type": "hidden"
+      },
+      {
+        "key": "priceUnitId",
+        "label": "Price Unit",
+        "type": "hidden"
+      },
+      {
+        "key": "fxBasisToPayin",
+        "type": "hidden",
+        "value": "1"
+      },
+      {
+        "key": "fxFuturesToBasis",
+        "type": "hidden"
+      },
+      {
+        "key": "pricingFormulaId",
+        "label": "Formula",
+        "type": "hidden"
+      },
+      {
+        "key": "earliestBy",
+        "type": "hidden"
+      },
+      {
+        "key": "priceLastFixDayBasedOn",
+        "type": "hidden"
+      },
+      {
+        "key": "optionsToFix",
+        "type": "hidden"
+      },
+      {
+        "key": "fixationMethod",
+        "type": "hidden"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "issueDate"
+      },
+      {
+        "value": "avi",
+        "key": "templateId",
+        "type": "hidden"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "dealType"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "paymentTermId"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "remark"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "agentProfileId"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "agentPersonInCharge"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "agentRefNo"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "agentCommType"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "agentCommValue"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "agentCommPriceUnitId"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "cpPersonInCharge"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "cpRefNo"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "qualityFinalAt"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "weightFinalAt"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "isOptionalFieldsEnabled"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "contractState"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "contractRefNo"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "internalContractRefNo"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "approvalManagementDO"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "optional_fields"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "qualityPdScheduleId"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "inspectionCompany"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "latePaymentInterestDetails"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "unweighedPiPctType"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "unweighedPiPctValue"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "laycanStartDate"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "laycanEndDate"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "optionalLoadingDetails"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "optionalDischargeDetails"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "valuationFormula"
+      },
+      {
+        "type": "hidden",
+        "value": "null",
+        "key": "internalItemRefNo"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "label": "Cancel",
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "position": "TopLeft",
+      "outcomes": [
+        {
+          "action": "Cancel",
+          "type": "client"
+        }
+      ]
+    },
+    {
+      "objectAction": "CREATE",
+      "label": "Submit",
+      "labelkey": "REVIEW",
+      "btnClass": "btn btn-success",
+      "position": "TopRight",
+      "type": "submit",
+      "task": "createtrade",
+      "outcomes": [
+        {
+          "name": "_ST_CREATE_QUICK_TRADE_CAPTURE",
+          "data": "output.createtrade",
+          "result": {
+            "success": {
+              "message": "Data1"
+            },
+            "failure": {
+              "message": "Data2"
+            },
+            "successWithWarning": {
+              "message": "Data2"
+            }
+          },
+          "appendMsg": false
+        },
+        {
+          "data": "output.createtrade",
+          "name": "_ST_PROCESS_CONTRACT_SAVE",
+          "result": {
+            "success": {
+              "message": "Contract created successfully"
+            },
+            "failure": {
+              "message": "Contract creation Failed "
+            },
+            "successWithWarning": {
+              "message": "Contract is created with error with refrence no : "
+            }
+          },
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_PROCESS_CONTRACT_SAVE",
+              "value": "contractRefNo"
+            }
+          ]
+        },
+        {
+          "name": "listingtrade",
+          "data": "output._ST_PROCESS_CONTRACT_SAVE",
+          "targetPath": "${properties.platform_url}/trm/#gridId/LOC",
+          "showPopUp": true
+        }
+      ]
+    },
+    {
+      "btnClass": "btn btn-link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "task": "clonetask",
+      "label": "",
+      "style": {
+        "margin-right": "auto"
+      },
+      "position": "TopRight"
+    },
+    {
+      "btnClass": "btn btn-link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "task": "clonetask",
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "",
+      "position": "TopRight"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "label": "Default settings",
+      "outcomes": [
+        {
+          "data": "selected.defaultsetting",
+          "name": "defaultsetting",
+          "style": {
+            "btnImage": "DefaultSetting"
+          }
+        }
+      ],
+      "position": "TopRight"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "label": "Speak to Enter",
+      "outcomes": [
+        {
+          "action": "Audio",
+          "style": {
+            "btnImage": "Microphone"
+          }
+        }
+      ],
+      "position": "TopRight"
+    }
+  ],
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "taskId": "createtrade",
+  "deviceType": "mobile"
+}

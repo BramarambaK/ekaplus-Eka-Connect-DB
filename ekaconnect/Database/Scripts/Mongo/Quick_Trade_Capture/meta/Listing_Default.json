@@ -1,0 +1,40 @@
+{
+    "_id" : "Listing_Default",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Default list",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "showCheckbox" : true,
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [],
+    "labelKey" : "Default_LIST",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "tolerance"
+        }
+    ],
+    "taskId" : "defaultdataCOPY",
+    "object" : "beb81e60-4766-4b24-b22f-ce26b7d66cdf"
+}

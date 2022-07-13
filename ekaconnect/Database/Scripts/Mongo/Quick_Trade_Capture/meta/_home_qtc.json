@@ -1,0 +1,15 @@
+{
+    "_id" : "home_QTC",
+    "layout" : {
+        "name" : "create"
+    },
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "workflow" : "createtrade",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "decisions" : [],
+    "type" : "workflow",
+    "taskId" : "home",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

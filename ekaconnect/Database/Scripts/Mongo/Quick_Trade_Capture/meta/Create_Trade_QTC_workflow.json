@@ -1,0 +1,703 @@
+{
+    "_id" : "createTrade_QTC",
+    "type" : "workflow",
+    "refType" : "app",
+    "componentType" : "UserTask",
+    "labelKey" : "createTrade",
+    "label" : "Contract Details",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51",
+    "objectAction" : "CREATE",
+    "layout" : {
+        "header" : {
+            "title" : "Quick Trade Capture",
+            "style" : {
+                "justify-content" : "flex-start"
+            }
+        },
+        "name" : "create",
+        "type" : "row",
+        "recommedationNeed" : true,
+        "data" : "selected.createtrade",
+        "sentenceForNlpExample" : "Sell 20 MT Brent Light Crude on term CIF with delivery period starting 10-27-2020 till 11-25-2020 with Flat Pricetype of Price 200 USD/MT, originating from Australia, Sydney and delivering to Argentina, Tigre.",
+        "formLayoutStyle" : {
+            "background" : "#eff7f9"
+        },
+        "topLine" : {
+            "display" : false
+        },
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "0",
+            "font-size" : "16px"
+        },
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px",
+            "width" : "200px"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "100%",
+            "height" : "25px",
+            "overflow" : "unset"
+        },
+        "defaultFormValueStyle" : {
+            "flex" : "1",
+            "height" : "20px"
+        },
+        "layoutProcessor" : {
+            "processorId" : "1e57cc47-33c7-478c-933d-0a9d041966c4"
+        },
+        "processorInfo" : {
+            "processorId" : "db94cc3b-38ae-476d-9f23-38623ee14e88"
+        }
+    },
+    "fields" : [ 
+        [ 
+            {
+                "key" : "traderUserId",
+                "suffix" : "",
+                "patchFromValue" : "traderUserIdDisplayName"
+            }, 
+            {
+                "key" : "cpProfileId",
+                "suffix" : "",
+                "patchFromValue" : "totalQtyUnitIdDisplayName"
+            }, 
+            {
+                "key" : "contractType",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "110px"
+                },
+                "patchFromValue" : "contractTypeDisplayName"
+            }, 
+            {
+                "key" : "productId",
+                "suffix" : "",
+                "placeholder" : "Product",
+                "formItemStyle" : {
+                    "width" : "90px",
+                    "placeholder" : "Select Product",
+                    "margin-right" : "10px"
+                },
+                "patchFromValue" : "productIdDisplayName"
+            }, 
+            {
+                "key" : "quality",
+                "suffix" : "",
+                "patchFromValue" : "qualityDisplayName"
+            }
+        ], 
+        [ 
+            {
+                "key" : "itemQty",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "margin-right" : "3px",
+                    "width" : "110px"
+                }
+            }, 
+            {
+                "key" : "itemQtyUnitId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "margin-right" : "10px",
+                    "width" : "90px"
+                },
+                "patchFromValue" : "itemQtyUnitIdDisplayName"
+            }, 
+            {
+                "key" : "deliveryFromDate",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "120px",
+                    "margin-right" : "15px"
+                }
+            }, 
+            {
+                "key" : "deliveryToDate",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "120px",
+                    "margin-right" : "20px"
+                }
+            }, 
+            {
+                "key" : "payInCurId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "200px",
+                    "margin-right" : "10px"
+                },
+                "patchFromValue" : "payInCurIdDisplayName"
+            }, 
+            {
+                "key" : "incotermId",
+                "suffix" : "",
+                "patchFromValue" : "incotermIdDisplayName"
+            }, 
+            {
+                "key" : "totalQtyUnitId",
+                "suffix" : "",
+                "patchFromValue" : "totalQtyUnitIdDisplayName"
+            }
+        ], 
+        [ 
+            {
+                "key" : "originationCountryId",
+                "suffix" : "",
+                "patchFromValue" : "originationCountryIdDisplayName"
+            }, 
+            {
+                "key" : "loadingLocationGroupTypeId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "90px"
+                },
+                "patchFromValue" : "loadingLocationGroupTypeIdDisplayName"
+            }, 
+            {
+                "key" : "originationCityId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "110px",
+                    "margin-right" : "10px"
+                },
+                "patchFromValue" : "originationCityIdDisplayName"
+            }, 
+            {
+                "key" : "destinationCountryId",
+                "suffix" : "",
+                "patchFromValue" : "destinationCountryIdDisplayName"
+            }, 
+            {
+                "key" : "destinationLocationGroupTypeId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "90px"
+                },
+                "patchFromValue" : "destinationLocationGroupTypeIdDisplayName"
+            }, 
+            {
+                "key" : "destinationCityId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "110px",
+                    "margin-right" : "10px"
+                },
+                "patchFromValue" : "destinationCityIdDisplayName"
+            }
+        ], 
+        [ 
+            {
+                "key" : "priceTypeId",
+                "suffix" : "",
+                "patchFromValue" : "priceTypeIdDisplayName"
+            }, 
+            {
+                "key" : "priceContractDefId",
+                "suffix" : ""
+            }, 
+            {
+                "key" : "priceFutureContractId",
+                "suffix" : "",
+                "value" : "1"
+            }, 
+            {
+                "key" : "futurePrice",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "110px"
+                }
+            }, 
+            {
+                "key" : "futurePriceUnitId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "90px",
+                    "margin-right" : "10px"
+                }
+            }, 
+            {
+                "key" : "basisPrice",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "110px"
+                }
+            }, 
+            {
+                "key" : "basisPriceUnitId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "90px",
+                    "margin-right" : "10px"
+                }
+            }, 
+            {
+                "key" : "fxFutureToBasis",
+                "suffix" : ""
+            }, 
+            {
+                "key" : "priceDf",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "110px"
+                }
+            }, 
+            {
+                "key" : "pricingFormulaId",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "110px"
+                }
+            }, 
+            {
+                "key" : "priceUnitId",
+                "suffix" : "",
+                "patchFromValue" : "priceUnitIdDisplayName",
+                "formItemStyle" : {
+                    "width" : "90px",
+                    "margin-right" : "10px"
+                }
+            }, 
+            {
+                "key" : "fxBasisToPayin",
+                "suffix" : "",
+                "value" : "1"
+            }, 
+            {
+                "key" : "fxInstToBasis",
+                "suffix" : ""
+            }, 
+            {
+                "key" : "earliestBy",
+                "suffix" : ""
+            }, 
+            {
+                "key" : "priceLastFixDayBasedOn",
+                "suffix" : ""
+            }, 
+            {
+                "key" : "optionsToFix",
+                "suffix" : ""
+            }, 
+            {
+                "key" : "fixationMethod",
+                "suffix" : ""
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "issueDate"
+            }, 
+            {
+                "suffix" : "",
+                "value" : "avi",
+                "key" : "templateId"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "dealType"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "paymentTermId"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "remark"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "agentProfileId"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "agentPersonInCharge"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "agentRefNo"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "agentCommType"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "agentCommValue"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "agentCommPriceUnitId"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "cpPersonInCharge"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "cpRefNo"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "qualityFinalAt"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "weightFinalAt"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "isOptionalFieldsEnabled"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "contractState"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "contractRefNo"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "internalContractRefNo"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "approvalManagementDO"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "optional_fields"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "qualityPdScheduleId"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "inspectionCompany"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "latePaymentInterestDetails"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "unweighedPiPctType"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "unweighedPiPctValue"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "laycanStartDate"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "laycanEndDate"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "optionalLoadingDetails"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "optionalDischargeDetails"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "valuationFormula"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "value" : "null",
+                "key" : "internalItemRefNo"
+            }
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "edit-modal700pxforQTC",
+                    "data" : "selected.defaultsetting",
+                    "name" : "defaultsetting"
+                }
+            ],
+            "style" : {
+                "margin-right" : "0.4em"
+            },
+            "label" : "Default",
+            "position" : "header"
+        }, 
+        {
+            "btnClass" : "link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "label" : "Clone Recent Contracts :",
+            "position" : "header",
+            "style" : {
+                "pointer-events" : "none"
+            },
+            "task" : "text"
+        }, 
+        {
+            "btnClass" : "btn btn-link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "clonetask",
+            "label" : "clone",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "position" : "header"
+        }, 
+        {
+            "btnClass" : "btn btn-link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "clonetask",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "clone",
+            "position" : "header"
+        }, 
+        {
+            "objectAction" : "READ",
+            "label" : "CANCEL",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "position" : "bottom",
+            "style" : {
+                "flex" : "2"
+            },
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOC",
+                    "name" : "listingtrade",
+                    "showPopUp" : true
+                }
+            ]
+        }, 
+        {
+            "objectAction" : "CREATE",
+            "label" : "Submit",
+            "labelkey" : "REVIEW",
+            "btnClass" : "btn btn-success",
+            "position" : "bottom",
+            "type" : "submit",
+            "task" : "createtrade",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_CREATE_QUICK_TRADE_CAPTURE",
+                    "data" : "output.createtrade",
+                    "result" : {
+                        "success" : {
+                            "message" : "Data1"
+                        },
+                        "failure" : {
+                            "message" : "Data2"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data2"
+                        }
+                    },
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.createtrade",
+                    "name" : "_ST_PROCESS_CONTRACT_SAVE",
+                    "result" : {
+                        "success" : {
+                            "message" : "Contract created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Contract creation Failed "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Contract is created with error with refrence no : "
+                        }
+                    },
+                    "appendMsg" : true,
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output._ST_PROCESS_CONTRACT_SAVE",
+                            "value" : "contractRefNo"
+                        }
+                    ]
+                }, 
+                {
+                    "name" : "listingtrade",
+                    "data" : "output._ST_PROCESS_CONTRACT_SAVE",
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOC",
+                    "showPopUp" : true
+                }
+            ]
+        }
+    ],
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "createtrade"
+}

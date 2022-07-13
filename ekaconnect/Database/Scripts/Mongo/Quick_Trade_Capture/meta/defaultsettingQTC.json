@@ -1,0 +1,227 @@
+{
+    "_id" : "defaultsetting_QTC",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "task" : "defaultsettingprocessor",
+            "selection" : "external",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.defaultsetting",
+                    "name" : "_ST_PROCESSOR_TASK_DEFAULT"
+                }, 
+                {
+                    "data" : "output._ST_PROCESSOR_TASK_DEFAULT",
+                    "name" : "defaultsetting"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createtrade"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "defaultsetting",
+            "outcomes" : [ 
+                {
+                    "data" : "output.defaultsetting",
+                    "name" : "_ST_PROCESS_DEFAULT_QTC",
+                    "appendMsg" : true,
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output._ST_PROCESS_DEFAULT_QTC",
+                            "value" : "_id"
+                        }
+                    ]
+                }, 
+                {
+                    "name" : "createtrade",
+                    "showPopUp" : false,
+                    "showToaster" : false
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createtrade"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "key" : "traderUserId",
+                "event" : "external",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "toleranceMin",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "3px"
+                }
+            }, 
+            {
+                "key" : "toleranceMax",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "3px"
+                }
+            }, 
+            {
+                "key" : "toleranceType",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "11%",
+                    "margin-right" : "3px"
+                }
+            }, 
+            {
+                "key" : "toleranceLevel",
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "11%",
+                    "margin-right" : "5px"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "key" : "shipmentMode",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "key" : "paymentTermId",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                },
+                "key" : "paymentDueDate"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                },
+                "key" : "arbitrationId"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                },
+                "key" : "applicableLawId"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                },
+                "key" : "taxScheduleCountryId"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                },
+                "key" : "taxScheduleId"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                },
+                "key" : "strategyAccId"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "48%",
+                    "margin-right" : "5px"
+                },
+                "key" : "profitCenterId"
+            }
+        ]
+    ],
+    "label" : "Default Value",
+    "labelKey" : "Default_SET",
+    "layout" : {
+        "recommedationNeed" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "beb81e60-4766-4b24-b22f-ce26b7d66cdf",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "defaultsetting",
+    "type" : "workflow"
+}

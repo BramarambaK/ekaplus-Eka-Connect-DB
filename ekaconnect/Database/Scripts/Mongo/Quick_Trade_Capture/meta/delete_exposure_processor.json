@@ -1,0 +1,11 @@
+{
+    "_id" : "delete_exposure_processor",
+    "name" : "delete_exposure_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "\r\n     var delete_exposure_url = {\r\n      method: 'DELETE',\r\n      url: req.body.propertyList.eka_connect_host + '\/data\/5d907cd2-7785-4d34-bcda-aa84b2158415\/dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b\/bulkDelete',\r\n      body:{'filterData' : req.body.filterData},\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function delete_exposure() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(delete_exposure_url, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    delete_exposure().then(function(data) {\r\n      res.status(200).send(data)\r\n    }).catch(err=>{\r\n      res.status(500).send(err)\r\n    })\r\n  ",
+    "sys__UUID" : "7de95de7-cc19-4bd0-a005-e4b061482b78",
+    "sys__createdOn" : ISODate("2019-06-24T13:35:31.281Z"),
+    "sys__createdBy" : "avinash@ekaplus.com"
+}

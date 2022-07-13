@@ -1,0 +1,88 @@
+{
+    "_id" : "deletetrade_QTC",
+    "componentType" : "UserTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Remove",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to remove ${_id}?",
+            "headerMessage" : "REMOVE : ${_id}"
+        }
+    },
+    "input" : [ 
+        "_id"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listingtrade"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "deletetrade",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Trade got deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Trade got deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deletetrade",
+                    "appendMsg" : true,
+                    "name" : "_ST_DELETE_TRADE"
+                }, 
+                {
+                    "name" : "listingtrade",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "DELETE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listingtrade"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Delete_Trade",
+    "fields" : [ 
+        {
+            "heading" : "_id"
+        }
+    ],
+    "taskId" : "deletetrade",
+    "object" : "e6cdb0cd-0ab3-426f-8a2e-c49544dd1f51"
+}

@@ -1,0 +1,279 @@
+{
+  "_id": "createTrade_Ags_QTC_Mobile",
+  "type": "workflow",
+  "refType": "app",
+  "componentType": "UserTask",
+  "labelKey": "createTrade",
+  "label": "New Contract",
+  "object": "5335f2cf-8169-48af-bc38-d52a551d7be1",
+  "objectAction": "CREATE",
+  "layout": {
+    "name": "create",
+    "type": "row",
+    "recommedationNeed": true,
+    "layoutProcessor": {
+      "processorId": "24710a4c-c74b-4ef0-a7ee-e581ab66a561"
+    }
+  },
+  "fields": [
+    [
+      {
+        "key": "traderUserId"
+      },
+      {
+        "key": "contractType"
+      },
+      {
+        "key": "issueDate",
+        "label": "Contract Issue Date"
+      },
+      {
+        "key": "cpProfileId"
+      },
+      {
+        "key": "totalQtyUnitId"
+      },
+      {},
+      {
+        "key": "productId",
+        "label": "Product"
+      },
+      {
+        "key": "quality",
+        "suffix": ""
+      },
+      {
+        "key": "originId",
+        "suffix": ""
+      },
+      {
+        "key": "cropYearId",
+        "suffix": ""
+      },
+      {
+        "key": "itemQty"
+      },
+      {
+        "key": "itemQtyUnitId",
+        "label": "Quantity Unit"
+      },
+      {
+        "key": "incotermId"
+      },
+      {
+        "key": "packingTypeId",
+        "label": "Packing Type"
+      },
+      {
+        "key": "packingSize",
+        "label": "Packing Size"
+      }
+    ],
+    [
+      {
+        "key": "payInCurId"
+      },
+      {
+        "key": "priceTypeId",
+        "filterBy": "return '${elem.value}' == 'Fixed' || '${elem.value}' == 'Flat' || '${elem.value}' == 'On Call Basis Fixed'|| '${elem.value}' == '_empty_'"
+      },
+      {
+        "key": "priceDf",
+        "type": "hidden"
+      },
+      {
+        "key": "priceUnitId",
+        "label": "Price Unit",
+        "type": "hidden"
+      },
+      {
+        "key": "fxBasisToPayin",
+        "value": "1",
+        "type": "hidden"
+      },
+      {
+        "key": "priceContractDefId",
+        "type": "hidden"
+      },
+      {
+        "key": "priceFutureContractId",
+        "value": "1",
+        "type": "hidden"
+      },
+      {
+        "key": "futurePrice",
+        "type": "hidden"
+      },
+      {
+        "key": "basisPrice",
+        "type": "hidden"
+      },
+      {
+        "key": "fxInstToBasis",
+        "type": "hidden"
+      },
+      {
+        "key": "invDocPriceUnitId"
+      },
+      {},
+      {
+        "key": "originationCountryId"
+      },
+      {
+        "key": "loadingLocationGroupTypeId",
+        "label": "Loading Type"
+      },
+      {
+        "key": "originationCityId",
+        "label": "Loading location"
+      },
+      {
+        "key": "destinationCountryId"
+      },
+      {
+        "key": "destinationLocationGroupTypeId",
+        "label": "Discharge Type"
+      },
+      {
+        "key": "destinationCityId",
+        "label": "Discharge location"
+      },
+      {
+        "key": "deliveryFromDate",
+        "label": "Delivery From Date",
+        "event": "if(new Date('${issueDate}').getTime() <= new Date('${deliveryFromDate}').getTime()) {return true} else {return 'Delivery From Date should be greater than Contract Issue Date'}"
+      },
+      {
+        "key": "deliveryToDate",
+        "label": "Delivery To Date",
+        "event": "if(new Date('${issueDate}').getTime() <= new Date('${deliveryToDate}').getTime()) {return true} else {return 'Delivery To Date should be greater than Contract Issue Date'}"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "label": "Cancel",
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "position": "TopLeft",
+      "outcomes": [
+        {
+          "action": "Cancel",
+          "type": "client"
+        }
+      ]
+    },
+    {
+      "objectAction": "CREATE",
+      "label": "Submit",
+      "labelkey": "REVIEW",
+      "btnClass": "btn btn-success",
+      "position": "TopRight",
+      "type": "submit",
+      "task": "createtradeags",
+      "outcomes": [
+        {
+          "name": "_ST_CREATE_QUICK_TRADE_CAPTURE_AGS",
+          "data": "output.createtradeags",
+          "result": {
+            "success": {
+              "message": "Data1"
+            },
+            "failure": {
+              "message": "Data2"
+            },
+            "successWithWarning": {
+              "message": "Data2"
+            }
+          },
+          "appendMsg": false
+        },
+        {
+          "data": "output.createtradeags",
+          "name": "_ST_PROCESS_CONTRACT_SAVE_AGS",
+          "result": {
+            "success": {
+              "message": "Contract created successfully"
+            },
+            "failure": {
+              "message": "Contract creation Failed "
+            },
+            "successWithWarning": {
+              "message": "Contract is created with error with refrence no : "
+            }
+          },
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_PROCESS_CONTRACT_SAVE_AGS",
+              "value": "contractRefNo"
+            }
+          ]
+        },
+        {
+          "name": "listingtradeags",
+          "data": "output._ST_PROCESS_CONTRACT_SAVE_AGS",
+          "targetPath": "${properties.platform_url}/trm/#gridId/LOC",
+          "showPopUp": true
+        }
+      ]
+    },
+    {
+      "btnClass": "btn btn-link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "task": "clonetask",
+      "label": "",
+      "style": {
+        "margin-right": "auto"
+      },
+      "position": "TopRight"
+    },
+    {
+      "btnClass": "btn btn-link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "task": "clonetask",
+      "label": "",
+      "style": {
+        "margin-right": "auto"
+      },
+      "position": "TopRight"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "label": "Default settings",
+      "outcomes": [
+        {
+          "data": "selected.defaultsettingags",
+          "name": "defaultsettingags",
+          "style": {
+            "btnImage": "DefaultSetting"
+          }
+        }
+      ],
+      "position": "TopRight"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "label": "Speak to Enter",
+      "outcomes": [
+        {
+          "action": "Audio",
+          "version": "V2",
+          "style": {
+            "btnImage": "Microphone"
+          }
+        }
+      ],
+      "position": "TopRight"
+    }
+  ],
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "taskId": "createtradeags",
+  "deviceType": "mobile"
+}

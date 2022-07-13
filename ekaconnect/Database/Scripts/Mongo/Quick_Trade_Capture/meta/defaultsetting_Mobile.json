@@ -1,0 +1,139 @@
+{
+  "_id": "defaultsetting_QTC_Mobile",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "object": "beb81e60-4766-4b24-b22f-ce26b7d66cdf",
+  "label": "Default Value",
+  "type": "workflow",
+  "layout": {
+    "recommedationNeed": false,
+    "name": "create",
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "task": "defaultsettingprocessor",
+      "selection": "external",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.defaultsetting",
+          "name": "_ST_PROCESSOR_TASK_DEFAULT",
+          "appendMsg": true
+        },
+        {
+          "data": "output._ST_PROCESSOR_TASK_DEFAULT",
+          "name": "defaultsetting",
+          "appendMsg": true
+        }
+      ]
+    },
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createtrade",
+          "action": "Cancel"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "TopLeft"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "defaultsetting",
+      "outcomes": [
+        {
+          "data": "output.defaultsetting",
+          "name": "_ST_PROCESS_DEFAULT_QTC",
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_PROCESS_DEFAULT_QTC",
+              "value": "_id"
+            }
+          ]
+        },
+        {
+          "data": "output.defaultsetting",
+          "name": "createtrade",
+          "showPopUp": false,
+          "showToaster": false
+        }
+      ],
+      "label": "SAVE",
+      "position": "TopRight",
+      "type": "submit"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "key": "traderUserId",
+        "event": "external"
+      },
+      {
+        "disabled": "true",
+        "type": "hidden",
+        "value": "1234",
+        "key": "defaultKey"
+      },
+      {
+        "key": "toleranceMin",
+        "label": "Tolerance Min"
+      },
+      {
+        "key": "toleranceMax",
+        "label": "Tolerance Max"
+      },
+      {
+        "key": "toleranceType",
+        "label": "Tolerance Type"
+      },
+      {
+        "key": "toleranceLevel",
+        "label": "Tolerance Level"
+      },
+      {
+        "key": "shipmentMode"
+      },
+      {
+        "key": "paymentTermId"
+      },
+      {
+        "key": "paymentDueDate"
+      },
+      {},
+      {
+        "key": "arbitrationId"
+      },
+      {
+        "key": "applicableLawId"
+      },
+      {
+        "key": "taxScheduleCountryId"
+      },
+      {
+        "key": "taxScheduleId"
+      },
+      {},
+      {
+        "key": "strategyAccId"
+      },
+      {
+        "key": "profitCenterId"
+      }
+    ]
+  ],
+  "taskId": "defaultsetting",
+  "deviceType": "mobile"
+}
