@@ -1,0 +1,170 @@
+{
+  "_id": "listing_PTA",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "380a23ff-2ec1-42d2-b973-5af329899c6b",
+  "label": "Pre Deal List",
+  "type": "workflow",
+  "refreshData": true,
+  "apiInfo": {
+    "path": "/collection/v1?collectionName=Pre Trade Collection",
+    "headers": {},
+    "inputMapping": {},
+    "method": "GET",
+    "useInputMapping": false,
+    "host": "${properties.platform_url}",
+    "body": {}
+  },
+  "layout": {
+    "selection": "row",
+    "selectionMode": "single",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "refreshData": {
+      "time": 30000
+    },
+    "dropdownDecisions": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.listing",
+          "popupClass": "edit-modal700px",
+          "name": "editorder"
+        }
+      ],
+      "label": "Edit Order",
+      "iconClass": "fa fa-edit"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "position": "top",
+      "outcomes": [
+        {
+          "popupClass": "edit-modal700px",
+          "name": "createorder",
+          "displayType": "popup",
+          "data": "selected.createorder"
+        }
+      ],
+      "label": "Create Order",
+      "iconClass": "fa fa-plus"
+    }
+  ],
+  "labelKey": "PRE-DEAL LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "Suppliers"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "density"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "price ($/mt)"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "Prem"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "Naira/ltr"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "Exchange value"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "Qty MT"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "UnitPrice"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "USDperMT",
+      "roundoff": 2
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "USDperCBM",
+      "roundoff": 2
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "USDperLtr",
+      "roundoff": 2
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "QtyM3",
+      "roundoff": 2
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "QtyLtrs",
+      "roundoff": 2
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "ValueNGN",
+      "roundoff": 2
+    }
+  ],
+  "taskId": "listing",
+  "object": "6eea529e-1562-49e1-8af7-bfb3651b856f"
+}

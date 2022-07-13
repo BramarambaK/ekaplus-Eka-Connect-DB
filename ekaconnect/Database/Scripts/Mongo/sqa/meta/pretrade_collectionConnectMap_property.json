@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("5d78bb55fcd51cb9451615d5"),
+    "type" : "property",
+    "name" : "pretrade_collectionConnectMap",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : {
+        "name" : "name",
+        "age" : "age",
+        "dob" : "dob"
+    },
+    "length" : "1000"
+}

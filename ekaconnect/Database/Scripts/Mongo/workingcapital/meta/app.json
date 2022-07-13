@@ -1,0 +1,33 @@
+
+ {
+    "_id" : "working_capital_management_app",
+    "title" : "Working Capital Management",
+    "name" : "workingcapital",
+    "tenantID" : "qareference",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "platform_id" : "60",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60,
+                "height" : 20,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2"
+}

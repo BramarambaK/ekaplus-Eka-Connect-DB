@@ -1,0 +1,33 @@
+{
+    "_id" : "addsyndicatecomposite_wcm",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "decisions" : [],
+    "label" : "",
+    "workflows" : [ 
+        {
+            "workflows" : [ 
+                {
+                    "name" : "addsyndicatewcm",
+                    "data" : "selected.addsyndicatecompositewcm.addsyndicatewcm"
+                }
+            ],
+            "style" : {
+                "padding-top" : "1px"
+            }
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "customClass" : true,
+        "name" : "customv2",
+        "menu" : false,
+        "footerClass" : "custom-footer display-none",
+        "isPopUp" : true
+    },
+    "taskId" : "addsyndicatecompositewcm",
+    "object" : "0703e606-1286-4f67-9191-bad3d04c397f"
+}

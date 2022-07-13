@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_ORDER_PTA",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_ORDER",
+    "object" : "6eea529e-1562-49e1-8af7-bfb3651b856f"
+}

@@ -1,0 +1,93 @@
+{
+    "_id" : ObjectId("5d79d844ea8a3b34e836845d"),
+    "name" : "pretrade",
+    "label" : "Pre-trade",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "fields" : {
+        "name" : {
+            "name" : "Name",
+            "labelKey" : "name",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "age" : {
+            "age" : "Age",
+            "labelKey" : "age",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number",
+            "length" : "2"
+        },
+        "dob" : {
+            "dob" : "Date Of Birth",
+            "labelKey" : "dob",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "enrichment" : {
+            "enrichment" : "Enrichment",
+            "labelKey" : "enrichment",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionName" : {
+            "collectionName" : "collectionName",
+            "labelKey" : "collectionName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionHeaderProperty" : {
+            "collectionHeaderProperty" : "collectionHeaderProperty",
+            "labelKey" : "collectionHeaderProperty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionConnectMapProperty" : {
+            "collectionConnectMapProperty" : "collectionConnectMapProperty",
+            "labelKey" : "collectionConnectMapProperty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "platformTemplateId" : {
+            "platformTemplateId" : "platformTemplateId",
+            "labelKey" : "platformTemplateId",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionData" : {
+            "collectionData" : "collectionData",
+            "labelKey" : "collectionData",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "sys__UUID" : "bd145a34-cb6c-400a-ab84-5ebf74c3222e",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

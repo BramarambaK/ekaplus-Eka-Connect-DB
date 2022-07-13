@@ -1,0 +1,85 @@
+{
+    "_id" : "generaldocumentdelete_wcm",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldocumentlistingwcm"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "task" : "generaldocumentdeletewcm",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Document deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "data" : "output.generaldocumentdeletewcm",
+                    "appendMsg" : true,
+                    "name" : "_EXT_DELETE_DOCUMENT"
+                }, 
+                {
+                    "data" : "output.generaldocumentdeletewcm",
+                    "appendMsg" : false,
+                    "name" : "_ST_DELETE_DOCUMENT"
+                }, 
+                {
+                    "name" : "generaldocumentlistingwcm",
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "DELETE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldocumentlistingwcm"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "getDataFromExternalAPI" : true,
+    "label" : "DELETE DOCUMENT",
+    "labelKey" : "DELETE_DOCUMENT",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to delete the document ${fileName}?",
+            "headerMessage" : "Delete Document: ${fileName}"
+        }
+    },
+    "object" : "8264dc75-eb72-48a7-bc61-bc71922d240f",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "taskId" : "generaldocumentdeletewcm",
+    "type" : "workflow"
+}

@@ -1,0 +1,9 @@
+{
+    "_id" : "data_Processor_for_documentupload_wcm",
+    "name" : "data_Processor_for_documentupload_wcm",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "snippet" : "var generaldocumentlisting = req.body.selectedData;\r\nvar crediFacilityId = (generaldocumentlisting && generaldocumentlisting.creditFacilityId) ? generaldocumentlisting.creditFacilityId : \"-1\";\r\nvar platform = {\r\n  method: \"GET\",\r\n  url: req.body.propertyList.eka_connect_host + \"/data/e5b9fc05-22a9-4755-9cbc-c8598ab61ec2/8264dc75-eb72-48a7-bc61-bc71922d240f?creditFacilityId=\" + crediFacilityId,\r\n  headers: {\r\n    \"Content-Type\": \"application/json\",\r\n    Authorization: req.headers.authorization,\r\n    \"X-TenantID\": req.headers[\"x-tenantid\"]\r\n  },\r\n  json: true\r\n};\r\nfunction get_platform() {\r\n  return new Promise(function(resolve, reject) {\r\n    console.log(\"Request - \" + platform.url);\r\n    console.log(\"Payload -\" + JSON.stringify(platform));\r\n    request(platform, function(err, response, body) {\r\n      console.log(\"Request Body - \" + JSON.stringify(body));\r\n      if (err || body.error) reject(body);\r\n      else {\r\n        resolve(body);\r\n      }\r\n    });\r\n  });\r\n}\r\n\r\nget_platform()\r\n  .then(function(result) {\r\n    console.log(\"Response - \" + JSON.stringify(result));\r\n    res.status(200).send(result);\r\n  })\r\n  .catch(err => {\r\n    console.log(\"Error Executing Processor -\" + err);\r\n    res.status(500).send(err);\r\n  });",
+    "sys__UUID" : "106c85dc-d69a-457a-aa72-2932fd2b680d"
+}

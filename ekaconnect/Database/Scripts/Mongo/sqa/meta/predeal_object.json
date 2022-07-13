@@ -1,0 +1,162 @@
+{
+    "_id" : ObjectId("5d7f2c22ea8a3b34e8378cea"),
+    "name" : "predeal",
+    "label" : "Pre-deal",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "fields" : {
+        "Suppliers" : {
+            "Suppliers" : "Suppliers",
+            "labelKey" : "Suppliers",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "density" : {
+            "density" : "Density",
+            "labelKey" : "density",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "price ($/mt)" : {
+            "price ($/mt)" : "Price ($/mt)",
+            "labelKey" : "price ($/mt)",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Prem" : {
+            "Prem" : "Prem",
+            "labelKey" : "Prem",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "UnitPrice" : {
+            "UnitPrice" : "Unit Price",
+            "labelKey" : "UnitPrice",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionName" : {
+            "collectionName" : "collectionName",
+            "labelKey" : "collectionName",
+            "type" : "hidden",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionHeaderProperty" : {
+            "collectionHeaderProperty" : "collectionHeaderProperty",
+            "labelKey" : "collectionHeaderProperty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionConnectMapProperty" : {
+            "collectionConnectMapProperty" : "collectionConnectMapProperty",
+            "labelKey" : "collectionConnectMapProperty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "platformTemplateId" : {
+            "platformTemplateId" : "platformTemplateId",
+            "labelKey" : "platformTemplateId",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "collectionData" : {
+            "collectionData" : "collectionData",
+            "labelKey" : "collectionData",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Naira/ltr" : {
+            "Naira/ltr" : "Naira/ltr",
+            "labelKey" : "Naira/ltr",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Exchange value" : {
+            "Exchange value" : "Exchange value",
+            "labelKey" : "Exchange value",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "Qty MT" : {
+            "Qty MT" : "Qty MT",
+            "labelKey" : "Qty MT",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "Number"
+        },
+        "USDperMT" : {
+            "USDperMT" : "USDPERMT",
+            "labelKey" : "USDperMT",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "USDperCBM" : {
+            "USDperCBM" : "USDPERCBM",
+            "labelKey" : "USDperCBM",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "USDperLtr" : {
+            "USDperLtr" : "USDPERLTR",
+            "labelKey" : "USDperLtr",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "QtyM3" : {
+            "QtyM3" : "QTYM3",
+            "labelKey" : "QtyM3",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "ValueNGN" : {
+            "ValueNGN" : "VALUENGN",
+            "labelKey" : "ValueNGN",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+		"QtyLtrs" : {
+            "QtyLtrs" : "QTYLTRS",
+            "labelKey" : "QtyLtrs",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "sys__UUID" : "6eea529e-1562-49e1-8af7-bfb3651b856f",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

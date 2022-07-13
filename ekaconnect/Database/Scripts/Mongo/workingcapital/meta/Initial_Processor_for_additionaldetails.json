@@ -1,0 +1,9 @@
+{
+  "_id": "Initial_Processor_for_additionaldetails",
+  "name": "Initial_Processor_for_additionaldetails",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+  "snippet": "console.log(req.body);\r\n   if(req.body.hasOwnProperty('selectedData') && req.body.selectedData.hasOwnProperty('data')){\r\n     res.status(200).send({'data' : req.body.selectedData.data})\r\n   }\r\n   else {\r\n    res.status(200).send({})\r\n   }",
+  "sys__UUID": "59aa79bb-2986-4799-a2e9-d9516d6bcafe"
+}

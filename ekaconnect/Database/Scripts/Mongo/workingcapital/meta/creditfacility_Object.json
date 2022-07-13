@@ -1,0 +1,176 @@
+{
+    "_id" : "creditfacility_Object",
+    "name" : "creditfacility",
+    "label" : "creditfacility Data",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [],
+    "fields" : {
+        "filterDate" : {
+            "labelKey" : "filterDate",
+            "filterDate" : "Date Range",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "approvalDate" : {
+            "labelKey" : "approvalDate",
+            "approvalDate" : "Approval Date",
+            "isRequired" : true,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "class" : "treasury-date"
+        },
+        "effectiveDate" : {
+            "labelKey" : "effectiveDate",
+            "effectiveDate" : "Effective Date",
+            "isRequired" : true,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "class" : "treasury-date"
+        },
+        "maturityDate" : {
+            "labelKey" : "maturityDate",
+            "maturityDate" : "Maturity Date",
+            "isRequired" : true,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date",
+            "class" : "treasury-date"
+        },
+        "creditFacilityId" : {
+            "labelKey" : "creditFacilityId",
+            "creditFacilityId" : "Ref. No.",
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "legalEntity" : {
+            "labelKey" : "legalEntity",
+            "legalEntity" : "Entity",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "dataType" : "String"
+        },
+        "profitCenter" : {
+            "labelKey" : "profitCenter",
+            "profitCenter" : "Profit Center",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String"
+        },
+        "bankName" : {
+            "labelKey" : "bankName",
+            "bankName" : "Bank Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankName",
+            "dataType" : "String"
+        },
+        "bankId" : {
+            "labelKey" : "bankId",
+            "bankId" : "Bank Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankId",
+            "dataType" : "String"
+        },
+        "bankAccount" : {
+            "labelKey" : "bankAccount",
+            "bankAccount" : "Bank Account",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "dataType" : "String"
+        },
+        "limitCurrency" : {
+            "labelKey" : "limitCurrency",
+            "limitCurrency" : "Limit Currency",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "dataType" : "String"
+        },
+        "syndicated" : {
+            "labelKey" : "syndicated",
+            "syndicated" : "Syndicated",
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "limitAmount" : {
+            "labelKey" : "limitAmount",
+            "limitAmount" : "Limit Amount",
+            "isRequired" : true,
+            "type" : "textbox",
+            "dataType" : "Number"
+        },
+        "revolving" : {
+            "revolving" : "Revolving",
+            "labelKey" : "revolving",
+            "dataType" : "String",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "dataType" : "String",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "externalRefNo" : {
+            "externalRefNo" : "External Ref No",
+            "labelKey" : "externalRefNo",
+            "type" : "String",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "ngrFilter" : {
+            "ngrFilter" : " ",
+            "labelKey" : "ngrFilter",
+            "type" : "multiselect",
+            "serviceKey" : "ngrFilterKey",
+            "isRequired" : false
+        },
+        "formcheckbox" : {
+            "formcheckbox" : "Entity",
+            "labelKey" : "formcheckbox",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey" : "ngrFilterKey"
+        },
+        "add" : {
+            "add" : "Add",
+            "labelKey" : "add",
+            "type" : "button",
+            "isRequired" : false
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "fcb3610e-e3e7-4481-98be-65faef33ca50"
+}

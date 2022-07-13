@@ -1,0 +1,222 @@
+{
+    "_id" : "generalDetails_object",
+    "sys__UUID" : "96dda70f-7afe-4179-aa4e-764f924fef17",
+    "name" : "genernalDetails_object",
+    "label" : "General Details",
+    "type" : "object",
+    "version" : "1",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [ 
+        "priceId"
+    ],
+    "fields" : {
+        "filterDate" : {
+            "labelKey" : "filterDate",
+            "filterDate" : "Date Range",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "approvalDate" : {
+            "approvalDate" : "Approval Date",
+            "labelKey" : "approvalDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dateformat" : "d/mm/yy",
+            "class" : "treasury-date",
+            "minimumDate" : "return moment().format('DD-MMM-YYYY')",
+            "readonlyInput" : true,
+            "yearNavigator" : true,
+            "monthNavigator" : true,
+            "yearRange" : "2000:2030",
+            "showButtonBar" : true
+        },
+        "legalEntity" : {
+            "legalEntity" : "Entity",
+            "labelKey" : "legalEntity",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "serviceKey" : "ngrFilterKey",
+            "children" : [ 
+                "limitCurrency", 
+                "bankName", 
+                "bankAccount", 
+                "currencyhidden", 
+                "bankId"
+            ]
+        },
+        "profitCenter" : {
+            "profitCenter" : "Profit Center",
+            "labelKey" : "profitCenter",
+            "type" : "dropdown",
+            "isRequired" : true,
+            "dataType" : "String",
+            "serviceKey" : "profitCenter"
+        },
+        "effectiveDate" : {
+            "effectiveDate" : "Effective Date",
+            "labelKey" : "effectiveDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dateformat" : "d/mm/yy",
+            "class" : "treasury-date",
+            "maximumDate" : "if('${maturityDate}') {return '${maturityDate}'} else{return true}",
+            "minimumDate" : "if('${approvalDate}') {return '${approvalDate}'} else{return true}",
+            "readonlyInput" : true,
+            "yearNavigator" : true,
+            "monthNavigator" : true,
+            "yearRange" : "2000:2030",
+            "showButtonBar" : true
+        },
+        "maturityDate" : {
+            "maturityDate" : "Maturity Date",
+            "labelKey" : "maturityDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "dataType" : "String",
+            "dateformat" : "d/mm/yy",
+            "class" : "treasury-date",
+            "minimumDate" : "return moment('${approvalDate}'.substring(0,11)).format('DD-MMM-YYYY')",
+            "readonlyInput" : true,
+            "yearNavigator" : true,
+            "monthNavigator" : true,
+            "yearRange" : "2000:2030",
+            "showButtonBar" : true
+        },
+        "limitAmount" : {
+            "limitAmount" : "Limit Amount",
+            "labelKey" : "limitAmount",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "validationRegex" : "^[0-9]*$",
+            "autocomplete" : "off"
+        },
+        "limitCurrency" : {
+            "labelKey" : "limitCurrency",
+            "limitCurrency" : "Limit Currency",
+            "isRequired" : true,
+            "type" : "dropdown",
+            "serviceKey" : "currency",
+            "parent" : [ 
+                "legalEntity"
+            ],
+            "dataType" : "String"
+        },
+        "currencyhidden" : {
+            "labelKey" : "currencyhidden",
+            "currencyhidden" : "",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currencyhidden",
+            "parent" : [ 
+                "legalEntity", 
+                "bankAccount"
+            ],
+            "dataType" : "String"
+        },
+        "creditFacilityId" : {
+            "labelKey" : "creditFacilityId",
+            "creditFacilityId" : "",
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "bankId" : {
+            "labelKey" : "bankId",
+            "bankId" : "Bank Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankId",
+            "parent" : [ 
+                "legalEntity", 
+                "bankAccount"
+            ],
+            "UIupdates" : {
+                "disability" : "return  true"
+            },
+            "dataType" : "String"
+        },
+        "bankName" : {
+            "bankName" : "Bank Name",
+            "labelKey" : "bankName",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey1" : "bankName",
+            "parent1" : [ 
+                "legalEntity", 
+                "bankAccount"
+            ]
+        },
+        "bankAccount" : {
+            "bankAccount" : "Bank Account",
+            "labelKey" : "bankAccount",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey1" : "bankAccount",
+            "parent1" : [ 
+                "legalEntity"
+            ],
+            "children1" : [ 
+                "bankName", 
+                "bankId", 
+                "currencyhidden"
+            ]
+        },
+        "syndicated" : {
+            "labelKey" : "syndicated",
+            "syndicated" : "Syndicated",
+            "isRequired" : false,
+            "type" : "checkbox",
+            "dataType" : "String"
+        },
+        "revolving" : {
+            "revolving" : "Revolving",
+            "labelKey" : "revolving",
+            "dataType" : "String",
+            "isRequired" : false,
+            "type" : "checkbox"
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "dataType" : "String",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "ngrFilter" : {
+            "ngrFilter" : " ",
+            "labelKey" : "ngrFilter",
+            "type" : "multiselect",
+            "serviceKey" : "ngrFilterKey",
+            "isRequired" : false
+        },
+        "formcheckbox" : {
+            "formcheckbox" : "Entity",
+            "labelKey" : "formcheckbox",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "serviceKey" : "ngrFilterKey"
+        },
+        "add" : {
+            "add" : "Add",
+            "labelKey" : "add",
+            "type" : "button",
+            "isRequired" : false
+        }
+    }
+}

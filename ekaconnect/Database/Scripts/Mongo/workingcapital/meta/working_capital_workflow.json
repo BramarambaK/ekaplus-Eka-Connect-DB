@@ -1,0 +1,207 @@
+{
+    "_id" : "working_capital_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "taskId" : "creditfacility",
+    "label" : "List of Credit Facility",
+    "object" : "fcb3610e-e3e7-4481-98be-65faef33ca50",
+    "type" : "workflow",
+    "payLoad" : "selected.datefilterforliquidityplan",
+    "processorInfo" : {
+        "processorId" : "56256ab6-4efb-4ba5-bcf1-e375cfe4688b"
+    },
+    "lazyLoading" : false,
+    "rows" : 20,
+    "header" : {
+        "label" : "List of Credit Facility",
+        "style" : {
+            "font-size" : "18px"
+        }
+    },
+    "layout" : {
+        "name" : "list",
+        "getInitialData" : true,
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "rows" : 20,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : true,
+            "export" : false,
+            "showFilterHeader" : true
+        },
+        "layoutProcessor" : {
+            "processorId" : "0496ee82-1fef-4e31-9ff4-fe23f95aed95"
+        },
+        "lazyLoading" : false,
+        "theme" : "theme-grid-white"
+    },
+    "fields" : [ 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Ref. No.",
+            "key" : "creditFacilityId"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Approval Date",
+            "key" : "approvalDate"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Entity",
+            "key" : "legalEntity"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Profit Center",
+            "key" : "profitCenter"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Effective Date",
+            "key" : "effectiveDate"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Maturity Date",
+            "key" : "maturityDate"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Limit Currency",
+            "key" : "limitCurrency"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Limit Amount",
+            "align" : "right",
+            "key" : "limitAmount",
+            "dataType" : "String"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Bank Name",
+            "key" : "bankName"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Bank Account",
+            "key" : "bankAccount"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Syndicate",
+            "key" : "syndicated"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Revolving",
+            "key" : "revolving"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Remarks",
+            "key" : "remarks"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Updated By",
+            "key" : "updatedBy"
+        }, 
+        {
+            "filter" : true,
+            "sort" : true,
+            "label" : "Updated Date",
+            "key" : "updatedDate"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldetails"
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "ADD",
+            "position" : "top",
+            "task" : "generaldetails",
+            "outsideOperations" : true
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.creditfacility",
+                    "name" : "generaldetails",
+                    "setSelected" : [ 
+                        "selected.generaldetails", 
+                        "selected.additionaldetailsComposite.additionaldetails", 
+                        "selected.generaldocumentlisting", 
+                        "selected.syndicate"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "Edit",
+            "position" : "top",
+            "disabled" : false
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.creditfacility",
+                    "popupClass" : "treasurymodal",
+                    "name" : "deleteCreditFacility"
+                }
+            ],
+            "style" : {
+                "margin-right" : "5px"
+            },
+            "label" : "Delete",
+            "position" : "top",
+            "task" : "deleteCreditFacility",
+            "disabled" : false
+        }
+    ],
+    "labelKey" : "LIST"
+}

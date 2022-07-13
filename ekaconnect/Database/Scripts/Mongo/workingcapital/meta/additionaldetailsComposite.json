@@ -1,0 +1,124 @@
+{
+    "_id" : "additionaldetailsComposite",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "workflows" : [ 
+        {
+            "workflows" : [ 
+                {
+                    "name" : "additionaldetails",
+                    "data" : "selected.additionaldetailsComposite.additionaldetails"
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "customClass" : true,
+        "name" : "customv2",
+        "menu" : true,
+        "header" : {
+            "headerExpression" : "if('${creditfacility}' && '${creditfacility.operations}') {return 'Edit Facility'} else {return 'New Facility'}"
+        },
+        "footerClass" : "wcm-custom-footer"
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldetails",
+                    "data" : "selected.generaldetails"
+                }
+            ],
+            "label" : "General Details",
+            "position" : "leftMenu"
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "additionaldetailsComposite",
+                    "data" : "selected.additionaldetailsComposite.additionaldetails"
+                }
+            ],
+            "label" : "Additional Details",
+            "position" : "leftMenu"
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldocumentlistingwcm",
+                    "data" : "selected.generaldocumentlisting",
+                    "setSelected" : [ 
+                        "selected.generaldocumentlisting"
+                    ]
+                }
+            ],
+            "label" : "Document Upload",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creditfacility",
+                    "resetForm" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary convert-to-exposure-btn",
+            "objectAction" : "UPDATE",
+            "task" : "additionaldetails",
+            "individualCompositeTask" : false,
+            "additionalSelectedData" : {
+                "syndicate" : "selected.syndicate"
+            },
+            "outcomes" : [ 
+                {
+                    "data" : "output.additionaldetailsComposite",
+                    "name" : "createadditionaldetails"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Credit facility saved successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "setSelected" : [ 
+                        "selected.generaldocumentlisting", 
+                        "selected.generaldetails", 
+                        "selected.syndicate"
+                    ],
+                    "data" : "output.createadditionaldetails",
+                    "name" : "generaldocumentlistingwcm",
+                    "appendMsg" : true,
+                    "showToaster" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "taskId" : "additionaldetailsComposite",
+    "object" : "65763e6b-eb05-4988-aec0-795988e62cc3"
+}

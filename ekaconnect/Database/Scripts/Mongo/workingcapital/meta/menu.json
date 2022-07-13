@@ -1,0 +1,32 @@
+{
+    "_id" : "menuObject_working_capital",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Transaction",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "Credit Facility",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "creditfacility",
+                                    "clearSelected" : [ 
+                                        "selected.creditfacility"
+                                    ],
+                                    "text" : "List All",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "type" : "menuObject"
+}

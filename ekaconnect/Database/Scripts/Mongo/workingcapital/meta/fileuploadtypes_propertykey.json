@@ -1,0 +1,26 @@
+{
+    "_id" : "fileuploadtypes_propertyKey",
+    "type" : "property",
+    "name" : "fileuploadTypes",
+    "label" : "Type",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Letter",
+            "value" : "Letter"
+        }, 
+        {
+            "key" : "Advice",
+            "value" : "Advice"
+        }, 
+        {
+            "key" : "Other",
+            "value" : "Other"
+        }
+    ],
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "description" : "Values available for document types"
+}

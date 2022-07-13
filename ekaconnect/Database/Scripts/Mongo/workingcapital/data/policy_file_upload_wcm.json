@@ -1,0 +1,24 @@
+{
+    "_id" : "policy_generalwcmdocumentupload",
+    "app_UUID" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "userGrants" : {},
+    "refType" : "object",
+    "refTypeId" : "8264dc75-eb72-48a7-bc61-bc71922d240f",
+    "name" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "tenantId" : "980qa",
+    "type" : "policy",
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW",
+                "DELETE"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "_id": "_EXT_CREATE_ORDER_PTA",
+    "componentType": "ExtSystemTask",
+    "objectAction": "CREATE",
+    "refType": "app",
+    "refTypeId": "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "type": "workflow",
+    "apiInfo": {
+        "path": "/collectionmapper/380a23ff-2ec1-42d2-b973-5af329899c6b/6eea529e-1562-49e1-8af7-bfb3651b856f/addToCollection",
+        "headers": {
+            "X-ObjectAction": "CREATE"
+        },
+        "inputMapping": {},
+        "method": "POST",
+        "useInputMapping": false,
+        "host": "${properties.eka_connect_host}",
+        "body": {}
+    },
+    "taskId": "_EXT_CREATE_ORDER",
+    "object": "6eea529e-1562-49e1-8af7-bfb3651b856f"
+}

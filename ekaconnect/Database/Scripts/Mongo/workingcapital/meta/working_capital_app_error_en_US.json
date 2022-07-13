@@ -1,0 +1,13 @@
+{
+    "_id" : "working_capital_app_error_en_US",
+    "title" : "Wroking Capital Management App Level Error",
+    "name" : "workingcapital",
+    "tenantID" : "",
+    "type" : "error",
+    "locale" : "en",
+	"004" : "%s is a mandatory field",
+    "022" : "Please enter values for all the mandatory fields",
+    "128" : "Please enter the %s",
+    "129" : "Please enter the %s in correct format",
+    "130" : "Please select the %s (mandatory)"
+}

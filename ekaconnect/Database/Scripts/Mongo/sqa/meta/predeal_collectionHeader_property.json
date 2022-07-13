@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5d7f2dcbea8a3b34e8378e04"),
+    "type" : "property",
+    "name" : "predeal_collectionHeader",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "Suppliers:String,density:String,price ($/mt):String,Prem:String,Naira/ltr:String,Exchange value:String,Qty_MT:String",
+    "length" : "1000"
+}

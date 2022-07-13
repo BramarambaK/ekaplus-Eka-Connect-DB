@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5d78bafafcd51cb94516131a"),
+    "type" : "property",
+    "name" : "pretrade_collectionHeader",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "name:String,age:Number,dob:Date",
+    "length" : "1000"
+}

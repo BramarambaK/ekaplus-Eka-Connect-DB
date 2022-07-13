@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_initial_deleteTranche",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "9ffaa19d-2444-437c-be99-b68c3d7e3fbf"
+    },
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "type" : "workflow",
+    "taskId" : "DELETE_TRANCHE_TASK",
+    "label" : "deleting tranche data",
+    "object" : "65763e6b-eb05-4988-aec0-795988e62cc3"
+}

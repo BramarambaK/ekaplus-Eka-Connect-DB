@@ -1,0 +1,18 @@
+{
+    "_id" : ObjectId("5d7f2e44ea8a3b34e8378e53"),
+    "type" : "property",
+    "name" : "predeal_collectionConnectMap",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : {
+        "Suppliers" : "Suppliers",
+        "density" : "density",
+        "price ($/mt)" : "price ($/mt)",
+        "Prem" : "Prem",
+        "Naira/ltr" : "Naira/ltr",
+        "Exchange value" : "Exchange value",
+        "Qty_MT" : "Qty MT"
+    },
+    "length" : "1000"
+}

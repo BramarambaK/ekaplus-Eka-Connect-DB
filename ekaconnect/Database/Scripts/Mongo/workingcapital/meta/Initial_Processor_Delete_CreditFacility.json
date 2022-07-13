@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_delete_creditfacility_WCM",
+    "componentType" : "ProcessTask",
+    "objectAction" : "DELETE",
+    "processorInfo" : {
+        "processorId" : "a23606b4-c8c0-43e7-aea9-4c9829fa253a"
+    },
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_CREDITFACILITY_PAGE",
+    "label" : "Delete using Processor",
+    "object" : "fcb3610e-e3e7-4481-98be-65faef33ca50"
+}

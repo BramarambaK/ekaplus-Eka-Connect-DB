@@ -1,0 +1,80 @@
+{
+    "_id" : "deleteWorkingCapital_CreditFacility",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-outline-dark custom-btn-liquidity-app-cancel",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creditfacility"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn-liquidity-app-confirm",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "DELETE",
+            "task" : "deleteCreditFacility",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Credit Facility deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Credit Facility deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deleteCreditFacility",
+                    "appendMsg" : true,
+                    "name" : "_ST_DELETE_CREDITFACILITY_PAGE"
+                }, 
+                {
+                    "name" : "creditfacility",
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CONFIRM",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creditfacility"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "label" : "Delete Credit Facility",
+    "labelKey" : "DELETE_OFFER",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Are you sure you want to Delete Credit Facility Ref. No. ${creditFacilityId}?",
+            "headerMessage" : "Confirmation"
+        }
+    },
+    "object" : "fcb3610e-e3e7-4481-98be-65faef33ca50",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "taskId" : "deleteCreditFacility",
+    "type" : "workflow"
+}

@@ -1,0 +1,338 @@
+{
+    "_id" : "additionalDetails_WCM",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "label" : "Additional Details | Trade Ref. No.: ${creditFacilityId}",
+    "workflowPayload" : "selected.additionaldetailsComposite.additionaldetails",
+    "type" : "workflow",
+    "layout" : {
+        "processorInfo" : {
+            "processorId" : "b484f2cf-4c12-4321-bf2b-ff892e3326bc"
+        },
+        "name" : "create",
+        "defaultFormItemStyle" : {
+            "dirtyBG" : "#fff",
+            "untouchedBG" : "#fff",
+            "validBG" : "#fff",
+            "invalidBG" : "#fff",
+            "color" : "#23282c",
+            "font" : "normal 15px 'Proxima Nova'",
+            "font-weight" : "600"
+        },
+        "header" : {
+            "title" : "New Facility"
+        },
+        "defaultFormLabelStyle" : {
+            "color" : "#23282c",
+            "font" : "normal 13px 'Proxima Nova'",
+            "font-weight" : "600"
+        },
+        "formStyle" : {
+            "padding" : "7px",
+            "margin" : "auto",
+            "max-width" : "100%"
+        },
+        "defaultFormValueStyle" : {
+            "color" : "#23282c",
+            "font" : "normal 15px 'Proxima Nova'",
+            "font-weight" : "600"
+        },
+        "type" : "row",
+        "cardClass" : "trm-form remove-body-border formlist-label wcmadditionaldetailsForm"
+    },
+    "processorInfo" : {
+        "processorId" : "59aa79bb-2986-4799-a2e9-d9516d6bcafe"
+    },
+    "decisions" : [ 
+        {
+            "decisionName" : "addSyndicate",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "setSyndicate",
+            "type" : "submit",
+            "individualCompositeTask" : true,
+            "additionalSelectedData" : {
+                "syndicate" : "selected.syndicate"
+            },
+            "outcomes" : [ 
+                {
+                    "name" : "setsyndicatedata",
+                    "data" : "output.additionaldetails"
+                }, 
+                {
+                    "popupClass" : "treasurymodal",
+                    "name" : "addsyndicatecompositewcm",
+                    "displayType" : "popup",
+                    "data" : "output.setsyndicatedata",
+                    "setSelected" : [ 
+                        "selected.addsyndicatecompositewcm.addsyndicatewcm"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "deleteTranchData",
+            "task" : "deleteTranchData",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "type" : "submit",
+            "individualCompositeTask" : true,
+            "additionalSelectedData" : {
+                "syndicate" : "selected.syndicate"
+            },
+            "outcomes" : [ 
+                {
+                    "name" : "DELETE_TRANCHE_TASK",
+                    "data" : "output.additionaldetails"
+                }, 
+                {
+                    "name" : "additionaldetails",
+                    "data" : "output.DELETE_TRANCHE_TASK",
+                    "setSelected" : [ 
+                        "selected.syndicate"
+                    ]
+                }
+            ]
+        }
+    ],
+    "labelKey" : "Additional Details",
+    "fields" : [ 
+        [ 
+            {
+                "key" : "resultAD",
+                "event" : "value=JSON.stringify(selectedData.generaldetails);",
+                "style" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "syndicated",
+                "event" : "value=JSON.stringify(selectedData.generaldetails.syndicated);",
+                "style" : {
+                    "display" : "none"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "formArrayIndex",
+                "style" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "creditFacilityId",
+                "style" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "fees",
+                "style" : {
+                    "display" : "flex",
+                    "flex-wrap" : "wrap"
+                },
+                "type" : "formarray",
+                "labelStyle" : {
+                    "color" : "#333333",
+                    "font" : "normal 16px 'Proxima Nova SemiBold'",
+                    "padding-bottom" : "13px"
+                },
+                "descriptionStyle" : {
+                    "margin" : "16px auto 32px",
+                    "color" : "#23282c",
+                    "font" : "normal 15px 'Proxima Nova'",
+                    "font-weight" : "600"
+                },
+                "addButton" : {
+                    "style" : {
+                        "border" : "none",
+                        "margin" : "0px",
+                        "padding" : "10px 0"
+                    },
+                    "label" : "+ Add more",
+                    "maxLength" : 10
+                },
+                "fields" : [ 
+                    {
+                        "style" : {
+                            "width" : "125px",
+                            "margin-right" : "2px",
+                            "font-weight" : "600"
+                        },
+                        "suffix" : "",
+                        "key" : "name"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "160px",
+                            "margin-right" : "2px"
+                        },
+                        "suffix" : "",
+                        "key" : "feeType"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "130px",
+                            "margin-right" : "2px"
+                        },
+                        "suffix" : "",
+                        "key" : "frequency",
+                        "defaultValue" : "return 'One time'"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "135px",
+                            "margin-right" : "2px"
+                        },
+                        "suffix" : "",
+                        "key" : "paymentStartDate",
+                        "defaultValue" : "return '${selected.generaldetails.effectiveDate}'"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "135px",
+                            "margin-right" : "2px"
+                        },
+                        "suffix" : "",
+                        "key" : "paymentEndDate1"
+                        
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "135px",
+                            "margin-right" : "2px"
+                        },
+                        "suffix" : "",
+                        "key" : "paymentEndDate",
+                        "defaultValue" : "return '${selected.generaldetails.maturityDate}'"
+                        
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "170px",
+                            "margin-right" : "2px"
+                        },
+                        "suffix" : "",
+                        "key" : "basis",
+                        "defaultValue" : "return 'Amount'"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "90px",
+                            "margin-right" : "0px"
+                        },
+                        "suffix" : "",
+                        "key" : "amount"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "70px",
+                            "margin-right" : "12px",
+                            "padding-left" : "0px"
+                        },
+                        "suffix" : "",
+                        "type1" : "readOnly",
+                        "key" : "currencyAmount",
+                        "defaultValue" : "return '${selected.generaldetails.limitCurrency}'"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "70px",
+                            "margin-right" : "12px",
+                            "padding-left" : "0px"
+                        },
+                        "suffix" : "",
+                        "key" : "currencyNotion",
+                        "defaultValue" : "return '${selected.generaldetails.limitCurrency}'"
+                    }
+                ]
+            }
+        ], 
+        [ 
+            {
+                "key" : "tranches",
+                "style" : {
+                    "display" : "flex",
+                    "flex-wrap" : "wrap"
+                },
+                "type" : "formarray",
+                "labelStyle" : {
+                    "color" : "#333333",
+                    "font" : "normal 16px 'Proxima Nova SemiBold'",
+                    "padding" : "21px 0 13px 0"
+                },
+                "descriptionStyle" : {
+                    "margin" : "16px auto 32px",
+                    "color" : "#23282c",
+                    "font" : "normal 15px 'Proxima Nova'",
+                    "font-weight" : "600"
+                },
+                "addButton" : {
+                    "style" : {
+                        "border" : "none",
+                        "margin" : "0px",
+                        "padding" : "10px 0"
+                    },
+                    "label" : "+ Add more",
+                    "maxLength" : 10
+                },
+                "deleteButton" : {
+                    "taskName" : "deleteTranchData"
+                },
+                "fields" : [ 
+                    {
+                        "style" : {
+                            "width" : "120px",
+                            "margin-top" : "10px",
+                            "margin-right" : "10px",
+                            "color" : "#23282c",
+                            "font" : "normal 15px 'Proxima Nova'",
+                            "font-weight" : "600"
+                        },
+                        "suffix" : "",
+                        "key" : "trancheName"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "110px",
+                            "margin-top" : "10px",
+                            "color" : "#23282c",
+                            "font" : "normal 15px 'Proxima Nova'"
+                        },
+                        "suffix" : "",
+                        "key" : "trancheAmount"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "70px",
+                            "margin-top" : "10px",
+                            "margin-right" : "24px",
+                            "color" : "#23282c",
+                            "font" : "normal 15px 'Proxima Nova'",
+                            "padding-left" : "0"
+                        },
+                        "suffix" : "",
+                        "key" : "trancheCurrency",
+                        "defaultValue" : "return '${selected.generaldetails.limitCurrency}'"
+                    }, 
+                    {
+                        "key" : "addSyndicate",
+                        "type" : "button",
+                        "label" : "Syndicate",
+                        "btnClass" : "btn btn-link-treasury p-0",
+                        "decision" : "addSyndicate",
+                        "value" : "Add",
+                        "displayLabel" : true
+                    }
+                ]
+            }
+        ]
+    ],
+    "taskId" : "additionaldetails",
+    "object" : "65763e6b-eb05-4988-aec0-795988e62cc3"
+}

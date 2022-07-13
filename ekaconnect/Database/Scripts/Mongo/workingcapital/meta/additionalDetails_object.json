@@ -1,0 +1,226 @@
+{
+    "_id" : "additionalDetails_object",
+    "sys__UUID" : "65763e6b-eb05-4988-aec0-795988e62cc3",
+    "name" : "additionalDetails_object",
+    "label" : "Additional Details",
+    "type" : "object",
+    "version" : "1",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [],
+    "fields" : {
+        "fees" : {
+            "fees" : "Fee",
+            "labelKey" : "fees",
+            "type" : "formarray",
+            "isRequired" : false,
+            "dataType" : "formarray"
+        },
+        "name" : {
+            "name" : "Name",
+            "labelKey" : "name",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "feeType" : {
+            "feeType" : "Type",
+            "labelKey" : "feeType",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String",
+            "propertyKey" : "feeType"
+        },
+        "frequency" : {
+            "frequency" : "Frequency",
+            "labelKey" : "frequency",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String",
+            "propertyKey" : "frequency",
+            "children" : [ 
+                "paymentStartDate", 
+                "paymentEndDate", 
+                "paymentEndDate1"
+            ]
+        },
+        "paymentStartDate" : {
+            "paymentStartDate" : "Payment Start Date",
+            "labelKey" : "paymentStartDate",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "date",
+            "format" : "yyyy-MM-dd",
+            "class" : "treasury-date",
+            "readonlyInput" : true,
+            "yearNavigator" : true,
+            "monthNavigator" : true,
+            "yearRange" : "2000:2030",
+            "showButtonBar" : true
+        },
+        "paymentEndDate1" : {
+            "paymentEndDate1" : "Payment End Date",
+            "labelKey" : "paymentEndDate1",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "date",
+            "format" : "yyyy-MM-dd",
+            "class" : "treasury-date disable-treasury-date",
+            "readonlyInput" : true,
+            "UIupdates" : {
+                "visibility" : "return ('${item.frequency}' == 'One time' ) ? true : false"
+            }
+        },
+        "paymentEndDate" : {
+            "paymentEndDate" : "Payment End Date",
+            "labelKey" : "paymentEndDate",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "date",
+            "format" : "yyyy-MM-dd",
+            "class" : "treasury-date",
+            "readonlyInput" : true,
+            "UIupdates" : {
+                "visibility" : "return ('${item.frequency}' == 'One time' ) ? false : true"
+            },
+            "yearNavigator" : true,
+            "monthNavigator" : true,
+            "yearRange" : "2000:2030",
+            "showButtonBar" : true
+        },
+        "currencyNotion" : {
+            "labelKey" : "currencyNotion",
+            "currencyNotion" : "",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currencyNotion",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return ('${item.basis}' == 'Percent of Notional' ) ? true : false"
+            }
+        },
+        "currencyAmount" : {
+            "labelKey" : "currencyAmount",
+            "currencyAmount" : "",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currency",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return ('${item.basis}' != 'Percent of Notional' ) ? true : false"
+            }
+        },
+        "currencyhidden" : {
+            "labelKey" : "currencyhidden",
+            "currencyhidden" : "",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currencyhidden",
+            "dataType" : "String"
+        },
+        "basis" : {
+            "basis" : "Basis",
+            "labelKey" : "basis",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String",
+            "propertyKey" : "basis",
+            "children" : [ 
+                "currencyNotion", 
+                "currencyAmount", 
+                "amount"
+            ]
+        },
+        "amount" : {
+            "amount" : "Amount/Rate",
+            "labelKey" : "amount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "validationRegex" : "^\\d+\\.?\\d{0,2}$"
+        },
+        "tranches" : {
+            "tranches" : "Tranche",
+            "labelKey" : "tranches",
+            "type" : "formarray",
+            "isRequired" : false,
+            "dataType" : "formarray"
+        },
+        "trancheName" : {
+            "trancheName" : "Tranche Name",
+            "labelKey" : "trancheName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "trancheAmount" : {
+            "trancheAmount" : "Tranche Amount",
+            "labelKey" : "trancheAmount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "validationRegex" : "^\\d+\\.?\\d{0,2}$"
+        },
+        "trancheCurrency" : {
+            "labelKey" : "trancheCurrency",
+            "trancheCurrency" : "",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "currency",
+            "dataType" : "String",
+            "children" : [ 
+                "addSyndicate"
+            ]
+        },
+        "formArrayIndex" : {
+            "formArrayIndex" : "",
+            "labelKey" : "formArrayIndex",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "syndicated" : {
+            "syndicated" : "",
+            "labelKey" : "syndicated",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "creditFacilityId" : {
+            "creditFacilityId" : "",
+            "labelKey" : "creditFacilityId",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "addSyndicate" : {
+            "addSyndicate" : "Add Syndicate",
+            "labelKey" : "addSyndicate",
+            "type" : "button",
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "if(${syndicated}){return true}else {return false}"
+            }
+        },
+        "removeTranche" : {
+            "removeTranche" : "Remove Tranche",
+            "labelKey" : "removeTranche",
+            "type" : "button",
+            "isRequired" : false
+        },
+        "action" : {
+            "labelKey" : "action",
+            "action" : "Action"
+        },
+        "resultAD" : {
+            "resultAD" : "",
+            "labelKey" : "resultAD",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    }
+}

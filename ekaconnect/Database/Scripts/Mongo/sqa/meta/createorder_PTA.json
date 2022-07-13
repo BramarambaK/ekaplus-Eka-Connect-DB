@@ -1,0 +1,181 @@
+{
+    "_id" : "createorder_PTA",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "label" : "New Deal",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "column"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "createorder",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output.createorder",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_ORDER"
+                }, 
+                {
+                    "data" : "output.createorder",
+                    "name" : "_ST_PROCESSOR_CREATE_PRE_ORDER"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output._ST_PROCESSOR_CREATE_PRE_ORDER",
+                    "appendMsg" : true,
+                    "name" : "_EXT_CREATE_ORDER"
+                }, 
+                {
+                    "data" : "output.createorder",
+                    "name" : "listing",
+                    "showPopUp" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "CREATE_NEW_ORDER",
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "key" : "Suppliers"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "density"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "price ($/mt)"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "Prem"
+            },
+            {
+                "suffix" : "",
+                "key" : "Naira/ltr"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "Exchange value"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "Qty MT"
+            }, 
+            {
+                "disabled" : "true",
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "value" : "Pre Trade Collection",
+                "key" : "collectionName"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "collectionHeaderProperty",
+                "type" : "hidden",
+                "value" : "predeal_collectionHeader",
+                "disabled" : "true",
+                "style" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "key" : "collectionConnectMapProperty",
+                "type" : "hidden",
+                "value" : "predeal_collectionConnectMap",
+                "disabled" : "true",
+                "style" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "disabled" : "true",
+                "suffix" : "",
+                "key" : "platformTemplateId",
+                "type" : "hidden",
+                "value" : "",
+                "style" : {
+                    "display" : "none"
+                }
+            }
+        ]
+    ],
+    "taskId" : "createorder",
+    "object" : "6eea529e-1562-49e1-8af7-bfb3651b856f"
+}

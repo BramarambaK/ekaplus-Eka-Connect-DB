@@ -1,0 +1,22 @@
+{
+  "_id": "basis_propertyKey",
+  "type": "property",
+  "name": "basis",
+  "label": "Type",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Amount",
+      "value": "Amount"
+    },
+    {
+      "key": "Percent of Notional",
+      "value": "Percent of Notional"
+    }
+  ],
+  "refTypeId": "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+  "description": "Values available for Basis"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_DOCUMENT_WCM",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_DOCUMENT_WCM",
+    "object" : "70f9bf5f-03aa-4bf4-96dc-c938110396aa"
+}

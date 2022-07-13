@@ -1,0 +1,15 @@
+{
+    "_id" : "home_PTA",
+    "layout" : {
+        "name" : "list"
+    },
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "workflow" : "listing",
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "decisions" : [],
+    "type" : "workflow",
+    "taskId" : "home",
+    "object" : "bd145a34-cb6c-400a-ab84-5ebf74c3222e"
+}

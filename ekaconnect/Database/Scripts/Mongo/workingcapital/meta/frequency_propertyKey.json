@@ -1,0 +1,34 @@
+{
+  "_id": "frequency_propertyKey",
+  "type": "property",
+  "name": "frequency",
+  "label": "Type",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "One time",
+      "value": "One time"
+    },
+    {
+      "key": "Monthly",
+      "value": "Monthly"
+    },
+    {
+      "key": "Quarterly",
+      "value": "Quarterly"
+    },
+    {
+      "key": "Semi-Annual",
+      "value": "Semi-Annual"
+    },
+    {
+      "key": "Annual",
+      "value": "Annual"
+    }
+  ],
+  "refTypeId": "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+  "description": "Values available for Frequency"
+}

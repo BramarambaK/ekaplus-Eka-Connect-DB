@@ -1,0 +1,21 @@
+{
+    "_id" : "_EXT_DELETE_ORDER_PTA",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "type" : "workflow",
+    "apiInfo" : {
+        "path" : "/app/e621d081-85cb-4951-adea-49b88d7f4ab0/8ca20157-5616-41ec-9fb5-fe8a733c948b/cancel",
+        "headers" : {
+            "X-ObjectAction" : "CREATE"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "useInputMapping" : false,
+        "host" : "${eka_connect_host}",
+        "body" : {}
+    },
+    "taskId" : "_EXT_DELETE_ORDER",
+    "object" : "bd145a34-cb6c-400a-ab84-5ebf74c3222e"
+}

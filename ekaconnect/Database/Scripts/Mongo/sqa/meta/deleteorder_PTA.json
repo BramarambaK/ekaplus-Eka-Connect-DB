@@ -1,0 +1,78 @@
+{
+    "_id" : "deleteorder_PTA",
+    "componentType" : "UserTask",
+    "objectAction" : "DELETE",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "label" : "Delete Order",
+    "type" : "workflow",
+    "apiInfo" : {
+        "responseDataKey" : ""
+    },
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to cancel ${name}?",
+            "headerMessage" : "Cancel : ${name}"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "deleteorder",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Order got deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deleteorder",
+                    "appendMsg" : true,
+                    "name" : "_EXT_DELETE_ORDER"
+                }, 
+                {
+                    "name" : "listing",
+                    "showPopUp" : "true"
+                }
+            ],
+            "label" : "Delete",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "Delete_Order",
+    "fields" : [ 
+        {
+            "heading" : "name"
+        }
+    ],
+    "taskId" : "deleteorder",
+    "object" : "bd145a34-cb6c-400a-ab84-5ebf74c3222e"
+}

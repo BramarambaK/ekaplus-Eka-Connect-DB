@@ -1,0 +1,34 @@
+{
+  "_id": "feetype_propertyKey",
+  "type": "property",
+  "name": "feeType",
+  "label": "Type",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Commitment Fee",
+      "value": "Commitment Fee"
+    },
+    {
+      "key": " Utilization Fee",
+      "value": " Utilization Fee"
+    },
+    {
+      "key": "Origination Fee",
+      "value": "Origination Fee"
+    },
+    {
+      "key": "Overdraft Fee",
+      "value": "Overdraft Fee"
+    },
+    {
+      "key": "Other Fee",
+      "value": "Other Fee"
+    }
+  ],
+  "refTypeId": "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+  "description": "Values available for Fee Type"
+}

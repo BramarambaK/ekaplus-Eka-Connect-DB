@@ -1,0 +1,278 @@
+{
+  "_id" : "generalDetails_WCM",
+  "componentType" : "UserTask",
+  "objectAction" : "READ",
+  "getDataFromExternalAPI" : false,
+  "refType" : "app",
+  "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+  "label" : "General Details | Trade Ref. No.: ${creditFacilityId}",
+  "type" : "workflow",
+  "workflowPayload" : "selected.generaldetails",
+  "layout" : {
+      "defaultFormItemStyle1" : {
+          "dirtyBG" : "#fff",
+          "untouchedBG" : "#fff",
+          "validBG" : "#fff",
+          "invalidBG" : "#fff",
+          "color" : "#5D646F",
+          "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+      },
+      "defaultFormLabelStyle1" : {
+          "color" : "#3B4047",
+          "margin-bottom" : "7px",
+          "font" : "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+      },
+      "menu" : true,
+      "header" : {
+          "headerExpression" : "if('${creditfacility}' && '${creditfacility.operations}') {return 'Edit Facility'} else {return 'New Facility'}"
+      },
+      "name" : "create",
+      "formStyle" : {
+          "padding" : "7px",
+          "margin" : "auto",
+          "max-width" : "100%"
+      },
+      "defaultFormValueStyle1" : {
+          "color" : "#5D646F",
+          "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+      },
+      "type" : "row",
+      "cardClass" : "trm-form striped-rows",
+      "processorInfo" : {
+          "processorId" : "f7d5ebac-3cc6-4e47-88db-2151693c203e"
+      }
+  },
+  "decisions" : [ 
+      {
+          "objectAction" : "READ",
+          "outcomes" : [ 
+              {
+                  "name" : "generaldetails",
+                  "data" : "selected.generaldetails"
+              }
+          ],
+          "label" : "General Details",
+          "position" : "leftMenu",
+          "disabled" : false
+      }, 
+      {
+          "objectAction" : "READ",
+          "outcomes" : [ 
+              {
+                  "name" : "additionaldetailsComposite",
+                  "data" : "selected.additionaldetailsComposite.additionaldetails"
+              }
+          ],
+          "label" : "Additional Details",
+          "position" : "leftMenu",
+          "disabled" : false
+      }, 
+      {
+          "objectAction" : "READ",
+          "outcomes" : [ 
+              {
+                  "name" : "generaldocumentlistingwcm",
+                  "data" : "selected.generaldocumentlisting",
+                  "setSelected" : [ 
+                      "selected.generaldocumentlisting"
+                  ]
+              }
+          ],
+          "label" : "Document Upload",
+          "position" : "leftMenu",
+          "disabled" : false
+      }, 
+      {
+          "btnClass" : "btn btn-outline-dark treasury-btn",
+          "objectAction" : "READ",
+          "style" : {
+              "margin-right" : "auto"
+          },
+          "outcomes" : [ 
+              {
+                  "name" : "creditfacility"
+              }
+          ],
+          "label" : "CANCEL",
+          "position" : "bottom"
+      }, 
+      {
+          "btnClass" : "btn-primary treasury-btn",
+          "objectAction" : "UPDATE",
+          "labelkey" : "UPDATE",
+          "task" : "generaldetails",
+          "type" : "submit",
+          "outcomes" : [ 
+              {
+                  "data" : "output.generaldetails",
+                  "name" : "_ST_VALIDATE_GENERALDETAILS",
+                  "appendMsg" : false
+              }, 
+              {
+                  "data" : "output.generaldetails",
+                  "result" : {
+                      "success" : {
+                          "message" : "Status"
+                      },
+                      "failure" : {
+                          "message" : "Status"
+                      },
+                      "successWithWarning" : {
+                          "message" : ""
+                      }
+                  },
+                  "name" : "creategeneraldetails",
+                  "appendMsg" : false
+              }, 
+              {
+                  "result" : {
+                      "success" : {
+                          "message" : "Credit facility saved successfully"
+                      },
+                      "failure" : {
+                          "message" : "Please fix errors "
+                      },
+                      "successWithWarning" : {
+                          "message" : "data got replaced with some errors"
+                      }
+                  },
+                  "setSelected" : [ 
+                    "selected.additionaldetailsComposite", 
+                    "selected.generaldocumentlisting", 
+                    "selected.syndicate"
+                  ],
+                  "appendMsg" : true,
+                  "name" : "additionaldetailsComposite",
+                  "data" : "output.creategeneraldetails",
+                  "showToaster" : true
+              }
+          ],
+          "label" : "SAVE",
+          "position" : "bottom"
+      }
+  ],
+  "labelKey" : "Additional Details",
+  "fields" : [ 
+      [ 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "approvalDate",
+              "value" : "currentDate"
+          }, 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "legalEntity"
+          }, 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "profitCenter"
+          }, 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "maturityDate"
+          }
+      ], 
+      [ 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "effectiveDate",
+              "value" : "currentDate"
+          }, 
+          {
+              "style" : {
+                  "width" : "150px",
+                  "margin-right" : "0px"
+              },
+              "suffix" : "",
+              "key" : "limitAmount"
+          }, 
+          {
+              "style" : {
+                  "width" : "70px"
+              },
+              "key" : "limitCurrency",
+              "formLabelStyle" : {
+                  "opacity" : "0"
+              }
+          }, 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "bankName",
+              "type" : "textbox"
+          }, 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "bankAccount",
+              "type" : "textbox"
+          }, 
+          {
+              "key" : "bankId",
+              "type" : "textbox",
+              "formItemStyle" : {
+                  "display" : "none"
+              }
+          }, 
+          {
+              "key" : "currencyhidden",
+              "type" : "textbox",
+              "event" : "data.currency =  {value:value,disable:true}",
+              "formItemStyle" : {
+                  "display" : "none"
+              }
+          }, 
+          {
+              "key" : "creditFacilityId",
+              "type" : "textbox",
+              "formItemStyle" : {
+                  "display" : "none"
+              }
+          }
+      ], 
+      [ 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "syndicated"
+          }, 
+          {
+              "style" : {
+                  "width" : "220px"
+              },
+              "suffix" : "",
+              "key" : "revolving"
+          }, 
+          {
+              "style" : {
+                  "width" : "460px"
+              },
+              "suffix" : "",
+              "key" : "remarks"
+          }
+      ]
+  ],
+  "taskId" : "generaldetails",
+  "object" : "96dda70f-7afe-4179-aa4e-764f924fef17"
+}

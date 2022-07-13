@@ -1,0 +1,115 @@
+{
+    "_id" : "testlisting_PTA",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : true,
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "label" : "Test List",
+    "type" : "workflow",
+    "refreshData" : true,
+    "apiInfo" : {
+        "path" : "/collection/v1?collectionName=Test List",
+        "headers" : {},
+        "inputMapping" : {},
+        "method" : "GET",
+        "useInputMapping" : false,
+        "host" : "${platform_url}",
+        "body" : {}
+    },
+    "layout" : {
+        "selection" : "row",
+        "selectionMode" : "single",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "refreshData" : {
+            "time" : 30000
+        },
+        "dropdownDecisions" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.testlisting",
+                    "popupClass" : "edit-modal700px",
+                    "name" : "testeditorder"
+                }
+            ],
+            "label" : "EDIT ORDER",
+            "iconClass" : "fa fa-edit"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.testlisting",
+                    "name" : "testdeleteorder"
+                }
+            ],
+            "label" : "DELETE ORDER",
+            "iconClass" : "fa fa-trash-o fa-fw"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "popupClass" : "edit-modal700px",
+                    "name" : "testcreateorder",
+                    "displayType" : "popup",
+                    "data" : "selected.testcreateorder"
+                }
+            ],
+            "label" : "CREATE ORDER",
+            "iconClass" : "fa fa-plus"
+        }
+    ],
+    "labelKey" : "TEST LISTING",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "name"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "age"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "dob",
+            "dateformat" : "DD MMM YYYY"
+        }
+    ],
+    "taskId" : "testlisting",
+    "object" : "bd145a34-cb6c-400a-ab84-5ebf74c3222e"
+}

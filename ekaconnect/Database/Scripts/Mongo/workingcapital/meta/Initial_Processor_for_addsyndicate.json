@@ -1,0 +1,9 @@
+{
+    "_id" : "Initial_Processor_for_addsyndicate",
+    "name" : "Initial_Processor_for_addsyndicate",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "snippet" : "let formArrayIndex = req.body.formArrayIndex;\r\n function Syndicate(){\r\n    this.syndicateName = '';\r\n    this.remark = '';\r\n    this.bankMemberships = [{'bankName': '', 'membership': ''}]\r\n  }\r\n  if(req.body.tranches[formArrayIndex].trancheName){\r\n  let syndicates = req.body.syndicate && req.body.syndicate.syndicate;\r\n  console.log(syndicates);\r\n  if(syndicates && syndicates[formArrayIndex]) {\r\n    let syndicate = syndicates[formArrayIndex];\r\n     res.status(200).send({...syndicate, 'formIndex' :formArrayIndex});\r\n    }else {\r\n      res.status(200).send({...new Syndicate(),'formIndex' :formArrayIndex});\r\n    }\r\n   \r\n  } else{\r\n      res.status(400).send('Kindly enter Tranche Name     before configuring Syndicate')\r\n  }",
+    "sys__UUID" : "b6413c24-1436-4280-8cf0-7f5ce2b5ee92"
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "menuObject_sqa_Mobile",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "380a23ff-2ec1-42d2-b973-5af329899c6b",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "handler": "/app/sqa/listing",
+              "text": "Pre Deal List",
+              "iconCls": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deviceType" : "mobile"
+}

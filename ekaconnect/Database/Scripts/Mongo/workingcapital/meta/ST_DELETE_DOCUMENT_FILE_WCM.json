@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_DELETE_DOCUMENT_WCM",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_DOCUMENT",
+    "object" : "8264dc75-eb72-48a7-bc61-bc71922d240f"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "DOCUMENT_UPLOAD_VALIDATE_WCM",
+    "componentType" : "ValidateTask",
+    "object" : "2b28674d-c7ba-4661-ae32-f9b86d8c1007",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "taskId" : "DOCUMENT_UPLOAD_VALIDATE_WCM",
+    "type" : "workflow"
+}

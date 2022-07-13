@@ -1,0 +1,62 @@
+{
+    "_id" : "addsyndicatewcm_object",
+    "sys__UUID" : "0703e606-1286-4f67-9191-bad3d04c397f",
+    "name" : "addsyndicatewcm_object",
+    "label" : "Add Syndicate",
+    "type" : "object",
+    "version" : "1",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [],
+    "fields" : {
+        "syndicateName" : {
+            "syndicateName" : "Syndicate Name",
+            "labelKey" : "syndicateName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "remark" : {
+            "remark" : "Remark",
+            "labelKey" : "remark",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "bankMemberships" : {
+            "bankMemberships" : "",
+            "labelKey" : "bankMemberships",
+            "type" : "formarray",
+            "isRequired" : false,
+            "dataType" : "formarray"
+        },
+        "bankName" : {
+            "labelKey" : "bankName",
+            "bankName" : "Bank Name",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "serviceKey" : "bankName",
+            "dataType" : "String"
+        },
+        "membership" : {
+            "membership" : "Membership %",
+            "labelKey" : "membership",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "validationRegex" : "^\\d+\\.?\\d{0,2}$"
+        },
+        "formIndex" : {
+            "formIndex" : "",
+            "labelKey" : "formIndex",
+            "type" : "textbox",
+            "isRequired" : false
+        }
+    }
+}

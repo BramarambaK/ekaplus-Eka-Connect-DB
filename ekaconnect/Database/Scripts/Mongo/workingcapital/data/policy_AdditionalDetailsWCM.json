@@ -1,0 +1,15 @@
+{
+  "_id": "policy_AdditionalDetailsWCM",
+  "type": "policy",
+  "app_UUID": "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+  "refType": "object",
+  "refTypeId": "65763e6b-eb05-4988-aec0-795988e62cc3",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

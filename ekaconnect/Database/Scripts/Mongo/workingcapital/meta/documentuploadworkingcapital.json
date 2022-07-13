@@ -1,0 +1,294 @@
+{
+    "_id" : "documentuploadworkingcapital",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "getDataFromExternalAPI" : true,
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "label" : "Document Upload",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "menu" : true,
+        "formStyle" : {},
+        "header" : {
+            "title" : "New Contract"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "cardClass" : "trm-form trm-div-listing remove-body-border document-upload"
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldetails",
+                    "data" : "selected.generaldetails",
+                    "resetForm" : true
+                }
+            ],
+            "label" : "General Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "additionaldetails",
+                    "data" : "selected.additionaldetails",
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Additional Details",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "documentupload",
+                    "data" : "selected.documentupload",
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Document Upload",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creditfacility",
+                    "resetForm" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "DOCUMENT_UPLOAD_VALIDATE_WCM",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "File uploaded successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.documentuploadwcm",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_DOCUMENT_WCM"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_DOCUMENT_WCM",
+                    "name" : "creditfacility",
+                    "showToaster" : true,
+                    "resetForm" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "editdocumentlisting",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "File uploaded successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "File uploaded with some errors"
+                        }
+                    },
+                    "data" : "output.documentuploadwcm",
+                    "appendMsg" : true,
+                    "name" : "DOCUMENT_UPLOAD_VALIDATE_WCM"
+                }
+            ],
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creditfacility",
+                    "resetForm" : true
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "DOCUMENT_UPLOAD",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "130px",
+                    "margin-right" : "30px"
+                },
+                "suffix" : "",
+                "key" : "types"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "suffix" : "",
+                "key" : "file"
+            },{
+                "style" : {
+                    "width" : "130px",
+                    "margin-right" : "30px"
+                },
+                "key" : "uploadedDate"
+            }, 
+            {
+                "style" : {
+                    "width" : "360px"
+                },
+                "suffix" : "",
+                "key" : "layoutdescription"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "actionId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGmrRefNo"
+            },  
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalGmrRefNo"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "refObject"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "refObjectId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "otherAttributes"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "fileName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "fileName"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "downloadUri"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "id"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "size"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "uploadedBy"
+            }, 
+            
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "documentId"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "name"
+            }, 
+            {
+                "type" : "hidden",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalRefNo"
+            }
+        ]
+    ],
+    "taskId" : "documentuploadwcm",
+    "object" : "70f9bf5f-03aa-4bf4-96dc-c938110396aa"
+}

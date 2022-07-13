@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_CREATE_PRE_ORDER_PTA",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "29e174df-c951-4738-abd5-71efdf7a7d9e"
+    },
+    "refType" : "app",
+    "refTypeId" : "380a23ff-2ec1-42d2-b973-5af329899c6b",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_CREATE_PRE_ORDER",
+    "object" : "6eea529e-1562-49e1-8af7-bfb3651b856f"
+}

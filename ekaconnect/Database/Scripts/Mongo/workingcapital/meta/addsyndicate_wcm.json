@@ -1,0 +1,169 @@
+{
+    "_id" : "addsyndicate_wcm",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "additionaldetailsComposite",
+                    "clearSelected" : [ 
+                        "selected.addsyndicatecompositewcm"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-primary treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "savesyndicate",
+            "additionalSelectedData" : {
+                "syndicate" : "selected.syndicate"
+            },
+            "outcomes" : [ 
+                {
+                    "name" : "_SAVE_SYNDICATE_DATA_",
+                    "data" : "output.addsyndicatewcm"
+                }, 
+                {
+                    "name" : "additionaldetailsComposite",
+                    "data" : "output._SAVE_SYNDICATE_DATA_",
+                    "setSelected" : [ 
+                        "selected.syndicate"
+                    ],
+                    "clearSelected" : [ 
+                        "selected.addsyndicatecompositewcm"
+                    ]
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "additionaldetailsComposite",
+                    "clearSelected" : [ 
+                        "selected.addsyndicatecompositewcm"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "key" : "formIndex",
+                "style" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "key" : "syndicateName",
+                "style" : {
+                    "width" : "180px"
+                }
+            }, 
+            {
+                "suffix" : "",
+                "key" : "remark",
+                "style" : {
+                    "width" : "360px",
+                    "margin-left" : "50px"
+                }
+            }, 
+            {
+                "key" : "bankMemberships",
+                "type" : "formarray",
+                "labelStyle" : {
+                    "color" : "#333333",
+                    "font" : "normal 16px 'Proxima Nova SemiBold'",
+                    "padding-bottom" : "0px"
+                },
+                "descriptionStyle" : {
+                    "margin" : "16px auto 32px",
+                    "color" : "#23282c",
+                    "font" : "normal 15px 'Proxima Nova'",
+                    "font-weight" : "600"
+                },
+                "addButton" : {
+                    "style" : {
+                        "border" : "none",
+                        "margin" : "0px",
+                        "padding" : "10px 0"
+                    },
+                    "label" : "+ Add more",
+                    "maxLength" : 10
+                },
+                "fields" : [ 
+                    {
+                        "style" : {
+                            "width" : "190px"
+                        },
+                        "suffix" : "",
+                        "key" : "bankName"
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "110px",
+                            "margin-left" : "40px",
+                            "margin-right" : "210px"
+                        },
+                        "suffix" : "",
+                        "key" : "membership"
+                    }
+                ]
+            }
+        ]
+    ],
+    "label" : "Add Syndicate",
+    "labelKey" : "ADD_SYNDICATE",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "dirtyBG" : "#fff",
+            "untouchedBG" : "#fff",
+            "validBG" : "#fff",
+            "invalidBG" : "#fff",
+            "color" : "#23282c",
+            "font" : "normal 15px 'Proxima Nova'",
+            "font-weight" : "600"
+        },
+        "defaultFormLabelStyle" : {
+            "color" : "#23282c",
+            "font" : "normal 13px 'Proxima Nova'",
+            "font-weight" : "600",
+            "padding-bottom" : "5px"
+        },
+        "name" : "create",
+        "defaultFormValueStyle" : {
+            "color" : "#23282c",
+            "font" : "normal 15px 'Proxima Nova'",
+            "font-weight" : "600"
+        },
+        "type" : "row",
+        "cardClass" : "syndicate-form syndicate-div-listing remove-body-border",
+        "processorInfo" : {
+            "processorId" : "1d5dc4b9-7800-4309-9ec0-ffed765b64f6"
+        }
+    },
+    "object" : "0703e606-1286-4f67-9191-bad3d04c397f",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "taskId" : "addsyndicatewcm",
+    "type" : "workflow"
+}

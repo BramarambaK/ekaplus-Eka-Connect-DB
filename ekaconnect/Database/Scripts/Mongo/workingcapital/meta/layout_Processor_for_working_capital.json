@@ -1,0 +1,10 @@
+{
+    "_id" : "layout_Processor_for_working_capital",
+    "name" : "layout_Processor_for_working_capital",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "snippet" : "var moment = require('moment');\r\nlet flow = req.body.flow;\r\n flow.creditfacility.decisions = flow.creditfacility.decisions.map(decision=>{\r\n     if(decision.label ==='Unselected'){\r\n         decision.label = moment(new Date()).format('DD-MMM-YYYY')+ ' '+'to'+' ' +moment(new Date()).format('DD-MMM-YYYY')\r\n         return decision\r\n     }\r\n     else return decision\r\n })\r\n  res.status(200).send( {\r\n    appId: req.body.appId,\r\n    flow: flow,\r\n    object: req.body.object,\r\n    objectMeta: req.body.objectMeta,\r\n    properties: req.body.properties\r\n  });\r\n",
+    "sys__UUID" : "0496ee82-1fef-4e31-9ff4-fe23f95aed95",
+    "sys__createdBy" : "jay"
+}

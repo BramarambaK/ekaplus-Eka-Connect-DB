@@ -1,0 +1,217 @@
+{
+    "_id" : "generaldocumentlisting_WCM",
+    "componentType" : "UserTask",
+    "label" : "Document Upload",
+    "payLoad" : "selected.generaldocumentlisting",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "uploadpopupcss",
+                    "name" : "generaldocumentuploadwcm"
+                }
+            ],
+            "label" : "Add Document",
+            "position" : "header",
+            "disabled" : "!selected.generaldocumentlisting.creditFacilityId"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EDIT_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.generaldocumentlistingwcm",
+                    "name" : "generaldocumentdownloadwcm",
+                    "headers" : {
+                        "storageType" : "awsS3",
+                        "folderInS3" : "creditFacilityDocs"
+                    },
+                    "forceDownload" : true,
+                    "type" : "downloadLink"
+                }
+            ],
+            "label" : "Download",
+            "iconClass" : "download-icon"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.generaldocumentlistingwcm",
+                    "name" : "generaldocumentdeletewcm",
+                    "displayType" : "popup",
+                    "popupClass" : "uploadpopupcss"
+                }
+            ],
+            "label" : "Delete",
+            "iconClass" : "delete-icon"
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldetails",
+                    "data" : "selected.generaldetails"
+                }
+            ],
+            "label" : "General Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "additionaldetailsComposite",
+                    "data" : "selected.additionaldetailsComposite.additiondetails"
+                }
+            ],
+            "label" : "Additional Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "generaldocumentlistingwcm",
+                    "data" : "selected.generaldocumentlisting"
+                }
+            ],
+            "label" : "Document Upload",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "READ",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "outcomes" : [ 
+                {
+                    "name" : "creditfacility"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Ref. No.",
+            "sort" : false,
+            "key" : "creditFacilityId",
+            "width" : "13%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "File",
+            "sort" : true,
+            "key" : "fileName",
+            "width" : "13%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Document Name",
+            "sort" : true,
+            "key" : "documentName",
+            "width" : "13%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Document Type",
+            "sort" : true,
+            "key" : "types",
+            "width" : "13%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Document Date",
+            "sort" : true,
+            "key" : "documentDate",
+            "dateformat" : "DD-MMM-YYYY",
+            "width" : "13%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Description",
+            "sort" : true,
+            "key" : "layoutdescription",
+            "width" : "13%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Uploaded By",
+            "sort" : true,
+            "key" : "uploadedBy",
+            "width" : "13%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Uploaded Date",
+            "sort" : true,
+            "key" : "sys__createdOn",
+            "dateformat" : "DD-MMM-YYYY",
+            "width" : "13%"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "layout" : {
+        "footer" : false,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : false,
+        "menu" : true,
+        "refreshData" : true,
+        "showErrorInPopUp" : {
+            "navigateURL" : "creditfacility",
+            "buttonLabel" : "Update Later"
+        },
+        "header" : {
+            "headerExpression" : "if('${creditfacility}' && '${creditfacility.operations}') {return 'Edit Facility'} else {return 'New Facility'}"
+        },
+        "preserveSelectedData" : true
+    },
+    "object" : "8264dc75-eb72-48a7-bc61-bc71922d240f",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "rows" : "100",
+    "processorInfo" : {
+        "processorId" : "106c85dc-d69a-457a-aa72-2932fd2b680d"
+    },
+    "taskId" : "generaldocumentlistingwcm",
+    "theme" : "theme-grid-light",
+    "type" : "workflow"
+}

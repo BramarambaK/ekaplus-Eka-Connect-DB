@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_initial_addsyndicate",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "b6413c24-1436-4280-8cf0-7f5ce2b5ee92"
+    },
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "type" : "workflow",
+    "taskId" : "setsyndicatedata",
+    "label" : "Setting Syndicate Data",
+    "object" : "65763e6b-eb05-4988-aec0-795988e62cc3"
+}

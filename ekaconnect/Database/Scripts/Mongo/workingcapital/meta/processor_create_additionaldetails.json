@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_create_additionaldetails",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "8bffae0a-c015-4b5b-980b-8d4d4548b83b"
+    },
+    "refType" : "app",
+    "refTypeId" : "e5b9fc05-22a9-4755-9cbc-c8598ab61ec2",
+    "type" : "workflow",
+    "taskId" : "createadditionaldetails",
+    "label" : "Save using Processor",
+    "object" : "65763e6b-eb05-4988-aec0-795988e62cc3"
+}
