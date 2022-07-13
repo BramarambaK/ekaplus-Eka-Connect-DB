@@ -1,0 +1,12 @@
+{
+    "_id" : "skipDuplicateRecordsCheck",
+    "type" : "property",
+    "label" : "Skip duplicate Records check before save",
+    "name" : "skipDuplicateRecordsCheck",
+    "propertyLevel" : "tenant",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "editSupportedInUI" : true,
+    "defaultValue" : false
+}

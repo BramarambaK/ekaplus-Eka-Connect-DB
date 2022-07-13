@@ -1,0 +1,12 @@
+{
+    "_id" : "connect_platform_scheduler_config",
+    "type" : "property",
+    "name" : "connect_platform_scheduler_config",
+    "label" : "Workflow Platform Scheduler Flag",
+    "propertyLevel" : "tenant,app,user",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "defaultValue" : false,
+    "editSupportedInUI" : true
+}

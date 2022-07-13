@@ -1,0 +1,16 @@
+{
+    "_id" : "deployedversion",
+    "type" : "property",
+    "name" : "version",
+	"label" : "version",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+	"defaultValue" : {
+		"version": "3.23.0",
+		"revision": "4ac245",
+		"date": "06Jun20",
+		"time": "113400"
+    }
+}

@@ -1,0 +1,100 @@
+{
+  "_id": "kafka_object",
+  "name": "kafka_object",
+  "sys__UUID": "3c49cae0-96ba-477f-b103-5824a4234ace",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "createdBy": "admin",
+  "createdOn": "",
+  "fields": {
+    "payload": {
+      "payload": "payload",
+      "labelKey": "payload",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "refTypeId": {
+      "refTypeId": "refTypeId",
+      "labelKey": "refTypeId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+	 "taskId": {
+      "taskId": "Task",
+      "labelKey": "taskId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "object": {
+      "object": "object",
+      "labelKey": "object",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "statusMessage": {
+      "statusMessage": "Status Message",
+      "labelKey": "statusMessage",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "messageType": {
+      "messageType": "Message Type",
+      "labelKey": "messageType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "statusDate": {
+      "statusDate": "Status Date",
+      "labelKey": "statusDate",
+      "type": "hidden",
+      "dataType": "date",
+      "isRequired": true
+    },
+    "topic": {
+      "topic": "Topic",
+      "labelKey": "topic",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": true
+    },
+     "requestId": {
+      "requestId": "Request ID",
+      "labelKey": "requestId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": true
+    }
+  },
+  "label": "Kafka Object",
+  "label_key": "",
+  "lastModifiedOn": "",
+  "lastModifiey": "Test",
+  "layout": {
+    "fields": [
+      []
+    ]
+  },
+  "tenantID": "",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

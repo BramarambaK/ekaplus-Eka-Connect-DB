@@ -1,0 +1,150 @@
+{
+    "_id" : "FileModel_Object",
+    "createdBy" : "Test",
+    "createdOn" : "",
+	"description" : "View General Documents and Template.",
+    "fields" : {
+        "refObject" : {
+            "refObject" : "refObject",
+            "labelKey" : "refObject",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "uploadedBy" : {
+            "uploadedBy" : "uploadedBy",
+            "labelKey" : "uploadedBy",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "uploadedDate" : {
+            "uploadedDate" : "uploadedDate",
+            "labelKey" : "uploadedDate",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "refObjectId" : {
+            "refObjectId" : "refObjectId",
+            "labelKey" : "refObjectId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "fileContentType" : {
+            "fileContentType" : "fileContentType",
+            "labelKey" : "fileContentType",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "fileName" : {
+            "fileName" : "Document",
+            "labelKey" : "fileName",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "fileId" : {
+            "fileId" : "fileId",
+            "labelKey" : "fileId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "documentId" : {
+            "documentId" : "documentId",
+            "labelKey" : "documentId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "type" : {
+            "type" : "Type",
+            "labelKey" : "type",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "size" : {
+            "size" : "size",
+            "labelKey" : "size",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "file" : {
+            "file" : "Upload File",
+            "labelKey" : "file",
+            "type" : "file",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "otherAttributes" : {
+            "otherAttributes" : "otherAttributes",
+            "labelKey" : "otherAttributes",
+            "type" : "textbox",
+            "dataType" : "Object",
+            "isRequired" : false
+        },
+        "description" : {
+            "description" : "Description",
+            "labelKey" : "description",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "bucketDir" : {
+            "bucketDir" : "bucketDir",
+            "labelKey" : "bucketDir",
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+
+        "id" : {
+            "id" : "Id",
+            "labelKey" : "id",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "tags" : {
+            "tags" : "tags",
+            "labelKey" : "tags",
+            "type" : "textbox",
+            "dataType" : "Object"
+        },
+		"responseAttributes" : {
+            "responseAttributes" : "responseAttributes",
+            "labelKey" : "responseAttributes",
+            "type" : "textbox",
+            "dataType" : "Object",
+            "isRequired" : false
+        }
+    },
+    "label" : "FILEMODEL_OBJECT",
+    "label_key" : "",
+    "lastModifiedOn" : "",
+    "lastModifiey" : "Test",
+    "layout" : {
+        "fields" : [ 
+            []
+        ]
+    },
+    "name" : "fileModel_object",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "sys__UUID" : "775dd413-6618-405e-b6c8-5951a903530f",
+    "tenantID" : "",
+    "translatableKeys" : [],
+    "type" : "object",
+    "version" : "1",
+    "versionHistory" : []
+}

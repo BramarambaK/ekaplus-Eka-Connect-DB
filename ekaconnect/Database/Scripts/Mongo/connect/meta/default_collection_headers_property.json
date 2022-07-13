@@ -1,0 +1,10 @@
+{
+   "_id" : ObjectId("5d2edeca92574aeb77e0bd29"),
+    "type" : "property",
+    "name" : "default_collection_headers",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "SourceID:Integer,MessageType:String,Account:String,Broker:String,InstrumentType:String,InstrumentName:String,TimeInForce:String,TradeType:String,ContractMonth:String,StrikePrice:Number,OptionType:String,OrderType:String,LimitPrice:Number,TriggerPrice:Number,Quantity:Integer",
+    "length" : "1000"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "Ni_Fi_Thread_Pool",
+    "type" : "property",
+    "name" : "nifi.thread.pool",
+    "propertyLevel" : "tenant,app,user",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+	"defaultValue": "3"
+}

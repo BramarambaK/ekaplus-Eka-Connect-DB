@@ -1,0 +1,11 @@
+{
+    "_id" : "is_register_page_enabled",
+    "type" : "property",
+    "name" : "is_register_page_enabled",
+    "propertyLevel" : "tenant",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "editSupportedInUI" : true,
+    "defaultValue" : false
+}

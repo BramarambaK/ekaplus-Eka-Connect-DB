@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("5cf0db85ff0598c9d0358ab3"),
+    "type" : "property",
+    "name" : "nifi.endPointVsNifiPort",
+	"label" : "NIFI ENDPOINTVSNIFIPORT",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+	"defaultValue" : {
+        "/api-invocations/rest-api" : "9594",
+        "/notifications/email" : "9593"
+    }
+}

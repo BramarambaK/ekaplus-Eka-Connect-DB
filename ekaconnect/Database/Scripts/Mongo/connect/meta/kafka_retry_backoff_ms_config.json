@@ -1,0 +1,12 @@
+
+{
+    "_id" : "kafka_retry_backoff_ms_config",
+    "type" : "property",
+    "name" : "kafka_retry_backoff_ms_config",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "label" : "Kafka Retry Backoff ms Config",
+    "defaultValue" : "1000"
+}

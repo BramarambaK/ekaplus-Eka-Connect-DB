@@ -1,0 +1,12 @@
+{
+    "_id" : "eka_tenant_sign_expression",
+    "type" : "property",
+    "name" : "eka_tenant_sign_expression",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "defaultValue" : "",
+    "label" : "Document Signing Expression",
+    "editSupportedInUI" : true
+}

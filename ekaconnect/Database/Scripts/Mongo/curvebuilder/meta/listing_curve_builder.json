@@ -1,0 +1,144 @@
+{
+    "_id" : "listing_Curve_Builder",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "processorInfo" : {
+        "processorId" : "a4dc9b1d-b161-4c23-a5d9-6b628a32fd50"
+    },
+    "label" : "Curve Builder",
+    "type" : "workflow",
+    "rows" : "20",
+    "refreshData" : true,
+    "payLoad" : "completeData",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_DERIVATIVE_ORDER",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.listing",
+                    "name" : "createcurve"
+                }
+            ],
+            "label" : "Update",
+            "position" : "top",
+            "iconClass" : "fa fa-plus"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "listing",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : true,
+                    "data" : "output.listing",
+                    "name" : "EXT_PRICING_CB"
+                }, 
+                {
+                    "name" : "listing",
+                    "showPopUp" : "true"
+                }
+            ],
+            "label" : "Pricing Call",
+            "iconClass" : "cr-edit-icon"
+        }
+    ],
+    "labelKey" : "USER LISTING",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "curveName"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "sort" : true,
+            "key" : "priceSubType"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "sort" : true,
+            "key" : "granularity"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "sort" : true,
+            "key" : "tenorTimeDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "sort" : true,
+            "key" : "evaluatedPrice"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "sort" : true,
+            "key" : "extrapolation"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "sort" : true,
+            "key" : "intrapolation"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "sort" : true,
+            "highlight" : {
+                "default" : "bg-transparent",
+                "ACTIVE" : "success-bg",
+                "INACTIVE" : "danger-bg",
+                "Active" : "success-bg",
+                "Inactive" : "danger-bg"
+            },
+            "key" : "status"
+        }
+    ],
+    "taskId" : "listing",
+    "object" : "b0318667-b3fc-4683-ba48-3355c7d8725d"
+}

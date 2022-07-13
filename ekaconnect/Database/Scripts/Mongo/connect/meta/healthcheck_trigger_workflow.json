@@ -1,0 +1,18 @@
+{
+    "_id" : "healthcheck_trigger_workflow",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586",
+    "objectAction" : "CREATE",
+    "taskId" : "healthcheck_trigger_workflow",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [
+				{
+                    "name" : "_EXT_CALL_HEALTH_CHECK",
+                    "appendMsg" : false
+                }
+    ]
+} 

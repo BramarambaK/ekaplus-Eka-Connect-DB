@@ -1,0 +1,12 @@
+{
+	"_id":"numberSeparator_property_meta",
+    "type" : "property",
+    "name" : "numberSeparator",
+    "propertyLevel" : "tenant,app",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "Number Separator"
+}

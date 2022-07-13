@@ -1,0 +1,26 @@
+{
+    "_id" : ObjectId("5d2edea992574aeb77e0bc3d"),
+    "type" : "property",
+    "name" : "default_platform_mapping",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : {
+        "SourceID" : "noOfContainers",
+        "MessageType" : "MaterialDescription",
+        "Account" : "deliveryItemRefNo",
+        "Broker" : "supplierId",
+        "InstrumentType" : "modeOfTransport",
+        "InstrumentName" : "city",
+        "TimeInForce" : "LoadingLocationCity",
+        "TradeType" : "CountryOfOrigin",
+        "ContractMonth" : "Quality",
+        "StrikePrice" : "advicedNetweight",
+        "OptionType" : "qualityName",
+        "OrderType" : "cpAddress",
+        "LimitPrice" : "SupplierRepresentative",
+        "TriggerPrice" : "userId",
+        "Quantity" : "pcdiId"
+    },
+    "length" : "1000"
+}

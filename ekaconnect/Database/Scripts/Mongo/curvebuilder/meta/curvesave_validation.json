@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_CREATE_VALIDATION_CB",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "93105528-f1c5-4e02-bf57-965588d7f374"
+    },
+    "refType" : "app",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_CREATE_VALIDATION",
+    "object" : "b0318667-b3fc-4683-ba48-3355c7d8725d",
+    "sys__createdOn" : ISODate("2019-12-02T01:45:17.196Z"),
+    "sys__createdBy" : "Bravo"
+}

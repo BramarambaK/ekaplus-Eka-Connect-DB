@@ -1,0 +1,12 @@
+{
+    "_id" : "eka_tenant_client_name",
+    "type" : "property",
+    "name" : "eka_tenant_client_name",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "defaultValue" : "",
+    "label" : "Client Name",
+    "editSupportedInUI" : true
+}

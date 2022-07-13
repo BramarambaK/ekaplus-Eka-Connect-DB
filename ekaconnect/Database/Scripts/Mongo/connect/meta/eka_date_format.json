@@ -1,0 +1,14 @@
+{
+    "_id" :"global_date_format",
+    "type" : "property",
+    "name" : "date_format",
+	"label" : "DATE FORMAT",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+	"defaultValue" : "dd-MMM-yyyy",
+	"description" : "This property changes date format at tenant level"
+}

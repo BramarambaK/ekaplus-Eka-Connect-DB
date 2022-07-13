@@ -1,0 +1,8 @@
+{
+    "_id" : "supplierconnect_message_enUS",
+    "title" : "Messages at Tenant Level",
+    "name" : "supplierconnect",
+    "tenantID" : "",
+    "type" : "message",
+    "locale" : "en-US"
+}

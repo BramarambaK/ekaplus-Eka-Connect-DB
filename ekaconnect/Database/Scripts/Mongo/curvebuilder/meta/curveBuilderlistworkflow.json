@@ -1,0 +1,15 @@
+{
+    "_id" : "curve_list_cb",
+    "componentType" : "UserTask",
+    "labelKey" : "curve_list_attribute",
+    "label" : "Base Curve List",
+    "object" : "b0318667-b3fc-4683-ba48-3355c7d8725d",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "taskId" : "curve_list_attribute"
+}

@@ -1,0 +1,12 @@
+
+{
+    "_id" : "kafka_retries_config",
+    "type" : "property",
+    "name" : "kafka_retries_config",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "label" : "Kafka Retries Config",
+    "defaultValue" : "5"
+}

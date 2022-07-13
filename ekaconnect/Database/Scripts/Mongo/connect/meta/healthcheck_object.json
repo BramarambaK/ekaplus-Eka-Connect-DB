@@ -1,0 +1,106 @@
+{
+    "_id" : "objet_app_health_check",
+    "name" : "apphealthcheck",
+    "label" : "App Health Check",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+	"description" : "-N/A-",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "uniqueFields" : [],
+    "translatableKeys" : [],
+    "fields" : {
+        "targetType" : {
+            "targetType" : "Target Type",
+            "labelKey" : "targetType",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "target" : {
+            "target" : "Target",
+            "labelKey" : "target",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "status" : {
+            "status" : "Status",
+            "labelKey" : "status",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "statusMessage" : {
+            "statusMessage" : "Status Message",
+            "labelKey" : "statusMessage",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "runId" : {
+            "runId" : "Run ID",
+            "labelKey" : "runId",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+         "version" : {
+            "version" : "Version",
+            "labelKey" : "version",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "envDetails" : {
+            "envDetails" : "Env Details",
+            "labelKey" : "envDetails",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sys__createdOn" : {
+            "sys__createdOn" : "Created On",
+            "labelKey" : "sys__createdOn",
+            "type" : "datepicker",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "runDateAndTime" : {
+            "runDateAndTime" : "Run Date",
+            "labelKey" : "runDateAndTime",
+            "type" : "datepicker",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "sys__createdBy" : {
+            "sys__createdBy" : "Requested By",
+            "labelKey" : "sys__createdBy",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586"
+}

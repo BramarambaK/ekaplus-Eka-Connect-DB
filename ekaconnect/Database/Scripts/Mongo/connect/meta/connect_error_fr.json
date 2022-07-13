@@ -1,0 +1,12 @@
+{
+    "_id" : "connecterror_fr",
+    "title" : "Error Messages at Tenant Level",
+    "name" : "connect",
+    "tenantID" : "",
+    "type" : "error",
+    "locale" : "fr",
+    "004" : "%s est un champ obligatoire",
+    "005" : "%s doit être un type de %s",
+    "021" : "les données ne sont pas valides",
+    "022" : "Veuillez remplir tous les champs requis de manière appropriée."
+}

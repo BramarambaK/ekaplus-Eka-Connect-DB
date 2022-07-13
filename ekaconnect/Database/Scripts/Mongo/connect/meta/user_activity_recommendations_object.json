@@ -1,0 +1,76 @@
+{
+  "_id": "user_activity_recommendation",
+  "description" : "-N/A-",
+  "fields": {
+    "popularWorkflows": {
+      "labelKey": "popularWorkflows",
+      "popularWorkflows": "Popular Workflows for the user.",
+      "isRequired": false
+    },
+    "recentWorkflows": {
+      "labelKey": "recentWorkflows",
+      "recentWorkflows": "Recent Workflows for the user.",
+      "isRequired": false
+    },
+    "searchTerms": {
+      "labelKey": "searchTerms",
+      "searchTerms": "Recent and popular searches for the app/workflow by the user.",
+      "isRequired": false
+    },
+    "popularUserAgent": {
+      "labelKey": "popularUserAgent",
+      "popularUserAgent": "Popular user agent for the app by the user.",
+      "isRequired": false
+    },
+    "recentUserAgent": {
+      "labelKey": "recentUserAgent",
+      "recentUserAgent": "Recent user agent for the app by the user.",
+      "isRequired": false
+    },
+    "user_id": {
+      "labelKey": "user_id",
+      "user_id": "User ID",
+      "isRequired": true
+    },
+    "popularOS":{
+      "labelKey": "popularOS",
+      "popularOS": "popular OS across Apps.",
+      "isRequired": true
+    },
+    "recentOS":{
+      "labelKey": "recentOS",
+      "recentOS": "Recent OS across Apps.",
+      "isRequired": true
+    },
+    "popularApp":{
+      "labelKey": "popularApp",
+      "popularApp": "Popular App across Apps.",
+      "isRequired": true
+    }, 
+    "recentApp":{
+      "labelKey": "recentApp",
+      "recentApp": "Recent App across Apps.",
+      "isRequired": true
+    },
+    "app_specific_activity":{
+      "labelKey": "app_specific_activity",
+      "app_specific_activity": "Activity for different Apps.",
+      "isRequired": true
+    }
+  },
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [
+    "user_id"
+  ],
+  "name": "user_activity_recommendation",
+  "sys__UUID": "d02cbadd-6e14-462a-9813-f0be98e890e1",
+  "type": "object"
+}

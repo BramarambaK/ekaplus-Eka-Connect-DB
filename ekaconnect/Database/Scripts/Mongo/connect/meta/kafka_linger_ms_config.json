@@ -1,0 +1,12 @@
+
+{
+    "_id" : "kafka_linger_ms_config",
+    "type" : "property",
+    "name" : "kafka_linger_ms_config",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "label" : "Kafka Linger ms Config",
+    "defaultValue" : "50"
+}

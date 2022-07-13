@@ -1,0 +1,12 @@
+{
+    "_id" : "eka_trm_physicals_api_host_property",
+    "type" : "property",
+    "name" : "eka_trm_physicals_api_host",
+    "propertyLevel" : "tenant,app,user",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : 120.0,
+    "sys__UUID" : "a92e8949-6a42-401c-b4f3-03e4e594a61d",
+    "sys__createdOn" : ISODate("2019-04-25T07:18:47.388Z"),
+    "sys__createdBy" : "Bravo"
+}

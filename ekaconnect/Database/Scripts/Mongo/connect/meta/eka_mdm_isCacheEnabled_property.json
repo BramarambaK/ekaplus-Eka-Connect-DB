@@ -1,0 +1,12 @@
+{
+    "_id" : ObjectId("5cf0db85ff0598c9d0358aaa"),
+    "type" : "property",
+    "name" : "eka_mdm_isCacheEnabled",
+    "propertyLevel" : "tenant,app,user",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "editSupportedInUI" : true,
+    "refTypeId" : "allApps",
+    "label" : "Eka Mdm isCacheEnabled"
+}

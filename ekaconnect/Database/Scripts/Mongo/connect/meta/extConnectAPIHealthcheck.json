@@ -1,0 +1,32 @@
+{
+    "_id" : "EXT_CONNECT_API_HEALTH_API",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "type" : "workflow",
+    "tags" : "healthCheck",
+    "objectAction" : "READ",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "externalApi",
+    "config" : {
+        "path" : "/healthcheck",
+        "headers" : {
+            "Content-Type" : "application/json",
+            "Accept" : "application/json"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "useInputMapping" : false,
+        "host" : "${properties.eka_connect_host}",
+        "body" : {},
+        "object" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586",
+        "responseDataKey" : "data"
+    }
+},
+    "decisions" : [],
+    "taskId" : "EXT_CONNECT_API_HEALTH_API",
+    "object" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586",
+    "sys__UUID" : "1af15a03-0bc2-4e2f-94a8-a85c868362ee"
+}

@@ -1,0 +1,12 @@
+
+{
+    "_id" : "kafka_batch_size_config",
+    "type" : "property",
+    "name" : "kafka_batch_size_config",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "label" : "Kafka Batch Size Config",
+    "defaultValue" : "10485760"
+}

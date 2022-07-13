@@ -1,0 +1,9 @@
+{
+    "_id":"trademarginerror_enUS",
+    "title":"Trade Margin App Level Error",
+    "name" :"trademargin",
+    "tenantID" : "",
+    "type" : "error",
+	"locale" : "en",
+	"001":"Unable to calculate financing days for ALG: %s"
+}

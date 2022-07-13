@@ -1,0 +1,10 @@
+{
+  "_id": "property_cache_ttl",
+  "type": "property",
+  "name": "property_cache_ttl",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": "1800"
+}

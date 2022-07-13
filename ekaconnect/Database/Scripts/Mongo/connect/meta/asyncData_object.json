@@ -1,0 +1,116 @@
+{
+    "_id" : "asyncData_object",
+	"name" : "asyncData_object",
+	 "sys__UUID" : "3d3977c0-8af1-44e2-b118-2f0ec353e4d7",
+	  "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "createdBy" : "Test",
+    "createdOn" : "",
+    "fields" : {
+        "refObject" : {
+            "refObject" : "refObject",
+            "labelKey" : "refObject",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "componentType" : {
+            "componentType" : "componentType",
+            "labelKey" : "componentType",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "objectAction" : {
+            "objectAction" : "objectAction",
+            "labelKey" : "objectAction",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "refType" : {
+            "refType" : "refType",
+            "labelKey" : "refType",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "refTypeId" : {
+            "refTypeId" : "refTypeId",
+            "labelKey" : "refTypeId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "type" : {
+            "type" : "type",
+            "labelKey" : "type",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "isAsynchCallRequired" : {
+            "isAsynchCallRequired" : "isAsynchCallRequired",
+            "labelKey" : "isAsynchCallRequired",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "apiInfo" : {
+            "apiInfo" : "apiInfo",
+            "labelKey" : "apiInfo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "taskId" : {
+            "taskId" : "taskId",
+            "labelKey" : "taskId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "object" : {
+            "object" : "object",
+            "labelKey" : "object",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },        
+        "Status" : {
+            "Status" : "Status",
+            "labelKey" : "Status",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }   ,
+        "Remarks" : {
+            "Remarks" : "Remarks",
+            "labelKey" : "Remarks",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }        
+    },
+    "label" : "asyncData_object",
+    "label_key" : "",
+    "lastModifiedOn" : "",
+    "lastModifiey" : "Test",
+    "layout" : {
+        "fields" : [ 
+            []
+        ]
+    },   
+    "tenantID" : "",
+    "translatableKeys" : [],
+    "type" : "object",
+    "version" : "1",
+    "versionHistory" : []
+}

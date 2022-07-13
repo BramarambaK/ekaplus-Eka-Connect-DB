@@ -1,0 +1,23 @@
+{
+    "_id" : "ayncObject_policy",
+    "type" : "policy",
+    "app_UUID" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "refType" : "object",
+    "refTypeId" : "3d3977c0-8af1-44e2-b118-2f0ec353e4d7",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

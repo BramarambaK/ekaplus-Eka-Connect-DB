@@ -1,0 +1,9 @@
+{
+    "_id" : "elastic_search_host",
+    "type" : "property",
+    "name" : "elastic_search_host",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120"
+}

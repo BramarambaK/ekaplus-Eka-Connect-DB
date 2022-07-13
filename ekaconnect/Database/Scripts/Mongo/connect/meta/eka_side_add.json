@@ -1,0 +1,12 @@
+{
+    "_id" : "eka_side_add",
+    "type" : "property",
+    "name" : "eka_tenant_side_address",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "defaultValue" : "",
+    "label" : "Client's Corporate Office Address",
+    "editSupportedInUI" : true
+}

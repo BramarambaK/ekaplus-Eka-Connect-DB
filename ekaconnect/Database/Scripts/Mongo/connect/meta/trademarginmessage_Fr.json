@@ -1,0 +1,11 @@
+{
+    "_id" : "trademarginmessage_Fr",
+    "title" : "Messages at Tenant Level",
+    "name" : "trademargin",
+    "tenantID" : "",
+    "type" : "message",
+	"locale" : "fr",
+	"Corporate":"entreprise",
+	"Profit Center":"centre de profit"
+}
+

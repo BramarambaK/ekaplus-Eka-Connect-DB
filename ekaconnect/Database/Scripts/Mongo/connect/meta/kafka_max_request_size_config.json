@@ -1,0 +1,12 @@
+
+{
+    "_id" : "kafka_max_request_size_config",
+    "type" : "property",
+    "name" : "kafka_max_request_size_config",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "label" : "Kafka Max Request Size Config",
+    "defaultValue" : "104857600"
+}

@@ -1,0 +1,22 @@
+
+{
+    "_id" : "_EXT_CALL_HEALTH_CHECK",
+    "componentType" : "ExtSystemTask",
+    "object" : "7f2b3103-3b67-4dd6-aed7-9d99652b7586",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/scheduler/healthcheck",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "admin",
+    "taskId" : "_EXT_CALL_HEALTH_CHECK"
+} 

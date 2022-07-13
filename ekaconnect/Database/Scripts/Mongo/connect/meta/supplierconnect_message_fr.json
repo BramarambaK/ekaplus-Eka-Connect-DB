@@ -1,0 +1,13 @@
+{
+    "_id" : "supplierconnect_Fr",
+    "title" : "Messages at Tenant Level",
+    "name" : "supplierconnect",
+    "tenantID" : "",
+    "type" : "message",
+    "locale" : "fr",
+    "Corporate" : "entreprise",
+    "Profit Center" : "centre de profit",
+    "gmrBasicExpectedArrivalDate" : "Date d'arrivée prévue",
+    "gmrBasicDestination" : "Destination (fonderie)",
+    "gmrBasicSupplierReference" : "ID de référence du fournisseur"
+}

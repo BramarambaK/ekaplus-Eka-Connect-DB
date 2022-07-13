@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5d0b080092574aeb77141935"),
+    "propertyValue" : "http://reference.integ.ekaanalytics.com:319",
+    "propertyLevel" : "tenant",
+	"refType" : "app",
+    "type" : "property",
+    "propertyName" : "platform_url",
+    "sys__createdOn" : ISODate("2019-04-08T11:32:06.319Z"),
+    "sys__createdBy" : "Joseph@mail.com"
+}

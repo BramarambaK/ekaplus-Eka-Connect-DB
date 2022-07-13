@@ -1,0 +1,12 @@
+{
+    "_id" : "deleteDuplicateRecordsUponSaveUpdate",
+    "type" : "property",
+    "label" : "Delete duplicate Records upon save/update",
+    "name" : "deleteDuplicateRecordsUponSaveUpdate",
+    "propertyLevel" : "tenant",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "editSupportedInUI" : true,
+    "defaultValue" : false
+}

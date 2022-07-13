@@ -1,0 +1,10 @@
+{
+    "_id" : "async_workflow_thread_pool_property",
+    "type" : "property",
+    "name" : "async_workflow_thread_pool",
+    "propertyLevel" : "tenant,app,user",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "10",
+	 "defaultValue" : "1"
+}

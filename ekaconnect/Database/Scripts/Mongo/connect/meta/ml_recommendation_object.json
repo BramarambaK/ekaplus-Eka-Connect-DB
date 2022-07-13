@@ -1,0 +1,42 @@
+{
+  "_id": "ml_recommendation",
+  "description" : "-N/A-",
+  "fields": {
+    "recommendation_data": {
+      "labelKey": "recommendation_data",
+      "recommendation_data": "Recommendation Data",
+      "isRequired": false
+    },
+    "user_id": {
+      "labelKey": "user_id",
+      "recommendation_data": "User ID",
+      "isRequired": false
+    },
+    "source_object_id": {
+      "labelKey": "source_object_id",
+      "source_object_id": "Source Object Id",
+      "isRequired": true
+    },
+    "level": {
+      "labelKey": "level",
+      "level": "Node inside recommendation_data",
+      "isRequired": true
+    }
+  },
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [
+    "level",
+    "user_id"
+  ],
+  "name": "ml_recommendation",
+  "sys__UUID": "75e55d43-3a9f-4240-9916-0716e53ee5ec",
+  "type": "object"
+}

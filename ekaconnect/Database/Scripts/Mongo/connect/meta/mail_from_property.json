@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("5d25ae6392574aeb77adda06"),
+    "type" : "property",
+    "name" : "mail_from",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "no.reply-qa@eka1.com",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "MAIL FROM",
+    "length" : "50",
+	"description" : "This property decides the from email used to send notification at tenant level"
+}

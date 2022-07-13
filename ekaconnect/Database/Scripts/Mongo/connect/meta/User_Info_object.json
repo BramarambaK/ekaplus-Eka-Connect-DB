@@ -1,0 +1,334 @@
+{
+  "_id": ObjectId("5ccb0eb503ca42b76b347626"),
+  "name": "User_Info",
+  "type": "object",
+  "sys__UUID": "User_Info",
+  "app": "supplierconnect",
+  "description" : "View User Profile.",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "translatableKeys": [
+    "register",
+    "createAccount",
+    "contactDetails",
+    "bankDetails",
+    "username",
+    "firstName",
+    "lastName",
+    "email",
+    "password",
+    "confirmPassword",
+    "mobile",
+    "phone",
+    "fax",
+    "address",
+    "addressDisplay",
+    "country",
+    "state",
+    "city",
+    "zipcode",
+    "website"
+  ],
+  "fields": {
+   "company" : {
+            "company" : "Company",
+            "labelKey" : "company",
+            "type" : "textbox",
+            "dataType" : "String",
+            "show" : true,
+            "isRequired" : false
+    },
+    "register": {
+      "register": "Register",
+      "labelKey": "register",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "createAccount": {
+      "createAccount": "Create your account",
+      "labelKey": "createAccount",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "bankDetails": {
+      "bankDetails": "Enter bank details",
+      "labelKey": "bankDetails",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "contactDetails": {
+      "contactDetails": "Enter contact details",
+      "labelKey": "contactDetails",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "postalAddress": {
+      "postalAddress": "Postal Address",
+      "labelKey": "postalAddress",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "userDetails": {
+      "userDetails": "User's Details",
+      "labelKey": "userDetails",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "userRole": {
+      "userRole": "User Role",
+      "labelKey": "userRole",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "successMessage": {
+      "successMessage": "You have successfully registered",
+      "labelKey": "successMessage",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "username": {
+      "username": "User Name",
+      "labelKey": "username",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "firstName": {
+      "firstName": "First Name",
+      "labelKey": "firstName",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "name": {
+      "name": "Name",
+      "labelKey": "name",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "lastName": {
+      "lastName": "Last Name",
+      "labelKey": "lastName",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "address": {
+      "address": "House no., Street name",
+      "labelKey": "address",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "addressDisplay": {
+      "addressDisplay": "Address",
+      "labelKey": "addressDisplay",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "email": {
+      "email": "Email",
+      "labelKey": "email",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "confirmEmail": {
+      "confirmEmail": "Confirm Email",
+      "labelKey": "confirmEmail",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "password": {
+      "password": "Password",
+      "labelKey": "password",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "confirmPassword": {
+      "confirmPassword": "Confirm Password",
+      "labelKey": "confirmPassword",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "mobile": {
+      "mobile": "Mobile",
+      "labelKey": "mobile",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "phone": {
+      "phone": "Phone",
+      "labelKey": "phone",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "fax": {
+      "fax": "Fax",
+      "labelKey": "fax",
+      "type": "textbox",
+      "dataType": "String",
+      "show": false,
+      "isRequired": false
+    },
+    "mobCountryCode": {
+      "mobCountryCode": "Mob Country Code",
+      "labelKey": "mobCountryCode",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "phCountryCode": {
+      "phCountryCode": "Phone Country Code",
+      "labelKey": "phCountryCode",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "faxCountryCode": {
+      "faxCountryCode": "Fax Country Code",
+      "labelKey": "faxCountryCode",
+      "type": "textbox",
+      "dataType": "String",
+      "show": false,
+      "isRequired": false
+    },
+    "country": {
+      "country": "Country",
+      "labelKey": "country",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "country",
+      "children": ["state"],
+      "show": true,
+      "isRequired": false
+    },
+    "state": {
+      "state": "State",
+      "labelKey": "state",
+      "type": "dropdown",
+      "dataType": "String",
+      "parent": ["country"],
+      "children": ["city"],
+      "show": true,
+      "isRequired": false
+    },
+    "city": {
+      "city": "City",
+      "labelKey": "city",
+      "type": "dropdown",
+      "dataType": "String",
+      "parent": ["country", "state"],
+      "show": true,
+      "isRequired": false
+    },
+    "uniqueId": {
+      "uniqueId": "Unique Id",
+      "labelKey": "uniqueId",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "uniqueIdType": {
+      "uniqueIdType": "Unique Id Type",
+      "labelKey": "uniqueIdType",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "customerType": {
+      "customerType": "Customer Type",
+      "labelKey": "customerType",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "zipcode": {
+      "zipcode": "ZIP code",
+      "labelKey": "zipcode",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "website": {
+      "website": "Website",
+      "labelKey": "website",
+      "type": "textbox",
+      "dataType": "String",
+      "show": false,
+      "isRequired": false
+    },
+    "countryId": {
+      "countryId": "Country Id",
+      "labelKey": "countryId",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "stateId": {
+      "stateId": "State Id",
+      "labelKey": "stateId",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    },
+    "term": {
+      "term": "Term",
+      "labelKey": "term",
+      "type": "textbox",
+      "dataType": "String",
+      "show": true,
+      "isRequired": false
+    }
+  }
+}

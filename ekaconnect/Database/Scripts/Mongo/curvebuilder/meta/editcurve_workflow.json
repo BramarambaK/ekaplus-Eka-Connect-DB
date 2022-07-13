@@ -1,0 +1,83 @@
+{
+    "_id" : "editcurve",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "label" : "User Edit",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "edit",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "column"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editcurve",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Limit got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Limit got replaced with some errors"
+                        }
+                    },
+                    "data" : "output.editcurve",
+                    "appendMsg" : true,
+                    "name" : "ST_EDIT_CB"
+                }, 
+                {
+                    "name" : "listing",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "Save",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "PROFILE_EDIT",
+    "fields" : [ 
+        {
+            "suffix" : "",
+            "key" : "tenorTime"
+        }
+    ],
+    "taskId" : "editcurve",
+    "object" : "b0318667-b3fc-4683-ba48-3355c7d8725d"
+}

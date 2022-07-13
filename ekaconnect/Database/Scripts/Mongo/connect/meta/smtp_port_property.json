@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5d25ae5892574aeb77add9c4"),
+    "type" : "property",
+    "name" : "smtp_port",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "587",
+    "length" : "50"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("5cec7f84773e4fdbacf52c04"),
+    "type" : "property",
+    "name" : "is_versioning_enabled",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "10",
+    "editSupportedInUI" : true,
+    "label" : "Is Versioning Enabled",
+    "refTypeId" : "allApps",
+    "description": "Denotes whether versions of a data need to be maintained in the database or not. Set the value to true if versions required.",
+    "listOfValues" : "true,false",
+	"defaultValue": false
+}

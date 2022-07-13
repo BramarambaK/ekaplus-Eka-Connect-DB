@@ -1,0 +1,172 @@
+{
+    "_id" : "createcurve_CB",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "label" : "Curve",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "label" : "CLOSE",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "READ",
+            "labelkey" : "REVIEW",
+            "task" : "createcurve",
+            "outcomes" : [ 
+                {
+                    "data" : "output.createcurve",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_CREATE_VALIDATION"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "displayType" : "popup",
+                    "data" : "output.createcurve",
+                    "appendMsg" : true,
+                    "name" : "ST_EDIT_CB"
+                }, 
+                {
+                    "name" : "listing",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "SUBMIT",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "listing"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "CREATE_DERIVATIVE_ORDER",
+    "fields" : [ 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "20%"
+                },
+                "suffix" : "",
+                "disabled" : true,
+                "key" : "curveName"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "20%"
+                },
+                "suffix" : "",
+                "disabled" : true,
+                "key" : "priceSubType"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "20%"
+                },
+                "suffix" : "",
+                "key" : "granularity"
+            }, 
+            {
+                "suffix" : "",
+                "key" : "tenor",
+                "formItemStyle" : {
+                    "width" : "10%"
+                }
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "10%"
+                },
+                "suffix" : "",
+                "key" : "tenorTime"
+            }
+        ], 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "20%"
+                },
+                "suffix" : "",
+                "key" : "evaluatedPrice"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "20%"
+                },
+                "suffix" : "",
+                "key" : "extrapolation"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "20%"
+                },
+                "suffix" : "",
+                "key" : "intrapolation"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-right" : "15px",
+                    "width" : "20%"
+                },
+                "suffix" : "",
+                "key" : "status",
+                "value" : "disable"
+            }
+        ]
+    ],
+    "taskId" : "createcurve",
+    "object" : "b0318667-b3fc-4683-ba48-3355c7d8725d",
+    "sys__createdOn" : ISODate("2019-12-02T01:45:17.196Z"),
+    "sys__createdBy" : "Bravo"
+}

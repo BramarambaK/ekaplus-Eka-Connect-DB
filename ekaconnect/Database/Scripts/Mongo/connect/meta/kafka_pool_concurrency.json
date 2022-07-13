@@ -1,0 +1,12 @@
+
+{
+    "_id" : "kafka_pool_concurrency",
+    "type" : "property",
+    "name" : "kafka_pool_concurrency",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "label" : "Kafka Pool Concurrency",
+    "defaultValue" : "4"
+}

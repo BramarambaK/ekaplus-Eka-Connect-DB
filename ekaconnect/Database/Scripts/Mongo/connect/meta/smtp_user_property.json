@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("5d25ae3b92574aeb77add936"),
+    "type" : "property",
+    "name" : "smtp_user",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "no.reply-qa@eka1.com",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "SMTP USER",
+    "length" : "50",
+    "description" : "This property decides the user name of the from email used to send notification at tenant level"
+}

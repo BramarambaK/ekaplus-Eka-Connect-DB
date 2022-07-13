@@ -1,0 +1,15 @@
+{
+    "_id" : "is_recommendation_enabled",
+    "type" : "property",
+    "name" : "is_recommendation_enabled",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "10",
+    "editSupportedInUI" : true,
+    "label" : "Is Recommendation Enabled",
+    "refTypeId" : "allApps",
+    "description": "Set the value to true if recommendation required.",
+    "listOfValues" : "true,false",
+	"defaultValue": false
+}

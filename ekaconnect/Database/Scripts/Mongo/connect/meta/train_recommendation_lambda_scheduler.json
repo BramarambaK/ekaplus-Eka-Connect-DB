@@ -1,0 +1,23 @@
+{
+    "_id": "_EXT_CALL_TRAIN_RECOMMENDATION_LAMBDA",
+    "componentType": "ExtSystemTask",
+    "object": "schedulerObject",
+    "isScheduled": true,
+    "objectAction": "CREATE",
+    "apiInfo": {
+      "host": "${properties.eka_connect_host}",
+      "path": "/lambdagatewayapi",
+      "method": "POST",
+      "body": {},
+      "inputMapping": {},
+      "headers": {
+        "X-Locale": "en-US",
+        "Content-Type": "application/json",
+        "endPoint": "/train-recommendation"
+      }
+    },
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "admin",
+    "taskId": "_EXT_CALL_TRAIN_RECOMMENDATION_LAMBDA"
+  }

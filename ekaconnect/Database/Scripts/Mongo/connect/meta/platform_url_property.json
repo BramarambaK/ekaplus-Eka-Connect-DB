@@ -1,0 +1,10 @@
+{
+  "_id": ObjectId("5d0a218f92574aeb77102961"),
+  "type": "property",
+  "name": "platform_url",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": 120,
+  "editSupportedInUI": true
+}

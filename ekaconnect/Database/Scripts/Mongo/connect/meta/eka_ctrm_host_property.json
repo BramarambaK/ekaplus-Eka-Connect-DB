@@ -1,0 +1,13 @@
+{
+    "_id" : ObjectId("5cf0db85ff0598c9d0358aa4"),
+    "type" : "property",
+    "name" : "eka_ctrm_host",
+	"label" : "EKA CTRM HOST",
+    "propertyLevel" : "tenant,app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "120",
+    "editSupportedInUI" : true,
+    "refTypeId" : "allApps",
+    "description": "The host and port details of CTRM server needed for the app. This will look like http(s)://ctrm_host_ip_or_name:port_of_server"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "property_versioning_enabled_objects_for_app",
+  "type": "property",
+  "name": "versioning_enabled_objects",
+  "propertyLevel": "tenant, app, user",
+  "dataType": "JSON",
+  "fieldtype": "textbox",
+  "length": "200",
+  "refTypeId": "allApps",
+  "defaultValue": [],
+  "label": "Versioning enabled Objects",
+  "editSupportedInUI": true
+}

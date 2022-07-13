@@ -1,0 +1,10 @@
+{
+    "_id" : "trademarginmessage_enUS",
+    "title" : "Messages at Tenant Level",
+    "name" : "trademargin",
+    "tenantID" : "",
+    "type" : "message",
+	"locale" : "en-US"
+
+}
+

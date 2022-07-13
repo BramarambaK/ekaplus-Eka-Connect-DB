@@ -1,0 +1,10 @@
+{
+    "_id" : ObjectId("5d25ae4b92574aeb77add985"),
+    "type" : "property",
+    "name" : "smtp_host",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "smtp.office365.com",
+    "length" : "50"
+}

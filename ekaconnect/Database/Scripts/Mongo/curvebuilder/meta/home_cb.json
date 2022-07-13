@@ -1,0 +1,17 @@
+{
+    "_id" : "home_CB",
+    "layout" : {
+        "name" : "list"
+    },
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "workflow" : "listing",
+    "refType" : "app",
+    "refTypeId" : "1e032ad8-cb25-4d7b-a555-da6951078b41",
+    "decisions" : [],
+    "type" : "workflow",
+    "taskId" : "home",
+    "object" : "b0318667-b3fc-4683-ba48-3355c7d8725d",
+    "sys__createdOn" : ISODate("2019-11-22T01:45:21.405Z"),
+    "sys__createdBy" : "Bravo"
+}

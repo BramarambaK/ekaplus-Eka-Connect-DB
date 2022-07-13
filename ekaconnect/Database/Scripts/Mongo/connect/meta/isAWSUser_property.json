@@ -1,0 +1,14 @@
+{
+    "_id" : "isAWSUser_property",
+    "type" : "property",
+    "name" : "isAWSUser",
+	"label" : "IS AWS USER",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "",
+    "length" : "10",
+	"editSupportedInUI" : true,
+	"description" : "is aws property for user",
+	"listOfValues": "N,' '"
+}

@@ -1,0 +1,158 @@
+{
+    "_id" : "object_Curve_Builder",
+    "name" : "Curve_Builder",
+    "label" : "Curve Builder",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [ 
+        "curveName"
+    ],
+    "fields" : {
+        "status" : {
+            "status" : "STATUS",
+            "labelKey" : "status",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : false,
+            "propertyKey" : "statusforcurve",
+            "dropdownValue" : "statusDisplayName"
+        },
+        "statusDisplayName" : {
+            "statusDisplayName" : "Type",
+            "labelKey" : "statusDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "curveName" : {
+            "curveName" : "Curve",
+            "labelKey" : "curveName",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "priceSubType" : {
+            "priceSubType" : "Type",
+            "labelKey" : "priceSubType",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "granularity" : {
+            "granularity" : "Granularity",
+            "labelKey" : "granularity",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : false,
+            "propertyKey" : "granularity",
+            "dropdownValue" : "granularityDisplayName"
+        },
+        "granularityDisplayName" : {
+            "granularityDisplayName" : "Type",
+            "labelKey" : "granularityDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "tenor" : {
+            "tenor" : "Tenor",
+            "labelKey" : "tenor",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number",
+            "length" : "10"
+        },
+        "tenorTime" : {
+            "tenorTime" : " ",
+            "labelKey" : "tenorTime",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : false,
+            "propertyKey" : "tenorTime",
+            "dropdownValue" : "tenorTimeDisplayName"
+        },
+        "tenorTimeDisplayName" : {
+            "tenorTimeDisplayName" : "Type",
+            "labelKey" : "tenorTimeDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "evaluatedPrice" : {
+            "evaluatedPrice" : "Evaluated Price",
+            "labelKey" : "evaluatedPrice",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : false,
+            "propertyKey" : "evaluatedPrice",
+            "dropdownValue" : "evaluatedPriceDisplayName"
+        },
+        "evaluatedPriceDisplayName" : {
+            "evaluatedPriceDisplayName" : "",
+            "labelKey" : "evaluatedPriceDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "extrapolation" : {
+            "extrapolation" : "Extrapolation",
+            "labelKey" : "extrapolation",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : false,
+            "propertyKey" : "extrapolation",
+            "dropdownValue" : "extrapolationDisplayName"
+        },
+        "extrapolationDisplayName" : {
+            "tenorTimeDisplayName" : " ",
+            "labelKey" : "extrapolationDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "length" : "30"
+        },
+        "intrapolation" : {
+            "intrapolation" : "Intrapolation",
+            "labelKey" : "intrapolation",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "isRequired" : false,
+            "propertyKey" : "intrapolation",
+            "dropdownValue" : "intrapolationDisplayName"
+            
+        },
+        "intrapolationDisplayName" : {
+            "intrapolationDisplayName" : " ",
+            "labelKey" : "intrapolationDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "length" : "30"
+        }
+    },
+    "sys__UUID" : "b0318667-b3fc-4683-ba48-3355c7d8725d",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

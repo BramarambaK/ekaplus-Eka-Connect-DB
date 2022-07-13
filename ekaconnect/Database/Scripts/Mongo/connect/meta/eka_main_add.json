@@ -1,0 +1,12 @@
+{
+    "_id" : "eka_main_add_version_physicals",
+    "type" : "property",
+    "name" : "eka_tenant_main_address",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "defaultValue" : "",
+    "label" : "Client's Head Office Address",
+    "editSupportedInUI" : true
+}
