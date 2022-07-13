@@ -1,0 +1,11 @@
+{
+    "_id" : "saveRecommendatationData_esourcingSystemTask",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "saveRecommendatationDataSupplierConnectSystemTask",
+    "object" : "e212619c-67f8-11ec-90d6-0242ac120003",
+    "sys__UUID" : "98573ce6-8128-4750-9d35-76641ed126d9"
+}

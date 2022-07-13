@@ -1,0 +1,46 @@
+{
+  "_id": "menuObject_esourcing",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "handler": "news",
+              "text": "News",
+              "iconCls": "app-menu-icon"
+            },
+            {
+              "handler": "deliveryItemlisting",
+              "text": "Purchase Order",
+              "iconCls": "app-create-icon"
+            },
+            {
+              "handler": "supplierlisting",
+              "text": "Advance Shipment Notice",
+              "iconCls": "app-menu-icon"
+            },
+            {
+              "handler": "invoicelisting",
+              "text": "Invoices",
+              "iconCls": "app-menu-icon"
+            },
+            {
+              "handler": "generaldocumentlisting",
+              "text": "General Documents & Templates",
+              "iconCls": "templates-icon"
+            },
+            {
+              "handler": "contactinformationlisting",
+              "text": "Contact Information",
+              "iconCls": "contact-icon"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

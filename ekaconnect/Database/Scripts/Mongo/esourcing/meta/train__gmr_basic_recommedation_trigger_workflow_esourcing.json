@@ -1,0 +1,19 @@
+{
+    "_id": "train__gmr_basic_recommedation_trigger_workflow_esourcing",
+    "version": "V2",
+    "componentType": "ChainedSystemTask",
+    "object": "0534be84-2f20-468d-86d7-6117ccd3f566",
+    "objectAction": "CREATE",
+    "taskId": "train__gmr_basic_recommedation_trigger_workflow",
+    "refType": "app",
+    "tags":"recommendation",
+    "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "isScheduled": false,
+    "type": "workflow",
+    "chainedTasks": [
+				{
+                    "name": "_EXT_CALL_TRAIN_GMR_BASIC_RECOMMENDATION_API",
+                    "appendMsg": false
+                }
+    ]
+}

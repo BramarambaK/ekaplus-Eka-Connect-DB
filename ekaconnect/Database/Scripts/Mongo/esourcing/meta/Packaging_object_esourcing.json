@@ -1,0 +1,164 @@
+{
+    "_id" : "packagingObject_esourcing",
+    "type" : "object",
+    "name" : "Packaging_esourcing",
+    "label" : "PACKAGING",
+    "sys__UUID" : "9f254e8f-3f45-4de8-b366-7469c7f2f623",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "2",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [],
+    "fields" : {
+        "modeOfTransport" : {
+            "modeOfTransport" : "Mode of Transport",
+            "labelKey" : "modeOfTransport",
+            "type" : "hidden",
+            "dataType" : "dropdown",
+            "serviceKey" : "modeOfTransport_esourcing",
+            "isRequired" : false
+        },
+        "transportId" : {
+            "transportId" : "Transport Id",
+            "labelKey" : "transportId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "noOfContainers" : {
+            "noOfContainers" : "Number Of Containers",
+            "labelKey" : "noOfContainers",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "advicedNetweight" : {
+            "advicedNetweight" : "Adviced Net Weight",
+            "labelKey" : "advicedNetweight",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "maxLotSize" : {
+            "maxLotSize" : "Max Lot Size",
+            "labelKey" : "maxLotSize",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerDetails" : {
+            "containerDetails" : "Container",
+            "labelKey" : "containerDetails",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerNo" : {
+            "containerNo" : "Container No",
+            "labelKey" : "containerNo",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "containerSize" : {
+            "containerSize" : "Container Size",
+            "labelKey" : "containerSize",
+            "type" : "textbox",
+            "dataType" : "String",
+            "serviceKey" : "containerSize_esourcing",
+            "isRequired" : false
+        },
+        "sealNo" : {
+            "sealNo" : "Seal No",
+            "labelKey" : "sealNo",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "loose" : {
+            "loose" : "Loose",
+            "labelKey" : "loose",
+            "type" : "textbox",
+            "dataType" : "String",
+            "serviceKey" : "loose_esourcing",
+            "isRequired" : false
+        },
+        "bags" : {
+            "bags" : "Bags",
+            "labelKey" : "bags",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "pallets" : {
+            "pallets" : "Pallets",
+            "labelKey" : "pallets",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "drums" : {
+            "drums" : "Drums",
+            "labelKey" : "drums",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "totalPackage" : {
+            "totalPackage" : "Total Packages",
+            "labelKey" : "totalPackage",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "netWeight" : {
+            "netWeight" : "Net Weight",
+            "labelKey" : "netWeight",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "grossWeight" : {
+            "grossWeight" : "Gross Weight",
+            "labelKey" : "grossWeight",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "tareWeight" : {
+            "tareWeight" : "Tare Weight",
+            "labelKey" : "tareWeight",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "boxes" : {
+            "boxes" : "Boxes",
+            "labelKey" : "boxes",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

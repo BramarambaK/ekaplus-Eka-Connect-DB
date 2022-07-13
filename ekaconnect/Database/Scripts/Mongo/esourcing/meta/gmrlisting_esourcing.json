@@ -1,0 +1,23 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Gmr Listing",
+  "type": "workflow",
+  "layout": {"name": "gmr"},
+  "decisions": [{
+    "btnClass": "btn btn-outline-dark",
+    "objectAction": "READ",
+    "outcomes": [{"name": "supplierlisting"}],
+    "style": {"margin-right": "auto"},
+    "label": "CANCEL",
+    "position": "bottom"
+  }],
+  "_id": "gmrlisting_esourcing",
+  "labelKey": "Gmr_LISTING",
+  "fields": [],
+  "taskId": "gmrlisting",
+  "object": "0534be84-2f20-468d-86d7-6117ccd3f566"
+}

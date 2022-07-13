@@ -1,0 +1,9 @@
+{
+    "_id" : "packingDetails_table_processor",
+    "name" : "PackingDetails Table Processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "snippet" : "\r\n    var data = []\r\n\tfor(let i=0;i<1;i++){\r\n\tdata.push({})\r\n}\t\r\n    res.status(200).send(data)\r\n  ",
+    "sys__UUID" : "bf3038cb-d55f-486e-816b-8d19a94d4ab0"
+}

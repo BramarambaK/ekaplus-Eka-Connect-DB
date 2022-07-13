@@ -1,0 +1,12 @@
+{
+    "_id" : "gmr_edit_mailbody_property_esourcing",
+    "type" : "property",
+    "name" : "gmr_edit_mailbody",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "Hi,<br>GMR <b><GmrRefNo></b> has been updated successfully by <b><supplierName></b> on <b><gmr_updated_date></b>.",
+    "length" : "1000",
+	"refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+	"description" : "mail body in edit gmr"
+}

@@ -1,0 +1,65 @@
+{
+    "_id" : "packagingDetails_composite_esourcing",
+    "name" : "PackagingDetailsComposite",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "label" : "packagingDetails_composite",
+    "workflows" : [ 
+        {
+            "name" : "packagingDetails_form_section"
+        }, 
+        {
+            "name" : "packagingDetails_table_section"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : true,
+        "dropdownDecisions" : false,
+        "preserveSelectedData" : true,
+        "menu" : true
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creategmrbasic",
+                    "data" : "selected.creategmrbasic"
+                }
+            ],
+            "label" : "Shipping Details",
+            "position" : "leftMenu"
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "packagingDetails_composite",
+                    "data" : "selected.packagingDetails_composite"
+                }
+            ],
+            "label" : "Packaging Details",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "documentlisting",
+                    "data" : "selected.documentlisting"
+                }
+            ],
+            "label" : "Documents",
+            "position" : "leftMenu",
+            "disabled" : true
+        }
+    ],
+    "taskId" : "packagingDetails_composite",
+    "object" : "9f254e8f-3f45-4de8-b366-7469c7f2f623"
+}

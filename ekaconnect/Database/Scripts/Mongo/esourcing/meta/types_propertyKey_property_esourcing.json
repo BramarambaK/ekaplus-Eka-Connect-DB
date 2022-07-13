@@ -1,0 +1,42 @@
+{
+    "_id" : "fileTypeProperty_esourcing",
+    "type" : "property",
+    "name" : "types_propertyKey",
+	"label" : "TYPES PROPERTYKEY",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+	"defaultValue": [
+	{
+		"key" : "annexIB",
+		"value" : "Annex IB"
+	}, 
+	{
+		"key" : "annexVII",
+		"value" : "Annex VII"
+	}, 
+	{
+      "key": "billoflading",
+      "value": "Bill of Lading"
+    },
+	{
+      "key": "packinglist",
+      "value": "Packing List"
+    },
+	{
+		"key" : "photoofMaterial",
+		"value" : "Photo of Material"
+	}, 
+	{
+		"key" : "transportDocument",
+		"value" : "Transport Document"
+	}, 
+	{
+		"key" : "other",
+		"value" : "Other"
+	}
+  ],
+  "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "description" : "types propertykey for document types"
+}

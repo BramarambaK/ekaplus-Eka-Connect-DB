@@ -1,0 +1,26 @@
+{
+    "_id" : "saveRecommendationData_esourcing",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "taskId" : "saveRecommendationData_sc",
+    "object" : "e212619c-67f8-11ec-90d6-0242ac120003",
+    "sys__UUID" : "daf6bbe1-e626-496a-ab73-77adc2f82524",
+    "type" : "workflow",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "type" : "submit",
+            "task" : "saveRecommendationData_sc",
+            "outcomes" : [ 
+                {
+                    "name" : "saveRecommendatationDataSupplierConnectSystemTask",
+                    "data" : "output.saveRecommendationData_sc",
+                    "appendMsg" : false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "userCPProperty_esourcing",
+    "type" : "property",
+    "name" : "user_counterParties",
+    "propertyLevel" : "tenant, app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "50",
+	"refTypeId" : "allApps",
+    "description" : "user counterparties for user info"	
+}

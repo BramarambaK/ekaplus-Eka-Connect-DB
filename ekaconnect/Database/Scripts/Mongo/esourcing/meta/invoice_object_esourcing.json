@@ -1,0 +1,122 @@
+{
+    "_id": "invoice_obect_esourcing",
+    "name": "invoice_esourcing",
+    "type": "object",
+    "sys__UUID": "80639df1-3bdf-48e0-8dc3-e93ac58fff93",
+    "objectAction": {
+        "CREATE": "POST",
+        "UPDATE": "PUT",
+        "READ": "GET",
+        "LISTVIEW": "GET",
+        "DELETE": "DELETE",
+        "APPROVE": "PUT",
+        "REJECT": "PUT"
+    },
+    "uniqueFields": [
+        "invoiceRefNo",
+        "gmrRefNo"
+    ],
+    "fields": {
+        "invoiceRefNo": {
+            "invoiceRefNo": "Invoice No",
+            "labelKey": "invoiceRefNo"
+        },
+        "internalInvoiceRefNo": {
+            "internalInvoiceRefNo": "Internal Invoice Ref No",
+            "labelKey": "internalInvoiceRefNo"
+        },
+        "gmrRefNo": {
+            "gmrRefNo": "GMR No",
+            "labelKey": "gmrRefNo"
+        },
+        "gmrRefNo_hidden": {
+            "gmrRefNo_hidden": "GMR No",
+            "labelKey": "gmrRefNo_hidden",
+            "dataType": "Number"
+        },       
+        "supplierRefId": {
+            "supplierRefId": "Supplier Reference ID",
+            "labelKey": "supplierRefId"
+        },
+        "contractDeliveryRefNo": {
+            "contractDeliveryRefNo": "Contract Delivery Item",
+            "labelKey": "contractDeliveryRefNo"
+        },
+        "deliveryItemRefNo_hidden": {
+            "deliveryItemRefNo_hidden": "Contract No",
+            "labelKey": "deliveryItemRefNo_hidden",
+            "dataType": "Number"
+        },
+        "invoiceIssueDate": {
+            "invoiceIssueDate": "Invoice Issue Date",
+            "dataType": "date",
+            "labelKey": "invoiceIssueDate",
+            "sourceDateFormat": "dd-MMM-yyyy"
+        },
+        "invoiceDueDate": {
+            "invoiceDueDate": "invoice Due Date",
+            "dataType": "date",
+            "labelKey": "invoiceDueDate",
+            "sourceDateFormat": "dd-MMM-yyyy"
+        },
+        "invoiceAmount": {
+            "invoiceAmount": "Amount",
+            "labelKey": "invoiceAmount"
+        },
+        "invoiceAmount_hidden": {
+            "invoiceAmount_hidden": "Amount",
+            "labelKey": "invoiceAmount_hidden",
+            "dataType": "Number"
+        },
+        "invoiceCurrency": {
+            "invoiceCurrency": "Currency",
+            "labelKey": "invoiceCurrency"
+        },
+        "invoiceType": {
+            "invoiceType": "Invoice Type",
+            "labelKey": "invoiceType"
+        },
+        "invoicedWeight": {
+            "invoicedWeight": "Invoiced Weight",
+            "labelKey": "invoicedWeight"
+        },
+        "invoicedWeight_hidden": {
+            "invoicedWeight_hidden": "Invoiced Weight",
+            "labelKey": "invoicedWeight_hidden",
+            "dataType": "Number"
+        },
+        "invoicedWeightUnit": {
+            "invoicedWeightUnit": "Weight Unit",
+            "labelKey": "invoicedWeightUnit"
+        },
+        "supplierName": {
+            "supplierName": "Supplier",
+            "labelKey": "supplierName"
+        },
+        "billToAddress": {
+            "billToAddress": "Bill To",
+            "labelKey": "billToAddress"
+        },
+        "smelterName": {
+            "smelterName": "Smelter",
+            "labelKey": "smelterName"
+        },
+        "approvalDate": {
+            "approvalDate": "Approval Date",
+            "labelKey": "approvalDate",
+            "dataType": "date",
+            "sourceDateFormat": "dd-MMM-yyyy"
+        },
+        "suppierInvoiceNo": {
+            "suppierInvoiceNo": "Supplier Invoice No",
+            "labelKey": "suppierInvoiceNo"
+        },
+        "pcdiId": {
+            "pcdiId": "pcdiId",
+            "labelKey": "pcdiId"
+        }
+    },
+    "layout": {
+        "fields": []
+    }
+}

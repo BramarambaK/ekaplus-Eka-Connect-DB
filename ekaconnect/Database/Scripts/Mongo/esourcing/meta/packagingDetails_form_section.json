@@ -1,0 +1,72 @@
+{
+    "_id" : "packagingDetails_form_section",
+    "name" : "Packaging Details Form",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "label" : "packagingDetails form section",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "background" : "white",
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "name" : "create",
+        "formStyle" : {},
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "decisions" : [],
+    "labelKey" : "",
+    "fields" : [ 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "modeOfTransport"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "containerDetails",
+                "disabled" : true
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "advicedNetweight",
+                "disabled" : true
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "2%",
+                    "width" : "23%"
+                },
+                "suffix" : "",
+                "filter" : true,
+                "key" : "maxLotSize",
+                "disabled" : true
+            }
+        ]
+    ],
+    "taskId" : "packagingDetails_form_section",
+    "object" : "9f254e8f-3f45-4de8-b366-7469c7f2f623"
+}

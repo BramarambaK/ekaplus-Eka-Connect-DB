@@ -1,0 +1,9 @@
+{
+    "_id" : "supplierlistingInvoice_V2_processor_esourcing",
+    "name" : "supplierlistinginvoice_V2",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "snippet" : "var result = {};\r\n    result.data = req.body.bulkPayLoadData;\r\n\r\n    for (var i = 0; i < result.data.length; i++) {\r\n      if (result.data[i].gmrRefNo) {\r\n        result.data[i].gmrRefNo_hidden = parseInt(result.data[i].gmrRefNo.split(\"-\")[1]);\r\n        \/\/ result.data[i].gmrRefNo_hidden = result.data[i].gmrRefNo.split(\"-\")[1];\r\n      }\r\n\r\n      if (result.data[i].contractDeliveryRefNo) {\r\n        let item = result.data[i].contractDeliveryRefNo.split(\"-\");\r\n        item[3] = parseInt(item[3].toString().replace(\".\", \"\"), 10);\r\n        result.data[i].deliveryItemRefNo_hidden = parseFloat(item[1] + '.' + item[3]);\r\n      }\r\n\r\n      if (result.data[i].invoiceAmount) {\r\n        let no1 = parseInt(result.data[i].invoiceAmount.split(\",\").join(''));\r\n        let no2 = result.data[i].invoiceAmount.split(\".\");\r\n        result.data[i].invoiceAmount_hidden = parseFloat(no1 + '.' + no2[1]);\r\n      }\r\n\r\n      if (result.data[i].invoicedWeight) {\r\n        let no1 = parseInt(result.data[i].invoicedWeight.split(\",\").join(''));\r\n        let no2 = result.data[i].invoicedWeight.split(\".\");\r\n        result.data[i].invoicedWeight_hidden = parseFloat(no1 + '.' + no2[1]);\r\n      }\r\n      \r\n    }\r\n    console.log(\"Response length - \" + result.data.length);\r\n    res.status(200).send(result);",
+    "sys__UUID" : "5e43c82d-ee7a-4b50-b4e8-6ae111ded6f6",
+    "type" : "processor"
+}

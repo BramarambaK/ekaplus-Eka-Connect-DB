@@ -1,0 +1,120 @@
+{
+  "_id": "finalassay_object_esourcing",
+  "fields": {
+    "supplier": {
+      "supplier": " ",
+      "labelKey": "supplier",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "supplier",
+      "children": ["contractItem"]
+    },
+    "contractItem": {
+      "contractItem": " ",
+      "labelKey": "contractItem",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "contractItem",
+      "parent": ["supplier"],
+      "autoDisplayFirst" : true
+    },
+    "filter": {
+      "filter": "Filter",
+      "labelKey": "filter",
+      "type": "button",
+      "dataType": "String"
+    },
+    "reset": {
+      "reset": "Reset",
+      "labelKey": "reset",
+      "type": "button",
+      "dataType": "String"
+    },
+    "export": {
+      "export": "Export",
+      "labelKey": "Export",
+      "type": "button",
+      "dataType": "String",
+      "title": "Export to Excel"
+    },
+    "gmrRefNo": {
+      "gmrRefNo": "GMR No",
+      "labelKey": "gmrRefNo",
+      "type": "button",
+      "dataType": "String"
+    },
+    "lotNumberColum": {
+      "lotNumberColum": "Lot No",
+      "labelKey": "lotNumberColum",
+      "type": "button",
+      "dataType": "String"
+    },
+    "deliveryItemRefNo": {
+      "deliveryItemRefNo": "DeliveryItem RefNo",
+      "labelKey": "deliveryItemRefNo",
+      "type": "button",
+      "dataType": "String"
+    },
+    "qualityName": {
+      "qualityName": "Quality",
+      "labelKey": "qualityName",
+      "type": "button",
+      "dataType": "String"
+    },
+    "dryWeight": {
+      "dryWeight": "Dry Weight",
+      "labelKey": "dryWeight",
+      "type": "button",
+      "dataType": "Number"
+    },
+    "qtyUnit": {
+      "qtyUnit": "Weight Unit",
+      "labelKey": "qtyUnit",
+      "type": "button",
+      "dataType": "String"
+    },
+    "senderRefNo": {
+      "senderRefNo": "Supplier Reference ID",
+      "labelKey": "senderRefNo",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "loadingDate": {
+      "loadingDate": "Loading Date",
+      "labelKey": "loadingDate",
+      "type": "datepicker",
+      "dataType": "String"
+    },
+    "arrivalDate": {
+      "arrivalDate": "Arrival Date",
+      "labelKey": "arrivalDate",
+      "type": "datepicker",
+      "dataType": "String"
+    },
+    "dropdownValuesupplier": {
+      "dropdownValuesupplier": "dropdownValuesupplier",
+      "labelKey": "dropdownValuesupplier",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "dropdownValueContract": {
+      "dropdownValueContract": "dropdownValueContract",
+      "labelKey": "dropdownValueContract",
+      "type": "hidden",
+      "dataType": "String"
+    }
+  },
+  "label": "FINALASSAY_OBJECT",
+  "name": "finalassay_esourcing",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "sys__UUID": "720be2ae-f8d4-4903-9910-fdf637dd6dac",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1"
+}

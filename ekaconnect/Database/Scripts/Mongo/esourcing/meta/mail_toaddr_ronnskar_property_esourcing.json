@@ -1,0 +1,15 @@
+{
+    "_id" : "mail_toaddr_ronnskar_property_esourcing",
+    "type" : "property",
+    "name" : "mail_toaddr_ronnskar",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "",
+    "length" : "100",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "Create GMR - to Mail for Ronnskar location",
+    "description" : "to address mail for ronnskar"
+}

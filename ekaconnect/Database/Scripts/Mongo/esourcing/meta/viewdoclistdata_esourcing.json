@@ -1,0 +1,39 @@
+{
+    "_id" : "viewdoclistdata_esourcing",
+    "componentType" : "UserTask",
+    "version" : "V2",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "data" : "output.viewdoclistdata_SC",
+                    "name" : "EXTERNAL_API_DOCLIST",
+                    "returnData" : "Y"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }
+    ],
+    "label" : "Activity logs",
+    "labelKey" : "VIEW_DOCLIST_BASIC",
+    "layout" : {
+        "name" : "gmr",
+        "key" : "GMR Ref No",
+        "backButton" : true,
+        "header" : {
+            "field" : "gmrRefNo"
+        }
+    },
+    "object" : "0534be84-2f20-468d-86d7-6117ccd3f566",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "taskId" : "viewdoclistdata_SC",
+    "type" : "workflow"
+}

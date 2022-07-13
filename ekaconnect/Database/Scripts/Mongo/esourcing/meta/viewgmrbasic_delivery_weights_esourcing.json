@@ -1,0 +1,106 @@
+{
+    "_id" : "viewgmrbasic_delivery_weights_esourcing",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "40d8e416-f318-4b58-a621-883f2f1b0f4e"
+    },
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "label" : "Delivery",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "gmr",
+        "key" : "GMR Ref No",
+        "backButton" : true,
+        "header" : {
+            "field" : "gmrRefNo"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "deliveryWeightsListing",
+					"cache": true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "VIEW_GMR_BASIC_DELIVERY_WEIGHTS",
+    "fields" : [ 
+        {
+            "placement" : "topHeading",
+            "key" : "Order Status Log"
+        }, 
+        {
+            "placement" : "topHeading",
+            "key" : "orderNo"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "tradeType"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "instrumentType"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "instrument"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "source"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "symbol"
+        }, 
+        {
+            "placement" : "header",
+            "key" : "tradeDate"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "transactTime"
+        }, 
+        {
+            "placement" : "row2",
+            "key" : "orderStatus"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "tradeId"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "orderType"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "limitPrice"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "orderQuantity"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "filledQuantity"
+        }, 
+        {
+            "placement" : "row3",
+            "key" : "lastPx"
+        }
+    ],
+    "taskId" : "viewgmrbasic_delivery_weights",
+    "object" : "0534be84-2f20-468d-86d7-6117ccd3f566"
+}

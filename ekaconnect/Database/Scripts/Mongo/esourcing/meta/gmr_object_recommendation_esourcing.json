@@ -1,0 +1,73 @@
+{
+    "_id" : "gmrObject_esourcing",
+    "componentType" : "UserTask",
+    "tags":"trainingData",
+    "decisions" : [         
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EDIT_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.gmrObject",
+                    "name" : "gmrObject"                   
+                }
+            ],
+            "label" : "GMR"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "deliveryItemRefNo",
+            "sort" : true,
+            "key" : "deliveryItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "cpName",
+            "sort" : true,
+            "key" : "cpName"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "labelKey" : "GMROBJECT",
+    "layout" : {
+	    "header" : {
+            "title" : "GMR Object"
+        },
+		"footer" : false,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : false,
+        "menu" : false,
+        "refreshData" : true,
+        "showErrorInPopUp" : {
+            "navigateURL" : "supplierlisting",
+            "buttonLabel" : "Update Later"
+        }
+    },
+    "object" : "0534be84-2f20-468d-86d7-6117ccd3f566",
+    "objectAction" : "LISTVIEW",
+    "payLoad" : "",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "rows" : "100",
+    "taskId" : "gmrObject",
+    "theme" : "theme-grid-light",
+    "type" : "workflow"
+}

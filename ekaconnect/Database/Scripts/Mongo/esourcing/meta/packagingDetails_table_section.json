@@ -1,0 +1,126 @@
+{
+    "_id" : "packagingDetails_table_section",
+    "name" : "PackagingDetails Table Section",
+    "componentType" : "UserTask",
+    "processorInfo" : {
+        "processorId" : "bf3038cb-d55f-486e-816b-8d19a94d4ab0"
+    },
+    "decisions" : [],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "containerNo",
+            "sort" : true,
+            "key" : "containerNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "containerSize",
+            "sort" : true,
+            "key" : "containerSize"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "sealNo",
+            "sort" : true,
+            "key" : "sealNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "loose",
+            "sort" : true,
+            "key" : "loose"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "bags",
+            "sort" : true,
+            "key" : "bags"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "boxes",
+            "sort" : true,
+            "key" : "boxes"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "pallets",
+            "sort" : true,
+            "key" : "pallets"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "drums",
+            "sort" : true,
+            "key" : "drums"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "totalPackage",
+            "sort" : true,
+            "key" : "totalPackage"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "label" : "netWeight",
+            "sort" : true,
+            "key" : "netWeight"
+        }
+    ],
+    "payload_Data" : "completeData",
+    "label" : "Purchase Order - Select Purchase Order",
+    "labelKey" : "DELIVER_IEM_LISTING",
+    "layout" : {
+        "tableEditing" : true,
+        "cache" : false,
+        "selection" : "row",
+        "lazyLoading" : true,
+        "name" : "list",
+        "footer" : false,
+        "limitHeight" : true,
+        "pagination" : false,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "serverSearch" : true,
+            "columnFilter" : true,
+            "serverFilter" : true,
+            "sortFilter" : true,
+            "reset" : true,
+            "export" : true,
+            "customization" : true,
+            "showFilterHeader" : true
+        },
+        "optionsOrder" : [ 
+            "outcome", 
+            "customization", 
+            "search", 
+            "reload", 
+            "reset", 
+            "columnFilter", 
+            "filter", 
+            "export"
+        ],
+        "theme" : "theme-grid-white",
+        "disabledDecision" : true
+    },
+    "object" : "9f254e8f-3f45-4de8-b366-7469c7f2f623",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "taskId" : "packagingDetails_table_section",
+    "type" : "workflow"
+}

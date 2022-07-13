@@ -1,0 +1,26 @@
+{
+    "_id" : "finalAssayListing_esourcing",
+    "componentType" : "UserTask",
+    "version" : "V2",
+    "decisions" : [ 	
+		{
+            "objectAction" : "READ",
+            "labelkey" : "REVIEW",
+            "task" : "finalAssayListing_SC",
+            "outcomes" : [ 
+			    
+                {
+                    "data" : "output.finalAssayListing_SC",
+                    "name" : "EXTERNAL_API_FINALASSAYLISTING",
+                    "returnData" : "Y"
+                }
+            ]
+        }
+    ],
+    "object" : "720be2ae-f8d4-4903-9910-fdf637dd6dac",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "taskId" : "finalAssayListing_SC",
+    "type" : "workflow"
+}

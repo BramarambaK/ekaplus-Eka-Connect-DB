@@ -1,0 +1,15 @@
+{
+    "_id" : "gmr_create_subject_property_esourcing",
+    "type" : "property",
+    "name" : "gmr_create_subject",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : "New GMR:<GmrRefNo> - <supplierName> - <qualityName>",
+    "length" : "500",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "label" : "GMR CREATE SUBJECT",
+    "description" : "email subject in create gmr"
+}

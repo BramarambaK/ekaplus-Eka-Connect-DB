@@ -1,0 +1,18 @@
+{
+    "_id" : "recommendationObject_esourcing",
+    "type" : "object",
+    "name" : "Recommendation_esourcing",
+    "fields" : {
+        "generalDetails" : {
+            "generalDetails" : "generalDetails",
+            "labelKey" : "generalDetails",
+            "isRequired" : false
+        },
+        "itemDetails" : {
+            "itemDetails" : "itemDetails",
+            "labelKey" : "itemDetails",
+            "isRequired" : false
+        }
+    },
+    "sys__UUID" : "de69f1f6-07fe-4b81-b411-524caa2392c8"
+}

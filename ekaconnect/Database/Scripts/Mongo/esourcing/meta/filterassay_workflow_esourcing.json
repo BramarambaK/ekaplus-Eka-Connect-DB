@@ -1,0 +1,105 @@
+{
+  "_id": "filterassay_esourcing",
+  "componentType": "UserTask",
+
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "EXPORT",
+      "task": "exportassay",
+      "decisionName": "export",
+      "outcomes": [
+        {
+          "name": "EXPORTACTION",
+          "action": "export",
+          "actionWorkflow": "finalassaylistdynamic",
+          "type": "client"
+        }
+      ],
+      "label": "EXPORT",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "255px"
+        },
+        "formItemStyle": {
+          "margin": "-25px 10px -10px auto"
+        },
+        "key": "supplier",
+        "filter": true,
+        "event": "external",
+        "label": " ",
+        "autoDisplayFirst": true
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "key": "contractItem",
+        "event": "external",
+        "label": " ",
+        "placeholder": "Select Contract Item",
+        "autoDisplayFirst": true
+      },
+      {
+        "style": {
+          "width": "36.5px"
+        },
+        "key": "export",
+        "decision": "export",
+        "label": "",
+        "iconClass": "fa fa-download",
+        "btnClass": "btn btn-primary"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "dropdownValuesupplier"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "dropdownValueContract"
+      }
+    ]
+  ],
+  "label": "",
+  "layout": {
+    "defaultFormItemStyle": {
+      "margin-top": "-25px",
+      "margin-bottom": "-10px",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formLayoutStyle": {
+      "position": "absolute",
+      "right": "-38px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "processorInfo": {
+      "processorId": "e509d06d-2409-493c-8b66-9f005b7e4d20"
+    }
+  },
+  "object": "720be2ae-f8d4-4903-9910-fdf637dd6dac",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "taskId": "filterassay",
+  "type": "workflow",
+  "sys__UUID": "201ac751-3175-47ee-b802-54d2174e9348"
+}

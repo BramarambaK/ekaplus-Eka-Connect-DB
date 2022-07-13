@@ -1,0 +1,10 @@
+{
+    "_id" : "stockURLProperty_esourcing",
+    "type" : "property",
+    "name" : "stock_url",
+	"label" : "STOCK URL",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "150"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "news_object_esourcing",
+  "name": "news_esourcing",
+  "type": "object",
+  "sys__UUID": "982560fd-ca9c-420d-b8d7-890e5eb42591",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "fields": {
+    "Title" : {
+      "Title" : "Title",
+      "labelKey" : "Title"
+  },
+  "Description" : {
+      "Description" : "Description",
+      "labelKey" : "Description"
+  }, 
+  "Date": {
+	"Date": "Date",
+	"labelKey": "Date"
+  }
+   
+  },
+  "layout": {
+    "fields": []
+  }
+}

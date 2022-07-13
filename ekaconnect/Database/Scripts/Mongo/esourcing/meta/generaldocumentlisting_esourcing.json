@@ -1,0 +1,108 @@
+{
+    "_id" : "generaldocumentlisting_esourcing",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "uploadpopupcss",
+                    "name" : "generaldocumentupload"
+                }
+            ],
+            "label" : "Add Document",
+            "position" : "top"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "EDIT_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.generaldocumentlisting",
+                    "name" : "generaldocumentdownload",
+                    "headers" : {
+                        "storageType" : "awsS3",
+						"folderInS3" : "generalDocs"
+                    },
+					"forceDownload": true,
+                    "type" : "downloadLink"
+                }
+            ],
+            "label" : "Download",
+			"iconClass" : "download-icon"
+			
+        },
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.generaldocumentlisting",
+                    "name" : "generaldocumentdelete",
+                    "displayType" : "popup"
+                }
+            ],
+            "label" : "Delete",
+            "iconClass" : "delete-icon"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Description",
+            "sort" : true,
+            "key" : "layoutdescription"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Document",
+            "sort" : true,
+            "key" : "fileName"
+        }
+    ],
+    "getDataFromExternalAPI" : false,
+    "labelKey" : "FILE_LISTING1",
+	"label" :  "General Documents & Templates",
+    "layout" : {
+		"footer" : false,
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : false,
+        "menu" : false,
+        "refreshData" : true,
+        "showErrorInPopUp" : {
+            "navigateURL" : "supplierlisting",
+            "buttonLabel" : "Update Later"
+        }
+    },
+    "object" : "a2de750a-f462-448b-ab1f-e3ab1be0127d",
+    "objectAction" : "LISTVIEW",
+    "payLoad" : "",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "rows" : "100",
+    "taskId" : "generaldocumentlisting",
+    "theme" : "theme-grid-light",
+    "type" : "workflow"
+}

@@ -1,0 +1,110 @@
+{
+  "_id": "finalassaylistdynamic_esourcing",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "",
+  "type": "workflow",
+  "payLoad": "selected",
+  "processorInfo": {
+    "processorId": "18b68396-49b2-4d7f-a47a-d606238cd02a"
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "showCheckbox": false,
+    "limitHeight": false,
+    "selectionMode": "none",
+    "tableEditing": false,
+    "scrollHeight": "calc(100vh - 300px)",
+    "layoutProcessor": {
+      "processorId": "49a5776d-5589-4b7d-8602-87bdb18f64c2"
+    }
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.viewgmrfinalassayUpdated",
+          "name": "viewgmrfinalassay",
+          "setSelected": [
+            "selected.viewgmrfinalassayUpdated"
+          ]
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "key": "gmrRefNo",
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "task": "custom-link",
+      "category": "link",
+      "label": "GMR No"
+    },
+    {
+      "key": "lotNumberColum",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "senderRefNo",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "qualityName",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "loadingDate",
+      "filter": true,
+      "dateformat": "DD-MMM-YYYY",
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "arrivalDate",
+      "dateformat": "DD-MMM-YYYY",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "key": "dryWeight",
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "align": "right"
+    },
+    {
+      "key": "qtyUnit",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    }
+  ],
+  "taskId": "finalassaylistdynamic",
+  "object": "720be2ae-f8d4-4903-9910-fdf637dd6dac"
+}

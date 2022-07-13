@@ -1,0 +1,69 @@
+{
+  "_id": "news_workflow_esourcing",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "News",
+  "type": "workflow",
+  "rows": "100",
+  "layout": {
+    "name": "list",
+	"cache" : true,
+	"footer" : false,
+    "options": {
+      
+    },
+    "theme": "theme-grid-white"
+  },
+  "theme": "theme-grid-light",
+  "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/collectionmapper/7e484cae-36aa-46dc-b9ae-33c8d246f056/982560fd-ca9c-420d-b8d7-890e5eb42591/fetchCollectionRecords",
+        "headers" : {
+            "ttl" : "60"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "mergePayload" : true,
+        "useInputMapping" : false,
+        "body" : {
+            "collectionName" : "News"
+        }
+    },
+   "getDataFromExternalAPI" : true,
+  "decisions": [
+    
+  ],
+  "labelKey": "News",
+  "fields": [   
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Title",
+      "sort": true,
+	  "width" : "20%",
+      "key": "Title"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Description",
+      "sort": true,
+	  "width" : "60%",
+      "key": "Description"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Date",
+      "sort": true,
+      "key": "Date",
+	  "width" : "6%",
+      "dateformat": "DD-MMM-YYYY"
+    }	
+    
+  ],
+  "taskId": "news",
+  "object": "982560fd-ca9c-420d-b8d7-890e5eb42591"
+}

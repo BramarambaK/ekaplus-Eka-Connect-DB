@@ -1,0 +1,327 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "getDataFromExternalAPI": false,
+  "processorInfo": {"processorId": "0a4ada0a-f8c4-4a80-99c0-83fca56ae647"},
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Advance Shipment Notices",
+  "type": "workflow",
+  "rows": "100",
+  "layout": {
+    "name": "list",
+	"lazyLoading": true,
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white"
+  },
+  "theme": "theme-grid-light",
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [{
+        "data": "selected.supplierlisting",
+        "name": "viewgmrbasic"
+      }]
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "EDIT",
+      "labelkey": "EDIT_GMR_BASIC",
+      "selection": "row",
+      "outcomes": [{
+        "data": "selected.supplierlisting",
+        "name": "editgmrbasic"
+      }],
+      "label": "Update",
+      "iconClass": "cr-edit-icon"
+    }
+  ],
+  "_id": "supplierlisting_esourcing_Mobile",
+  "labelKey": "GMR_LISTING",
+  "fields": [
+    {
+      "filter": true,
+      "task": "custom-link",
+      "edit": false,
+      "label": "GMR No",
+      "sort": true,
+      "category": "link",
+      "key": "gmrRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Sender Ref No",
+      "sort": true,
+      "key": "senderRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Quality",
+      "sort": true,
+      "key": "qualityName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Contract Delivery Item",
+      "sort": true,
+      "key": "deliveryItemRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Advised Net Weight",
+      "sort": true,
+      "roundoff": "5",
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Weight Unit",
+      "sort": true,
+      "key": "quantityUnit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Material Description",
+      "sort": true,
+      "key": "MaterialDescription"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Loading Date",
+      "sort": true,
+      "key": "shipmentdate",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Country of Loading",
+      "sort": true,
+      "key": "loadingCountry"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Country of Origin",
+      "sort": true,
+      "key": "countryOfOrigin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Mode of Transport",
+      "sort": true,
+      "key": "modeOfTransport"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Expected Arrival Date",
+      "sort": true,
+      "key": "eta",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Destination (Buyer)",
+      "sort": true,
+      "key": "incoLocation"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Container No/ Transport ID",
+      "sort": true,
+      "key": "containerNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Container Size",
+      "sort": true,
+      "key": "containerSize"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Arrival Date",
+      "sort": true,
+      "key": "landingDate",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Wet Weight",
+      "sort": true,
+      "roundoff": "3",
+      "key": "wetWeight"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Dry Weight",
+      "sort": true,
+      "roundoff": "3",
+      "key": "dryWeight"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "W&S Date",
+      "sort": true,
+      "key": "wnsDate",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Assay Due Date",
+      "sort": true,
+      "key": "assayDueDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Latest Assay Type",
+      "sort": true,
+      "key": "latestAssayType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Latest Pricing Status",
+      "sort": true,
+      "key": "currentPricingStatus"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Marked For Umpire",
+      "sort": true,
+      "key": "markedForUmpire"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Gmr Due Date",
+      "sort": true,
+      "key": "gmrDueDate",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Latest Invoice Type",
+      "sort": true,
+      "key": "latestInvoiceType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Invoice Due Date",
+      "sort": true,
+      "key": "invoiceDueDate",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Supplier",
+      "sort": true,
+      "key": "cpName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Created Date",
+      "sort": true,
+      "key": "gmrCreatedDate",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Created By",
+      "sort": true,
+      "key": "createdBy"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Updated Date",
+      "sort": true,
+      "key": "updatedDate",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Updated By",
+      "sort": true,
+      "key": "updatedBy"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Moisture",
+      "sort": true,
+      "key": "moisture"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Assay Rule",
+      "sort": true,
+      "key": "assaydate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Boliden Assay as Final",
+      "sort": true,
+      "key": "bolidenAssayAsFinal"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Automatic Pricing",
+      "sort": true,
+      "key": "automaticpricing"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Earliest Price Fixation",
+      "sort": true,
+      "key": "earliestPriceFixation"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Final Assay Ready for Pricing",
+      "sort": true,
+      "key": "finalpricing"
+    }
+  ],
+  "taskId": "supplierlisting_mobile_change",
+  "object": "f9ca5056-8ff8-4142-bfe1-725db3871557",
+    "deviceType" : "mobile"
+}

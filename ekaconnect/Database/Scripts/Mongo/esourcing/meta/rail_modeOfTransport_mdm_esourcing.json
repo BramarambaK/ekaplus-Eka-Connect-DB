@@ -1,0 +1,8 @@
+{
+    "_id" : "modeTransport001MDM_esourcing",
+    "key" : "modeOfTransport-001",
+    "value" : "Rail",
+    "object" : "modeOfTransport_esourcing",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "connectmdm"
+}
