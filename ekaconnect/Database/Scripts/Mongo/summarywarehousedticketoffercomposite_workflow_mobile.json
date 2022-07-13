@@ -1,0 +1,182 @@
+{
+  "_id": "summarywarehousedticketoffercomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Offer for warehoused tickets",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenuwarehousedticket"
+    },
+    {
+      "style": {
+        "padding": "22px 21px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "0px 5px"
+      },
+      "workflows": [
+        {
+          "name": "warehousedticketsummary",
+          "data": "selected.summarywarehousedticketoffercomposite.warehousedticketsummary.data"
+        }
+      ]
+    },
+    {
+      "name": "submitwarehousedticketstnc"
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Submit Offer"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "customMenu": true,
+    "breadcrumbs": [
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketshome"
+      },
+      {
+        "label": "Offer for warehoused tickets",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketsmainhome",
+      "outcomes": [
+        {
+          "name": "ticketscomposite",
+          "clearSelected": [
+            "selected.ticketscomposite",
+            "selected",
+            "menuDetails"
+          ]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "ticketshome",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "clearSelected": [
+            "selected.ticketlistingcomposite",
+            "selected",
+            "menuDetails"
+          ]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelenterwarehousedticket_popup",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "15px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "enterwarehousedticketoffercomposite",
+          "clearSelected": [
+            "selected.summarywarehousedticketoffercomposite.submitwarehousedticketstnc"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "12px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "CREATE",
+      "type": "submit",
+      "task": "compositeSave",
+      "pickSelectedData": {
+        "summarywarehousedticketoffercomposite.warehousedticketsummary": "selected.summarywarehousedticketoffercomposite.warehousedticketsummary"
+      },
+      "outcomes": [
+        {
+          "data": "output.summarywarehousedticketoffercomposite",
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Request has been successfully sent",
+              "messageExpression": "return '${msg}'"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "name": "_ST_WAREHOUSED_TICKETS"
+        },
+        {
+          "showToaster": true,
+          "data": "output._ST_WAREHOUSED_TICKETS",
+          "name": "ticketlistingcomposite",
+          "clearSelected": [
+            "selected.summarywarehousedticketoffercomposite",
+            "selected.enterwarehousedticketoffercomposite",
+            "selected.warehousedticketoffercomposite",
+            "menuDetails"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Submit offer",
+      "position": "bottom",
+      "disabled": "selected.summarywarehousedticketoffercomposite.submitwarehousedticketstnc.wtnc.length < '2' "
+    }
+  ],
+  "taskId": "summarywarehousedticketoffercomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "3380a6b8-7fba-4780-a740-604ffcfbdec6",
+  "deviceType": "mobile"
+}

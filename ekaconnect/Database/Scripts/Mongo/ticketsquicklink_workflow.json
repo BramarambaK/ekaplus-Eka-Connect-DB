@@ -1,0 +1,41 @@
+{
+  "_id": "ticketsquicklink_workflow",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "inputData": {
+    "type": "menuObject",
+    "config": {
+      "menuId": "ddf62652-a9b9-4b9a-90cc-d4871db2e553"
+    }
+  },
+  "label": "Quick Link",
+  "labelKey": "Quick Link",
+  "layout": {
+    "name": "flexible-menu",
+	"component": "FlexibleMenuComponent",
+    "header": {
+      "label": "Quick links",
+      "style": {
+        "color": "#3B4047",
+        "font-size": "18px",
+        "font-weight": "600",
+        "padding": "0px 10px 10px 20px",
+        "margin": "0 5px",
+        "border-bottom": "solid 1px #DBE1EB"
+      }
+    },
+    "quickLinkMenuStyle": {
+   "style": {
+     "margin-bottom": "-18px"
+   } 
+  }
+  },
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "ticketsquicklink",
+  "type": "workflow"
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "ticketActions_property",
+  "type": "property",
+  "name": "ticketactions",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "150",
+  "defaultValue": [
+    {
+      "key": "Allocate Ticket",
+      "value": "Allocate Ticket"
+    },
+    {
+      "key": "Make an offer",
+      "value": "Make an offer"
+    },
+    {
+      "key": "Amend ticket",
+      "value": "Amend ticket"
+    },
+    {
+      "key": "Transfer ticket",
+      "value": "Transfer ticket"
+    }
+  ],
+  "label": "Tickets Actions",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Property is used to show dropdown"
+}

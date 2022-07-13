@@ -1,0 +1,214 @@
+{
+  "_id": "submittickettransfercomposite",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Transfer tickets",
+  "version": "V2",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenutransfertickets"
+    },
+    {
+      "style": {
+        "padding": "23px 26px 1px 26px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "0px 5px"
+      },
+      "workflows": [
+        {
+          "name": "submittickettransfertableview",
+          "data": "selected.submittickettransfercomposite.submittickettransfertableview"
+        }
+      ]
+    },
+    {
+      "workflows": [
+        {
+          "name": "submittransferticketstnc"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Transfer tickets",
+      "style": {
+        "margin-bottom": "16px"
+      }
+    },
+    "customClass": true,
+    "name": "customv2",
+    "footerClass": "custom-footer",
+    "menu": false,
+    "customMenu": true,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketslist"
+      },
+      {
+        "label": "Transfer tickets",
+        "type": "string"
+      }
+    ],
+    "clearSelected": [
+      "selected.amendticketwarehoused.ticketlistingquery",
+      "selected.amendticketwarehoused.contractdomainquery",
+      "selected.submittickettransfercomposite.ticketlistingquery"
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketslist",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "clearSelected": [
+            "selected.ticketlistingcomposite",
+            "selected.tickettransfercomposite",
+            "selected.enterngrcomposite",
+            "selected.submittickettransfercomposite"
+          ]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "listinghome",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "name": "cancelpopup_ticketTransfer_submit",
+          "data": "selected.viewticketwarehousedcomposite.amendticketwarehoused",
+          "restoreState": true
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class",
+          "name": "cancelpopup_ticketTransfer_submit",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "36px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "enterngrcomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "17px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "CREATE",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": false,
+      "disabled": "selected.submittickettransfercomposite.submittransferticketstnc.ttnc.length < '2'",
+      "pickSelectedData": {
+        "submittickettransfercomposite": "selected.submittickettransfercomposite"
+      },
+      "outcomes": [
+        {
+          "data": "output.submittickettransfercomposite",
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Request Id sent successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "name": "_ST_PROCESS_SUBMIT_TRANSFER_TICKETS"
+        },
+        {
+          "data": "output._ST_PROCESS_SUBMIT_TRANSFER_TICKETS",
+          "name": "ticketlistingcomposite",
+          "restoreStateQuery": "ticketlistingcomposite",
+          "restoreState": true,
+          "showToaster": true,
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Request successfully submitted ",
+              "messageExpression": "return '${requestId}' + ' has been successfully sent.'"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "clearSelected": [
+            "selected.submittickettransfercomposite",
+            "selected.amendticketwarehoused",
+            "menuDetails"
+          ]
+        }
+      ],
+      "formLoader": {
+        "text": "Submitting request",
+        "secondaryText": "Please do not close or refresh your browser as this may take a few minutes"
+      },
+      "style": {
+        "margin-right": "36px"
+      },
+      "label": "Submit",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "submittickettransfercomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys_UUID": "a1e2dd30-8355-4eb3-ba2d-2f39b1640538"
+}

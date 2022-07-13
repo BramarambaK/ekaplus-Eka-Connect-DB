@@ -1,0 +1,21 @@
+{
+    "_id" : "template_menu_Mobile_customerconnect",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "layout" : {
+        "type" : "template",
+        "component" : "AppSidebarV2Component",
+        "config" : {
+            "display" : false,
+            "minimized" : true,
+            "fixed" : true
+        }
+    },
+    "taskId" : "MenuMobileWorkflow",
+    "decisions" : [],
+    "object" : "ed0e1ad9-1120-4148-9fa3-4f21839424fa",
+    "sys__UUID" : "c1045456-821a-4d51-ab99-2b7aed0598cc"
+}

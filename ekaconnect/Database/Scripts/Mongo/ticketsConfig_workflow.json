@@ -1,0 +1,47 @@
+{
+    "_id" : "ticketsConfig_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "ticketsConfig",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "label" : "ticketsConfig",
+    "type" : "workflow",
+    "tag" : "config",
+    "layout" : {
+        "header" : {
+            "label" : "Tickets",
+            "style" : {
+                "font-size" : "22px"
+            }
+        },
+        "name" : "ticketsConfig"
+    },
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+		"defaultBody" : {
+			"payLoadData" : {
+				"pagination" : {
+					"start" : "@requestBody.qP.from",
+					"limit" : "@requestBody.qP.size"
+				}
+			}
+		},
+        "config" : {
+            "id" : "push_ticketData",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : true,
+            "statusFlagWorklowTask" : "ticketsConfig",
+			"hasStatusFlag" : true,
+			"backupIndex" : false,
+			"reIndex" : false
+        }
+    },
+    "fields" : [],
+    "decisions" : [],
+    "labelKey" : "ticketsConfig",
+	"description" : "Execute to Crawl ticket Data"
+}

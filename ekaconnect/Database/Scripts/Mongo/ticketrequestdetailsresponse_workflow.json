@@ -1,0 +1,100 @@
+{
+  "_id": "ticketrequestdetailsresponse_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Manage request",
+  "type": "workflow",
+  "version": "V2",
+  "layout": {
+    "name": "create",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "type": "row",
+    "showErrorInToastr": true,
+    "cardClass": "allocate-banner offer-contract-details-banner",
+    "theme": "horizontal-details contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "style": {
+          "display": "flex",
+          "margin": "4px 0px 0px 0px"
+        },
+        "key": "allocateHeader",
+        "type": "hidden",
+        "class": "banner-card-dropdown manage-offer-header",
+        "label": "Withdraw this request if it is no longer valid. It will automatically be withdraw on the offer expiry date",
+        "labelExpression": "return 'Withdraw this request if it is no longer valid. It will automatically withdraw on ' + ('${offerExpiryDate}' ? moment('${offerExpiryDate}').format('DD/MM/YYYY') : 'expiry date')+'.'",
+        "formLabelStyle": {
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "15px",
+          "width": "791px",
+          "white-space": "normal",
+          "flex": "0 0 791px",
+          "height": "48px"
+        },
+        "formItemStyle": {
+          "width": "auto"
+        }
+      },
+      {
+        "class": "banner-card-button",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {},
+        "key": "withdrawButton",
+        "type": "button",
+        "label": "Withdraw",
+        "btnClass": "allocate-banner-button",
+        "decision": "withdrawrequesttask"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "DELETE",
+      "labelkey": "UPDATE",
+      "task": "ticketrequestdetailsresponse",
+      "decisionName": "withdrawrequesttask",
+      "type": "submit",
+      "passSelectedData": "selected.viewticketrequestcomposite.ticketDetails",
+      "outcomes": [
+        {
+          "data": "output.ticketrequestdetailsresponse",
+          "appendMsg": true,
+          "name": "_ST_PROCESS_TICKET_BANNER_WITHDRAW"
+        },
+        {
+          "data": "output._ST_PROCESS_TICKET_BANNER_WITHDRAW",
+          "multipleResponse": true,
+          "condition": "return ${withdrawRequestInvalid} == true",
+          "name": "ticketlistingcomposite"
+        },
+        {
+          "data": "output._ST_PROCESS_TICKET_BANNER_WITHDRAW",
+          "showToaster": true,
+          "appendMsg": true,
+          "restoreStateQuery": "ticketlistingcomposite",
+          "restoreState": true,
+          "condition": "return ${withdrawRequestInvalid} == false",
+          "result": {
+            "success": {
+              "message": "Withdraw request successfully",
+              "messageExpression": "return '${requestId} has been successfully withdrawn.'"
+            }
+          },
+          "name": "ticketlistingcomposite"
+        }
+      ]
+    }
+  ],
+  "taskId": "ticketrequestdetailsresponse",
+  "labelKey": "Cards View",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

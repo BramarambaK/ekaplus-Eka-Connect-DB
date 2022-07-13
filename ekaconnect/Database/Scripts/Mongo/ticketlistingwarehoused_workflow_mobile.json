@@ -1,0 +1,207 @@
+{
+  "_id": "ticketlistingwarehoused_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "ticketlistingwarehoused",
+  "label": "Manage Tickets",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "0bab8cd7-6342-496d-a75f-8eef3ebb0814",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "mdmPayload": {},
+    "name": "list",
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. ticket ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": true,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "multiple",
+    "resetSelection": true,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true,
+    "dropdownDecisions": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo",
+      "hidden": false,
+      "category": "link",
+      "task": "custom-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Quantity (MT)",
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Site",
+      "sort": true,
+      "key": "bulkHandler"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Date delivered",
+      "sort": true,
+      "key": "receivalDate",
+      "dateformat": "DD/MM/YYYY"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Split from",
+      "sort": true,
+      "key": "parentticketRefNo"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite.ticketlistingwarehoused",
+          "name": "viewticketwarehousedcomposite"
+        }
+      ],
+      "position": "top",
+      "label": "View ticket",
+      "disabled": "selected.ticketlistingcomposite.ticketlistingwarehoused.length>=2",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite.ticketlistingwarehoused",
+          "name": "viewticketwarehousedcomposite"
+        }
+      ],
+      "position": "top",
+      "label": "Make an offer",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "task": "compositeSave",
+      "type": "submit",
+      "selection": "allocation",
+      "outcomes": [
+        {
+          "data": "output.ticketlistingwarehoused",
+          "appendMsg": false,
+          "name": "_ST_ALLOCATE_FROM_TICKET"
+        },
+        {
+          "data": "output._ST_ALLOCATE_FROM_TICKET",
+          "name": "allocateticketscomposite",
+          "setSelected": ["selected.ticketlistingcomposite"]
+        }
+      ],
+      "position": "top",
+      "label": "Allocate ticket",
+      "labelExpression": "return ${ticketlistingcomposite.ticketlistingwarehoused.length} > 1 ? 'Allocate tickets' : 'Allocate ticket' ",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite",
+          "name": "viewticketwarehousedcomposite"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-success custom-link btn-position",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "type": "externalLinkNewTab",
+          "data": "selected.ticketlistingcomposite",
+          "targetPathExpression": "return 'https://' + new URL(${ticketlistingwarehoused[0]}.partnerLandingPage).hostname + '/PricingHub/Bid'"
+        }
+      ],
+      "position": "top",
+      "label": "View market prices"
+    }
+  ],
+  "labelKey": "LIST",
+  "deviceType": "mobile"
+}

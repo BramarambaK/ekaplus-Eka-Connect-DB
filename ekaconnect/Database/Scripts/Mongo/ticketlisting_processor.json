@@ -1,0 +1,9 @@
+{
+  "_id": "ticketlisting_processor",
+  "name": "ticketlisting_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "var moment = require('moment');\r\nconst connect = {\r\n    method: 'POST',\r\n    url: req.body.propertyList.eka_connect_host + `/workflow/data/`,\r\n    headers: {\r\n      Authorization: req.headers.authorization,\r\n      'X-TenantID': req.headers['x-tenantid']\r\n    },\r\n    body: {\r\n      appId: '12325a98-a959-4939-9005-4158d136afcd',\r\n      workFlowTask: 'ticketsqueryElastic',\r\n      qP: {\r\n        from: 0,\r\n        size: 10000,\r\n        sort: [\r\n          {\r\n            'sys__updatedOn.raw': {\r\n              order: 'desc'\r\n            }\r\n          },\r\n          {\r\n            'requestId.raw': {\r\n              order: 'desc'\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    json: true\r\n  };\r\n\r\n  function get_elasticData() {\r\n    return new Promise(function(resolve, reject) {\r\n      request(connect, function(error, response, body) {\r\n        if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n          resolve(body);\r\n        } else {\r\n          reject(body);\r\n        }\r\n      });\r\n    });\r\n  }\r\n\r\n  get_elasticData()\r\n    .then(records => {\r\n        let result = records.data.map(i => ({\r\n            ...i,\r\n            bulkHandler: (i.location ? i.location + ' - ' : '') + i.bulkHandler,\r\n            ticketStatus: i.isRequestedByEkaCCSystem ? 'Request' : i.ticketStatus,\r\n            partnerLandingPage: req.body.propertyList.app_home,\r\n            formattedRequestDate: i.requestDate ? moment(i.requestDate).format('DD/MM/YYYY') : null\r\n        }));\r\n      res.status(200).send(result);\r\n    })\r\n    .catch(function(err) {\r\n      return res.status(500).send(err);\r\n    });\r\n\r\n ",
+  "sys__UUID": "d60aeab7-fd7b-4047-ba97-26d28db27c4e"
+}

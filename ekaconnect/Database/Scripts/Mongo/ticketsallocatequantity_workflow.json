@@ -1,0 +1,75 @@
+{
+  "_id": "ticketsallocatequantity_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "showCheckbox": true,
+    "header": "Allocate quantity",
+    "description": "Enter a sale quantity for each ticket you wish to allocate and view an projected return for the quantity."
+  },
+  "decisions": [],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": true,
+      "key": "ticketRefNo",
+      "label": "Ticket"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "varietyName",
+      "label": "Grade"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "cropYear",
+      "label": "Season"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "testResultsLong",
+      "label": "Test Results"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quantity",
+      "label": "Qty (MT)"
+    },
+    {
+      "edit": true,
+      "sort": false,
+      "key": "remainingQty",
+      "label": "Allocated Qty (MT)",
+      "type": "number"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "price",
+      "label": "Price",
+      "tooltip": ""
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "price",
+      "label": "Price",
+      "tooltip": "Based on cash price and sale quantity entered. This price is indicative only and excludes GST and regulatory prices."
+    }
+  ],
+  "taskId": "ticketsallocatequantity",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "1dea565b-12f5-430e-9a4a-1712d9a31766"
+}

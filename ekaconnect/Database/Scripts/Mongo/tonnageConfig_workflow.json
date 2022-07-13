@@ -1,0 +1,47 @@
+{
+    "_id" : "tonnageConfig_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "tonnageConfig",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "label" : "tonnageConfig",
+    "type" : "workflow",
+    "tag" : "config",
+    "layout" : {
+        "header" : {
+            "label" : "Tickets",
+            "style" : {
+                "font-size" : "22px"
+            }
+        },
+        "name" : "tonnageConfig"
+    },
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+		"defaultBody" : {
+			"payLoadData" : {
+				"pagination" : {
+					"start" : "@requestBody.qP.from",
+					"limit" : "@requestBody.qP.size"
+				}
+			}
+		},
+        "config" : {
+            "id" : "push_tonnageData",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : true,
+            "statusFlagWorklowTask" : "tonnageConfig",
+			"hasStatusFlag" : true,
+			"backupIndex" : false,
+			"reIndex" : false
+        }
+    },
+    "fields" : [],
+    "decisions" : [],
+    "labelKey" : "tonnageConfig",
+	"description" : "Execute to Crawl tonnage Data"
+}
