@@ -1,0 +1,13 @@
+{
+  "_id": "property_creditrisk_counterparty_collection_name",
+  "type": "property",
+  "name": "creditrisk_counterparty_collection_name",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "Credit Risk Counter Party Details",
+  "label": "Counterparty Collection Name",
+  "propertyLevel": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "description": "Property is used to fetch name of counterparty collection"
+}

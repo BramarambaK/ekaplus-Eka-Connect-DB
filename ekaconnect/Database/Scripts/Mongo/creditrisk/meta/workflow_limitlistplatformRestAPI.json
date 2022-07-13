@@ -1,0 +1,125 @@
+{
+    "_id" : "limitlist_platform_rest_API_CCR",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "55e9618d-e3e6-42af-9b1a-f427d29a7588"
+    },
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "Limit List Copy",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "showCheckbox" : true,
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "refreshData" : {
+            "time" : 300000
+        }
+    },
+    "decisions" : [],
+    "labelKey" : "LIMIT_LIST",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "limitRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "counterpartyName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "creditLimitSourceDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "sort" : true,
+            "key" : "creditLimitTypeDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fromPeriod",
+            "dateformat" : "YYYY-MM-DD"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "toPeriod",
+            "dateformat" : "YYYY-MM-DD"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "amount"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "currency"
+        }, 
+        {
+            "filter" : true,
+            "highlight" : {
+                "default" : "bg-transparent",
+                "Active" : "success-bg",
+                "limitStatus-002" : "danger-bg",
+                "limitStatus-001" : "success-bg",
+                "Inactive" : "danger-bg"
+            },
+            "edit" : true,
+            "sort" : true,
+            "key" : "limitStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "referenceNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "coverPercentage"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "maxPaymentTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "remarks"
+        }
+    ],
+    "taskId" : "limitlistplatformRestAPI",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"c9e6d6c0-b0a6-4c4d-91fe-fbe9339f1c4a"
+}

@@ -1,0 +1,45 @@
+{
+    "_id" : "menuObject_creditrisk_Mobile",
+    "type" : "menuObject",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Credit Risk Maintenance",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "/app/creditrisk/creditstoplist",
+                                    "text" : "Credit Stop Eligibility List",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "/app/creditrisk/counterpartylist",
+                                    "text" : "Counterparty Maintenance",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "/app/creditrisk/limitlist",
+                                    "text" : "Limit Maintenance",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "/app/creditrisk/creditchecklist/list",
+                                    "text" : "Credit Check Request List",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "deviceType" : "mobile"
+}

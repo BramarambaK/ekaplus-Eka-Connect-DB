@@ -1,0 +1,251 @@
+{
+  "_id": "object_limitmaintenance",
+  "name": "limitmaintenance",
+  "label": "Limit Maintainance",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": [
+    "limitRefNo",
+    "counterpartyGroupName",
+    "creditLimitSource",
+    "creditLimitType"
+  ],
+  "translatableKeys": [
+    "limitRefNo",
+    "counterpartyGroupName",
+    "creditLimitSource",
+    "creditLimitType",
+    "fromPeriod",
+    "toPeriod",
+    "amount",
+    "limitStatus",
+    "referenceNo",
+    "coverPercentage",
+    "maxPaymentTerm",
+    "remarks",
+    "limitstatusDisplayName",
+    "counterpartyGroupNameDisplayName",
+    "creditLimitSourceDisplayName",
+    "creditLimitTypeDisplayName",
+    "currency",
+    "currencyDisplayName",
+    "counterpartyName"
+  ],
+  "fields": {
+    "currency": {
+      "currency": "Currency",
+      "labelKey": "currency",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "currency",
+      "parent": ["counterpartyGroupName"]
+    },
+    "currencyDisplayName": {
+      "currencyDisplayName": "Currency",
+      "labelKey": "currencyDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyName": {
+      "counterpartyName": "Counterparty Group/Name",
+      "labelKey": "counterpartyName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyGroupName": {
+      "counterpartyGroupName": "Counterparty Group/Name",
+      "labelKey": "counterpartyGroupName",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "serviceKey": "businessPartnerCombo",
+      "dropdownValue": "counterpartyGroupNameDisplayName",
+      "dependsOn": ["Third_Party"],
+      "children": ["creditLimitSource", "currency"]
+    },
+    "limitRefNo": {
+      "limitRefNo": "Limit Ref No",
+      "labelKey": "limitRefNo",
+      "serialNumber": {
+        "startsWith": "0",
+        "prefix": "LM-",
+        "suffix": "-REF"
+      }
+    },
+    "counterpartyGroupNameDisplayName": {
+      "counterpartyGroupNameDisplayName": "Counterparty Group/Name",
+      "labelKey": "counterpartyGroupNameDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "creditLimitSource": {
+      "creditLimitSource": "Credit Limit Source",
+      "labelKey": "creditLimitSource",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "serviceKey": "creditLimitSource",
+      "dropdownValue": "creditLimitSourceDisplayName",
+      "parent": ["counterpartyGroupName"],
+      "children": ["creditLimitType"]
+    },
+    "creditLimitSourceDisplayName": {
+      "creditLimitSourceDisplayName": "Credit Limit Source",
+      "labelKey": "creditLimitSourceDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Period": {
+      "Period": "Period",
+      "labelKey": "Period",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contactName": {
+      "contactName": "Name of Contact Person",
+      "labelKey": "contactName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "creditLimitType": {
+      "creditLimitType": "Credit Limit Type",
+      "labelKey": "creditLimitType",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "serviceKey": "creditLimitType",
+      "dropdownValue": "creditLimitTypeDisplayName",
+      "parent": ["creditLimitSource"]
+    },
+    "creditLimitTypeDisplayName": {
+      "creditLimitTypeDisplayName": "Credit Limit Type",
+      "labelKey": "creditLimitTypeDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "fromPeriod": {
+      "fromPeriod": "From Period",
+      "labelKey": "fromPeriod",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "date",
+      "format": "yyyy-MM-dd",
+      "comparison": [
+        {
+          "compareTo": "toPeriod",
+          "operator": "<="
+        }
+      ]
+    },
+    "toPeriod": {
+      "toPeriod": "To Period",
+      "labelKey": "toPeriod",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "dataType": "date"
+    },
+    "amount": {
+      "amount": "Amount",
+      "labelKey": "amount",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "number"
+    },
+    "amount2": {
+      "amount2": "Amount",
+      "labelKey": "amount2",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "number"
+    },
+    "limitStatus" : {
+      "limitStatus" : "Limit Status",
+      "labelKey" : "limitStatus",
+      "type" : "dropdown",
+      "isRequired" : true,
+      "dataType" : "String",
+      "serviceKey" : "limitStatus",
+      "dropdownValue" : "limitStatusDisplayName"
+  },
+  "limitStatusDisplayName" : {
+      "limitStatusDisplayName" : "Limit Status",
+      "labelKey" : "limitStatusDisplayName",
+      "type" : "dropdown",
+      "isRequired" : false,
+      "serviceKey" : "limitStatus",
+      "dataType" : "String"
+  },
+    "referenceNo": {
+      "referenceNo": "Decision Ref. No.",
+      "labelKey": "referenceNo",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "length": "1000"
+    },
+    "coverPercentage": {
+      "coverPercentage": "Cover Percentage",
+      "labelKey": "coverPercentage",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "length": "2"
+    },
+    "maxPaymentTerm": {
+      "maxPaymentTerm": "Max Payment Term",
+      "labelKey": "maxPaymentTerm",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "length": "1000"
+    },
+    "remarks": {
+      "remarks": "Remarks",
+      "labelKey": "remarks",
+      "type": "textarea",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "contractRefno": {
+      "contractRefno": "Contract/Draft Ref No",
+      "labelKey": "contractRefno",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdOn": ISODate("2019-02-07T19:21:17.926Z"),
+  "sys__createdBy": "admin",
+  "sys__UUID": "26e782e8-89e5-40ea-a3be-63b320260b7d"
+}

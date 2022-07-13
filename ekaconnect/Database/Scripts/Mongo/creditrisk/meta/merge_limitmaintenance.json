@@ -1,0 +1,162 @@
+{
+    "_id" : "MERGE_DATA_LIMITMAINTENANCE",
+    "componentType" : "APITASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "merge_task" : {
+        "headers" : {
+            "ttl" : "120"
+        },
+        "mergeParams" : {
+            "sources" : [ 
+                {
+                    "id" : "counterpartylimit",
+                    "type" : "collection",
+                    "config" : {
+                        "collectionName" : "Credit Risk Counter Party Details"
+                    },
+                    "columns" : [ 
+                        {
+                            "name" : "PROFILEID",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "PROFILEID",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "CP_Name",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "CP_Name",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "Contact_Person_Email",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Contact Person Email"
+                        }, 
+                        {
+                            "name" : "Contact_Person_Phone_No",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Contact Person Phone No"
+                        }, 
+                        {
+                            "name" : "Counter_Party_Group",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Counter Party Group"
+                        }, 
+                        {
+                            "name" : "Default_Pay_In_Currency",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Default Pay In Currency"
+                        }, 
+                        {
+                            "name" : "Is_Active",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Is Active"
+                        }, 
+                        {
+                            "name" : "Role",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Role"
+                        }, 
+                        {
+                            "name" : "Contact_Person",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Contact Person"
+                        }
+                    ]
+                }, 
+                {
+                    "id" : "connectlimitmaintenance",
+                    "type" : "connect",
+                    "config" : {
+                        "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d"
+                    },
+                    "columns" : [ 
+                        {
+                            "name" : "limitRefNo",
+                            "type" : "VARCHAR",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "counterpartyGroupName",
+                            "type" : "VARCHAR",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "creditLimitSource",
+                            "type" : "VARCHAR",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "creditLimitType",
+                            "type" : "VARCHAR",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "counterpartyGroupNameDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "creditLimitSourceDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "creditLimitTypeDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "creditLimitTypeDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "creditLimitTypeDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "fromPeriod",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "toPeriod",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "amount",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "limitStatus",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "limitStatusDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "referenceNo",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "coverPercentage",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "maxPaymentTerm",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "remarks",
+                            "type" : "VARCHAR"
+                        }
+                    ]
+                }
+            ],
+            "query" : "select a.* from connectlimitmaintenance c inner join counterpartylimit a on c.counterpartyGroupName = a.PROFILEID"
+        }
+    },
+    "taskId" : "MERGE_DATA_LIMITMAINTENANCE",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"00b36427-9c26-4909-8441-8b2b0e8abe78"
+}

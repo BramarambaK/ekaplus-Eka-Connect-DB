@@ -1,0 +1,13 @@
+{
+  "_id": "property_creditrisk_active_name",
+  "type": "property",
+  "name": "property_creditrisk_active_name",
+  "propertyLevel": "app",
+  "refTypeId": "5539617b-5075-4482-8bcc-26f76849eb89",
+  "description": "Property is used to fetch a column detail from collection",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "crmStatus",
+  "label": "Active Name"
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "_NIFI_LimitMaintenance",
+    "componentType" : "NIFITask",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "taskId" : "_NIFI_LimitMaintenance",
+    "object" : "26e782e8-89e5-40ea-a3be-63b320260b7d",
+	"sys__UUID":"02c466e9-e759-4410-94f3-9e275592787d",
+    "refType" : "app",
+    "objectAction" : "CREATE"
+}

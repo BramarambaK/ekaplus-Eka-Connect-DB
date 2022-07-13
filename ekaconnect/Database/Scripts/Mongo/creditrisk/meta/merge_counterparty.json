@@ -1,0 +1,132 @@
+{
+    "_id" : "MERGE_DATA_COUNTERPARTY",
+    "componentType" : "APITASK",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "type" : "workflow",
+    "merge_task" : {
+        "headers" : {
+            "ttl" : "120"
+        },
+        "mergeParams" : {
+            "sources" : [ 
+                {
+                    "id" : "counterparty",
+                    "type" : "collection",
+                    "config" : {
+                        "collectionName" : "Credit Risk Counter Party Details"
+                    },
+                    "columns" : [ 
+                        {
+                            "name" : "PROFILEID",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "PROFILEID",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "CP_Name",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "CP_Name",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "Contact_Person_Email",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Contact Person Email"
+                        }, 
+                        {
+                            "name" : "Contact_Person_Phone_No",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Contact Person Phone No"
+                        }, 
+                        {
+                            "name" : "Counter_Party_Group",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Counter Party Group"
+                        }, 
+                        {
+                            "name" : "Default_Pay_In_Currency",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Default Pay In Currency"
+                        }, 
+                        {
+                            "name" : "Is_Active",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Is Active"
+                        }, 
+                        {
+                            "name" : "Role",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Role"
+                        }, 
+                        {
+                            "name" : "Contact_Person",
+                            "type" : "VARCHAR",
+                            "collectionCol" : "Contact Person"
+                        }
+                    ]
+                }, 
+                {
+                    "id" : "connectCounterparty",
+                    "type" : "connect",
+                    "config" : {
+                        "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7"
+                    },
+                    "columns" : [ 
+                        {
+                            "name" : "cpid",
+                            "type" : "VARCHAR",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "creditCollectionStatusDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "creditRiskStatusDisplayName",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "annexNumber",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "creditRiskStatus",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "dateDecision",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "reference",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "counterpartyName",
+                            "type" : "VARCHAR",
+                            "primary" : "y"
+                        }, 
+                        {
+                            "name" : "debtorNumber",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "decisionRemarks",
+                            "type" : "VARCHAR"
+                        }, 
+                        {
+                            "name" : "creditCollectionStatus",
+                            "type" : "VARCHAR"
+                        }
+                    ]
+                }
+            ],
+            "query" : "select a.PRIMARY_ID as \"PRIMARY_ID\",a.PROFILEID as \"cpid\",a.Counter_Party_Group as \"counterpartyGroup\",a.cp_name as \"counterpartyName\", case when  (REGEXP_LIKE (a.ROLE, 'Buyer','i') and  REGEXP_LIKE (a.ROLE, 'Seller','i')) then 'Both' else (case when REGEXP_LIKE (a.ROLE, 'Buyer','i') then 'Buyer' when REGEXP_LIKE (a.ROLE, 'Seller','i') then 'Seller' else a.ROLE end) end as \"buyerSeller\",case when a.IS_ACTIVE='Y' then 'Active' else 'Inactive' end as \"crmStatus\",a.Default_Pay_In_Currency as \"currency\",b.reference as \"reference\",b.annexNumber as \"annexNumber\",b.creditRiskStatusDisplayName as \"creditRiskStatusDisplayName\",b.debtorNumber as \"debtorNumber\",b.dateDecision as \"dateDecision\",b.decisionremarks  as \"decisionRemarks\",b.creditCollectionStatus  as \"creditCollectionStatus\",b.creditCollectionStatusDisplayName  as \"creditCollectionStatusDisplayName\" ,case when (COUNTER_PARTY_GROUP is null or COUNTER_PARTY_GROUP ='NA' or trim(COUNTER_PARTY_GROUP)='' )then 'Counterparty' else 'Counterparty Group' end as \"creditLimitLevel\" ,case when b.creditRiskStatus is  null then 'creditRiskStatus-001' else b.creditRiskStatus end as \"creditRiskStatus\", case when b.creditRiskStatusDisplayName is  null then 'Active' else b.creditRiskStatusDisplayName end as \"creditRiskStatusDisplayName\" from counterParty a left outer join connectCounterParty b on (a.PROFILEID=b.cpid) where (REGEXP_LIKE (a.ROLE, 'Seller','i') or REGEXP_LIKE (a.ROLE, 'Buyer','i'))"
+        }
+    },
+    "taskId" : "MERGE_DATA_COUNTERPARTY",
+    "object" : "01abf4cd-c682-4988-9b8c-c84014a230e7",
+	"sys__UUID":"875517d6-8396-48a4-92d1-7b34a1ad020f"
+}

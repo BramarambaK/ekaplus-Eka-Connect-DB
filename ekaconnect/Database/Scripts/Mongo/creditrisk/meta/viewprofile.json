@@ -1,0 +1,94 @@
+{
+    "_id" : "viewprofile_CR",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "97b4c135-9bbb-46f1-ad81-385954ee7cca"
+    },
+    "refType" : "app",
+    "refTypeId" : "5539617b-5075-4482-8bcc-26f76849eb89",
+    "label" : "User Profile",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "background" : "white",
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "viewprofile",
+        "formStyle" : {
+            "border-right-style" : "solid",
+            "padding" : "7px",
+            "margin" : "auto",
+            "max-width" : "100%",
+            "border-top-width" : "1px",
+            "border-left-style" : "solid",
+            "border-right-width" : "1px",
+            "border-left-color" : "#dee2e5",
+            "border-top-color" : "#dee2e5",
+            "border-right-color" : "#dee2e5",
+            "border-left-width" : "1px",
+            "border-top-style" : "solid"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "menu" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "default"
+                }
+            ],
+            "position" : "top"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "default"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "VIEW_PROFILE",
+    "fields" : [ 
+        {
+            "placement" : "row1",
+            "key" : "firstName"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "lastName"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "email"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "mobile"
+        }, 
+        {
+            "placement" : "row1",
+            "key" : "phone"
+        }
+    ],
+    "taskId" : "viewprofile",
+    "object" : "User_Info",
+	"sys__UUID":"de17a079-230c-463c-85ee-57819516f921"
+	
+}
