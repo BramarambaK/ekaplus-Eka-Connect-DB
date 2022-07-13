@@ -1,0 +1,20 @@
+{
+  "_id": "selleroptionality_collectionConnectMap_property",
+  "type": "property",
+  "name": "selleroptionality_collectionConnectMap",
+  "label": "Selleroptionality Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "uniqueId": "uniqueId",
+    "seller_id": "seller_id",
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "seller": "seller",
+    "optionalityDeclaration": "optionalityDeclaration",
+    "optionalityDeclaration2": "optionalityDeclaration2"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of seller optionality collection and connect object"
+}

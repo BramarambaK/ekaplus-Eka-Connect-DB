@@ -1,0 +1,28 @@
+{
+  "_id": "voyageloadingportslist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "voyageloadingportslist",
+  "object": "3ef12f80-9dca-46e0-afb6-915e729efe40",
+  "label": "voyageloadingportslist",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Buyer"
+    },
+    "name": "list"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "plannedBulkShipmentNo",
+      "sort": true,
+      "key": "plannedBulkShipmentNo"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

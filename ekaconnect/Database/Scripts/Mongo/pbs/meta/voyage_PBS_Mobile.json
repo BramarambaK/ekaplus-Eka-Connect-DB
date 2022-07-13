@@ -1,0 +1,64 @@
+{
+    "_id" : "createvoyage_PBS_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "585f2805-5cf2-4924-a882-fafa261be2a0"
+    },
+    "refTypeId" : "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "label" : "Voyage",
+    "workflows" : [ 
+        {
+            "name" : "createvoyageform"
+        }, 
+        {
+            "name" : "loadingports"
+        }, 
+        {
+            "name" : "dischargeports"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "getInitialData" : {
+            "filterBy" : {
+                "sD" : [ 
+                    "plannedBulkShipmentNo"
+                ]
+            }
+        },
+        "sessionStorage" : [ 
+            "plannedBulkShipmentNo", 
+            "product", 
+            "shipmentMode", 
+            "vesselName", 
+            "bookingRefNo"
+        ],
+        "header" : {
+            "headerExpression" : "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+            "title" : "Shipment Planning & Tracking:"
+        },
+        "name" : "customv2",
+        "menu" : true
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "Cancel",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "position" : "TopLeft",
+            "outcomes" : [ 
+                {
+                    "action" : "Cancel",
+                    "type" : "client",
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOPBS"
+                }
+            ]
+        }
+    ],
+    "taskId" : "createvoyage",
+    "object" : "9c98c493-ee2f-490d-be92-fe2424f513e5",
+    "deviceType" : "mobile"
+}

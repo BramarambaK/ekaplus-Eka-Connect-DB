@@ -1,0 +1,476 @@
+{
+  "_id": "object_loi",
+  "name": "LOI",
+  "label": "LOI",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["loiRefNo"],
+  "translatableKeys": [],
+  "fields": {
+    "loiRefNo": {
+      "loiRefNo": "LOI Ref. No.",
+      "labelKey": "loiRefNo",
+      "serialNumber": {
+        "startsWith": "100000",
+        "customFormat": "return '${corporateID}' + ${loiRefNo}"
+      }
+    },
+    "corporateID": {
+      "corporateID": "corporateID",
+      "labelKey": "corporateID",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "corporateID",
+      "parent": ["saleContractItem"]
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "saleContractItem": {
+      "saleContractItem": "Sales Contract Item",
+      "labelKey": "saleContractItem",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "serviceKey": "saleContractItem",
+      "dropdownValue": "saleContractItemDisplayName",
+      "children": [
+        "salesCP",
+        "productValue",
+        "quality",
+        "paymentTerms",
+        "profitCenter",
+        "corporateName",
+        "corporateID"
+      ]
+    },
+    "saleContractItemDisplayName": {
+      "saleContractItemDisplayName": "Sales Contract Item",
+      "labelKey": "saleContractItemDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "salesCP": {
+      "salesCP": "Sales CP",
+      "labelKey": "salesCP",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "salesCP",
+      "parent": ["saleContractItem"]
+    },
+    "productValue": {
+      "productValue": "Product",
+      "labelKey": "productValue",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "product",
+      "parent": ["saleContractItem"]
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "quality",
+      "parent": ["saleContractItem"]
+    },
+    "paymentTerms": {
+      "paymentTerms": "Payment Terms",
+      "labelKey": "paymentTerms",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "paymentTerms",
+      "parent": ["saleContractItem"]
+    },
+    "profitCenter": {
+      "profitCenter": "Profit Center",
+      "labelKey": "profitCenter",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "profitCenter",
+      "parent": ["saleContractItem"]
+    },
+    "corporateName": {
+      "corporateName": "Corporate Name",
+      "labelKey": "corporateName",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "corporateName",
+      "parent": ["saleContractItem"]
+    },
+    "personInCharge": {
+      "personInCharge": "Person In charge",
+      "labelKey": "personInCharge",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "personInCharge"
+    },
+    "dischargePort": {
+      "dischargePort": "Discharge Port",
+      "labelKey": "dischargePort",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "dischargePort",
+      "dropdownValue": "dischargePortDisplayName"
+    },
+    "dischargePortDisplayName": {
+      "dischargePortDisplayName": "Discharge Port",
+      "labelKey": "dischargePortDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shippingLineDisplayName": {
+      "shippingLineDisplayName": "Shipping Line",
+      "labelKey": "shippingLineDisplayName",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "businesspartner",
+      "dropdownValue": "shippingLine",
+      "dependsOn": ["SHIPPINGLINE"]
+    },
+    "shippingLine": {
+      "shippingLine": "Shipping Line",
+      "labelKey": "shippingLine",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "etaDisport": {
+      "etaDisport": "ETA Disport",
+      "labelKey": "etaDisport",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "dataType": "String"
+    },
+    "oblEndorsedto": {
+      "oblEndorsedto": "OBL Endorsed to",
+      "labelKey": "oblEndorsedto",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "oblEndorsedto",
+      "dropdownValue": "oblEndorsedtoDisplayName"
+    },
+    "oblEndorsedtoDisplayName": {
+      "oblEndorsedtoDisplayName": "OBL Endorsed to",
+      "labelKey": "oblEndorsedtoDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterLOIFrom": {
+      "counterLOIFrom": "Counter LOI From",
+      "labelKey": "counterLOIFrom",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "whydoWeNeedLOI": {
+      "whydoWeNeedLOI": "Why do we need LOI?",
+      "labelKey": "whydoWeNeedLOI",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "LOIType": {
+      "LOIType": "LOI Type",
+      "labelKey": "LOIType",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "propertyKey": "LOIType",
+      "dropdownValue": "LOITypeDisplayName"
+    },
+    "LOITypeDisplayName": {
+      "LOITypeDisplayName": "LOI Type",
+      "labelKey": "LOITypeDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "LOIQty": {
+      "LOIQty": "LOI Qty",
+      "labelKey": "LOIQty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "roundoff": "4"
+    },
+    "LOIQtyValue": {
+      "LOIQtyValue": " ",
+      "labelKey": "LOIQtyValue",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "LOIQtyValue",
+      "dropdownValue": "LOIQtyValueDisplayName"
+    },
+    "LOIQtyValueDisplayName": {
+      "LOIQtyValueDisplayName": "LOI Qty Value",
+      "labelKey": "LOIQtyValueDisplayName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "goodsValue": {
+      "goodsValue": "Goods Value",
+      "labelKey": "goodsValue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "roundoff": "4"
+    },
+    "goodsValueDropdown": {
+      "goodsValueDropdown": " ",
+      "labelKey": "goodsValueDropdown",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "goodsValueDropdown",
+      "dropdownValue": "goodsValueDropdownDisplayName"
+    },
+    "goodsValueDropdownDisplayName": {
+      "goodsValueDropdownDisplayName": "Goods Value Unit",
+      "labelKey": "goodsValueDropdownDisplayName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ifLCOperative": {
+      "ifLCOperative": "If LC,when operative",
+      "labelKey": "ifLCOperative",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "dataType": "String"
+    },
+    "fundsReceivedDate": {
+      "fundsReceivedDate": "Funds Received Date",
+      "labelKey": "fundsReceivedDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "dataType": "String"
+    },
+    "office": {
+      "office": "Office",
+      "labelKey": "office",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "blDate": {
+      "blDate": "BL Date",
+      "labelKey": "blDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "dataType": "String"
+    },
+    "noLienBkLetterReceived": {
+      "noLienBkLetterReceived": "No Lien Bk Letter Received",
+      "labelKey": "noLienBkLetterReceived",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "noLienBkLetterReceived"
+    },
+    "13OBL": {
+      "13OBL": "1/3 OBL",
+      "labelKey": "13OBL",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "deliveredTo": {
+      "deliveredTo": "Delivered To",
+      "labelKey": "deliveredTo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "LOICancellationDate": {
+      "LOICancellationDate": "LOI Cancellation Date",
+      "labelKey": "LOICancellationDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "LOICancellationTracking": {
+      "LOICancellationTracking": "LOI Cancellation Tracking",
+      "labelKey": "LOICancellationTracking",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipmentMode": {
+      "shipmentMode": "shipmentMode",
+      "labelKey": "shipmentMode",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "vesselName": {
+      "vesselName": "vesselName",
+      "labelKey": "vesselName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bookingRefNo": {
+      "bookingRefNo": "bookingRefNo",
+      "labelKey": "bookingRefNo",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "firstPersonInchargeId": {
+      "firstPersonInchargeId": "firstPersonInchargeId",
+      "labelKey": "firstPersonInchargeId",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "firstPersonInchargeName": {
+      "firstPersonInchargeName": "firstPersonInchargeName",
+      "labelKey": "firstPersonInchargeName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractItems": {
+      "contractItems": "contractItems",
+      "labelKey": "contractItems",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isdeleted": {
+      "isdeleted": "isdeleted",
+      "labelKey": "isdeleted",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "comments": {
+      "comments": "Comments",
+      "labelKey": "comments",
+      "type": "textarea",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "LOI_sent_To": {
+      "LOI_sent_To": "LOI Sent To",
+      "labelKey": "LOI_sent_To",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sys__createdBy": {
+      "sys__createdBy": "Created By",
+      "labelKey": "sys__createdBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sys__updatedBy": {
+      "sys__updatedBy": "Updated By",
+      "labelKey": "sys__updatedBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sys__createdOn": {
+      "sys__createdOn": "Created Date",
+      "labelKey": "sys__createdOn",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "date"
+    },
+    "sys__updatedOn": {
+      "sys__updatedOn": "Updated Date",
+      "labelKey": "sys__updatedOn",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "date"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "485db470-4c7b-49d3-a1e2-e39534067bc5"
+}

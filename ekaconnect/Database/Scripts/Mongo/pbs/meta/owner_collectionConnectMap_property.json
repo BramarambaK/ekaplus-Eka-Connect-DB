@@ -1,0 +1,24 @@
+{
+  "_id": "owner_collectionConnectMap_property",
+  "type": "property",
+  "name": "owner_collectionConnectMap",
+  "label": "Owner Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "vesselNomination": "vesselNomination",
+    "sanctionChecksCleared": "sanctionChecksCleared",
+    "LoadingPortDeclaration": "LoadingPortDeclaration",
+    "sofnor": "sofnor",
+    "optionalDeclaration": "optionalDeclaration",
+    "optionalDeclarationField": "optionalDeclarationField",
+    "Vessel_Agent_load_port": "Vessel_Agent_load_port",
+    "Vessel_Agent_discharge_port": "Vessel_Agent_discharge_port",
+    "Vessel_Intake": "Vessel_Intake"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of owner collection and connect object"
+}

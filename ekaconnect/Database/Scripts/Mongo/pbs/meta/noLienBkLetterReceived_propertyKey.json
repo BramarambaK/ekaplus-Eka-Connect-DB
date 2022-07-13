@@ -1,0 +1,22 @@
+{
+  "_id": "noLienBkLetterReceived_propertyKey",
+  "type": "property",
+  "name": "noLienBkLetterReceived",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Received",
+      "value": "Received"
+    },
+    {
+      "key": "Not Received",
+      "value": "Not Received"
+    }
+  ],
+  "label": "No Lien Bk Letter Received Dropdown",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to show dropdown values for noLienBkLetterReceived"
+}

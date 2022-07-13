@@ -1,0 +1,112 @@
+{
+  "_id": "object_seller_nonpaymentdoc",
+  "name": "seller_nonpaymentdoc",
+  "label": "Seller Non Payment Doc",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["uniqueId"],
+  "translatableKeys": [],
+  "fields": {
+    "uniqueId": {
+      "uniqueId": "Unique Id",
+      "labelKey": "uniqueId",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "seller": {
+      "seller": "Seller",
+      "labelKey": "seller",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "documentName": {
+      "documentName": "Document Name",
+      "labelKey": "documentName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "documentDate": {
+      "documentDate": "Document Date",
+      "labelKey": "documentDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String",
+      "valueWhenNull": ""
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "18521f4f-d2e8-47c8-9ac8-83b98ff4cf0e"
+}

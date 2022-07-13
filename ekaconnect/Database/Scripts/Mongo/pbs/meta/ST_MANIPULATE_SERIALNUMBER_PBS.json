@@ -1,0 +1,10 @@
+{
+  "_id": "ST_MANIPULATE_SERIALNUMBER_PROCESSOR_PBS",
+  "name": "ST_MANIPULATE_SERIALNUMBER",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "snippet": "var corporatebody = [\r\n    {\r\n        serviceKey: 'corporate'\r\n    }\r\n];\r\nvar mdmcorporate = {\r\n    method: 'POST',\r\n    body: corporatebody,\r\n    url: req.body.propertyList.eka_ctrm_host + '/mdmapi/data',\r\n    headers: {\r\n        Authorization: req.headers.authorization,\r\n        'Content-Type': 'application/json'\r\n    },\r\n    json: true\r\n};\r\nfunction get_mdmcorporate() {\r\n    return new Promise(function (resolve, reject) {\r\n        request(mdmcorporate, function (err, response, body) {\r\n            if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n                resolve(body);\r\n            }\r\n            else {\r\n                reject(body);\r\n            }\r\n        });\r\n    });\r\n}\r\nget_mdmcorporate().then(function (result) {\r\n    var corporate = result.corporate[0]['value'];\r\n    let data = {\r\n        corporateID: corporate + '_2020_'\r\n    };\r\n    res.status(200).send(data);\r\n});",
+  "sys__UUID": "abf2a84f-ba23-4f12-8b4e-3b6cc672b006",
+  "sys__createdBy": "Bravo"
+}

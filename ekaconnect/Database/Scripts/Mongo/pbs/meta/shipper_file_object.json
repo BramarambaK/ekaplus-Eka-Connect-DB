@@ -1,0 +1,155 @@
+{
+  "_id": "shipper_file_object",
+  "createdBy": "Test",
+  "createdOn": "",
+  "fields": {
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipper": {
+      "shipper": "Shipper",
+      "labelKey": "shipper",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipper_id": {
+      "shipper_id": "shipper_id",
+      "labelKey": "shipper_id",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "uploadedDate",
+      "labelKey": "uploadedDate",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "documentId": {
+      "documentId": "documentId",
+      "labelKey": "documentId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "type": {
+      "type": "Type",
+      "labelKey": "type",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "Upload File",
+      "labelKey": "file",
+      "type": "file",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "description": {
+      "description": "Description",
+      "labelKey": "description",
+      "type": "textbox",
+      "dataType": "String"
+    }
+  },
+  "label": "FILE_OBJECT",
+  "label_key": "",
+  "lastModifiedOn": "",
+  "lastModifiey": "Test",
+  "layout": {
+    "fields": [[]]
+  },
+  "name": "shipper_file_object",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "sys__UUID": "1df1ff7c-572e-4ce2-bf72-f80bf41514e2",
+  "tenantID": "",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

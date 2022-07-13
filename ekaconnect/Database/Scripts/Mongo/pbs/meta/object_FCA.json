@@ -1,0 +1,187 @@
+{
+  "_id": "object_FCA",
+  "name": "FCA",
+  "label": "FCA",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["plannedBulkShipmentNo"],
+  "translatableKeys": [],
+  "fields": {
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "terminal_Instructed_containers": {
+      "terminal_Instructed_containers": "(C) Terminal Instructed to Pick up containers on",
+      "labelKey": "terminal_Instructed_containers",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "initial_Container_Pickup_Date": {
+      "initial_Container_Pickup_Date": "(C) Initial Container Pick up Date",
+      "labelKey": "initial_Container_Pickup_Date",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "last_Container_Pickup_Date": {
+      "last_Container_Pickup_Date": "(C) Last Container Pick up Date",
+      "labelKey": "last_Container_Pickup_Date",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "containers_Quantity_Pickedup": {
+      "containers_Quantity_Pickedup": "(C) Containers Quantity Picked up",
+      "labelKey": "containers_Quantity_Pickedup",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number"
+    },
+
+    "Instructed_to_deliver_cargo": {
+      "Instructed_to_deliver_cargo": "(C) Instructed to deliver the cargo at stuffing terminal From",
+      "labelKey": "Instructed_to_deliver_cargo",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "Cargo_received_Stuffing_Terminal_First": {
+      "Cargo_received_Stuffing_Terminal_First": "(C) Cargo received at Stuffing Terminal (First Lot)",
+      "labelKey": "Cargo_received_Stuffing_Terminal_First",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "Cargo_received_Stuffing_Terminal_Last": {
+      "Cargo_received_Stuffing_Terminal_Last": "(C) Cargo received at Stuffing Terminal (Last Lot)",
+      "labelKey": "Cargo_received_Stuffing_Terminal_Last",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "Stuffing_Operation_Start": {
+      "Stuffing_Operation_Start": "(C) Stuffing Operation Start",
+      "labelKey": "Stuffing_Operation_Start",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "Stuffing_Operation_Complete": {
+      "Stuffing_Operation_Complete": "(C) Stuffing Operation Complete",
+      "labelKey": "Stuffing_Operation_Complete",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "Gate_Opening_Date": {
+      "Gate_Opening_Date": "(C) Gate Opening Date",
+      "labelKey": "Gate_Opening_Date",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "CNTRs_Gated_in": {
+      "CNTRs_Gated_in": "(C) CNTRs Gated in",
+      "labelKey": "CNTRs_Gated_in",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "c89b6d1a-e787-4325-af34-6975ce382fd6"
+}

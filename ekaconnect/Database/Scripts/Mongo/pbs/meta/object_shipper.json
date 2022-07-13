@@ -1,0 +1,228 @@
+{
+  "_id": "object_shipper",
+  "name": "shipper",
+  "label": "Shipper",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["shipperpbs"],
+  "translatableKeys": [],
+  "fields": {
+    "Final_shippers_breakdown": {
+      "Final_shippers_breakdown": "Final shippers breakdown",
+      "labelKey": "Final_shippers_breakdown",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "Original_BLMR_received": {
+      "Original_BLMR_received": "Original BL/MR received",
+      "labelKey": "Original_BLMR_received",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "Docs_Instructions_Sent": {
+      "Docs_Instructions_Sent": "(C) Docs Instructions Sent",
+      "labelKey": "Docs_Instructions_Sent",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "draftsSentReceived": {
+      "draftsSentReceived": "Drafts Sent/Received",
+      "labelKey": "draftsSentReceived",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "paymentDocumentsReceived": {
+      "paymentDocumentsReceived": "Payment Documents Received",
+      "labelKey": "paymentDocumentsReceived",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "nonpaymentDocumentsPresentation": {
+      "nonpaymentDocumentsPresentation": "Non-Payment Documents Presentation",
+      "labelKey": "nonpaymentDocumentsPresentation",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "coPresented": {
+      "coPresented": "CO Presented",
+      "labelKey": "coPresented",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "coPresentedtimer": {
+      "coPresentedtimer": " ",
+      "labelKey": "coPresentedtimer",
+      "type": "timepicker",
+      "isRequired": false
+    },
+    "wqPresented": {
+      "wqPresented": "W&Q Presented",
+      "labelKey": "wqPresented",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "wqPresentedtimer": {
+      "wqPresentedtimer": " ",
+      "labelKey": "wqPresentedtimer",
+      "type": "timepicker",
+      "isRequired": false
+    },
+    "healthPresented": {
+      "healthPresented": "Health Presented",
+      "labelKey": "healthPresented",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "radioPresented": {
+      "radioPresented": "Radio Presented",
+      "labelKey": "radioPresented",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "nonGMOCertificatePresented": {
+      "nonGMOCertificatePresented": "Non-GMO Certificate Presented",
+      "labelKey": "nonGMOCertificatePresented",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "sanitaryPresented": {
+      "sanitaryPresented": "Sanitary Presented",
+      "labelKey": "sanitaryPresented",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "phytosanitaryPresented": {
+      "phytosanitaryPresented": "Phytosanitary Presented",
+      "labelKey": "phytosanitaryPresented",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "valueWhenNull": ""
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipperpbs": {
+      "shipperpbs": "shipperpbs",
+      "labelKey": "shipperpbs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipper": {
+      "shipper": "Shipper",
+      "labelKey": "shipper",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipper_id": {
+      "shipper_id": "shipper_id",
+      "labelKey": "shipper_id",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "742f1ce2-89e9-42e2-abdf-6ac9565eea1f"
+}

@@ -1,0 +1,235 @@
+{
+  "_id": "object_voyage_dischargeports",
+  "name": "voyage_dischargeports",
+  "label": "Voyage Dischargeports",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["uniqueId"],
+  "translatableKeys": [],
+  "fields": {
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "uniqueId": {
+      "uniqueId": "uniqueId",
+      "labelKey": "uniqueId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dischargeportId": {
+      "dischargeportId": " ",
+      "labelKey": "dischargeportId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dischargeVesselETCDate": {
+      "dischargeVesselETCDate": "Vessel ETC",
+      "labelKey": "dischargeVesselETCDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "dischargeVesselETBDate": {
+      "dischargeVesselETBDate": "Vessel ETB",
+      "labelKey": "dischargeVesselETBDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "dischargeNorTenderedDate": {
+      "dischargeNorTenderedDate": "NOR Tendered",
+      "labelKey": "dischargeNorTenderedDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "dischargeVesselETADate": {
+      "dischargeVesselETADate": "Vessel ETA",
+      "labelKey": "dischargeVesselETADate",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "loadingVesselETADate": {
+      "loadingVesselETADate": "Vessel ETA",
+      "labelKey": "loadingVesselETADate",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "loadingNorTendered": {
+      "loadingNorTendered": "Nor Tendered",
+      "labelKey": "loadingNorTendered",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "loadingNorTenderedDate": {
+      "loadingNorTenderedDate": "NOR tendered",
+      "labelKey": "loadingNorTenderedDate",
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "isRequired": false
+    },
+    "loadingVesselETB": {
+      "loadingVesselETB": "Vessel ETB",
+      "labelKey": "loadingVesselETB",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "loadingVesselETBDate": {
+      "loadingVesselETBDate": "Vessel ETB",
+      "labelKey": "loadingVesselETBDate",
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "isRequired": false
+    },
+    "loadingVesselETC": {
+      "loadingVesselETC": "Vessel ETC",
+      "labelKey": "loadingVesselETC",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "loadingVesselETCDate": {
+      "loadingVesselETCDate": "Vessel ETC",
+      "labelKey": "loadingVesselETCDate",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "loadingblDate": {
+      "loadingblDate": "B/L Date ",
+      "labelKey": "loadingblDate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "loadingblDated": {
+      "loadingblDated": "B/L date",
+      "labelKey": "loadingblDated",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "loadingblreleased": {
+      "loadingblreleased": "B/L Released",
+      "labelKey": "loadingblreleased",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "loadingblreleasedDate": {
+      "loadingblreleasedDate": "B/L released",
+      "labelKey": "loadingblreleasedDate",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "sofNorCP": {
+      "sofNorCP": "SOF, NOR and CP sent to Laytime team",
+      "labelKey": "sofNorCP",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "matesReceipt": {
+      "matesReceipt": "Mates Receipt Sent to Treasury",
+      "labelKey": "matesReceipt",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "loadingmatesReceiptSenttoTreasury": {
+      "loadingmatesReceiptSenttoTreasury": "Mates Receipt sent to Treasury",
+      "labelKey": "loadingmatesReceiptSenttoTreasury",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "dischargeVoyageInstruction": {
+      "dischargeVoyageInstruction": "Voyage Instruction (Agent N…",
+      "labelKey": "dischargeVoyageInstruction",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "dischargeSupervisionAppointment": {
+      "dischargeSupervisionAppointment": "Supervision Appointment",
+      "labelKey": "dischargeSupervisionAppointment",
+      "type": "datepicker",
+      "isRequired": false
+    },
+    "dischargePort": {
+      "dischargePort": "Discharge Port",
+      "labelKey": "dischargePort",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "6350bb49-87aa-4baf-8165-5cd717ab8afa"
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "object_listingPBS",
+  "name": "listingPBS",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "translatableKeys": [],
+  "fields": {
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipmentMode": {
+      "shipmentMode": "shipment Mode",
+      "labelKey": "shipmentMode",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "vesselName": {
+      "vesselName": "Vessel Name",
+      "labelKey": "vesselName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bookingRefNo": {
+      "bookingRefNo": "Booking RefNo",
+      "labelKey": "bookingRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "3991dd41-4d63-4447-8778-f24505d6e905"
+}

@@ -1,0 +1,26 @@
+{
+  "_id": "oblEndorsedto_propertyKey",
+  "type": "property",
+  "name": "oblEndorsedto",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Bank",
+      "value": "Bank"
+    },
+    {
+      "key": "Blank endorsed",
+      "value": "Blank endorsed"
+    },
+    {
+      "key": "Buyer",
+      "value": "Buyer"
+    }
+  ],
+  "label": "OBL Endorsed Dropdown",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to show dropdown values for oblEndorsedto"
+}

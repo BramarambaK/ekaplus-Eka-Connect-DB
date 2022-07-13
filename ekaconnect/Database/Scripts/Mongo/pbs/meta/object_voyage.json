@@ -1,0 +1,155 @@
+{
+  "_id": "object_voyage",
+  "name": "voyage",
+  "label": "Voyage",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["plannedBulkShipmentNo"],
+  "translatableKeys": [],
+  "fields": {
+    "SOF_NOR_CP_Laytime_team": {
+      "SOF_NOR_CP_Laytime_team": "SOF, NOR & CP sent to Laytime team",
+      "labelKey": "SOF_NOR_CP_Laytime_team",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "Mates_Receipt_Treasury": {
+      "Mates_Receipt_Treasury": "Mates Receipt Sent to Treasury",
+      "labelKey": "Mates_Receipt_Treasury",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "incoTerm": {
+      "incoTerm": "INCO term",
+      "labelKey": "incoTerm",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "incoterm"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "certificatesConsolidated": {
+      "certificatesConsolidated": "Certificates Consolidated",
+      "labelKey": "certificatesConsolidated",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "sanctionCheck": {
+      "sanctionCheck": "Sanction check(FOB -FOB)",
+      "labelKey": "sanctionCheck",
+      "type": "dropdown",
+      "dataType": "String",
+      "isRequired": false,
+      "propertyKey": "flag"
+    },
+    "tradeRegionKey": {
+      "tradeRegionKey": "Trade Region",
+      "labelKey": "tradeRegionKey",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "cityNameComboList",
+      "dropdownValue": "tradeRegion"
+    },
+    "tradeRegion": {
+      "tradeRegion": "Trade Region",
+      "labelKey": "tradeRegion",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "numberOfRollings": {
+      "numberOfRollings": "(C) Number of Rollings",
+      "labelKey": "numberOfRollings",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "number"
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "ui_state": true,
+  "sys__createdBy": "admin",
+  "sys__UUID": "9c98c493-ee2f-490d-be92-fe2424f513e5"
+}

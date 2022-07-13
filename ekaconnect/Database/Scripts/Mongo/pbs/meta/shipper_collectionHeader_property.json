@@ -1,0 +1,13 @@
+{
+  "_id": "shipper_collectionHeader_property",
+  "type": "property",
+  "name": "shipper_collectionHeader",
+  "label": "Shipper Collection Header",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "shipperpbs:String,plannedBulkShipmentNo:String,shipper:String,Original_BLMR_received:String,Docs_Instructions_Sent:String,draftsSentReceived:String,paymentDocumentsReceived:String,nonpaymentDocumentsPresentation:String,coPresented:String,coPresentedtimer:String,wqPresented:String,wqPresentedtimer:String,healthPresented:String,radioPresented:String,nonGMOCertificatePresented:String,sanitaryPresented:String,phytosanitaryPresented:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of SHIPPER collection"
+}

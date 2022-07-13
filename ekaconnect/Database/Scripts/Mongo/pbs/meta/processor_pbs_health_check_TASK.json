@@ -1,0 +1,19 @@
+{
+  "_id": "processor_pbs_health_check",
+  "componentType": "UserTask",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "type": "workflow",
+  "tags": "healthCheck",
+  "objectAction": "READ",
+  "version": "V2",
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "eb97abc0-8fe2-4254-a080-4cc10c44c268"
+    }
+  },
+  "decisions": [],
+  "taskId": "processor_pbs_health_check",
+  "object": "7f2b3103-3b67-4dd6-aed7-9d99652b7586"
+}

@@ -1,0 +1,85 @@
+{
+  "_id": "shipperdocumentdelete_PBS",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "shipperdocumentlisting"
+        }
+      ],
+      "label": "CLOSE",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "task": "shipperdocumentdelete",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Document deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in external task"
+            },
+            "successWithWarning": {
+              "message": "Document deleted with some errors"
+            }
+          },
+          "data": "output.shipperdocumentdelete",
+          "appendMsg": true,
+          "name": "_EXT_DELETE_DOCUMENT_SHIPPER"
+        },
+        {
+          "data": "output.shipperdocumentdelete",
+          "appendMsg": false,
+          "name": "_ST_DELETE_DOCUMENT_SHIPPER"
+        },
+        {
+          "name": "shipperdocumentlisting",
+          "showToaster": true
+        }
+      ],
+      "style": {
+        "margin-left": "auto"
+      },
+      "label": "DELETE DOCUMENT",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "shipperdocumentlisting"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "getDataFromExternalAPI": true,
+  "label": "DELETE DOCUMENT",
+  "labelKey": "DELETE_DOCUMENT",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to delete document ${fileName}?",
+      "headerMessage": "Delete Document:${fileName}"
+    }
+  },
+  "object": "1df1ff7c-572e-4ce2-bf72-f80bf41514e2",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "shipperdocumentdelete",
+  "type": "workflow"
+}

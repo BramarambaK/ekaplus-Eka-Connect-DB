@@ -1,0 +1,21 @@
+{
+  "_id": "voyage_collectionConnectMap_PBS_property",
+  "type": "property",
+  "name": "voyage_collectionConnectMap",
+  "label": "Voyage Collection ConnectMap",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": {
+    "plannedBulkShipmentNo": "plannedBulkShipmentNo",
+    "sanctionCheck": "sanctionCheck",
+    "tradeRegion": "tradeRegion",
+    "numberOfRollings": "numberOfRollings",
+    "incoTerm": "incoTerm",
+    "SOF_NOR_CP_Laytime_team": "SOF_NOR_CP_Laytime_team",
+    "Mates_Receipt_Treasury": "Mates_Receipt_Treasury"
+  },
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to match all column names of voyage collection and connect object"
+}

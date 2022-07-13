@@ -1,0 +1,122 @@
+{
+  "_id": "sellernonpaymentdoclisting_view_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Seller Non Payment Doc",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "a16a66b1-1047-4ac7-8b43-2ec23d855684"
+  },
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "refreshData": true,
+    "useQueryParams": false,
+    "preserveSelectedData": true,
+    "tableEditing": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createsellerlist",
+          "data": "selected.createsellerlist.createsellerlistview",
+          "dirtyCheck": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task121": "sellernonpaymentdoclisting",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "executeDecision": true,
+      "payload": "completeData",
+      "outcomes": [
+        {
+          "data": "output.sellernonpaymentdoclistingview",
+          "name": "_ST_PROCESSOR_NONPAYMENTDOC",
+          "appendMsg": false
+        },
+        {
+          "data": "output._ST_PROCESSOR_NONPAYMENTDOC",
+          "name": "_ST_SELLER_NONPAYMENTDOC",
+          "appendMsg": false
+        },
+        {
+          "data": "output.sellernonpaymentdoclistingview",
+          "name": "sellernonpaymentdoclistingview",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "Seller Non Payment Doc",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentName",
+      "width": "206px"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "documentDate",
+      "width": "180px",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "hidden": true,
+      "key": "plannedBulkShipmentNo"
+    },
+    {
+      "hidden": true,
+      "key": "seller"
+    }
+  ],
+  "taskId": "sellernonpaymentdoclistingview",
+  "object": "18521f4f-d2e8-47c8-9ac8-83b98ff4cf0e"
+}

@@ -1,0 +1,367 @@
+{
+  "_id": "object_buyer",
+  "name": "buyer",
+  "label": "Buyer",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["buyerpbs"],
+  "translatableKeys": [
+    "buyer",
+    "optionalityDeclaration",
+    "optionalityDeclarationDate",
+    "nominationDate",
+    "nominationAccepted",
+    "eTAOnNomination",
+    "fixingAdvise",
+    "documentaryInstructions",
+    "draftsSentReceived",
+    "draftsApproval",
+    "insuranceNotice",
+    "shipmentAdvise",
+    "lcOpeningDeadline",
+    "lcOperative",
+    "docsLegalization",
+    "docsReleasedbyEmbassy",
+    "documentsDispatched",
+    "courierTrackingNumber",
+    "paymentDocumentsPresentation",
+    "nonPaymentDocumentsPresentation",
+    "estimateCashReceivableDate",
+    "actualCashReceivableDate",
+    "claimagainstBuyer"
+  ],
+  "fields": {
+    "deposit_Required": {
+      "deposit_Required": "(C) Deposit Required",
+      "labelKey": "deposit_Required",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "deposit_RequiredDate": {
+      "deposit_RequiredDate": " ",
+      "labelKey": "deposit_RequiredDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "shipment_Paid": {
+      "shipment_Paid": "(C) Shipment Paid",
+      "labelKey": "shipment_Paid",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "released": {
+      "released": "(C) Released",
+      "labelKey": "released",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "LC_Required": {
+      "LC_Required": "L/C Required",
+      "labelKey": "LC_Required",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "LC_Received": {
+      "LC_Received": "L/C Received",
+      "labelKey": "LC_Received",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "Non_Payment_Documents_courier_no": {
+      "Non_Payment_Documents_courier_no": "Non Payment Documents courier tracking no.",
+      "labelKey": "Non_Payment_Documents_courier_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "buyerpbs": {
+      "buyerpbs": "buyerpbs",
+      "labelKey": "buyerpbs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "buyer": {
+      "buyer": "Buyer",
+      "labelKey": "buyer",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "buyer_id": {
+      "buyer_id": "buyer_id",
+      "labelKey": "buyer_id",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "optionalityDeclaration": {
+      "optionalityDeclaration": "Optionality Declaration",
+      "labelKey": "optionalityDeclaration",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "optionalityDeclarationDate": {
+      "optionalityDeclarationDate": "",
+      "labelKey": "optionalityDeclarationDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nominationDate": {
+      "nominationDate": "NominationDate(FOB - FOB)",
+      "labelKey": "nominationDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nominationAccepted": {
+      "nominationAccepted": "Nomination Accepted(FOB - FOB)",
+      "labelKey": "nominationAccepted",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "eTAOnNomination": {
+      "eTAOnNomination": "ETA On Nomination",
+      "labelKey": "eTAOnNomination",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "fixingAdvise": {
+      "fixingAdvise": "Fixing Advise (FOB - CIF)",
+      "labelKey": "fixingAdvise",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "documentaryInstructions": {
+      "documentaryInstructions": "Documentary Instructions",
+      "labelKey": "documentaryInstructions",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "draftsSentReceived": {
+      "draftsSentReceived": "Drafts Sent/Received",
+      "labelKey": "draftsSentReceived",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "draftsApproval": {
+      "draftsApproval": "Drafts Approval Date",
+      "labelKey": "draftsApproval",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "shipmentAdvise": {
+      "shipmentAdvise": "Shipment Advise",
+      "labelKey": "shipmentAdvise",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "lcOpeningDeadline": {
+      "lcOpeningDeadline": "L/C Opening Deadline",
+      "labelKey": "lcOpeningDeadline",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "lcOperative": {
+      "lcOperative": "L/C Operative",
+      "labelKey": "lcOperative",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "docsLegalization": {
+      "docsLegalization": "Docs Legalization",
+      "labelKey": "docsLegalization",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "docsReleasedbyEmbassy": {
+      "docsReleasedbyEmbassy": "Docs Released by Embassy",
+      "labelKey": "docsReleasedbyEmbassy",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "insuranceNotice": {
+      "insuranceNotice": "Insurance Notice",
+      "labelKey": "insuranceNotice",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "paymentDocumentsPresentation": {
+      "paymentDocumentsPresentation": "Payment Documents Presentation",
+      "labelKey": "paymentDocumentsPresentation",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nonPaymentDocumentsPresentation": {
+      "nonPaymentDocumentsPresentation": "Non Payment Documents Presentation",
+      "labelKey": "nonPaymentDocumentsPresentation",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "estimateCashReceivableDate": {
+      "estimateCashReceivableDate": "Estimate Cash Receivable Date",
+      "labelKey": "estimateCashReceivableDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "documentsDispatched": {
+      "documentsDispatched": "Documents Dispatched",
+      "labelKey": "documentsDispatched",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "courierTrackingNumber": {
+      "courierTrackingNumber": "Courier Tracking Number",
+      "labelKey": "courierTrackingNumber",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "actualCashReceivableDate": {
+      "actualCashReceivableDate": "Actual Cash Receivable Date",
+      "labelKey": "actualCashReceivableDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "claimagainstBuyer": {
+      "claimagainstBuyer": "Claim against Buyer",
+      "labelKey": "claimagainstBuyer",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "5556394f-829b-48ec-950f-ed4c705738df"
+}

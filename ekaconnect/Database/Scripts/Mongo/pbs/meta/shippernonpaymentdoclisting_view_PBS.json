@@ -1,0 +1,122 @@
+{
+  "_id": "shippernonpaymentdoclisting_view_PBS",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "label": "Shipper Non Payment Doc",
+  "type": "workflow",
+  "payLoad": "selected.createshipperlist.createshipperlistview",
+  "processorInfo": {
+    "processorId": "a16a66b1-1047-4ac7-8b43-2ec23d855684"
+  },
+  "layout": {
+    "getInitialData": {
+      "filterBy": {
+        "sD": ["plannedBulkShipmentNo"]
+      }
+    },
+    "sessionStorage": [
+      "plannedBulkShipmentNo",
+      "product",
+      "shipmentMode",
+      "vesselName",
+      "bookingRefNo"
+    ],
+    "header": {
+      "headerExpression": "return '${shipmentMode}' == 'Bulk' ? '${plannedBulkShipmentNo} (${vesselName})' : '${plannedBulkShipmentNo} (${bookingRefNo})'",
+      "title": "Shipment Planning & Tracking:"
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "refreshData": true,
+    "useQueryParams": false,
+    "preserveSelectedData": true,
+    "tableEditing": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createshipperlist",
+          "data": "selected.createshipperlist.createshipperlistview",
+          "dirtyCheck": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "executeDecision": true,
+      "payload": "completeData",
+      "outcomes": [
+        {
+          "data": "output.shippernonpaymentdoclistingview",
+          "name": "_ST_PROCESSOR_NONPAYMENTDOC",
+          "appendMsg": false
+        },
+        {
+          "data": "output._ST_PROCESSOR_NONPAYMENTDOC",
+          "name": "_ST_SHIPPER_NONPAYMENTDOC",
+          "appendMsg": false
+        },
+        {
+          "data": "output.shippernonpaymentdoclistingview",
+          "name": "shippernonpaymentdoclistingview",
+          "dirtyCheckFulfilled": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "Shipper Non Payment Doc",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "documentName",
+      "width": "206px"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "documentDate",
+      "width": "180px",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "hidden": true,
+      "key": "plannedBulkShipmentNo"
+    },
+    {
+      "hidden": true,
+      "key": "shipper"
+    }
+  ],
+  "taskId": "shippernonpaymentdoclistingview",
+  "object": "7555b6ae-b3c7-4a56-b902-efc22fbdb919"
+}

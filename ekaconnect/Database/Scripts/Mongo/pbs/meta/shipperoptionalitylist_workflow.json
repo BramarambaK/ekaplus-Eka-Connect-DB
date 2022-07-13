@@ -1,0 +1,28 @@
+{
+  "_id": "shipperoptionalitylist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "shipperoptionalitylist",
+  "object": "bf4b1a46-b478-4983-b04e-0ad6848bf660",
+  "label": "shipperoptionalitylist",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Buyer"
+    },
+    "name": "list"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "plannedBulkShipmentNo",
+      "sort": true,
+      "key": "plannedBulkShipmentNo"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST"
+}

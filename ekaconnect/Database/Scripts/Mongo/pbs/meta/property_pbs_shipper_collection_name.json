@@ -1,0 +1,13 @@
+{
+  "_id": "property_pbs_shipper_collection_name",
+  "type": "property",
+  "name": "shipper_collection_name",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "RealTime PBS Shipper Details",
+  "label": "Shipper Collection Name",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Shipper Collection Name is used to fetch data from collection for Shipper table"
+}

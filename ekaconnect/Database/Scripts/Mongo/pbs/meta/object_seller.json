@@ -1,0 +1,460 @@
+{
+  "_id": "object_seller",
+  "name": "seller",
+  "label": "Seller",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["sellerpbs"],
+  "translatableKeys": [
+    "seller",
+    "optionalityDeclaration",
+    "optionalityDeclarationDate",
+    "depositRequired",
+    "depositRequiredDate",
+    "lcOpened",
+    "nominationDate",
+    "nominationAcceptedDate",
+    "eTAOnNomination",
+    "loadingPortDeclaration",
+    "documentaryInstructions",
+    "draftsSentReceived",
+    "draftsApproval",
+    "loadingBerthDeclaration",
+    "paymentDocumentsPresentation",
+    "nonPaymentDocumentsPresentation",
+    "extraDocumentsReimbursement",
+    "documentsDispatched",
+    "courierTrackingNumber",
+    "estimatePaymentDate",
+    "actualPaymentDate"
+  ],
+  "fields": {
+    "Final_shippers_breakdown": {
+      "Final_shippers_breakdown": "Final shippers breakdown",
+      "labelKey": "Final_shippers_breakdown",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "BL_released": {
+      "BL_released": "BL released",
+      "labelKey": "BL_released",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "Original_BLMR_received": {
+      "Original_BLMR_received": "Original BL/MR received",
+      "labelKey": "Original_BLMR_received",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "BL_Draft_Deadline": {
+      "BL_Draft_Deadline": "(C) BL Draft Deadline",
+      "labelKey": "BL_Draft_Deadline",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "BL_Draft_Deadlinetimer": {
+      "BL_Draft_Deadline": "",
+      "labelKey": "BL_Draft_Deadline",
+      "type": "timepicker",
+      "isRequired": false
+    },
+    "Estimated_Sailing": {
+      "Estimated_Sailing": "(C) Estimated Sailing",
+      "labelKey": "Estimated_Sailing",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "Docs_Instructions_Sent": {
+      "Docs_Instructions_Sent": "(C) Docs Instructions Sent",
+      "labelKey": "Docs_Instructions_Sent",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "BL_Draft_approved": {
+      "BL_Draft_approved": "(C) BL Draft approved",
+      "labelKey": "BL_Draft_approved",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "Balance_drafts_approved": {
+      "Balance_drafts_approved": "(C) Balance drafts approved",
+      "labelKey": "Balance_drafts_approved",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "Copy_of_original_docs_received": {
+      "Copy_of_original_docs_received": "(C) Copy of original docs received",
+      "labelKey": "Copy_of_original_docs_received",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sellerpbs": {
+      "sellerpbs": "sellerpbs",
+      "labelKey": "sellerpbs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "seller": {
+      "seller": "Seller",
+      "labelKey": "seller",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "seller_id": {
+      "seller_id": "seller_id",
+      "labelKey": "seller_id",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "optionalityDeclaration": {
+      "optionalityDeclaration": "Optionality Declaration",
+      "labelKey": "optionalityDeclaration",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "optionalityDeclarationDate": {
+      "optionalityDeclarationDate": "",
+      "labelKey": "optionalityDeclarationDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "depositRequired": {
+      "depositRequired": "Deposit Required",
+      "labelKey": "depositRequired",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "depositRequiredDate": {
+      "depositRequiredDate": "",
+      "labelKey": "depositRequiredDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "lcOpened": {
+      "lcOpened": "L/C Opened",
+      "labelKey": "lcOpened",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nominationDate": {
+      "nominationDate": "Nomination Date",
+      "labelKey": "nominationDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nominationAcceptedDate": {
+      "nominationAcceptedDate": "Nomination Accepted Date",
+      "labelKey": "nominationAcceptedDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "eTAOnNomination": {
+      "eTAOnNomination": "ETA On Nomination",
+      "labelKey": "eTAOnNomination",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "loadingPortDeclaration": {
+      "loadingPortDeclaration": "Loading Port Declaration",
+      "labelKey": "loadingPortDeclaration",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "documentaryInstructions": {
+      "documentaryInstructions": "Documentary Instructions",
+      "labelKey": "documentaryInstructions",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "draftsSentReceived": {
+      "draftsSentReceived": "Drafts Sent/Received",
+      "labelKey": "draftsSentReceived",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "draftsApproval": {
+      "draftsApproval": "Drafts Approval Date",
+      "labelKey": "draftsApproval",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "loadingBerthDeclaration": {
+      "loadingBerthDeclaration": "Loading Berth Declaration",
+      "labelKey": "loadingBerthDeclaration",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "paymentDocumentsPresentation": {
+      "paymentDocumentsPresentation": "Payment Documents Received",
+      "labelKey": "paymentDocumentsPresentation",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nonPaymentDocumentsPresentation": {
+      "nonPaymentDocumentsPresentation": "Non Payment Documents Presentation",
+      "labelKey": "nonPaymentDocumentsPresentation",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "documentsDispatched": {
+      "documentsDispatched": "Documents Dispatched",
+      "labelKey": "documentsDispatched",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "courierTrackingNumber": {
+      "courierTrackingNumber": "Payment Docs Tracking Number",
+      "labelKey": "courierTrackingNumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "estimatePaymentDate": {
+      "estimatePaymentDate": "Estimate Payment Date",
+      "labelKey": "estimatePaymentDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "actualPaymentDate": {
+      "actualPaymentDate": "Actual Payment Date",
+      "labelKey": "actualPaymentDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nonpaymentDocs": {
+      "nonpaymentDocs": "Other Non-Payment Documents",
+      "labelKey": "nonpaymentDocs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "nonpaymentDocsDate": {
+      "nonpaymentDocsDate": " ",
+      "labelKey": "nonpaymentDocsDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "optionalDeclaration": {
+      "optionalDeclaration": "Optionality Declaration",
+      "labelKey": "optionalDeclaration",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "optionalDeclarationField": {
+      "optionalDeclarationField": " ",
+      "labelKey": "optionalDeclarationField",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "phytosanitaryPresented": {
+      "phytosanitaryPresented": "Phytosanitary Presented",
+      "labelKey": "phytosanitaryPresented",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "sanitaryPresented": {
+      "sanitaryPresented": "Sanitary Presented",
+      "labelKey": "sanitaryPresented",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "nonGMOCertificatePresented": {
+      "nonGMOCertificatePresented": "Non-GMO Certificate Presented",
+      "labelKey": "nonGMOCertificatePresented",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "radioPresented": {
+      "radioPresented": "Radio Presented",
+      "labelKey": "radioPresented",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "healthPresented": {
+      "healthPresented": "Health Presented",
+      "labelKey": "healthPresented",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "wqPresented": {
+      "wqPresented": "W&Q Presented",
+      "labelKey": "wqPresented",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "wqPresentedtimer": {
+      "wqPresentedtimer": "",
+      "labelKey": "wqPresentedtimer",
+      "type": "timepicker",
+      "isRequired": false
+    },
+    "coPresented": {
+      "coPresented": "CO Presented",
+      "labelKey": "coPresented",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "coPresentedtimer": {
+      "coPresentedtimer": "",
+      "labelKey": "coPresentedtimer",
+      "type": "timepicker",
+      "isRequired": false
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "5c1d2726-79c9-4915-9243-8d7aa4d6791d"
+}

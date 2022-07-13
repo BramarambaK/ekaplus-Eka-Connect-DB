@@ -1,0 +1,12 @@
+{
+  "_id": "shipperdocumentdownload_PBS",
+  "action": "downloadLink",
+  "componentType": "client",
+  "object": "1df1ff7c-572e-4ce2-bf72-f80bf41514e2",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "taskId": "shipperdocumentdownload",
+  "label": "Shipper Document Download",
+  "type": "workflow"
+}

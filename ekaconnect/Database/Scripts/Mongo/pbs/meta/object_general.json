@@ -1,0 +1,171 @@
+{
+  "_id": "object_general",
+  "name": "general",
+  "label": "General",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["plannedBulkShipmentNo"],
+  "translatableKeys": ["docsByPass", "circleSettlement"],
+  "fields": {
+    "blConsolidated": {
+      "blConsolidated": "B/L Consolidated",
+      "labelKey": "blConsolidated",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "certificatesConsolidated": {
+      "certificatesConsolidated": "Certificates Consolidated",
+      "labelKey": "certificatesConsolidated",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "SAP_No": {
+      "SAP_No": "(C) SAP No.",
+      "labelKey": "SAP_No",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Sanction_checks_clearance": {
+      "Sanction_checks_clearance": "(C) Sanction checks clearance",
+      "labelKey": "Sanction_checks_clearance",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "Supervision_appointment": {
+      "Supervision_appointment": "(C) Supervision Appointment",
+      "labelKey": "Supervision_appointment",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "Final_Shipper_Breakdown": {
+      "Final_Shipper_Breakdown": "Final Shipper Breakdown",
+      "labelKey": "Final_Shipper_Breakdown",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "docsByPass": {
+      "docsByPass": "Docs by Pass",
+      "labelKey": "docsByPass",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "circleSettlement": {
+      "circleSettlement": "Circle Settlement",
+      "labelKey": "circleSettlement",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "flag"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "estimatedSailing": {
+      "estimatedSailing": "(C) Estimated Sailing",
+      "labelKey": "estimatedSailing",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contNominationDate": {
+      "contNominationDate": "Cont. Nomination Date",
+      "labelKey": "contNominationDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "17e310dd-14f8-4a1b-ab38-8e67f6471950"
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "processor_pbs_dropdown",
+  "name": "traderegion_dropdown",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "snippet": "\r\nvar productIdUrl = req.body.propertyList.platform_url + '/mdmapi/data';\r\nvar productIdBody = [\r\n    {\r\n        serviceKey: 'regionList'\r\n    }\r\n];\r\nvar productIdCollection = {\r\n    method: 'POST',\r\n    url: productIdUrl,\r\n    body: productIdBody,\r\n    headers: {\r\n        Authorization: req.headers.authorization,\r\n        'Content-Type': 'application/json'\r\n    },\r\n    json: true\r\n};\r\nif (req.headers.hasOwnProperty('device-id')) {\r\n    productIdCollection.headers['Device-Id'] = req.headers['device-id'];\r\n}\r\nfunction get_collection() {\r\n    return new Promise(function (resolve, reject) {\r\n        request(productIdCollection, function (err, response, body) {\r\n            if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n                resolve(body);\r\n            }\r\n            else {\r\n                reject(body);\r\n            }\r\n        });\r\n    });\r\n}\r\nget_collection().then(function (result) {\r\n    let data = result.regionList;\r\n    var mdmData = [];\r\n    for (var i = 0; i < data.length; i++) {\r\n        mdmData.push({ key: data[i]['key'], value: data[i]['value'] });\r\n    }\r\n    var mdmData1 = { cityNameComboList: mdmData };\r\n    res.status(200).send(mdmData1);\r\n});\r\n",
+  "sys__UUID": "9e85a127-1094-4205-b69a-a930328c1de0",
+  "sys__createdBy": "admin@ekaplus.com"
+}

@@ -1,0 +1,16 @@
+{
+    "_id": "shippernonpaymentdoc_policy",
+    "type": "policy",
+    "app_UUID": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "refType": "object",
+    "refTypeId": "7555b6ae-b3c7-4a56-b902-efc22fbdb919",
+    "userGrants": {},
+    "roleGrants": {
+      "AUTHENTICATED_USERS": {
+        "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+        "itemLevelFilters": [],
+        "allowedGlobalActions": ["CREATE", "UPLOAD"]
+      }
+    }
+  }
+  

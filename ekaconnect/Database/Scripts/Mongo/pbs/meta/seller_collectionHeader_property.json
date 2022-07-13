@@ -1,0 +1,13 @@
+{
+  "_id": "seller_collectionHeader_property",
+  "type": "property",
+  "name": "seller_collectionHeader",
+  "label": "Seller CollectionHeader",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "sellerpbs:String,seller_id:String,plannedBulkShipmentNo:String,seller:String,depositRequired:String,depositRequiredDate:Date,lcOpened:Date,nominationDate:Date,nominationAcceptedDate:Date,eTAOnNomination:Date,loadingPortDeclaration:Date,documentaryInstructions:Date,draftsSentReceived:Date,draftsApproval:Date,loadingBerthDeclaration:Date,paymentDocumentsPresentation:Date,nonPaymentDocumentsPresentation:Date,documentsDispatched:Date,courierTrackingNumber:String,estimatePaymentDate:Date,actualPaymentDate:Date,coPresented:Date,wqPresented:Date,healthPresented:Date,radioPresented:Date,nonGMOCertificatePresented:Date,sanitaryPresented:Date,phytosanitaryPresented:Date,nonpaymentDocs:String,nonpaymentDocsDate:Date,Final_shippers_breakdown:Date,BL_released:Date,Original_BLMR_received:Date,BL_Draft_Deadline:Date,Docs_Instructions_Sent:Date,BL_Draft_approved:Date,Balance_drafts_approved:Date,Copy_of_original_docs_received:Date,product:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of seller collection"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "voyage_collectionHeader_Property_PBS",
+  "type": "property",
+  "name": "voyage_collectionHeader",
+  "label": "Voyage CollectionHeader",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "defaultValue": "plannedBulkShipmentNo:String,sanctionCheck:String,tradeRegion:String,numberOfRollings:Number,incoTerm:String,SOF_NOR_CP_Laytime_team:String,Mates_Receipt_Treasury:String",
+  "length": "1000",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch all datatypes of voyage collection"
+}

@@ -1,0 +1,29 @@
+{
+    "_id": "voyagelist_workflow",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "refType": "app",
+    "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+    "taskId": "voyagelist",
+    "object": "9c98c493-ee2f-490d-be92-fe2424f513e5",
+    "label": "voyagelist",
+    "type": "workflow",
+    "layout": {
+      "header": {
+        "label": "Buyer"
+      },
+      "name": "list"
+    },
+    "fields": [
+      {
+        "filter": true,
+        "edit": false,
+        "label": "plannedBulkShipmentNo",
+        "sort": true,
+        "key": "plannedBulkShipmentNo"
+      }
+    ],
+    "decisions": [],
+    "labelKey": "LIST"
+  }
+  

@@ -1,0 +1,171 @@
+{
+  "_id": "object_owner",
+  "name": "owner",
+  "label": "Owner",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["plannedBulkShipmentNo"],
+  "translatableKeys": [
+    "vesselNomination",
+    "sanctionChecksCleared",
+    "LoadingPortDeclaration",
+    "tradeRegion",
+    "laytimeTeam"
+  ],
+  "fields": {
+    "Vessel_Agent_load_port": {
+      "Vessel_Agent_load_port": "Vessel Agent at load port",
+      "labelKey": "Vessel_Agent_load_port",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Vessel_Agent_discharge_port": {
+      "Vessel_Agent_discharge_port": "Vessel Agent at discharge port",
+      "labelKey": "Vessel_Agent_discharge_port",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Vessel_Intake": {
+      "Vessel_Intake": "Vessel Intake",
+      "labelKey": "Vessel_Intake",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "vesselNomination": {
+      "vesselNomination": "Vessel Nomination",
+      "labelKey": "vesselNomination",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "optionalDeclaration": {
+      "optionalDeclaration": "Optionality Declaration",
+      "labelKey": "optionalDeclaration",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "optionalDeclarationField": {
+      "optionalDeclarationField": " ",
+      "labelKey": "optionalDeclarationField",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sanctionChecksCleared": {
+      "sanctionChecksCleared": "Sanction Checks Cleared",
+      "labelKey": "sanctionChecksCleared",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "LoadingPortDeclaration": {
+      "LoadingPortDeclaration": "Loading Port Declaration",
+      "labelKey": "LoadingPortDeclaration",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "LoadingPortDeclarationDate": {
+      "LoadingPortDeclarationDate": "",
+      "labelKey": "LoadingPortDeclarationDate",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "sofnor": {
+      "sofnor": "SOF, NOR and CP sent to Laytime team",
+      "labelKey": "sofnor",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "cd74327c-cb01-4194-a03d-965eceba4119"
+}

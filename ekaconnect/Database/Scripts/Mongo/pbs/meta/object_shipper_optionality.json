@@ -1,0 +1,119 @@
+{
+  "_id": "object_shipper_optionality",
+  "name": "shipper_optionality",
+  "label": "Shipper optionality",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["uniqueId"],
+  "translatableKeys": [],
+  "fields": {
+    "uniqueId": {
+      "uniqueId": "Seller Optionality Ref No",
+      "labelKey": "uniqueId",
+      "serialNumber": {
+        "startsWith": "0"
+      }
+    },
+    "plannedBulkShipmentNo": {
+      "plannedBulkShipmentNo": "Plan Bulk Ship No",
+      "labelKey": "plannedBulkShipmentNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipper": {
+      "shipper": "Shipper",
+      "labelKey": "shipper",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipper_id": {
+      "shipper_id": "shipper_id",
+      "labelKey": "shipper_id",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isPopUp": {
+      "isPopUp": "isPopUp",
+      "labelKey": "isPopUp",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "optionalityDeclaration": {
+      "optionalityDeclaration": "Optionality Declaration",
+      "labelKey": "optionalityDeclaration",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "optionalityDeclaration2": {
+      "optionalityDeclaration2": " ",
+      "labelKey": "optionalityDeclaration2",
+      "type": "datepicker",
+      "valueWhenNull": "",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionName": {
+      "collectionName": "collectionName",
+      "labelKey": "collectionName",
+      "type": "hidden",
+      "isRequired": false
+    },
+    "collectionHeaderProperty": {
+      "collectionHeaderProperty": "collectionHeaderProperty",
+      "labelKey": "collectionHeaderProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionConnectMapProperty": {
+      "collectionConnectMapProperty": "collectionConnectMapProperty",
+      "labelKey": "collectionConnectMapProperty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "platformTemplateId": {
+      "platformTemplateId": "platformTemplateId",
+      "labelKey": "platformTemplateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "collectionData": {
+      "collectionData": "collectionData",
+      "labelKey": "collectionData",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "bf4b1a46-b478-4983-b04e-0ad6848bf660"
+}

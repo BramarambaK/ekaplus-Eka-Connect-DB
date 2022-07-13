@@ -1,0 +1,13 @@
+{
+  "_id": "property_pbs_voyage_collection",
+  "type": "property",
+  "name": "voyage_collection",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "voyage_collection",
+  "label": "Voyage Collection",
+  "refTypeId": "4e20f754-574e-43e7-8d11-87c6fae060f5",
+  "description": "Property is used to fetch data from voyage collection"
+}
