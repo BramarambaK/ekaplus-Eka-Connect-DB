@@ -1,0 +1,17 @@
+{
+    "_id" : "eka_ctrm_version_physicals",
+    "type" : "property",
+    "name" : "eka_ctrm_version",
+    "propertyLevel" : "tenant, app, user",
+    "dataType" : "JSON",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [
+        {
+            "key" : "9.1.4",
+            "value" : "9.1.4"
+        }
+    ],
+    "label" : "EKA CTRM Version",
+    "editSupportedInUI" : true
+}

@@ -1,0 +1,19 @@
+{
+    "_id" : "gmr_stock_level_data",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "00ac5c66-69c6-11eb-9439-0242ac130002",
+    "objectAction" : "UPDATE",
+    "taskId" : "gmr_stock_level_data",
+    "refType" : "app",
+    "tags" : "notifyDataChange",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_SAVE_GMR_STOCK_DATA",
+            "data" : "output.gmr_stock_level_data",
+            "returnData" : "Y"
+        }
+    ]
+}

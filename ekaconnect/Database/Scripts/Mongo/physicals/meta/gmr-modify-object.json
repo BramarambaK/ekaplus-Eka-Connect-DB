@@ -1,0 +1,47 @@
+{
+    "_id" : "gmr-modify-object",
+    "name" : "gmr-modify-object",
+    "label" : "gmr-modify-object",
+    "type" : "object",
+    "version" : "V2",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+	"uniqueFields" : [ 
+        "internalContractItemRefNo", 
+        "gmrRefNo"
+    ],
+    "fields" : {
+        "internalContractRefNo" : {
+            "internalContractRefNo" : "internal Contract Ref No",
+            "labelKey" : "internalContractRefNo",
+			"isRequired" : true
+        },
+        "internalContractItemRefNo" : {
+            "internalContractItemRefNo" : "internal Contract Item Ref No",
+            "labelKey" : "internalContractItemRefNo",
+            "isRequired" : true
+        },
+		"gmrRefNo" : {
+            "gmrRefNo" : "GMR Ref No",
+            "labelKey" : "gmrRefNo",
+            "isRequired" : true
+        }
+    },
+    "sys__UUID" : "146bb98e-5409-4761-b426-da3c81112280",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

@@ -1,0 +1,24 @@
+{
+    "_id" : "physicals_workflow_ext_ID2VALUES",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "ext_id2values",
+    "task" : "ext_id2values",
+    "componentType" : "ExtSystemTask",
+    "object" : "contract",
+    "apiInfo" : {
+        "host" : "${properties.eka_mdm_host}",
+        "path" : "/mdm/id2value/object/5d907cd2-7785-4d34-bcda-aa84b2158415/contract",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        },
+        "useInputMapping" : false
+    }
+}

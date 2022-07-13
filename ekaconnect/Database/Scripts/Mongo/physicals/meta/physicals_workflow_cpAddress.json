@@ -1,0 +1,44 @@
+{
+    "_id" : "physicals_workflow_cpAddress",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "cpAddress",
+    "label" : "cpAddress",
+    "labelKey" : "cpAddress",
+    "object" : "contract",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "taskId" : "cpAddress",
+            "outcomes" : [ 
+                {
+                    "name" : "ext_cpAddress",
+                    "data" : "output.cpAddress",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Profile got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Profile got created with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "name" : "cpAddress",
+                    "data" : "output.ext_cpAddress"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "_id" : "Phsicals_mdm_quality_call",
+    "componentType" : "UserTask",
+    "labelKey" : "mdm_quality",
+    "label" : "Mdm Save",
+    "object" : "contract",
+    "objectAction" : "CREATE",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "mdm_quality",
+            "outcomes" : [ 
+                {
+                    "data" : "output.mdm_quality",
+                    "name" : "_EXT_CALL_MDM",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Call Successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Call with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "name" : "mdm_quality",
+                    "data" : "output._EXT_CALL_MDM"
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "mdm_quality"
+}

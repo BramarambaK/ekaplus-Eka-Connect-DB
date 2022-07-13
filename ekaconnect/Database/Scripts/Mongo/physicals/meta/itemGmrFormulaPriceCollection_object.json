@@ -1,0 +1,82 @@
+{
+    "_id": "itemGmrFormulaPriceCollection_object",
+    "fields": {
+        "asOfDate": {
+            "labelKey": "asOfDate",
+            "asOfDate": "asOfDate",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "internalContractRefNo": {
+            "labelKey": "internalContractRefNo",
+            "internalContractRefNo": "internalContractRefNo",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "internalContractItemRefNo": {
+            "labelKey": "internalContractItemRefNo",
+            "internalContractItemRefNo": "internalContractItemRefNo",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "gmrRefNo": {
+            "labelKey": "gmrRefNo",
+            "gmrRefNo": "gmrRefNo",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "contractPrice": {
+            "labelKey": "contractPrice",
+            "contractPrice": "contractPrice",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "marketPrice": {
+            "labelKey": "marketPrice",
+            "marketPrice": "marketPrice",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "priceUnit": {
+            "labelKey": "priceUnit",
+            "priceUnit": "priceUnit",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "internalPriceUnitId": {
+            "labelKey": "internalPriceUnitId",
+            "internalPriceUnitId": "internalPriceUnitId",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "priceData": {
+            "labelKey": "priceData",
+            "priceData": "priceData",
+            "type": "textbox",
+            "dataType": "String",
+            "isRequired": false
+        }
+    },
+    "label": "itemGmrFormulaPriceCollection_object",
+    "name": "itemGmrFormulaPriceCollection_object",
+    "objectAction": {
+        "CREATE": "POST",
+        "UPDATE": "PUT",
+        "READ": "GET",
+        "LISTVIEW": "GET",
+        "DELETE": "DELETE",
+        "APPROVE": "PUT",
+        "REJECT": "PUT"
+    },
+    "sys__UUID": "afa4778b-b1dc-4916-90b4-f75141d48fbd",
+    "type": "object",
+    "uniqueFields": []
+}

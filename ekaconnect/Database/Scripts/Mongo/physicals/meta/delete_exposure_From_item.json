@@ -1,0 +1,33 @@
+{
+    "_id" : "delete_exposure_From_item",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "DELETE",
+            "label" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "delete_exposure",
+            "outcomes" : [ 
+                {
+                    "data" : "output.delete_exposure",
+                    "name" : "EXT_TASK_DELETE",
+                    "appendMsg" : true
+                }, 
+                {
+                    "data" : "output.EXT_TASK_DELETE",
+                    "name" : "delete_exposure"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "Delete Exposure",
+    "labelKey" : "delete_exposure",
+    "layout" : {},
+    "object" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "delete_exposure",
+    "type" : "workflow"
+}

@@ -1,0 +1,123 @@
+{
+    "_id" : "Listing_Component_inpopup",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "65bca14c-a1fe-4be1-b8f9-6430d4f52aa4"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Actual Component Composition",
+    "payLoad" : "selected.componentPricinglistingGmr",
+    "type" : "workflow",
+    "layout" : {
+        "tableEditing" : true,
+        "selection" : "row",
+        "showCheckbox" : false,
+        "name" : "list",
+        "topLine" : {
+            "display" : true
+        },
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "dropdownDecisions" : false,
+        "preserveSelectedData" : true,
+        "limitHeight" : true,
+        "pagination" : false
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "CLOSE",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "name" : "componentPricinglistingGmr"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "componentPricinglistinginpopup",
+            "label" : "SAVE",
+            "type" : "submit",
+            "position" : "bottom",
+            "payload" : "completeData",
+            "outcomes" : [ 
+                {
+                    "data" : "output.componentPricinglistinginpopup",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_COMPONENT_PRICING"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "COG UPDATED SUCCESSFULLY"
+                        },
+                        "failure" : {
+                            "message" : "COG UPDATION FAILED"
+                        },
+                        "successWithWarning" : {
+                            "message" : "COG UPDATION FAILED"
+                        }
+                    },
+                    "data" : "output.componentPricinglistinginpopup",
+                    "name" : "callcog",
+                    "appendMsg" : true
+                }, 
+                {
+                    "data" : "output._ST_CREATE_COMPONENT_PRICING",
+                    "name" : "componentPricinglistingGmr",
+                    "showToaster" : true
+                }
+            ]
+        }
+    ],
+    "labelKey" : "ComponentPricingList",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "productComponentName",
+            "width" : "20%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "componentPercentage",
+            "width" : "20%",
+            "align" : "right",
+            "event" : "record.executedcomponent = (record.componentPercentage *((record.executedQuantity)/100)).toFixed(4)"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "executedcomponent",
+            "width" : "24%",
+            "event" : "record.componentPercentage = ((record.executedcomponent/record.executedQuantity)*100).toFixed(4)",
+            "align" : "right"
+        }
+    ],
+    "taskId" : "componentPricinglistinginpopup",
+    "object" : "a17ad3d2-8c98-461d-98c7-d91e953aa819",
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

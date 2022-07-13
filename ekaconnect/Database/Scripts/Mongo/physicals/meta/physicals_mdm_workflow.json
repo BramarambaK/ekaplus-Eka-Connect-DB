@@ -1,0 +1,23 @@
+{
+    "_id" : "physicals_workflow_mdm",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "mdm_api",
+    "object" : "contract",
+    "labelKey" : "mdmtest",
+    "label" : "mdm",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "task" : "pricing_call",
+            "outcomes" : []
+        }
+    ]
+}

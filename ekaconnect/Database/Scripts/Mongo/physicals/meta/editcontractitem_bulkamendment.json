@@ -1,0 +1,261 @@
+{
+    "_id" : "editcontractitem_bulkamendment",
+    "componentType" : "UserTask",
+    "decisions" : [],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "amendmentDate"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "amendmentReason"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "originId"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "cropYearId"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex",
+                    "width" : "150px !important"
+                },
+                "key" : "qualityId"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "priceContractDefId"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "priceFutureContractId"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "35%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "basisPrice"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "5px"
+                },
+                "formLabelStyle" : {
+                    "width" : "10%",
+                    "padding" : "0px"
+                },
+                "key" : "basisPriceUnitId"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "periodType"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "35%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "periodFromDate"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "5px"
+                },
+                "formLabelStyle" : {
+                    "width" : "10%",
+                    "padding" : "0px"
+                },
+                "key" : "periodToDate"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "multiDeliveryPeriodTypeId"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "35%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "multiDeliveryFromDate"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "12%",
+                    "margin-right" : "5px"
+                },
+                "formLabelStyle" : {
+                    "width" : "10%",
+                    "padding" : "0px"
+                },
+                "key" : "multiDeliveryToDate"
+            }
+        ],
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "productId"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "cropYear"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "payinCurrencyId"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "priceTypeId"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "executedQty"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "quality"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "origin"
+            }
+        ]
+    ],
+    "label" : "Bulk Amendment To",
+    "labelKey" : "bulkamendmentto",
+    "layout" : {
+        "recommedationNeed" : false,
+        "defaultFormItemStyle" : {
+            "width" : "35%",
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "15%"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "100%",
+            "height" : "28px"
+        },
+        "header" : {
+            "title" : "Bulk Amendment To"
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "10px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "editcontractitem",
+    "type" : "workflow"
+}

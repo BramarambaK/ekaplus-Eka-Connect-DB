@@ -1,0 +1,75 @@
+{
+  "_id": "getcontractfileinfo_contracts",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "label": "Get File Info",
+  "getDataFromExternalAPI": false,
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "2c6702cd-fcae-40a3-8ab1-b1617c3d3848"
+  },
+  "layout": {
+    "name": "list",
+    "selection": "row",
+    "options": {
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "scrollHeight": "336px"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "importcontracts"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "Get File Info",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ColumnName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "DataType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Mandatory"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ColumnDescription"
+    }
+  ],
+  "taskId": "getcontractfileinfo",
+  "object": "2ba827f0-059c-4b88-8320-95a0eb1a5f5f"
+}

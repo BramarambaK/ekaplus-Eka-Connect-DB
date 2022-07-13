@@ -1,0 +1,123 @@
+{
+    "_id" : "productcomponent_pricing",
+    "type" : "object",
+    "name" : "productcomponent",
+    "label" : "Product Component",
+    "sys__UUID" : "a17ad3d2-8c98-461d-98c7-d91e953aa819",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [ 
+        "productComponentName", 
+        "componentDraftId", 
+        "itemNo", 
+        "internalGmrRefNo", 
+        "gmrRefNo"
+    ],
+    "fields" : {
+        "componentDraftId" : {
+            "componentDraftId" : " ",
+            "labelKey" : "componentDraftId",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "itemNo" : {
+            "itemNo" : " ",
+            "labelKey" : "itemNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "internalContractItemRefNo" : {
+            "internalContractItemRefNo" : "Contract ItemRefNo",
+            "labelKey" : "internalContractItemRefNo",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "internalContractRefNo" : {
+            "internalContractRefNo" : "ContractRefNo",
+            "labelKey" : "internalContractRefNo",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : " ",
+            "labelKey" : "gmrRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "internalGmrRefNo" : {
+            "internalGmrRefNo" : " ",
+            "labelKey" : "internalGmrRefNo",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "componentPercentage" : {
+            "labelKey" : "componentPercentage",
+            "isRequired" : true,
+            "componentPercentage" : "Component %",
+            "type" : "textbox",
+            "dataType" : "number"
+        },
+        "productComponentName" : {
+            "productComponentName" : "Constituent",
+            "labelKey" : "productComponentName",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "quality" : {
+            "quality" : "Quality",
+            "labelKey" : "quality",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "components" : {
+            "components" : "Components",
+            "labelKey" : "components",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "expression" : {
+            "expression" : "Expression",
+            "labelKey" : "expression",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "executedQuantity" : {
+            "executedQuantity" : "Total Executed Quantity",
+            "labelKey" : "executedQuantity",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "executedcomponent" : {
+            "executedcomponent" : "Component Quantity",
+            "labelKey" : "executedcomponent",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "bulkPayload" : {
+            "bulkPayload" : "",
+            "labelKey" : "bulkPayload",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    }
+}

@@ -1,0 +1,423 @@
+{
+    "_id": "itemDetails_object",
+    "fields": {
+        "internalItemRefNo": {
+            "labelKey" : "internalItemRefNo",
+            "internalItemRefNo" : "Internal ItemRefNo",
+            "dataType": "String",
+            "isRequired": false
+        },
+        "itemNo": {
+            "dataType": "String",
+            "isRequired": true
+        },
+        "productId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "quality": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "itemQty": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "itemQtyUnitId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "tolerance": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "toleranceType": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "toleranceLevel": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "payInCurId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "pricing": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "shipmentMode": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "deliveryFromDate": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "deliveryToDate": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "loadingLocationGroupTypeId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "originationCityId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "originationCountryId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "destinationLocationGroupTypeId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "destinationCityId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "destinationCountryId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "paymentDueDate": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "profitCenterId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "strategyAccId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "inspectionCompany": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "isOptionalOrigination": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "isOptionalDestination": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "optLoadLocGroupTypeId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "optDestLocGroupTypeId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "optionalLoadingDetails": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "optionalDischargeDetails": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "valuationFormula": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "estimates": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "isDeleted": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "laycanStartDate": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "laycanEndDate": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "unweighedPiPctType": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "unweighedPiPctValue": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "latePaymentInterestDetails": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "qualityPdScheduleId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "earliestBy": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "priceLastFixDayBasedOn": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "optionsToFix": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "fixationMethod": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "priceContractDefId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "futureInstrumentText": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "taxScheduleCountryId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "taxScheduleStateId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "taxScheduleId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "itemAdditionDeductions": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "itemDisplayValue": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "isOptionalFieldsEnabled": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "cropYearId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "originId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "packingTypeId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "packingSizeId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "periodType": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "isRenewable": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "isRinContract": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "rinEquivalanceValue": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "rinQuantity": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "rinUnit": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "toleranceMin": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "toleranceMax": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "productSpecs": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "dailyMonthly": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "dailyMonthlyQty": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "customEvent": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "customEventDate": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "holidayRule": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "formulaPriceDetails": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "itemQtyUnit": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "densityFactor" : {
+            "labelKey" : "densityFactor",
+            "densityFactor" : "Density",
+            "options" : [],
+            "isRequired" : false
+        },
+        "densityMassQtyUnitId" : {
+            "labelKey" : "densityMassQtyUnitId",
+            "densityMassQtyUnitId" : "Mass Unit",
+            "options" : [],
+            "isRequired" : false
+        },
+        "densityVolumeQtyUnitId" : {
+            "labelKey" : "densityVolumeQtyUnitId",
+            "densityVolumeQtyUnitId" : "Volume Unit",
+            "options" : [],
+            "isRequired" : false
+        },
+        "cpContractItemId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "internalProfitCenterId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "internalStrategyAccId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "qualityLongDesc": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "qualityShortDesc": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "invDocPriceUnitId": {
+            "dataType": "String",
+            "isRequired": false
+        },
+        "contract_id":{
+            "dataType": "String",
+            "isRequired": true
+        },
+        "internalContractRefNo":{
+            "dataType": "String",
+            "isRequired": false
+        },
+        "contractRefNo":{
+            "dataType": "String",
+            "isRequired": false
+        },
+        "manuallyCreated":{
+            "dataType": "String",
+            "isRequired": false
+        },
+        "valuationIncotermId" : {
+            "options" : [],
+            "labelKey" : "valuationIncotermId",
+            "valuationIncotermId" : "Valuation INCO Term",
+            "serviceKey" : "incoterm",
+            "isRequired" : false
+        },
+        "valuationCountryId" : {
+            "options" : [],
+            "labelKey" : "valuationCountryId",
+            "valuationCountryId" : "Valuation Country",
+            "serviceKey" : "countriesComboDataFromDB",
+            "isRequired" : false
+        },
+        "valuationCityId" : {
+            "options" : [],
+            "labelKey" : "valuationCityId",
+            "valuationCityId" : "Valuation City",
+            "serviceKey" : "cityComboDataFromDB",
+            "dependsOn" : [ 
+                "valuationCountryId", 
+                "locGroupTypeId"
+            ],
+            "isRequired" : false
+        },
+        "locGroupTypeId" : {
+            "options" : [],
+            "labelKey" : "locGroupTypeId",
+            "locGroupTypeId" : "Valuation Location",
+            "serviceKey" : "incoTermLocationGroupType",
+            "dependsOn" : [ 
+                "valuationIncotermId"
+            ],
+            "isRequired" : false
+        },
+        "contractItemValuationDTO" : {
+            "labelKey" : "contractItemValuationDTO",
+            "contractItemValuationDTO" : "Item Valuation",
+            "isRequired" : false
+        },
+        "totalPrice" : {
+            "labelKey" : "totalPrice",
+            "totalPrice" : "Total Price",
+            "isRequired" : false
+        },
+        "ticketNumber" : {
+            "labelKey" : "ticketNumber",
+            "ticketNumber" : "Ticket Number",
+            "isRequired" : false
+        },
+        "isGrossOrNetQty" : {
+            "labelKey" : "isGrossOrNetQty",
+            "isGrossOrNetQty" : "Invoiceable Qty",
+            "isRequired" : false
+        },
+        "shipVesselDetails" : {
+            "labelKey" : "shipVesselDetails",
+            "shipVesselDetails" : "Ship/Vessel Details",
+            "isRequired" : false
+        }
+    },
+    "label": "itemDetails_object",
+    "name": "itemDetails_object",
+    "objectAction": {
+        "CREATE": "POST",
+        "UPDATE": "PUT",
+        "READ": "GET",
+        "LISTVIEW": "GET",
+        "DELETE": "DELETE",
+        "APPROVE": "PUT",
+        "REJECT": "PUT"
+    },
+    "sys__UUID": "f7bad03a-8206-4294-80b0-47549f58d163",
+    "type": "object",
+    "uniqueFields": ["internalContractRefNo","itemNo","object"]
+}

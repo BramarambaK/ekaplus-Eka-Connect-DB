@@ -1,0 +1,67 @@
+{
+    "_id" : "itemDetails_list",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Item Details Listing",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true
+    },
+    "decisions" : [],
+    "labelKey" : "LIMIT_LIST",
+    "fields" : [
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "internalItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "productId"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemQty"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contract_id"
+        }
+    ],
+    "taskId" : "itemDetails_list",
+    "object" : "f7bad03a-8206-4294-80b0-47549f58d163"
+}

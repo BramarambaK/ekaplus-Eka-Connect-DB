@@ -1,0 +1,48 @@
+{
+    "_id" : "itemlevel_connectExposureData",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "CONNECT EXPOSURE DATA",
+    "type" : "workflow",
+    "layout" : {},
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "connectExposureData",
+            "label" : "SAVE",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Exposure saved successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Exposure are saved with some errors"
+                        }
+                    },
+                    "data" : "output.connectExposureData",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_EXPOSURE_DATA"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_EXPOSURE_DATA",
+                    "name" : "connectExposureData"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "ConnectExposureData",
+    "fields" : [],
+    "taskId" : "connectExposureData",
+    "object" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b"
+}

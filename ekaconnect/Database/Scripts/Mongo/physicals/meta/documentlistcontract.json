@@ -1,0 +1,20 @@
+{
+    "_id" : "physicals_workflow_documentList",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "6f7412e5-194f-4678-8355-ede365c07981"
+    },
+    "taskId" : "documentListContract",
+    "label" : "documentListContract",
+    "labelKey" : "documentListContract",
+    "object" : "contract",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

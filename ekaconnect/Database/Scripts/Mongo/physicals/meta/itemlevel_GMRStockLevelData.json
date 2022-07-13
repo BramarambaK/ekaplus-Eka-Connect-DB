@@ -1,0 +1,48 @@
+{
+    "_id" : "itemlevel_GMRStockLevelData",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "GMR EXPOSURE STOCK LEVEL DATA",
+    "type" : "workflow",
+    "layout" : {},
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "GMRStockLevelData",
+            "label" : "SAVE",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "GMR Stock Level saved successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "GMR Stock Level are saved with some errors"
+                        }
+                    },
+                    "data" : "output.GMRStockLevelData",
+                    "appendMsg" : true,
+                    "name" : "_ST_SAVE_GMR_STOCK_DATA"
+                }, 
+                {
+                    "data" : "output._ST_SAVE_GMR_STOCK_DATA",
+                    "name" : "GMRStockLevelData"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "GMRStockLevelData",
+    "fields" : [],
+    "taskId" : "GMRStockLevelData",
+    "object" : "00ac5c66-69c6-11eb-9439-0242ac130002"
+}

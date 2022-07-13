@@ -1,0 +1,112 @@
+{
+    "_id" : "listingcontractitem_bulkamendment",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract Item List",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "version" : "v2",
+    "layout" : {
+        "selection" : "none",
+        "showCheckbox" : false,
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "preserveSelectedData" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "pagination" : false,
+        "dropdownDecisions" : true,
+        "selectionMode" : "none",
+        "limitHeight" : true,
+        "scrollHeight" : "40%"
+    },
+    "decisions" : [],
+    "labelKey" : "itemlist",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "product"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "origin"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cropYear"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractQuantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "priceType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "priceDetails"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "periodType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "deliveryPeriodFromDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "deliveryPeriodToDate"
+        }
+        
+    ],
+    "taskId" : "listingcontractitem",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

@@ -1,0 +1,46 @@
+{
+    "_id" : "physicals_workflow_mailContract",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "mailContract",
+    "label" : "mailContract",
+    "labelKey" : "mailContract",
+    "object" : "contract",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "taskId" : "mailContract",
+            "outcomes" : [ 
+                {
+                    "name" : "ext_mailContract",
+                    "data" : "output.mailContract",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Meassage sent Successfully"
+                        },
+                        "failure" : {
+                            "message" : "Meassage sent failed"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    }
+                }, 
+                {
+                    "name" : "mailContract",
+                    "data" : "output.ext_mailContract"
+                }
+            ]
+        }
+    ],
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

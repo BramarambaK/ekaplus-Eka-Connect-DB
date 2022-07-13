@@ -1,0 +1,11 @@
+{
+    "_id" : "Layout_Processor_Component",
+    "name" : "Bulk Update Component",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "\r\n    var output = {\r\n      appId: req.body.appId,\r\n      flow: req.body.flow,\r\n      object: req.body.object,\r\n      objectMeta: req.body.objectMeta,\r\n      properties: req.body.properties,\r\n      payLoadData : req.body.payLoadData,\r\n      params:req.body.params,\r\n      propertyList:req.body.propertyList,\r\n      sD:req.body.sD\r\n    }\r\n    var payload  = req.body.payLoadData.data\r\n     var totalQuantity = req.body.payLoadData.data[0].totalQuantity\r\n    let flag  = true;\r\n    for(var i =0;i<payload.length;i++){\r\n      if(payload[i].totalQuantity !==totalQuantity){\r\n        flag = false\r\n      }\r\n    }\r\n    if(flag){\r\n      output.flow.componentPricinglistinginpopupmultiple.fields.push({\r\n        \"filter\" : true,\r\n        \"edit\" : true,\r\n        \"sort\" : true,\r\n        \"key\" : \"executedcomponent\",\r\n        \"width\" : \"20%\",\r\n        \"event\" : \"record.componentPercentage = ((record.executedcomponent/record.executedQuantity)*100).toFixed(4)\"\r\n    })\r\n    output.flow.componentPricinglistinginpopupmultiple.fields[1]['event'] =\"record.executedcomponent = (record.componentPercentage *((record.executedQuantity)/100)).toFixed(4)\"\r\n    }\r\n\t\r\n    res.status(200).send(output);\r\n ",
+    "sys__UUID" : "1cf5585b-6028-40a6-8419-1c9b50788ec4",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

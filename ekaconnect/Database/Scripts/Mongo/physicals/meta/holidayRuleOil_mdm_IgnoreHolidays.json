@@ -1,0 +1,8 @@
+{    
+    "key": "IgnoreHolidays",
+    "value": "Ignore Holidays",
+    "object": "holidayRuleOil",
+    "type": "connectmdm",
+    "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "_id": "holidayRuleOil_mdm_IgnoreHolidays"
+}

@@ -1,0 +1,44 @@
+{
+    "_id" : "physicals_workflow_defaultPaymentTerm",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "defaultPaymentTerm",
+    "label" : "defaultPaymentTerm",
+    "labelKey" : "defaultPaymentTerm",
+    "object" : "contract",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "taskId" : "defaultPaymentTerm",
+            "outcomes" : [ 
+                {
+                    "name" : "ext_defaultPaymentTerm",
+                    "data" : "output.defaultPaymentTerm",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Profile got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Profile got created with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "name" : "defaultPaymentTerm",
+                    "data" : "output.ext_defaultPaymentTerm"
+                }
+            ]
+        }
+    ]
+}

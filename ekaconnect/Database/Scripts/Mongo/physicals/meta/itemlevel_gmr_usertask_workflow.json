@@ -1,0 +1,47 @@
+{
+  "_id": "itemlevel_gmr_usertask_workflow",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "label": "ITEM LEVEL GMR",
+  "type": "workflow",
+  "layout": {},
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "task": "itemListingWithGMR",
+      "label": "SAVE",
+      "type": "submit",
+      "position": "bottom",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "GMR object saved successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "GMR object are saved with some errors"
+            }
+          },
+          "data": "output.itemListingWithGMR",
+          "appendMsg": true,
+          "name": "_ST_CREATE_ITEM_GMR_OBJECT"
+        },
+        {
+          "data": "output._ST_CREATE_ITEM_GMR_OBJECT",
+          "name": "itemListingWithGMR"
+        }
+      ]
+    }
+  ],
+  "labelKey": "ItemLevelGMR",
+  "fields": [],
+  "taskId": "itemListingWithGMR",
+  "object": "0a58c051-99ad-491d-8d05-400bd90bffe9"
+}

@@ -1,0 +1,27 @@
+{
+    "_id" : "physicals_workflow_ext_mailContract",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "ext_mailContract",
+    "task" : "ext_mailContract",
+    "componentType" : "ExtSystemTask",
+    "object" : "contract",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/file/physicals/5d907cd2-7785-4d34-bcda-aa84b2158415/sendEmail/v2",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "storageType" : "trmAGS"
+        },
+        "useInputMapping" : false
+    },
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

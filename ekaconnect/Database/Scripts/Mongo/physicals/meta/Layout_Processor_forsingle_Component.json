@@ -1,0 +1,11 @@
+{
+    "_id" : "Layout_Processor_forsingle_Component",
+    "name" : "layoutCAll",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "    var output = {\r\n      appId: req.body.appId,\r\n      flow: req.body.flow,\r\n      object: req.body.object,\r\n      objectMeta: req.body.objectMeta,\r\n      properties: req.body.properties,\r\n      payLoadData : req.body.payLoadData,\r\n      params:req.body.params,\r\n      propertyList:req.body.propertyList,\r\n    }\r\n  \r\n\tvar eka_trm_version = 913\r\n\tif(req.body.propertyList.eka_ctrm_version[0].value) eka_trm_version = Number(req.body.propertyList.eka_ctrm_version[0].value.split('.').join(''))\r\n\tif(eka_trm_version<914){\r\n\toutput.flow.decisions[1].outcomes.splice(1,1)\r\n\t}\r\n    res.status(200).send(output);\r\n    \r\n  ",
+    "sys__UUID" : "14870dff-edda-4033-85ce-90a365606e3b",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

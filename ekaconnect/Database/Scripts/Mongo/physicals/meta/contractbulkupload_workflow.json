@@ -1,0 +1,299 @@
+{
+  "_id": "contractbulkupload_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "label": "Bulk Upload Oil Contracts",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "outcomes": [
+        {
+          "name": "importcontracts",
+          "data": "selected.contractbulkupload"
+        }
+      ],
+      "label": "Import Contracts",
+      "decisionName": "Import Contracts",
+      "position": "top"
+    }
+  ],
+  "labelKey": "COST_ESTIMATE",
+  "fields": [
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "seqNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "issueDate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "traderName"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "cpName"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "itemQuantity"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "quantityUnit"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "deliveryPeriodFrom"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "deliveryPeriodTo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "payInCurrency"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "incoTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractQuantityUnit"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "loadingCountry"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "loadingType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "loadingLocation"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "dischargeCountry"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "dischargeType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "dischargeLocation"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "priceType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractPrice"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractPriceUnit"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "toleranceMin"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "toleranceMax"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "toleranceType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "toleranceLevel"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "transportationMode"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "paymentTerm"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "paymentDueDate"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "arbitration"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "applicableLawContract"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "taxScheduleApplicableCountry"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "taxSchedule"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "strategy"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "profitCentre"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "dealType"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "origin"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractRefNo"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "contractStatus"
+    },
+    {
+      "filter": true,
+      "edit": true,
+      "sort": true,
+      "key": "errorMessage"
+    }
+  ],
+  "taskId": "contractbulkupload",
+  "object": "90ad1ce4-1bf3-41a4-844a-625617f8c967"
+}

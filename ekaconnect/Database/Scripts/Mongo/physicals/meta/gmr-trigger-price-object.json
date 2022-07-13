@@ -1,0 +1,95 @@
+{
+    "_id" : "gmr-trigger-price-object",
+    "name" : "gmr-trigger-price-object",
+    "label" : "gmr-trigger-price-object",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+	"uniqueFields" : [ 
+        "internalContractItemRefNo", 
+        "gmrRefNo"
+    ],
+    "fields" : {
+        "internalContractRefNo" : {
+            "internalContractRefNo" : "internal Contract Ref No",
+            "labelKey" : "internalContractRefNo",
+			"isRequired" : true
+        },
+        "internalContractItemRefNo" : {
+            "internalContractItemRefNo" : "internal Contract Item Ref No",
+            "labelKey" : "internalContractItemRefNo",
+            "isRequired" : true
+        },
+		"gmrRefNo" : {
+            "gmrRefNo" : "GMR Ref No",
+            "labelKey" : "gmrRefNo",
+            "isRequired" : true
+        },
+        "gmrId" : {
+            "gmrId" : "GMR Id",
+            "labelKey" : "gmrId",
+            "isRequired" : false,
+			       "serialNumber" : {
+                "startsWith" : "1"
+            }
+        },
+        "gmrQty" : {
+            "gmrQty" : "GMR Qty",
+            "labelKey" : "gmrQty",
+            "isRequired" : true
+        },
+		"gmrFixedQty" : {
+            "gmrFixedQty" : "GMR Fixed Qty",
+            "labelKey" : "gmrFixedQty",
+            "isRequired" : true
+        },
+		"gmrUnFixedQty" : {
+            "gmrUnFixedQty" : "GMR Unfixed Qty",
+            "labelKey" : "gmrUnFixedQty",
+            "isRequired" : true
+        },
+		"gmrCancelledQty" : {
+            "gmrCancelledQty" : "GMR Cancelled Qty",
+            "labelKey" : "gmrCancelledQty",
+            "isRequired" : true
+        },
+		"gmrStatus" : {
+            "gmrStatus" : "GMR Status",
+            "labelKey" : "gmrStatus",
+            "isRequired" : true
+        },
+		"fixationUsed" : {
+            "fixationUsed" : "Fixation Used",
+            "labelKey" : "fixationUsed",
+            "isRequired" : true
+        },
+		"qtyUnitId" : {
+            "qtyUnitId" : "qty Unit Id",
+            "labelKey" : "qtyUnitId",
+            "isRequired" : true
+        },
+		"qtyUnitVal" : {
+            "qtyUnitVal" : "qty Unit Val",
+            "labelKey" : "qtyUnitVal",
+            "isRequired" : true
+        }
+    },
+    "sys__UUID" : "084d7fa2-f8e9-47ea-bb3c-ebc0bd65f3b1",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

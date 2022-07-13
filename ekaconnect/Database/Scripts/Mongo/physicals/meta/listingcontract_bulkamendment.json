@@ -1,0 +1,73 @@
+{
+    "_id" : "listingcontract_bulkamendment",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Contract List",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "layout" : {
+        "selection" : "none",
+        "showCheckbox" : false,
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "preserveSelectedData" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "pagination" : false,
+        "dropdownDecisions" : true,
+        "selectionMode" : "none",
+        "limitHeight" : true
+    },
+    "decisions" : [],
+    "labelKey" : "itemlist",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "issueDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "cpName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "incoTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "payTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "openQuantity"
+        }
+    ],
+    "taskId" : "listingcontract",
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116"
+}

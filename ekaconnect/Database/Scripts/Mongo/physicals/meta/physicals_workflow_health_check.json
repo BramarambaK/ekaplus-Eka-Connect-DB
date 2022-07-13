@@ -1,0 +1,19 @@
+{
+    "_id" : "physicals_workflow_health_check_API",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "tags": "healthCheck",
+    "taskId" : "physicals_workflow_health_check",
+    "label" : "physicals_workflow_health_check",
+    "labelKey" : "physicals_workflow_health_check",
+    "object" : "contract",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "processorInfo" : {
+        "processorId" : "4b2df8fa-90cd-4c0a-8f7e-a0b6287f8820"
+    }
+}

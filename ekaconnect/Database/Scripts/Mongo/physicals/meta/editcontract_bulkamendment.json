@@ -1,0 +1,89 @@
+{
+    "_id" : "editcontract_bulkamendment",
+    "componentType" : "UserTask",
+    "decisions" : [],
+    "fields" : [ 
+      [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "key" : "amendmentDate"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex",
+                    "width" : "150px !important"
+                },
+                "key" : "amendmentReason"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex",
+                    "width" : "150px !important"
+                },
+                "key" : "cpName"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex",
+                    "width" : "150px !important"
+                },
+                "key" : "incoTerm"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex",
+                    "width" : "150px !important"
+                },
+                "key" : "payTerm"
+            }
+        ]
+    ],
+    "label" : "Contract Bulk Amendment To",
+    "labelKey" : "contractbulkamendmentto",
+    "layout" : {
+        "recommedationNeed" : false,
+        "defaultFormItemStyle" : {
+            "width" : "35%",
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "15%"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "100%",
+            "height" : "28px"
+        },
+        "header" : {
+            "title" : "Formula List"
+        },
+       
+        "name" : "create",
+       "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "10px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "f23f5e71-1885-455f-9cc8-adf73e4e2116",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "editcontract",
+    "type" : "workflow"
+}

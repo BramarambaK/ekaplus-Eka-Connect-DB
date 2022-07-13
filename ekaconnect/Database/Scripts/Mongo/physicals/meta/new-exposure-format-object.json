@@ -1,0 +1,156 @@
+{
+    "_id" : "new-exposure-format-object",
+    "name" : "new-exposure-format-object",
+    "label" : "new-exposure-format-object",
+    "type" : "object",
+    "version" : "V2",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [ 
+       
+		],
+    "fields" : {
+        "contractRefNo" : {
+            "contractRefNo" : "Contract Ref No",
+            "labelKey" : "contractRefNo",
+            "isRequired" : false
+        },
+		"itemRefNo" : {
+            "itemRefNo" : "Item Ref No",
+            "labelKey" : "itemRefNo",
+            "isRequired" : false
+        },
+        "internalContractItemRefNo" : {
+            "internalContractItemRefNo" : "internal Contract Item Ref No",
+            "labelKey" : "internalContractItemRefNo",
+            "isRequired" : false
+        },
+        "product" : {
+            "product" : "Product",
+            "labelKey" : "product",
+            "isRequired" : false
+        },
+        "quality" : {
+            "quality" : "Quality",
+            "labelKey" : "quality",
+            "isRequired" : false
+        },
+        "valuationInstrument" : {
+            "valuationInstrument" : "Valuation Instrument",
+            "labelKey" : "valuationInstrument",
+            "isRequired" : false
+        },
+        "deliveryDate" : {
+            "deliveryDate" : "Delivery Date",
+            "labelKey" : "deliveryDate",
+            "isRequired" : false
+        },
+        "itemQuantityUnit" : {
+            "itemQuantityUnit" : "Item Quantity Unit",
+            "labelKey" : "itemQuantityUnit",
+            "isRequired" : false
+        },
+        "curveName" : {
+            "curveName" : "Curve Name",
+            "labelKey" : "curveName",
+            "isRequired" : false
+        },
+        "curveQuantityUnit" : {
+            "curveQuantityUnit" : "Curve Quantity Unit",
+            "labelKey" : "curveQuantityUnit",
+            "isRequired" : false
+        },
+        "contractualConversionFactor" : {
+            "contractualConversionFactor" : "Contractual Conversion Factor",
+            "labelKey" : "contractualConversionFactor",
+            "isRequired" : false
+        },
+        "actualConversionFactor" : {
+            "actualConversionFactor" : "Actual Conversion Factor",
+            "labelKey" : "actualConversionFactor",
+            "isRequired" : false
+        },
+		"profitCenter" : {
+            "profitCenter" : "Profit Center",
+            "labelKey" : "profitCenter",
+            "isRequired" : false
+        },
+		"strategy" : {
+            "strategy" : "Strategy",
+            "labelKey" : "strategy",
+            "isRequired" : false
+        },
+        "baseQuantityUnit" : {
+            "baseQuantityUnit" : "Base Quantity Unit",
+            "labelKey" : "baseQuantityUnit",
+            "isRequired" : false
+        },
+        "exposureTypeBaseQty" : {
+            "exposureTypeBaseQty" : "Exposure @Base Quantity unit",
+            "labelKey" : "exposureTypeBaseQty",
+            "isRequired" : false
+        },
+        "curveCoefficient" : {
+            "curveCoefficient" : "Curve Coefficient",
+            "labelKey" : "curveCoefficient",
+            "isRequired" : false
+        },
+        "exposureTypeCurveQty" : {
+            "exposureTypeCurveQty" : "Exposure @Curve Quantity unit",
+            "labelKey" : "exposureTypeCurveQty",
+            "isRequired" : false
+        },
+        "instrumentContractMonth" : {
+            "instrumentContractMonth" : "Instrument Contract Month",
+            "labelKey" : "instrumentContractMonth",
+            "isRequired" : false
+        },
+        "incoTermName" : {
+            "incoTermName" : "INCO Term Name",
+            "labelKey" : "incoTermName",
+            "isRequired" : false
+        },
+        "locationName" : {
+            "locationName" : "Location Name",
+            "labelKey" : "locationName",
+            "isRequired" : false
+        },
+        "status" : {
+            "status" : "Status",
+            "labelKey" : "status",
+            "isRequired" : false
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "isRequired" : false
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "GMR Ref No",
+            "labelKey" : "gmrRefNo",
+            "isRequired" : false
+        },
+        "titleTransferStatus" : {
+            "titleTransferStatus" : "Title Transfer Status",
+            "labelKey" : "titleTransferStatus",
+            "isRequired" : false
+        }
+    },
+    "sys__UUID" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

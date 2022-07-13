@@ -1,0 +1,16 @@
+{
+    "_id" : "EXT_TASK_DELETE",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "EXT_TASK_DELETE",
+    "task" : "EXT_TASK_DELETE",
+    "componentType" : "ProcessTask",
+    "processorInfo" : {
+        "processorId" : "7de95de7-cc19-4bd0-a005-e4b061482b78"
+    },
+    "object" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b",
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "avinash.singh"
+}

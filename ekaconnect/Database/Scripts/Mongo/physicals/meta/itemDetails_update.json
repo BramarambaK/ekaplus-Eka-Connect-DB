@@ -1,0 +1,44 @@
+{
+    "_id" : "itemDetails_update",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "itemDetails_update",
+            "outcomes" : [ 
+                {
+                    "data" : "output.itemDetails_update",
+                    "name" : "_ST_UPDATE_ITEM_DETAILS",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "ItemDetails Object is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "ItemDetails Object is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._ST_UPDATE_ITEM_DETAILS",
+                    "name" : "itemDetails_update"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "itemDetails_update",
+    "labelKey" : "itemDetails_update",
+    "layout" : {},
+    "object" : "f7bad03a-8206-4294-80b0-47549f58d163",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "itemDetails_update",
+    "type" : "workflow"
+}

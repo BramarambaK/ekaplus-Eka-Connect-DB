@@ -1,0 +1,68 @@
+{
+    "_id" : "GMR_LISTING",
+    "type" : "object",
+    "name" : "Gmr_object",
+    "label" : "GMR",
+    "sys__UUID" : "fde1b873-9b1d-44c7-bf6a-dc86898bfd52",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [],
+    "fields" : {
+        "itemRefNo" : {
+            "itemRefNo" : "Item Ref NO.",
+            "labelKey" : "itemRefNo",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "expression" : {
+            "expression" : "Pricing Expr",
+            "labelKey" : "expression",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "components" : {
+            "components" : "Components",
+            "labelKey" : "components",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "componentDetails" : {
+            "componentDetails" : "",
+            "labelKey" : "componentDetails",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "",
+            "labelKey" : "gmrRefNo",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "totalQuantity" : {
+            "totalQuantity" : "GMR Quantity",
+            "labelKey" : "totalQuantity",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "actualQty" : {
+            "actualQty" : "Actual Component Quantity",
+            "labelKey" : "actualQty",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    }
+}

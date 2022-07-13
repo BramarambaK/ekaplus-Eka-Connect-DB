@@ -1,0 +1,109 @@
+{
+  "_id": "itemlevel_gmr_object",
+  "type": "object",
+  "name": "itemlevelgmr",
+  "label": "",
+  "label_key": "ItemLevelGMR",
+  "tenantID": "",
+  "version": "2",
+  "sys__UUID": "0a58c051-99ad-491d-8d05-400bd90bffe9",
+  "createdOn": "Test",
+  "createy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiey": "Test",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]"
+    }
+  ],
+  "uniqueFields": [
+    "internalContractRefNo",
+    "internalContractItemRefNo",
+    "internalGMRRefNo"
+  ],
+  "translatableKeys": [
+    "internalContractRefNo",
+    "internalContractItemRefNo",
+    "internalGMRRefNo",
+    "executedQuantity",
+    "openQuantity",
+    "estimatedPrice",
+	"qtyUnit",
+	"payload"
+  ],
+  "fields": {
+    "internalContractRefNo": {
+      "internalContractRefNo": "Internal Delivery Item",
+      "labelKey": "internalContractRefNo",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "internalContractItemRefNo": {
+      "internalContractItemRefNo": "Internal Delivery Item",
+      "labelKey": "internalContractItemRefNo",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "internalGMRRefNo": {
+      "internalGMRRefNo": "Internal Delivery Item",
+      "labelKey": "internalGMRRefNo",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "executedQuantity": {
+      "executedQuantity": "Internal Delivery Item",
+      "labelKey": "executedQuantity",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "openQuantity": {
+      "openQuantity": "Internal Delivery Item",
+      "labelKey": "openQuantity",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "estimatedPrice": {
+      "estimatedPrice": "Internal Delivery Item",
+      "labelKey": "estimatedPrice",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+	"qtyUnit": {
+      "qtyUnit": "Internal Delivery Item",
+      "labelKey": "qtyUnit",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+	"payLoad": {
+      "payLoad": "Internal Delivery Item",
+      "labelKey": "payLoad",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+	"inputPayload": {
+      "inputPayload": "Internal Delivery Item",
+      "labelKey": "inputPayload",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    }
+  }
+}

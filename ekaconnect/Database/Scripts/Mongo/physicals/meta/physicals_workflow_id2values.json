@@ -1,0 +1,44 @@
+{
+    "_id" : "physicals_workflow_ID2VALUES",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "id2values",
+    "label" : "id2values",
+    "labelKey" : "id2values",
+    "object" : "contract",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "taskId" : "id2values",
+            "outcomes" : [ 
+                {
+                    "name" : "ext_id2values",
+                    "data" : "output.id2values",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Profile got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Profile got created with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "name" : "id2values",
+                    "data" : "output.ext_id2values"
+                }
+            ]
+        }
+    ]
+}

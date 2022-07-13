@@ -1,0 +1,13 @@
+{
+    "_id" : "eka_nlp_host",
+    "name" : "eka_nlp_host",
+    "label" : "Nlp Host",
+    "type" : "property",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "editSupportedInUI " : true,
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "description" : "Host Name for NLP"
+}

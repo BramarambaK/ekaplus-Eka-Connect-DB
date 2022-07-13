@@ -1,0 +1,17 @@
+{
+    "_id" : "exposure_get",
+    "componentType" : "UserTask",
+    "labelKey" : "contract_list",
+    "label" : "Contract List",
+    "object" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "exposure_get",
+    "sys__createdOn" : ISODate("2019-12-17T07:26:38.562Z"),
+    "sys__createdBy" : "Bravo"
+}

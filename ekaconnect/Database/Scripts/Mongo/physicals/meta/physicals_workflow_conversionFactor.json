@@ -1,0 +1,44 @@
+{
+    "_id" : "physicals_workflow_conversionFactor",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "conversionFactor",
+    "label" : "conversionFactor",
+    "labelKey" : "conversionFactor",
+    "object" : "contract",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "taskId" : "conversionFactor",
+            "outcomes" : [ 
+                {
+                    "name" : "ext_conversionFactor",
+                    "data" : "output.conversionFactor",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Profile got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Profile got created with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "name" : "conversionFactor",
+                    "data" : "output.ext_conversionFactor"
+                }
+            ]
+        }
+    ]
+}

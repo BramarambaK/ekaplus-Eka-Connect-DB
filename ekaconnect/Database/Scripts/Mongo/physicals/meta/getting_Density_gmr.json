@@ -1,0 +1,17 @@
+{
+    "_id" : "getting_Density",
+    "componentType" : "UserTask",
+    "labelKey" : "getting_Density",
+    "label" : "gmr Density",
+    "object" : "00ac5c66-69c6-11eb-9439-0242ac130002",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "gmr_density_list",
+    "sys__createdOn" : ISODate("2019-12-17T07:26:38.562Z"),
+    "sys__createdBy" : "Bravo"
+}

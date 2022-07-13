@@ -1,0 +1,44 @@
+{
+    "_id" : "gmr-trigger-price-user-task",
+    "componentType" : "UserTask",
+    "labelKey" : "gmr-trigger-price",
+    "label" : "trigger price Save",
+    "object" : "084d7fa2-f8e9-47ea-bb3c-ebc0bd65f3b1",
+    "objectAction" : "UPDATE",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "UPDATE",
+            "label" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "gmr-trigger-price",
+            "outcomes" : [ 
+                {
+                    "data" : "output.gmr-trigger-price",
+                    "name" : "_ST_CREATE_GMR_TRIGGER_PRICE",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "trigger price is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "trigger price is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._ST_CREATE_GMR_TRIGGER_PRICE",
+                    "name" : "gmr-trigger-price"
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "gmr-trigger-price"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "eka_contract_recommendation_host",
+    "name" : "eka_contract_recommendation_host",
+    "label" : "Recommendation Contract Host",
+    "type" : "property",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "500",
+    "editSupportedInUI " : true,
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "description" : "Host name for contract recommendation"
+}

@@ -1,0 +1,21 @@
+{
+  "_id": "FILE_PROCESS_TASK_CONTRACT_workflow",
+  "componentType": "FILE_CONTENT_TASK",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "type": "workflow",
+  "apiInfo": {
+    "host": "${properties.eka_connect_host}",
+    "path": "/file/download/v2",
+    "headers": {
+      "storageType": "fileSys",
+      "folderInS3": "contractDocs"
+    },
+    "method": "POST",
+    "responseDataKey": "",
+    "body": {}
+  },
+  "taskId": "FILE_PROCESS_TASK_CONTRACT",
+  "object": "d64b8de7-0802-412d-8f33-462e545871eb"
+}

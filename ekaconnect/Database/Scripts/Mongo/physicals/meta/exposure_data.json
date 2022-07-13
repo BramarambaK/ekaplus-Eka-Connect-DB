@@ -1,0 +1,19 @@
+{
+    "_id" : "exposure_data",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b",
+    "objectAction" : "UPDATE",
+    "taskId" : "exposure_data",
+    "refType" : "app",
+    "tags" : "notifyDataChange",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_CREATE_EXPOSURE_DATA",
+            "data" : "output.exposure_data",
+            "returnData" : "Y"
+        }
+    ]
+}

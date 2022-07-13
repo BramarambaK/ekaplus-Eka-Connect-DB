@@ -1,0 +1,63 @@
+{
+    "_id" : "Listing_Component_view_Pricing",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "processorInfo" : {
+        "processorId" : "d0f23e59-5e43-4332-9a04-f1146a58eefb"
+    },
+    "label" : "View Constituent",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "layout" : {
+        "tableEditing" : true,
+        "selection" : "row",
+        "showCheckbox" : false,
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "getInitialData" : true,
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "dropdownDecisions" : false
+    },
+    "decisions" : [ 
+    ],
+    "labelKey" : "ComponentPricingList",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "productComponentName",
+            "width" : "33%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "quality",
+            "width" : "33%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "componentPercentage",
+            "width" : "33%",
+            "align" : "right"
+        }
+    ],
+    "taskId" : "componentPricinglistingview",
+    "object" : "a17ad3d2-8c98-461d-98c7-d91e953aa819",
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

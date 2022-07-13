@@ -1,0 +1,44 @@
+{
+    "_id" : "itemDetails_create",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "itemDetails_create",
+            "outcomes" : [ 
+                {
+                    "data" : "output.itemDetails_create",
+                    "name" : "_ST_CREATE_ITEM_DETAILS",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "ItemDetails Object is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "ItemDetails Object is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._ST_CREATE_ITEM_DETAILS",
+                    "name" : "itemDetails_create"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "itemDetails_create",
+    "labelKey" : "itemDetails_create",
+    "layout" : {},
+    "object" : "f7bad03a-8206-4294-80b0-47549f58d163",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "itemDetails_create",
+    "type" : "workflow"
+}

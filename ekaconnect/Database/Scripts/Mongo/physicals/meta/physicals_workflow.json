@@ -1,0 +1,21 @@
+{
+    "_id": "physicals_workflow",
+    "type": "workflow",
+    "name": "physicals_workflow",
+    "title": "physicals Workflow",
+    "componentType": "UserTask",
+    "labelKey": "physicals_workflow",
+    "label": "Item Details",
+    "object": "contract",
+    "objectAction": "CREATE",
+    "refType": "app",
+    "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "app": "physicals",
+    "taskId": "physicals_workflow",
+    "properties" : {
+      "dateFormat" : "DD-MMM-YYYY"  
+    },
+    "layout": {},
+    "fields": [],
+    "decisions": []
+}

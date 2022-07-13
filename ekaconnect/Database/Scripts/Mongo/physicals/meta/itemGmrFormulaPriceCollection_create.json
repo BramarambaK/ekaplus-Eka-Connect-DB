@@ -1,0 +1,44 @@
+{
+    "_id" : "itemGmrFormulaPriceCollection_create",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "itemGmrFormulaPriceCollection_create",
+            "outcomes" : [ 
+                {
+                    "data" : "output.itemGmrFormulaPriceCollection_create",
+                    "name" : "_ST_CREATE_ITEM_GMR_FORMULA_PRICE_COLLECTION",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Collection Object is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Collection Object is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._ST_CREATE_ITEM_GMR_FORMULA_PRICE_COLLECTION",
+                    "name" : "itemGmrFormulaPriceCollection_create"
+                }
+            ]
+        }
+    ],
+    "fields" : [],
+    "label" : "itemGmrFormulaPriceCollection_create",
+    "labelKey" : "itemGmrFormulaPriceCollection_create",
+    "layout" : {},
+    "object" : "afa4778b-b1dc-4916-90b4-f75141d48fbd",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "itemGmrFormulaPriceCollection_create",
+    "type" : "workflow"
+}

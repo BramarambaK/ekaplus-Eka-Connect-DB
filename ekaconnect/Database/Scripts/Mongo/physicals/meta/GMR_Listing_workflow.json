@@ -1,0 +1,122 @@
+{
+    "_id" : "Listing_Component_GMR",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "9cfab60d-eb39-4966-83e2-16edcc682843"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "23 BEN",
+    "type" : "workflow",
+    "layout" : {
+        "header" : {
+            "field" : "gmrRefNo"
+        },
+        "tableEditing" : false,
+        "selection" : "row",
+        "selectAll" : true,
+        "showCheckbox" : true,
+        "name" : "list",
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "getInitialData" : true,
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "dropdownDecisions" : true,
+        "selectionMode" : "multiple"
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "EXIT TO LISTING",
+            "btnClass" : "btn btn-outline-dark",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOG",
+                    "name" : "listingtrade",
+                    "showPopUp" : true
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "label" : "Edit",
+            "selection" : "row",
+            "position" : "bottom",
+            "iconClass" : "fa fa-edit",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.componentPricinglistingGmr",
+                    "name" : "componentPricinglistinginpopup",
+                    "displayType" : "popup",
+                    "popupClass" : "modal-500"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "label" : "Update",
+            "selection" : "row",
+            "disabled" : "    var arrData = record\r\n    var component = {};\r\n    if(arrData.length > 0){\r\n\t\r\n    for (var i = 0; i < arrData[0].componentDetails.length; i++) {\r\n      component[arrData[0].componentDetails[i].productComponentName] = 'exist';\r\n\t      }\r\n    var flag = true;\r\n    for (var _i = 0; _i < arrData.length; _i++) {\r\n      for (var j = 0; j < arrData[_i].componentDetails.length; j++) {\r\n        if (!component[arrData[_i].componentDetails[j].productComponentName]) {\r\n          flag = false;\r\n        }\r\n\t\tif( arrData[_i].componentDetails.length !== Object.keys(component).length)flag = false\r\n\t\tbreak;\r\n      }\r\n    }\r\n\t\r\n flag===false   \r\n      }\r\n     ",
+            "task" : "componentPricinglistingGmr",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.componentPricinglistingGmr",
+                    "name" : "componentPricinglistinginpopupmultiple",
+                    "popupClass" : "modal-500",
+                    "displayType" : "popup"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "componentPricinglistingGmr",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemRefNo",
+            "width" : "10%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "15%",
+            "key" : "components"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "totalQuantity",
+            "width" : "9%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "actualQty",
+            "width" : "15%"
+        }
+    ],
+    "taskId" : "componentPricinglistingGmr",
+    "object" : "fde1b873-9b1d-44c7-bf6a-dc86898bfd52"
+}

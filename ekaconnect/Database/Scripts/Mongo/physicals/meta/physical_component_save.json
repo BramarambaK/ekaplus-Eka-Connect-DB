@@ -1,0 +1,46 @@
+{
+    "_id" : "physicals_workflow_Component_save",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "Component_save",
+    "label" : "Component_save",
+    "labelKey" : "Component_save",
+    "object" : "a17ad3d2-8c98-461d-98c7-d91e953aa819",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "taskId" : "Component_save",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_CREATE_COMPONENT_PRICING",
+                    "data" : "output.Component_save",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Profile got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Profile got created with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "name" : "Component_save",
+                    "data" : "output._ST_CREATE_COMPONENT_PRICING"
+                }
+            ]
+        }
+    ],
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

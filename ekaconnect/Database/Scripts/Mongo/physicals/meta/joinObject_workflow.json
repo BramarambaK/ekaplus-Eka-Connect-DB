@@ -1,0 +1,20 @@
+{
+    "_id" : "joinObjects_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "tags":"trainingData",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "JoinObjects - contract and itemDetails",
+    "type" : "workflow",
+    "responseDataKey" : "",
+    "processorInfo" : {
+        "processorId" : "580512ba-e6bb-46d8-b4e2-38c4d978c5df"
+    },
+    "layout" : {},
+    "decisions" : [],
+    "labelKey" : "joinObjects_workflow",
+    "fields" : [],
+    "taskId" : "joinObjects_workflow",
+    "object" : "contract"
+}

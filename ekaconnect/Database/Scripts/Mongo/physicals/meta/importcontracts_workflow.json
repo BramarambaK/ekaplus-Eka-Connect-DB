@@ -1,0 +1,178 @@
+{
+  "_id": "importcontracts_workflow",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "downloadsample",
+      "decisionName": "downloadsample",
+      "outcomes": [
+        {
+          "data": "output.importcontracts",
+          "name": "_ST_DOWNLOAD_SAMPLE_CONTRACT"
+        },
+        {
+          "data": "output._ST_DOWNLOAD_SAMPLE_CONTRACT",
+          "download": true,
+          "name": "contractbulkupload"
+        }
+      ],
+      "style": {
+        "pointer-events": "none"
+      },
+      "label": "Generate Sample File",
+      "type": "submit"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "getcontractfileinfo",
+      "decisionName": "getcontractfileinfo",
+      "outcomes": [
+        {
+          "data": "output.importcontracts",
+          "name": "getcontractfileinfo",
+          "popupClass": "edit-modal907px",
+          "displayType": "popup"
+        }
+      ],
+      "label": "Get File Info"
+    },
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "contractbulkupload"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "importcontracts",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Validating the file"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "File uploaded with some errors"
+            }
+          },
+          "data": "output.importcontracts",
+          "appendMsg": true,
+          "name": "CONTRACT_ST_CREATE_DOCUMENT"
+        },
+        {
+          "data": "output.CONTRACT_ST_CREATE_DOCUMENT",
+          "name": "FILE_PROCESS_TASK_CONTRACT",
+          "CSVRecToProcesNum": "10500",
+          "removeSpecialCharsFromColumnNames": true,
+          "returnData": "Y"
+        },
+        {
+          "data": "output.FILE_PROCESS_TASK_CONTRACT",
+          "name": "_ST_CREATE_FILE_BULKDATA_CONTRACT"
+        },
+        {
+          "data": "output._ST_CREATE_FILE_BULKDATA_CONTRACT",
+          "name": "contractbulkupload",
+          "showToaster": true
+        }
+      ],
+      "label": "UPLOAD",
+      "position": "bottom",
+      "headers": {
+        "storageType": "fileSys",
+        "folderInS3": "contractDocs",
+        "validExtension": "csv",
+        "fileUploadSuccessMessage": "File uploaded successfully. Validating the file now."
+      },
+      "type": "submit"
+    },
+    {
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "CONTRACT_DOCUMENT_UPLOAD_VALIDATE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.importcontracts",
+          "appendMsg": false,
+          "name": "CONTRACT_DOCUMENT_UPLOAD_VALIDATE"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "key": "file"
+      },
+      {
+        "key": "download",
+        "type": "button",
+        "label": "Generate Sample File",
+        "btnClass": "link p-0",
+        "decision": "downloadsample",
+        "style": {
+          "margin-right": "25px",
+          "margin-top": "4px"
+        }
+      },
+      {
+        "key": "getfile",
+        "type": "button",
+        "label": "Get File Info",
+        "btnClass": "btn-primary custom-btn oms-blue",
+        "decision": "getcontractfileinfo",
+        "style": {
+          "margin-right": "35px",
+          "margin-top": "4px"
+        }
+      }
+    ]
+  ],
+  "label": "",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "header": {
+      "title": "Upload Document"
+    },
+    "type": "row"
+  },
+  "object": "30a9272c-25d1-4278-bc31-08189619a93a",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "5d907cd2-7785-4d34-bcda-aa84b2158415",
+  "taskId": "importcontracts",
+  "type": "workflow",
+  "version": "V2"
+}

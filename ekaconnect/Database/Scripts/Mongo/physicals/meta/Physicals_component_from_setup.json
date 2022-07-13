@@ -1,0 +1,20 @@
+{
+    "_id" : "Physicals_component_from_setup",
+    "componentType" : "UserTask",
+    "labelKey" : "mdm_component",
+    "label" : "MDM COMPONENT CALL",
+    "object" : "contract",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "f45d9891-d521-4e42-9995-18b891612bb1"
+    },
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "mdm_component",
+    "sys__createdOn" : ISODate("2019-12-12T07:12:18.780Z"),
+    "sys__createdBy" : "Bravo"
+}

@@ -1,0 +1,11 @@
+{
+    "_id" : "listingtocomponent_list",
+    "name" : "component_initial_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "snippet" : "  var data = req.body.selectedData.componentDetails\r\nvar defaultDataURL =\r\n      req.body.propertyList.eka_connect_host + '/workflow/data?internalContractItemRefNo='+req.body.selectedData.componentDetails[0].internalContractItemRefNo;\r\n      var dbody = {\r\n        \"appId\":\"5d907cd2-7785-4d34-bcda-aa84b2158415\",\r\n        \"workFlowTask\":\"gmr_executed_list\"\r\n      }\r\n      var defaultdata = {\r\n        method: 'POST',\r\n        url: defaultDataURL,\r\n        body:dbody,\r\n        headers: {\r\n          Authorization: req.headers.authorization,\r\n          'X-TenantID': req.headers['x-tenantid']\r\n        },\r\n        json: true\r\n      };\r\n      function get_defaultData() {\r\n        return new Promise(function(resolve, reject) {\r\n          request(defaultdata, function(err, response, body) {\r\n            if (err || body.error) reject(body);\r\n            else {\r\n              resolve(body);\r\n            }\r\n          });\r\n        });\r\n      }\r\n\t  get_defaultData().then(function(result) {\r\n\t  for(var i=0;i<data.length;i++){\r\n\t     data[i]['executedQuantity']=result.data[result.data.length-1].executedQuantity\r\n\t\t data[i]['executedcomponent']=(data[i]['executedQuantity'] * ((data[i].componentPercentage)/100)).toFixed(4)\r\n\t  }\r\n\t  res.send(data)\r\n\t  }).catch(err => {\r\n        console.log(err);\r\n\t\tres.status(500).send(err);\r\n      });",
+    "sys__UUID" : "65bca14c-a1fe-4be1-b8f9-6430d4f52aa4",
+    "sys__createdOn" : ISODate("2019-12-26T05:17:29.849Z"),
+    "sys__createdBy" : "Bravo"
+}

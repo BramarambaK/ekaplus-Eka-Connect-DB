@@ -1,0 +1,131 @@
+{
+    "_id" : "Listing_Component_ForSelected_inpopup",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "payLoad" : "selected.componentPricinglistingGmr",
+    "processorInfo" : {
+        "processorId" : "a612b657-00fc-4f39-a85b-a02267d09524"
+    },
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Actual Component Composition",
+    "type" : "workflow",
+    "layout" : {
+        "tableEditing" : true,
+        "selection" : "row",
+        "showCheckbox" : false,
+        "name" : "list",
+        "layoutProcessor" : {
+            "processorId" : "1cf5585b-6028-40a6-8419-1c9b50788ec4"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "dropdownDecisions" : false,
+        "preserveSelectedData" : true,
+        "limitHeight" : true,
+        "pagination" : false
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "CLOSE",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "name" : "componentPricinglistingGmr"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "componentPricinglistinginpopupmultiple",
+            "label" : "SAVE",
+            "type" : "submit",
+            "position" : "bottom",
+            "payload" : "completeData",
+            "outcomes" : [ 
+                {
+                    "data" : "output.componentPricinglistinginpopupmultiple",
+                    "appendMsg" : true,
+                    "name" : "componentProcessortask"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Components are saved successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Components are saved with some errors"
+                        }
+                    },
+                    "data" : "output.componentProcessortask",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_COMPONENT_PRICING"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "COG UPDATED SUCCESSFULLY"
+                        },
+                        "failure" : {
+                            "message" : "COG UPDATION FAILED"
+                        },
+                        "successWithWarning" : {
+                            "message" : "COG UPDATION FAILED"
+                        }
+                    },
+                    "data" : "output.componentPricinglistinginpopupmultiple",
+                    "name" : "callcog",
+                    "appendMsg" : true
+                }, 
+                {
+                    "data" : "output._ST_CREATE_COMPONENT_PRICING",
+                    "name" : "componentPricinglistingGmr",
+                    "showToaster" : true
+                }
+            ]
+        }
+    ],
+    "labelKey" : "ComponentPricingList",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "productComponentName",
+            "width" : "20%"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "componentPercentage",
+            "width" : "20%"
+        }
+    ],
+    "taskId" : "componentPricinglistinginpopupmultiple",
+    "object" : "a17ad3d2-8c98-461d-98c7-d91e953aa819",
+    "sys__createdOn" : ISODate("2019-12-26T05:17:28.489Z"),
+    "sys__createdBy" : "Bravo"
+}

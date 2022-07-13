@@ -1,0 +1,24 @@
+{
+    "_id" : "physicals_workflow_ext_conversionFactor",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "ext_conversionFactor",
+    "task" : "ext_conversionFactor",
+    "componentType" : "ExtSystemTask",
+    "object" : "contract",
+    "apiInfo" : {
+        "host" : "${properties.eka_pricing_host}",
+        "path" : "/api/pricing/densityConversion/massToVolume",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        },
+        "useInputMapping" : false
+    }
+}

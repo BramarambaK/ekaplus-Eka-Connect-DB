@@ -1,0 +1,73 @@
+{
+    "_id" : "itemGmrFormulaPriceCollection_list",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "labelKey" : "itemGmrFormulaPriceCollection_list",
+    "label" : "itemGmrFormulaPriceCollection_list",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true
+    },
+    "decisions" : [],
+    "fields" : [
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "asOfDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "internalContractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "internalContractItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractPrice"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "marketPrice"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "priceUnit"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "internalPriceUnitId"
+        }
+    ],
+    "taskId" : "itemGmrFormulaPriceCollection_list",
+    "object" : "afa4778b-b1dc-4916-90b4-f75141d48fbd"
+}

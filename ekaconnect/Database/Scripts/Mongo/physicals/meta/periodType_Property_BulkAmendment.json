@@ -1,0 +1,27 @@
+{
+    "_id" : "periodType_Property_BulkAmendment",
+    "type" : "property",
+    "name" : "periodType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Arrival",
+            "value" : "Arrival"
+        }, 
+        {
+            "key" : "Shipment",
+            "value" : "Shipment"
+        }, 
+        {
+            "key" : "Delivery",
+            "value" : "Delivery"
+        }
+    ],
+    "description" : "Dropdown value for Period Type",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Period Type",
+    "editSupportedInUI" : false
+}

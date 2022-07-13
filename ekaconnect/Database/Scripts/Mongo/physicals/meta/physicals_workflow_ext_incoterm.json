@@ -1,0 +1,24 @@
+{
+    "_id" : "physicals_workflow_ext_incoterm",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "type" : "workflow",
+    "taskId" : "ext_incoterm",
+    "task" : "ext_incoterm",
+    "componentType" : "ExtSystemTask",
+    "object" : "contract",
+    "apiInfo" : {
+        "host" : "${properties.eka_mdm_host}",
+        "path" : "/mdm/masterdatas/5d907cd2-7785-4d34-bcda-aa84b2158415/incoterm",
+        "method" : "POST",
+        "body" : {},
+        "inputMapping" : {},
+        "responseDataKey" : "data",
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json"
+        },
+        "useInputMapping" : false
+    }
+}

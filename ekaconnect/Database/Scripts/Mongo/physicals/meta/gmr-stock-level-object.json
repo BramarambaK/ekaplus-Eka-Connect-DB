@@ -1,0 +1,91 @@
+{
+    "_id" : "gmr-stock-level-object",
+    "name" : "gmr-stock-level-object",
+    "label" : "gmr-stock-level-object",
+    "type" : "object",
+    "version" : "V2",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [ 
+        "internalContractItemRefNo", 
+        "gmrRefNo"
+    ],
+    "fields" : {
+        "internalContractItemRefNo" : {
+            "internalContractItemRefNo" : "internal Contract Item Ref No",
+            "labelKey" : "internalContractItemRefNo",
+            "isRequired" : true
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "GMR Ref No",
+            "labelKey" : "gmrRefNo",
+            "isRequired" : true
+        },
+        "weightedAvgConFactor" : {
+            "weightedAvgConFactor" : "Weighted Avg Con Factor",
+            "labelKey" : "weightedAvgConFactor",
+            "isRequired" : true
+        },
+        "weightedAvgConversionFactorGMRQty": {
+            "weightedAvgConversionFactorGMRQty": "Weighted Avg Con Factor GMR Qty",
+            "labelKey" : "weightedAvgConversionFactorGMRQty",
+            "isRequired" : true
+        },
+        "itemQtyUnitId" : {
+            "itemQtyUnitId" : "Item Qty Unit ID",
+            "labelKey" : "itemQtyUnitId",
+            "isRequired" : true
+        },
+        "curveQtyUnitId" : {
+            "curveQtyUnitId" : "Curve Qty Unit ID",
+            "labelKey" : "curveQtyUnitId",
+            "isRequired" : true
+        },
+        "itemQtyUnit" : {
+            "itemQtyUnit" : "Item Qty Unit",
+            "labelKey" : "itemQtyUnit",
+            "isRequired" : true
+        },
+        "curveQtyUnit" : {
+            "curveQtyUnit" : "Curve Qty Unit",
+            "labelKey" : "curveQtyUnit",
+            "isRequired" : true
+        },
+        "itemQtyUnitCheck" : {
+            "curveQtyUnit" : "Item Qty Unit Check",
+            "labelKey" : "itemQtyUnitCheck",
+            "isRequired" : true
+        },
+        "curveQtyUnitCheck" : {
+            "curveQtyUnitCheck" : "Curve Qty Unit Check",
+            "labelKey" : "curveQtyUnitCheck",
+            "isRequired" : true
+        },
+        "vesselName" : {
+            "vesselName" : "Vessel Name",
+            "labelKey" : "vesselName",
+            "isRequired" : true
+        },
+        "stock" : {
+            "stock" : "Stock",
+            "labelKey" : "stock",
+            "isRequired" : true
+        }
+    },
+    "sys__UUID" : "00ac5c66-69c6-11eb-9439-0242ac130002",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}
