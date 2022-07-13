@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_edit_exposure",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "1ee688b7-382b-4d9c-bd3f-89158dc64e3f"
+    },
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "type" : "workflow",
+    "taskId" : "editexposureprocessor",
+    "label" : "Edit using Processor",
+    "object" : "3a9a29f8-9488-43f0-9b07-30e53c594a4a"
+}

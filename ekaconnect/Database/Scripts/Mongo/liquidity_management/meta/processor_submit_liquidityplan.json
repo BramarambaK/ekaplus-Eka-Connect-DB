@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_submit_liquidityplan",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "9a4dd088-8d98-458e-b294-5cdde91c583c"
+    },
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "type" : "workflow",
+    "taskId" : "_ST_SUBMIT_LIQUIDITYPLAN",
+    "label" : "Submit using Processor",
+    "object" : "ef3b0d46-11cc-4a06-a520-c7e335dfd499"
+}

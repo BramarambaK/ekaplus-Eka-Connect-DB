@@ -1,0 +1,230 @@
+{
+    "_id" : "view_cashforecast_worklow",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "name" : "cashforecasts",
+                    "clearSelected" : [ 
+                        "selected.viewcashforecasts"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "entity",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "bankAccount",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox",
+                "isRequired" : false,
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "liquidityPlanName",
+                "type" : "textbox",
+                "isRequired" : false,
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "amount",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "margin-right" : "0px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                },
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "currency",
+				"label": "Currency",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "24px",
+                    "margin-bottom" : "16px",
+                    "width" : "90px"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "transactionDate",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "classification",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }
+        ], 
+        [ 
+            {
+                "key" : "direction",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "externalRefNo",
+                "isRequired" : false,
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "strategy",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }, 
+            {
+                "key" : "profileCenter",
+                "type" : "textbox",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "remarks",
+                "disabled" : true,
+                "UIupdates" : {
+                    "disability" : "return  true"
+                },
+                "isRequired" : false
+            }, 
+            {
+                "key" : "bankId",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "currencyhidden",
+                "type" : "textbox",
+                "event" : "if(value){data.currency =  {value:value,disable:true}} else {data.currency =  {value:data.c15,disable:true}}",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "planStartEndDate",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "forecastId",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "status",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "bankName",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }, 
+            {
+                "key" : "bankAccount",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "display" : "none"
+                }
+            }
+        ]
+    ],
+    "label" : "${forecastId}",
+    "processorInfo1" : {
+        "processorId1" : "e2b149f4-10ee-4973-8299-4c2c87f07952"
+    },
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormItemStyle" : {
+            "width" : "180px",
+            "margin-right" : "26px",
+            "margin-bottom" : "10px"
+        },
+        "processorInfo" : {
+            "processorId" : "76aa5ab6-81d0-4029-af3b-9e45a4877808"
+        },
+        "name" : "create",
+        "theme" : "treasury",
+        "type" : "row"
+    },
+    "object" : "1be3e47e-69d5-4314-9f0f-738a28e2350a",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "viewcashforecasts",
+    "type" : "workflow"
+}

@@ -1,0 +1,90 @@
+{
+    "_id" : "Status_Log_Object",
+    "name" : "statuslog",
+    "label" : "Status Log  Data",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [],
+    "fields" : {
+        "processID" : {
+            "labelKey" : "processID",
+            "processID" : "Process ID",
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "totalRecords" : {
+            "labelKey" : "totalRecords",
+            "totalRecords" : "totalRecords",
+            "isRequired" : false,
+            "dataType" : "Number",
+            "type" : "String"
+        },
+        "successfulRecords" : {
+            "labelKey" : "successfulRecords",
+            "successfulRecords" : "Successful Records",
+            "isRequired" : false,
+            "type" : "String",
+            "dataType" : "String"
+        },
+        "failedRecords" : {
+            "labelKey" : "failedRecords",
+            "failedRecords" : "Failed Records",
+            "isRequired" : false,
+            "type" : "String",
+            "dataType" : "String"
+        },
+        "status" : {
+            "status" : "Status",
+            "labelKey" : "status",
+            "type" : "String",
+            "isRequired" : false
+        },
+        "createdBy" : {
+            "labelKey" : "createdBy",
+            "createdBy" : "Created By",
+            "isRequired" : false,
+            "type" : "String",
+            "dataType" : "String"
+        },
+        "createdDate" : {
+            "labelKey" : "createdDate",
+            "createdDate" : "Created Date",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "errorStatus" : {
+            "errorStatus" : "Error Status",
+            "labelKey" : "errorStatus",
+            "dataType" : "String",
+            "isRequired" : false,
+            "type" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "f83c83e4-5c0e-49b5-b392-79f5e8281fda"
+}

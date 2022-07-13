@@ -1,0 +1,14 @@
+{
+    "_id" : "processor_delete_Exposure",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "76518058-d1de-46ab-bc46-6c6956e5d30b"
+    },
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_EXPOSURE",
+    "label" : "Delete using Processor",
+    "object" : "3a9a29f8-9488-43f0-9b07-30e53c594a4a"
+}

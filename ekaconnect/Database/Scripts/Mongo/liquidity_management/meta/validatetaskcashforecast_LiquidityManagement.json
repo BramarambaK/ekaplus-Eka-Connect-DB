@@ -1,0 +1,11 @@
+{
+    "_id" : "validatetaskcashforecast_LiquidityManagement",
+    "componentType" : "ValidateTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "type" : "workflow",
+    "taskId" : "_ST_VALIDATE_CASHFORECAST",
+    "object" : "1be3e47e-69d5-4314-9f0f-738a28e2350a",
+    "label" : "System Validate Task"
+}

@@ -1,0 +1,80 @@
+{
+    "_id" : "rollbackLiquidity_Liquidity",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-outline-dark custom-btn-liquidity-app-cancel",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "liquidityplans"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn-liquidity-app-confirm",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "UPDATE",
+            "task" : "rollbackliquidityplan",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Liquidity Plan Rolled Back successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "data" : "output.rollbackliquidityplan",
+                    "appendMsg" : true,
+                    "name" : "_ST_ROLLBACK_LIQUIDITYPLAN"
+                }, 
+                {
+                    "name" : "liquidityplans",
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CONFIRM",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "liquidityplans"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "label" : "Rollback Liquidity Plan",
+    "labelKey" : "DELETE_OFFER",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Are you sure you want to Rollback Liquidity Plan ${liquidityPlanId}?",
+            "headerMessage" : "Confirmation"
+        }
+    },
+    "object" : "ef3b0d46-11cc-4a06-a520-c7e335dfd499",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d88e9a79-c0cc-4c28-bb01-ee56ff33048e",
+    "taskId" : "rollbackliquidityplan",
+    "type" : "workflow"
+}
