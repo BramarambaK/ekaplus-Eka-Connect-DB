@@ -1,0 +1,26 @@
+{
+  "_id": "sample_status_dropdown_property",
+  "type": "property",
+  "name": "sample_status",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Approved",
+      "value": "Approved"
+    },
+    {
+      "key": "Rejected",
+      "value": "Rejected"
+    },
+    {
+      "key": "Result not received",
+      "value": "Result not received"
+    }
+  ],
+  "label": "Sample Status Dropdown",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "description": "Property is used to show dropdown values(Approved/rejected/Result not received)"
+}

@@ -1,0 +1,82 @@
+{
+    "_id" : "sampling_particular_list_edit",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "Sampling Particular List",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            
+            "columnFilter" : true,
+            
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "lazyLoading" : false,
+        "limitHeight" : true,
+        "showCheckbox" : false,
+        "pagination" : false,
+        "selectionMode" : "none",
+        "getInitialData" : {
+            "filterBy" : {
+                "payLoadData" : [ 
+                    "sample_instruction_id"
+                ]
+            }
+        }
+    },
+    "labelKey" : "Sampling Particular List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Ref_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "product specs"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample term"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Delivery Period"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Open Quantity"
+        }
+    ],
+    "decisions" : [],
+    "taskId" : "samplingparticularlistedit",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

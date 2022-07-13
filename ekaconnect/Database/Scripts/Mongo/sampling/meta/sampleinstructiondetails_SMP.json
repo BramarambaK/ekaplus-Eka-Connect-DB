@@ -1,0 +1,63 @@
+{
+  "_id": "sampleinstructiondetails_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "Sample Instruction Details",
+  "type": "workflow",
+  "version": "V2",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "showCheckbox": false,
+    "tableEditing": false,
+    "pagination": false,
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "limitHeight": true,
+    "dropdownDecisions": true,
+    "selectionMode": "none"
+  },
+  "decisions": [],
+  "fields": [
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_instruction_id_display",
+      "width": "206px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "product",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_type_name",
+      "width": "180px"
+    }
+  ],
+  "taskId": "sampleinstructiondetails",
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

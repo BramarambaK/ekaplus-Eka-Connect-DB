@@ -1,0 +1,20 @@
+{
+    "_id" : "sampledrawnfrom",
+    "type" : "property",
+    "name" : "sampledrawnfrom",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Sample Type",
+    "defaultValue" : [ 
+        {
+            "key" : "Purchase",
+            "value" : "Purchase"
+        }, 
+        {
+            "key" : "Discrete Stock",
+            "value" : "Discrete Stock"
+        }
+    ]
+}

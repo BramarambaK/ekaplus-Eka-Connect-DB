@@ -1,0 +1,124 @@
+{
+  "_id": "sampledrawnfrom_composite",
+  "componentType": "UserTask",
+  "label": "New Sampling",
+  "layout": {
+    "name": "customv2",
+    "menu": true,
+    "routeOnRefresh": "samplinginstructionlist"
+  },
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "taskId": "sampledrawnfrom",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "data": "selected.sampleagainst.samplingparticularform",
+      "name": "sampleinstructiondrawnfrom"
+    },
+    {
+      "visibility": "return ('${sampleagainst.samplinginstructionagainst.instructionagainst}' == 'Sales Contract-Allocated to Purchase') ? true : false",
+      "data": "selected.sampleagainst.samplingparticularlist",
+      "name": "sampledrawnfromlist",
+      "show": false
+    },
+    {
+      "visibility": "return ('${sampleagainst.samplinginstructionagainst.instructionagainst}' == 'Sales Contract-Allocated to Stock') ? true : false",
+      "data": "selected.sampleagainst.samplingparticularlist",
+      "name": "sampledrawnfromliststocks",
+      "show": false
+    },
+    {
+      "visibility": "return ('${sampleagainst.samplinginstructionagainst.instructionagainst}' == 'Sales Contract-Unallocated' && '${sampledrawnfrom.sampleinstructiondrawnfrom.sample_drawn_from}'=='Purchase') ? true : false",
+      "data": "selected.sampleagainst.samplingparticularlist",
+      "name": "sampledrawnfromlistsalesallocatedpurchase",
+      "show": false
+    },
+    {
+      "visibility": "return ('${sampleagainst.samplinginstructionagainst.instructionagainst}' == 'Sales Contract-Unallocated' && '${sampledrawnfrom.sampleinstructiondrawnfrom.sample_drawn_from}'=='Discrete Stock') ? true : false",
+      "data": "selected.sampleagainst.samplingparticularlist",
+      "name": "sampledrawnfromlistsalesallocatedstocks",
+      "show": false
+    },
+    {
+      "visibility": "return ('${sampleagainst.samplinginstructionagainst.instructionagainst}' == 'Purchase-Unallocated') ? true : false",
+      "data": "selected.sampleagainst.samplingparticularlist",
+      "name": "sampledrawnfromlistpurchaseunallocated",
+      "show": false
+    },
+    {
+      "visibility": "return ('${sampleagainst.samplinginstructionagainst.instructionagainst}' == 'Stock-Unallocated') ? true : false",
+      "data": "selected.sampleagainst.samplingparticularlist",
+      "name": "sampledrawnfromlistsalesunallocated",
+      "show": false
+    },
+    {
+      "name": "sampledrawnfromform"
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "sampleagainst",
+          "data": "selected.sampleagainst",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Sample(Against)",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "sampledrawnfrom",
+          "data": "selected.sampledrawnfrom",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Sample(Drawn From)",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "sampleagainst",
+          "showPopUp": true,
+          "dirtyCheck": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "PREVIOUS",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "sampleagainstfromcompositesave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "samplinginstructionlist"
+        }
+      ],
+      "label": "Save",
+      "position": "bottom",
+      "disabled": "!(field && ((field.sampledrawnfromlist && field.sampledrawnfromlist.length > 0)|| (field.sampledrawnfromliststocks && field.sampledrawnfromliststocks.length > 0) || (field.sampledrawnfromlistsalesallocatedpurchase && field.sampledrawnfromlistsalesallocatedpurchase.length > 0) || (field.sampledrawnfromlistpurchaseunallocated && field.sampledrawnfromlistpurchaseunallocated.length > 0) || (field.sampledrawnfromlistsalesunallocated && field.sampledrawnfromlistsalesunallocated.length > 0)))",
+      "type": "submit"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "_id" : "workflow_sampling_health_check",
+    "componentType" : "UserTask",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "type" : "workflow",
+    "tags" : "healthCheck",
+    "objectAction" : "READ",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "processorInfo",
+        "config" : {
+            "processorId" : "29285d5b-e0fc-4cde-bb3a-f9c26c6d40f8"
+        }
+    },
+    "decisions" : [],
+    "taskId" : "workflow_sampling_health_check",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

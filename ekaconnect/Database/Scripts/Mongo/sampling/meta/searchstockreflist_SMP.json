@@ -1,0 +1,109 @@
+{
+  "_id": "searchstockreflist_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "List Of Stocks",
+  "getDataFromExternalAPI": true,
+  "type": "workflow",
+  "payLoad": "selected.searchstockreflist",
+  "version": "V2",
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "53dc1a1e-f261-45b6-9a0a-0fe4fe2faab3"
+    }
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "reset": true,
+      "export": false,
+      "sessionStateDisable": true
+    },
+	 "headerOperations" : true,
+        "header" : true,
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "showCheckbox": true,
+    "preserveSelectedData": true,
+    "selectionMode": "multiple",
+    "scrollHeight": "336px",
+    "selectionFilter": ["product_specs"]
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createqualitycomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "CREATE",
+      "task": "searchstockreflist",
+      "labelkey": "REVIEW",
+      "disabled" : "!(selected.searchstockreflist) || !(Array.isArray(selected.searchstockreflist)) || selected.searchstockreflist.length ==0",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "selected.searchstockreflist",
+          "name": "createqualitycomposite",
+          "setSelected": [
+            "selected.createqualitycomposite.createqualitycompositeview"
+          ]
+        }
+      ],
+      "style": {
+        "margin-left": "auto"
+      },
+      "label": "ADD",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "Search Stock Ref",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "container_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product_specs"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "supplier_CP_name"
+    }
+  ],
+  "taskId": "searchstockreflist",
+  "object": "c59fd690-8c85-43ea-9a98-74af388002e1"
+}

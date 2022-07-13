@@ -1,0 +1,14 @@
+{
+  "_id": "ST_PROCESSOR_INSTRUCTION_UPDATE_SMP",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "11c5696f-6cb4-45c9-8cce-b7f4358ee773"
+  },
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "ST_PROCESSOR_INSTRUCTION_UPDATE",
+  "label": "Create Sample Status using Processor",
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

@@ -1,0 +1,140 @@
+{
+  "_id": "sampleinstructionsamplelisting_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "sampleinstructionsamplelisting",
+  "type": "workflow",
+  "payLoad": "completeData",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "showCheckbox": false,
+    "tableEditing": true,
+    "pagination": false,
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["sample_instruction_id"]
+      }
+    },
+    "limitHeight": true,
+    "dropdownDecisions": true,
+    "selectionMode": "none"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSaveSampleStatus",
+      "decisionName": "compositeSaveSampleStatus",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.sampleinstructionsamplelisting",
+          "appendMsg": true,
+          "name": "_ST_VALIDATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS"
+        },
+        {
+          "data": "output._ST_VALIDATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS",
+          "appendMsg": true,
+          "name": "_ST_CREATE_SAMPLEINSTRUCTION_DETAILS"
+        },
+        {
+          "data": "output.sampleinstructionsamplelisting",
+          "appendMsg": true,
+          "name": "ST_PROCESSOR_INSTRUCTION_UPDATE"
+        },
+        {
+          "data": "output.ST_PROCESSOR_INSTRUCTION_UPDATE",
+          "appendMsg": true,
+          "name": "ST_UPDATE_INSTRUCTION"
+        },
+        {
+          "data": "output.ST_UPDATE_INSTRUCTION",
+          "name": "samplinginstructionlist",
+          "dirtyCheckFulfilled": true
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_no",
+      "width": "90px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_result",
+      "width": "180px",
+      "event123": "for(var i=0;i<data.sampleinstructiondetailslisting.length;i++){if(data.sampleinstructiondetailslisting[i].sample_result){let date = data.sampleinstructiondetailslisting[i].sample_result.toLocaleDateString();data.sampleinstructiondetailslisting[i].sample_result={value:date,disable:true}}}"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "CP_Sample_Ref_No",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_status_DisplayName",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "remarks",
+      "width": "180px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "forsamplestatus",
+      "width": "180px",
+      "hidden": true,
+      "value": "forsamplestatus"
+    }
+  ],
+  "taskId": "sampleinstructionsamplelisting",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

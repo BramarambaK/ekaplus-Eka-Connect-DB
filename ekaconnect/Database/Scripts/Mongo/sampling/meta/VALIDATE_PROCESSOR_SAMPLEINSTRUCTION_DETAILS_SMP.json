@@ -1,0 +1,11 @@
+{
+  "_id": "VALIDATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS_SMP",
+  "name": "VALIDATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet": "\r\n    var bulkPayLoadData = req.body.bulkPayLoadData;\r\n    var flag = 0;\r\n    var flag2 = 0;\r\n    for (var i = 0; i < bulkPayLoadData.length; i++) {\r\n bulkPayLoadData[i]['date_sample_sent'] = 'saved again';\r\n bulkPayLoadData[i]['sample_status'] = bulkPayLoadData[i]['sample_status_DisplayName'];\r\n    if (bulkPayLoadData[i]['sample_status'] == '__empty__') {\r\n        res.status(500).send('Sample Status cannot be empty');\r\n      }\r\n      if (typeof bulkPayLoadData[i]['sample_result'] === 'object') {\r\n        bulkPayLoadData[i]['sample_result'];\r\n        bulkPayLoadData[i]['sample_result'] = bulkPayLoadData[i]['sample_result']['value'];\r\n        flag = 0;\r\n      } if (bulkPayLoadData[i]['sample_result']) {\r\n        var sample_result = bulkPayLoadData[i]['sample_result'];\r\n        var sample_sent = bulkPayLoadData[i]['sample_sent'];\r\n        if (\r\n          new Date(sample_sent).getTime() <= new Date(sample_result).getTime() &&\r\n          new Date(sample_result).getTime() <= new Date().getTime()\r\n        ) {\r\n          flag = 0;\r\n        } else {\r\n          flag = 1;\r\n          break;\r\n        }\r\n      } else {\r\n        flag = 0;\r\n      }\r\n    }\r\n    if (flag == 1) {\r\n      res.status(500).send('Sample Result date should be between Sample Sent Date and Current Date');\r\n    } else if (flag == 0) {\r\n      res.status(200).send(bulkPayLoadData);\r\n    }",
+  "sys__UUID": "8b42e66e-d562-45a5-a516-2134a6f7b3e6",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}

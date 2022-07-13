@@ -1,0 +1,115 @@
+{
+  "_id": "viewedsample_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "payLoad": "selected.samplinginstructionlist",
+  "type": "workflow",
+  "layout": {
+    "header": true,
+    "header": {
+      "field": "sample_instruction_id_display",
+      "title": "Sample Instruction Id:"
+    },
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["sample_instruction_id"]
+      }
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "preserveSelectedData": true,
+    "limitHeight": true,
+    "pagination": false,
+    "selectionMode": "none"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "viewedsamplelist",
+          "popupClass": "edit-modal907px",
+          "displayType": "popup"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "samplinginstructionlist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "ED MARK REF NO",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_quantity"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_quantity_Unit"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "courier_company_name"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "courier_tracking_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "remarks"
+    }
+  ],
+  "taskId": "viewedsamplelist",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

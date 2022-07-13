@@ -1,0 +1,11 @@
+{
+  "_id": "PROCESSOR_SAMPLEINSTRUCTION_DETAILS_SMP",
+  "name": "PROCESSOR_SAMPLEINSTRUCTION_DETAILS",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet": "\r\n    let bulkPayLoadData = req.body.bulkPayLoadData;\r\n    var flag = 0;\r\n    for (var i = 0; i < bulkPayLoadData.length; i++) {\r\n  bulkPayLoadData[i]['date_sample_sent'] = 'saved'; \r\n     if (typeof bulkPayLoadData[i]['sample_sent'] === 'object') {\r\n        bulkPayLoadData[i]['sample_sent'];\r\n        bulkPayLoadData[i]['sample_sent'] = bulkPayLoadData[i]['sample_sent']['value'];\r\n        flag = 0;\r\n      } if (bulkPayLoadData[i]['sample_sent']) {\r\n        var issue_date = bulkPayLoadData[i]['issue_date'];\r\n        var sample_sent = bulkPayLoadData[i]['sample_sent'];\r\n        if (\r\n          new Date(issue_date).getTime() <= new Date(sample_sent).getTime() &&\r\n          new Date(sample_sent).getTime() <= new Date().getTime()\r\n        ) {\r\n          flag = 0;\r\n        } else {\r\n          flag = 1;\r\n          break;\r\n        }\r\n      } else flag = 0;\r\n    }\r\n    if (flag == 1) {\r\n      res.status(500).send('Sample sent date should be between Issue Date and Current Date');\r\n    } else if (flag == 0) {\r\n      res.status(200).send(bulkPayLoadData);\r\n    }",
+  "sys__UUID": "4c30cfae-3283-4c55-ad26-c3d4239ef520",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}

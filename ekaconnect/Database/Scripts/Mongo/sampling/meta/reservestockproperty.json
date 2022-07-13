@@ -1,0 +1,20 @@
+{
+    "_id" : "reservestock",
+    "type" : "property",
+    "name" : "reservestock",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Reserve Stock",
+    "defaultValue" : [ 
+        {
+            "key" : "Yes",
+            "value" : "Yes"
+        }, 
+        {
+            "key" : "No",
+            "value" : "No"
+        }
+    ]
+}

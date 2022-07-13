@@ -1,0 +1,22 @@
+{
+  "_id": "quality_analysis_dropdown_property",
+  "type": "property",
+  "name": "quality_analysis",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "External",
+      "value": "External"
+    },
+    {
+      "key": "Internal",
+      "value": "Internal"
+    }
+  ],
+  "label": "Quality Analysis Dropdown",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "description": "Property is used to show dropdown values(External/Internal)"
+}

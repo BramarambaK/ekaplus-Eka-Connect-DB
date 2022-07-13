@@ -1,0 +1,401 @@
+{
+    "_id" : "sampling_particular_form",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "",
+    "type" : "workflow",
+    "layout" : {
+        "processorInfo" : {
+            "processorId" : "5235d14b-659c-4396-b39f-123f900c21d8"
+        },
+        "valueMouseHover" : false,
+        "useQueryParams" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "padding" : "10px"
+        },
+        "formLayoutStyle" : {
+            "height" : "250px",
+            "padding-left" : "6px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : ""
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "labelKey" : "Sampling Particular Form",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "190px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "value" : "currentDate",
+                "key" : "issue_date"
+            }, 
+            {
+                "style" : {
+                    "width" : "190px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "patchFromValue" : "send_sample_to_name",
+                "event" : "data.samplingparticularform.send_sample_to_unallocated=value;",
+                "key" : "send_sample_to"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "event" : "data.samplingparticularform.send_sample_to=value;",
+                "key" : "send_sample_to_unallocated"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {},
+                "suffix" : "",
+                "key" : "sample_type_name"
+            }, 
+            {
+                "style" : {
+                    "width" : "190px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "key" : "send_sample_to_custom_cp"
+            }, 
+            {
+                "style" : {
+                    "width" : "440px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px"
+                },
+                "suffix" : "",
+                "key" : "send_sample_to_custom_cp_address"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "425px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "key" : "sampling_instruction_remarks"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "event" : "data.samplingparticularform.sample_instruction_id_display='SO'+data.samplingparticularform.origin[0].toUpperCase()+data.samplingparticularform.origin[1].toUpperCase() + value +  data.samplingparticularform.sample_instruction_id.split('-')[1]",
+                "key" : "sample_type"
+            }, 
+            {
+                "style" : {
+                    "width" : "150px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px"
+                },
+                "suffix" : "",
+                "event" : "var alloc=0; if(data.samplingparticularform.instructionagainst == 'Purchase-Unallocated' || data.samplingparticularform.instructionagainst == 'Stock-Unallocated'){data.samplingparticularform.allocatedqty=100000000000;}else{for(var i=0;i<data.samplingparticularlist.length;i++){alloc=alloc+parseInt(data.samplingparticularlist[i]['Open Quantity'].split(' ')[0]); }data.samplingparticularform.allocatedqty=alloc;data.samplingparticularform.listsamplingparticularlist=data.samplingparticularlist;}",
+                "key" : "quantity_per_sample"
+            }, 
+            {
+                "style" : {
+                    "width" : "100px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "patchFromValue" : "quality_uom_name",
+                "key" : "quantity_uom"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "25px"
+                },
+                "suffix" : "",
+                "key" : "reserve_stock"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "instructionagainst" : "",
+                "key" : "instructionagainst"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "sample_instruction_id" : "",
+                "key" : "sample_instruction_id"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "sample_drawn_from" : "",
+                "key" : "sample_drawn_from"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "product" : "",
+                "key" : "product"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "product_specs" : "",
+                "key" : "product_specs"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "origin" : "",
+                "key" : "origin"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "instruction_against_ref_no" : "",
+                "key" : "instruction_against_ref_no"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px",
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type2" : "hidden",
+                "productId" : "",
+                "patchFromValue" : "product",
+                "key" : "productId"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "quality" : "",
+                "key" : "quality"
+            }, 
+            {
+                "key" : "listingData",
+                "disableDBSave" : true
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "quality_uom_name" : "",
+                "key" : "quality_uom_name"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "send_sample_to_name" : "",
+                "key" : "send_sample_to_name"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "mandatoryFields" : "",
+                "value" : "mandatoryFields",
+                "key" : "mandatoryFields"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "mandatory" : "",
+                "value" : "initial",
+                "key" : "mandatory"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "allocatedqty" : "",
+                "key" : "allocatedqty"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "sample_instruction_id_display" : "",
+                "key" : "sample_instruction_id_display"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "reserve_stock_name" : "",
+                "key" : "reserve_stock_name"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "key" : "listsamplingparticularlist"
+            }
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "CREATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstcompositesave",
+            "decisionName" : "sampleagainstcompositesave",
+            "label" : "SAVE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplingparticularform",
+                    "name" : "processor_validate_quantity"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.processor_validate_quantity",
+                    "appendMsg" : false,
+                    "name" : "_ST_UPDATE_INSTRUCTION"
+                }, 
+                {
+                    "name" : "sampledrawnfrom"
+                }
+            ]
+        }
+    ],
+    "taskId" : "samplingparticularform",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

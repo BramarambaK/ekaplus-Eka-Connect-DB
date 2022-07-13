@@ -1,0 +1,23 @@
+{
+    "_id" : "sampling_instruction_dummyV2",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "List of Sampling Instruction",
+    "type" : "workflow",
+    "tags" : "trainingData",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "MULTI_API_SAMPLINGINSTRUCTIIONLIST"
+        }
+    },
+    "layout" : {},
+    "decisions" : [],
+    "labelKey" : "List of Sampling Instruction",
+    "fields" : [],
+    "taskId" : "samplinginstructionlistdummyv2",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

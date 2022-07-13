@@ -1,0 +1,97 @@
+{
+    "_id" : "sampleagainst_composite",
+    "componentType" : "UserTask",
+    "label" : "New Sampling",
+    "layout" : {
+        "name" : "customv2",
+        "menu" : true,
+        "preserveSelectedData" : true
+    },
+    "processorInfo" : {
+        "processorId" : "71984217-d333-413a-aec7-c9ab1c42ac6c"
+    },
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+    "objectAction" : "READ",
+    "payLoad" : "selected.sampleagainst",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "sampleagainst",
+    "type" : "workflow",
+    "viewAction" : "composite",
+    "workflows" : [ 
+        {
+            "name" : "samplinginstructionagainst"
+        }, 
+        {
+            "visibility" : "return (${sampleagainst.samplingparticularlist} !== '' && '${sampleagainst.samplinginstructionagainst.instructionagainst}' != 'Purchase-Unallocated' && '${sampleagainst.samplinginstructionagainst.instructionagainst}' != 'Stock-Unallocated') ? true : false",
+            "name" : "samplingparticularlist",
+            "show" : false
+        }, 
+        {
+            "visibility" : "return ${sampleagainst.samplingparticularlist} !== '' ? true : false",
+            "name" : "samplingparticularform"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "sampleagainst",
+                    "data" : "selected.sampleagainst",
+                    "dirtyCheck" : true,
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Sample(Against)",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "sampledrawnfrom",
+                    "data" : "selected.sampledrawnfrom",
+                    "dirtyCheck" : true,
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Sample(Drawn From)",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "samplinginstructionlist",
+                    "showPopUp" : true,
+                    "dirtyCheck" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstcompositesave",
+            "executeDecision" : true,
+            "outcomes" : [ 
+                {
+                    "name" : "sampledrawnfrom"
+                }
+            ],
+            "label" : "Next",
+            "position" : "bottom",
+			 "disabled" : "!(field && field.samplingparticularlist && field.samplingparticularlist.length > 0)",
+            "type" : "submit"
+        }
+    ]
+}

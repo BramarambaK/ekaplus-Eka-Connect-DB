@@ -1,0 +1,80 @@
+{
+    "_id" : "sampleinstructiondrawnfrom",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "Sample (Drawn From)",
+    "type" : "workflow",
+    "layout" : {
+        "valueMouseHover" : false,
+        "useQueryParams" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "padding" : "10px"
+        },
+        "formLayoutStyle" : {
+            "height" : "104px",
+            "padding-left" : "6px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : ""
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "labelKey" : "SampleInstructionDrawnFrom",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "180px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "60px"
+                },
+                "suffix" : "",
+                "event" : "data.sampledrawnfromform = {};\r\ndata.sampledrawnfromform.sample_drawn_from = \"\";\r\ndata.sampledrawnfromform.sample_drawn_from = value;\r\ndata.sampleinstructiondrawnfrom.sample_drawn_from = {\r\n  value: value,\r\n  disable: \"true\",\r\n};\r\ndata.sampledrawnfromform.sample_status = \"Pending\";\r\ndata.sampledrawnfromform.mandatory = \"mandatory\";\r\ndata.sampledrawnfromform.mandatoryFields = \"initial\";\r\ndata.sampledrawnfromform.status = \"active\";\r\ndata.sampledrawnfromform.sample_instruction_id =\r\n  data.sampleinstructiondrawnfrom.sample_instruction_id;\r\ndata.sampledrawnfromform.instructionagainst =\r\n  data.sampleinstructiondrawnfrom.instructionagainst;\r\n  data.sampledrawnfromform.sample_instruction_to = data.sampledrawnfromform.instructionagainst!='Sales Contract-Unallocated'?data.sampledrawnfromform.sample_instruction_to:{\r\n    value: '',\r\n    disable: \"true\",\r\n  }; \r\n",
+                "key" : "sample_drawn_from"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "sample_instruction_id" : "",
+                "key" : "sample_instruction_id"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "instructionagainst" : "",
+                "key" : "instructionagainst"
+            }
+        ]
+    ],
+    "decisions" : [],
+    "taskId" : "sampleinstructiondrawnfrom",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

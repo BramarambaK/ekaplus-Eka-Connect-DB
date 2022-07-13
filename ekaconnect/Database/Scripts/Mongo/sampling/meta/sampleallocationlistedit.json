@@ -1,0 +1,196 @@
+{
+    "_id" : "allocation_header_list_edit",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "version" : "V2",
+    "inputData2" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "MULTI_API_PARTICULARLIST"
+        }
+    },
+    "inputData" : {
+        "type" : "externalApi",
+        "config" : {
+            "host" : "${properties.eka_connect_host}",
+            "path" : "/collectionmapper/bcb79287-04fb-4af2-ae97-61af272b2c45/d6df33f0-0e8d-46de-91b4-9968484b5fba/fetchCollectionRecords",
+            "headers" : {
+                "ttl" : "60"
+            },
+            "inputMapping" : {},
+            "method" : "POST",
+            "useInputMapping" : false,
+            "body" : {
+                "collectionName" : "Sales_allocated_to_purchase_lookup",
+                "getAllRecords" : true
+            }
+        }
+    },
+    "refType" : "app",
+    "payLoad" : "selected.sampleallocationlistedit",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "List Of Sales Contract-Allocated to Purchase",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "header" : true,
+        "headerOperations" : true,
+        "options" : {
+            "columnFilter" : false,
+            "sortFilter" : false,
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "reset" : true,
+            "export" : false,
+            "sessionStateDisable" : true
+        },
+        "theme" : "theme-grid-white",
+        "showCheckbox" : true,
+        "selectionMode" : "multiple",
+        "preserveSelectedData" : true,
+        "scrollHeight" : "336px",
+        "selectionFilter" : [ 
+            "Sales CP Name", 
+            "product specs"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "sampleagainstedit"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-success",
+            "objectAction" : "CREATE",
+            "task" : "sampleallocationlistedit",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.sampleallocationlistedit",
+                    "name" : "sampleagainstedit",
+                    "setSelected" : [ 
+                        "selected.sampleagainstedit.samplingparticularlisteditapicall", 
+                        "selected.sampleagainstedit.samplingparticularformedit.listingData"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "ADD",
+            "type" : "submit",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "Sampling Instruction List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true,
+            "value" : "${selected.sampleagainstedit.samplingparticularformedit.sample_instruction_id}"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Ref_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Sales CP Name"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Profit Center"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Strategy"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Allocation Group No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "dateformat" : "DD-MMM-YYYY",
+            "key" : "Allocation Date"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "AllocationStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Allocated Quantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Quantity Unit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "hidden" : true,
+            "key" : "product specs"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Product"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Origin"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CropYear"
+        }
+    ],
+    "taskId" : "sampleallocationlistedit",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

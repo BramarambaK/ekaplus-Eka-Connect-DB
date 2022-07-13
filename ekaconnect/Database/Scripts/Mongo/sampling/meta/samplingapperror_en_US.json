@@ -1,0 +1,12 @@
+{
+    "_id" : "samplingapperror_en_US",
+    "title" : "Sampling App Level Error",
+    "name" : "sampling",
+    "tenantID" : "",
+    "type" : "error",
+    "locale" : "en",
+    "001" : "Mandatory fields missing, please update and proceed %s",
+    "089" : "%s cannot be future date",
+    "099" : "%s should be less than open quantity",
+    "0101" : "%s should be less than allocated quantity"
+}

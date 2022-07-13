@@ -1,0 +1,12 @@
+{
+    "_id" : "processor_sampledrawnfromlist",
+    "name" : "sampledrawnfromlistprocessor",
+    "type" : "processor",
+    "refType" : "app",
+    "version" : "V2",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "snippet" : " \r\n    var allcontract = [];\r\n    req.body.selectedData.data.forEach(element => {\r\n      allcontract.push(element['sales contract no']);\r\n    });\r\n    allcontract = [...new Set(allcontract)];\r\n    var allcontractstring = '';\r\n    for (let r = 0; r < allcontract.length; r++) {\r\n      if (r == allcontract.length - 1) {\r\n        allcontractstring = allcontractstring + allcontract[r];\r\n      } else {\r\n        allcontractstring = allcontractstring + allcontract[r] + ',';\r\n      }\r\n    }\r\n    var drawnfromcollectiondata = {\r\n      method: 'POST',\r\n      url:\r\n        req.body.propertyList.eka_connect_host +\r\n        '/collectionmapper/40a27e7f-3f50-406f-a872-2ee7d9436df9/3ef370f9-febe-41a0-8e43-4ef6ce769b3b/fetchCollectionRecords',\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid'],\r\n        'Content-Type': 'application/json',\r\n        'X-Remote-User': 'ekaApp',\r\n        ttl: 300\r\n      },\r\n\r\n      body: {\r\n        collectionName: 'trmSMP_purchasedrawnfrom2',\r\n        criteria: {\r\n          filter: [\r\n            {\r\n              fieldName: 'sales_contract_no',\r\n              value: allcontractstring,\r\n              operator: 'in'\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      json: true\r\n    };\r\n    function get_drawnfromcollectiondata() {\r\n      return new Promise(function(resolve, reject) {\r\n        // console.log('Request - ' + purchase_details.url);\r\n        request(drawnfromcollectiondata, function(err, response, body) {\r\n          //  console.log('Response payment details -');\r\n          if (err || body.error) {\r\n            res.status(500).send('Unable to get data from collections');\r\n            reject(body);\r\n          } else {\r\n            //  console.log('Success paymentsplit details');\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_drawnfromcollectiondata().then(data => {\r\n   success(data,200);   \r\n    });\r\n     ",
+    "sys__UUID" : "1bfc6b5a-c9ca-42b6-a9bd-24cca12d8336",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "srini@ekaplus.com"
+}

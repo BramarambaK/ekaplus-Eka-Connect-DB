@@ -1,0 +1,122 @@
+{
+    "_id" : "sampling_particular_list_edit_apicall",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "MULTI_API_PARTCULARLISTPHYSICALS"
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "Sampling Particular List",
+    "type" : "workflow",
+    "version" : "V2",
+    "payLoad" : "completeData",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+           
+            "columnFilter" : true,
+           
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "lazyLoading" : false,
+        "limitHeight" : true,
+        "showCheckbox" : false,
+        "pagination" : false,
+        "selectionMode" : "none",
+        "getInitialData" : true,
+        "deleteRow" : {
+            "action" : "hide"
+        }
+    },
+    "labelKey" : "Sampling Particular List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true,
+            "value" : "${selected.sampleagainstedit.samplingparticularformedit.sample_instruction_id}"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Ref_No",
+            "event" : "var val='';var alloc=0; if(data.samplingparticularlisteditapicall){for(var i=0;i<data.samplingparticularlisteditapicall.length;i++){alloc=alloc+parseInt(data.samplingparticularlisteditapicall[i]['Open Quantity'].split(' ')[0]);if(i!=data.samplingparticularlisteditapicall.length-1){data.samplingparticularlisteditapicall[i].sys__state['product specs']={'show':true,'disable':false};data.samplingparticularlisteditapicall[i]['Open Quantity']=data.samplingparticularlisteditapicall[i]['Open Quantity']+' '+data.samplingparticularlisteditapicall[i]['Open Quantity Unit']; val=val+data.samplingparticularlisteditapicall[i]['Ref No'] +','}else{data.samplingparticularlisteditapicall[i].sys__state['product specs']={'show':true,'disable':false};data.samplingparticularlisteditapicall[i]['Open Quantity']=data.samplingparticularlisteditapicall[i]['Open Quantity']+' '+data.samplingparticularlisteditapicall[i]['Open Quantity Unit']; val=val+data.samplingparticularlisteditapicall[i]['Ref_No']} data.samplingparticularlisteditapicall[i]['product specs']=data.samplingparticularform.listingData[0].Product+', '+data.samplingparticularform.listingData[0].Origin+', '+data.samplingparticularform.listingData[0].Quality+', '+data.samplingparticularform.listingData[0].CropYear} data.samplingparticularform.instruction_against_ref_no=val;}data.samplingparticularformedit.allocatedqty=alloc;"
+       }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "product specs"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample term"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Delivery Period"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Open Quantity"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-success",
+            "objectAction" : "CREATE",
+            "type" : "submit",
+            "task" : "sampleagainstcompositesaveedit",
+            "decisionName" : "sampleagainstcompositesaveedit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.samplingparticularlisteditapicall",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_ALLOCATION_DETAILS"
+                }, 
+                {
+                    "name" : "sampledrawnfromedit"
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "ADD",
+            "position" : "bottom"
+        }
+    ],
+    "taskId" : "samplingparticularlisteditapicall",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

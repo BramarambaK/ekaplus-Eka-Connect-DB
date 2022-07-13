@@ -1,0 +1,124 @@
+{
+  "_id": "samplelist_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "List of Samples",
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "fdc0d9e9-d420-42f9-9a45-dbd37b103898"
+    }
+  },
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "refreshData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "position": "top",
+      "selection": "default",
+      "outcomes": [
+        {
+          "data": "selected.samplelist",
+          "name": "contractlinkcomposite"
+        }
+      ],
+      "label": "Link The Contract",
+      "iconClass": "cr-info-icon"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_instruction_id"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "sample_ref_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "sample_quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "origin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_sent_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_drawn_from"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "allocated_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "linked_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_approval_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality_result_status"
+    }
+  ],
+  "taskId": "samplelistV1",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

@@ -1,0 +1,217 @@
+{
+    "_id" : "sample_drawn_fromlisteditstatuspending",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "processorInfo" : {
+        "processorId" : "2a37de72-ce1b-422b-a419-c240368ef207"
+    },
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "getInitialData1" : {
+            "filterBy" : {
+                "payLoadData" : [ 
+                    "sample_instruction_id"
+                ]
+            }
+        },
+        "options" : {
+            "columnFilter" : true,
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : false,
+        "lazyLoading" : false,
+        "showCheckbox" : false,
+        "tableEditing" : true,
+        "limitHeight" : true,
+        "pagination" : false,
+        "selectionMode" : "none",
+        "deleteRow" : {
+            "action" : "remove"
+        }
+    },
+    "labelKey" : "Sample Drawn From List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true
+        }, 
+        {
+            "key" : "ref_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "event" : "var val=''; for(var i=0;i<data.sampledrawnfromlisteditstatuspending.length;i++) { if(i!=data.sampledrawnfromlisteditstatuspending.length-1){ val=val+data.sampledrawnfromlisteditstatuspending[i]['ref_no'] +','; } else{ val=val+data.sampledrawnfromlisteditstatuspending[i].ref_no } } data.sampledrawnfromform.sample_drawnfromvalue=val; "
+        }, 
+        {
+            "key" : "allocation_group_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "Open Quantity",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "allocated_quantity",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "quantity_represented",
+            "filter" : true,
+            "sort" : true,
+            "edit" : true,
+            "value" : "${selected.sampleagainstedit.samplingparticularformedit.quantity_per_sample}"
+        }, 
+        {
+            "key" : "drawn_from_uom",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "reservestock",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "hidden" : true
+        }, 
+        {
+            "key" : "instructionagainstdrawnfrom",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "hidden" : true
+        }, 
+        {
+            "key" : "sample_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : true
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstfromcompositesave",
+            "label" : "SAVE",
+            "decisionName" : "sampleagainstfromcompositesave",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlisteditstatuspending",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_DELETE"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlisteditstatuspending",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_DRAWNFROM"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlisteditstatuspending",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_SAMPLE_TO_TRM"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlisteditstatuspending",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_CREATE_SAMPLE_NO_SMP"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlisteditstatuspending",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_CREATE_SAMPLE_NO_SMP"
+                }, 
+                {
+                    "data" : "output._ST_PROCESSOR_CREATE_SAMPLE_NO_SMP",
+                    "name" : "_ST_CREATE_SAMPLEINSTRUCTION_DETAILS",
+                    "appendMsg" : false
+                }, 
+                {
+                    "name" : "samplinginstructionlist"
+                }
+            ]
+        }
+    ],
+    "taskId" : "sampledrawnfromlisteditstatuspending",
+    "object" : "4638683b-aa06-474c-8cd6-66b8a463b769",
+    "sys__data__state" : "Modify",
+    "sys__updatedBy" : "Madhu.s@ekaplus.com"
+}

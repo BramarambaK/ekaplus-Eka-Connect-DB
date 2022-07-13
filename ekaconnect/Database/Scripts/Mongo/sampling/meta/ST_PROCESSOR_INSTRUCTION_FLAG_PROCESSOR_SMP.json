@@ -1,0 +1,12 @@
+{
+  "_id": "ST_PROCESSOR_INSTRUCTION_FLAG_PROCESSOR_SMP",
+  "name": "PROCESSOR_INSTRUCTION_FLAG",
+  "type": "processor",
+  "refType": "app",
+  "version": "V2",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet": "var connectUrl = req.body.propertyList.eka_connect_host + '/workflow/data';\r\n    var connectBody = {\r\n      appId: req.body.appId,\r\n      workFlowTask: 'samplinginstructionlist'\r\n    };\r\n    var connect = {\r\n      method: 'POST',\r\n      body: connectBody,\r\n      url: connectUrl,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_connect() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(connect, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_connect().then(function(result) {\r\n      var instructionlist = result.data;\r\n      var response = {};\r\n      for (var i = 0; i < instructionlist.length; i++) {\r\n        if (instructionlist[i]['sample_instruction_id'] == req.body.bulkPayLoadData[0]['sample_instruction_id']) {\r\n          response = { ...instructionlist[i], sampledetailsflag: 'false' };\r\n          break;\r\n        }\r\n      }\r\n      success(response, 200);\r\n      // res.status(200).send(response);\r\n    });",
+  "sys__UUID": "f30237f5-39bd-4877-a335-a4c232305a08",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}

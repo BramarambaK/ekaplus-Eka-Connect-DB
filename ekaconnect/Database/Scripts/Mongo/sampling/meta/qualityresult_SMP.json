@@ -1,0 +1,20 @@
+{
+  "_id": "qualityresult_SMP",
+  "type": "property",
+  "name": "flag",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Sample_Ref_No",
+      "value": "Sample Ref No"
+    },
+    {
+      "key": "Stock_Ref_No",
+      "value": "Stock Ref No"
+    }
+  ],
+  "label": "Quality Results Against Dropdown"
+}

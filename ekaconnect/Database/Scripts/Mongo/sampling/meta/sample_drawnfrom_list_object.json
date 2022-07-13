@@ -1,0 +1,181 @@
+{
+  "_id": "sample_drawnfrom_list_object",
+  "name": "sample_drawnfrom_list",
+  "label": "Sample DrawnFrom List",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "notrequireduniquefield": true,
+  "uniqueFields": [
+    "sample_instruction_id",
+    "ref_no",
+    "Open Quantity",
+    "sample_no"
+  ],
+  "translatableKeys": [],
+  "fields": {
+    "sample_instruction_id": {
+      "sample_instruction_id": "Sample Instruction Id",
+      "labelKey": "sample_instruction_id",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ref_no": {
+      "ref_no": "Ref No",
+      "labelKey": "ref_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "allocation_group_no": {
+      "allocation_group_no": "Allocation Group No",
+      "labelKey": "allocation_group_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "warehouse": {
+      "warehouse": "Warehouse",
+      "labelKey": "warehouse",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sales_cp_name": {
+      "sales_cp_name": "CP Name",
+      "labelKey": "sales_cp_name",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Open Quantity": {
+      "Open Quantity": "Available Quantity",
+      "labelKey": "Open Quantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "allocated_quantity": {
+      "allocated_quantity": "Allocated Quantity",
+      "labelKey": "allocated_quantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quantity_represented": {
+      "quantity_represented": "Quantity Represented",
+      "labelKey": "quantity_represented",
+      "type": "textbox",
+      "errorCode": "0101",
+      "valueCheck": " if( '${allocated_quantity}' == ' ' || '${allocated_quantity}' == '' ){return true} else if( Number('${quantity_represented}') < Number('${allocated_quantity}') ) { return true} else  { return false}",
+      "inputClass": "textRight",
+      "isRequired": true,
+      "dataType": "Number"
+    },
+    "sample_no": {
+      "sample_no": "Sample No",
+      "labelKey": "sample_no",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "Number",
+      "length": "5"
+    },
+    "drawn_from_uom": {
+      "drawn_from_uom": " ",
+      "labelKey": "drawn_from_uom",
+      "type": "textbox",
+      "isRequired": false,
+      "width": "20%",
+      "dataType": "String"
+    },
+    "reservestock": {
+      "reservestock": "Reserve Stock ",
+      "labelKey": "reservestock",
+      "type": "textbox",
+      "isRequired": false,
+      "width": "20%",
+      "dataType": "String"
+    },
+    "instructionagainstdrawnfrom": {
+      "instructionagainstdrawnfrom": "Instruction Against in drawnfrom",
+      "labelKey": "instructionagainstdrawnfrom",
+      "type": "textbox",
+      "isRequired": false,
+      "width": "20%",
+      "dataType": "String"
+    },
+    "Purchase Ref No": {
+      "Purchase Ref No": "Purchase Ref No",
+      "labelKey": "Purchase Ref No",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Container_No": {
+      "Container_No": "Container No",
+      "labelKey": "Container_No",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "External_Stock_Ref_No": {
+      "External_Stock_Ref_No": "External Stock Ref No",
+      "labelKey": "External_Stock_Ref_No",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Packing_Size": {
+      "Packing_Size": "Packing Size",
+      "labelKey": "Packing_Size",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Packing_Type": {
+      "Packing_Type": "Packing Type",
+      "labelKey": "Packing_Type",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Linked_Ref_No": {
+      "Linked_Ref_No": "Linked_Ref_No",
+      "labelKey": "Linked_Ref_No",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ALLOCATED_REF_NO": {
+      "ALLOCATED_REF_NO": "ALLOCATED_REF_NO",
+      "labelKey": "ALLOCATED_REF_NO",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "4638683b-aa06-474c-8cd6-66b8a463b769"
+}

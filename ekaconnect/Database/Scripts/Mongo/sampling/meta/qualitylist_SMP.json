@@ -1,0 +1,138 @@
+{
+  "_id": "qualitylist_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "List of Quality Results",
+  "type": "workflow",
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "2bb1e37d-e0d3-44d6-a66d-bde5c40aca7f"
+    }
+  },
+  "version": "V2",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "refreshData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "position": "top",
+      "selection": "!default",
+      "outcomes": [
+        {
+          "data": "selected.qualitylist",
+          "name": "createqualitycomposite"
+        }
+      ],
+      "label": "Create",
+      "iconClass": "cr-info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.qualitylist",
+          "name": "editcreatequalitycomposite"
+        }
+      ],
+      "label": "Modify",
+      "iconClass": "cr-info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.qualitylist",
+          "name": "viewquality",
+          "displayType": "popup",
+          "popupClass": "edit-modal907px"
+        }
+      ],
+      "label": "View",
+      "iconClass": "cr-info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.qualitylist",
+          "popupClass": "deleteclass",
+          "name": "deletequalitylist"
+        }
+      ],
+      "label": "Delete",
+      "iconClass": "cr-delete-icon"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Quality_results_against"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality_analysis_by"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product_specs",
+      "hidden": true
+    }
+  ],
+  "taskId": "qualitylist",
+  "object": "ddec290e-71ee-4538-8ec9-37bbcc0cdca1"
+}

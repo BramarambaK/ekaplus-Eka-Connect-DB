@@ -1,0 +1,36 @@
+{
+    "_id" : "sampletype",
+    "type" : "property",
+    "name" : "sampletype",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "Sample Type",
+    "defaultValue" : [ 
+        {
+            "key" : "SA",
+            "value" : "Spot Approval"
+        }, 
+        {
+            "key" : "OF",
+            "value" : "Offer"
+        }, 
+        {
+            "key" : "SHA",
+            "value" : "Shipment Approval"
+        }, 
+        {
+            "key" : "NA",
+            "value" : "NANS"
+        }, 
+        {
+            "key" : "RO",
+            "value" : "Reserved Offer"
+        }, 
+        {
+            "key" : "PSS",
+            "value" : "PSS"
+        }
+    ]
+}

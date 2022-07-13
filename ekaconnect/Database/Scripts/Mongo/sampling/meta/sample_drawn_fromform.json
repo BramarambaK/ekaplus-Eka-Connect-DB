@@ -1,0 +1,252 @@
+{
+  "_id": "sample_drawn_fromform",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "",
+  "type": "workflow",
+  "layout": {
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "processorInfo": {
+      "processorId": "f52fc1c8-3ebf-456b-9bdd-f274dd3539f5"
+    },
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "padding": "10px"
+    },
+    "formLayoutStyle": {
+      "height": "204px",
+      "padding-left": "6px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": ""
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "labelKey": "Sample Drawn From Form",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "key": "sample_instruction_to"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "key": "sample_drawn_from_cp"
+      },
+      {
+        "style": {
+          "width": "461px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "key": "address"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "key": "attention"
+      },
+      {
+        "style": {
+          "width": "461px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "key": "note_to_sample_receiver"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "40px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "instructionagainst": "",
+        "key": "instructionagainst"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "40px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "sample_instruction_id": "",
+        "key": "sample_instruction_id"
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "sample_status": "",
+        "key": "sample_status"
+      },
+      {
+        "style": {
+          "width": "180px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "60px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "status": "",
+        "value": "active",
+        "key": "status"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "40px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "sample_drawn_from": "",
+        "key": "sample_drawn_from"
+      },
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "40px"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "sample_drawnfromvalue": "",
+        "key": "sample_drawnfromvalue"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "mandatory": "",
+        "value": "mandatory",
+        "key": "mandatory"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "mandatoryFields": "",
+        "value": "mandatoryFields",
+        "key": "mandatoryFields"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "sampledetailsflag": "",
+        "value": "true",
+        "key": "sampledetailsflag"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "grdno": "",
+        "key": "grdno"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "sampleagainstfromcompositesave",
+      "decisionName": "sampleagainstcompositesave",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.sampledrawnfromform",
+          "appendMsg": false,
+          "name": "_ST_UPDATE_INSTRUCTION"
+        },
+        {
+          "data": "output._ST_UPDATE_INSTRUCTION",
+          "name": "samplinginstructionlist"
+        }
+      ]
+    }
+  ],
+  "taskId": "sampledrawnfromform",
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

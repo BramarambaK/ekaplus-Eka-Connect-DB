@@ -1,0 +1,357 @@
+{
+    "_id" : "sample_allocations_object",
+    "name" : "sample_allocations",
+    "label" : "Sample Allocations",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "notrequireduniquefield" : true,
+    "uniqueFields" : [ 
+        "sample_instruction_id", 
+        "Ref_No", 
+        "product specs", 
+        "Delivery Period"
+    ],
+    "translatableKeys" : [],
+    "fields" : {
+        "sample_instruction_id" : {
+            "sample_instruction_id" : "Sample Instruction Id",
+            "labelKey" : "sample_instruction_id",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Ref_No" : {
+            "Ref_No" : "Sales Contract Item Ref No",
+            "labelKey" : "Ref_No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "product specs" : {
+            "product specs" : "Product Specs",
+            "labelKey" : "product specs",
+            "type" : "textbox",
+            "isRequired" : false,
+            "concat" : [ 
+                "Product", 
+                ", ", 
+                "Quality", 
+                ", ", 
+                "Origin", 
+                ", ", 
+                "CropYear"
+            ],
+            "dataType" : "String"
+        },
+        "sample term" : {
+            "sample term" : "Sample Term",
+            "labelKey" : "sample term",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Delivery Period" : {
+            "Delivery Period" : "Shipment / Delivery Period",
+            "labelKey" : "Delivery Period",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Open Quantity" : {
+            "Open Quantity" : "Open Quantity",
+            "labelKey" : "Open Quantity",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Profit Center" : {
+            "Profit Center" : "Profit Center",
+            "labelKey" : "Profit Center",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sample_ref_no" : {
+            "sample_ref_no" : "Ref No",
+            "labelKey" : "sample_ref_no",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "container no" : {
+            "container no" : "Container No",
+            "labelKey" : "container no",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Sales CP Name" : {
+            "Sales CP Name" : "Sales CP",
+            "labelKey" : "Sales CP Name",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Strategy" : {
+            "Strategy" : "Strategy",
+            "labelKey" : "Strategy",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "origin" : {
+            "origin" : "Origin",
+            "labelKey" : "origin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quality" : {
+            "quality" : "Quality",
+            "labelKey" : "quality",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sample_sent_to" : {
+            "sample_sent_to" : "Sample Sent To",
+            "labelKey" : "sample_sent_to",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sample_approval_status" : {
+            "sample_approval_status" : "Sample Approval Status",
+            "labelKey" : "sample_approval_status",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "allocated_to" : {
+            "allocated_to" : "Allocated To",
+            "labelKey" : "allocated_to",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "supplier_CP_name" : {
+            "supplier_CP_name" : "Supplier CP Name",
+            "labelKey" : "supplier_CP_name",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "sales CP Name" : {
+            "sales CP Name" : "Sales CP Name",
+            "labelKey" : "sales CP Name",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "ref_no" : {
+            "ref_no" : "Ref No",
+            "labelKey" : "ref_no",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "CP_Name" : {
+            "CP_Name" : "CP Name",
+            "labelKey" : "CP_Name",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Allocated Quantity" : {
+            "Allocated Quantity" : "Allocated Quantity",
+            "labelKey" : "Allocated Quantity",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "open_Quantity" : {
+            "open_Quantity" : "Available Quantity",
+            "labelKey" : "open_Quantity",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "link" : {
+            "link" : "Link",
+            "labelKey" : "link",
+            "type" : "checkbox",
+            "isRequired" : false,
+            "dataType" : "boolean"
+        },
+        "sample_no" : {
+            "sample_no" : "Sample No",
+            "labelKey" : "sample_no",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "product" : {
+            "product" : "Product",
+            "labelKey" : "product",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "allocatedqty" : {
+            "allocatedqty" : "Allocated Qty",
+            "labelKey" : "allocatedqty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Allocation Date" : {
+            "Allocation Date" : "Allocation Date",
+            "labelKey" : "Allocation Date",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Allocation Group No" : {
+            "Allocation Group No" : "Allocation Group No",
+            "labelKey" : "Allocation Group No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Status" : {
+            "Status" : "Status",
+            "labelKey" : "Status",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Business Partner" : {
+            "Business Partner" : "CP Name",
+            "labelKey" : "Business Partner",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Product" : {
+            "Product" : "Product",
+            "labelKey" : "Product",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Origin" : {
+            "Origin" : "Origin",
+            "labelKey" : "Origin",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Quality" : {
+            "Quality" : "Quality",
+            "labelKey" : "Quality",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "CropYear" : {
+            "CropYear" : "Crop Year",
+            "labelKey" : "CropYear",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "To Be Planned Qty" : {
+            "To Be Planned Qty" : "Unallocated Quantity",
+            "labelKey" : "To Be Planned Qty",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Quantity Unit" : {
+            "Quantity Unit" : "Quantity Units",
+            "labelKey" : "Quantity Unit",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "warehouse" : {
+            "warehouse" : "Warehouse Name",
+            "labelKey" : "warehouse",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Purchase_Ref_No" : {
+            "Purchase_Ref_No" : "Purchase Item No",
+            "labelKey" : "Purchase_Ref_No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "AllocationStatus" : {
+            "AllocationStatus" : "Allocation Status",
+            "labelKey" : "AllocationStatus",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "shed" : {
+            "shed" : "Shed",
+            "labelKey" : "shed",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Stock_Ref_No" : {
+            "Stock_Ref_No" : "Stock Ref No",
+            "labelKey" : "Stock_Ref_No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Container_No" : {
+            "Container_No" : "Container No",
+            "labelKey" : "Container_No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Contract_Ref_No" : {
+            "Contract_Ref_No" : "Contract Ref No",
+            "labelKey" : "Contract_Ref_No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "External_Stock_Ref_No" : {
+            "External_Stock_Ref_No" : "External Stock Ref No",
+            "labelKey" : "External_Stock_Ref_No",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

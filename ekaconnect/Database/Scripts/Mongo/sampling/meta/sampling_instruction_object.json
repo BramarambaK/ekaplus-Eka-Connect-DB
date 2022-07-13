@@ -1,0 +1,497 @@
+{
+  "_id": "sampling_instruction_object",
+  "name": "sampling_instruction",
+  "label": "Sampling Instruction",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["sample_instruction_id"],
+  "translatableKeys": [],
+  "fields": {
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sampling_date": {
+      "sampling_date": "Date",
+      "labelKey": "sampling_date",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd"
+    },
+    "sample_instruction_id": {
+      "sample_instruction_id": "Sample Instruction Id",
+      "labelKey": "sample_instruction_id",
+      "serialNumber": {
+        "startsWith": "4321",
+        "prefix": "SO-"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_instruction_id_display_UI": {
+      "sample_instruction_id_display_UI": "Sample Instruction Id",
+      "labelKey": "sample_instruction_id_display_UI",
+      "serialNumber": {
+        "startsWith": "00",
+        "prefix": "NeedToAdd"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_instruction_id_display": {
+      "sample_instruction_id_display": "Sample Instruction Id",
+      "labelKey": "sample_instruction_id_display",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "send_sample_to": {
+      "send_sample_to": "Send Sample To",
+      "labelKey": "send_sample_to",
+      "type": "dropdown",
+      "isRequired": false,
+      "children": [
+        "send_sample_to_custom_cp_address",
+        "send_sample_to_custom_cp"
+      ],
+      "isMandatory1": "if('${mandatoryFields}' == 'mandatoryFields') { if('${instructionagainst}' == 'Sales Contract-Allocated to Purchase' || '${instructionagainst}' == 'Sales Contract-Allocated to Stock' || '${instructionagainst}' == 'Sales Contract-Unallocated') { return true } else { return false } } else { return false}",
+      "dataType": "String",
+      "dropdownValue": "send_sample_to_name",
+      "serviceKey": "businessPartnerCombo",
+      "dependsOn": ["BUYER,SELLER", "Third_Party"],
+      "UIupdates": {
+        "value": "return  '${listingData[0].Sales CP Name Id}' ? '${listingData[0].Sales CP Name Id}' : '${send_sample_to}'",
+        "visibility": "return '${instructionagainst}' == 'Sales Contract-Allocated to Purchase' || '${instructionagainst}' == 'Sales Contract-Allocated to Stock' || '${instructionagainst}' == 'Sales Contract-Unallocated' ? true : false"
+      }
+    },
+    "send_sample_to_name": {
+      "send_sample_to_name": "Send Sample To",
+      "labelKey": "send_sample_to_name",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "return '${send_sample_to_name}' === '' ? '${listingData[0].Sales CP Name}' : '${send_sample_to_name}'"
+      }
+    },
+    "send_sample_to_unallocated": {
+      "send_sample_to_unallocated": "Send Sample To",
+      "labelKey": "send_sample_to_unallocated",
+      "type": "dropdown",
+      "dataType": "String",
+      "children": ["send_sample_to_custom_cp_address"],
+      "dropdownValue": "send_sample_to_name",
+      "serviceKey": "corporatebusinesspartnerCombo",
+      "isMandatory1": "if('${mandatoryFields}' == 'mandatoryFields') { if('${instructionagainst}' == 'Purchase-Unallocated') { return false } else { return true } } else { return false}",
+      "UIupdates": {
+        "visibility": "return '${instructionagainst}' == 'Purchase-Unallocated' || '${instructionagainst}' == 'Stock-Unallocated' ? true : false"
+      }
+    },
+    "sample_instruction_to": {
+      "sample_instruction_to": "Sample Instruction To",
+      "labelKey": "sample_instruction_to",
+      "type": "textbox",
+      "isMandatory1": "if('${mandatory}' == 'mandatory') { return true} else { return false}",
+      "dataType": "String",
+      "children": ["address","sample_drawn_from_cp"]
+    },
+    "sample_type": {
+      "sample_type": "Sample Type",
+      "labelKey": "sample_type",
+      "type": "dropdown",
+      "isMandatory": "if('${mandatoryFields}' == 'mandatoryFields') { return true} else { return false}",
+      "dataType": "String",
+      "dropdownValue": "sample_type_name",
+      "propertyKey": "sampletype"
+    },
+    "sample_type_name": {
+      "sample_type_name": "Sample Type",
+      "labelKey": "sample_type_name",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_drawn_from": {
+      "sample_drawn_from": "Sample Drawn From",
+      "labelKey": "sample_drawn_from",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "sampledrawnfrom",
+      "UIupdates": {
+        "disability": "return '${instructionagainst}' != 'Sales Contract-Unallocated' ? true : false"
+      }
+    },
+    "sample_drawnfromvalue": {
+      "sample_drawnfromvalue": "Sample Drawn From",
+      "labelKey": "sample_drawnfromvalue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "grdno": {
+      "grdno": "Grd No",
+      "labelKey": "grdno",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "instruction_against_ref_no": {
+      "instruction_against_ref_no": "Instruction Against Ref No",
+      "labelKey": "instruction_against_ref_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_status": {
+      "sample_status": "Instruction Status",
+      "labelKey": "sample_status",
+      "type": "textbox",
+      "UIupdates": {
+        "listValue": "return '${sample_status}' !== 'Pending' ? 'Fulfilled' : 'Pending'"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "return '${listingData[0].Product}'"
+      }
+    },
+    "product_specs": {
+      "product_specs": "Product Specs",
+      "labelKey": "product_specs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "return '${listingData[0].product specs}'"
+      }
+    },
+    "origin": {
+      "origin": "Origin",
+      "labelKey": "origin",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "return '${listingData[0].Origin}' ? '${listingData[0].Origin}': '${origin}'"
+      }
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "return '${listingData[0].Quality}'"
+      }
+    },
+    "issue_date": {
+      "issue_date": "Issue Date",
+      "labelKey": "issue_date",
+      "type": "datepicker",
+      "valueCheck": "if(new Date('${issue_date}').getTime() <=  new Date().getTime()){return true} else {return false}",
+      "isMandatory": "if('${mandatoryFields}' == 'mandatoryFields') { return true} else { return false}",
+      "errorCode": "089",
+      "dataType": "String"
+    },
+    "quantity_per_sample": {
+      "quantity_per_sample": "Quantity per Sample",
+      "labelKey": "quantity_per_sample",
+      "type": "textbox",
+      "valueCheck": "if(${quantity_per_sample} < ${allocatedqty} ) { return true} else { return false}",
+      "isMandatory": "if('${mandatoryFields}' == 'mandatoryFields') { return true} else { return false}",
+      "errorCode": "099",
+      "dataType": "Number"
+    },
+    "quantity_uom": {
+      "quantity_uom": "",
+      "labelKey": "quantity_uom",
+      "type": "dropdown",
+      "isMandatory": "if('${mandatoryFields}' == 'mandatoryFields') { return true} else { return false}",
+      "dataType": "String",
+      "dropdownValue": "quality_uom_name",
+      "serviceKey": "physicalproductquantitylist",
+      "UIupdates": {
+        "value": "return '${listingData[0].QTY_UNIT_ID}' ? '${listingData[0].QTY_UNIT_ID}' : '${quantity_uom}'"
+      },
+      "parent": ["productId"]
+    },
+    "quality_uom_name": {
+      "quality_uom_name": " ",
+      "labelKey": "quality_uom_name",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "return '${quality_uom_name}' === '' ? '${listingData[0].Quantity Unit}' : '${quality_uom_name}'"
+      }
+    },
+    "sampling_instruction_remarks": {
+      "sampling_instruction_remarks": "Sampling Instruction Remarks",
+      "labelKey": "sampling_instruction_remarks",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "reserve_stock": {
+      "reserve_stock": "Reserve Stock",
+      "labelKey": "reserve_stock",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "reserve_stock_name",
+      "propertyKey": "reservestock"
+    },
+    "reserve_stock_name": {
+      "reserve_stock_name": "Reserve Stock",
+      "labelKey": "reserve_stock_name",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "attention": {
+      "attention": "Attention",
+      "labelKey": "attention",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "address": {
+      "address": "Address",
+      "labelKey": "address",
+      "type": "textbox",
+      "serviceKey": "address1",
+      "isMandatory": "if('${mandatory}' == 'mandatory') { return true} else { return false}",
+      "dataType": "String",
+      "parent": ["instructionagainst", "sample_instruction_to"]
+    },
+    "note_to_sample_receiver": {
+      "note_to_sample_receiver": "Note to Sample Receiver",
+      "labelKey": "note_to_sample_receiver",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "instructionagainst": {
+      "instructionagainst": "Instruction Against",
+      "labelKey": "instructionagainst",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "instructionagainst",
+      "children": [
+        "selectparticulars",
+        "selectparticularsstocks",
+        "selectparticularsunallocated",
+        "selectparticularspurchaseunallocated",
+        "selectparticularsstockunallocated",
+        "sample_drawn_from",
+        "send_sample_to_unallocated",
+        "send_sample_to",
+        "address"
+      ]
+    },
+    "selectparticulars": {
+      "selectparticulars": "Particulars",
+      "labelKey": "selectparticulars",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${instructionagainst}' == 'Sales Contract-Allocated to Purchase' ? true : false"
+      }
+    },
+    "selectparticularsstocks": {
+      "selectparticularsstocks": "Particulars",
+      "labelKey": "selectparticularsstocks",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${instructionagainst}' == 'Sales Contract-Allocated to Stock' ? true : false"
+      }
+    },
+    "selectparticularsunallocated": {
+      "selectparticularsunallocated": "Particulars",
+      "labelKey": "selectparticularsunallocated",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${instructionagainst}' == 'Sales Contract-Unallocated' ? true : false"
+      }
+    },
+    "selectparticularspurchaseunallocated": {
+      "selectparticularspurchaseunallocated": "Particulars",
+      "labelKey": "selectparticularspurchaseunallocated",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${instructionagainst}' == 'Purchase-Unallocated' ? true : false"
+      }
+    },
+    "selectparticularsstockunallocated": {
+      "selectparticularsstockunallocated": "Particulars",
+      "labelKey": "selectparticularsstockunallocated",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${instructionagainst}' == 'Stock-Unallocated' ? true : false"
+      }
+    },
+    "listingData": {
+      "labelKey": "listingData",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "children": [
+        "send_sample_to",
+        "send_sample_to_name",
+        "product",
+        "product_specs",
+        "origin",
+        "quality",
+        "productId",
+        "quantity_uom",
+        "quality_uom_name"
+      ]
+    },
+    "productId": {
+      "labelKey": "productId",
+      "productId": "Product",
+      "serviceKey": "productComboDropDrown",
+      "isRequired": false,
+      "children": ["quantity_uom"],
+      "type": "dropdown",
+      "UIupdates": {
+        "value": "return '${listingData[0].PRODUCT_ID}' ? '${listingData[0].PRODUCT_ID}' : '${product}'"
+      }
+    },
+    "mandatoryFields": {
+      "mandatoryFields": "Mandatory Fields",
+      "labelKey": "mandatoryFields",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "mandatory": {
+      "mandatory": "Mandatory Fields",
+      "labelKey": "mandatory",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "allocatedqty": {
+      "allocatedqty": "Allocated Qty",
+      "labelKey": "allocatedqty",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "return '${listingData.reduce((acc,curr)=>(+acc)+(+curr['Allocated Quantity']))}'"
+      }
+    },
+    "sys__updatedOn": {
+      "sys__updatedOn": "Date",
+      "labelKey": "sys__updatedOn",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "Date"
+    },
+    "sampledetailsflag": {
+      "sampledetailsflag": "sampledetailsflag",
+      "labelKey": "sampledetailsflag",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "generateNew": {
+      "generateNew": "Generate New",
+      "labelKey": "generateNew",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "sys__updatedBy": {
+      "sys__updatedBy": "Created / Updated By",
+      "labelKey": "sys__updatedBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "listsamplingparticularlist": {
+      "listsamplingparticularlist": " ",
+      "labelKey": "listsamplingparticularlist",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "send_sample_to_custom_cp": {
+      "send_sample_to_custom_cp": "Name",
+      "labelKey": "send_sample_to_custom_cp",
+      "type": "textbox",
+      "UIupdates": {
+        "disability": "return '${send_sample_to}' == 'null' || '${send_sample_to}' == ''||('${send_sample_to}'== '${send_sample_to_custom_cp}') ? false : true",
+        "value": "return '${send_sample_to}' == 'null' || ('${send_sample_to}'== '${send_sample_to_custom_cp}' )?  '${send_sample_to_custom_cp}': ''"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "send_sample_to_custom_cp_address": {
+      "send_sample_to_custom_cp_address": "Address",
+      "labelKey": "send_sample_to_custom_cp_address",
+      "type": "textbox",
+      "serviceKey": "address_custom",
+      "parent": ["send_sample_to"],
+      "UIupdates1": {
+        "listValue": "return '${sample_status}' !== 'Pending' ? 'Fulfilled' : 'Pending'"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_drawn_from_cp": {
+      "sample_drawn_from_cp": "Name",
+      "labelKey": "sample_drawn_from_cp",
+      "type": "textbox",
+      "UIupdates": {
+        "disability": "return '${instructionagainst}' == 'Sales Contract-Unallocated' ? false : true",
+        "value": "return '${instructionagainst}' == 'Sales Contract-Unallocated' ?  '${sample_drawn_from_cp}': ''"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

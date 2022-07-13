@@ -1,0 +1,146 @@
+{
+  "_id": "searchsamplereflist_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "List Of Samples",
+  "getDataFromExternalAPI": false,
+  "type": "workflow",
+  "payLoad": "selected.searchsamplereflist",
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "ad28b7a9-4476-4d00-a382-eef82ff07885"
+    }
+  },
+  "version": "V2",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "reset": true,
+      "export": false,
+      "sessionStateDisable": true
+    },
+	 "headerOperations" : true,
+        "header" : true,
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "showCheckbox": true,
+    "preserveSelectedData": true,
+    "selectionMode": "multiple",
+    "scrollHeight": "336px",
+    "selectionFilter": ["sample_instruction_id_display", "product_specs"]
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createqualitycomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "CREATE",
+      "task": "searchsamplereflist",
+      "labelkey": "REVIEW",
+      "outcomes": [
+        {
+          "data": "selected.searchsamplereflist",
+          "name": "createqualitycomposite",
+          "setSelected": [
+            "selected.createqualitycomposite.createqualitycompositeview"
+          ]
+        }
+      ],
+      "style": {
+        "margin-left": "auto"
+      },
+      "disabled" : "!(selected.searchsamplereflist) || !(Array.isArray(selected.searchsamplereflist)) || selected.searchsamplereflist.length ==0",
+      "label": "ADD",
+      "type": "submit",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "Search Stock Ref",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "container_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product_specs"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_sent_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_approval_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "allocated_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "supplier_CP_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_instruction_id_display",
+      "hidden": true
+    }
+  ],
+  "taskId": "searchsamplereflist",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

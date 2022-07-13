@@ -1,0 +1,12 @@
+{
+    "_id" : "processor_validateallocations",
+    "name" : "validateallocation",
+    "type" : "processor",
+    "refType" : "app",
+    "version" : "V2",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "snippet" : "  \r\n    var bulkdata = req.body.bulkPayLoadData;\r\n    var Cparrray = [];\r\n    bulkdata.forEach(data => {\r\n      Cparrray.push(data['sales CP Name']);\r\n    });\r\n    Cparrray = [...new Set(Cparrray)];\r\n    if (Cparrray.length == 1) {\r\n  success(bulkdata,200);     \r\n    } else {\r\n      error('Select allocation of same CP name',500);\r\n    }\r\n   ",
+    "sys__UUID" : "ed7f7f28-3621-477a-ac39-2d6d1995bd8b",
+    "sys__createdOn" : ISODate("2019-05-22T09:51:04.600Z"),
+    "sys__createdBy" : "srini@ekaplus.com"
+}

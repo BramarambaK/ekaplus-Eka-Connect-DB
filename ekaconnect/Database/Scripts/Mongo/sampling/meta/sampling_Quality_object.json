@@ -1,0 +1,168 @@
+{
+  "_id": "sampling_Quality_object",
+  "name": "Sampling Quality Object",
+  "label": "Sampling Quality Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "notrequireduniquefield": true,
+  "uniqueFields": ["quality_ref_no"],
+  "translatableKeys": [],
+  "fields": {
+    "forqualitymandatory": {
+      "forqualitymandatory": "forqualitymandatory",
+      "labelKey": "forqualitymandatory",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality_ref_no": {
+      "quality_ref_no": "Quality Ref No",
+      "labelKey": "quality_ref_no",
+      "type": "textbox",
+      "serialNumber": {
+        "startsWith": "0001",
+        "prefix": "QR-"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product_specs": {
+      "product_specs": "product specs",
+      "labelKey": "product_specs",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "quality_date": {
+      "quality_date": "Quality Date",
+      "labelKey": "quality_date",
+      "type": "datepicker",
+      "isMandatory": "if('${forqualitymandatory}' == 'forqualitymandatory') { return true} else { return false}",
+      "dataType": "String",
+      "maximumDate": "return new Date()",
+      "valueCheck": "if(new Date('${quality_date}').getTime() <=  new Date().getTime()){return true} else { return false}"
+    },
+    "quality_against": {
+      "quality_against": "Quality Aagainst",
+      "labelKey": "quality_against",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "ref_no": {
+      "ref_no": "Ref No",
+      "labelKey": "ref_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality_analysis_by": {
+      "quality_analysis_by": "Quality Analysis By",
+      "labelKey": "quality_analysis_by",
+      "type": "dropdown",
+      "isMandatory": "if('${forqualitymandatory}' == 'forqualitymandatory') { return true} else { return false}",
+      "dataType": "String",
+      "propertyKey": "quality_analysis"
+    },
+    "quality_analysis_by_box": {
+      "quality_analysis_by_box": "",
+      "labelKey": "quality_analysis_by_box",
+      "type": "textbox",
+      "isMandatory": "if('${forqualitymandatory}' == 'forqualitymandatory') { return true} else { return false}",
+      "dataType": "String"
+    },
+    "Quality_results_against": {
+      "Quality_results_against": "Quality Against",
+      "labelKey": "Quality_results_against",
+      "type": "dropdown",
+      "propertyKey": "quality_result_against",
+      "isRequired": false,
+      "dataType": "String",
+      "children": ["searchstockref", "searchsampleref"]
+    },
+    "searchstockref": {
+      "searchstockref": "searchstockref",
+      "labelKey": "searchstockref",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${Quality_results_against}' == 'Stock' ? true : false"
+      }
+    },
+    "searchsampleref": {
+      "searchsampleref": "searchsampleref",
+      "labelKey": "searchsampleref",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${Quality_results_against}' == 'Sample' ? true : false"
+      }
+    },
+    "internal_comments": {
+      "internal_comments": "Internal Comments",
+      "labelKey": "internal_comments",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "external_comments": {
+      "external_comments": "External Comments",
+      "labelKey": "external_comments",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "custom": {
+      "custom": "custom",
+      "labelKey": "custom",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Array"
+    },
+    "search": {
+      "search": "search",
+      "labelKey": "search",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "attributename": {
+      "attributename": "Attribute Name",
+      "labelKey": "attributename",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "attributevalue": {
+      "attributevalue": "Attribute Value",
+      "labelKey": "attributevalue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "ddec290e-71ee-4538-8ec9-37bbcc0cdca1"
+}

@@ -1,0 +1,49 @@
+{
+    "_id" : "sampling_domain_listing_SMP",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "processorInfo" : {
+        "processorId" : "8a2f6ce7-b10f-446a-a174-81923517a9ea"
+    },
+    "label" : "Sampling Domain Listing",
+    "type" : "workflow",
+    "refreshData" : false,
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "limitHeight" : true,
+        "refreshData" : false
+    },
+    "decisions" : [],
+    "labelKey" : "Currency Pool Listing",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "debittotal"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "width" : "10%",
+            "sort" : false,
+            "key" : "credittotal"
+        }
+    ],
+    "taskId" : "samplingdomainlisting",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

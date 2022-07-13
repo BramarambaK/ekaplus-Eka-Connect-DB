@@ -1,0 +1,11 @@
+{
+  "_id": "PROCESSOR_ST_QUALITY_DETAILS_UPDATE_SMP",
+  "name": "PROCESSOR_ST_QUALITY_DETAILS_UPDATE",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet": "\r\n    let payloadData = [];\r\n    payloadData = req.body.bulkPayLoadData;\r\n    var outputData = [];\r\n    for (var i = 0; i < payloadData.length; i++) {\r\n      if (payloadData[i]['sample_no']) {\r\n        outputData.push({\r\n          sample_no: payloadData[i]['sample_no'],\r\n          sample_instruction_id: payloadData[i]['sample_instruction_id'],\r\n          quality_result_status: 'Available'\r\n        });\r\n      }\r\n    }\r\n    res.status(200).send(outputData);\r\n  ",
+  "sys__UUID": "d2c97df8-ee9d-46a5-a988-a34cdf013c43",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}

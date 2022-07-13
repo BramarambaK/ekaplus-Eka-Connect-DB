@@ -1,0 +1,12 @@
+{
+  "_id": "processor_validate_stock_SMP",
+  "name": "processor_validate_stock",
+  "type": "processor",
+  "refType": "app",
+  "version": "V2",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet": " let bulkdata = req.body.bulkPayLoadData;\r\n    var product_specs = bulkdata[0]['product_specs'];\r\n    var flag = 0;\r\n    for (let i = 0; i < bulkdata.length; i++) {\r\n      if (bulkdata[i]['product_specs'] == product_specs) {\r\n        flag = 1;\r\n      } else {\r\n        flag = 0;\r\n        break;\r\n      }\r\n    }\r\n    if (flag == 1) {\r\n    success(bulkdata,200);\r\n    } else success('All data selected should have same Product Specs',500);",
+  "sys__UUID": "0a685d6b-8890-45ca-9e1c-3d6af3173976",
+  "sys__createdOn": ISODate("2019-12-02T01:45:18.385Z"),
+  "sys__createdBy": "Bravo"
+}

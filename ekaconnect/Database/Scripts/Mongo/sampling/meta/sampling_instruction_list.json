@@ -1,0 +1,213 @@
+{
+  "_id": "sampling_instruction_list",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "List of Sampling Instruction",
+  "type": "workflow",
+  "tags":"trainingData",
+  "version": "V2",
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "128bb6c9-d092-4df1-b611-4698e08b8380"
+    }
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "columnFilter": true,
+      "sortFilter": false,
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true
+  },
+  "decisions": [
+    {
+      "objectAction" : "READ",
+      "selection" : "custom-link",
+      "outcomes" : [ 
+          {
+              "data" : "selected.exchangedeliverylist",
+              "name" : "viewedsamplelist",
+              "popupClass" : "edit-modal907px",
+              "displayType" : "popup"
+          }
+      ]
+  }, 
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.samplinginstructionlist",
+          "name": "sampledetails"
+        }
+      ],
+      "label": "Record Sample Details",
+	   "disabled" : "field.sample_status != 'Pending'",
+      "iconClass": "cr-info-icon"
+    },
+    {
+      "displayed": "field.sampledetailsflag == 'true'",
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.samplinginstructionlist",
+          "name": "samplestatus"
+        }
+      ],
+       "disabled" : "field.sample_status != 'Pending' || field.sampledetailsflag == 'true'",
+      "label": "Update Sample Status",
+      "iconClass": "cr-info-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.samplinginstructionlist",
+          "popupClass": "deleteclass",
+          "name": "deletesampleinstruction"
+        }
+      ],
+      "label": "Delete",
+      "disabled": "field.sample_status != 'Pending'",
+      "iconClass": "cr-delete-icon"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_SAMPLE",
+      "selection": "!default",
+      "outcomes": [
+        {
+          "name": "sampleagainst"
+        }
+      ],
+      "label": "Create",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE_SAMPLE",
+      "outcomes": [
+        {
+          "name": "sampleagainstedit"
+        }
+      ],
+      "selection": "global",
+      "label": "Modify",
+      "position": "top",
+      "disabled": "field.sample_status != 'Pending'",
+      "iconClass": "fa fa-plus"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "Generate Sampling Instruction",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.samplinginstructionlist",
+
+          "name": "printsample"
+        }
+      ],
+      "label": "Generate Sampling Instruction",
+      "iconClass": "cr-delete-icon"
+    }
+  ],
+  "labelKey": "List of Sampling Instruction",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "dateformat": "DD-MMM-YYYY",
+      "width": "11%",
+      "key": "sys__updatedOn"
+    },
+    {
+      "filter" : true,
+      "edit" : false,
+      "sort" : true,
+      "width" : "11%",
+      "task" : "custom-link",
+      "category" : "link",
+      "key" : "sample_instruction_id_display"
+  },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "11%",
+      "key": "sample_instruction_to"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "11%",
+      "key": "send_sample_to_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "11%",
+      "key": "sample_type_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "11%",
+      "key": "sample_drawnfromvalue"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "11%",
+      "key": "instruction_against_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "11%",
+      "key": "sample_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "12%",
+      "key": "sys__updatedBy"
+    }
+  ],
+  "taskId": "samplinginstructionlist",
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

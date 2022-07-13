@@ -1,0 +1,238 @@
+{
+    "_id" : "samplinginstructionagainst",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "Sample (Against)",
+    "type" : "workflow",
+    "layout" : {
+        "valueMouseHover" : false,
+        "useQueryParams" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "padding" : "10px"
+        },
+        "formLayoutStyle" : {
+            "height" : "104px",
+            "padding-left" : "6px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : ""
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "labelKey" : "sampling_instruction_against",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+                "key" : "instructionagainst",
+                "event" : "data.samplingparticularform.instructionagainst=value; if(data.samplingparticularform.instructionagainst=='Sales Contract-Allocated to Stock' || data.samplingparticularform.instructionagainst=='Stock-Unallocated'){data.samplingparticularform.sample_drawn_from='Discrete Stock'} else if(data.samplingparticularform.instructionagainst=='Sales Contract-Allocated to Purchase' || data.samplingparticularform.instructionagainst=='Purchase-Unallocated'){data.samplingparticularform.sample_drawn_from='Purchase'} else if( data.samplingparticularform.instructionagainst=='Sales Contract-Unallocated'){data.samplingparticularform.sample_drawn_from={value:'Purchase',disable:'false'};}if(data.samplingparticularform.instructionagainst=='Stock-Unallocated'){data.samplingparticularform.reserve_stock={value:'Yes',disable:false}}else{data.samplingparticularform.reserve_stock={value:'',disable:true}}"
+            }, 
+            {
+                "key" : "selectparticulars",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticulars",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularsstocks",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticularsstocksallocated",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularsunallocated",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "sampleallocationsalesunallocatedlist",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularspurchaseunallocated",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticularspurchaseunallocated",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularsstockunallocated",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticularsstocks",
+                "style" : {
+                    "width" : "130px"
+                }
+            }
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "decisionName" : "selectparticulars",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationlist",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationlist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsstocks",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationstockslist",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationstockslist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsstocksallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationstockallocated",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationstockallocated",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsunallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationunallocatedlist",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationunallocatedlist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularspurchaseunallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationunallocatedlist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "sampleallocationsalesunallocatedlist",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationsalesunallocatedlist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsstockunallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationstockunallocatedlist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "CREATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstcompositesave1",
+            "decisionName" : "sampleagainstcompositesave1",
+            "label" : "SAVE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.samplinginstructionagainst",
+                    "appendMsg" : false,
+                    "name" : "_ST_UPDATE_INSTRUCTION"
+                }, 
+                {
+                    "data" : "output._ST_UPDATE_INSTRUCTION",
+                    "name" : "sampledrawnfrom"
+                }
+            ]
+        }
+    ],
+    "taskId" : "samplinginstructionagainst",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

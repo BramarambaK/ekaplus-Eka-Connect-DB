@@ -1,0 +1,14 @@
+{
+  "_id": "ST_PROCESSOR_INSTRUCTION_FLAG_SMP",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "f30237f5-39bd-4877-a335-a4c232305a08"
+  },
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "ST_PROCESSOR_INSTRUCTION_FLAG",
+  "label": "Create Sample Instruction Flag using Processor",
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

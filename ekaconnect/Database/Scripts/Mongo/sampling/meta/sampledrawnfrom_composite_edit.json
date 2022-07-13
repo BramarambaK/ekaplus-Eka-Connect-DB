@@ -1,0 +1,136 @@
+{
+  "_id": "sampledrawnfrom_composite_edit",
+  "componentType": "UserTask",
+  "label": "New Sampling",
+  "layout": {
+    "name": "customv2",
+    "menu": true,
+    "routeOnRefresh": "samplinginstructionlist"
+  },
+  "object": "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "taskId": "sampledrawnfromedit",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "data": "selected.samplinginstructionlist",
+      "name": "sampleinstructiondrawnfrom"
+    },
+    {
+      "visibility": "return ('${samplinginstructionlist.sample_status}' !== 'Pending') ? true : false",
+      "data": "selected.samplinginstructionlist",
+      "name": "sampledrawnfromlistedit",
+      "show": false
+    },
+    {
+      "visibility": "return ('${samplinginstructionlist.sample_status}' == 'Pending' && '${samplingparticularformedit}' == '') ? true : false",
+      "data": "selected",
+      "name": "sampledrawnfromlisteditstatuspending",
+      "show": false
+    },
+    {
+      "visibility": "return ( '${samplinginstructionlist.sample_status}' == 'Pending' && '${samplingparticularformedit}' !== '' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' == 'Sales Contract-Allocated to Purchase') ? true : false",
+      "data": "selected.sampleagainstedit.samplingparticularlisteditapicall",
+      "name": "sampledrawnfromlisteditv2",
+      "show": false
+    },
+    {
+      "visibility": "return ('${samplinginstructionlist.sample_status}' == 'Pending' &&  '${samplingparticularformedit}' !== '' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' == 'Sales Contract-Allocated to Stock') ? true : false",
+      "data": "selected.sampleagainstedit.samplingparticularlisteditapicall",
+      "name": "sampledrawnfromliststocksedit",
+      "show": false
+    },
+    {
+      "visibility": "return ('${samplinginstructionlist.sample_status}' == 'Pending' && '${samplingparticularformedit}' !== '' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' == 'Sales Contract-Unallocated' && '${sampledrawnfromedit.sampleinstructiondrawnfrom.sample_drawn_from}'=='Purchase') ? true : false",
+      "data": "selected.sampleagainstedit.samplingparticularlisteditapicall",
+      "name": "sampledrawnfromlistsalesallocatedpurchaseedit",
+      "show": false
+    },
+    {
+      "visibility": "return ('${samplinginstructionlist.sample_status}' == 'Pending' &&  '${samplingparticularformedit}' !== '' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' == 'Sales Contract-Unallocated' && '${sampledrawnfromedit.sampleinstructiondrawnfrom.sample_drawn_from}'=='Discrete Stock') ? true : false",
+      "data": "selected.sampleagainstedit.samplingparticularlisteditapicall",
+      "name": "sampledrawnfromlistsalesallocatedstocksedit",
+      "show": false
+    },
+    {
+      "visibility": "return ('${samplinginstructionlist.sample_status}' == 'Pending' && '${samplingparticularformedit}' !== '' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' == 'Purchase-Unallocated') ? true : false",
+      "data": "selected.sampleallocationunallocatedlistedit",
+      "name": "sampledrawnfromlistpurchaseunallocatededit",
+      "show": false
+    },
+    {
+      "visibility": "return ('${samplinginstructionlist.sample_status}' == 'Pending' && '${samplingparticularformedit}' !== '' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' == 'Stock-Unallocated') ? true : false",
+      "data": "selected.sampleallocationstockslistedit",
+      "name": "sampledrawnfromlistsalesunallocatededit",
+      "show": false
+    },
+    {
+      "data": "selected.samplinginstructionlist",
+      "name": "sampledrawnfromform"
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "sampleagainstedit",
+          "data": "selected.sampleagainstedit",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Sample(Against)",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "sampledrawnfromedit",
+          "data": "selected.sampledrawnfromedit",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "Sample(Drawn From)",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "sampleagainstedit",
+          "showPopUp": true,
+          "dirtyCheck": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "PREVIOUS",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "sampleagainstfromcompositesave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "samplinginstructionlist"
+        }
+      ],
+      "label": "Save",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "_id": "sampleinstructiondetailslisting_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "sampleinstructiondetailslisting",
+  "type": "workflow",
+  "payLoad": "completeData",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fcfad7",
+      "validBG": "#fff",
+      "invalidBG": "#fcfad7"
+    },
+    "showCheckbox": false,
+    "tableEditing": true,
+    "pagination": false,
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["sample_instruction_id"]
+      }
+    },
+    "theme": "theme-grid-white",
+    "limitHeight": true,
+    "dropdownDecisions": true,
+    "selectionMode": "none"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSaveSample",
+      "decisionName": "compositeSaveSample",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.sampleinstructiondetailslisting",
+          "appendMsg": false,
+          "name": "_ST_CREATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS"
+        },
+        {
+          "data": "output._ST_CREATE_PROCESSOR_SAMPLEINSTRUCTION_DETAILS",
+          "appendMsg": true,
+          "name": "_ST_CREATE_SAMPLEINSTRUCTION_DETAILS"
+        },
+        {
+          "data": "output.sampleinstructiondetailslisting",
+          "appendMsg": true,
+          "name": "ST_PROCESSOR_INSTRUCTION_FLAG"
+        },
+        {
+          "data": "output.ST_PROCESSOR_INSTRUCTION_FLAG",
+          "name": "ST_UPDATE_INSTRUCTION",
+          "appendMsg": true
+        },
+        {
+          "data": "output._ST_CREATE_SAMPLEINSTRUCTION_DETAILS",
+          "name": "samplinginstructionlist",
+          "dirtyCheckFulfilled": true
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_no",
+      "width": "6%"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_sent",
+      "width": "15%",
+      "event123": "for(var i=0;i<data.sampleinstructiondetailslisting.length;i++){if(data.sampleinstructiondetailslisting[i].sample_sent){let date = data.sampleinstructiondetailslisting[i].sample_sent.toLocaleDateString();data.sampleinstructiondetailslisting[i].sample_sent={value:date,disable:true}}}"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "courier_company_name",
+      "width": "15%"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "courier_tracking_no",
+      "width": "15%"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "ref_no",
+      "width": "15%"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "sample_quantity",
+      "width": "15%"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_quantity_value",
+      "width": "4%"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "remarks",
+      "width": "15%"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "forsampledetails",
+      "width": "180px",
+      "hidden": true,
+      "value": "forsampledetails"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "issue_date",
+      "hidden": true,
+      "value": "${selected.samplinginstructionlist.issue_date}"
+    }
+  ],
+  "taskId": "sampleinstructiondetailslisting",
+  "object": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

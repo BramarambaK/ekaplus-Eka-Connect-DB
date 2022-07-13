@@ -1,0 +1,12 @@
+{
+    "_id" : "sampledocumentdownload_SMP",
+    "action" : "downloadLink",
+    "componentType" : "client",
+    "object" : "81665f85-aebb-4436-b8fd-ab3ccbb3d497",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "sampledocumentdownload",
+    "label" : "Seller Document Download",
+    "type" : "workflow"
+}

@@ -1,0 +1,212 @@
+{
+    "_id" : "sampledrawnfromlistsalesunallocated",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+        "config" : {
+            "id" : "MULTI_API_DRAWNFROMLISTSTOCKUNALLOCATED"
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "getInitialData" : true,
+        "options" : {
+
+            "columnFilter" : true,
+        
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : false,
+        "lazyLoading" : false,
+        "showCheckbox" : false,
+        "tableEditing" : true,
+        "limitHeight" : true,
+        "selectionMode" : "none",
+       "deleteRow" : {
+            "action" : "remove"
+        },
+        "pagination" : false
+    },
+    "labelKey" : "Sample Drawn From List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true,
+            "value" : "${selected.sampleagainst.samplingparticularform.sample_instruction_id}"
+        }, 
+        {
+            "key" : "ref_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "event" : "if(data.sampledrawnfromform.instructionagainst=='Sales Contract-Allocated to Purchase' || data.sampledrawnfromform.instructionagainst=='Purchase-Unallocated'){(data.sampledrawnfromform.sample_instruction_to = {'value':record['Sales CP Name'],'disable':'true'});}else if(data.sampledrawnfromform.instructionagainst=='Sales Contract-Allocated to Stock'|| data.sampledrawnfromform.instructionagainst=='Stock-Unallocated' || (data.sampledrawnfromform.instructionagainst=='Sales Contract-Unallocated' || data.sampleinstructiondrawnfrom.sample_drawn_from=='Discrete Stock')){(data.sampledrawnfromform.sample_instruction_to = {'value':record.warehouse,'disable':'true'})};var val='';var grdno=[];   for(var i=0;i<data.sampledrawnfromlistsalesunallocated.length;i++){data.sampledrawnfromlistsalesunallocated[i].sys__state.drawn_from_uom={'show':true,'disable':false}; if(i!=data.sampledrawnfromlistsalesunallocated.length-1){val=val+data.sampledrawnfromlistsalesunallocated[i].ref_no +',';grdno.push(data.sampledrawnfromlistsalesunallocated[i]['INTERNAL_GRD_DGRD_REF_NO'])}else{val=val+data.sampledrawnfromlistsalesunallocated[i].ref_no;grdno.push(data.sampledrawnfromlistsalesunallocated[i]['INTERNAL_GRD_DGRD_REF_NO']);}} data.sampledrawnfromform.sample_drawnfromvalue=val;data.sampledrawnfromform.grdno=grdno;"
+        }, 
+        {
+            "key" : "allocation_group_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false
+        }, 
+        {
+            "key" : "Open Quantity",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "width" : "135px"
+        }, 
+        {
+            "key" : "allocated_quantity",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "width" : "135px",
+			"value":" "
+        }, 
+        {
+            "key" : "quantity_represented",
+            "filter" : true,
+            "sort" : true,
+            "edit" : true,
+            "width" : "185px",
+			  "value" : "${selected.sampleagainst.samplingparticularform.quantity_per_sample}",
+			 "event" : "var wfdata=data.sampledrawnfromlistsalesunallocated; var flagquantity=false; for(var i=0;i<wfdata.length;i++){if(!wfdata[i].hasOwnProperty('quantity_represented')){flagquantity=true; break;}else if(!wfdata[i].hasOwnProperty('sample_no')){flagquantity=true; break;}else if(wfdata[i].quantity_represented == '' || wfdata[i].sample_no == '' ){  data.sampledrawnfromform.status='draft';flagquantity=true; } }if(flagquantity){data.sampledrawnfromform.status='draft'}else{data.sampledrawnfromform.status='active';}"
+        }, 
+        {
+            "key" : "drawn_from_uom",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "value" : "${selected.sampleagainst.samplingparticularform.quality_uom_name}"
+        }, 
+        {
+            "key" : "reservestock",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "hidden" : true,
+            "value" : "${selected.sampleagainst.samplingparticularform.reserve_stock}"
+        }, 
+        {
+            "key" : "instructionagainstdrawnfrom",
+            "filter" : true,
+            "sort" : true,
+            "edit" : false,
+            "hidden" : true,
+            "value" : "${selected.sampleagainst.samplingparticularform.instructionagainst}"
+        }, 
+        {
+            "key" : "sample_no",
+            "filter" : true,
+            "sort" : true,
+            "edit" : true,
+			 "event" : "var wfdata=data.sampledrawnfromlistsalesunallocated; var flagquantity=false; for(var i=0;i<wfdata.length;i++){if(!wfdata[i].hasOwnProperty('quantity_represented')){flagquantity=true; break;}else if(!wfdata[i].hasOwnProperty('sample_no')){flagquantity=true; break;}else if(wfdata[i].quantity_represented == '' || wfdata[i].sample_no == '' ){  data.sampledrawnfromform.status='draft';flagquantity=true; } }if(flagquantity){data.sampledrawnfromform.status='draft'}else{data.sampledrawnfromform.status='active';}"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstfromcompositesave",
+            "label" : "SAVE",
+            "decisionName" : "sampleagainstfromcompositesave",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlistsalesunallocated",
+                    "appendMsg" : false,
+                    "name" : "_ST_CREATE_DRAWNFROM"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlistsalesunallocated",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_SAMPLE_TO_TRM"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlistsalesunallocated",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_CREATE_SAMPLE_NO_SMP"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.sampledrawnfromlistsalesunallocated",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESSOR_CREATE_SAMPLE_NO_SMP"
+                }, 
+                {
+                    "data" : "output._ST_PROCESSOR_CREATE_SAMPLE_NO_SMP",
+                    "name" : "_ST_CREATE_SAMPLEINSTRUCTION_DETAILS",
+                    "appendMsg" : false
+                }, 
+                {
+                    "name" : "samplinginstructionlist"
+                }
+            ]
+        }
+    ],
+    "taskId" : "sampledrawnfromlistsalesunallocated",
+    "object" : "4638683b-aa06-474c-8cd6-66b8a463b769",
+    "sys__data__state" : "Modify",
+    "sys__updatedBy" : "Madhu.s@ekaplus.com",
+    "sys__updatedOn" : ISODate("2020-04-22T10:51:04.062Z")
+}

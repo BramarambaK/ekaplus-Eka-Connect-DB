@@ -1,0 +1,20 @@
+{
+  "_id": "quality_result_against_property",
+  "type": "property",
+  "name": "quality_result_against",
+  "propertyLevel": "tenant",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Stock",
+      "value": "Stock"
+    },
+    {
+      "key": "Sample",
+      "value": "Sample"
+    }
+  ],
+  "label": "Quality Result Against Dropdown"
+}

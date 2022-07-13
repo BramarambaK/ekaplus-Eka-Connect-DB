@@ -1,0 +1,239 @@
+{
+    "_id" : "samplinginstructionagainstedit",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "Sample (Against)",
+    "type" : "workflow",
+    "layout" : {
+        "valueMouseHover" : false,
+        "useQueryParams" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "padding" : "10px"
+        },
+        "formLayoutStyle" : {
+            "height" : "104px",
+            "padding-left" : "6px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "header" : {
+            "title" : ""
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "labelKey" : "sampling_instruction_against",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "40px"
+                },
+                "suffix" : "",
+				 "disabled" : true,
+                "key" : "instructionagainst",
+                "event" : "if( data.samplingparticularformedit.instructionagainst=='Sales Contract-Unallocated'){data.samplingparticularformedit.reserve_stock={value:'',disable:'true'}};if(data.samplingparticularformedit.instructionagainst=='Stock-Unallocated' && data.samplingparticularformedit.sample_status=='Pending'){data.samplingparticularformedit.reserve_stock={value:'Yes',disable:false}}else{data.samplingparticularformedit.reserve_stock={value:'',disable:true}};data.samplingparticularformedit.mandatory='initial';data.samplingparticularformedit.mandatoryFields='mandatoryFields';"
+            }, 
+            {
+                "key" : "selectparticulars",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticulars",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularsstocks",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticularsstocksallocated",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularsunallocated",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "sampleallocationsalesunallocatedlist",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularspurchaseunallocated",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticularspurchaseunallocated",
+                "style" : {
+                    "width" : "130px"
+                }
+            }, 
+            {
+                "key" : "selectparticularsstockunallocated",
+                "type" : "button",
+                "label" : "Select Particulars",
+                "btnClass" : "btn btn-link p-0",
+                "decision" : "selectparticularsstocks",
+                "style" : {
+                    "width" : "130px"
+                }
+            }
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "decisionName" : "selectparticulars",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationlist",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationlistedit",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsstocks",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationstockslist",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationstockslistedit",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsstocksallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationstockallocated",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationstockallocatededit",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsunallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "sampleallocationunallocatedlist",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationunallocatedlist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularspurchaseunallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationunallocatedlistedit",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "sampleallocationsalesunallocatedlist",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationsalesunallocatedlistedit",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "decisionName" : "selectparticularsstockunallocated",
+            "btnClass" : "btn-primary custom-btn oms-blue",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "outcomes" : [ 
+                {
+                    "data" : "output.samplinginstructionagainst",
+                    "popupClass" : "edit-modal907px",
+                    "name" : "sampleallocationstockunallocatedlist",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "CREATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstcompositesave1",
+            "decisionName" : "sampleagainstcompositesave1",
+            "label" : "SAVE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.samplinginstructionagainst",
+                    "appendMsg" : false,
+                    "name" : "_ST_UPDATE_INSTRUCTION"
+                }, 
+                {
+                    "data" : "output._ST_UPDATE_INSTRUCTION",
+                    "name" : "sampledrawnfrom"
+                }
+            ]
+        }
+    ],
+    "taskId" : "samplinginstructionagainstedit",
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795"
+}

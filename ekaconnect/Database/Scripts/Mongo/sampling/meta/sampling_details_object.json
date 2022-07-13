@@ -1,0 +1,290 @@
+{
+  "_id": "sampling_details_object",
+  "name": "Sampling Details Object",
+  "label": "Sampling Details Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "notrequireduniquefield": true,
+  "uniqueFields": ["sample_no", "sample_instruction_id"],
+  "translatableKeys": [],
+  "fields": {
+    "forsampledetails": {
+      "forsampledetails": "forsampledetails",
+      "labelKey": "forsampledetails",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "forsamplestatus": {
+      "forsamplestatus": "forsamplestatus",
+      "labelKey": "forsamplestatus",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_instruction_id": {
+      "sample_instruction_id": "Sample Instruction ID",
+      "labelKey": "sample_instruction_id",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_no": {
+      "sample_no": "Sample No",
+      "labelKey": "sample_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_sent": {
+      "sample_sent": "Sample Sent",
+      "labelKey": "sample_sent",
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "minimumDate": "return '${issue_date}' ? '${issue_date}' : false",
+      "maximumDate": "return new Date()",
+      "isMandatory": "if('${forsampledetails}' == 'forsampledetails') { return true} else { return false}",
+      "valueCheck": "if(new Date('${issue_date}').getTime() <=  new Date('${sample_sent}').getTime() && new Date('${sample_sent}').getTime() <=  new Date().getTime()){return true;}",
+      "UIupdates": {
+        "disability": "if ('${date_sample_sent}' == 'saved') { return true} else { return false}"
+      }
+    },
+    "courier_company_name": {
+      "courier_company_name": "Courier Company Name",
+      "labelKey": "courier_company_name",
+      "type": "textbox",
+      "dataType": "String",
+      "isMandatory": "if('${forsampledetails}' == 'forsampledetails') { return true} else { return false}"
+    },
+    "courier_tracking_no": {
+      "courier_tracking_no": "Courier Tracking No",
+      "labelKey": "courier_tracking_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_ref_no": {
+      "sample_ref_no": "Ref No",
+      "labelKey": "sample_ref_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ref_no": {
+      "ref_no": "CP Sample Ref No",
+      "labelKey": "ref_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_quantity": {
+      "sample_quantity": "Sample Quantity",
+      "labelKey": "sample_quantity",
+      "type": "textbox",
+      "dataType": "Number",
+      "inputClass": "textRight",
+      "isMandatory": "if('${forsampledetails}' == 'forsampledetails') { return true} else { return false}"
+    },
+    "sample_quantity_value": {
+      "sample_quantity_value": " ",
+      "labelKey": "sample_quantity_value",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "remarks": {
+      "remarks": "Remarks",
+      "labelKey": "remarks",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_status_DisplayName": {
+      "sample_status_DisplayName": "Sample Status",
+      "labelKey": "sample_status_DisplayName",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "propertyKey": "sample_status",
+      "dropdownValue": "sample_status"
+    },
+    "sample_status": {
+      "sample_status": "Sample Status",
+      "labelKey": "sample_status",
+      "type": "hidden",
+      "isRequired": false,
+      "UIupdates" : {
+        "listValue" : "return '${sample_status}'?'${sample_status}' : 'Pending'"
+     },
+      "dataType": "String",
+      "isMandatory": "if('${forsamplestatus}' == 'forsamplestatus') { return true} else { return false}"
+    },
+    "CP_Sample_Ref_No": {
+      "CP_Sample_Ref_No": "Our Sample Ref No",
+      "labelKey": "CP_Sample_Ref_No",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_result": {
+      "sample_result": "Sample Result Date",
+      "labelKey": "sample_result",
+      "type": "datepicker",
+      "isRequired": false,
+      "minimumDate": "return '${sample_sent}' ? '${sample_sent}' : false",
+      "maximumDate": "return new Date()",
+      "valueCheck": "if(new Date('${sample_sent}').getTime() <=  new Date('${sample_result}').getTime() && new Date('${sample_result}').getTime() <=  new Date().getTime()){return true;}",
+      "dataType": "date",
+      "isMandatory": "if('${forsamplestatus}' == 'forsamplestatus') { return true} else { return false}",
+      "UIupdates": {
+        "disability": "if ('${date_sample_sent}' == 'saved again') { return true} else { return false}"
+      }
+    },
+    "origin": {
+      "origin": "Origin",
+      "labelKey": "origin",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Product/Quality",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_sent_to": {
+      "sample_sent_to": "Sample Sent To",
+      "labelKey": "sample_sent_to",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_drawn_from": {
+      "sample_drawn_from": "Sample Drawn From",
+      "labelKey": "sample_drawn_from",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "allocated_to": {
+      "allocated_to": "Allocated To",
+      "labelKey": "allocated_to",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "linked_to": {
+      "linked_to": "Linked To",
+      "labelKey": "linked_to",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_approval_status": {
+      "sample_approval_status": "Sample Approval Status",
+      "labelKey": "sample_approval_status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality_result_status": {
+      "quality_result_status": "Quality Result Status",
+      "labelKey": "quality_result_status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "supplier_CP_name": {
+      "supplier_CP_name": "Supplier CP Name",
+      "labelKey": "supplier_CP_name",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product_specs": {
+      "product_specs": "Product Specs",
+      "labelKey": "product_specs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "container_no": {
+      "container_no": "Container No",
+      "labelKey": "container_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "issue_date": {
+      "issue_date": "Issue Date",
+      "labelKey": "issue_date",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_instruction_id_display": {
+      "sample_instruction_id_display": "Sample Instruction ID",
+      "labelKey": "sample_instruction_id_display",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "date_sample_sent": {
+      "date_sample_sent": "date_sample_sent",
+      "labelKey": "date_sample_sent",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_quantity_Unit" : {
+        "sample_quantity_Unit" : "Sample Quantity Unit",
+        "labelKey" : "sample_quantity_Unit",
+        "UIupdates" : {
+            "listValue" : "return '${sample_quantity_value}'!=='null'?'${sample_quantity_value}' : ''"
+         },
+        "type" : "textbox",
+        "isRequired" : false,
+        "dataType" : "String"
+    },
+    "sample_associated_ref_no" : {
+        "sample_associated_ref_no" : "Allocated To",
+        "labelKey" : "sample_associated_ref_no",
+        "type" : "textbox",
+        "isRequired" : false,
+        "dataType" : "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "24c1476d-ad5c-45a6-a23b-934940630175"
+}

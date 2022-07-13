@@ -1,0 +1,39 @@
+{
+  "_id": "Sampling_app",
+  "title": "Sampling",
+  "name": "sampling",
+  "isTrmIntegrated" : true,
+  "platform_id": "50",
+  "tenantID": "",
+  "type": "app",
+  "appType": "CONNECT",
+  "config": {
+    "header": {
+      "brand": {
+        "src": "assets/img/brand/eka-login-logo.png",
+        "width": 60.0,
+        "height": 20.0,
+        "alt": "Eka"
+      },
+      "clientLogo": {
+        "src": "assets"
+      },
+      "sidebarToggler": true,
+      "asideMenuToggler": false
+    },
+    "sidebar": {
+      "fixed": true,
+      "display": false
+    },
+    "navbar": [
+      {
+        "apiMenuData": [{}]
+      }
+    ],
+    "aside": {
+      "fixed": true,
+      "display": false
+    }
+  },
+  "sys__UUID": "bcb79287-04fb-4af2-ae97-61af272b2c45"
+}

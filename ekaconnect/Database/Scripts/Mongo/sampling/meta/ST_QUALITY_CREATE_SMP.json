@@ -1,0 +1,10 @@
+{
+  "_id": "ST_QUALITY_CREATE_SMP",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "type": "workflow",
+  "taskId": "ST_QUALITY_CREATE",
+  "object": "aacbf12d-7d98-469a-b149-1ec66e9ecb8c"
+}

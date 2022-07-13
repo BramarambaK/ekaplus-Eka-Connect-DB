@@ -1,0 +1,216 @@
+{
+    "_id" : "allocation_header_sales_allocated_list_edit",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : true,
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/collectionmapper/bcb79287-04fb-4af2-ae97-61af272b2c45/d6df33f0-0e8d-46de-91b4-9968484b5fba/fetchCollectionRecords",
+        "headers" : {
+            "ttl" : "60"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "mergePayload" : true,
+        "useInputMapping" : false,
+        "body" : {
+            "collectionName" : "Sales_allocated_to_stock_lookup",
+            "getAllRecords" : true
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "label" : "List Of Sales Contract-Allocated to Stock",
+    "type" : "workflow",
+    "payLoad" : "selected.sampleallocationstockallocatededit",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "header" : true,
+        "headerOperations" : true,
+        "options" : {
+            "columnFilter" : false,
+            "sortFilter" : false,
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "reset" : true,
+            "export" : false,
+            "sessionStateDisable" : true
+        },
+        "theme" : "theme-grid-white",
+        "selectionMode" : "multiple",
+        "showCheckbox" : true,
+        "preserveSelectedData" : true,
+        "scrollHeight" : "336px",
+        "selectionFilter" : [ 
+            "Sales CP Name", 
+            "product specs"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "sampleagainst"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-success",
+            "objectAction" : "CREATE",
+            "task" : "sampleallocationstockallocatededit",
+            "outcomes" : [ 
+                {
+                    "data" : "output.sampleallocationstockallocatededit",
+                    "name" : "_ST_PROCESSOR_VALIDATE_ALLOCATIONS"
+                }, 
+                {
+                    "data" : "selected.sampleallocationstockallocatededit",
+                    "name" : "sampleagainstedit",
+                    "setSelected" : [ 
+                        "selected.sampleagainstedit.samplingparticularlisteditapicall", 
+                        "selected.sampleagainstedit.samplingparticularformedit.listingData"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "ADD",
+            "type" : "submit",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "Sampling Instruction List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "sample_instruction_id",
+            "hidden" : true,
+            "value" : "${selected.sampleagainstedit.samplingparticularformedit.sample_instruction_id}"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Ref_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Stock_Ref_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Sales CP Name"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Profit Center"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Strategy"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Allocation Group No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "dateformat" : "DD-MMM-YYYY",
+            "key" : "Allocation Date"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "AllocationStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Allocated Quantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Quantity Unit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Container_No"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "warehouse"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "hidden" : true,
+            "key" : "product specs"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Product"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Origin"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "CropYear"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "External_Stock_Ref_No"
+        }
+    ],
+    "taskId" : "sampleallocationstockallocatededit",
+    "object" : "d6df33f0-0e8d-46de-91b4-9968484b5fba"
+}

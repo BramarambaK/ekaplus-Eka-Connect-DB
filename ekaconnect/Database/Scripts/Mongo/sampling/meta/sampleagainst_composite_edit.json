@@ -1,0 +1,114 @@
+{
+    "_id" : "sampleagainst_composite_edit",
+    "componentType" : "UserTask",
+    "label" : "New Sampling",
+    "layout" : {
+        "name" : "customv2",
+        "menu" : true,
+        "preserveSelectedData" : true,
+        "routeOnRefresh" : "samplinginstructionlist"
+    },
+    "object" : "37ee3da6-dfa5-487e-920d-ed7656ee2795",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "bcb79287-04fb-4af2-ae97-61af272b2c45",
+    "taskId" : "sampleagainstedit",
+    "type" : "workflow",
+    "viewAction" : "composite",
+    "payLoad" : "selected.sampleagainstedit",
+    "workflows" : [ 
+        {
+            "visibility" : "return ('${samplinginstructionlist.sample_status}' !== 'Pending') ? true : false",
+            "data" : "selected.samplinginstructionlist",
+            "name" : "samplinginstructionagainstnotedit"
+        }, 
+        {
+            "visibility" : "return ('${samplinginstructionlist.sample_status}' == 'Pending') ? true : false",
+            "data" : "selected.samplinginstructionlist",
+            "name" : "samplinginstructionagainstedit"
+        }, 
+        {
+            "visibility" : "return ('${samplinginstructionlist.sample_status}' !== 'Pending' && '${sampleagainstedit.samplinginstructionagainstnotedit.instructionagainst}' != 'Purchase-Unallocated' && '${sampleagainstedit.samplinginstructionagainstnotedit.instructionagainst}' != 'Stock-Unallocated') ? true : false",
+            "data" : "selected.samplinginstructionlist",
+            "name" : "samplingparticularlistedit",
+            "show" : false
+        }, 
+        {
+            "visibility" : "return ('${samplinginstructionlist.sample_status}' == 'Pending' && '${samplingparticularformedit}' == '' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' != 'Purchase-Unallocated' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' != 'Stock-Unallocated') ? true : false",
+            "data" : "selected",
+            "name" : "samplingparticularlisteditstatuspending",
+            "show" : false
+        }, 
+        {
+            "visibility" : "return ('${samplinginstructionlist.sample_status}' == 'Pending' && ('${sampleallocationlistedit}' !== '' || '${sampleallocationstockallocatededit}' !=='' || '${sampleallocationsalesunallocatedlistedit}' !=='') && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' != 'Purchase-Unallocated' && '${sampleagainstedit.samplinginstructionagainstedit.instructionagainst}' != 'Stock-Unallocated') ? true : false",
+            "name" : "samplingparticularlisteditapicall",
+            "show" : false
+        }, 
+        {
+            "data" : "selected.samplinginstructionlist",
+            "name" : "samplingparticularformedit"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "sampleagainstedit",
+                    "data" : "selected.sampleagainstedit",
+                    "dirtyCheck" : true,
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Sample(Against)",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "sampledrawnfromedit",
+                    "data" : "selected.sampledrawnfromedit",
+                    "dirtyCheck" : true,
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Sample(Drawn From)",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "samplinginstructionlist",
+                    "showPopUp" : true,
+                    "dirtyCheck" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "sampleagainstcompositesaveedit",
+            "executeDecision" : true,
+            "outcomes" : [ 
+                {
+                    "name" : "sampledrawnfromedit"
+                }
+            ],
+            "label" : "Next",
+            "position" : "bottom",
+			 "disabled" : "(field && field.samplingparticularlisteditapicall ? field.samplingparticularlisteditapicall[0].isDeleted : field.samplingparticularlisteditstatuspending[0].isDeleted)",
+            "type" : "submit"
+        }
+    ]
+}

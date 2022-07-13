@@ -1,0 +1,113 @@
+{
+  "_id": "sampling_quality_details",
+  "name": "Sampling Quality Details Object",
+  "label": "Sampling Quality Details Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["sample_ref_no", "quality_ref_no", "uniqueID"],
+  "translatableKeys": [],
+  "fields": {
+    "uniqueID": {
+      "uniqueID": "uniqueID",
+      "labelKey": "uniqueID",
+      "serialNumber": {
+        "startsWith": "0",
+        "prefix": "Sample"
+      }
+    },
+    "quality_ref_no": {
+      "quality_ref_no": "quality_ref_no",
+      "labelKey": "quality_ref_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_ref_no": {
+      "sample_ref_no": "Ref No",
+      "labelKey": "sample_ref_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "container_no": {
+      "container_no": "Container No",
+      "labelKey": "container_no",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product_specs": {
+      "product_specs": "Product Specs",
+      "labelKey": "product_specs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Sample Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_sent_to": {
+      "sample_sent_to": "Sample Sent To",
+      "labelKey": "sample_sent_to",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_approval_status": {
+      "sample_approval_status": "Sample Approval Status",
+      "labelKey": "sample_approval_status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "allocated_to": {
+      "allocated_to": "Allocated To",
+      "labelKey": "allocated_to",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "supplier_CP_name": {
+      "supplier_CP_name": "Supplier CP Name",
+      "labelKey": "supplier_CP_name",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sample_no": {
+      "sample_no": "Sample No",
+      "labelKey": "sample_no",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "aacbf12d-7d98-469a-b149-1ec66e9ecb8c"
+}

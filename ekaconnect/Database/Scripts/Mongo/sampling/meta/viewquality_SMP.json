@@ -1,0 +1,70 @@
+{
+  "_id": "viewquality_SMP",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "label": "View Quality",
+  "type": "workflow",
+  "payLoad": "selected.qualitylist",
+  "processorInfo": {
+    "processorId": "cdf9d423-d85a-4460-8eac-2ec39d029b86"
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "showCheckbox": false,
+    "limitHeight": true,
+    "pagination": false,
+    "selectionMode": "none",
+    "getInitialData": true,
+    "preserveSelectedData": true,
+    "layoutProcessor": {
+      "processorId": "cc2e59e0-17ce-4398-b39e-6e9409e11641"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "qualitylist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "attributename"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "attributevalue"
+    }
+  ],
+  "taskId": "viewquality",
+  "object": "ddec290e-71ee-4538-8ec9-37bbcc0cdca1"
+}
