@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_DELETE_PRICES_OLDER_THAN_TODAY",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "9ad3c7e2-8ea6-46fb-824b-d4d1ecc5884f"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_DELETE_PRICES_OLDER_THAN_TODAY",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+	"sys__UUID" : "aa7557f2-d3ab-4f61-9cdb-96d98214a34a"
+}

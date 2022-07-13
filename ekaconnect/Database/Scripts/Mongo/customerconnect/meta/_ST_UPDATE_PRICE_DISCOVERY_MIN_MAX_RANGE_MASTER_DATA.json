@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_UPDATE_PRICE_DISCOVERY_MIN_MAX_RANGE_MASTER_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_UPDATE_PRICE_DISCOVERY_MIN_MAX_RANGE_MASTER_DATA",
+    "object" : "8f13785a-0475-47c5-ab59-f42c132d6a33",
+    "label": "Update PRICE_DISCOVERY_MIN_MAX_RANGE_MASTER_DATA in System"
+}

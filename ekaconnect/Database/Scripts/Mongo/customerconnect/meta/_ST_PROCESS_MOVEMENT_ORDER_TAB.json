@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_MOVEMENT_ORDER_TAB",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "324a2731-8409-4104-a66c-268d63ed1356"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_MOVEMENT_ORDER_TAB",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b"
+}

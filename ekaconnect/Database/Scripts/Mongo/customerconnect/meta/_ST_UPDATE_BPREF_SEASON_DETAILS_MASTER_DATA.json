@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_UPDATE_BPREF_SEASON_DETAILS_MASTER_DATA",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_UPDATE_BPREF_SEASON_DETAILS_MASTER_DATA",
+    "object" : "6d10c2dd-c5c5-451e-88f5-3de80e151bc3",
+    "label": "Update BPREF_SEASON_DETAILS_MASTER_DATA in system"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_EXPIRE_AMENDED_CONTRACT",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "894842ee-54d2-4835-975d-00c5cab0b221"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_EXPIRE_AMENDED_CONTRACT",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+	"sys__UUID" : "fb9600d7-6b7d-4733-83d7-ce7ea95e73f4"
+}

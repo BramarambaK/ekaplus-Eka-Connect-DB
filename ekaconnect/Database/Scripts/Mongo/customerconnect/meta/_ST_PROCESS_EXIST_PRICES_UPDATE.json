@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_EXIST_PRICES_UPDATE",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "319b89cb-09b7-4409-ad1d-16e3df50ccef"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_EXIST_PRICES_UPDATE",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESS_UPDATE_PRICE_LIMITS_FORM",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "c7e680fb-1cf5-491d-a283-dca0079242f9"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_UPDATE_PRICE_LIMITS_FORM",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40"
+}

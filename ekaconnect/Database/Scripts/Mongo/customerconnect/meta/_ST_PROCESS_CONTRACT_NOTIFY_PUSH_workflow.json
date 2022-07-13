@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_CONTRACT_NOTIFY_PUSH",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "f0b436fc-63d9-42fd-9639-8bbf5bfc10a1"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_CONTRACT_NOTIFY_PUSH",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

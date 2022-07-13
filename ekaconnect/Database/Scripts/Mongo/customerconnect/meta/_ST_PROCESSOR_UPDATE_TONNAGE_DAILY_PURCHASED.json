@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_PROCESSOR_UPDATE_TONNAGE_DAILY_PURCHASED",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "3f5d075b-b640-41d1-a139-ec72b2b78098"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_UPDATE_TONNAGE_DAILY_PURCHASED",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_WITHDRAW_REQUEST",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "0680309f-7376-428f-964a-af722b4da5de"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_WITHDRAW_REQUEST",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

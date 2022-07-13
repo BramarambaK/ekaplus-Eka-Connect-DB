@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_WAREHOUSED_TICKETS_ENTER_OFFER",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "7b11828e-2e96-4eb1-a919-3eba0e6a6055"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_WAREHOUSED_TICKETS_ENTER_OFFER",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

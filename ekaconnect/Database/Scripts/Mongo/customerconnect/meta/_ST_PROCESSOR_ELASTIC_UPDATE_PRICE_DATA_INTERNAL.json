@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_ELASTIC_UPDATE_PRICE_DATA_INTERNAL",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "f3661cf1-1a1c-4f9f-ade6-77fb661e193a"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_ELASTIC_UPDATE_PRICE_DATA_INTERNAL",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+	"sys__UUID" : "a02b531e-41fa-4537-a3e9-20231174fe44"
+}

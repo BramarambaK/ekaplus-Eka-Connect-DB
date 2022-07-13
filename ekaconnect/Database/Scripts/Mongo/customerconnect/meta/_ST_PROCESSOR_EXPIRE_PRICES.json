@@ -1,0 +1,16 @@
+{
+    "_id" : "_ST_PROCESSOR_EXPIRE_PRICES",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "4bbfe14a-4470-43c3-afaf-a00c21c93aeb",
+	 "path" : "/connect/api/expireprices"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_EXPIRE_PRICES",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+	"sys__UUID" : "a4b55d89-08b6-44d1-9f77-22c77b7a2343"
+}

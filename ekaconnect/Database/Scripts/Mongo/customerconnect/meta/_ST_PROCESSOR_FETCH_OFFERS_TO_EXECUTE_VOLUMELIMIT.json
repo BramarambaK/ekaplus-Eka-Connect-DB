@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_FETCH_OFFERS_TO_EXECUTE_VOLUMELIMIT",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "52889ad3-6742-469f-b455-7dad29575fef"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_FETCH_OFFERS_TO_EXECUTE_VOLUMELIMIT",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+	"sys__UUID" : "3908afa4-283b-4261-a1b9-6db9221418e2"
+}

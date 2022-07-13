@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_ADD_REQUESTID_OFFER_CONTRACT",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "ea09b3d4-de13-40eb-963c-99dc3e4e393a"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_ADD_REQUESTID_OFFER_CONTRACT",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+	"sys__UUID" : "8a900258-10e5-4bb0-b12f-3efe52fd9fdf"
+}

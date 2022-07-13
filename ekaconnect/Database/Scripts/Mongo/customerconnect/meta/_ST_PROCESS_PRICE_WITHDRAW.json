@@ -1,0 +1,13 @@
+{
+  "_id" : "_ST_PROCESS_PRICE_WITHDRAW",
+  "componentType" : "ProcessTask",
+  "objectAction" : "UPDATE",
+  "processorInfo" : {
+      "processorId" : "a98a212d-1ad2-453c-9131-9215dd7a0646"
+  },
+  "refType" : "app",
+  "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+  "type" : "workflow",
+  "taskId" : "_ST_PROCESS_PRICE_WITHDRAW",
+  "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_CHECK_LIMIT_BREACH_ON_CHANGE_SCHEDULE_TO_ACTIVE_PRICES",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "c3a5f112-4e88-49e0-ac79-d5abc0abf7b0"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_CHECK_LIMIT_BREACH_ON_CHANGE_SCHEDULE_TO_ACTIVE_PRICES",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+	"sys__UUID" : "89b81857-9212-49f6-9854-9b7b683e14e9"
+}

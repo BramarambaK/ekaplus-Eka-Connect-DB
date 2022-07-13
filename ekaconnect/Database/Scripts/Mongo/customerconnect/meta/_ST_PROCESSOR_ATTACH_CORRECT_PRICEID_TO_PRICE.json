@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_ATTACH_CORRECT_PRICEID_TO_PRICE",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "de38f57f-91b0-4cd4-86df-7afba1b1dad2"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_ATTACH_CORRECT_PRICEID_TO_PRICE",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "sys__UUID" : "82d826af-47ec-4deb-8e3a-c1ddbfbb848e"
+}

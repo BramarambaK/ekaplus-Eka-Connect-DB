@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_SAVE_ORIGINALCONTRACT_REQUEST_EDIT",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "c4c36abd-3f66-48d4-9cc3-d6b14779a357"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_SAVE_ORIGINALCONTRACT_REQUEST_EDIT",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

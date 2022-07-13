@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_GET_WAREHOUSED_TICKET_OFFERS_TO_EXPIRE",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "32b19968-c82b-4534-88aa-7643fc79c389"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_GET_WAREHOUSED_TICKET_OFFERS_TO_EXPIRE",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+	"sys__UUID" : "a21d5f21-fc79-4df3-bbf8-01f55509046f"
+}

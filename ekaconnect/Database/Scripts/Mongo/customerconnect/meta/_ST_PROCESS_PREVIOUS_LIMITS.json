@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_PREVIOUS_LIMITS",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "c48a5569-8081-4c42-a2f8-c54e25ddbb72"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_PREVIOUS_LIMITS",
+  "object": "f2130453-6ff1-48f0-9b57-b01c46f932f3"
+}

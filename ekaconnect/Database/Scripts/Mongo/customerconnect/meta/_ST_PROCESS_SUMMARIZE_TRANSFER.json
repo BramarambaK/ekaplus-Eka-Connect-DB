@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_SUMMARIZE_TRANSFER",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "0a2914c3-c8a4-497c-b24c-bf2cb99e0b08"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_SUMMARIZE_TRANSFER",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

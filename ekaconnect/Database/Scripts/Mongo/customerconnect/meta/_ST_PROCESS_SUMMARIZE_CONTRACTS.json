@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_SUMMARIZE_CONTRACTS",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "ce9d1eb5-7bb7-472e-920d-7951e9d797bc"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_SUMMARIZE_CONTRACTS",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_INVENTORY_NOTIFY_DELETE",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "e65af340-1649-499d-8a1b-c697d3c20f3c"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_INVENTORY_NOTIFY_DELETE",
+  "object": "f895de3c-5f05-4671-b70d-4c180078fc07"
+}

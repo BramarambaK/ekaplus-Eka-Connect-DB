@@ -1,0 +1,14 @@
+{
+    "_id": "_ST_PROCESS_CONTRACT_NOTIFY_DELETE",
+    "componentType": "ProcessTask",
+    "objectAction": "UPDATE",
+    "processorInfo": {
+      "processorId": "02071e62-af61-4971-b1ec-0b3bccf18fa5"
+    },
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "type": "workflow",
+    "taskId": "_ST_PROCESS_CONTRACT_NOTIFY_DELETE",
+    "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+  }
+  

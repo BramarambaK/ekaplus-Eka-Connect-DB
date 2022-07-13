@@ -1,0 +1,14 @@
+{
+    "_id": "_ST_PROCESS_SUBMIT_OFFER_CONTRACTS",
+    "componentType": "ProcessTask",
+    "objectAction": "CREATE",
+    "processorInfo": {
+      "processorId": "7aa055a4-bf35-41d1-8191-fa2d5e6f4a1b"
+    },
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "type": "workflow",
+    "taskId": "_ST_PROCESS_SUBMIT_OFFER_CONTRACTS",
+    "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+  }
+  

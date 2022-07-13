@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_ATTACH_EXTERNALPRICEID_TO_PRICE",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "3a729c96-07e3-479f-8bc0-21d0f8edc8af"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_ATTACH_EXTERNALPRICEID_TO_PRICE",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "sys__UUID" : "fa624520-73d3-481e-8a40-316adb8357f9"
+}

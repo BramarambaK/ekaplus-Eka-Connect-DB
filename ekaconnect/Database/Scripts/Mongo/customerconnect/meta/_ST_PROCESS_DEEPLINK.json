@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_DEEPLINK",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "7e26cb27-0a97-4311-ac9f-a04cab4e7a6c"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_DEEPLINK",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40"
+}

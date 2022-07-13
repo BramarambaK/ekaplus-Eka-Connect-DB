@@ -1,0 +1,13 @@
+{
+"_id" : "_ST_PROCESS_SUBMIT_AMEND_SOLD_TICKETS",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "9f9a0cb7-d252-4707-ba95-d5ed35b01b01"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_SUBMIT_AMEND_SOLD_TICKETS",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

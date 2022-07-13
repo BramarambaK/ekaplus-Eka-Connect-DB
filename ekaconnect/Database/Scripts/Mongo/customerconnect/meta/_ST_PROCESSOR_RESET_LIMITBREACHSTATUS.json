@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_RESET_LIMITBREACHSTATUS",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "6af28a74-dbae-47af-b74d-289b9d04441c"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_RESET_LIMITBREACHSTATUS",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+	"sys__UUID": "4d07461d-3f8a-4b4d-8088-8052b39cb0a4"
+}

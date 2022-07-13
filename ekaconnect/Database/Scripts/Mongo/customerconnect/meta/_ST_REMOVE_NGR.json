@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_REMOVE_NGR",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "ff74ba88-79f8-4e2f-9f85-ed13a3cca134"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_REMOVE_NGR",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

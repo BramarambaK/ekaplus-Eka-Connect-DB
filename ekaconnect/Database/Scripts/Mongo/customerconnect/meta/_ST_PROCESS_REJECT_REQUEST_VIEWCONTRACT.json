@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_REJECT_REQUEST_VIEWCONTRACT",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "8897c650-83be-49b6-a96d-8f7351ef2bd4"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_REJECT_REQUEST_VIEWCONTRACT",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

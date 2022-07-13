@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_FORMAT_DATA_GPS_PRICE",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "09aed869-4de6-4ffd-99e3-9e1ffa3a0272"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_FORMAT_DATA_GPS_PRICE",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+	"sys__UUID": "94cd5a13-56e0-4b57-af20-ba193a21750e"
+}

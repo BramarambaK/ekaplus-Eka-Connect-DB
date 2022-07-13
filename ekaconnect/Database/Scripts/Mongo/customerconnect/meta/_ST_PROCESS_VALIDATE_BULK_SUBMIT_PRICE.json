@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_VALIDATE_BULK_SUBMIT_PRICE",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "86cc3410-04fa-471e-9de4-0d09f122d87f"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_VALIDATE_BULK_SUBMIT_PRICE",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}

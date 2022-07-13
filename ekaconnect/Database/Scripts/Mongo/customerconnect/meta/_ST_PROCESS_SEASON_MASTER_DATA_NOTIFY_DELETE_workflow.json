@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_SEASON_MASTER_DATA_NOTIFY_DELETE",
+  "componentType": "ProcessTask",
+  "objectAction": "DELETE",
+  "processorInfo": {
+    "processorId": "96ea4cdc-abe4-47ef-8aa4-779608b4eeb5"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_SEASON_MASTER_DATA_NOTIFY_DELETE",
+  "object": "4aa9caf8-8dd8-49a7-8fad-a229c376327c"
+}

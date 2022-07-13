@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_TICKET_BANNER_WITHDRAW",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "3bb20f14-c61b-44e1-923c-28770d3ad5d5"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_TICKET_BANNER_WITHDRAW",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_REJECT_REQUEST",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "ae1aa05e-33fb-4e2b-94d1-b6f00caeee1f"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_REJECT_REQUEST",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

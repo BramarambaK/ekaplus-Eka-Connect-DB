@@ -1,0 +1,14 @@
+{
+    "_id": "_ST_PROCESS_SUMMARIZEPRICE_LIMITS",
+    "componentType": "ProcessTask",
+    "objectAction": "UPDATE",
+    "processorInfo": {
+      "processorId": "f63f4a31-69a9-4088-9124-1c969a518444"
+    },
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "type": "workflow",
+    "taskId": "_ST_PROCESS_SUMMARIZEPRICE_LIMITS",
+    "object": "ab3fc628-ecbc-43e20-81cb-aa2d5b6e5c40"
+  }
+  

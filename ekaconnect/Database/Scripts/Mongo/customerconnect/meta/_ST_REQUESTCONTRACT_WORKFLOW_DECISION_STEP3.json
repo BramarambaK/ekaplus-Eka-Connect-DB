@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_REQUESTCONTRACT_WORKFLOW_DECISION_STEP3",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "d2013998-5c38-476d-919c-f6ab20877268"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_REQUESTCONTRACT_WORKFLOW_DECISION_STEP3",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

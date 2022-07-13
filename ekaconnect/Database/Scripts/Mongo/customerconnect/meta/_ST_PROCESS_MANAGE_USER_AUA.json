@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESS_MANAGE_USER_AUA",
+  "componentType": "ProcessTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "8c00fd82-02bf-4395-bd94-d5481ffbcdc8"
+  },
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_MANAGE_USER_AUA",
+  "object": "86cda9e9-9f15-4b1b-b051-f9153442021e"
+}

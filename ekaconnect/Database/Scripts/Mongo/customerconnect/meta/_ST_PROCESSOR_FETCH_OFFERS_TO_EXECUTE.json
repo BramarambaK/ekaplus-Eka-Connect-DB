@@ -1,0 +1,15 @@
+{
+    "_id" : "_ST_PROCESSOR_FETCH_OFFERS_TO_EXECUTE",
+    "componentType" : "ProcessTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "fd709667-b474-4e8a-bf9f-75bfe8716684"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_FETCH_OFFERS_TO_EXECUTE",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+	"sys__UUID" : "c2c21e0e-bb89-4edb-a59c-7a21ada3caaf"
+}
