@@ -1,0 +1,13 @@
+{
+    "_id" : "ST_PROCESSOR_MODIFY_SALE_CONTRACT_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "0bdb4cb8-de78-4950-9ab3-f270999af582"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "ST_PROCESSOR_MODIFY_SALE_CONTRACT",
+    "object" : "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

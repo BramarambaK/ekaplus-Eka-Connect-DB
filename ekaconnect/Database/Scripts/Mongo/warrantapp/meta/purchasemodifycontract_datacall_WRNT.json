@@ -1,0 +1,10 @@
+{
+  "_id": "purchasemodifycontract_datacall_WRNT",
+  "name": "purchasemodifycontract_datacall_WRNT",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "\r\n    var connectUrl = req.body.propertyList.eka_connect_host + '/workflow/data';\r\n    var connect = {\r\n      method: 'POST',\r\n      url: connectUrl,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_connect() {\r\n      connect.body = {};\r\n      connect.body = {\r\n        appId: req.body.appId,\r\n        workFlowTask: 'dummystoppinglist'\r\n      };\r\n      return new Promise(function(resolve, reject) {\r\n        request(connect, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_connect().then(function(result) {\r\n      var stoppinglist = result.data;\r\n      var output = {};\r\n      for (var i = 0; i < stoppinglist.length; i++) {\r\n        if (req.body.selectedData.data[0]['ext_stock_ref_no'] == stoppinglist[i]['ext_stock_ref_no']) {\r\n          output = {\r\n            ...req.body.selectedData.data[0],\r\n            futurePrice: stoppinglist[i]['futurePrice'],\r\n            futurePriceUnit: stoppinglist[i]['futurePriceUnit']\r\n          };\r\n          break;\r\n        }\r\n      }\r\n      res.status(200).send(output);\r\n    });\r\n ",
+  "sys__UUID": "a3c86e25-0875-4e90-b814-454b83b09a5b",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

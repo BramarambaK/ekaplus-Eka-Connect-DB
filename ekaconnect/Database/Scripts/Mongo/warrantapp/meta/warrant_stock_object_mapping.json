@@ -1,0 +1,344 @@
+{
+  "_id": "warrant_stock_object_mapping",
+  "name": "warrant_stock_mapping",
+  "label": "Warrant Stock Mapping",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["stock_ref_no"],
+  "translatableKeys": [],
+  "fields": {
+    "activityDate": {
+      "activityDate": "Activity Date",
+      "labelKey": "activityDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "valueCheck": "if( new Date('${activityDate}').getTime() <=  new Date().getTime()){return true;}",
+      "format": "yyyy-MM-dd"
+    },
+    "instrument_name": {
+      "instrument_name": "Instrument Name",
+      "labelKey": "instrument_name",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "instrument_name_value",
+      "children": ["request_type"],
+      "serviceKey": "mdmDerInstruments"
+    },
+    "instrument_name_value": {
+      "instrument_name_value": "Instrument Name",
+      "labelKey": "instrument_name_value",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "request_type": {
+      "request_type": "Request Type",
+      "labelKey": "request_type",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "parent": ["instrument_name"],
+      "dropdownValue": "Request Type",
+      "serviceKey": "requestTypeMapInstrument"
+    },
+    "request_type_value": {
+      "request_type_value": "Instrument Name",
+      "labelKey": "request_type_value",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product_specs": {
+      "product_specs": "Product Specs",
+      "labelKey": "product_specs",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "warrant_remarks": {
+      "warrant_remarks": "Remarks",
+      "labelKey": "warrant_remarks",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "fetch_record": {
+      "fetch_record": "Fetch Record",
+      "labelKey": "fetch_record",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "children": ["lookup"]
+    },
+    "lookup": {
+      "lookup": "Warrant + Warehouse Code / EWR No.",
+      "labelKey": "lookup",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return '${fetch_record}' == 'Lookup' ? true : false"
+      }
+    },
+    "warehouse": {
+      "warehouse": "Warehouse",
+      "labelKey": "warehouse",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shed": {
+      "shed": "Shed",
+      "labelKey": "shed",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "packaging": {
+      "packaging": "Packaging Type",
+      "labelKey": "packaging",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "stock_condition": {
+      "stock_condition": "Stock Condition",
+      "labelKey": "stock_condition",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "storage_date": {
+      "storage_date": "Storage Date",
+      "labelKey": "storage_date",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "no_of_units": {
+      "no_of_units": "No Of Units",
+      "labelKey": "no_of_units",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "sustainability_certificate": {
+      "sustainability_certificate": "Sustainability Certificate",
+      "labelKey": "sustainability_certificate",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "stock_ref_no": {
+      "stock_ref_no": "Stock Ref No",
+      "labelKey": "stock_ref_no",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "exchange_id": {
+      "exchange_id": "Exchange ID",
+      "labelKey": "exchange_id",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "grading_status": {
+      "grading_status": "Grading Status",
+      "labelKey": "grading_status",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "grading_date": {
+      "grading_date": "Grading Date",
+      "labelKey": "grading_date",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "warrant_status": {
+      "warrant_status": "Warrant Status",
+      "labelKey": "warrant_status",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "origin": {
+      "origin": "Origin",
+      "labelKey": "origin",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "Profit_Center": {
+      "Profit_Center": "Profit Center",
+      "labelKey": "Profit_Center",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "Strategy": {
+      "Strategy": "Strategy",
+      "labelKey": "Strategy",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "cropyear": {
+      "cropyear": "Crop Year",
+      "labelKey": "cropyear",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "stock_status": {
+      "stock_status": "Stock Status",
+      "labelKey": "stock_status",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "inventory_status": {
+      "inventory_status": "Inventory Status",
+      "labelKey": "inventory_status",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "allocation_status": {
+      "allocation_status": "Allocation Status",
+      "labelKey": "allocation_status",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "container_no": {
+      "container_no": "Container No",
+      "labelKey": "container_no",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "ico_marks": {
+      "ico_marks": "ICO Marks",
+      "labelKey": "ico_marks",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "actual_quantity": {
+      "actual_quantity": "Actual Quantity",
+      "labelKey": "actual_quantity",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "storing_from": {
+      "storing_from": "Storing Date(From)",
+      "labelKey": "storing_from",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "storing_to": {
+      "storing_to": "Storing Date(To)",
+      "labelKey": "storing_to",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "Contract_Ref_No": {
+      "Contract_Ref_No": "Contract Ref No",
+      "labelKey": "Contract_Ref_No",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "sample_status": {
+      "sample_status": "Sample Status",
+      "labelKey": "sample_status",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "warehouse_ref_no": {
+      "warehouse_ref_no": "Warehouse Ref No",
+      "labelKey": "warehouse_ref_no",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "ext_stock_ref_no": {
+      "ext_stock_ref_no": "External Stock Ref No",
+      "labelKey": "ext_stock_ref_no",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "exchange_lot": {
+      "exchange_lot": "Exchange Lot No.",
+      "labelKey": "exchange_lot",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "open_qty": {
+      "open_qty": "Open Quantity",
+      "labelKey": "open_qty",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "allocated_qty": {
+      "allocated_qty": "Allocated Quantity",
+      "labelKey": "allocated_qty",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "ispreviousappealed": {
+      "ispreviousappealed": "Previous Appeal Status",
+      "labelKey": "ispreviousappealed",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "ispreviousregrade": {
+      "ispreviousregrade": "Previous Regrading Status",
+      "labelKey": "ispreviousregrade",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "data_transfer": {
+      "data_transfer": " ",
+      "labelKey": "data_transfer",
+      "type": "hidden",
+      "dataType": "String"
+    },
+    "error": {
+      "error": "Error Details",
+      "labelKey": "error",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "177717fb-a6e0-40c8-92f6-38b0601d2903"
+}

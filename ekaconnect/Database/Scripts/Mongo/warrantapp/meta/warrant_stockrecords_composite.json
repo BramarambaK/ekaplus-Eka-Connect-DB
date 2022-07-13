@@ -1,0 +1,81 @@
+{
+    "_id" : "warrant_stockrecords_composite",
+    "componentType" : "UserTask",
+    "label" : "New Grading Request",
+    "layout" : {
+        "name" : "customv2",
+        "menu" : true,
+        "preserveSelectedData" : true
+    },
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487",
+    "objectAction" : "READ",
+    "payLoad" : "selected.stockrecords",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "taskId" : "stockrecords",
+    "type" : "workflow",
+    "viewAction" : "composite",
+    "workflows" : [ 
+        {
+            "name" : "stocklisttrm"
+        }
+    ],
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creategenraldetail",
+                    "data" : "selected.creategenraldetail"
+                }
+            ],
+            "label" : "General Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "stockrecords",
+                    "data" : "selected.stockrecords"
+                }
+            ],
+            "label" : "Stock Records",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "stocklist",
+                    "showPopUp" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "compositeSaveWRNT",
+            "executeDecision" : true,
+            "outcomes" : [ 
+                {
+                    "data" : "output.stockrecords",
+                    "name" : "stockrecords"
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ]
+}

@@ -1,0 +1,371 @@
+{
+  "_id": "warrant_stoppingmarketstocks_object",
+  "name": "warrant_stoppingmarketstocks",
+  "label": "Stopping Market Stocks Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["ext_stock_ref_no"],
+  "translatableKeys": [],
+  "fields": {
+    "ext_stock_ref_no": {
+      "ext_stock_ref_no": "External Stock Ref No",
+      "labelKey": "ext_stock_ref_no",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "int_stock_ref_no": {
+      "int_stock_ref_no": "Internal Stock Ref No",
+      "labelKey": "int_stock_ref_no",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "contract_ref_no": {
+      "contract_ref_no": "Contract Ref No",
+      "labelKey": "contract_ref_no",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "contract_status": {
+      "contract_status": "Contract Status",
+      "labelKey": "contract_status",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "contract_creation_date": {
+      "contract_creation_date": "Contract Creation Date",
+      "labelKey": "contract_creation_date",
+      "type": "datepicker",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "instrument_name": {
+      "instrument_name": "Instrument Name",
+      "labelKey": "instrument_name",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "origin": {
+      "origin": "Origin",
+      "labelKey": "origin",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "crop_year": {
+      "crop_year": "Crop Year",
+      "labelKey": "crop_year",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "exchange_lots": {
+      "exchange_lots": "Exchange Lots",
+      "labelKey": "exchange_lots",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "quantity": {
+      "quantity": "Quantity",
+      "labelKey": "quantity",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "serviceKey": "quantity"
+    },
+    "quantity_unit": {
+      "quantity_unit": "Quantity Unit",
+      "labelKey": "quantity_unit",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "grading_result": {
+      "grading_result": "Grading Result",
+      "labelKey": "grading_result",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "split_indicator": {
+      "split_indicator": "Split Indicator",
+      "labelKey": "split_indicator",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "ewr_split_no": {
+      "ewr_split_no": "EWR Split No",
+      "labelKey": "ewr_split_no",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "warehouse": {
+      "warehouse": "Warehouse",
+      "labelKey": "warehouse",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "shed": {
+      "shed": "Shed",
+      "labelKey": "shed",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "storage_location": {
+      "storage_location": "Storage Location",
+      "labelKey": "storage_location",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "port_name": {
+      "port_name": "Port Name",
+      "labelKey": "port_name",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "profit_center": {
+      "profit_center": "Profit Center",
+      "labelKey": "profit_center",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "strategy": {
+      "strategy": "Strategy",
+      "labelKey": "strategy",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "grading_date": {
+      "grading_date": "Grading Date",
+      "labelKey": "grading_date",
+      "type": "datepicker",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "grading_status": {
+      "grading_status": "Grading Status",
+      "labelKey": "grading_status",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "certification_status": {
+      "certification_status": "Certification Status",
+      "labelKey": "certification_status",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "final_weight_date": {
+      "final_weight_date": "Final Weight Date",
+      "labelKey": "final_weight_date",
+      "type": "datepicker",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "exchange_type": {
+      "exchange_type": "Exchange Type",
+      "labelKey": "exchange_type",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "class": {
+      "class": "Class",
+      "labelKey": "class",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "gmr_ref_no": {
+      "gmr_ref_no": "GMR Ref No",
+      "labelKey": "gmr_ref_no",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "invoice_ref_no": {
+      "invoice_ref_no": "Invoice Ref No",
+      "labelKey": "invoice_ref_no",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "activityDate": {
+      "activityDate": "Activity Date",
+      "labelKey": "activityDate",
+      "type": "datepicker",
+      "isRequired": true,
+      "valueCheck": "if( new Date('${activityDate}').getTime() <=  new Date().getTime()){return true;}",
+      "maximumDate": "return new Date()",
+      "format": "yyyy-MM-dd"
+    },
+    "futurePrice": {
+      "futurePrice": "Future Price",
+      "isRequired": false,
+      "labelKey": "futurePrice",
+      "type": "textbox",
+      "dataType": "Number",
+      "isMandatory": "if('${futurePriceFlag}' == 'true') { return true} else { return false}"
+    },
+    "futurePriceFlag": {
+      "futurePriceFlag": "futurePriceFlag",
+      "labelKey": "futurePriceFlag",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "futurePriceUnit": {
+      "futurePriceUnit": "",
+      "isRequired": false,
+      "labelKey": "futurePriceUnit",
+      "type": "dropdown",
+      "serviceKey": "futurePriceUnit"
+    },
+    "purchase_contract_ref_no": {
+      "purchase_contract_ref_no": "Purchase Contract Ref No",
+      "isRequired": false,
+      "labelKey": "purchase_contract_ref_no",
+      "type": "dropdown",
+      "serviceKey": "purchase_contract_ref_no",
+      "isMandatory": "if('${purchase_contract_flag}' == 'true') { return true} else { return false}"
+    },
+    "purchase_contract_flag": {
+      "purchase_contract_flag": "purchase_contract_flag",
+      "isRequired": false,
+      "labelKey": "purchase_contract_flag",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "fxpricetopayin": {
+      "fxpricetopayin": "FX Price to Pay-in",
+      "isRequired": false,
+      "labelKey": "fxpricetopayin",
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "no_of_lots": {
+      "no_of_lots": "No Of Lots",
+      "labelKey": "no_of_lots",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "no_of_lots"
+    },
+    "warrant_remarks": {
+      "warrant_remarks": "Remarks",
+      "isRequired": false,
+      "labelKey": "warrant_remarks",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "quantityUnit": {
+      "quantityUnit": "",
+      "isRequired": false,
+      "labelKey": "quantityUnit",
+      "type": "dropdown",
+      "dataType": "String",
+      "serviceKey": "quantityUnit"
+    },
+    "Packing_Size": {
+      "Packing_Size": "Packing Size",
+      "isRequired": false,
+      "labelKey": "Packing_Size",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "reasons_for_cancellation": {
+      "reasons_for_cancellation": "Reason for Cancellation",
+      "isMandatory": "if('${reasonforcancellationFlag}' == 'true') { return true} else { return false}",
+      "labelKey": "reasons_for_cancellation",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "reasonforcancellationFlag": {
+      "reasonforcancellationFlag": "reasonforcancellationFlag",
+      "labelKey": "reasonforcancellationFlag",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "CP_Name": {
+      "CP_Name": "CP Name",
+      "labelKey": "CP_Name",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "no_Of_Units": {
+      "no_Of_Units": "no_Of_Units",
+      "labelKey": "no_Of_Units",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "selectedData": {
+      "selectedData": "selectedData",
+      "labelKey": "selectedData",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "corporate": {
+      "corporate": "Corporate",
+      "labelKey": "corporate",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "internalContractItemRefNo": {
+      "internalContractItemRefNo": "internalContractItemRefNo",
+      "labelKey": "internalContractItemRefNo",
+      "type": "textbox",
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

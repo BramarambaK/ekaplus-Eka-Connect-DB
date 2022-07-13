@@ -1,0 +1,13 @@
+{
+    "_id" : "ST_PROCESSOR_CREATE_PURCHASE_EXECUTION_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "e45f0f73-684e-4fc3-acc0-122aae739a18"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "ST_PROCESSOR_CREATE_PURCHASE_EXECUTION",
+    "object" : "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

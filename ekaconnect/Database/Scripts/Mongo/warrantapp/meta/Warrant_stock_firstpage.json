@@ -1,0 +1,542 @@
+{
+  "_id": "Warrant_stock",
+  "componentType": "UserTask",
+  "tags": "trainingData",
+  "payLoad": "selected.stocklist",
+  "processorInfo": {
+    "processorId": "aafb62f3-0076-4853-88ef-905434a9dcc8"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "disabled": "var arrData = record\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].grading_status==='Passed' && arrData[i].grading_status==='Failed') continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "outcomes": [
+        {
+          "data": "selected.stocklist",
+          "name": "viewgradingresult",
+          "popupClass": "edit-modal907px",
+          "displayType": "popup"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategenraldetail"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "NEW REQUEST",
+      "outsideOperations": true,
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bulkoperation"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "BULK OPERATIONS",
+      "outsideOperations": true,
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist",
+          "popupClass": "modal-500",
+          "name": "cancelstock"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "disabled": "var arrData = record;\r\nvar flag = true;\r\nif (arrData.length > 0) {\r\n  for (var i = 0; i < arrData.length; i++) {\r\n    if (\r\n      arrData[i].grading_status === \"Pending\" ||\r\n      arrData[i].grading_status === \"Re-grading\" ||\r\n      arrData[i].grading_status === \"Appeal\"\r\n  || !arrData[i]['Sales_Contract_Ref_No']  )\r\n      flag = true;\r\n    else {\r\n      flag = false;\r\n      break;\r\n    }\r\n  }\r\n  flag === false;\r\n}\r\n",
+      "selection": "global",
+      "label": "Cancel",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "disabled": "var arrData = record\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].grading_status==='Failed' && !arrData[i]['Sales_Contract_Ref_No']) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "selection": "global",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "setSelected": ["selected.appealstock.data_transfer"],
+          "data": "selected.stocklist",
+          "popupClass": "modal-500",
+          "name": "appealstock"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Appeal",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "disabled": "var arrData = record\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].grading_status==='Passed' && !arrData[i]['Sales_Contract_Ref_No'] && !arrData[i]['edmarkrefno']) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "selection": "global",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist",
+          "popupClass": "modal-500",
+          "name": "regradingstock"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Re-Grading",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "disabled": "var arrData = record\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].certification_status==='Certified' && arrData[i].grading_status==='Passed' && !arrData[i].edmarkrefno && !arrData[i]['Sales_Contract_Ref_No']) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "selection": "global",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist",
+          "popupClass": "modal-500",
+          "name": "decertifystock"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Decertify",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "disabled": "var arrData = record\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].certification_status==='Not-Certified' && arrData[i].grading_status==='Passed' && !arrData[i].edmarkrefno && !arrData[i]['Sales_Contract_Ref_No']) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "selection": "global",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist",
+          "popupClass": "modal-500",
+          "name": "undodecertifystock"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Undo-Decertify",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "disabled": "var arrData = record\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].certification_status==='Certified' && arrData[i].grading_status==='Passed' && !arrData[i].edmarkrefno && !arrData[i]['Sales_Contract_Ref_No']) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "selection": "global",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist",
+          "popupClass": "modal-500",
+          "name": "markingstock"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Marking for Delivery",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "disabled": "var arrData = record\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].certification_status==='Certified' && arrData[i].grading_status==='Passed' && arrData[i].edmarkrefno && !arrData[i]['Sales_Contract_Ref_No']) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "selection": "global",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist",
+          "popupClass": "modal-500",
+          "name": "unmarkingstock"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Un-Marking for Delivery",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "Stock Split",
+      "position": "top",
+      "disabled": "!(record.length == 1 && record[0]['grading_status']=='Passed' && record[0]['certification_status']=='Certified' && !record[0]['edmarkrefno'] && !record[0]['splitIndicator'] && record[0]['stock_ref_no'] && record[0]['exchange_lot']>=1)",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist[0]",
+          "popupClass": "edit-modal800px",
+          "name": "stocksplitcomposite"
+        }
+      ],
+      "label": "Stock Split"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "View_Info",
+      "position": "top",
+      "disabled": "var arrData = record;\r\nvar flag = true;\r\nif (arrData.length > 1) {\r\n  flag = false;\r\n}\r\nflag === false;",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.stocklist[0]",
+          "popupClass": "limitinfopopup",
+          "name": "viewstocklogs"
+        }
+      ],
+      "label": "View Log",
+      "iconClass": "cr-info-icon"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "activityDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "stock_ref_no"
+    },
+    {
+      "key": "exchangeDeliveryStatus",
+      "filter": true,
+      "edit": false,
+      "sort": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "edmarkrefno"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Sales_Contract_Ref_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Contract_Status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Sales_GMR_Ref_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "title_transfer_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "instrument_name_value"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Contract_Ref_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ext_stock_ref_no",
+      "task": "custom-link",
+      "category": "link"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "grading_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "corporate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "certification_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "splitIndicator"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "EWR_Split_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Grading_Date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "certified_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "final_weight_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ico_mark"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Exchange_ID_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "LOB_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "INTERNAL_GMR_REF_NO"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "container_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "warehouse"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shed"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "port_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "warehouse_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "inventory_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "stock_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "actual_quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Quantity_UOM"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "sample_status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "exchange_lot",
+      "label": "No of Lots"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Packing_Size"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "no_of_units"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Profit_Center"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Strategy"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "legal_entity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "cropyear"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "origin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Stock_Update_Status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Stock_Update_Date",
+      "dateformat": "MM/DD/YYYY HH:mm:ss"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Weight_Final"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Current_GMR_Activity"
+    }
+  ],
+  "label": "List of Stocks",
+  "labelKey": "Stock_List",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "selectionMode": "multiple",
+    "showCheckbox": true,
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "selectAll": true
+  },
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "stocklist",
+  "type": "workflow"
+}

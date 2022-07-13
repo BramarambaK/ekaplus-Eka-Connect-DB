@@ -1,0 +1,397 @@
+{
+  "_id": "stoppingmarketstockslist_WRNT",
+  "componentType": "UserTask",
+  "processorInfo": {
+    "processorId": "867fe0e2-0b01-4505-a5b0-87de6acee95d"
+  },
+  "payLoad": "selected.stoppingmarketstockslist",
+  "decisions": [
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": true,
+      "outcomes": [
+        {
+          "data": "selected.stoppingmarketstockslist",
+          "name": "createpurchasecontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Purchase Contract",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "var arrData = record.filter(item=>item.sys__state.rowDisable!==true)\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].contract_status!='Approved' && arrData[i].contract_status!='Pending') continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }",
+      "outcomes": [
+        {
+          "data": "selected.stoppingmarketstockslist",
+          "name": "createpurchasecontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Create",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "var arrData = record.filter(item=>item.sys__state.rowDisable!==true)\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].contract_ref_no && arrData[i].contract_status==='Approved' && !arrData[i].gmr_ref_no) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "outcomes": [
+        {
+          "data": "selected.stoppingmarketstockslist",
+          "name": "modifypuchasecontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Modify",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "var arrData = record.filter(item=>item.sys__state.rowDisable!==true)\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].contract_ref_no && arrData[i].contract_status==='Approved' && !arrData[i].gmr_ref_no) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "outcomes": [
+        {
+          "data": "selected.stoppingmarketstockslist",
+          "name": "cancelpurchasecontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Cancel",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": true,
+      "outcomes": [
+        {
+          "data": "selected.stoppingmarketstockslist",
+          "name": "purchaseexecutioncreate",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Purchase Execution",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "disabled": "var arrData = record.filter(item=>item.sys__state.rowDisable!==true)\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].contract_ref_no && arrData[i].contract_status==='Approved' && !arrData[i].gmr_ref_no) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "data": "selected.stoppingmarketstockslist",
+          "name": "purchaseexecutioncreate",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Create",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "var arrData = record.filter(item=>item.sys__state.rowDisable!==true)\r\nvar flag = true;\r\nif(arrData.length > 0){\r\n    for (var i = 0; i < arrData.length; i++) {\r\n\t  if(arrData[i].gmr_ref_no && !arrData[i].invoice_ref_no && !arrData[i].edmarkrefno) continue;\r\n\t  else {\r\n\t  flag = false\r\n\t  break;\r\n\t  }\r\n\t      }\r\n flag===false   \r\n      }\r\n     ",
+      "outcomes": [
+        {
+          "data": "selected.stoppingmarketstockslist",
+          "name": "purchaseexecutioncancel",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Cancel",
+      "position": "top"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ext_stock_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "int_stock_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contract_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contract_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "CP_Name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contract_creation_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "instrument_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "origin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "crop_year"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "exchange_lots",
+      "label": "No of Lots"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quantity_unit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "grading_result"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "split_indicator"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ewr_split_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "warehouse"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shed"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "storage_location"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "port_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "profit_center"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "strategy"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Packing_Size"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "grading_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "grading_status",
+      "value": "Passed"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "certification_status",
+      "value": "Certified"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "final_weight_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "exchange_type"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "class"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "gmr_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "invoice_ref_no"
+    },
+    {
+      "hidden": true,
+      "key": "no_Of_Units"
+    },
+    {
+      "hidden": true,
+      "key": "corporate"
+    },
+    {
+      "hidden": true,
+      "key": "edmarkrefno"
+    }
+  ],
+  "label": "List of Stopping the Market Stocks",
+  "labelKey": "List_Stopping_the_Market_Stocks",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "showCheckbox": true,
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "selectionMode": "multiple",
+    "selectAll": true,
+    "selectionFilter": [
+      "contract_ref_no",
+      "contract_status",
+      "CP_Name",
+      "instrument_name",
+      "product",
+      "origin",
+      "quality",
+      "crop_year",
+      "storage_location",
+      "Packing_Size",
+      "port_name",
+      "quantity_unit",
+      "gmr_ref_no"
+    ]
+  },
+  "object": "6abda3f2-5e71-46c2-9912-a87bc0451410",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "stoppingmarketstockslist",
+  "type": "workflow"
+}

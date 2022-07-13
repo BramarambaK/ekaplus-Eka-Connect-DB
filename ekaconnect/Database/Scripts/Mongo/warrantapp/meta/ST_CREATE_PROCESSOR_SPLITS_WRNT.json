@@ -1,0 +1,13 @@
+{
+  "_id": "ST_CREATE_PROCESSOR_SPLITS_WRNT",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "b08e8ce1-9c25-4785-9d0f-c2e90dc0f32e"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "ST_CREATE_PROCESSOR_SPLITS",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

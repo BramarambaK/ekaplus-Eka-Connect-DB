@@ -1,0 +1,12 @@
+{
+    "_id" : "WARRANT_ST_CREATE_DOCUMENT",
+    "componentType" : "SystemTask",
+    "object" : "b0895c93-0738-4cd8-a3ce-0546c47c70f5",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "taskId" : "WARRANT_ST_CREATE_DOCUMENT",
+    "label" : "Create Document in System",
+    "type" : "workflow",
+    "sys__UUID" : "b26d8165-395d-4810-98bf-38e1c6f92b4e"
+}

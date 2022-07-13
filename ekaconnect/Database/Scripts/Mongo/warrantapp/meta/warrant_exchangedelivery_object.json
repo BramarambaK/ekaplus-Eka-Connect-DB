@@ -1,0 +1,354 @@
+{
+  "_id": "warrant_exchangedelivery_object",
+  "name": "warrant_exchangedelivery",
+  "label": "Exchange Delivery Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["edmarkrefno"],
+  "translatableKeys": [],
+  "fields": {
+    "activityDate": {
+      "activityDate": "Activity Date",
+      "labelKey": "activityDate",
+      "type": "datepicker",
+      "isRequired": true,
+      "valueCheck": "if( new Date('${activityDate}').getTime() <=  new Date().getTime()){return true;}",
+      "maximumDate": "return new Date()",
+      "format": "yyyy-MM-dd"
+    },
+    "edmarkrefno": {
+      "edmarkrefno": "ED Mark Ref No",
+      "labelKey": "edmarkrefno",
+      "type": "dropdown",
+      "dataType": "String",
+      "isRequired": false,
+      "objectDataKey12": ["stocklist", "edmarkrefno", "edmarkrefno"],
+      "serviceKey": "edmarkrefno",
+      "children": [
+        "futurePriceUnit",
+        "no_of_lots",
+        "quantity",
+        "quantityUnit",
+        "origin",
+        "product",
+        "cropyear",
+        "quality",
+        "Packing_Size",
+        "Profit_Center",
+        "storage_location",
+        "corporate",
+        "Strategy"
+      ]
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "product",
+      "parent": ["edmarkrefno"]
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "serviceKey": "quality",
+      "parent": ["edmarkrefno"]
+    },
+    "cropyear": {
+      "cropyear": "Crop Year",
+      "labelKey": "cropyear",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "serviceKey": "cropyear",
+      "parent": ["edmarkrefno"]
+    },
+    "actual_quantity": {
+      "actual_quantity": "Stock Quantity",
+      "labelKey": "actual_quantity",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "Contract_Ref_No": {
+      "Contract_Ref_No": "Contract Ref No",
+      "labelKey": "Contract_Ref_No",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "contract_creation_status": {
+      "contract_creation_status": "Contract Status",
+      "labelKey": "contract_creation_status",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "contract_creation_date": {
+      "contract_creation_date": "Contract Creation Date",
+      "labelKey": "contract_creation_date",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "GMR_Ref_No": {
+      "GMR_Ref_No": "GMR Ref No",
+      "labelKey": "GMR_Ref_No",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "invoice_Ref_No": {
+      "invoice_Ref_No": "Invoice Ref No",
+      "labelKey": "invoice_Ref_No",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "CP_Name": {
+      "CP_Name": "CP Name",
+      "labelKey": "CP_Name",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "Packing_Size": {
+      "Packing_Size": "Packing Size",
+      "labelKey": "Packing_Size",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "serviceKey": "Packing_Size",
+      "parent": ["edmarkrefno"]
+    },
+    "no_of_units": {
+      "no_of_units": "No Of Units",
+      "labelKey": "no_of_units",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "no_of_lots": {
+      "no_of_lots": "No Of Lots",
+      "labelKey": "no_of_lots",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "no_of_lots",
+      "parent": ["edmarkrefno"]
+    },
+    "qty_unit": {
+      "qty_unit": "Qty Unit",
+      "labelKey": "qty_unit",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "exchange_lot": {
+      "exchange_lot": "Exchange Lots",
+      "labelKey": "exchange_lot",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "warehouse": {
+      "warehouse": "Warehouse",
+      "labelKey": "warehouse",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "storage_location": {
+      "storage_location": "Storage Location",
+      "labelKey": "storage_location",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "storage_location",
+      "parent": ["edmarkrefno"]
+    },
+    "shed": {
+      "shed": "Shed",
+      "labelKey": "shed",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Profit_Center": {
+      "Profit_Center": "Profit Center",
+      "isRequired": false,
+      "labelKey": "Profit_Center",
+      "type": "textbox",
+      "dataType": "String",
+      "parent": ["edmarkrefno"]
+    },
+    "Strategy": {
+      "Strategy": "Strategy",
+      "labelKey": "Strategy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "parent": ["edmarkrefno"]
+    },
+    "legal_entity": {
+      "legal_entity": "Legal Entity",
+      "labelKey": "legal_entity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "GMR_creation_date": {
+      "GMR_creation_date": "GMR Creation Date",
+      "labelKey": "GMR_creation_date",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "title_transfer_status": {
+      "title_transfer_status": "Title Transfer Status",
+      "labelKey": "title_transfer_status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "current_activity": {
+      "current_activity": "Current Activity",
+      "labelKey": "current_activity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "activity_status": {
+      "activity_status": "Activity Status",
+      "labelKey": "activity_status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "origin": {
+      "origin": "Origin",
+      "isRequired": false,
+      "labelKey": "origin",
+      "type": "textbox",
+      "dataType": "String",
+      "serviceKey": "origin",
+      "parent": ["edmarkrefno"]
+    },
+    "futurePrice": {
+      "futurePrice": "Future Price",
+      "isRequired": true,
+      "labelKey": "futurePrice",
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "futurePriceUnit": {
+      "futurePriceUnit": "",
+      "isRequired": false,
+      "labelKey": "futurePriceUnit",
+      "type": "dropdown",
+      "serviceKey": "futurePriceUnit",
+      "parent": ["edmarkrefno"]
+    },
+    "fxpricetopayin": {
+      "fxpricetopayin": "FX Price to Pay-in",
+      "isRequired": false,
+      "labelKey": "fxpricetopayin",
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "quantity": {
+      "quantity": "Quantity",
+      "isRequired": false,
+      "labelKey": "quantity",
+      "type": "textbox",
+      "serviceKey": "quantity",
+      "parent": ["edmarkrefno"]
+    },
+    "quantityUnit": {
+      "quantityUnit": "",
+      "isRequired": false,
+      "labelKey": "quantityUnit",
+      "type": "textbox",
+      "serviceKey": "quantityUnit",
+      "parent": ["edmarkrefno"]
+    },
+    "warrant_remarks": {
+      "warrant_remarks": "Remarks",
+      "isRequired": false,
+      "labelKey": "warrant_remarks",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Quantity_UOM": {
+      "Quantity_UOM": "Quantity UOM",
+      "labelKey": "Quantity_UOM",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "reasons_for_cancellation": {
+      "reasons_for_cancellation": "Reason for Cancellation",
+      "isMandatory": "if('${reasonforcancellationFlag}' == 'true') { return true} else { return false}",
+      "labelKey": "reasons_for_cancellation",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "reasonforcancellationFlag": {
+      "reasonforcancellationFlag": "reasonforcancellationFlag",
+      "labelKey": "reasonforcancellationFlag",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "sales_contract_ref_no": {
+      "sales_contract_ref_no": "Sales Contract Ref No",
+      "isRequired": false,
+      "labelKey": "sales_contract_ref_no",
+      "type": "dropdown",
+      "serviceKey": "sales_contract_ref_no",
+      "isMandatory": "if('${sales_contract_flag}' == 'true') { return true} else { return false}"
+    },
+    "sales_contract_flag": {
+      "sales_contract_flag": "sales_contract_flag",
+      "isRequired": false,
+      "labelKey": "sales_contract_flag",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "corporate": {
+      "corporate": "Corporate",
+      "labelKey": "corporate",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false,
+      "parent": ["edmarkrefno"]
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "13ef7767-ff43-41ce-a109-fd63ef5b0ddf"
+}

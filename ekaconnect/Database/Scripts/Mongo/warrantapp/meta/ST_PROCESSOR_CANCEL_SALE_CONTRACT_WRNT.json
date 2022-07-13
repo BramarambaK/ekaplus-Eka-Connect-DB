@@ -1,0 +1,13 @@
+{
+    "_id" : "ST_PROCESSOR_CANCEL_SALE_CONTRACT_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "4cde374f-0743-49a6-b0d2-d68098a2b576"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "ST_PROCESSOR_CANCEL_SALE_CONTRACT",
+    "object" : "13ef7767-ff43-41ce-a109-fd63ef5b0ddf"
+}

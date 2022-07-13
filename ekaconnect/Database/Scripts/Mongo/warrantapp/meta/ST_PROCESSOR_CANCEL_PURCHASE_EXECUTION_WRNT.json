@@ -1,0 +1,13 @@
+{
+    "_id" : "ST_PROCESSOR_CANCEL_PURCHASE_EXECUTION_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "2fd36bf0-12e5-4709-b2c2-e4d041c3064a"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "ST_PROCESSOR_CANCEL_PURCHASE_EXECUTION",
+    "object" : "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

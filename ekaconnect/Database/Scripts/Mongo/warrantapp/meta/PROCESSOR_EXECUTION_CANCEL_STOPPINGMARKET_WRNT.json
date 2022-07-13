@@ -1,0 +1,11 @@
+{
+    "_id": "PROCESSOR_EXECUTION_CANCEL_STOPPINGMARKET_WRNT",
+    "name": "PROCESSOR_EXECUTION_CANCEL_STOPPINGMARKET_WRNT",
+    "type": "processor",
+    "refType": "app",
+    "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "snippet": " let selectedData = JSON.parse(req.body.selectedData);\r\n    for (var i = 0; i < selectedData.length; i++) {\r\n      selectedData[i]['activityDate'] = '';\r\n      selectedData[i]['activityDate'] = req.body.activityDate;\r\n      selectedData[i]['reasons_for_cancellation'] = '';\r\n      selectedData[i]['reasons_for_cancellation'] = req.body.reasons_for_cancellation;\r\n      selectedData[i]['reasonforcancellationFlag'] = '';\r\n      selectedData[i]['reasonforcancellationFlag'] = req.body.reasonforcancellationFlag;\r\n    }\r\n    res.status(200).send(selectedData);",
+    "sys__UUID": "391160f4-caa6-47b6-84b0-41e9c50045c6",
+    "sys__createdBy": "ekauser@ekaplus.com"
+  }
+  

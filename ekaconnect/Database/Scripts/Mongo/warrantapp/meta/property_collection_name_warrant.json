@@ -1,0 +1,16 @@
+{
+  "_id": "property_collection_name_warrant",
+  "type": "property",
+  "name": "property_collection_name_warrant",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": [
+    "Robusta Grading Results Upload",
+    "Arabica Grading Results_New"
+  ],
+  "label": "Warrant Processor Collection Name",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "description": "Warrant Processor Collection Name"
+}

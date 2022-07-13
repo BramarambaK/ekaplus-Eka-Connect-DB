@@ -1,0 +1,202 @@
+{
+  "_id": "splitlisting_WRNT",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "processorInfo": {
+    "processorId": "b7308d31-d0a6-444f-bfa6-ffe7569a7472"
+  },
+  "label": "",
+  "type": "workflow",
+  "payLoad": "completeData",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start"
+    },
+    "showCheckbox": false,
+    "tableEditing": true,
+    "pagination": false,
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "limitHeight": true,
+    "dropdownDecisions": false,
+    "selectionMode": "none"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "stocksplitcomposite",
+      "decisionName": "stocksplitcomposite",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.splitlisting",
+          "appendMsg": false,
+          "name": "ST_CREATE_PROCESSOR_SPLITS"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Stock Split is successful"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.ST_CREATE_PROCESSOR_SPLITS",
+          "appendMsg": true,
+          "name": "_ST_CREATE_GENERAL_WRNT"
+        },
+        {
+          "data": "output._ST_CREATE_GENERAL_WRNT",
+          "showToaster": true,
+          "resetForm": true,
+          "name": "stocklist"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "ext_stock_ref_no",
+      "width": "30px"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "no_of_units",
+      "event": "if(record.no_of_units)\r\n{\r\n record.quantity=(record.actual_quantity/record.NO_OF_UNITS)*record.no_of_units;\r\n record.quantity=record.quantity.toFixed(5);\r\n }\r\n",
+      "width": "30px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "quantity",
+      "width": "20px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "quantity_unit",
+      "width": "10px"
+    },
+    {
+      "key": "actual_quantity",
+      "hidden": true
+    },
+    {
+      "key": "extstockrefno",
+      "hidden": true
+    },
+    {
+      "key": "shed",
+      "hidden": true
+    },
+    {
+      "key": "activityDate",
+      "hidden": true,
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "key": "stock_ref_no",
+      "hidden": true
+    },
+    {
+      "key": "instrument_name",
+      "hidden": true
+    },
+    {
+      "key": "instrument_name_value",
+      "hidden": true
+    },
+    {
+      "key": "stock_ref_no",
+      "hidden": true
+    },
+    {
+      "key": "quality",
+      "hidden": true
+    },
+    {
+      "key": "warehouse",
+      "hidden": true
+    },
+    {
+      "key": "Profit_Center",
+      "hidden": true
+    },
+    {
+      "key": "Strategy",
+      "hidden": true
+    },
+    {
+      "key": "cropyear",
+      "hidden": true
+    },
+    {
+      "key": "origin",
+      "hidden": true
+    },
+    {
+      "key": "product",
+      "hidden": true
+    },
+    {
+      "key": "Packing_Size",
+      "hidden": true
+    },
+    {
+      "key": "corporate",
+      "hidden": true
+    },
+    {
+      "key": "legal_entity",
+      "hidden": true
+    },
+    {
+      "key": "exchange_lot",
+      "hidden": true
+    },
+    {
+      "key": "port_name",
+      "hidden": true
+    }
+  ],
+  "taskId": "splitlisting",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

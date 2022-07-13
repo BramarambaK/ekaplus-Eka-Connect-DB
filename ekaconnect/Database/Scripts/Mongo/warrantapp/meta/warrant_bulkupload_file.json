@@ -1,0 +1,201 @@
+{
+  "_id": "warrant_bulkupload_file",
+  "createdBy": "Test",
+  "createdOn": "",
+  "fields": {
+    "activityDate": {
+      "activityDate": "Activity Date",
+      "labelKey": "activityDate",
+      "type": "datepicker",
+      "isRequired": true,
+      "valueCheck": "if( new Date('${activityDate}').getTime() <=  new Date().getTime()){return true;}",
+      "maximumDate": "return new Date()",
+      "format": "yyyy-MM-dd"
+    },
+    "warrant_remarks": {
+      "warrant_remarks": "Remarks",
+      "labelKey": "warrant_remarks",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "operations": {
+      "operations": "Request Type",
+      "labelKey": "operations",
+      "type": "dropdown",
+      "propertyKey": "operations",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "instrument_name": {
+      "instrument_name": "Instrument Name",
+      "labelKey": "instrument_name",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "instrument_name_value",
+      "children": ["request_type"],
+      "serviceKey": "mdmDerInstruments"
+    },
+    "instrument_name_value": {
+      "instrument_name_value": "Instrument Name",
+      "labelKey": "instrument_name_value",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "request_type": {
+      "request_type": "Request Type",
+      "labelKey": "request_type",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "parent": ["instrument_name"],
+      "dropdownValue": "Request Type",
+      "serviceKey": "requestTypeMapInstrument"
+    },
+    "request_type_value": {
+      "request_type_value": "Instrument Name",
+      "labelKey": "request_type_value",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "showRecords": {
+      "showRecords": "Show Records",
+      "labelKey": "showRecords",
+      "type": "dropdown",
+      "dataType": "String",
+      "isRequired": false,
+      "propertyKey": "records"
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "uploadedDate",
+      "labelKey": "uploadedDate",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "documentId": {
+      "documentId": "documentId",
+      "labelKey": "documentId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "type": {
+      "type": "Type",
+      "labelKey": "type",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "Upload File",
+      "labelKey": "file",
+      "type": "file",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "description": {
+      "description": "Description",
+      "labelKey": "description",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "validate": {
+      "validate": "Validate",
+      "labelKey": "validate",
+      "type": "textbox"
+    },
+    "download": {
+      "download": "Download A Sample File",
+      "labelKey": "download",
+      "type": "textbox"
+    },
+    "getfile": {
+      "getfile": "Get File",
+      "labelKey": "getfile",
+      "type": "textbox"
+    }
+  },
+  "label": "warrant_bulkupload_file",
+  "label_key": "",
+  "lastModifiedOn": "",
+  "lastModifiey": "Test",
+  "layout": {
+    "fields": [[]]
+  },
+  "name": "warrant_bulkupload_file",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "sys__UUID": "9b3ebdfd-d990-478c-9862-47873bb40792",
+  "tenantID": "",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

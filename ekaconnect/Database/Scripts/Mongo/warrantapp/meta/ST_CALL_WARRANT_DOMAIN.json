@@ -1,0 +1,13 @@
+{
+  "_id": "ST_CALL_WARRANT_DOMAIN",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "0fa7454d-c789-4025-94a1-ecf4a19c4a10"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "ST_CALL_WARRANT_DOMAIN",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

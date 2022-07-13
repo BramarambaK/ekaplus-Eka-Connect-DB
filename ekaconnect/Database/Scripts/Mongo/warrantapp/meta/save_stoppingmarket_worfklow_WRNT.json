@@ -1,0 +1,35 @@
+{
+  "_id": "save_stoppingmarket_worfklow_WRNT",
+  "componentType": "UserTask",
+  "labelKey": "save_stoppingmarket_worfklow_WRNT",
+  "label": "save_stoppingmarket_worfklow_WRNT",
+  "object": "6abda3f2-5e71-46c2-9912-a87bc0451410",
+  "objectAction": "UPDATE",
+  "version": "V2",
+  "layout": {},
+  "fields": [],
+  "decisions": [
+    {
+      "objectAction": "UPDATE",
+      "label": "CREATE",
+      "labelkey": "CREATE",
+      "task": "save_stoppingmarket",
+      "outcomes": [
+        {
+          "data": "output.save_stoppingmarket",
+          "name": "_ST_CREATE_STOPPINGMARKET_BULK",
+          "appendMsg": false
+        },
+        {
+          "data": "output._ST_CREATE_STOPPINGMARKET_BULK",
+          "name": "save_stoppingmarket",
+          "appendMsg": false
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "save_stoppingmarket"
+}

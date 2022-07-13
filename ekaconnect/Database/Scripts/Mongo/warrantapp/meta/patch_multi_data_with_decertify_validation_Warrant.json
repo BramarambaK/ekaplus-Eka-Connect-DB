@@ -1,0 +1,10 @@
+{
+  "_id": "patch_multi_data_with_decertify_validation_Warrant",
+  "name": "patchmultidata_decertify_validation",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "\r\n    if (req.body.selectedData.data) {\r\n      var response = {};\r\n      response = {\r\n        selectedData: req.body.selectedData,\r\n        data_transfer: req.body.selectedData.data\r\n      }\r\n      res.status(200).send(response);\r\n    }\r\n  ",
+  "sys__UUID": "6bb17742-1e3b-4e46-9434-7e7ea155668b",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

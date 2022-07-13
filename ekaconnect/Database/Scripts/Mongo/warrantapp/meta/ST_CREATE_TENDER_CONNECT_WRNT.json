@@ -1,0 +1,11 @@
+{
+  "_id": "ST_CREATE_TENDER_CONNECT_WRNT",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "ST_CREATE_TENDER_CONNECT_WRNT",
+  "label": "Create DeliveryList in System",
+  "object": "8051b482-5856-4c06-8028-908c26d00a7d"
+}

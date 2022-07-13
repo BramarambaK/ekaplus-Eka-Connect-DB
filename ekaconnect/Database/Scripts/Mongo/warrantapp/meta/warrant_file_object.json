@@ -1,0 +1,168 @@
+{
+  "_id": "warrant_file_object",
+  "createdBy": "Test",
+  "createdOn": "",
+  "fields": {
+    "instrument_name": {
+      "instrument_name": "Instrument Name",
+      "labelKey": "instrument_name",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "instrument_name_value",
+      "children": ["request_type"],
+      "serviceKey": "mdmDerInstruments"
+    },
+    "instrument_name_value": {
+      "instrument_name_value": "Instrument Name",
+      "labelKey": "instrument_name_value",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "quality",
+      "labelKey": "quality",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "showRecords": {
+      "showRecords": "Show Records",
+      "labelKey": "showRecords",
+      "type": "dropdown",
+      "dataType": "String",
+      "isRequired": false,
+      "propertyKey": "records"
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "uploadedDate",
+      "labelKey": "uploadedDate",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "documentId": {
+      "documentId": "documentId",
+      "labelKey": "documentId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "type": {
+      "type": "Type",
+      "labelKey": "type",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "Upload File",
+      "labelKey": "file",
+      "type": "file",
+      "dataType": "String",
+      "fileType": ".csv",
+      "isRequired": true
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "description": {
+      "description": "Description",
+      "labelKey": "description",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "validate": {
+      "validate": "Validate",
+      "labelKey": "validate",
+      "type": "textbox"
+    },
+    "download": {
+      "download": "Download A Sample File",
+      "labelKey": "download",
+      "type": "textbox"
+    },
+    "getfile": {
+      "getfile": "Get File",
+      "labelKey": "getfile",
+      "type": "textbox"
+    }
+  },
+  "label": "FILE_OBJECT",
+  "label_key": "",
+  "lastModifiedOn": "",
+  "lastModifiey": "Test",
+  "layout": {
+    "fields": [[]]
+  },
+  "name": "warrant_file_object",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "sys__UUID": "b0895c93-0738-4cd8-a3ce-0546c47c70f5",
+  "tenantID": "",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

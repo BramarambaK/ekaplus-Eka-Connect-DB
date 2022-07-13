@@ -1,0 +1,38 @@
+{
+    "_id" : "Warrant_app",
+    "title" : "Warrant Management",
+    "name" : "warrant",
+    "isTrmIntegrated" : true,
+    "platform_id" : "51",
+    "tenantID" : "",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {}
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5"
+}

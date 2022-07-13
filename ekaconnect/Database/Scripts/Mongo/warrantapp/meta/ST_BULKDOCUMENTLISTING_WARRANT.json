@@ -1,0 +1,11 @@
+{
+  "_id": "ST_BULKDOCUMENTLISTING_WARRANT",
+  "name": "ST_BULKDOCUMENTLISTING",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "var listdata = req.body.selectedData.data;\r\nif (Array.isArray(listdata) && listdata[0]) {\r\n  if (listdata[0].status == true) {\r\n    listdata[0].grading_status = listdata[0].operations;\r\n  }\r\n}\r\nres.status(200).send(listdata);",
+  "sys__UUID": "c9edabb2-a05d-4c8f-8a8a-9690b80fcaf3",
+  "sys__createdBy": "srini@ekaplus.com",
+  "sys__createdOn": "2019-05-22T09:51:04.600Z",
+  "type": "processor"
+}

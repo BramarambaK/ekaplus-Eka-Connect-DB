@@ -1,0 +1,13 @@
+{
+    "_id" : "ST_CREATE_STOCKS_PROCESSOR_SPLIT_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "8ce76a86-606e-425a-9489-ed8ebe999d69"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "ST_CREATE_STOCKS_PROCESSOR_SPLIT",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

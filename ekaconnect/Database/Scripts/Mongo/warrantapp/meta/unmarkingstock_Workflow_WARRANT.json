@@ -1,0 +1,108 @@
+{
+  "_id": "unmarkingstock_Workflow_WARRANT",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Un-Marking for Delivery",
+  "type": "workflow",
+  "payLoad": "selected.stocklist",
+  "processorInfo": {
+    "processorId": "e056968a-7de2-43e3-9fdd-dfe70a043e67"
+  },
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "value": "currentDate",
+        "style": {
+          "width": "130px",
+          "margin-right": "20px"
+        }
+      }
+    ],
+    [
+      {
+        "key": "warrant_remarks"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "data_transfer"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "unmarkingstock",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "UnMarking Success"
+            },
+            "failure": {
+              "message": "Please fix errors"
+            },
+            "successWithWarning": {
+              "message": "Some errors"
+            }
+          },
+          "data": "output.unmarkingstock",
+          "appendMsg": true,
+          "name": "updateunmarkingstock"
+        },
+        {
+          "name": "stocklist",
+          "showToaster": true
+        }
+      ],
+      "label": "OK",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "unmarkingstock",
+  "taskId": "unmarkingstock",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

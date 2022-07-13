@@ -1,0 +1,34 @@
+{
+  "_id": "save_contracts_WRNT",
+  "componentType": "UserTask",
+  "labelKey": "save_contracts_WRNT",
+  "label": "save_contracts_WRNT",
+  "object": "5c2d334d-50aa-4194-a7e6-c9055b744c2e",
+  "objectAction": "UPDATE",
+  "layout": {},
+  "fields": [],
+  "decisions": [
+    {
+      "objectAction": "UPDATE",
+      "label": "CREATE",
+      "labelkey": "CREATE",
+      "task": "save_contracts",
+      "outcomes": [
+        {
+          "data": "output.save_contracts",
+          "name": "ST_UPDATE_CONTRACTS",
+          "appendMsg": false
+        },
+        {
+          "data": "output.ST_UPDATE_CONTRACTS",
+          "name": "save_contracts",
+          "appendMsg": false
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "save_contracts"
+}

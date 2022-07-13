@@ -1,0 +1,66 @@
+{
+  "_id": "warrant_tender_update_object_Connect",
+  "name": "warrant_tender_update_object_Connect",
+  "label": "warrant_tender_update_object_Connect",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["stock_ref_no"],
+  "translatableKeys": [],
+  "fields": {
+    "stock_ref_no": {
+      "stock_ref_no": "Stock Ref No",
+      "labelKey": "stock_ref_no",
+      "type": "hidden",
+      "dataType": "String"
+    },
+
+    "ext_stock_ref_no": {
+      "ext_stock_ref_no": "External Stock Ref No",
+      "labelKey": "ext_stock_ref_no",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "payload": {
+      "payload": "Payload",
+      "labelKey": "payload",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "remarks": {
+      "remarks": "Remarks",
+      "labelKey": "remarks",
+      "type": "textbox",
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "8051b482-5856-4c06-8028-908c26d00a7d"
+}

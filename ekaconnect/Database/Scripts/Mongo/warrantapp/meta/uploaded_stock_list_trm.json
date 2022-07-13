@@ -1,0 +1,336 @@
+{
+  "_id": "uploaded_stock_list_trm",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Stock List",
+  "type": "workflow",
+  "payLoad": "selected.documentoption",
+  "processorInfo": {
+    "processorId": "db1e9841-ed9b-448e-a9e0-8aa5adeab6a8"
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "getInitialData": false,
+    "options": {
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "reset": false,
+      "export": true,
+      "sessionStateDisable": false,
+      "headerFilter": {
+        "label": "Select",
+        "field": "status",
+        "options": [
+          {
+            "label": "All",
+            "value": "reset"
+          },
+          {
+            "label": "True",
+            "value": true
+          },
+          {
+            "label": "False",
+            "value": false
+          }
+        ]
+      }
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "preserveSelectedData": true,
+    "scrollHeight": "336px",
+    "menu": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategenraldetail",
+          "data": "selected.creategenraldetail"
+        }
+      ],
+      "label": "General Details",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentoption",
+          "data": "selected.documentoption"
+        }
+      ],
+      "label": "Upload Stocks",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "uploadedstocks",
+          "data": "selected.uploadedstocks"
+        }
+      ],
+      "label": "Stock Records",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentoption"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "uploadedstocks",
+      "label": "SAVE",
+      "type": "submit",
+      "payload": "completeData",
+      "position": "bottom",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Request created"
+            },
+            "failure": {
+              "message": "Request Failed"
+            },
+            "successWithWarning": {
+              "message": "Request created"
+            }
+          },
+          "data": "output.uploadedstocks",
+          "appendMsg": true,
+          "name": "_ST_PROCESS_TASK_FILTER_BAD_REQUEST"
+        },
+        {
+          "name": "stocklist"
+        }
+      ]
+    }
+  ],
+  "labelKey": "Stock_list_from_trm",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "error"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "activityDate",
+      "hidden": true,
+      "value": "${selected.creategenraldetail.activityDate}"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "instrument_name",
+      "hidden": true,
+      "value": "${selected.creategenraldetail.instrument_name}"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "instrument_name_value",
+      "hidden": true,
+      "value": "${selected.creategenraldetail.instrument_name_value}"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "request_type",
+      "hidden": true,
+      "value": "${selected.creategenraldetail.request_type}"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "warrant_remarks",
+      "hidden": true,
+      "value": "${selected.creategenraldetail.warrant_remarks}"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "stock_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ext_stock_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "warehouse"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "grading_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "grading_date"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "container_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ico_marks"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "exchange_lot"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ico_marks"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "storage_date"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "packaging"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "stock_condition"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "no_of_units"
+    },
+    {
+      "hidden": true,
+      "key": "certification_status",
+      "value": "Not-Certified"
+    },
+    {
+      "hidden": true,
+      "key": "exchangeDeliveryStatus",
+      "value": "Delivered to Exchange"
+    },
+    {
+      "key": "internal_grd_dgrd_ref_no",
+      "hidden": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "warehouse_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "actual_quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "sample_status"
+    },
+    {
+      "hidden": true,
+      "key": "Stock_Update_Status",
+      "value": "Pending"
+    },
+    {
+      "hidden": true,
+      "key": "Stock_Update_Date"
+    },
+    {
+      "hidden": true,
+      "key": "Weight_Final",
+      "value": "N"
+    },
+    {
+      "hidden": true,
+      "key": "Weight_Update_Available",
+      "value": "N"
+    },
+    {
+      "hidden": true,
+      "key": "Current_GMR_Activity"
+    },
+    {
+      "key": "title_transfer_status",
+      "value": "In",
+      "hidden": true
+    }
+  ],
+  "taskId": "uploadedstocks",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

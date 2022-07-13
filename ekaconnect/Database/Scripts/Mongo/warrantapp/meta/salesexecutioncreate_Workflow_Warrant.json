@@ -1,0 +1,257 @@
+{
+  "_id": "salesexecutioncreate_Workflow_Warrant",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Create Sales Execution",
+  "type": "workflow",
+  "payLoad": "selected.exchangedeliverylist",
+  "layout": {
+    "processorInfo": {
+      "processorId": "000a7abf-2ad6-47a7-ad48-93dea8979ef8"
+    },
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "style": {
+          "width": "205px",
+          "margin-right": "30px"
+        }
+      },
+      {
+        "key": "sales_contract_ref_no",
+        "style": {
+          "width": "205px"
+        }
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "205px"
+        },
+        "key": "warrant_remarks"
+      }
+    ],
+    [
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "sales_contract_flag",
+        "value": "true"
+      },
+      {
+        "key": "ext_stock_ref_no",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "storage_location",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quantity_unit",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "CP_Name",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "product",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "origin",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "crop_year",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quality",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quantity_unit",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "Packing_Size",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "no_Of_Units",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quantity",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "edmarkrefno",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "title_transfer_status",
+        "value": "In",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "exchangedeliverylist",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "salesexecutioncreate",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Sales Execution completed, GMR Ref No has been created successfully"
+            },
+            "failure": {
+              "message": " Sales contract execution is failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract execution is failed, please try once again"
+            }
+          },
+          "data": "output.salesexecutioncreate",
+          "appendMsg": false,
+          "name": "_ST_CREATE_DELIVERYSTOCK_WRNT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Sales Execution completed, GMR Ref No has been created successfully"
+            },
+            "failure": {
+              "message": " Sales contract execution is failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract execution is failed, please try once again"
+            }
+          },
+          "data": "output.salesexecutioncreate",
+          "appendMsg": false,
+          "name": "ST_PROCESSOR_CREATE_SALE_EXECUTION"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Sales Execution completed, GMR Ref No has been created successfully"
+            },
+            "failure": {
+              "message": "Sales contract execution is failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": "Sales contract execution is failed, please try once again"
+            }
+          },
+          "name": "ST_UPDATE_CONTRACTS",
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output.ST_PROCESSOR_CREATE_SALE_EXECUTION",
+              "value": "GMR_Ref_No"
+            }
+          ],
+          "data": "output.ST_PROCESSOR_CREATE_SALE_EXECUTION"
+        },
+        {
+          "name": "exchangedeliverylist",
+          "showToaster": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "exchangedeliverylist",
+          "resetForm": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "salesexecutioncreate",
+  "taskId": "salesexecutioncreate",
+  "object": "13ef7767-ff43-41ce-a109-fd63ef5b0ddf"
+}

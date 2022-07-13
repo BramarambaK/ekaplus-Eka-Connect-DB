@@ -1,0 +1,70 @@
+{
+  "_id": "stocksplitcomposite_WRNT",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "20px"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "stocksplitcomposite",
+      "executeDecision": true,
+      "style": {
+        "margin-right": "20px"
+      },
+      "outcomes": [
+        {
+          "data": "output.stocksplitcomposite",
+          "name": "stocksplitcomposite"
+        }
+      ],
+      "label": "SPLIT",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "label": "Stock Split",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "isPopUp": true,
+    "footer": true,
+    "name": "customv2",
+    "preserveSelectedData": true
+  },
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "stocksplitcomposite",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "data": "selected.stocklist",
+      "name": "stocksplitstocklist"
+    },
+    {
+      "name": "splitdropdown"
+    },
+    {
+      "name": "splitlisting",
+      "data": "selected"
+    }
+  ]
+}

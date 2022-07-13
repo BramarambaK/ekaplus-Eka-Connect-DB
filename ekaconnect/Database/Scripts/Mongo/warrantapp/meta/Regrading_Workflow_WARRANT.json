@@ -1,0 +1,107 @@
+{
+  "_id": "Regrading_Workflow_WARRANT",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Request For Regrading",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "d95f43d4-0a2b-49bd-9cfa-8b8073ae54ad"
+  },
+  "payLoad": "selected.stocklist",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "style": {
+          "width": "130px",
+          "margin-right": "20px"
+        }
+      }
+    ],
+    [
+      {
+        "key": "warrant_remarks"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "data_transfer"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "regradingstock",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got deleted with some errors"
+            }
+          },
+          "data": "output.regradingstock",
+          "appendMsg": true,
+          "name": "updateregradingstatus"
+        },
+        {
+          "name": "stocklist",
+          "showPopUp": false
+        }
+      ],
+      "label": "OK",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "regrading_stock",
+  "taskId": "regradingstock",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

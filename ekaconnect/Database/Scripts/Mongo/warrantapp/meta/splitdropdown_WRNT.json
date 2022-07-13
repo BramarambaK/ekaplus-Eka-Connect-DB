@@ -1,0 +1,68 @@
+{
+  "_id": "splitdropdown_WRNT",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "splitdropdown",
+      "decisionName": "splitdropdown",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": ["splitlisting"]
+        }
+      ],
+      "label": "Go"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px",
+          "margin-right": "15px"
+        },
+        "key": "activityDate",
+        "event": "for(var i=0;i<data.splitlisting.length;i++){data.splitlisting[i]['activityDate']='';data.splitlisting[i]['activityDate']=data.splitdropdown.activityDate}console.log(data);"
+      },
+      {
+        "key": "gosplitbtn",
+        "type": "button",
+        "decision": "splitdropdown",
+        "btnClass": "btn-outline-dark custom-btn",
+        "label": "Go",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-top": "20px",
+          "margin-left": "-1px"
+        }
+      }
+    ]
+  ],
+  "labelKey": "",
+  "label": "",
+  "layout": {
+    "defaultFormItemStyle": {
+      "padding-bottom": "10px"
+    },
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "type": "row"
+  },
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "splitdropdown",
+  "type": "workflow"
+}

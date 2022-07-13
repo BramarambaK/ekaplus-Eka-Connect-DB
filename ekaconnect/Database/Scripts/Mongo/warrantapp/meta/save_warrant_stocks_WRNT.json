@@ -1,0 +1,35 @@
+{
+  "_id": "save_warrant_stocks_WRNT",
+  "componentType": "UserTask",
+  "labelKey": "save_warrant_stocks_WRNT",
+  "label": "save_warrant_stocks_WRNT",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "objectAction": "UPDATE",
+  "version": "V2",
+  "layout": {},
+  "fields": [],
+  "decisions": [
+    {
+      "objectAction": "UPDATE",
+      "label": "CREATE",
+      "labelkey": "CREATE",
+      "task": "save_warrant_stocks",
+      "outcomes": [
+        {
+          "data": "output.save_warrant_stocks",
+          "name": "_ST_CREATE_WARRANTDATA_BULK",
+          "appendMsg": false
+        },
+        {
+          "data": "output._ST_CREATE_WARRANTDATA_BULK",
+          "name": "save_warrant_stocks",
+          "appendMsg": false
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "save_warrant_stocks"
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "patch_multi_data_Warrant",
+  "name": "patchmultidata",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "\r\n    if (req.body.selectedData.data)\r\n      req.body['data_transfer'] = req.body.selectedData.data\r\n    req.body['activityDate'] = new Date();\r\n    var response = {};\r\n    response = {\r\n      data_transfer: req.body.data_transfer,\r\n      activityDate: req.body.activityDate,\r\n      selectedData: req.body.selectedData\r\n    }\r\n    res.status(200).send(response)\r\n ",
+  "sys__UUID": "e0697297-d78a-4329-8959-8789064c017b",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

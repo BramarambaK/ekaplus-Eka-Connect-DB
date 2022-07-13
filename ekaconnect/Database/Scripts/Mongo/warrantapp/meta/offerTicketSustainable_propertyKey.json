@@ -1,0 +1,22 @@
+{
+  "_id": "offerTicketSustainable_propertyKey",
+  "type": "property",
+  "name": "offerTicketSustainable",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "150",
+  "defaultValue": [
+    {
+      "key": "Yes",
+      "value": "Yes"
+    },
+    {
+      "key": "No",
+      "value": "No"
+    }
+  ],
+  "label": "Warehoused Ticket Offer Sustainable",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Property is used to display dropdown of warehoused ticket sustainable"
+}

@@ -1,0 +1,42 @@
+{
+  "_id": "operations_propertyKey",
+  "type": "property",
+  "name": "operations",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Cancellation",
+      "value": "Cancellation"
+    },
+    {
+      "key": "Appeal",
+      "value": "Appeal"
+    },
+    {
+      "key": "Re-Grading",
+      "value": "Re-Grading"
+    },
+    {
+      "key": "De-certify",
+      "value": "De-certify"
+    },
+    {
+      "key": "Undo-Decertify",
+      "value": "Undo-Decertify"
+    },
+    {
+      "key": "Marking for Delivery",
+      "value": "Marking for Delivery"
+    },
+    {
+      "key": "Un-Marking for Delivery",
+      "value": "Un-Marking for Delivery"
+    }
+  ],
+  "label": "Operations Dropdown",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "description": "Property is used to show dropdown values(Cancellation/Appeal/Re-Grading/De-certify/Undo-Decertify/Marking for Delivery/Un-Marking for Delivery)"
+}

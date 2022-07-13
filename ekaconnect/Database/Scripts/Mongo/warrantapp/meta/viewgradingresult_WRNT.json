@@ -1,0 +1,51 @@
+{
+    "_id" : "viewgradingresult_WRNT",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "a5854c93-5e5d-43ed-a50d-3d7f1e79e9f2"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "label" : "${ext_stock_ref_no} Grading Results",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "data-view",
+        "template" : "<div class='warrantgrading'><div class='row headerdetails'><h4 class='headertext'>Main Details</h4></div><div class='row flexcontainer'>#{selected.data.maindetails *=<div class='flexcontainercolumn'>${item.key}:</div><div class='flexcontainercolumn'>${item.value}</div>}</div><br /><div class='row headerdetails'><h4 class='headertext'>Quality Impacted Attributes</h4></div><div class='row flexcontainer'>#{selected.data.qualityimpactedattributes *=<div class='flexcontainercolumn'>${item.key}:</div><div class='flexcontainercolumn'>${item.value}</div>}</div><br /><div class='row headerdetails'><h4 class='headertext'>Cost Impacted Attributes</h4></div><div class='row flexcontainer'>#{selected.data.costimpactedattributes *=<div class='flexcontainercolumn'>${item.key}:</div><div class='flexcontainercolumn'>${item.value}</div>}</div><br /><div class='row headerdetails'><h4 class='headertext'>Other Details</h4></div><div class='row flexcontainer'>#{selected.data.otherattributes *=<div class='flexcontainercolumn'>${item.key}:</div><div class='flexcontainercolumn'>${item.value}</div>}</div><br /><br /><br /><br /><br /><br /></div>",
+        "options" : {
+            "hideRowHeader" : false,
+            "columnWidth" : "30px",
+            "popupWidth" : "490px"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "stocklist"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "stocklist"
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CLOSE",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "ViewGradingResults",
+    "taskId" : "viewgradingresult",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

@@ -1,0 +1,81 @@
+{
+  "_id": "viewedmarkedlist_WRNT",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "payLoad": "selected.exchangedeliverylist",
+  "type": "workflow",
+  "layout": {
+    "header": true,
+    "header": {
+      "field": "edmarkrefno",
+      "title": "ED Mark Ref No:"
+    },
+    "getInitialData": {
+      "filterBy": {
+        "payLoadData": ["edmarkrefno"]
+      }
+    },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": false,
+    "preserveSelectedData": true,
+    "limitHeight": true,
+    "limitHeight": true,
+    "pagination": false,
+    "selectionMode": "none"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "exchangedeliverylist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "ED MARK REF NO",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "ext_stock_ref_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "stock_ref_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "label": "Quantity",
+      "key": "actual_quantity"
+    }
+  ],
+  "taskId": "viewedmarkedlist",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

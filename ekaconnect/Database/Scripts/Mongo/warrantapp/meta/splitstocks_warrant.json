@@ -1,0 +1,30 @@
+{
+  "_id": "splitstocks_warrant",
+  "componentType": "ChainedSystemTask",
+  "version": "V2",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Stocks Split",
+  "type": "workflow",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "tags": "listener,Warrant Split",
+  "taskId": "splitstocks",
+  "chainedTasks": [
+    {
+      "data": "output.splitstocks",
+      "name": "ST_CREATE_STOCKS_PROCESSOR_SPLIT",
+      "appendMsg": false
+    },
+    {
+      "data": "output.ST_CREATE_STOCKS_PROCESSOR_SPLIT",
+      "appendMsg": false,
+      "name": "_ST_CREATE_GENERAL_WRNT"
+    },
+    {
+      "data": "output._ST_CREATE_GENERAL_WRNT",
+      "appendMsg": true,
+      "name": "stocklist"
+    }
+  ]
+}

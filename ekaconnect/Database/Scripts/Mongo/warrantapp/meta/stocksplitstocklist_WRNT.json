@@ -1,0 +1,65 @@
+{
+  "_id": "stocksplitstocklist_WRNT",
+  "componentType": "UserTask",
+  "decisions": [],
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "stock_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ext_stock_ref_no"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "no_of_units"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Packing_Size"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "actual_quantity"
+    }
+  ],
+  "label": "",
+  "labelKey": "",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "preserveSelectedData": true,
+    "dropdownDecisions": false,
+    "showCheckbox": false,
+    "limitHeight": true,
+    "pagination": false,
+    "selectionMode": "none"
+  },
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "stocksplitstocklist",
+  "type": "workflow"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "selectedData_createpurchasecontract_processor_Warrant",
+    "name" : "selectedData_createpurchasecontract",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "snippet" : "var selected = {};\r\n    selected = req.body.selectedData.data[0];\r\n    res.status(200).send(selected);",
+    "sys__UUID" : "a456c7ba-8164-4ebb-8edd-408cc872d088",
+    "sys__createdBy" : "ekauser@ekaplus.com"
+}

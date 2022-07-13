@@ -1,0 +1,263 @@
+{
+  "_id": "purchaseexecutioncreate_Workflow_Warrant",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Create Purchase Execution",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "ac3e60c3-7db1-458c-8d69-e735daba15a6"
+  },
+  "payLoad": "selected.stoppingmarketstockslist",
+  "layout": {
+    "processorInfo": {
+      "processorId": "cbaf9849-7f83-4cc0-a7fe-da783ff63c43"
+    },
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "style": {
+          "width": "205px",
+          "margin-right": "30px"
+        }
+      },
+      {
+        "key": "purchase_contract_ref_no",
+        "style": {
+          "width": "205px"
+        }
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "205px"
+        },
+        "key": "warrant_remarks"
+      }
+    ],
+    [
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "purchase_contract_flag",
+        "value": "true"
+      },
+      {
+        "key": "ext_stock_ref_no",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "storage_location",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quantity_unit",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "CP_Name",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "product",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "origin",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "crop_year",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quality",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quantity_unit",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "Packing_Size",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "no_Of_Units",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quantity",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "instrument_name",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "grading_status",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "certification_status",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "title_transfer_status",
+        "value": "In",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "exchange_lots",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "corporate",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "internalContractItemRefNo",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stoppingmarketstockslist",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "purchaseexecutioncreate",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Purchase execution has been created successfully"
+            },
+            "failure": {
+              "message": " Purchase execution is failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Purchase contract execution is failed, please try once again"
+            }
+          },
+          "data": "output.purchaseexecutioncreate",
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output.ST_PROCESSOR_CREATE_PURCHASE_EXECUTION",
+              "value": "GMR_Ref_No"
+            }
+          ],
+          "name": "ST_PROCESSOR_CREATE_PURCHASE_EXECUTION"
+        },
+        {
+          "name": "stoppingmarketstockslist",
+          "showToaster": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stoppingmarketstockslist",
+          "resetForm": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "purchaseexecutioncreate",
+  "taskId": "purchaseexecutioncreate",
+  "object": "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

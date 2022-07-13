@@ -1,0 +1,13 @@
+{
+  "_id": "property_default_selection_WRNT",
+  "type": "property",
+  "name": "property_default_selection",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "120",
+  "defaultValue": "50",
+  "label": "property_default_selection",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "description": "property_default_selection"
+}

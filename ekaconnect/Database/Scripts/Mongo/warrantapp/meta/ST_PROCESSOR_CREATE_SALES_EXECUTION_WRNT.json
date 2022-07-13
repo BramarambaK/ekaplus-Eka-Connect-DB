@@ -1,0 +1,13 @@
+{
+    "_id" : "ST_PROCESSOR_CREATE_SALES_EXECUTION_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "4aae2041-9555-4f36-ad8b-2329e1f66522"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "ST_PROCESSOR_CREATE_SALES_EXECUTION",
+    "object" : "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

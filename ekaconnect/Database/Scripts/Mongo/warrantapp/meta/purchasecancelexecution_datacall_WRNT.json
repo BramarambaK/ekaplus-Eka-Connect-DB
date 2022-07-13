@@ -1,0 +1,10 @@
+{
+  "_id": "purchasecancelexecution_datacall_WRNT",
+  "name": "createpurchaseexecutionMDM_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "\r\n    let selectedData = JSON.stringify(req.body.selectedData.data);\r\n    var output = {\r\n      selectedData: selectedData\r\n    };\r\n    res.status(200).send(output);\r\n  ",
+  "sys__UUID": "c07dbe88-a2d8-4d84-9682-ef0b91df33b0",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

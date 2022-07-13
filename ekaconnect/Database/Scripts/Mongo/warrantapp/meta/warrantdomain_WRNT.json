@@ -1,0 +1,35 @@
+{
+  "_id": "warrantdomain_WRNT",
+  "componentType": "UserTask",
+  "processorInfo": {
+    "processorId": "0fa7454d-c789-4025-94a1-ecf4a19c4a10"
+  },
+  "decisions": [],
+  "fields": [],
+  "label": "Warrant Domain",
+  "labelKey": "Warrant_Domain",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "selectionMode": "multiple",
+    "showCheckbox": true,
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "selectAll": true
+  },
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "warrantdomain",
+  "type": "workflow"
+}
