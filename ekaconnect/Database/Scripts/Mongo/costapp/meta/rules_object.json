@@ -1,0 +1,170 @@
+{
+  "_id": "rules_object",
+  "name": "rules",
+  "label": "Rules Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["rule_name"],
+  "translatableKeys": [],
+  "fields": {
+    "rule_name": {
+      "rule_name": "Rule Name",
+      "labelKey": "rule_name",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "attributes": {
+      "attributes": "Attributes",
+      "labelKey": "attributes",
+      "type": "multiselect",
+      "isRequired": true,
+      "dataType": "String",
+      "propertyKey": "attributes",
+      "children": [
+        "contractType",
+        "contractIncoterm",
+        "valuationIncoterm",
+        "paymentTerm"
+      ]
+    },
+    "attributeslisting": {
+      "attributeslisting": "Attributes",
+      "labelKey": "attributeslisting",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costcomponentTemplateslisting": {
+      "costcomponentTemplateslisting": "Cost Component Template",
+      "labelKey": "costcomponentTemplateslisting",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractType": {
+      "contractType": "Contract Type",
+      "labelKey": "contractType",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "Contract Type",
+      "serviceKey": "contractType",
+      "UIupdates": {
+        "visibility": "return '${attributes}'.includes('Contract Type') ? true : false"
+      }
+    },
+    "Contract Type": {
+      "Contract Type": "Contract Type",
+      "labelKey": "Contract Type",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractIncoterm": {
+      "contractIncoterm": "Contract Incoterm",
+      "labelKey": "contractIncoterm",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "Contract Incoterm",
+      "serviceKey": "incoterm",
+      "UIupdates": {
+        "visibility": "return '${attributes}'.includes('Contract Incoterm') ? true : false"
+      }
+    },
+    "Contract Incoterm": {
+      "Contract Incoterm": "Contract Incoterm",
+      "labelKey": "Contract Incoterm",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "valuationIncoterm": {
+      "valuationIncoterm": "Valuation Incoterm",
+      "labelKey": "valuationIncoterm",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "Valuation Incoterm",
+      "serviceKey": "incoterm",
+      "UIupdates": {
+        "visibility": "return '${attributes}'.includes('Valuation Incoterm') ? true : false"
+      }
+    },
+    "Valuation Incoterm": {
+      "Valuation Incoterm": "Valuation Incoterm",
+      "labelKey": "Valuation Incoterm",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "paymentTerm": {
+      "paymentTerm": "Payment Term",
+      "labelKey": "paymentTerm",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "Payment Term",
+      "serviceKey": "paytermlist_phy",
+      "UIupdates": {
+        "visibility": "return '${attributes}'.includes('Payment Term') ? true : false"
+      }
+    },
+    "Payment Term": {
+      "Payment Term": "Payment Term",
+      "labelKey": "Payment Term",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costcomponentTemplates": {
+      "costcomponentTemplates": "Cost Component Template",
+      "labelKey": "costcomponentTemplates",
+      "type": "multiselect",
+      "isRequired": true,
+      "dataType": "String",
+      "objectDataKey": [
+        "costcomponentlistplatform",
+        "templateName",
+        "templateName"
+      ]
+    },
+	"corporateId": {
+      "corporateId": "Corporate Id",
+      "labelKey": "corporateId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+	"corporateName": {
+      "corporateName": "Corporate Name",
+      "labelKey": "corporateName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "2d3221f6-0717-4f08-b380-25c7094dcd0b"
+}

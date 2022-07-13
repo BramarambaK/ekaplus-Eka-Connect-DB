@@ -1,0 +1,21 @@
+{
+    "_id" : "EXT_BULK_IMPORT_VALIDATION_TASK",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+	"authorization":"system",
+    "isAsynchCallRequired" : "Y",
+    "apiInfo" : {
+        "host" : "${properties.eka_utility_host}",
+        "path" : "/costapp/v2/validateCostEstimatesInternal",
+        "headers" : {},
+        "method" : "POST",
+        "responseDataKey" : "",
+        "body" : {}
+    },
+    "taskId" : "EXT_BULK_IMPORT_VALIDATION_TASK",
+    "object" : "6cdd3b23-84fd-42e6-91ea-3cc188127749",
+    "sys__UUID" : "9cf79a76-2efe-4eab-a9af-e1f809e0b8dd"
+}

@@ -1,0 +1,19 @@
+{
+    "_id": "train_cost_component_recommedation_trigger_workflow",
+    "version": "V2",
+    "componentType": "ChainedSystemTask",
+    "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "objectAction": "CREATE",
+    "taskId": "train_cost_component_recommedation_trigger_workflow",
+    "refType": "app",
+    "tags": "recommendation",
+    "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "isScheduled": false,
+    "type": "workflow",
+    "chainedTasks": [ 
+				{
+                    "name": "_EXT_CALL_TRAIN_COST_COMPONENT_RECOMMENDATION_API",
+                    "appendMsg": false
+                }
+	]
+}

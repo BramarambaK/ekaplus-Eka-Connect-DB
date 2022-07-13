@@ -1,0 +1,23 @@
+{
+    "_id" : "EXT_BULK_SAVE_COST",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "apiInfo" : {
+        "path" : "/costapp/saveCostEstimates",
+        "headers" : {
+            "Content-Type" : "application/json",
+            "Accept" : "application/json"
+        },
+        "inputMapping" : {},
+        "method" : "POST",
+        "useInputMapping" : false,
+        "host" : "${properties.eka_utility_host}",
+        "body" : {}
+    },
+    "taskId" : "EXT_BULK_SAVE",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "sys__UUID" : "2e69921a-37ce-4190-a691-81b6d8da04da"
+}

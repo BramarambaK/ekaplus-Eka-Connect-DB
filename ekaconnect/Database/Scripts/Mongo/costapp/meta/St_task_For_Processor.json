@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_PROCESS_ESTIMATE_SAVE_COSTAPP",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "cd2693fd-5a6c-47bf-aed0-2c4831451816"
+    },
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_ESTIMATE_SAVE_COSTAPP",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "sys__UUID" : "1ae032ce-aa7d-4d3e-af10-905f6ba35a73"
+}

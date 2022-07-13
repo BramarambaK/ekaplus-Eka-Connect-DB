@@ -1,0 +1,30 @@
+{
+  "_id": "menuObject_costapp_Mobile",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Cost App Maintenance",
+          "menuItems": [
+            {
+              "items": [
+                {
+                  "handler": "costcomponentlistplatform",
+                  "text": "Cost Components"
+                },
+                {
+                  "handler": "costestimatelistplatform",
+                  "text": "Cost Estimates"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deviceType": "mobile"
+}

@@ -1,0 +1,123 @@
+{
+    "_id" : "editcostcomponent_CostApp_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Cost Component",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "edit",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "processorInfo" : {
+            "processorId" : "0878f64e-7fb4-4b89-bffe-0700c6122f4b"
+        },
+        "header" : {
+            "title" : "Edit Cost Component"
+        },
+        "formLayoutStyle" : {
+            "height" : "450px"
+        }
+    },
+    "input" : [ 
+        "costComponent"
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "costcomponentlistplatform",
+                    "action" : "Cancel",
+                    "type" : "client"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "Cancel",
+            "position" : "TopLeft"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editcostcomponent",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got replaced with some errors"
+                        }
+                    },
+                    "data" : "output.editcostcomponent",
+                    "appendMsg" : true,
+                    "name" : "_ST_EDIT_COST_COMPONENT"
+                }, 
+                {
+                    "name" : "costcomponentlistplatform",
+                    "showPopUp" : false
+                }
+            ],
+            "label" : "Update",
+            "position" : "TopRight",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "EDIT_COST",
+   "fields" : [ 
+        [ 
+            {
+                "key" : "templateName"
+            }, 
+            {
+                "key" : "costComponent"
+            }, 
+            {
+                "key" : "counterpartyGroupName"
+            }, 
+            {
+                "key" : "estimateFor"
+            }, 
+            {
+                "key" : "incExpense"
+            }, 
+            {
+                "key" : "rateTypePrice"
+            }, 
+            {
+                "key" : "costCurve"
+            }, 
+            {
+                "key" : "costMonth"
+            }, 
+            {
+                "key" : "group"
+            }
+        ]
+    ],
+    "taskId" : "editcostcomponent",
+    "object" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "deviceType" : "mobile"
+}

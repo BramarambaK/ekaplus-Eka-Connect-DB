@@ -1,0 +1,26 @@
+{
+  "_id": "records_propertyKey_cost",
+  "type": "property",
+  "name": "records",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "Total Records",
+      "value": "Total Records"
+    },
+    {
+      "key": "Successful Records",
+      "value": "Successful Records"
+    },
+    {
+      "key": "Error/Bad Records",
+      "value": "Error/Bad Records"
+    }
+  ],
+  "label": "Records Dropdown",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "description": "Property is used to show type of records in costapp"
+}

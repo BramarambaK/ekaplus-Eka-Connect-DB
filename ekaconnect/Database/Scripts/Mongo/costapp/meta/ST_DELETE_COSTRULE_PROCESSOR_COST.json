@@ -1,0 +1,10 @@
+{
+  "_id": "ST_DELETE_COSTRULE_PROCESSOR_COST",
+  "name": "ST_DELETE_COSTRULE_PROCESSOR",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": "var connect = {\r\n      method: 'GET',\r\n      url:\r\n        req.body.propertyList.eka_connect_host +\r\n        '/data/d33143ac-4164-4a3f-8d30-61d845c9eeed/2d3221f6-0717-4f08-b380-25c7094dcd0b',\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_connect() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(connect, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_connect().then(result => {\r\n      let x = result;\r\n      let y = req.body;\r\n      for (var i = 0; i < result.length; i++) {\r\n        var costcomponentTemplates = [];\r\n        delete result[i]['sys__data__state'];\r\n        delete result[i]['_id'];\r\n        costcomponentTemplates = result[i]['costcomponentTemplates'];\r\n        for (var j = 0; j < costcomponentTemplates.length; j++) {\r\n          if (costcomponentTemplates[j] == req.body.templateName) {\r\n            costcomponentTemplates.splice(j, 1);\r\n            j--;\r\n          }\r\n        }\r\n        result[i]['costcomponentTemplates'] = costcomponentTemplates;\r\n      }\r\n      res.status(200).send(result);\r\n    });",
+  "sys__UUID": "3c09b04e-087b-48d4-bb78-729bbb6cf189",
+  "sys__createdBy": "srini@ekaplus.com"
+}

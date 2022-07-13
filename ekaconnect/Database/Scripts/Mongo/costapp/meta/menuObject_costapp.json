@@ -1,0 +1,50 @@
+{
+  "_id": "menuObject_costapp",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "sys__UUID" : "e7182569-06cd-4709-962e-14b670397742",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Cost App Maintenance",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "costcomponentlistplatform",
+                  "text": "Cost Components",
+                  "iconCls": "app-menu-icon"
+                },
+                {
+                  "handler" : "costestimatelistplatform",
+                  "text" : "Cost Estimates",
+                  "iconCls" : "app-menu-icon"
+                }, 
+                {
+                 "handler" : "costestimatebulkupload",
+                 "text" : "Cost Estimates Bulk Upload",
+                 "iconCls" : "app-menu-icon"
+                }, 
+                {
+                  "handler": "ruleslist",
+                  "text": "Rules",
+                  "iconCls": "app-menu-icon"
+                },
+                {
+                  "handler": "auditlogcollectionlist",
+                  "text": "Audit Log",
+                  "iconCls": "app-menu-icon"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

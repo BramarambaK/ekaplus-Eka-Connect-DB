@@ -1,0 +1,516 @@
+{
+  "_id": "pbstempcostestimateedit_CostApp",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "",
+  "type": "workflow",
+  "version": "V2",
+  "processorInfo": {
+    "processorId": "e6ea578c-13ad-4562-a2b7-80ee8985dd9f",
+    "isProcessorOnly": true
+  },
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "e6ea578c-13ad-4562-a2b7-80ee8985dd9f"
+    }
+  },
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "getInitialData": {
+      "filterBy": {
+        "params": [
+          "contractPrice",
+          "entityRefNo",
+          "entityType",
+          "isPopUp",
+          "itemQty",
+          "itemQtyUnitId",
+          "payInCurId",
+          "priceType",
+          "productId",
+          "showMenu"
+        ]
+      }
+    },
+    "name": "edit",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "processorInfo": {
+      "processorId": "14d0841a-ae1d-48c7-b129-d300b1b025ba"
+    },
+    "header": {
+      "title": "Edit Cost Estimate"
+    },
+    "formLayoutStyle": {
+      "height": "515px"
+    }
+  },
+  "input": ["costComponent"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "pbstempcostestimatelist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "pbstempcostestimateedit",
+      "outcomes": [
+        {
+          "data": "output.pbstempcostestimateedit",
+          "name": "_UNIQUENESS_CHECK_PROCESS"
+        },
+        {
+          "displayType": "popup",
+          "data": "output._UNIQUENESS_CHECK_PROCESS",
+          "name": "warningpoptemppbsedit",
+          "condition": "return ${condition}==false"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got replaced with some errors"
+            }
+          },
+          "data": "output._UNIQUENESS_CHECK_PROCESS",
+          "appendMsg": true,
+          "name": "_ST_EDIT_TEMPCOSTESTIMATE"
+        },
+        {
+          "name": "pbstempcostestimatelist",
+          "showPopUp": false
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDIT_COST",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "costComponent",
+        "filter": true
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costComponentDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "contractItemRefNo"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "contractItemRefNoDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "profitCenter",
+        "disabled": true,
+        "type": "textbox"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "counterpartyGroupName",
+        "virtualScroll": true,
+        "filter": true
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "counterpartyGroupNameDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "incExpense"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "incExpenseDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "estimateFor"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "estimateForDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "quantity",
+        "disabled": true,
+        "type": "textbox"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "rateTypePrice"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "rateTypePriceDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "costCurve"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costCurveDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "costMonth"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costMonthDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "curveCurrency"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "curveCurrencyDisplayName"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "curveCurrencySplit"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "width": "9%"
+        },
+        "key": "costValue",
+        "roundoff": "8"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "9%"
+        },
+        "key": "costPriceUnitId",
+        "filter": true
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "costPriceUnitIdDisplayName"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "width": "9%"
+        },
+        "key": "costAmountInBaseCurrency",
+        "disabled": true,
+        "UIupdates": {
+          "value": "if ('${rateTypePrice}' == 'rate') {  if ('${costValue}' == 'null') {    return null;  } else {    var x = '${costPriceUnitIdDisplayName}'.split('/');    if (      x[0].toLowerCase() == 'US cents'.toLowerCase() ||      x[0].toLowerCase() == 'USc'.toLowerCase() ||      x[0].toLowerCase() == 'UScents'.toLowerCase()    ) {      return ${costValue}*(\"${quantity}\".split(' ')[0])/(${conversionFactor}*100)    } else {      return ${costValue}*(\"${quantity}\".split(' ')[0])/${conversionFactor}    }  }}else if ('${rateTypePrice}' == 'absolute') {  if ('${costValue}' == 'null') {    return null;  } else {    if (      '${costPriceUnitIdDisplayName}'.toLowerCase() ==        'US cents'.toLowerCase() ||      '${costPriceUnitIdDisplayName}'.toLowerCase() == 'USc'.toLowerCase() ||      '${costPriceUnitIdDisplayName}'.toLowerCase() == 'UScents'.toLowerCase()    ) {      return ${costValue}/100    } else {      return ${costValue}    }  }} else if ('${rateTypePrice}' == '% of Price') {  if ('${costValue}' == 'null') {    return null;  } else {    return (${costValue}*${itemQty}*(\"${contractPrice}\".split(' ')[0]))/100  }} else if ('${rateTypePrice}' == 'curve') {  return null;}"
+        }
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "9%"
+        },
+        "key": "costAmountInBaseCurrencyUnitId",
+        "disabled": true
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "fxToBaseType"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "fxToBase",
+        "type": "textbox",
+        "roundoff": "8"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "fxToPosition"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "fxRate"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "10px",
+          "width": "18%"
+        },
+        "key": "fxValueDate"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "entityType"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "status"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "entityRefNo"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "itemQty"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "contractPrice"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "productId"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "payInCurId"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "quality",
+        "disabled": true,
+        "type": "textbox"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "18%"
+        },
+        "key": "product",
+        "disabled": true,
+        "type": "textbox"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none"
+        },
+        "key": "internalContractItemRefNo",
+        "type": "hidden"
+      },
+      {
+        "suffix": "",
+        "formItemStyle": {
+          "margin-right": "30px",
+          "width": "36%",
+          "height": "30px"
+        },
+        "key": "comments"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none"
+        },
+        "key": "conversionFactor",
+        "type": "hidden",
+        "value": "1"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "display": "none"
+        },
+        "key": "pbsQuantity",
+        "type": "hidden"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "mandatoryCheckEnabled",
+        "type": "hidden",
+        "value": "Y"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "id"
+      }
+    ]
+  ],
+  "taskId": "pbstempcostestimateedit",
+  "object": "3fc4f79b-3f25-4cb8-a62a-7d36e13bf045",
+  "sys__UUID": "d377e4c8-38c3-47e8-8736-0a8eb862a53c"
+}

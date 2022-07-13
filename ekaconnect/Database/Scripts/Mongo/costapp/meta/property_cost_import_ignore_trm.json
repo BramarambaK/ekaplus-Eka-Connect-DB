@@ -1,0 +1,14 @@
+{
+    "_id" : "property_cost_import_ignore_trm",
+    "type" : "property",
+    "name" : "cost_import_ignore_trm",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "length" : "10",
+    "label" : "Cost Import Ignore Trm",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "defaultValue" : false,
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "description" : "Decision to insert cost estimates to trm or not"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "property_fx_forward_rate_rules_collection_name",
+    "type" : "property",
+    "name" : "fx_forward_rate_rules_collection_name",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "length" : "30",
+    "defaultValue" : "",
+    "fieldtype" : "textbox",
+    "label" : "FX Forward Rate Rules Collection Name",
+    "editSupportedInUI" : true,
+    "description" : "name of collection created from domain MDM FX Rules domain"
+}

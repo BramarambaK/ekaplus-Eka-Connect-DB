@@ -1,0 +1,21 @@
+{
+  "_id": "savecustomizeddocuments",
+  "type": "workflow",
+  "componentType": "UserTask",
+  "labelKey": "Save Customized documents",
+  "label": "Save Customized documents",
+  "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "19b71f3f-9ff8-491e-83d7-4d5e8e3c916a"
+  },
+  "getDataFromExternalAPI": false,
+  "layout": {},
+  "fields": [],
+  "decisions": [],
+  "taskId": "savecustomizeddocuments",
+  "tag": "config",
+  "description": "Execute to hide Cost Template Names and to disable FX to base type Curve"
+}

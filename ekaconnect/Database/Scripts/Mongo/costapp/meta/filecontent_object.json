@@ -1,0 +1,93 @@
+{
+  "_id": "filecontent_object",
+  "createdBy": "Test",
+  "createdOn": "",
+  "fields": {
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContent": {
+      "fileContent": "fileContent",
+      "labelKey": "fileContent",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "uploadedDate",
+      "labelKey": "uploadedDate",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "actionId": {
+      "actionId": "Action ID",
+      "labelKey": "actionId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "documentId": {
+      "documentId": "documentId",
+      "labelKey": "documentId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    }
+  },
+  "label": "file_content",
+  "label_key": "",
+  "lastModifiedOn": "",
+  "lastModifiey": "Test",
+  "layout": {
+    "fields": [[]]
+  },
+  "name": "file_content",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "sys__UUID": "d64b8de7-0802-412d-8f33-462e545871eb",
+  "tenantID": "",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

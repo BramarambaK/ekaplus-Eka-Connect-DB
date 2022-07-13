@@ -1,0 +1,14 @@
+{
+    "_id" : "ttl_internal_bank_fx_rates_collection",
+    "type" : "property",
+    "name" : "ttl_internal_bank_fx_rates_collection",
+    "propertyLevel" : "tenant",
+    "dataType" : "Number",
+    "fieldtype" : "textbox",
+    "length" : "100",
+    "editSupportedInUI" : true,
+    "label" : "TTL Internal Bank FX Collection",
+    "defaultValue" : "",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "TTL Internal Bank FX Collection."
+}

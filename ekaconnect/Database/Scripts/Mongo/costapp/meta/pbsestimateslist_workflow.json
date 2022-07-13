@@ -1,0 +1,322 @@
+{
+    "_id" : "pbsestimateslist_CostApp",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Cost Estimates",
+    "type" : "workflow",
+    "payLoad" : "selected.costcomponentlistctrm",
+    "layout" : {
+        "getInitialData" : {
+            "filterBy" : {
+                "params" : [ 
+                    "entityType", 
+                    "entityRefNo"
+                ]
+            }
+        },
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true,
+        "useQueryParams" : true,
+        "preserveSelectedData" : false
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "Create",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "name" : "pbsestimatescreate",
+                    "resetForm" : true
+                }
+            ],
+            "label" : "Create New",
+            "position" : "top",
+            "iconClass" : "fa fa-plus"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "selection" : "default",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "name" : "pbscostcomponentlistctrm"
+                }
+            ],
+            "label" : " Use Existing"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "editcostestimate",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.pbsestimateslist",
+                    "name" : "pbsestimatesedit"
+                }
+            ],
+            "label" : " Update"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "DELETE",
+            "labelkey" : "DELETE",
+            "task" : "pbsestimatesdelete",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.pbsestimateslist",
+                    "name" : "pbsestimatesdelete",
+                    "displayType" : "popup"
+                }
+            ],
+            "label" : " Delete"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass": "limitinfopopup",
+                    "data" : "selected.pbsestimateslist",
+                    "name" : "pbsestimateslifecycle"
+                }
+            ],
+            "label" : "Lifecycle",
+            "position" : "top",
+            "iconClass" : "info-icon"
+        }
+    ],
+    "labelKey" : "COST_ESTIMATE",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "entityType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "entityRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "entityActualNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "contractItemRefNo"
+        },
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "profitCenter"
+        },  
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costComponent"
+        }, 
+        {
+            "key" : "costComponentDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "counterpartyGroupName"
+        }, 
+        {
+            "key" : "counterpartyGroupNameDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "incExpense"
+        }, 
+        {
+            "key" : "incExpenseDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "estimateFor"
+        }, 
+        {
+            "key" : "estimateForDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "rateTypePrice"
+        }, 
+        {
+            "key" : "rateTypePriceDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costCurve"
+        }, 
+        {
+            "key" : "costCurveDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costMonth"
+        }, 
+        {
+            "key" : "costMonthDisplayName",
+            "hidden" : true
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costValue",
+            "roundoff": "8"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costPriceUnitIdDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costAmountInBaseCurrency",
+            "roundoff": "5"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "costAmountInBaseCurrencyUnitId"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "fxToBaseType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "fxRate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "fxToBase",
+            "roundoff" : "5"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "fxToPosition"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "fxValueDate"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "comments"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "paymentTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "contractIncoTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "valuationIncoTerm"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "product"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "quantity"
+        }, 
+        {
+            "filter" : true,
+            "edit" : true,
+            "sort" : true,
+            "key" : "quality"
+        }
+    ],
+    "taskId" : "pbsestimateslist",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "sys__UUID" : "78543cec-c90d-43d6-b492-a3505c572267"
+}

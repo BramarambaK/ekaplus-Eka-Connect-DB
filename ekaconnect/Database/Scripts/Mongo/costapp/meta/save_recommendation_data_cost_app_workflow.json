@@ -1,0 +1,26 @@
+{
+    "_id" : "saveRecommendationData_cost_app",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "taskId" : "saveRecommendationData_cost_app",
+    "object" : "75e55d43-3a9f-4240-9916-0716e53ee5ec",
+    "sys__UUID" : "28f70569-ee78-40be-9584-cb0aa071a79e",
+    "type" : "workflow",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "type" : "submit",
+            "task" : "saveRecommendationData_cost_app",
+            "outcomes" : [ 
+                {
+                    "name" : "saveRecommendatationDataCostAppSystemTask",
+                    "data" : "output.saveRecommendationData_cost_app",
+                    "appendMsg" : false
+                }
+            ]
+        }
+    ]
+}

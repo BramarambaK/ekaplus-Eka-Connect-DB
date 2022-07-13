@@ -1,0 +1,11 @@
+{
+  "_id": "ST_DOCUMENTLISTING_COSTAPP",
+  "name": "ST_DOCUMENTLISTING",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": "var listdata = req.body.selectedData.data;\r\n    res.status(200).send(listdata);",
+  "sys__UUID": "f5c39c52-6f9d-489e-b6e7-67530c9d9275",
+  "sys__createdBy": "srini@ekaplus.com",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "type": "processor"
+}

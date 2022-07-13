@@ -1,0 +1,15 @@
+{
+  "layout": {"name": "list"},
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "workflow": "costcomponentlistplatform",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "decisions": [],
+  "_id": "home_COST",
+  "type": "workflow",
+  "taskId": "home",
+  "object": "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+  "label": "Home",
+  "sys__UUID" : "416d9e46-702b-4c95-ba8d-7da88752ce94"
+}

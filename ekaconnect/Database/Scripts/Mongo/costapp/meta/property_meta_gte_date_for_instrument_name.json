@@ -1,0 +1,13 @@
+{
+    "_id" : "property_meta_gte_date_for_instrument_name",
+    "type" : "property",
+    "name" : "gte_date_for_instrument_name",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+	"fieldtype" : "textbox",
+    "length" : "20",
+	"label" : "Fetch Instruments Names After Date",
+    "editSupportedInUI" : true,
+    "defaultValue": "2018-01-01T00:00:00",
+    "description": "Dropdown for curves will populate for market prices/rates after this date"
+}

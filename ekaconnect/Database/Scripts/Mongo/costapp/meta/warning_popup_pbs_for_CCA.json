@@ -1,0 +1,102 @@
+{
+    "_id" : "warning_popup_pbs_for_CCA",
+    "componentType" : "UserTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "Delete Formula",
+    "type" : "workflow",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : " This is duplicate of already existing estimates , Are you sure wants to continue",
+            "headerMessage" : "Warning"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "pbsestimatescreate",
+                    "clearSelected" : [ 
+                        "selected"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "READ",
+            "labelkey" : "READ",
+            "task" : "warningpoppbs",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Cost Component got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Cost Component got created with some errors"
+                        }
+                    },
+                    "data" : "output.warningpoppbs",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_COSTESTIMATE",
+                    "appendPlaceHolderToPopUpMsg" : [ 
+                        {
+                            "outputTask" : "output._ST_CREATE_COSTESTIMATE",
+                            "value" : "_id"
+                        }
+                    ]
+                }, 
+                {
+                    "data" : "output._ST_CREATE_COSTESTIMATE",
+                    "name" : "_ST_PROCESS_SAVE_ESTIMATES"
+                }, 
+                {
+                    "data" : "output.warningpoppbs",
+                    "name" : "pbsestimateslist",
+                    "showPopUp" : false,
+                    "showToaster" : false,
+                    "resetForm" : true
+                }
+            ],
+            "label" : "OK",
+            "notRequiredFields" : ["id"],
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "pbsestimatescreate"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Delete_Formula",
+    "fields" : [ 
+        {
+            "heading" : "formulaName"
+        }
+    ],
+    "taskId" : "warningpoppbs",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90"
+}

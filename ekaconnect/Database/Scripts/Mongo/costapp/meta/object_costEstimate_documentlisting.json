@@ -1,0 +1,465 @@
+{
+  "_id": "object_costEstimate_documentlisting",
+  "name": "costestimateDocumentlist",
+  "label": "Cost Estimate Document List",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": [],
+  "translatableKeys": [
+    "entityType",
+    "entityRefNo",
+    "costPriceUnitId",
+    "fxToPosition",
+    "fxToBase",
+    "costValue",
+    "costComponent",
+    "estimateFor",
+    "incExpense",
+    "rateTypePrice",
+    "costCurve",
+    "costMonth",
+    "counterpartyGroupName"
+  ],
+  "fields": {
+    "entityType": {
+      "entityType": "Entity Name",
+      "labelKey": "entityType",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "entityRefNo": {
+      "entityRefNo": "Entity Ref No",
+      "labelKey": "entityRefNo",
+      "type": "hidden",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "costComponent": {
+      "costComponent": "Cost Component Name",
+      "labelKey": "costComponent",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "costComponentDisplayName",
+      "serviceKey": "costcomponents",
+      "children": ["costCurve"]
+    },
+    "costComponentDisplayName": {
+      "costComponentDisplayName": "Cost Component Name",
+      "labelKey": "costComponentDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "estimateFor": {
+      "estimateFor": "Estimate For",
+      "labelKey": "estimateFor",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "estimateForDisplayName",
+      "serviceKey": "estimateFor"
+    },
+    "estimateForDisplayName": {
+      "estimateForDisplayName": "Estimate For",
+      "labelKey": "estimateForDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "incExpense": {
+      "incExpense": "Income/Expense",
+      "labelKey": "incExpense",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "incExpenseDisplayName",
+      "serviceKey": "CostIncExp"
+    },
+    "incExpenseDisplayName": {
+      "incExpenseDisplayName": "Income/Expense",
+      "labelKey": "incExpenseDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "rateTypePrice": {
+      "rateTypePrice": "Rate Type",
+      "labelKey": "rateTypePrice",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "rateTypePriceDisplayName",
+      "serviceKey": "rateTypePrice1",
+      "children": [
+        "costPriceUnitId",
+        "costCurve",
+        "costMonth",
+        "curveCurrency",
+        "costValue",
+        "costAmountInBaseCurrency",
+        "costAmountInBaseCurrencyUnitId"
+      ],
+      "lazy": true
+    },
+    "rateTypePriceDisplayName": {
+      "rateTypePriceDisplayName": "Rate Type",
+      "labelKey": "rateTypePriceDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costCurve": {
+      "costCurve": "Cost Curve",
+      "labelKey": "costCurve",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "costCurveDisplayName",
+      "serviceKey": "costCurve",
+      "parent": ["costComponent", "rateTypePrice"],
+      "children": ["costMonth", "curveCurrency"],
+      "UIupdates": {
+        "disability": "${rateTypePrice} == absolute|rate|% of Price",
+        "value": "if('${rateTypePrice}' == 'absolute' || '${rateTypePrice}' == 'rate' || '${rateTypePrice}' == '% of Price') {return null} else {return}"
+      }
+    },
+    "costCurveDisplayName": {
+      "costCurveDisplayName": "Cost Curve",
+      "labelKey": "costCurveDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costMonth": {
+      "costMonth": "Cost Month",
+      "labelKey": "costMonth",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "costMonthDisplayName",
+      "serviceKey": "costMonth",
+      "parent": ["costCurve"],
+      "UIupdates": {
+        "disability": "${rateTypePrice} == absolute|rate|% of Price",
+        "value": "if('${rateTypePrice}' == 'absolute' || '${rateTypePrice}' == 'rate' || '${rateTypePrice}' == '% of Price') {return null} else {return}"
+      }
+    },
+    "costMonthDisplayName": {
+      "costMonthDisplayName": "Cost Month",
+      "labelKey": "costMonthDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "curveCurrency": {
+      "curveCurrency": "Curve Currency",
+      "labelKey": "curveCurrency",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "curveCurrencyDisplayName",
+      "serviceKey": "curveCurrency",
+      "parent": ["costCurve"],
+      "UIupdates": {
+        "disability": "${rateTypePrice} == absolute|rate|% of Price",
+        "value": "if('${rateTypePrice}' == 'absolute' || '${rateTypePrice}' == 'rate' || '${rateTypePrice}' == '% of Price') {return null} else {return}"
+      }
+    },
+    "curveCurrencyDisplayName": {
+      "curveCurrencyDisplayName": "Curve Currency",
+      "labelKey": "curveCurrencyDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyGroupNameDisplayName": {
+      "counterpartyGroupNameDisplayName": "CP Name",
+      "labelKey": "counterpartyGroupNameDisplayName",
+      "type": "default",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterpartyGroupName": {
+      "counterpartyGroupName": "CP Name",
+      "labelKey": "counterpartyGroupName",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "corporatebusinesspartnerCombo",
+      "dropdownValue": "counterpartyGroupNameDisplayName",
+      "lazy": true
+    },
+    "costPriceUnitId": {
+      "costPriceUnitId": "",
+      "labelKey": "costPriceUnitId",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "costPriceUnitIdDisplayName",
+      "serviceKey": "productCurrencyList",
+      "parent": ["rateTypePrice"],
+      "children": ["fxRate"],
+      "UIupdates": {
+        "disability": "${rateTypePrice} == curve|% of Price",
+        "value": "if('${rateTypePrice}' == 'curve') {return null} else {return}"
+      }
+    },
+    "costPriceUnitIdDisplayName": {
+      "costPriceUnitIdDisplayName": "Cost Value Unit",
+      "labelKey": "costPriceUnitIdDisplayName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "children": ["costAmountInBaseCurrency", "costAmountInBaseCurrencyUnitId"]
+    },
+    "fxToBaseType": {
+      "fxToBaseType": "FX to Base Type",
+      "labelKey": "fxToBaseType",
+      "type": "readOnly",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "fxRate": {
+      "fxRate": "FX Rate",
+      "labelKey": "fxRate",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "fxRate",
+      "parent": ["costPriceUnitId", "fxToBaseType"]
+    },
+    "fxToBase": {
+      "fxToBase": "FX to Base Value",
+      "labelKey": "fxToBase",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "fxToPosition": {
+      "fxToPosition": "FX to Position",
+      "labelKey": "fxToPosition",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "fxValueDate": {
+      "fxValueDate": "Fx Value Date",
+      "labelKey": "fxValueDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "costValue": {
+      "costValue": "Cost Value",
+      "labelKey": "costValue",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "children": ["costAmountInBaseCurrency"],
+      "UIupdates": {
+        "disability": "${rateTypePrice} == curve",
+        "value": "if('${rateTypePrice}' == 'curve') {return null} else {return}"
+      }
+    },
+    "costAmountInBaseCurrency": {
+      "costAmountInBaseCurrency": "Cost Amount",
+      "labelKey": "costAmountInBaseCurrency",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "UIupdates": {
+        "value": "if ('${rateTypePrice}' == 'rate') {  if ('${costValue}' == 'null') {    return null;  } else {    var x = '${costPriceUnitIdDisplayName}'.split('/');    if (      x[0].toLowerCase() == 'US cents'.toLowerCase() ||      x[0].toLowerCase() == 'USc'.toLowerCase() ||      x[0].toLowerCase() == 'UScents'.toLowerCase()    ) {      return ${costValue}*${itemQty}/100    } else {      return ${costValue}*${itemQty}    }  }} else if ('${rateTypePrice}' == 'absolute') {  if ('${costValue}' == 'null') {    return null;  } else {    if (      '${costPriceUnitIdDisplayName}'.toLowerCase() ==        'US cents'.toLowerCase() ||      '${costPriceUnitIdDisplayName}'.toLowerCase() == 'USc'.toLowerCase() ||      '${costPriceUnitIdDisplayName}'.toLowerCase() == 'UScents'.toLowerCase()    ) {      return ${costValue}/100    } else {      return ${costValue}    }  }} else if ('${rateTypePrice}' == '% of Price') {  if ('${costValue}' == 'null') {    return null;  } else {    return ${costValue}*${itemQty}*('${contractPrice}'.split(' ')[0])  }} else if ('${rateTypePrice}' == 'curve') {  return null;}"
+      }
+    },
+    "costAmountInBaseCurrencyUnitId": {
+      "costAmountInBaseCurrencyUnitId": "Cost Currency",
+      "labelKey": "costAmountInBaseCurrencyUnitId",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "value": "if ('${rateTypePrice}' == 'rate') {  if ('${costPriceUnitIdDisplayName}' == 'null') {    return null;  } else {    var x = '${costPriceUnitIdDisplayName}'.split('/');    if (      x[0].toLowerCase() == 'US cents'.toLowerCase() ||      x[0].toLowerCase() == 'USc'.toLowerCase() ||      x[0].toLowerCase() == 'UScents'.toLowerCase()    ) {      return 'USD';    } else {      return x[0];    }  }} else if ('${rateTypePrice}' == 'absolute') {  if (    '${costPriceUnitIdDisplayName}'.toLowerCase() == 'US cents'.toLowerCase() ||    '${costPriceUnitIdDisplayName}'.toLowerCase() == 'USc'.toLowerCase() ||    '${costPriceUnitIdDisplayName}'.toLowerCase() == 'UScents'.toLowerCase()  ) {    return 'USD';  } else {    return '${costPriceUnitIdDisplayName}' === 'null'      ? null      : '${costPriceUnitIdDisplayName}';  }} else if ('${rateTypePrice}' == '% of Price') {  return '${contractPrice}'.split(' ')[1].split('/')[0];} else if ('${rateTypePrice}' == 'curve') {  return null;}"
+      }
+    },
+    "costAmountInAccuralEstimateCurrency": {
+      "costAmountInAccuralEstimateCurrency": "Cost Curve",
+      "labelKey": "costAmountInAccuralEstimateCurrency",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "draftEstimateNo": {
+      "draftEstimateNo": "Draft Estimate No",
+      "labelKey": "draftEstimateNo",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "secondaryCost": {
+      "secondaryCost": "Secondary Cost",
+      "labelKey": "secondaryCost",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "group": {
+      "group": "Group",
+      "labelKey": "group",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "corporateCurrency": {
+      "corporateCurrency": "Corporate Currency",
+      "labelKey": "corporateCurrency",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "comments": {
+      "comments": "Comments",
+      "labelKey": "comments",
+      "type": "textarea",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "itemQty": {
+      "itemQty": "Item Quantity",
+      "labelKey": "itemQty",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractPrice": {
+      "contractPrice": "Contract Price",
+      "labelKey": "contractPrice",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "productId": {
+      "productId": "Product Id",
+      "labelKey": "productId",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "payInCurId": {
+      "payInCurId": "Pay In Currency",
+      "labelKey": "payInCurId",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "priceType": {
+      "priceType": "Price Type",
+      "labelKey": "priceType",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "paymentTerm": {
+      "paymentTerm": "Payment Term",
+      "labelKey": "paymentTerm",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractIncoTerm": {
+      "contractIncoTerm": "Contract INCO Term",
+      "labelKey": "contractIncoTerm",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "valuationIncoTerm": {
+      "valuationIncoTerm": "Valuation INCO Term",
+      "labelKey": "valuationIncoTerm",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "shipmentDate": {
+      "shipmentDate": "Shipment Date",
+      "labelKey": "shipmentDate",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "isPopUp": {
+      "isPopUp": "Popup",
+      "labelKey": "isPopUp",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "showMenu": {
+      "showMenu": "Menu",
+      "labelKey": "showMenu",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "itemQtyUnitId": {
+      "itemQtyUnitId": "Item Qty Unit Id",
+      "labelKey": "itemQtyUnitId",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "remarks": {
+      "remarks": "Error Details",
+      "labelKey": "remarks",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "entityActualNo": {
+      "entityActualNo": "Contract Ref No",
+      "labelKey": "entityActualNo",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "itemNo": {
+      "itemNo": "Entity Item Ref No",
+      "labelKey": "itemNo",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "cf60685f-c8d4-4558-a3bc-ba64f7e78d00"
+}

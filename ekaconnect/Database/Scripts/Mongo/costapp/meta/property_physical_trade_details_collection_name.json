@@ -1,0 +1,13 @@
+{
+    "_id" : "property_physical_trade_details_collection_name",
+    "type" : "property",
+    "name" : "physical_trade_details_collection_name",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "length" : "30",
+    "defaultValue" : "physical trade details trm new",
+    "fieldtype" : "textbox",
+    "label" : "Physical Trade Details Collection Name",
+    "editSupportedInUI" : true,
+    "description" : "name of collection created from domain V_BI_PHYSICAL_TRADE_DETAILS"
+}

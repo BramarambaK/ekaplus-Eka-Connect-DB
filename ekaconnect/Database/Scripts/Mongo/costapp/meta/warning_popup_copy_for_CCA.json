@@ -1,0 +1,96 @@
+{
+  "_id": "warning_popup_copy_for_CCA",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Delete Formula",
+  "type": "workflow",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": " This is duplicate of already existing estimates , Are you sure wants to continue",
+      "headerMessage": "Warning"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "copydraftcostestimate",
+          "clearSelected": ["selected"]
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "labelkey": "READ",
+      "task": "warningpopcopy",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Cost Component got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Cost Component got created with some errors"
+            }
+          },
+          "data": "output.warningpopcopy",
+          "appendMsg": true,
+          "name": "_ST_CREATE_DRAFTCOSTESTIMATE",
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_CREATE_DRAFTCOSTESTIMATE",
+              "value": "_id"
+            }
+          ]
+        },
+        {
+          "data": "output.warningpopcopy",
+          "name": "costitemsfornewentitylist",
+          "showPopUp": false,
+          "showToaster": false,
+          "resetForm": true
+        }
+      ],
+      "label": "OK",
+      "position": "bottom",
+      "notRequiredFields": ["id"],
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "copydraftcostestimate"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Delete_Formula",
+  "fields": [
+    {
+      "heading": "formulaName"
+    }
+  ],
+  "taskId": "warningpopcopy",
+  "object": "00189ca9-cfc1-4327-95ac-f937f22deb60"
+}

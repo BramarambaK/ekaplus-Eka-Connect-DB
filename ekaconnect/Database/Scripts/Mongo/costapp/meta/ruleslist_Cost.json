@@ -1,0 +1,115 @@
+{
+  "_id": "ruleslist_Cost",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Rules",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "f4c61dbc-3f4b-452f-99f7-d3eefb886519"
+  },
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "serverSearch": false,
+      "serverFilter": false,
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "refreshData": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modalrules",
+          "resetForm": true,
+          "name": "createrules"
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modalrules",
+          "data": "selected.ruleslist",
+          "name": "editrules"
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Edit",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "position": "top",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.ruleslist",
+          "popupClass": "deleteclass",
+          "name": "deleterules"
+        }
+      ],
+      "label": "Delete",
+      "iconClass": "cr-delete-icon"
+    }
+  ],
+  "labelKey": "LIST",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "rule_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "attributeslisting"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "costcomponentTemplateslisting",
+      "limit": 40
+    }
+  ],
+  "taskId": "ruleslist",
+  "object": "2d3221f6-0717-4f08-b380-25c7094dcd0b",
+  "sys__UUID": "02c89fcb-5c8b-4aba-bfbe-a24434f4246b"
+}

@@ -1,0 +1,305 @@
+{
+    "_id": "pbstempcostestimatelist_CostApp",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "refType": "app",
+    "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label": "Cost Estimates",
+    "type": "workflow",
+    "layout": {
+      "getInitialData" : {
+        "filterBy" : {
+            "params" : [ 
+                "entityType", 
+                "entityRefNo"
+            ]
+        }
+      },
+      "selection": "row",
+      "name": "list",
+      "options": {
+        "filter": true,
+        "lastUpdated": false,
+        "search": true,
+        "reload": false,
+        "columnFilter": true,
+        "reset": true,
+        "export": true
+      },
+      "theme": "theme-grid-white",
+      "dropdownDecisions": true,
+      "showCheckbox": true,
+      "useQueryParams": true,
+      "preserveSelectedData": false
+    },
+    "decisions": [
+      {
+        "btnClass": "btn btn-outline-dark",
+        "objectAction": "UPDATE",
+        "position": "bottom",
+        "outcomes": [
+          {
+            "name": "pbscostcomponentlistctrm"
+          }
+        ],
+        "label": "CANCEL",
+        "style": {
+          "margin-right": "auto"
+        }
+      },
+      {
+        "btnClass": "btn-success",
+        "iconClass": "cr-edit-icon",
+        "objectAction": "UPDATE",
+        "labelkey": "UPDATE",
+        "selection": "default",
+        "position": "bottom",
+        "payload": "completeData",
+        "type": "submit",
+        "task": "pbstempcostestimatelist",
+        "outcomes": [
+          {
+            "data": "output.pbstempcostestimatelist",
+            "name": "_ST_PROCESS_USEEXISTING",
+            "appendMsg": false
+          },
+          {
+            "data": "output._ST_PROCESS_USEEXISTING",
+            "name": "_ST_CREATE_COSTESTIMATE",
+            "appendMsg": false
+          },
+          {
+            "data" : "output._ST_CREATE_COSTESTIMATE",
+            "name" : "_ST_PROCESS_SAVE_ESTIMATES"
+          },
+          {
+            "data": "output.pbstempcostestimatelist",
+            "name": "_ST_DELETE_TEMPCOSTESTIMATE",
+            "appendMsg": false
+          },
+          {
+            "name": "pbsestimateslist"
+          }
+        ],
+        "label": "SAVE"
+      },
+      {
+        "btnClass": "btn-primary",
+        "iconClass": "cr-edit-icon",
+        "objectAction": "DELETE",
+        "labelkey": "UPDATE",
+        "task": "pbstempcostestimateedit",
+        "selection": "global",
+        "position": "top",
+        "outcomes": [
+          {
+            "data": "selected.pbstempcostestimatelist",
+            "name": "pbstempcostestimateedit"
+          }
+        ],
+        "label": " Update"
+      },
+      {
+        "btnClass": "btn-primary",
+        "iconClass": "cr-edit-icon",
+        "objectAction": "DELETE",
+        "labelkey": "DELETE",
+        "task": "pbstempcostestimatedelete",
+        "selection": "global",
+        "position": "top",
+        "outcomes": [
+          {
+            "data": "selected.pbstempcostestimatelist",
+            "name": "pbstempcostestimatedelete",
+            "displayType": "popup"
+          }
+        ],
+        "label": " Delete"
+      }
+    ],
+    "labelKey": "COST_ESTIMATE",
+    "fields": [
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "entityType"
+      }, 
+      {
+          "filter" : true,
+          "edit" : true,
+          "sort" : true,
+          "key" : "entityRefNo"
+      }, 
+      {
+          "filter" : true,
+          "edit" : true,
+          "sort" : true,
+          "key" : "entityActualNo"
+      }, 
+      {
+          "filter" : true,
+          "edit" : true,
+          "sort" : true,
+          "key" : "contractItemRefNo"
+      }, 
+      {
+        "filter" : true,
+        "edit" : true,
+        "sort" : true,
+        "key" : "profitCenter"
+      }, 
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "costComponent"
+      },
+      {
+        "key" : "costComponentDisplayName",
+        "hidden" : true
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "counterpartyGroupName"
+      },
+      {
+        "key" : "counterpartyGroupNameDisplayName",
+        "hidden" : true
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "incExpense"
+      },
+      {
+        "key" : "incExpenseDisplayName",
+        "hidden" : true
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "estimateFor"
+      },
+      {
+        "key" : "estimateForDisplayName",
+        "hidden" : true
+      }, 
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "rateTypePrice"
+      },
+      {
+        "key" : "rateTypePriceDisplayName",
+        "hidden" : true
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "costCurve"
+      },
+      {
+        "key" : "costCurveDisplayName",
+        "hidden" : true
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "costMonth"
+      },
+      {
+        "key" : "costMonthDisplayName",
+        "hidden" : true
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "costValue"
+      },
+      {
+        "filter" : true,
+        "edit" : true,
+        "sort" : true,
+        "key" : "costPriceUnitIdDisplayName"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "costAmountInBaseCurrency"
+      },
+      {
+        "filter" : true,
+        "edit" : true,
+        "sort" : true,
+        "key" : "costAmountInBaseCurrencyUnitId"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "fxToBaseType"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "fxRate"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "fxToBase"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "fxToPosition"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "fxValueDate"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "comments"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "paymentTerm"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "contractIncoTerm"
+      },
+      {
+        "filter": true,
+        "edit": true,
+        "sort": true,
+        "key": "valuationIncoTerm"
+      }
+    ],
+    "taskId": "pbstempcostestimatelist",
+    "object": "3fc4f79b-3f25-4cb8-a62a-7d36e13bf045",
+    "sys__UUID" : "65449ad5-116a-411b-abfc-686153b5f7af"
+  }
+  

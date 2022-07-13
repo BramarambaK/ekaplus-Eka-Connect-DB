@@ -1,0 +1,22 @@
+{
+    "_id" : "fxToAccuralType_CostApp",
+    "type" : "property",
+    "name" : "fxToAccuralType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "fxToAccuralType",
+    "defaultValue" : [ 
+        {
+            "key" : "Fixed",
+            "value" : "Fixed"
+        }, 
+        {
+            "key" : "Floating",
+            "value" : "Floating"
+        }
+    ],
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "description" : "Values available for fxToAccuralType"
+}

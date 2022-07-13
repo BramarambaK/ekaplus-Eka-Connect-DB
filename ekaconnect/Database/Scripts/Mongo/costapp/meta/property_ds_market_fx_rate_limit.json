@@ -1,0 +1,13 @@
+{
+    "_id" : "property_ds_market_fx_rate_limit",
+    "type" : "property",
+    "name" : "ds_market_fx_rate_limit",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "length" : "10",
+    "defaultValue" : "1000",
+	"fieldtype" : "textbox",
+	"label" : "DS-Market Fx Rate Limit",
+    "editSupportedInUI" : true,
+    "description": "limit number of records to fetch for populating fxRate dropdown"
+}

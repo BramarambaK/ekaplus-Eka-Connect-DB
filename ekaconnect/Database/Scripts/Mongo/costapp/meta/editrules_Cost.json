@@ -1,0 +1,214 @@
+{
+  "_id": "editrules_Cost",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Edit Rule",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap"
+    },
+    "processorInfo": {
+      "processorId": "9515166b-df33-4353-8a60-6b3ee099735d"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "ruleslist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "task": "editrules",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.editrules",
+          "appendMsg": true,
+          "name": "_ST_CREATE_PROCESSSOR_RULES",
+          "appendPlaceHolderToPopUpMsg12": [
+            {
+              "outputTask": "output._ST_CREATE_PROCESSSOR_RULES",
+              "value": "_id"
+            }
+          ]
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Rules got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Rules got created with some errors"
+            }
+          },
+          "data": "output._ST_CREATE_PROCESSSOR_RULES",
+          "appendMsg": true,
+          "name": "_ST_EDIT_RULES",
+          "appendPlaceHolderToPopUpMsg12": [
+            {
+              "outputTask": "output._ST_EDIT_RULES",
+              "value": "_id"
+            }
+          ]
+        },
+        {
+          "data": "output._ST_EDIT_RULES",
+          "name": "ruleslist",
+          "showPopUp": false,
+          "showToaster": false
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "ruleslist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "CREATE_NEW_RULE",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "609px",
+          "margin-right": "10px"
+        },
+        "key": "rule_name",
+        "disabled": true
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "609px",
+          "margin-right": "10px"
+        },
+        "suffix": "",
+        "key": "attributes"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "146.5px",
+          "margin-right": "10px"
+        },
+        "key": "contractType"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "153px"
+        },
+        "key": "contractIncoterm"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "153px"
+        },
+        "key": "valuationIncoterm"
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "153px"
+        },
+        "key": "paymentTerm"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "style": {
+          "width": "609px",
+          "margin-right": "10px"
+        },
+        "key": "costcomponentTemplates"
+      }
+    ],
+    [
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "Payment Term"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "Valuation Incoterm"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "Contract Incoterm"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "Contract Type"
+      }
+    ]
+  ],
+  "taskId": "editrules",
+  "object": "2d3221f6-0717-4f08-b380-25c7094dcd0b",
+  "sys__UUID": "80138715-7bcc-4996-9ea5-7a85a5464069"
+}

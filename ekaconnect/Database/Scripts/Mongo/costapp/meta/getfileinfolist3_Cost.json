@@ -1,0 +1,76 @@
+{
+    "_id": "getfileinfolist3_Cost",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "refType": "app",
+    "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label": "Get File Info",
+    "getDataFromExternalAPI": false,
+    "type": "workflow",
+    "processorInfo": {
+      "processorId": "82363a43-00a6-49f1-a0a4-5a0105047172"
+    },
+    "layout": {
+      "name": "list",
+      "selection": "row",
+      "options": {
+        "columnFilter": false,
+        "sortFilter": false,
+        "filter": false,
+        "lastUpdated": false,
+        "search": false,
+        "reload": false,
+        "reset": false,
+        "export": false,
+        "sessionStateDisable": true
+      },
+      "theme": "theme-grid-white",
+      "scrollHeight": "336px"
+    },
+    "decisions": [
+      {
+        "btnClass": "btn btn-outline-dark",
+        "objectAction": "READ",
+        "outcomes": [
+          {
+            "name": "createdocuments3"
+          }
+        ],
+        "style": {
+          "margin-right": "auto"
+        },
+        "label": "CANCEL",
+        "position": "bottom"
+      }
+    ],
+    "labelKey": "Get File Info",
+    "fields": [
+      {
+        "filter": true,
+        "edit": false,
+        "sort": true,
+        "key": "ColumnName"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "sort": true,
+        "key": "DataType"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "sort": true,
+        "key": "Mandatory"
+      },
+      {
+        "filter": true,
+        "edit": false,
+        "sort": true,
+        "key": "ColumnDescription"
+      }
+    ],
+    "taskId": "getfileinfolist3",
+    "object": "68748be0-432d-45d5-9b88-3af8ec758174"
+  }
+  

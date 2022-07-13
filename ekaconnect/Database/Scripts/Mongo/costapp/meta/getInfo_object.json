@@ -1,0 +1,276 @@
+{
+  "_id": "getInfo_object",
+  "name": "Get Info of Cost Estimtes Object",
+  "label": "Get Info of Cost Estimtes Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": [],
+  "translatableKeys": [],
+  "fields": {
+	"sNo": {
+      "sNo" : "sNo",
+      "labelKey" : "sNo",
+      "type" : "hidden",
+      "isRequired" : true,
+      "dataType" : "Integer",
+      "description" : "This column will tell the unique number of cost uploaded to be checked for status."
+    },
+    "entityType": {
+      "entityType": "Entity Name",
+      "labelKey": "entityType",
+      "type": "hidden",
+      "isRequired": true,
+      "dataType": "String",
+      "description": "This column will tell for which entity the cost is applied."
+    },
+    "entityRefNo": {
+      "entityRefNo": "Entity Ref No",
+      "labelKey": "entityRefNo",
+      "type": "hidden",
+      "isRequired": true,
+      "dataType": "String",
+      "description": "This column will tell for which entity the cost is applied."
+    },
+    "costComponent": {
+      "costComponent": "Cost Component Name",
+      "labelKey": "costComponent",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "costComponentDisplayName",
+      "description": "This column will have the cost component names."
+    },
+    "counterpartyGroupName": {
+      "counterpartyGroupName": "CP Name",
+      "labelKey": "counterpartyGroupName",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "description": "This column will have the counter parties’ names."
+    },
+    "incExpense": {
+      "incExpense": "Income/Expense",
+      "labelKey": "incExpense",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "incExpenseDisplayName",
+      "serviceKey": "CostIncExp",
+      "description": "This column will tell that the cost is income or expense."
+    },
+    "estimateFor": {
+      "estimateFor": "Estimate For",
+      "labelKey": "estimateFor",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "estimateForDisplayName",
+      "serviceKey": "estimateFor1",
+      "description": "This column will tell that for what estimate purpose this cost is for."
+    },
+    "rateTypePrice": {
+      "rateTypePrice": "Rate Type",
+      "labelKey": "rateTypePrice",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "dropdownValue": "rateTypePriceDisplayName",
+      "serviceKey": "rateTypePrice1",
+      "description": "This column will tell the type of rate used for the cost calculation."
+    },
+    "costCurve": {
+      "costCurve": "Cost Curve",
+      "labelKey": "costCurve",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "costCurveDisplayName",
+      "serviceKey": "costCurve",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This column will tell the type of rate used for the cost calculation."
+    },
+    "costMonth": {
+      "costMonth": "Cost Month",
+      "labelKey": "costMonth",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "dropdownValue": "costMonthDisplayName",
+      "serviceKey": "costMonth",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This column will have the cost month details."
+    },
+    "costValue": {
+      "costValue": "Cost Value",
+      "labelKey": "costValue",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "description": "This column will have the values of the cost."
+    },
+    "costCurrency": {
+      "costCurrency": "Cost Currency",
+      "labelKey": "costCurrency",
+      "type": "dropdown",
+      "isRequired": true,
+      "dataType": "String",
+      "description": "This column will have the currency in which the cost is."
+    },
+    "fxToBaseType": {
+      "fxToBaseType": "FX to Base Type",
+      "labelKey": "fxToBaseType",
+      "type": "readOnly",
+      "isRequired": false,
+      "dataType": "String",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This column will tell about which FX to base would be used when cost ccy is different from base ccy"
+    },
+    "fxtoBaseValue": {
+      "fxtoBaseValue": "FX to Base Value",
+      "labelKey": "fxtoBaseValue",
+      "type": "readOnly",
+      "isRequired": false,
+      "dataType": "Number",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This column will tell about what FX to base value would be used when cost ccy is different from base ccy"
+    },
+    "fxRate": {
+      "fxRate": "FX Rate",
+      "labelKey": "fxRate",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "fxRate",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This column will tell about what FX curve would be used when cost ccy is different from base ccy"
+    },
+    "fxToPosition": {
+      "fxToPosition": "FX to Position",
+      "labelKey": "fxToPosition",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This column will tell about what FX to Position value would be used when cost ccy is different from base ccy"
+    },
+    "fxValueDate": {
+      "fxValueDate": "Fx Date",
+      "labelKey": "fxValueDate",
+      "type": "Date",
+      "isRequired": false,
+      "dataType": "String",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This column will tell about what FX Date would be used when cost ccy is different from base ccy"
+    },
+    "CostValueUnit": {
+      "CostValueUnit": "Cost Value Unit",
+      "labelKey": "CostValueUnit",
+      "type": "Sring",
+      "isRequired": false,
+      "dataType": "String",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This field is optional. only required if Rate Type = Rate and Absolute"
+    },
+    "itemQty": {
+      "itemQty": "Quantity",
+      "labelKey": "itemQty",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}"
+    },
+    "contractPrice": {
+      "contractPrice": "Contract Price",
+      "labelKey": "contractPrice",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This field is optional. only required if Rate Type = % of Price"
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "product",
+      "parent": ["contractItemRefNo"],
+      "UIupdates": {
+        "value": "if('${contractItemRefNo}' == 'null' || '${contractItemRefNo}' == '') {return null} else {return}"
+      },
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This field is optional. only required to find CostPriceUnitId if Rate Type = Rate"
+    },
+    "Quantity_Unit": {
+      "Quantity_Unit": "Quantity Unit",
+      "labelKey": "Quantity_Unit",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "product",
+
+      "isMandatory": "if('${rateTypePrice}' == 'curve') { return true} else { return false}",
+      "description": "This field is optional. only required to find converion Factor if Rate Type = Rate"
+    },
+    "ColumnName": {
+      "ColumnName": "Column Name",
+      "labelKey": "ColumnName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "DataType": {
+      "DataType": "Data Type",
+      "labelKey": "DataType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Range": {
+      "Range": "Range",
+      "labelKey": "Range",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "Mandatory": {
+      "Mandatory": "Mandatory",
+      "labelKey": "Mandatory",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ColumnDescription": {
+      "ColumnDescription": "Column Description",
+      "labelKey": "ColumnDescription",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "68748be0-432d-45d5-9b88-3af8ec758174"
+}

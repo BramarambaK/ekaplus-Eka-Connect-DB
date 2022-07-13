@@ -1,0 +1,13 @@
+{
+    "_id" : "property_internal_bank_fx_rates_collection_name",
+    "type" : "property",
+    "name" : "internal_bank_fx_rates_collection_name",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "length" : "30",
+    "defaultValue" : "",
+    "fieldtype" : "textbox",
+    "label" : "Internal Bank FX Rates Collection Name",
+    "editSupportedInUI" : true,
+    "description" : "name of collection created from domain Internal Bank FX Rates collection name"
+}

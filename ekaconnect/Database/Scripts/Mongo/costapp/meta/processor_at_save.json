@@ -1,0 +1,10 @@
+{
+    "_id" : "Save_Screen",
+    "name" : "savewithgroupid",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "snippet" : " delete req.body.processorId;\r\n    delete req.body.appId;\r\n    delete req.body.processorDetails;\r\n    delete req.body.propertyList;\r\n    res.status(200).send(req.body);",
+    "sys__UUID" : "cd2693fd-5a6c-47bf-aed0-2c4831451816",
+    "sys__createdBy" : "srini@ekaplus.com"
+}

@@ -1,0 +1,11 @@
+{
+  "_id": "getinfoprocessor_processor",
+  "name": "getinfoprocessor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": "\r\n    var connectUrl = req.body.propertyList.eka_connect_host + '/meta/object/68748be0-432d-45d5-9b88-3af8ec758174';\r\n    var connect = {\r\n      method: 'GET',\r\n      url: connectUrl,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      json: true\r\n    };\r\n    function get_connect() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(connect, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n    get_connect().then(function(result) {\r\n      var data = result.fields;\r\n      var response = [];\r\n      var mandatory;\r\n      for (var obj in data) {\r\n        var res1 = data[obj];\r\n        if (res1.description) {\r\n          if (res1.isRequired == true) {\r\n            mandatory = 'Y';\r\n          } else if (res1.isMandatory) mandatory = 'Y(Partially)';\r\n          else mandatory = 'N';\r\n          response.push({\r\n            ColumnName: data[obj][obj],\r\n            DataType: res1.dataType,\r\n            Mandatory: mandatory,\r\n            ColumnDescription: res1.description\r\n          });\r\n        }\r\n      }\r\n      res.status(200).send(response);\r\n    });\r\n ",
+  "sys__UUID": "82363a43-00a6-49f1-a0a4-5a0105047172",
+  "sys__createdOn": ISODate("2020-01-07T09:57:30.305Z"),
+  "sys__createdBy": "Bravo"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "property_is_elevation_enabled_for_upload",
+    "type" : "property",
+    "name" : "is_elevation_enabled_for_upload",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "length" : "10",
+    "label" : "Is Elevation enabled for Cost Upload",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "defaultValue" : false,
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "description" : "Decision to validate elevation fields for Cost Upload.",
+	"sys__UUID" : "a38abd6b-88a8-4072-b72f-e5ef50d21641"
+}

@@ -1,0 +1,28 @@
+{
+    "_id" : "_EXT_CALL_TRAIN_COST_ESTIMATE_RECOMMENDATION_API",
+    "componentType" : "ExtSystemTask",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/lambdagatewayapi",
+        "method" : "POST",
+        "body" : {
+            "appId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+            "method" : "POST",
+            "workFlowTask" : "costestimatelistplatform",
+            "workflowTaskForSave":"saveRecommendationData_cost_app",
+            "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90"
+        },
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "endPoint" : "/train-recommendation-for-all-users/"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "taskId" : "_EXT_CALL_TRAIN_COST_ESTIMATE_RECOMMENDATION_API"
+}

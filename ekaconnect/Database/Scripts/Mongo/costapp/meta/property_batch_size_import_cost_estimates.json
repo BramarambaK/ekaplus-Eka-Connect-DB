@@ -1,0 +1,13 @@
+{
+    "_id" : "property_batch_size_import_cost_estimates",
+    "type" : "property",
+    "name" : "batch_size_import_estimates",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "10",
+    "label" : "Batch Size To Import Cost Estimates",
+    "editSupportedInUI" : true,
+    "defaultValue" : "25",
+    "description" : "Size of each batch fetched from collection while importing cost estimates"
+}

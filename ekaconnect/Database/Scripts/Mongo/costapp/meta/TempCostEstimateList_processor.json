@@ -1,0 +1,10 @@
+{
+  "_id": "TempCostEstimateList",
+  "name": "TempCostEstimateList",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "snippet": "var paramString = \"\";\r\nvar object = \"3fc4f79b-3f25-4cb8-a62a-7d36e13bf045\";\r\nfor (var key in req.body.queryParams) {\r\n    if(key === 'entityType' || key === 'entityRefNo' || key === 'draftEstimateNo'){\r\n        if (paramString) {\r\n          paramString = paramString + \"&\";\r\n        }\r\n        paramString = paramString + key + \"=\" + req.body.queryParams[key];\r\n    }\r\n    if (key === \"draftEstimateNo\")\r\n        object = \"3fc4f79b-3f25-4cb8-a62a-7d36e13bf045\";\r\n}\r\nvar selectedData = req.body.selectedData && req.body.selectedData.data;\r\nvar connectData = {\r\n  method: \"GET\",\r\n  url: req.body.propertyList.eka_connect_host + `/data/d33143ac-4164-4a3f-8d30-61d845c9eeed/${object}?${paramString}`,\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    \"X-TenantID\": req.headers[\"x-tenantid\"],\r\n    json: true\r\n  }\r\n};\r\nfunction get_connectData() {\r\n  return new Promise(function(resolve, reject) {\r\n    request(connectData, function(err, response, body) {\r\n      if (err || body.error) reject(body);\r\n      else {\r\n        resolve(body);\r\n      }\r\n    });\r\n  });\r\n}\r\nget_connectData().then(function(result) {\r\n  result = JSON.parse(result);\r\n  res.status(200).send(result);\r\n});\r\n",
+  "sys__UUID": "fca85777-bbf7-4afd-b781-047567ebf6d6",
+  "sys__createdBy": "srini@ekaplus.com"
+}

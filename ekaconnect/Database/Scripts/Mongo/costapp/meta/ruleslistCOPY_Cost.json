@@ -1,0 +1,77 @@
+{
+  "_id": "ruleslistCOPY_Cost",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "label": "Rules",
+  "type": "workflow",
+
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "serverSearch": true,
+      "serverFilter": true,
+      "columnFilter": true,
+      "sortFilter": true,
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "lazyLoading": true,
+    "showCheckbox": true,
+    "refreshData": {
+      "time": 300000
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "edit-modal700px",
+          "name": "createrules"
+        }
+      ],
+      "style": {
+        "margin-right": "11px"
+      },
+      "label": "Create",
+      "position": "top",
+      "iconClass": "fa fa-plus"
+    }
+  ],
+  "labelKey": "LIST",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "rule_name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "attributevalues"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contractType"
+    }
+  ],
+  "taskId": "ruleslistCOPY",
+  "object": "2d3221f6-0717-4f08-b380-25c7094dcd0b",
+  "sys__UUID" : "6febf349-c7ae-43ca-95db-ab8d417ce1ef"
+}

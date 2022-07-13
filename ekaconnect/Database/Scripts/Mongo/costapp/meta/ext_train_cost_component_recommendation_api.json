@@ -1,0 +1,28 @@
+{
+    "_id" : "_EXT_CALL_TRAIN_COST_COMPONENT_RECOMMENDATION_API",
+    "componentType" : "ExtSystemTask",
+    "object" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/lambdagatewayapi",
+        "method" : "POST",
+        "body" : {
+            "appId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+            "method" : "POST",
+            "workFlowTask" : "costcomponentlistplatform",
+            "workflowTaskForSave":"saveRecommendationData_cost_app",
+            "object" : "2f787174-8ed0-4d5d-8f93-b38ab0edc05a"
+        },
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "endPoint" : "/train-recommendation-for-all-users/"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "taskId" : "_EXT_CALL_TRAIN_COST_COMPONENT_RECOMMENDATION_API"
+}

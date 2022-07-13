@@ -1,0 +1,14 @@
+{
+  "_id": "ST_DELETE_COSTCOMPONENT_RULE_PROCESSOR_COST",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "3c09b04e-087b-48d4-bb78-729bbb6cf189"
+  },
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "taskId": "ST_DELETE_COSTCOMPONENT_RULE_PROCESSOR",
+  "object": "2d3221f6-0717-4f08-b380-25c7094dcd0b",
+  "sys__UUID": "9dab1fd8-4a64-4887-8557-3358320a1958"
+}

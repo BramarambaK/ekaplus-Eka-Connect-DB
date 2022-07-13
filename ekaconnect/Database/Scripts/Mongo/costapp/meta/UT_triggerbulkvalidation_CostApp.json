@@ -1,0 +1,73 @@
+{
+  "_id": "UT_triggerbulkvalidation_CostApp",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costestimatebulkupload"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "triggerbulkvalidation",
+      "outcomes": [
+        {
+          "name" : "_ST_PROCESS_CHECKASYNC"
+        },
+        {
+          "name": "EXT_BULK_IMPORT_VALIDATION_TASK"
+        },
+        {
+          "name": "costestimatebulkupload"
+        }
+      ],
+      "label": "UPLOAD",
+      "position": "bottom",
+      "headers": {},
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "costestimatebulkupload"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "fields": [],
+  "label": "",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to re-process the upload?",
+      "headerMessage": "Re-process Upload"
+    }
+  },
+  "object": "023a828b-028e-4202-912c-02a4f1898c6d",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "sys__UUID": "064fa904-8fd3-48db-b903-a9960eacb13f",
+  "taskId": "triggerbulkvalidation",
+  "type": "workflow",
+  "version": "V2"
+}

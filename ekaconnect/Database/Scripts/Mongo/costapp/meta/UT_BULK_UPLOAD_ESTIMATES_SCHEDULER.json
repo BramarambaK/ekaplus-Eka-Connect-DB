@@ -1,0 +1,18 @@
+{
+    "_id" : "workflow_BULK_UPLOAD_ESTIMATES_SCHEDULER",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "6cdd3b23-84fd-42e6-91ea-3cc188127749",
+    "objectAction" : "CREATE",
+    "taskId" : "BULK_UPLOAD_ESTIMATES_SCHEDULER",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "isScheduled" : true,
+    "type" : "workflow",
+    "chainedTasks" : [ 
+				{
+                    "name" : "EXT_BULK_IMPORT_VALIDATION_TASK",
+                    "appendMsg" : false
+                }
+    ]
+}

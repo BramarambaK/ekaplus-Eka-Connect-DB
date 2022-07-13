@@ -1,0 +1,22 @@
+{
+  "_id": "FILE_PROCESS_TASK",
+  "componentType": "FILE_CONTENT_TASK",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+  "type": "workflow",
+  "apiInfo": {
+    "host": "${properties.eka_connect_host}",
+    "path": "/file/download/v2",
+    "headers": {
+      "storageType": "fileSys",
+      "folderInS3": "costDocs"
+    },
+    "method": "POST",
+    "responseDataKey": "",
+    "body": {}
+  },
+  "taskId": "FILE_PROCESS_TASK",
+  "object": "d64b8de7-0802-412d-8f33-462e545871eb",
+  "sys__UUID": "43e26d8b-4fea-4199-abd3-af7310b1dbac"
+}

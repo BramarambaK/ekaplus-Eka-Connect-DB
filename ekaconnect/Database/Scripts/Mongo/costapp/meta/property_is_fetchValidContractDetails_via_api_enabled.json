@@ -1,0 +1,16 @@
+{
+    "_id" : "property_is_fetchValidContractDetails_via_api_enabled",
+    "type" : "property",
+    "name" : "is_fetchValidContractDetails_via_api_enabled",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "length" : "10",
+    "label" : "Is fetchValidContractDetails via api enabled",
+    "visibility" : "public",
+    "editSupportedInUI" : true,
+    "defaultValue" : false,
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "description" : "Decision to fetchValidContractDetails via api or not.",
+    "listOfValues" : "true,false",
+    "sys__UUID" : "17f3a00f-00df-4975-8d02-a51455803cab"
+}

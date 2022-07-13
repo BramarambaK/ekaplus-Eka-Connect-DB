@@ -1,0 +1,13 @@
+{
+    "_id" : "property_ds_market_price_limit",
+    "type" : "property",
+    "name" : "ds_market_price_limit",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "length" : "10",
+    "defaultValue" : "500",
+	"fieldtype" : "textbox",
+	"label" : "DS-Market Price Limit",
+    "editSupportedInUI" : true,
+    "description": "limit number of records to fetch for populating costCurve dropdown"
+}

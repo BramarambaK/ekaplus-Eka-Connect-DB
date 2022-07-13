@@ -1,0 +1,22 @@
+{
+    "_id" : ObjectId("5e5364531d01f363fabd2f0d"),
+    "type" : "property",
+    "name" : "fxToBaseType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "label" : "FX to Base Type",
+    "defaultValue" : [ 
+        {
+            "key" : "Absolute",
+            "value" : "Absolute"
+        }, 
+        {
+            "key" : "Curve",
+            "value" : "Curve"
+        }
+    ],
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "description" : "Values available for FX to Base Type"
+}

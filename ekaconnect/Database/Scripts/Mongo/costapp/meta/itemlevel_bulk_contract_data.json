@@ -1,0 +1,48 @@
+{
+    "_id" : "itemlevel_bulk_contract_data",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d33143ac-4164-4a3f-8d30-61d845c9eeed",
+    "label" : "BULK CONTRACT DATA",
+    "type" : "workflow",
+    "layout" : {},
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "bulkContractData",
+            "label" : "SAVE",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Bulk Contracts saved successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Bulk Contracts are saved with some errors"
+                        }
+                    },
+                    "data" : "output.bulkContractData",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_BULK_CONTRACT_DATA"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_BULK_CONTRACT_DATA",
+                    "name" : "bulkContractData"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "BulkContractData",
+    "fields" : [],
+    "taskId" : "bulkContractData",
+    "object" : "f3d6ff89-b541-4dc0-b88d-12065d10cc90"
+}
