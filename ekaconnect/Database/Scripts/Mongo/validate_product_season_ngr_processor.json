@@ -1,9 +1,0 @@
-{
-  "_id": "validate_product_season_ngr_processor",
-  "name": "validate_product_season_ngr_processor",
-  "type": "processor",
-  "refType": "app",
-  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
-  "snippet": "const send = (status, message) => res.status(status).send(message);\r\n\r\n    const data = req.body.bulkPayLoadData;\r\n    const product = data[0].product;\r\n    const season = data[0].cropYear;\r\n    const bpRefNo = data[0].bpRefNo;\r\n\r\n    const t = data.find(i => i.product != product || i.cropYear != season || i.bpRefNo != bpRefNo);\r\n\r\n    if (t) {\r\n      send(400, 'Product, season, NGR should be same');\r\n    } else {\r\n      send(200, { ticketlistingwarehoused: data });\r\n    }",
-  "sys__UUID": "777e9267-ba83-457d-8eba-5ae77f1ff538"
-}

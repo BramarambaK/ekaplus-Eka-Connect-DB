@@ -1,9 +1,0 @@
-{
-  "_id": "previous_volumesummarize_processor",
-  "name": "previous_volumesummarize_processor",
-  "type": "processor",
-  "refType": "app",
-  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
-  "snippet": " const data = req.body.volumelimitscomposite.enterlimits.tonnagelimits;\r\n    data.forEach(item => {\r\n      if (item.quality.length == 0) {\r\n        item.quality.push('All');\r\n      }\r\n      if (item.site.length == 0) {\r\n        item.site.push('All');\r\n      }\r\n    });\r\n    res.status(200).send(data);",
-  "sys__UUID": "983d892b-1345-407d-8a8d-2044af30d0af"
-}

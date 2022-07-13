@@ -1,9 +1,0 @@
-{
-  "_id": "offercontract_withdrawequest_processor",
-  "name": "offercontract_withdrawequest_processor",
-  "type": "processor",
-  "refType": "app",
-  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
-  "snippet": "",
-  "sys__UUID": "0680309f-7376-428f-964a-af722b4da5de"
-}

@@ -1,9 +1,0 @@
-{
-  "_id": "removengr_processor",
-  "name": "removengr_processor",
-  "type": "processor",
-  "refType": "app",
-  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
-  "snippet": " const data = req.body.enterngrs || [];\r\n    data.splice(req.body.formArrayIndex, 1);\r\n    res.status(200).send({\r\n      enterngrs: {\r\n        ngrdetails: data\r\n      }\r\n    });",
-  "sys__UUID": "ff74ba88-79f8-4e2f-9f85-ed13a3cca134"
-}

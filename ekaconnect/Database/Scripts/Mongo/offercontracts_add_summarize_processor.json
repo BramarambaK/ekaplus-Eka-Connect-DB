@@ -1,9 +1,0 @@
-{
-  "_id": "offercontracts_add_summarize_processor",
-  "name": "offercontracts_add_summarize_processor",
-  "type": "processor",
-  "refType": "app",
-  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
-  "snippet": "const sendError = (message, context) =>\r\nres.status(400).send({\r\n  errorCode: '004',\r\n  errorMessage: message,\r\n  errorContext: null,\r\n  errorLocalizedMessage: message,\r\n  errors: [\r\n    {\r\n      errorCode: '004',\r\n      errorMessage: message,\r\n      errorContext: context,\r\n      errorLocalizedMessage: message,\r\n      errors: null,\r\n    },\r\n  ],\r\n});\r\nif (!req.body.offerbpdetails) {\r\n  return sendError('Please choose an bpRefNo', '{entercontracts:offerbpdetails}');\r\n}\r\n\r\nconst bpDetails = req.body.offerbpdetails.split(' - ');\r\nconst data = (req.body.offercontracts || []).reduce((ac1, cur1, ind1) => {\r\n  ac1.push({\r\n    ...cur1,\r\n    requestType: 'New contract',\r\n    BPRefNo: bpDetails[0],\r\n    counterPartyName: bpDetails[1],\r\n    _groupNo: ind1\r\n  });\r\n  return ac1;\r\n}, []);\r\nres.status(200).send({ offerbpdetails: req.body.offerbpdetails, offercontracts: data });",
-  "sys__UUID": "b2be481a-557d-4cb2-8d26-49cbfd596fcf"
-}

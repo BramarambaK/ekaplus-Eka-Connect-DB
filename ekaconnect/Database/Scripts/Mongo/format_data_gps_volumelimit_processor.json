@@ -1,9 +1,0 @@
-{
-  "_id": "format_data_gps_volumelimit_processor",
-  "name": "format_data_gps_volumelimit_processor",
-  "refType": "app",
-  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
-  "snippet": "var volumeLimitArrayReceived = req.body.bulkPayLoadData;\r\n\/\/ console.log('volumeLimitArrayReceived - ' + JSON.stringify(volumeLimitArrayReceived));\r\n\/\/formatting the volume limit data to GPS volume limit format\r\nvar gpsFormattedVolumeLimit={\r\n  \"VolumeLimitRequest_VolumeLimitRequestRaws\": []\r\n};\r\n\r\nvar gpsFormattedVolumeLimitFields = {\r\n  \"BPRefNo\": null,\r\n  \"BPExternalCode\": null,\r\n  \"Season\": null,\r\n  \"Region\": null,\r\n  \"Site\": null,\r\n  \"Product\": null,\r\n  \"Quality\": null,\r\n  \"DailyLimit\": null,\r\n  \"ActualPurchased\": null\r\n};\r\nfor (let i=0; i<volumeLimitArrayReceived.length;i++) {\r\n  for (let keyReceived in volumeLimitArrayReceived[i]) {\r\n    for(let keyGPSFormattedVolumeLimitFields in gpsFormattedVolumeLimitFields){\r\n      if(keyReceived.toLowerCase() == keyGPSFormattedVolumeLimitFields.toLowerCase()){\r\n        gpsFormattedVolumeLimitFields[keyGPSFormattedVolumeLimitFields] = volumeLimitArrayReceived[i][keyReceived];\r\n        break;\r\n      }\r\n    }\r\n    if(typeof volumeLimitArrayReceived[i]['dailypurchased'] == 'undefined' || volumeLimitArrayReceived[i]['dailypurchased'] === null){\r\n      gpsFormattedVolumeLimitFields['ActualPurchased'] = 0;\r\n    }\r\n    else{\r\n      gpsFormattedVolumeLimitFields['ActualPurchased'] = volumeLimitArrayReceived[i]['dailypurchased'];\r\n    }\r\n  }\r\n  gpsFormattedVolumeLimit['VolumeLimitRequest_VolumeLimitRequestRaws'].push({...gpsFormattedVolumeLimitFields});\r\n}\r\n\/\/ console.log('Data is formatted.'+ JSON.stringify(gpsFormattedVolumeLimit));\r\nres.status(200).send(gpsFormattedVolumeLimit);",
-  "sys__UUID": "21e17496-76c1-4dde-8bb7-1cf8844a76f3",
-  "type": "processor"
-}
