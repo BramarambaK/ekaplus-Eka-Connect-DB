@@ -1,0 +1,181 @@
+{
+  "_id": "enterngrcomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Transfer tickets",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "workflows": [
+        {
+          "name": "topmenutransfertickets"
+        },
+        {
+          "style": {
+            "padding": "22px 21px",
+            "border-left": "1px solid #c8ced3",
+            "border-right": "1px solid #c8ced3",
+            "margin": "0px 10px",
+            "margin-bottom": "-42px"
+          },
+          "workflows": [
+            {
+              "name": "tickettransferrequestdescription",
+              "data": "selected.tickettransfercomposite"
+            }
+          ]
+        },
+        {
+          "workflows": [
+            {
+              "name": "enterngrs",
+              "data": "selected.enterngrcomposite.enterngrs"
+            }
+          ]
+        },
+        {
+          "style": {
+            "padding": "2px 21px 0px",
+            "border-left": "1px solid #c8ced3",
+            "border-right": "1px solid #c8ced3",
+            "margin": "-2px 10px"
+          },
+          "workflows": [
+            {
+              "name": "tickettransferquantitysummary",
+              "data": "selected.enterngrcomposite.enterngrs.ngrdetails",
+              "visibility": "return '${tickettransfercomposite.transfermethod.transferpercentage}' !== 'By tonnage'"
+            }
+          ]
+        },
+        {
+          "style": {
+            "padding": "2px 21px 32px",
+            "border-left": "1px solid #c8ced3",
+            "border-right": "1px solid #c8ced3",
+            "margin": "0px 10px"
+          },
+          "workflows": [
+            {
+              "name": "tickettransferquantitysummarytonnage",
+              "data": "selected.enterngrcomposite.enterngrs.ngrdetails",
+              "visibility": "return '${tickettransfercomposite.transfermethod.transferpercentage}' === 'By tonnage'"
+            }
+          ]
+        }
+      ],
+      "style": {
+        "padding-top": "1px"
+      }
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Transfer tickets"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "manageticketshome"
+      },
+      {
+        "label": "Transfer tickets",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "manageticketshome",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "cargill-delete-class offercontact-cancelpopup",
+          "name": "cancelpopup_transferticketstep2",
+          "restoreState": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "36px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "tickettransfercomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "17px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "submittickettransfercomposite"
+        }
+      ],
+      "formLoader": {
+        "text": "Submitting Offer for contract",
+        "secondaryText": "Please do not close or refresh your browser as this may take a few minutes"
+      },
+      "style": {
+        "margin-right": "36px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "enterngrcomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "b1d5abc9-e347-4d98-bd6b-ac126e7f1c20"
+}

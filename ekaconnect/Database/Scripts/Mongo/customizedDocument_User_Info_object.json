@@ -1,0 +1,51 @@
+{
+  "_id": "customizedDocument_User_Info_object",
+  "type": "customizedDocument",
+  "refType": "object",
+  "refTypeId": "User_Info",
+  "customizeLevel": "system",
+  "fields": {
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "referenceNumber": {
+      "referenceNumber": "Reference Number",
+      "labelKey": "referenceNumber",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "userType": {
+      "userType": "userType",
+      "labelKey": "userType",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "accessRoles": {
+      "accessRoles": "Access & Roles",
+      "labelKey": "accessRoles",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "businessPartner": {
+      "businessPartner": "Business Partner",
+      "labelKey": "businessPartner",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "activeStatus": {
+      "activeStatus": "Active Status",
+      "labelKey": "activeStatus",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    }
+  }
+}

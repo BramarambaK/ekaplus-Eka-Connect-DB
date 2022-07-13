@@ -1,0 +1,27 @@
+{
+  "_id": "elastic_updateMovementData",
+  "version": "V2",
+  "componentType": "ChainedSystemTask",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+  "objectAction": "UPDATE",
+  "taskId": "elastic_updateMovementData",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "config": {
+    "listingWorkflow": "movementordersList"
+  },
+  "tags": "notifyDataChange",
+  "chainedTasks": [
+	{
+            "name" : "_ST_UPDATE_MOVEMENT_ORDERS",
+            "appendMsg" : false,
+            "data" : "output.elastic_updateMovementData"
+     },
+    {
+      "name": "ELASTIC_BULK_UPLOAD_MOVEMENT_ORDERS",
+      "appendMsg": false,
+      "data": "output._ST_UPDATE_MOVEMENT_ORDERS"
+    }
+  ]
+}

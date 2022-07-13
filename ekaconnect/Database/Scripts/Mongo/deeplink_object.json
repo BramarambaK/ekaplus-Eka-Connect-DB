@@ -1,0 +1,18 @@
+{
+  "_id": "deeplink_object",
+  "name": "deeplink_object",
+  "label": "Deeplink Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": [],
+  "fields": {},
+  "sys__UUID": "1254003d-ab7d-4073-a4bf-f4a15ce46ed7"
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "ELASTIC_BULK_UPLOAD_FINANCEDATAS_ACCOUNTSTATEMENTS_workflow",
+  "componentType": "ElasticSearchBulkTask",
+  "type": "workflow",
+  "taskId": "ELASTIC_BULK_UPLOAD_FINANCEDATAS_ACCOUNTSTATEMENTS",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "refType": "app",
+  "objectAction": "CREATE",
+  "config": {
+    "deleteOlderRecords": false,
+	"userSpecificData" : true
+  },
+  "sys__UUID": "c150313b-2f32-4fb1-af9f-3a8fa405e0b6"
+}

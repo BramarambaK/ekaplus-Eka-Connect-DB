@@ -1,0 +1,28 @@
+{
+    "_id" : "delete_contractDomainData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+    "objectAction" : "DELETE",
+    "taskId" : "delete_contractDomainData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",    
+    "chainedTasks" : [
+	{
+	  "name": "_ST_PROCESS_CONTRACT_NOTIFY_DELETE_FLAT",
+	  "appendMsg": false,
+	  "data": "output.delete_contractDomainData"
+	},
+	{
+	  "name" : "_ST_DELETE_CONTRACTDOMAIN",
+	  "appendMsg" : false,
+	  "data" : "output._ST_PROCESS_CONTRACT_NOTIFY_DELETE_FLAT"
+	},
+	{
+	  "name": "ELASTIC_BULK_UPLOAD_CONTRACT_DOMAIN",
+	  "appendMsg": false,
+	  "data": "output._ST_DELETE_CONTRACTDOMAIN"
+	}
+    ]
+}

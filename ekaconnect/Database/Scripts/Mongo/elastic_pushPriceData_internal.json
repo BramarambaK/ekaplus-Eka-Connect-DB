@@ -1,0 +1,39 @@
+{
+  "_id": "elastic_pushPriceData_internal",
+  "version": "V2",
+  "componentType": "ChainedSystemTask",
+  "object": "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+  "objectAction": "CREATE",
+  "taskId": "elastic_pushPriceData_internal",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "sys__UUID": "bc4f0f5b-8b2e-4944-8c3e-071e089b12c7",
+  "chainedTasks": [
+    {
+      "name": "_ST_UPDATE_PRICE_LIMIT",
+      "appendMsg": false,
+      "data": "output.elastic_pushPriceData_internal"
+    },
+    {
+      "name": "ELASTIC_BULK_UPLOAD_PRICE",
+      "appendMsg": false,
+      "data": "output._ST_UPDATE_PRICE_LIMIT"
+    },
+	{
+      "name": "_ST_PROCESSOR_EXPIRE_PRICES",
+      "appendMsg": false,
+      "data": "output._ST_UPDATE_PRICE_LIMIT"
+    },
+    {
+      "name": "_ST_PROCESSOR_FORMAT_DATA_GPS_PRICE",
+      "appendMsg": false,
+      "data": "output._ST_UPDATE_PRICE_LIMIT"
+    },
+    {
+      "name": "EXTERNAL_GPS_PRICE_PUSH",
+      "appendMsg": false,
+      "data": "output._ST_PROCESSOR_FORMAT_DATA_GPS_PRICE"
+    }
+  ]
+}

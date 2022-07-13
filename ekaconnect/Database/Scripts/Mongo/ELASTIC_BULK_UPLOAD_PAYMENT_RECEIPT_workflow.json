@@ -1,0 +1,14 @@
+{
+    "_id": "ELASTIC_BULK_UPLOAD_PAYMENT_RECEIPT",
+    "componentType": "ElasticSearchBulkTask",
+    "type": "workflow",
+    "taskId": "ELASTIC_BULK_UPLOAD_PAYMENT_RECEIPT",
+    "object": "4465c36c-84ab-403b-a61e-cf73a37705fe",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "refType": "app",
+    "objectAction": "CREATE",
+     "config" : {
+          "deleteOlderRecords" : false
+      }
+  }
+  

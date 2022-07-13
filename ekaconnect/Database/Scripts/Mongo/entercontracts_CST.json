@@ -1,0 +1,304 @@
+{
+  "_id": "entercontracts_CST",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Select NGR",
+  "type": "workflow",
+  "layout": {
+    "mdmPayload" : {},
+    "processorInfo": {
+      "processorId": "028c09c9-b25e-414a-8842-4cdb1b6f2f59",
+      "isProceesorOnly": true
+    },
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+      "width": "100%"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "7px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "name": "create",
+    "formStyle": {
+      "padding": "10px 0 4px 12px",
+      "margin": "auto",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "cardClass": "cargill-form"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "label": "Next",
+      "decisionName": "compositeSave",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.entercontracts",
+          "appendMsg": false,
+          "name": "_ST_PROCESS_SUMMARIZE_CONTRACTS"
+        },
+        {
+          "data": "output._ST_PROCESS_SUMMARIZE_CONTRACTS",
+          "name": "_ST_PROCESS_VALIDATE_CONTRACTS"
+        },
+        {
+          "data": "output._ST_PROCESS_VALIDATE_CONTRACTS",
+          "name": "submitoffercontractcomposite",
+          "dirtyCheckFulfilled": true,
+          "setSelected": [
+            "selected.submitoffercontractcomposite.submitoffercontracttableview"
+          ]
+        }
+      ]
+    },
+    {
+      "task": "validateForm",
+      "objectAction": "UPDATE",
+      "decisionName": "validateForm",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.entercontracts",
+          "appendMsg": false,
+          "name": "_ST_PROCESS_ADD_SUMMARIZE_CONTRACTS"
+        },
+        {
+          "data": "output._ST_PROCESS_ADD_SUMMARIZE_CONTRACTS",
+          "name": "_ST_PROCESS_VALIDATE_ADD_CONTRACTS"
+        },
+        {
+          "data": "output._ST_PROCESS_VALIDATE_ADD_CONTRACTS",
+          "name": "_ST_ADD_CONTRACT"
+        },
+        {
+          "data": "output._ST_ADD_CONTRACT",
+          "name": "entercontracts"
+        }
+      ]
+    }
+  ],
+  "labelKey": "ENTER_CONTRACTS",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "402px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "placeholder": "Select",
+        "key": "offerbpdetails",
+        "errorTooltip": true
+      }
+    ],
+    [
+      {
+        "key": "offercontracts",
+        "style": {
+          "display": "flex",
+          "flex-wrap": "wrap",
+          "padding": "20px",
+          "border": "1px solid #c8ced3",
+          "border-radius": "0.25rem",
+          "margin-top": "30px"
+        },
+        "type": "formarray",
+        "labelStyle": {
+          "color": "#3B4047",
+          "font": "normal 18px 'Helvetica Neue LT W05 65 Medium'",
+          "margin": "2px 0 16px 0",
+          "line-height": "24px"
+        },
+        "addButton": {
+          "style": {
+            "background-color": "#00843D",
+            "border-radius": "4px",
+            "color": "#ffffff",
+            "margin-bottom": "0px"
+          },
+          "label": "Add contract",
+          "maxLength": 10,
+          "taskName": "validateForm"
+        },
+        "fields": [
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "placeholder": "Select",
+            "key": "offercontracttype",
+            "errorTooltip": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "placeholder": "Select",
+            "key": "offerproduct",
+            "errorTooltip": true,
+            "removeEmptyOption": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerquality",
+            "placeholder": "Select",
+            "errorTooltip": true,
+            "removeEmptyOption": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerseason",
+            "placeholder": "Select",
+            "errorTooltip": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offersustainable",
+            "placeholder": "Select",
+            "errorTooltip": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerregion",
+            "placeholder": "Select",
+            "errorTooltip": true,
+            "removeEmptyOption": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offersite",
+            "placeholder": "Select",
+            "errorTooltip": true,
+            "removeEmptyOption": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerdeliverterm",
+            "label": "Delivery term",
+            "placeholder": "Select",
+            "errorTooltip": true,
+            "removeEmptyOption": true,
+            "autoDisplayFirst": true,
+            "infoTooltip" : "When Delivered silo (DS or DIS) is selected the required Delivery Period is defined by the Season as follows, For Past and Current Seasons, the required Delivery Period is Now, for next and future Seasons the required Delivery Period is the Harvest Period for that Season"
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerdeliveryperiod",
+            "placeholder": "Select",
+            "errorTooltip": true
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerquantity",
+            "errorTooltip": true,
+            "placeholder" : "Enter quantity"
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerprice",
+            "errorTooltip": true,
+            "placeholder" : "Enter Price"
+          },
+          {
+            "style": {
+              "width" : "228px",
+              "margin-right" : "21px",
+              "height" : "65px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "offerexpiry",
+            "errorTooltip": true,
+            "placeholder" : "Select Date"
+          }
+        ]
+      }
+    ]
+  ],
+  "taskId": "entercontracts",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

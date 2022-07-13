@@ -1,0 +1,136 @@
+{
+  "_id": "customerconnectlisting_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Customer Connect App Listing",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "searchPlaceHolder": "Search ID",
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.customerconnectlisting",
+          "popupClass": "edit-modal700px",
+          "name": "customerconnectedit"
+        }
+      ],
+      "label": "Edit",
+      "iconClass": "fa fa-edit"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "selection": "global",
+      "position": "top",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.customerconnectlisting",
+          "name": "customerconnectdelete"
+        }
+      ],
+      "label": "Delete",
+      "iconClass": "fa fa-trash-o fa-fw"
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "position": "top",
+      "outcomes": [
+        {
+          "popupClass": "edit-modal700px",
+          "name": "customerconnectcreate",
+          "displayType": "popup"
+        }
+      ],
+      "label": "Create",
+      "iconClass": "fa fa-plus"
+    }
+  ],
+  "labelKey": "LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "estimatedValue"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "fulfilledQty"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "remainingQty"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "deliveryDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "deliveryTerm"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "deliveryDestination"
+    }
+  ],
+  "taskId": "customerconnectlisting",
+  "object": "ed0e1ad9-1120-4148-9fa3-4f21839424fa",
+  "sys__UUID": "314fe287-deb0-4c9f-a37d-d1072b9a9b64"
+}

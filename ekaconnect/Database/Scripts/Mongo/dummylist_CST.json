@@ -1,0 +1,17 @@
+{
+  "_id": "dummylist_CST",
+  "componentType": "UserTask",
+  "decisions": [],
+  "fields": [],
+  "label": "Dummy List",
+  "labelKey": "Dummy",
+  "layout": {
+    "name": "list"
+  },
+  "object": "900fcf0a-cbc5-4de1-ad8c-c2987f196cd5",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "dummylist",
+  "type": "workflow"
+}

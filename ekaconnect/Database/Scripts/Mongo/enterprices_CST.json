@@ -1,0 +1,195 @@
+{
+  "_id": "enterprices_CST",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Add tonnage limits for",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "7px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "name": "create",
+    "formStyle": {
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row"
+  },
+  "decisions": [],
+  "labelKey": "ENTER_LIMITS",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "bpRefNo"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "season"
+      }
+    ],
+    [
+      {
+        "key": "enterprices",
+        "style": {
+          "display": "flex",
+          "flex-wrap": "wrap"
+        },
+        "type": "formarray",
+        "labelStyle": {
+          "color": "#5D646F",
+          "font": "normal 18px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "descriptionStyle": {
+          "margin": "16px auto 32px",
+          "color": "#3B4047",
+          "font": "normal 15px 'Helvetica Neue LT W05 45 Light'"
+        },
+        "addButton": {
+          "style": {
+            "background-color": "#00843D",
+            "border-radius": "4px",
+            "color": "#ffffff"
+          },
+          "label": "Add price entry",
+          "maxLength": 10
+        },
+        "fields": [
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "quality"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "site"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "pricingOption"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "payincrement"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "price"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "startDate"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "startTime"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "endDate"
+          },
+          {
+            "style": {
+              "width": "173px",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "endTime"
+          }
+        ]
+      }
+    ]
+  ],
+  "taskId": "enterprices",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}

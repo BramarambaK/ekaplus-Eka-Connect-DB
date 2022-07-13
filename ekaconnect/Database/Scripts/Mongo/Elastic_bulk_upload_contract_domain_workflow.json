@@ -1,0 +1,14 @@
+{
+    "_id" : "ELASTIC_BULK_UPLOAD_CONTRACT_DOMAIN",
+    "componentType" : "ElasticSearchBulkTask", 
+    "type" : "workflow",
+    "taskId" : "ELASTIC_BULK_UPLOAD_CONTRACT_DOMAIN",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "sys__UUID" : "93921d4f-5496-4a58-b57b-d1137c605a38",
+    "refType" : "app",
+    "objectAction" : "CREATE",
+     "config" : {
+        "deleteOlderRecords" : false
+    }
+}

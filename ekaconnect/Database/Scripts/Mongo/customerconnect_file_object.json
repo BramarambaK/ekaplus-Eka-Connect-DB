@@ -1,0 +1,242 @@
+{
+  "_id": "customerconnect_file_object",
+  "createdBy": "Test",
+  "createdOn": "",
+  "fields": {
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "showRecords": {
+      "showRecords": "Show Records",
+      "labelKey": "showRecords",
+      "type": "dropdown",
+      "dataType": "String",
+      "isRequired": false,
+      "propertyKey": "records"
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "uploadedDate",
+      "labelKey": "uploadedDate",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "documentId": {
+      "documentId": "documentId",
+      "labelKey": "documentId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadfileheader": {
+      "uploadfileheader": "Upload file",
+      "labelKey": "uploadfileheader",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "sampledownbtn": {
+      "sampledownbtn": "Upload your own cash bid file or use our",
+      "labelKey": "sampledownbtn",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "type": {
+      "type": "Type",
+      "labelKey": "type",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "Upload File",
+      "labelKey": "file",
+      "type": "file",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "filedragdrop": {
+      "filedragdrop": "",
+      "labelKey": "filedragdrop",
+      "type": "filedragdrop",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "description": {
+      "description": "Description",
+      "labelKey": "description",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "validate": {
+      "validate": "Validate",
+      "labelKey": "validate",
+      "type": "textbox"
+    },
+    "download": {
+      "download": "Upload File",
+      "labelKey": "download",
+      "type": "textbox"
+    },
+    "getfile": {
+      "getfile": "Get File",
+      "labelKey": "getfile",
+      "type": "textbox"
+    },
+    "account": {
+      "account": "Account",
+      "labelKey": "account",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "ngrFilterKey",
+      "children": ["harvestseason", "ClientTimezone"]
+    },
+    "harvestseason": {
+      "harvestseason": "Season",
+      "labelKey": "harvestseason",
+      "type": "dropdown",
+      "isRequired": false,
+      "dataType": "String",
+      "serviceKey": "harvestSeasonKey",
+      "parent": ["account"]
+    },
+    "Grade": {
+      "Grade": "Grade",
+      "labelKey": "Grade",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Site": {
+      "Site": "Site",
+      "labelKey": "Site",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Pricing Option": {
+      "Pricing Option": "Pricing Option",
+      "labelKey": "Pricing Option",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Price": {
+      "Price": "Price",
+      "labelKey": "Price",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Start date": {
+      "Start date": "Start date",
+      "labelKey": "Start date",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Start time": {
+      "Start time": "Start time",
+      "labelKey": "Start time",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "End date": {
+      "End date": "End date",
+      "labelKey": "End date",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "End time": {
+      "End time": "End time",
+      "labelKey": "End time",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "Sustainable": {
+      "Sustainable": "Sustainable",
+      "labelKey": "Sustainable",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "ClientTimezone": {
+      "ClientTimezone": "ClientTimezone",
+      "labelKey": "ClientTimezone",
+      "type": "textbox",
+      "dataType": "Number"
+    }
+  },
+  "label": "FILE_OBJECT",
+  "label_key": "",
+  "lastModifiedOn": "",
+  "lastModifiey": "Test",
+  "layout": {
+    "fields": [[]]
+  },
+  "name": "customerconnect_file_object",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "sys__UUID": "900fcf0a-cbc5-4de1-ad8c-c2987f196cd5",
+  "tenantID": "",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

@@ -1,0 +1,37 @@
+{
+    "_id" : "elastic_pushTicketData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "objectAction" : "CREATE",
+    "taskId" : "elastic_pushTicketData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "config" : {
+        "listingWorkflow" : "ticketsList"
+    },
+    "tags" : "notifyDataChange",    
+    "chainedTasks" : [
+		{
+            "name" : "_ST_PROCESSOR_ADD_REQUESTID",
+            "appendMsg" : false,
+            "data" : "output.elastic_pushTicketData"
+        },
+		{
+            "name" : "_ST_CREATE_TICKET_DATA",
+            "appendMsg" : false,
+            "data" : "output._ST_PROCESSOR_ADD_REQUESTID"
+        },
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_TICKETS",
+            "appendMsg" : false,
+            "data" : "output._ST_CREATE_TICKET_DATA"
+        },
+		{
+            "name" : "_ST_PROCESSOR_UPDATE_TONNAGE_DAILY_PURCHASED",
+            "appendMsg" : false,
+            "data" : "output._ST_CREATE_TICKET_DATA"
+        }
+    ]
+}

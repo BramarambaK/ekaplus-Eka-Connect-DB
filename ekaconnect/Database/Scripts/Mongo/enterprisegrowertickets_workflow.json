@@ -1,0 +1,286 @@
+{
+  "_id": "enterprisegrowertickets_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "enterprisegrowertickets",
+  "label": "Manage Tickets",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "7882bc87-53c5-4843-b809-a5b0487f9ae2",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "getInitialData": false,
+    "searchPlaceHolder": "Search Request ID and more",
+    "messages": {
+      "emptyText": "<span>You have no ticket requests</span><br><span>This may be the answer you're looking for. If not, try removing or changing your filters to make them less specific</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": false,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "single",
+    "resetSelection": true,
+    "tableEditing": false,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Request ID",
+      "sort": true,
+      "key": "requestId",
+      "hidden": false,
+      "category": "link",
+      "task": "custom-link-withNameExpression",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Request type",
+      "sort": true,
+      "key": "requestType",
+      "primaryFilter": true,
+      "UIupdates": {
+        "listValue": "return '${requestType}' ? '${requestType}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Site",
+      "sort": true,
+      "key": "location",
+      "primaryFilter": true
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Sold date",
+      "sort": true,
+      "key": "allocationDate",
+      "UIupdates": {
+        "listValue": "return '${allocationDate}' ? moment('${allocationDate}').format('DD/MM/YYYY') : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Acquirer",
+      "sort": true,
+      "key": "ticketHandlerName",
+      "UIupdates": {
+        "listValue": "return '${ticketHandlerName}' ? '${ticketHandlerName}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Requested date",
+      "sort": true,
+      "key": "requestDate",
+      "UIupdates": {
+        "listValue": "return '${requestDate}' ? moment('${requestDate}').format('DD/MM/YYYY') : '-'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Requested by",
+      "sort": true,
+      "key": "requestBy",
+      "primaryFilter": false,
+      "UIupdates": {
+        "listValue": "return '${requestBy}' ? '${requestBy}' : '-'"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Assigned To",
+      "sort": true,
+      "key": "assignedTo",
+      "primaryFilter": false,
+      "UIupdates": {
+        "listValue": "return '${assignedTo}' ? '${assignedTo}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Expected case close date",
+      "sort": true,
+      "key": "closeDate",
+      "UIupdates": {
+        "listValue": "return '${closeDate}' ? moment('${closeDate}').format('DD/MM/YYYY') : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Modification expiry",
+      "sort": true,
+      "key": "modifyExpiryDate",
+      "UIupdates": {
+        "listValue": "return '${modifyExpiryDate}' ? moment('${modifyExpiryDate}').format('DD/MM/YYYY') : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Trading name",
+      "sort": true,
+      "key": "bpName",
+      "primaryFilter": true,
+      "UIupdates": {
+        "listValue": "return '${bpName}' ? '${bpName}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "highlight": {
+        "Approved": "cargill-table-listing-status-btn-green",
+        "Action required": "cargill-table-listing-status-btn-orange",
+        "Rejected": "cargill-table-listing-status-btn-red",
+        "Awaiting review": "cargill-table-listing-status-btn-blue",
+        "Withdrawn": "cargill-table-listing-status-btn-grey",
+        "Expired": "cargill-table-listing-status-btn-grey"
+      },
+      "edit": true,
+      "label": "Request status",
+      "sort": true,
+      "key": "requestStatus",
+      "primaryFilter": true
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.enterpriselistingcomposite.enterprisegrowertickets",
+          "name": "enterpriseticketrequestdetailscomposite",
+          "setSelected": [
+            "selected.enterpriselistingcomposite.enterprisegrowertickets"
+          ]
+        }
+      ],
+      "position": "top",
+      "label": "View request details",
+      "hideButtonExpression": "return ${enterpriselistingcomposite.enterprisegrowertickets}['requestType'].toLowerCase() != 'offer for warehoused tickets'",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass" : "btn-success custom-link",
+      "objectAction" : "CREATE",
+      "labelkey" : "CREATE_GMR_BASIC",
+      "selection" : "global",
+      "outcomes" : [ 
+          {
+              "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets",
+              "name" : "amendrequestdetailscomposite"
+          }
+      ],
+      "position" : "top",
+      "label" : "View request details",
+      "hideButtonExpression" : "return (${enterpriselistingcomposite.enterprisegrowertickets}.length > 1 || ${enterpriselistingcomposite.enterprisegrowertickets}['requestType'].toLowerCase() != 'amendment')",
+      "iconClass" : "createicon"
+    }, 
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.enterpriselistingcomposite.enterprisegrowertickets",
+          "name": "outturnrequestdetailscomposite"
+        }
+      ],
+      "position": "top",
+      "label": "View request details",
+      "hideButtonExpression": "return (${enterpriselistingcomposite.enterprisegrowertickets}['requestType'].toLowerCase() != 'outturn')",
+      "iconClass": "createicon"
+    },
+    {
+      "btnClass" : "btn-success custom-link",
+      "objectAction" : "CREATE",
+      "labelkey" : "CREATE_GMR_BASIC",
+      "selection" : "global",
+      "outcomes" : [ 
+        {
+            "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets",
+            "name" : "transferticketemployeeuserdetails"
+        }
+      ],
+      "position" : "top",
+      "label" : "View request details",
+      "hideButtonExpression" : "return (${enterpriselistingcomposite.enterprisegrowertickets}.length > 1 || ${enterpriselistingcomposite.enterprisegrowertickets}['requestType'].toLowerCase() != 'transfer')",
+      "iconClass" : "createicon"
+    }, 
+    {
+      "objectAction" : "READ",
+      "selection" : "custom-link-withNameExpression",
+      "outcomes" : [ 
+          {
+              "nameExpression" : "return ('${requestType}'.toLowerCase() == 'amendment') ? 'amendrequestdetailscomposite' : ('${requestType}'.toLowerCase() == 'offer for warehoused tickets') ?'enterpriseticketrequestdetailscomposite':('${requestType}'.toLowerCase() == 'outturn')?'outturnrequestdetailscomposite':'transferticketemployeeuserdetails'",
+              "setSelected" : [ 
+                  "selected.enterpriselistingcomposite.enterprisegrowertickets"
+              ]
+          }
+      ],
+      "key" : "requestType",
+      "value" : "Navigation"
+  }
+  ],
+  "labelKey": "LIST"
+}

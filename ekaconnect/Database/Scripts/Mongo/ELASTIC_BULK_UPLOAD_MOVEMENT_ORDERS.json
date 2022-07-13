@@ -1,0 +1,14 @@
+{
+  "_id": "ELASTIC_BULK_UPLOAD_MOVEMENT_ORDERS",
+  "componentType": "ElasticSearchBulkTask",
+  "type": "workflow",
+  "taskId": "ELASTIC_BULK_UPLOAD_MOVEMENT_ORDERS",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "sys__UUID": "dfac9041-1fd4-42ac-889b-9a0c8e86924f",
+  "refType": "app",
+  "objectAction": "CREATE",
+  "config" : {
+        "deleteOlderRecords" : false
+    }
+}
