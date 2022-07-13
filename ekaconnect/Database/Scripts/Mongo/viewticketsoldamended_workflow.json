@@ -1,0 +1,87 @@
+{
+  "_id": "viewticketsoldamended_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract details Card View",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "header": "Amended sold ticket details",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "rowGroup": false,
+    "class": "submitamend-detailtickettable"
+  },
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo",
+      "hidden": false,
+      "task": "viewLink",
+      "class": "col-flex mobile-full-width details-item-highlight-value",
+      "category": "link"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Variety",
+      "sort": true,
+      "key": "varietyName",
+      "primaryFilter": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Paddock location",
+      "sort": true,
+      "key": "paddockLocation",
+      "UIupdates": {
+        "listValue": "return '${paddockLocation}' != '${originalPaddockLocation}' ? '${paddockLocation}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Truck registration",
+      "sort": true,
+      "key": "truckRegistration",
+      "primaryFilter": false,
+      "UIupdates": {
+        "listValue": "return '${truckRegistration}' != '${originalTruckRegistration}' ? '${truckRegistration}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract number",
+      "sort": true,
+      "key": "contractId",
+      "primaryFilter": false,
+      "UIupdates": {
+        "listValue": "return '${contractId}' != '${originalContractId}' ? '${contractId}' : '-'"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "decisionName": "viewLink",
+      "task": "viewLink",
+      "outcomes": [
+        {
+          "data": "selected.ticketlistingcomposite.ticketlistingrequests",
+          "name": "viewticketwarehousedcomposite"
+        }
+      ]
+    }
+  ],
+  "labelKey": "EDITABLETABLE",
+  "taskId": "viewticketsoldamended",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "aeeb153b-9524-4e55-85b6-9287d52690cc"
+}

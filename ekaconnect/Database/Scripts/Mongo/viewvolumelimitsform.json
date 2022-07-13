@@ -1,0 +1,113 @@
+{
+  "_id": "viewvolumelimitsform_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Update limits for",
+  "type": "workflow",
+  "labelKey": "UPDATE_LIMITS",
+  "layout": {
+    "mdmPayload": {},
+    "processorInfo": {
+      "processorId": "37b2cf15-cca1-489b-80b6-9f0c1f2b7c57"
+    },
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "7px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "formStyle": {
+      "padding": "7px",
+      "margin": "auto",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "name": "create",
+    "cardClass": "cargill-form"
+  },
+  "fields": [
+    [
+      {
+        "style": {
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "bpName",
+        "type": "hidden",
+        "disabled": true,
+        "children": ["accountBPName"]
+      },
+      {
+        "style": {
+          "width": "402px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "accountBPName",
+        "type": "textbox",
+        "disabled": true,
+        "parent": ["bpName"],
+        "UIupdates": {
+          "value": "return '${bpName}' + ' - ' + '${bpRefNo}' + ('${bpExternalName}' ? (' - ' + '${bpExternalName}') : '')"
+        }
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "bpRefNo",
+        "type": "hidden",
+        "disabled": true
+      },
+      {
+        "style": {
+          "width": "143px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "season",
+        "type": "textbox",
+        "disabled": true
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "labelkey": "READ",
+      "label": "Next",
+      "outcomes": []
+    }
+  ],
+  "taskId": "viewvolumelimitsform",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}

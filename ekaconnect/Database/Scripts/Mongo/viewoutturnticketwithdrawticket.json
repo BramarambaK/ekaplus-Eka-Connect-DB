@@ -1,0 +1,82 @@
+{
+    "_id" : "viewoutturnticketwithdrawticket_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Ticket actions",
+    "type" : "workflow",
+    "version" : "V2",
+    "layout" : {
+        "name" : "create",
+        "hideTabs" : true,
+        "pagination" : {
+            "rowCount" : 1
+        },
+        "type" : "row",
+        "cardClass" : "allocate-banner offer-contract-details-banner",
+        "theme" : "horizontal-details contract-details-padding-32"
+    },
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "display" : "flex",
+                    "margin" : 0
+                },
+                "key" : "allocateHeader",
+                "type" : "hidden",
+                "class" : "banner-card-dropdown manage-outturn-header",
+                "label" : "Withdraw this request if it is no longer valid",
+                "formLabelStyle" : {
+                    "font" : "normal 15px 'Helvetica Neue LT W05 45 Light'",
+                    "width" : "755px",
+                    "white-space" : "normal",
+                    "flex" : "0 0 755px",
+                    "margin-top" : "10px",
+                    "height" : "48px"
+                }
+            }, 
+            {
+                "style" : {
+                    "margin-right" : "0px"
+                },
+                "class" : "banner-card-button",
+                "formLabelStyle" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {},
+                "key" : "applyButton",
+                "type" : "button",
+                "label" : "Withdraw",
+                "btnClass" : "allocate-banner-button",
+                "decision" : "withdrawtask"
+            }
+        ]
+    ],
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-link",
+            "objectAction" : "DELETE",
+            "task" : "withdrawtask",
+            "decisionName" : "withdrawtask",
+            "labelkey" : "CREATE_GMR_BASIC",
+            "selection" : "global",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "cargill-delete-class",
+                    "data" : "selected.ticketlistingcomposite.ticketlistingrequests",
+                    "name" : "ticketoutturn_request_withdraw"
+                }
+            ],
+            "position" : "top",
+            "label" : "Withdraw request",
+            "labelExpression" : "return ${ticketlistingcomposite.ticketlistingrequests.length} > 1 ? 'Withdraw requests' : 'Withdraw request' ",
+            "iconClass" : "createicon"
+        }
+    ],
+    "taskId" : "viewoutturnticketwithdrawticket",
+    "labelKey" : "Cards View",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

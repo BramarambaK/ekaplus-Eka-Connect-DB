@@ -1,0 +1,75 @@
+{
+  "_id": "viewcontractwithdrawcontract_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Manage request",
+  "type": "workflow",
+  "version": "V2",
+  "layout": {
+    "name": "create",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "type": "row",
+    "cardClass": "allocate-banner offer-contract-details-banner",
+    "theme": "horizontal-details contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "style": {
+          "display": "flex",
+          "margin": 0
+        },
+        "key": "allocateHeader",
+        "type": "hidden",
+        "class": "banner-card-dropdown manage-offer-header",
+        "label": "Withdraw this request if it is no longer needed",
+        "formLabelStyle": {
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "15px",
+          "width": "755px",
+          "white-space": "normal",
+          "flex": "0 0 755px",
+          "margin-top": "16px",
+          "height": "48px"
+        }
+      },
+      {
+        "class": "banner-card-button",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": { "float": "right", "height": "35px", "top": "0px" },
+        "key": "applyButton",
+        "type": "button",
+        "label": "Withdraw",
+        "btnClass": "allocate-banner-button",
+        "decision": "withdrawtask"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "DELETE",
+      "task": "withdrawtask",
+      "decisionName": "withdrawtask",
+      "outcomes": [
+        {
+          "name": "contract_request_withdraw",
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        }
+      ]
+    }
+  ],
+  "taskId": "viewcontractwithdrawcontract",
+  "labelKey": "Cards View",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "deviceType": "mobile"
+}

@@ -1,0 +1,103 @@
+{
+  "_id": "viewcontractrequestid_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract request Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card card-pb-0",
+    "theme": "cargill-contract-details-card view-contract-requestid"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Request ID:' + ' ' +('${requestId}' ? '${requestId}' : '-')"
+      },
+      {
+        "key": "approvalStatus",
+        "type": "heading",
+        "valueExpression": "return '${approvalStatus}' ",
+        "config": {
+          "classExpression": "return '${approvalStatus}'.toLowerCase().includes('pending') ? 'contract-status pending' : '${approvalStatus}'.toLowerCase().includes('action') ? 'contract-status status-action' : '${approvalStatus}'.toLowerCase().includes('approved') ? 'contract-status status-approved' : '${approvalStatus}'.toLowerCase().includes('rejected') ? 'contract-status status-reject' : '${approvalStatus}'.toLowerCase().includes('awaiting') ? 'contract-status status-awaiting' :'${approvalStatus}'.toLowerCase().includes('expired') ? 'contract-status status-expired' : 'contract-status status-withdrawn' "
+        }
+      }
+    ],
+    [
+      {
+        "label": "Request type",
+        "type": "detailsFlex",
+        "key": "contractType",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${requestType}' ? '${requestType}' : '-'"
+      },
+      {
+        "label": "Requested by",
+        "type": "detailsFlex",
+        "key": "counterPartyName",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${requestedBy}' ? '${requestedBy}' : '-' "
+      },
+      {
+        "label": "Date requested",
+        "type": "detailsFlex",
+        "key": "contractIssueDate",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${requestedDate}' ? '${requestedDate}' : '-'"
+      },
+      {
+        "label": "Contract ID",
+        "type": "detailsFlex",
+        "key": "contractRefNo",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "class": "col-flex mobile-full-width",
+        "valueExpression": "return '${contractRefNo}' == '' ? '-' :'${contractRefNo}'",
+        "visibility": "return '${contractRefNo}' == '-' "
+      },
+      {
+        "label": "Contract ID",
+        "type": "detailsFlex",
+        "key": "contractRefNo",
+        "style": {
+          "width": "25%",
+          "font-size": "15px"
+        },
+        "decisionName": "download-link",
+        "class": "col-flex mobile-full-width details-item-highlight-value",
+        "valueExpression": "return '${contractRefNo}'",
+        "visibility": "return '${contractRefNo}'=='-'?false:true"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "viewcontractrequestid",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "deviceType": "mobile"
+}

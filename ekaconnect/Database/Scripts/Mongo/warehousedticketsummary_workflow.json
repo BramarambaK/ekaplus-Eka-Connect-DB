@@ -1,0 +1,124 @@
+{
+  "_id": "warehousedticketsummary_worklfow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "getDataFromExternalAPI": false,
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Summary",
+    "descriptionExpression": "return 'Review and confirm offer ticket details for ${bpName} - ${bpRefNo}'",
+    "class": "allocate-form"
+  },
+  "decisions": [],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": true,
+      "key": "ticketRefNo",
+      "label": "Ticket ID"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "product",
+      "label": "Commodity"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quality",
+      "label": "Grade"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "cropYear",
+      "label": "Season"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "location",
+      "label": "Site"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "offersustainable",
+      "label": "Sustainable"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedTestResultsShort",
+      "label": "Test results",
+      "UIupdates": {
+        "listValue": "return '${testResultsShort}'=='-' ?'-' : '${testResultsShort}'.replaceAll(',', ',<br>')"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quantity",
+      "label": "Quantity (MT)",
+      "type": "hidden"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedQuantity",
+      "label": "Quantity (MT)",
+      "UIupdates": {
+        "listValue": "return ('${quantity}'+' MT')"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "offerPrice",
+      "label": "Offer price (/MT)",
+      "type": "hidden"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedOfferPrice",
+      "label": "Offer price (/MT)",
+      "UIupdates": {
+        "listValue": "return ('$' + '${offerPrice}')"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "estimatedPrice",
+      "label": "Est. revenue",
+      "type": "hidden"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedEstimatedPrice",
+      "label": "Est. revenue",
+      "UIupdates": {
+        "listValue": "return ('$' + '${estimatedPrice}')"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "offerExpiryDate",
+      "label": "Offer expiry"
+    }
+  ],
+  "taskId": "warehousedticketsummary",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "5a7336d1-a76c-49f3-a7b5-ba7c33755e92"
+}

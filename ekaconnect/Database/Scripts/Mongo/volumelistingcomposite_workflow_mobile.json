@@ -1,0 +1,145 @@
+{
+  "_id": "volumelistingcomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "clearSelected": [
+    "selected.volumelimitscomposite",
+    "selected.updatevolumelimitscurrent",
+    "selected.updatevolumelimitsprevious"
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "style": {
+            "width": "100%"
+          },
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "volumelistingquery"
+                }
+              ]
+            },
+            {
+              "display": "tabs",
+              "styleClass": "tabview-1",
+              "workflows": [
+                {
+                  "tabHeader": "CURRENT SEASON",
+                  "showMainContent": true,
+                  "tabConfigExpressions": {
+                    "getDataFrom": "volumelistingcomposite.volumelistingquery.Y",
+                    "tabHeader": "return 'CURRENT SEASON (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "volumelistingcurrent",
+                          "data": "selected.volumelistingcomposite.volumelistingquery.Y"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.volumelistingcomposite.volumelistingquery.Y"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "PREVIOUS SEASON",
+                  "showMainContent": true,
+                  "tabConfigExpressions": {
+                    "getDataFrom": "volumelistingcomposite.volumelistingquery.N",
+                    "tabHeader": "return 'PREVIOUS SEASON (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "volumelistingprevious",
+                          "data": "selected.volumelistingcomposite.volumelistingquery.N"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.volumelistingcomposite.volumelistingquery.N"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "breadcrumbs": [
+      {
+        "label": "Prices and limits",
+        "type": "string",
+        "task": "priceandlimitshome"
+      },
+      {
+        "label": "Manage tonnage limits",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "menu": false,
+    "customScrollBar": true,
+    "clearSelected": ["selected"],
+    "supportCustomization": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "priceandlimitshome",
+      "outcomes": [
+        {
+          "name": "pricelimitsdomaincomposite",
+          "clearSelected": ["selected.pricelimitsdomaincomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "volumelistingcomposite",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+  "sys__UUID": "948c9a50-9f3d-4483-8a2f-f749bab8c380",
+  "deviceType": "mobile"
+}

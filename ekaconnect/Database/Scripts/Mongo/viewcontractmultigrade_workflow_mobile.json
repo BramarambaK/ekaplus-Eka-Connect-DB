@@ -1,0 +1,53 @@
+{
+  "_id": "viewcontractmultigrade_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Tickets details  Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details",
+    "theme": "cargill-contract-details-card multi-grade card-spread-floating"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Multi-grade spreads'  + ('${spread}'.toLowerCase().includes('floating') ? '': '${ekaCCSpreadFixed}' ? ' fixed as at ' + '${ekaCCSpreadFixed}' : ' fixed')"
+      }
+    ],
+    [
+      {
+        "key": "floating",
+        "type": "details",
+        "class": "floating-text",
+        "valueExpression": "return 'Floating'",
+        "visibility": "return (('${spread}'.toLowerCase() === 'floating') || ('${spread}'.toLowerCase() === 'leave floating'))? true:false"
+      }
+    ],
+    [
+      {
+        "key": "multiGradeDifferentialDetails",
+        "type": "detailsArray",
+        "class": "multi-grade-details",
+        "valueExpression": " return ${multiGradeDifferentialDetails}.multiGradeDifferentialDetail.map(i => ( { label: i.qualityName, value: i.multiGradeDifferential == null || i.multiGradeDifferential == '' ? '-' : (i.multiGradeDifferential + '').toLowerCase()  == 'base' ? i.multiGradeDifferential : (i.multiGradeDifferential + '').includes('-') ?  '-$' + (-i.multiGradeDifferential).toFixed(2) :  (i.multiGradeDifferential + '').includes('+')  ? '+$' + (+i.multiGradeDifferential).toFixed(2):  '+$' + (+i.multiGradeDifferential).toFixed(2),  class: (i.multiGradeDifferential + '').toLowerCase() == 'base' ? 'base-value' : ''  }))",
+        "visibility": "return (('${spread}'.toLowerCase() !== 'floating') && ('${spread}'.toLowerCase() !== 'leave floating'))? true:false"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "viewcontractmultigrade",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "deviceType": "mobile"
+}

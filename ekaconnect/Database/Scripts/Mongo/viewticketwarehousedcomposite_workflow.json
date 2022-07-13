@@ -1,0 +1,162 @@
+{
+  "_id": "viewticketwarehousedcomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Ticket details",
+  "processorInfo": {
+    "processorId": "abb1b9a2-bcf4-4960-becb-d3888250386d"
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "display": "flex"
+              },
+              "class": "card-ticket-details",
+              "visibility" : "return '${viewticketwarehousedcomposite.ticketDetails.isparentTicket}' === 'N' ? true : false",
+              "workflows": [
+                {
+                  "name": "viewticketallocatecard",
+                  "data": "selected.viewticketwarehousedcomposite.ticketDetails"
+                }
+              ]
+            },
+            {
+              "style": {
+                "display": "flex"
+              },
+              "class": "card-ticket-details",
+              "workflows": [
+                {
+                  "name": "viewticketidcardview",
+                  "data": "selected.viewticketwarehousedcomposite.ticketDetails"
+                }
+              ]
+            },
+            {
+              "style": {
+                "display": "flex"
+              },
+              "class": "card-ticket-details",
+              "workflows": [
+                {
+                  "name": "viewticketcommoditydetailscardview",
+                  "data": "selected.viewticketwarehousedcomposite.ticketDetails"
+                },
+                {
+                  "name": "viewtickettestresultscardview",
+                  "data": "selected.viewticketwarehousedcomposite.ticketDetails"
+                }
+              ]
+            },
+            {
+              "style": {
+                "display": "flex"
+              },
+              "class": "card-ticket-details",
+              "workflows": [
+                {
+                  "name": "viewticketpaymentsdeductioncardview",
+                  "data": "selected.viewticketwarehousedcomposite.ticketDetails"
+                },
+                {
+                  "name": "viewtickettransportdetailscardview",
+                  "data": "selected.viewticketwarehousedcomposite.ticketDetails"
+                }
+              ]
+            },
+            {
+              "class": "card-ticket-details",
+              "visibility": "return data.viewticketwarehousedcomposite?.ticketDetails?.splitTickets.length > 0 ? true : false",
+              "workflows": [
+                {
+                  "name": "viewticketsplithistorycardview",
+                  "data": "selected.viewticketwarehousedcomposite.ticketDetails"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Ticket details"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Tickets",
+        "type": "string",
+        "task": "ticketshome"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketslist"
+      },
+      {
+        "label": "Ticket details",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "customScrollBar": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketslist",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "clearSelected": ["selected.ticketlistingcomposite"]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "ticketshome",
+      "outcomes": [
+        {
+          "name": "ticketscomposite",
+          "clearSelected" : [ 
+            "selected.viewticketwarehousedcomposite", 
+            "selected.ticketlistingcomposite"
+          ]
+        }
+      ]
+    }
+  ],
+  "taskId": "viewticketwarehousedcomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "9b9a5401-4cc6-4b0c-b386-9b422cbcfa8a"
+}

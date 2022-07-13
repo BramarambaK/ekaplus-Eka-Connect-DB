@@ -1,0 +1,51 @@
+{
+  "_id": "volumelistingquery_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "sys__UUID": "5f80f8d0-dbd8-43ee-aae6-56eb73a4ca53",
+  "type": "workflow",
+  "rows": 10000,
+  "processorInfo": {
+    "processorId": "be4b175d-dd04-4347-b039-f26bcc724642"
+  },
+  "layout": {
+    "header": {
+      "label": "Manage tonnage limits",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "processorInfo": {
+      "processorId": "248783d1-1167-4d08-808a-43dde17b6100",
+      "isProceesorOnly": true
+    },
+    "getInitialData": true,
+    "name": "query",
+    "mdmPayload": {},
+    "dataPayload": {}
+  },
+  "fields": [
+    {
+      "key": "ngrGCSFilter",
+      "filterBy": "bpExternalCode",
+      "filterType": "dropdown",
+      "multiple": false,
+      "selectedAll": "return '${userInfo.customerType}' !== 'Grower' ? 'All ABNs' : 'All NGRs'",
+      "placeholder": "return '${userInfo.customerType}' !== 'Grower' ? 'Select a ABN' : 'Select a NGR'",
+      "persistInGlobal": true,
+      "useGlobalValue": true
+    },
+    {
+      "key": "tabsView",
+      "filterBy": "active",
+      "filterType": "tabs"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "volumelistingquery",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}

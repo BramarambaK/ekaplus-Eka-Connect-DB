@@ -1,0 +1,188 @@
+{
+  "_id": "viewrequesteddetails_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract request",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "card-contract-details",
+      "workflows": [
+        {
+          "style": {
+            "display": "grid"
+          },
+          "class": "card-ticket-details",
+          "visibility": "return '${contractlistingcomposite.contractrequests[0].approvalStatus}'.toLowerCase() == 'action required'",
+          "workflows": [
+            {
+              "name": "viewcontractresponserequest",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            }
+          ]
+        },
+        {
+          "class": "card-ticket-details",
+          "visibility": "return '${contractlistingcomposite.contractrequests[0].approvalStatus}'.toLowerCase() == 'awaiting review'",
+          "name": "viewcontractwithdrawcontract",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        },
+        {
+          "name": "viewcontractrequestid",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        },
+        {
+          "visibility": "return '${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'amendment'",
+          "name": "viewcontractamended",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        },
+        {
+          "name": "viewcontractdetailssummary",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        },
+        {
+          "name": "contractrequestdetailsspread",
+          "data": "selected.contractlistingcomposite.contractrequests",
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].isMultiGrade}' == 'Y') && ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'new contract')"
+        },
+        {
+          "name": "contractrequestdetailsspreadamend",
+          "data": "selected.contractlistingcomposite.contractrequests",
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].isMultiGrade}' == 'Y') && ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'amendment')"
+        },
+
+        {
+          "name": "viewcontractrequestoriginalpickup",
+          "data": "selected.contractlistingcomposite.contractrequests",
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'new contract') && ('${contractlistingcomposite.contractrequests[0].freightOrganise}'.toLowerCase().includes('cargill'))"
+        },
+        {
+          "name": "viewcontractrequestoriginalpickupself",
+          "data": "selected.contractlistingcomposite.contractrequests",
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'new contract') && ('${contractlistingcomposite.contractrequests[0].freightOrganise}'.toLowerCase().includes('i will organise my own freight')) && ('${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'ex-farm' || '${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'db')"
+        },
+        {
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'amendment') && ('${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'ex-farm') && ('${contractlistingcomposite.contractrequests[0].amendedFreightOrganise}'.toLowerCase().includes('cargill'))",
+          "workflows": [
+            {
+              "name": "viewcontractamendedfarm",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            },
+            {
+              "name": "viewcontractoriginalfarm",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            }
+          ]
+        },
+        {
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'amendment') && ('${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'ex-farm') && ('${contractlistingcomposite.contractrequests[0].amendedFreightOrganise}'.toLowerCase().includes('cargill'))",
+          "workflows": [
+            {
+              "name": "viewcontractamendedpickup",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            },
+            {
+              "name": "viewcontractoriginalpickup",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            }
+          ]
+        },
+        {
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'amendment') && ('${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'ex-farm'  || '${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'db') && ('${contractlistingcomposite.contractrequests[0].freightOrganise}'.toLowerCase().includes('i will organise my own freight') && ('${contractlistingcomposite.contractrequests[0].amendedFreightOrganise}'.toLowerCase().includes('cargill'))",
+          "workflows": [
+            {
+              "name": "viewcontractamendedpickup",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            },
+            {
+              "name": "viewcontractrequestoriginalpickupself",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            }
+          ]
+        },
+        {
+          "visibility": "return ('${contractlistingcomposite.contractrequests[0].requestType}'.toLowerCase() == 'amendment') && ('${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'ex-farm'  || '${contractlistingcomposite.contractrequests[0].INCOTerm}'.toLowerCase() == 'db') && ('${contractlistingcomposite.contractrequests[0].amendedFreightOrganise}'.toLowerCase().includes('i will organise my own freight'))",
+          "workflows": [
+            {
+              "name": "viewcontractrequestoriginalpickupself",
+              "data": "selected.contractlistingcomposite.contractrequests"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Ticket Details"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Contracts",
+        "type": "string",
+        "task": "contractshome"
+      },
+      {
+        "label": "Manage contracts",
+        "type": "string",
+        "task": "contractslist"
+      },
+      {
+        "label": "Contract request",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "customScrollBar": true,
+    "clearSelected": ["selected.viewrequesteddetails.contractlistingquery"]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "contractshome",
+      "outcomes": [
+        {
+          "name": "contractdomaincomposite",
+          "clearSelected": ["selected.contractdomaincomposite"]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "contractslist",
+      "outcomes": [
+        {
+          "restoreQueryExpression": "return { 'tabIndex': 0 }",
+          "restoreState": true,
+          "restoreStateQuery": "contractlistingcomposite",
+          "name": "contractlistingcomposite",
+          "clearSelected": ["selected.contractlistingcomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "viewrequesteddetails",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "639b1a87-2149-440e-b335-612e81496c90",
+  "deviceType": "mobile"
+}

@@ -1,0 +1,96 @@
+{
+  "_id": "viewtickettransferreqdetails_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Ticket request",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "workflows": [
+        {
+          "name": "ticketrequestiddetails",
+          "data": "selected.ticketlistingcomposite.ticketlistingrequests"
+        },
+        {
+          "style": {
+            "margin-top": "-9px"
+          },
+          "workflows": [
+            {
+              "name": "viewtransferdetails",
+              "data": "selected.ticketlistingcomposite.ticketlistingrequests[0].selectNGRList"
+            }
+          ]
+        },
+        {
+          "style": {
+            "margin-top": "45px"
+          },
+          "workflows": [
+            {
+              "name": "viewtickettransferdetails",
+              "data": "selected.ticketlistingcomposite.ticketlistingrequests[0].selectedTicketList"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Ticket request"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketslist"
+      },
+      {
+        "label": "Ticket request details",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "customScrollBar": true,
+    "setSelected": ["selected.ticketlistingcomposite.ticketlistingrequests"]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketslist",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "clearSelected": ["selected.ticketlistingcomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "viewtickettransferreqdetails",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "32ef8fe6-fbfd-4fe3-b5f7-b8a776384ea1"
+}
