@@ -1,0 +1,14 @@
+{
+    "_id" : "layer7_token_externalApiHost_property",
+    "type" : "property",
+    "name" : "layer7_token_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "Layer 7 token URL Host",
+    "defaultValue" : "https://login.microsoftonline.com/57368c21-b8cf-42cf-bd0b-43ecd4bc62ae/oauth2/v2.0/token",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL host to generate token from Layer 7 system."
+}

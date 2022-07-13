@@ -1,0 +1,129 @@
+{
+  "_id": "inventoryList_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "inventoryList",
+  "object": "f895de3c-5f05-4671-b70d-4c180078fc07",
+  "label": "inventoryList",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Inventory",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "name": "inventoryList"
+  },
+  "version": "V2",
+  "listingDataOptions": {
+    "filterOptions": {
+      "type": "elasticSearch"
+    }
+  },
+  "inputData": {
+    "type": "elasticSearch",
+    "config": {
+      "isElasticCumSystemTask": true,
+      "statusFlagToBeUpdated": true,
+      "statusFlagWorklowTask": "inventoryList"
+    }
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "userType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "bpRefNo",
+      "align": "right"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "bpName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "inventoryRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "executedQuantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "itemQuantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contractStatus"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "deliveryTerm"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "origin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quantityUnit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "openQuantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "location"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY"
+}

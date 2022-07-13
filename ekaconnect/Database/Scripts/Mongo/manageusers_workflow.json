@@ -1,0 +1,14 @@
+{
+    "_id" : "manageusers_workflow",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask", 
+    "objectAction" : "READ",
+    "taskId" : "manageusers",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "chainedTasks" : [],
+	"object" : "a8b107d3-b461-43aa-b834-fc87dd4a5998",
+    "sys_UUID" : "de0929c9-d72e-4755-b52f-fbd2c6ef2d28"
+}
+    

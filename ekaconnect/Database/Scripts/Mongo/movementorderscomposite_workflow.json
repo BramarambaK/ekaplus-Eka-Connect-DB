@@ -1,0 +1,91 @@
+{
+  "_id": "movementorderscomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Movement orders composite",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": "movementordersquicklink"
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": "movementordersquicklink"
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "movementordersquery"
+                }
+              ]
+            },
+            {
+              "style": {
+                "margin": "2rem 0 49px"
+              },
+              "workflows": [
+                {
+                  "name": "movementorderssummary",
+                  "data": "selected.movementorderscomposite.movementordersquery"
+                }
+              ]
+            },
+            {
+              "name": "movementorderscharts",
+              "data": "selected.movementorderscomposite.movementordersquery"
+            },
+            {
+              "name": "movementorderscardview",
+              "data": "selected.movementorderscomposite.movementorderscharts"
+            },
+            {
+              "style": { "display": "flex", "margin-bottom": "40px" },
+              "workflows": [
+                {
+                  "name": "lastUpdated",
+                  "data": "selected.movementorderscomposite.movementordersquery"
+                }
+              ]
+            }
+          ],
+          "style": {
+            "width": "100%"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Open contracts"
+    },
+    "name": "customv2",
+    "menu": false,
+    "clearSelected": ["selected"],
+    "customScrollBar": true
+  },
+  "decisions": [],
+  "taskId": "movementorderscomposite",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b"
+}

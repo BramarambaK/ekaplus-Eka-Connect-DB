@@ -1,0 +1,116 @@
+{
+  "_id": "movementorderscardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract Domain Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "var sum = ${data}.reduce((a, v) => a + parseInt(v.orderedQuantity), 0); return '${data.length} movement orders'; "
+    },
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 10,
+      "type": "showMoreLess"
+    },
+    "cardsListClass": "card-view"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "class": "header",
+        "valueExpression": "return '${product} - ${quality}'"
+      },
+      {},
+      {
+        "key": "locationHeading",
+        "type": "heading",
+        "iconClass": "location-icon",
+        "filterType": "groups",
+        "valueExpression": "return '${location} - ${bulkHandler}'"
+      },
+      {
+        "key": "cropYear",
+        "type": "heading",
+        "filterType": "groups"
+      },
+      {
+        "key": "quality",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "style": {
+          "display": "none"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Movement orders",
+        "key": "contractCount",
+        "aggregateFunction": "count",
+        "type": "details"
+      },
+      {
+        "label": "Transport",
+        "key": "transportMode",
+        "aggregateFunction": "display",
+        "type": "details"
+      },
+      {
+        "label": "Ordered quantity",
+        "key": "orderedQuantity",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "suffix": "'${quantityUnit}'",
+        "roundOff": "round"
+      },
+      {
+        "label": "Open quantity",
+        "key": "openQuantity",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "suffix": "'${quantityUnit}'",
+        "valueExpression": "let o = isNaN(Number(${orderedQuantity})) ? 0 : Number(${orderedQuantity});  let m = isNaN(Number(${movedQuantity})) ? 0 : Number(${movedQuantity}); return Math.max(o - m, 0);",
+        "roundOff": "round"
+      }
+    ],
+    [
+      {
+        "label": "Manage movement orders",
+        "type": "footer",
+        "iconClass": "rightGreen-arrow-icon"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "querydocuments",
+      "decisionName": "reset",
+      "selection": "chart",
+      "outcomes": [
+        {
+          "name": "RESETACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": ["costestimatelistplatform"]
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "movementorderscardview",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b"
+}

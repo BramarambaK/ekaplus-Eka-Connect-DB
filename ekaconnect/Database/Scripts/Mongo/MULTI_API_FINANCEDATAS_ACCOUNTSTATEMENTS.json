@@ -1,0 +1,28 @@
+{
+    "_id" : "MULTI_API_FINANCEDATAS_ACCOUNTSTATEMENTS",
+    "componentType" : "MULTI_API_TASK",
+	"userSpecific" : true,
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "MULTI_API_FINANCEDATAS_ACCOUNTSTATEMENTS",
+    "object" : "c406a257-7104-46ae-9c73-f901a9874d11",
+    "type" : "workflow",
+    "version" : "V2",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_FINANCE_FINANCEDATAS"
+            }, 
+            {
+                "id" : "EXTERNAL_FINANCE_ACCOUNT_STATEMENTS"
+            },
+            {
+                "id" : "EXTERNAL_FINANCE_USERINFO"
+            }
+        ],
+        "query" : "select 'FinanceDatas-' || b.FinanceDataId as \"financeDatasAccountStatementsId\",b.UserType as \"userType\",DECODE(d.customerType,'Grower',b.PayeeID,b.AddressBookNumber) as \"filterKey\",b.BpRefNo as \"bpRefNo\",b.BPNAME as \"bpName\",b.PayeeID as \"payeeId\",b.PAYEENAME as \"payeeName\",b.Type as \"Type\",b.DocumentType as \"documentType\",b.DocumentId as \"documentId\",b.MonthAndYear as \"monthAndYear\",FORMATDATETIME (b.Date, 'dd-MM-yyyy') as \"date\",FORMATDATETIME (b.DueDate, 'dd-MM-yyyy') as \"dueDate\",b.Currency as \"currency\",b.TotalAmount as \"totalAmount\",b.AmountDue as \"amountDue\",b.AmountPaidReceived as \"amountPaidReceived\",b.Status as \"status\",b.FileId as \"fileId\",b.ContractIds as \"contractId\",b.RAInvoiceNumbers as \"raInvoiceNumber\",b.AddressBookNumber as \"addressBookNumber\",Null as \"clientCode\",Null as \"ABN\",CASE WHEN b.Type='Account Payable' THEN 'Receivables' WHEN  b.Type='Account Receivable' THEN 'Payables' ELSE Null END as \"accountStatus\",d.userName as \"sys__createdBy\",d.userName as \"sys__updatedBy\",CURRENT_TIMESTAMP() as \"sys__createdOn\",CURRENT_TIMESTAMP() as \"sys__updatedOn\",b.CDDocumentType as \"CDDocumentType\" from EXTERNAL_FINANCE_FINANCEDATAS b join EXTERNAL_FINANCE_USERINFO d  UNION All select 'AccountStatements-' || a.AccountStatementId as \"financeDatasAccountStatementsId\",'**' as \"userType\",DECODE(c.customerType,'Grower',a.PayeeID,a.CustomerID) as \"filterKey\",a.BPREF as \"bpRefNo\",a.Company as \"bpName\",a.PayeeID as \"payeeId\",a.CustomerName as \"payeeName\",Null as \"Type\",Null as \"documentType\",a.DocumentID as \"documentId\",Null as \"monthAndYear\",FORMATDATETIME (a.DateIssued, 'dd-MM-yyyy') as \"date\",Null as \"dueDate\",a.Currency as \"currency\",a.TotalAmount as \"totalAmount\",Null as \"amountDue\",Null as \"amountPaidReceived\",Null as \"status\",a.FileId as \"fileId\",Null as \"contractId\",Null as \"raInvoiceNumber\",a.CustomerID as \"addressBookNumber\",a.ClientCode as \"clientCode\",a.ABN as \"ABN\",'Statement' as \"accountStatus\",c.userName as \"sys__createdBy\",c.userName as \"sys__updatedBy\",CURRENT_TIMESTAMP() as \"sys__createdOn\",CURRENT_TIMESTAMP() as \"sys__updatedOn\",a.CDDocumentType as \"CDDocumentType\" from EXTERNAL_FINANCE_ACCOUNT_STATEMENTS a join EXTERNAL_FINANCE_USERINFO c;"
+    },
+    "sys__UUID": "172713d5-253d-47fe-97f0-b8c1b86fa3b8"
+}

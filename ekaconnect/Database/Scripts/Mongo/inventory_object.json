@@ -1,0 +1,173 @@
+{
+  "_id": "inventory_object",
+  "name": "inventory_object",
+  "label": "Inventory Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["bpRefNo", "quality", "cropYear", "site", "bpSubGroupRefNo"],
+  "fields": {
+    "userType": {
+      "userType": "User Type",
+      "labelKey": "userType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpRefNo": {
+      "bpRefNo": "BP Ref No",
+      "labelKey": "bpRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpName": {
+      "bpName": "BP Name",
+      "labelKey": "bpName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpSubGroupRefNo": {
+      "bpSubGroupRefNo": "BP Sub Group Ref No",
+      "labelKey": "bpSubGroupRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "inventoryRefNo": {
+      "inventoryRefNo": "Inventory Ref No",
+      "labelKey": "inventoryRefNo",
+      "type": "String",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "origin": {
+      "origin": "Origin",
+      "labelKey": "origin",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "cropYear": {
+      "cropYear": "Crop Year",
+      "labelKey": "cropYear",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quantity": {
+      "quantity": "Quantity",
+      "labelKey": "quantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quantityUnit": {
+      "quantityUnit": "Quantity Unit",
+      "labelKey": "quantityUnit",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "site": {
+      "site": "Site",
+      "labelKey": "site",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "stackAverage": {
+      "stackAverage": "Stack average",
+      "labelKey": "stackAverage",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "stackAverageOriginal": {
+      "stackAverage": "Stack average Original",
+      "labelKey": "stackAverageOriginal",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "updatedTime": {
+      "updatedTime": "Updated time",
+      "labelKey": "updatedTime",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bulkHandler": {
+      "bulkHandler": "Bulk handler",
+      "labelKey": "bulkHandler",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ngrFilter": {
+      "ngrFilter": "Filter",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey"
+    },
+    "ngrInventoryFilter": {
+      "ngrFilter": "Filter",
+      "labelKey": "ngrInventoryFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrInventoryFilterKey"
+    },
+    "inventoryFilter": {
+      "inventoryFilter": "Inventory filter",
+      "labelKey": "inventoryFilter",
+      "type": "textbox"
+    },
+    "stackAverageLong": {
+      "stackAverageLong": "Stack average long",
+      "labelKey": "stackAverageLong",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "propertyList": {
+      "propertyList": "Filter",
+      "labelKey": "propertyList",
+      "type": "multiselect",
+      "serviceKey": "propertyList"
+    },
+    "bpNames": {
+      "bpNames": "Filter",
+      "labelKey": "bpNames",
+      "type": "multiselect",
+      "serviceKey": "bpNames"
+    },
+    "subGroupNames": {
+      "bpNames": "Filter",
+      "labelKey": "subGroupNames",
+      "type": "multiselect",
+      "serviceKey": "subGroupNames"
+    }
+  },
+  "sys__UUID": "f895de3c-5f05-4671-b70d-4c180078fc07"
+}

@@ -1,0 +1,131 @@
+{
+    "_id" : "offerforcontractbanner_workflow_mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "version" : "V2",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "dirtyBG" : "#fff",
+            "untouchedBG" : "#fff",
+            "validBG" : "#fff",
+            "invalidBG" : "#fff",
+            "color" : "#5D646F",
+            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+            "width" : "100%"
+        },
+        "name" : "create",
+        "defaultFormValueStyle" : {
+            "color" : "#5D646F",
+            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "type" : "row",
+        "cardClass" : "cargill-form"
+    },
+    "decisions" : [ 
+        {
+            "btnClass1" : "link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "navigateToHomepage",
+            "decisionName" : "navigateToHomepage",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_OFFERFORCONTRACT_HYPERLINKS_CST"
+                }, 
+                {
+                    "download" : true,
+                    "data" : "output._ST_OFFERFORCONTRACT_HYPERLINKS_CST",
+                    "targetPath" : "${appHome}",
+                    "name" : "offerforcontractcomposite",
+                    "type" : "externalLinkSameTab"
+                }
+            ],
+            "style1" : {
+                "pointer-events" : "none",
+                "margin-bottom" : "10px"
+            },
+            "label" : "template",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass1" : "link p-0",
+            "objectAction" : "CREATE",
+            "labelkey" : "REVIEW",
+            "task" : "navigateToContactus",
+            "decisionName" : "navigateToContactus",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_OFFERFORCONTRACT_HYPERLINKS_CST"
+                }, 
+                {
+                    "download" : true,
+                    "data" : "output._ST_OFFERFORCONTRACT_HYPERLINKS_CST",
+                    "targetPath" : "${contactUs}",
+                    "name" : "offerforcontractcomposite",
+                    "type" : "externalLinkSameTab"
+                }
+            ],
+            "style1" : {
+                "pointer-events" : "none",
+                "margin-bottom" : "10px"
+            },
+            "label" : "template",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "ENTER_LIMITS",
+    "fields" : [ 
+        [ 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "15px",
+                    "height" : "32px",
+                    "margin-bottom" : "15px"
+                },
+                "key" : "needhelp",
+                "type" : "checkbox",
+                "label" : "Need help?",
+                "btnClass" : "banner-need-help",
+                "class" : "need-help"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-bottom" : "-25px",
+                    "margin-top" : "-7px",
+                    "margin-left" : "0px",
+                    "color" : "#daaa00",
+                    "height" : "48px"
+                },
+                "key" : "landing",
+                "type" : "button",
+                "label" : "contract offers",
+                "btnClass" : "link p-0 button-link-landing-page",
+                "decision" : "navigateToHomepage",
+                "class" : "template-label"
+            }, 
+            {
+                "formItemStyle" : {
+                    "margin-top" : "25px",
+                    "margin-left" : "0px",
+                    "color" : "#daaa00",
+                    "height" : "48px"
+                },
+                "key" : "contactus",
+                "type" : "button",
+                "label" : "Grower Services Team",
+                "btnClass" : "link p-0 button-link-contactus-page",
+                "decision" : "navigateToContactus",
+                "class" : "template-label"
+            }
+        ]
+    ],
+    "taskId" : "offerforcontractbanner",
+    "object" : "900fcf0a-cbc5-4de1-ad8c-c2987f196cd5",
+    "sys__UUID" : "d371ce6b-6ca2-4eb2-9ad4-71d08bca21d6",
+    "deviceType" : "mobile"
+}

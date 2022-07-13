@@ -1,0 +1,82 @@
+{
+  "_id": "offercontract_manageoffer_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Manage request",
+  "type": "workflow",
+  "version": "V2",
+  "payLoad": "selected.contractrequestdetailscomposite.data",
+  "layout": {
+    "name": "create",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "type": "row",
+    "cardClass": "allocate-banner",
+    "theme": "horizontal-details"
+  },
+  "fields": [
+    [
+      {
+        "style": {
+          "display": "block",
+          "margin": 0
+        },
+        "key": "allocateHeader",
+        "type": "hidden",
+        "class": "banner-card-dropdown contract-offer-header",
+        "label": "Withdraw this request if it is no longer valid. It will automatically withdraw on DD/MM/YYYY.",
+        "formLabelStyle": {
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "15px",
+          "width": "100%",
+          "white-space": "normal",
+          "padding-right": 0,
+          "margin-bottom": "32px",
+          "height": "100px",
+          "padding-top": "4px"
+        },
+        "formItemStyle": {
+          "width": "auto"
+        }
+      },
+      {
+        "class": "banner-card-button",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-left": "34px"
+        },
+        "key": "applyButton",
+        "type": "button",
+        "label": "Withdraw",
+        "btnClass": "allocate-banner-button",
+        "decision": "withdrawtask"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "CREATE",
+      "task": "withdrawtask",
+      "decisionName": "withdrawtask",
+      "outcomes": [
+        {
+          "name": "cancelpopup_offercontract_withdrawrequest",
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup",
+          "data": "selected.contractlistingcomposite.contractrequests[0]"
+        }
+      ]
+    }
+  ],
+  "taskId": "offercontract_manageoffer",
+  "labelKey": "Cards View",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "deviceType": "mobile"
+}

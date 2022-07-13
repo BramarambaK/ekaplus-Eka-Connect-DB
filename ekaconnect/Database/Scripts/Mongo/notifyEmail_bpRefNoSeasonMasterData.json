@@ -1,0 +1,19 @@
+{
+    "_id" : "notifyEmail_bpRefNoSeasonMasterData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "1f3e680b-f3dd-418a-8fd4-888e38714cc3",
+    "objectAction" : "CREATE",
+    "taskId" : "notifyEmail_bpRefNoSeasonMasterData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "tags" : "FailureNotifyData",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_NOTIFY_EMAIL_BPREFNO_SEASON_MASTER_DATA",
+            "appendMsg" : false,
+            "data" : "output.notifyEmail_bpRefNoSeasonMasterData"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "_id" : "inventoryConfig_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "inventoryConfig",
+    "object" : "f895de3c-5f05-4671-b70d-4c180078fc07",
+    "label" : "inventoryConfig",
+    "type" : "workflow",
+    "tag" : "config",
+    "layout" : {
+        "header" : {
+            "label" : "Inventory",
+            "style" : {
+                "font-size" : "22px"
+            }
+        },
+        "name" : "inventoryConfig"
+    },
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+		"defaultBody" : {
+			"payLoadData" : {
+				"pagination" : {
+					"start" : "@requestBody.qP.from",
+					"limit" : "@requestBody.qP.size"
+				}
+			}
+		},
+        "config" : {
+            "id" : "push_inventoryData",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : true,
+            "statusFlagWorklowTask" : "inventoryConfig",
+			"hasStatusFlag" : true,
+			"backupIndex" : false,
+			"reIndex" : false
+        }
+    },
+    "fields" : [],
+    "decisions" : [],
+    "labelKey" : "inventoryConfig",
+    "description" : "Execute to Crawl Inventory Data"
+}

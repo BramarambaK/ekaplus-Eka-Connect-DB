@@ -1,0 +1,69 @@
+{
+  "_id": "inventoryquery_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "type": "workflow",
+  "rows": 10000,
+  "layout": {
+    "header": {
+      "label": "Inventory",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "processorInfo": {
+      "processorId": "3d35cd63-93f8-443e-a286-bd20d2341ab1",
+      "isProcessorOnly": true
+    },
+    "getInitialData": true,
+    "name": "query",
+    "dataPayload": {}
+  },
+  "version": "V2",
+  "inputData": {
+    "type": "elasticSearch"
+  },
+  "fields": [
+    {
+      "key": "ngrInventoryFilter",
+      "filterBy": "bpSubGroupRefNo",
+      "filterType": "dropdown",
+      "multiple": false,
+      "selectedAll": "return '${userInfo.customerType}' !== 'Demand Customer' ? 'All ABNs' : 'All ABNs'",
+      "placeholder": "return '${userInfo.customerType}' !== 'Demand Customer' ? 'Select a ABN' : 'Company Name'",
+      "persistInGlobal": true,
+      "useGlobalValue": true,
+      "setSelected": "selected.inventorycomposite.ngrFilter"
+    },
+    {
+      "key": "propertyList",
+      "dataType": "object",
+      "filterType": "hidden",
+      "setSelected": "selected.inventorycomposite.propertyList"
+    },
+    {
+      "key": "bpNames",
+      "dataType": "object",
+      "filterType": "hidden",
+      "setSelected": "selected.inventorycomposite.bpNames"
+    },
+    {
+      "key": "subGroupNames",
+      "dataType": "object",
+      "filterType": "hidden",
+      "setSelected": "selected.inventorycomposite.subGroupNames"
+    },
+    {
+      "key": "openInventoryFilter",
+      "filterType": "filterData",
+      "filterExpression": "return ${quantity} !== 0 ? true: false"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "inventoryquery",
+  "object": "f895de3c-5f05-4671-b70d-4c180078fc07"
+}

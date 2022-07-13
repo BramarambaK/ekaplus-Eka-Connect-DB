@@ -1,0 +1,98 @@
+{
+  "_id": "logs_customer_connect_file_upload",
+  "name": "logs_customer_connect_file_upload",
+  "label": "Customer Connect Logs File",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["id"],
+  "translatableKeys": [],
+  "fields": {
+    "id": {
+      "id": "id",
+      "labelKey": "id",
+      "isRequired": true,
+      "type": "hidden"
+    },
+    "data": {
+      "data": "Data",
+      "labelKey": "data",
+      "isRequired": true
+    },
+    "download": {
+      "download": "",
+      "labelKey": "download",
+      "type": "textbox"
+    },
+    "harvestseason": {
+      "harvestseason": "Season",
+      "labelKey": "harvestseason",
+      "type": "hidden",
+      "isRequired": false
+    },
+    "account": {
+      "account": "account",
+      "labelKey": "account",
+      "type": "hidden",
+      "isRequired": false
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "msglogs": {
+      "msglogs": "Errors have been identified in the file you have uploaded. Please download the log to check for any errors and make the required updates before uploading again.",
+      "labelKey": "msglogs",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "msglogs2": {
+      "msglogs2": "make the required updates before uploading again.",
+      "labelKey": "msglogs2",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "Upload File",
+      "labelKey": "file",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "89492129-3a53-40ab-a6f2-cd3cedb33780"
+}

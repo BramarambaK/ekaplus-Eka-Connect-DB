@@ -1,0 +1,11 @@
+{
+    "_id": "informationbanner_processor",
+    "name": "informationbanner_processor",
+    "type": "processor",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "snippet": " res.status(200).send(\r\n      { appHome: req.body.propertyList.app_home,\r\n        contactUs : req.body.propertyList.app_contactus\r\n      }\r\n    );",
+    "sys__UUID": "10389057-e28d-4bee-82d4-718d1eea467b",
+    "sys__createdBy": "ekauser@ekaplus.com"
+  }
+  

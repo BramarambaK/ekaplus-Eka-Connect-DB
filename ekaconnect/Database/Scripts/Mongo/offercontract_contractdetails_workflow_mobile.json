@@ -1,0 +1,136 @@
+{
+  "_id": "offercontract_contractdetails_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract details Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details contract-details-card",
+    "theme": "cargill-contract-details-card"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Contract details'"
+      }
+    ],
+    [
+      {
+        "label": "Contract type",
+        "type": "detailsFlex",
+        "key": "contractType",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${contractType}'.length==0?'-':'${contractType}'"
+      },
+      {
+        "label": "Commodity",
+        "type": "detailsFlex",
+        "key": "product",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${product}'.length==0?'-':'${product}'"
+      },
+      {
+        "label": "Quality",
+        "type": "detailsFlex",
+        "key": "quality",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${quality}'.length==0 ? '-' : ('${isMultiGrade}'.toLowerCase()== 'y' && !'${quality}'.includes('MG')  ? '${quality}' + ' MG' : '${quality}')"
+      },
+      {
+        "label": "Season",
+        "type": "detailsFlex",
+        "key": "cropYear",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${cropYear}'.length==0?'-':'${cropYear}'"
+      },
+      {
+        "label": "Port zone/Delivery region",
+        "type": "detailsFlex",
+        "key": "dischargeLocationCity",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${dischargeLocationCity}'.length==0?'-':'${dischargeLocationCity}'"
+      },
+      {
+        "label": "Site",
+        "type": "detailsFlex",
+        "key": "dischargeLocationCity",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${dischargeLocationCity}'.length==0?'-':'${dischargeLocationCity}'"
+      },
+      {
+        "label": "Delivery term",
+        "type": "detailsFlex",
+        "key": "INCOTerm",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${INCOTerm}'.length==0?'-':'${INCOTerm}'"
+      },
+      {
+        "label": "Delivery start",
+        "type": "detailsFlex",
+        "key": "shipmentPeriodFrom",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${shipmentPeriodFrom}'.length==0?'-':moment('${shipmentPeriodFrom}').format('DD/MM/YYYY')"
+      },
+      {
+        "label": "Delivery end",
+        "type": "detailsFlex",
+        "key": "shipmentPeriodTo",
+        "style": {
+          "width": "50%",
+          "font-size": "15px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${shipmentPeriodTo}'.length==0?'-':moment('${shipmentPeriodTo}').format('DD/MM/YYYY')"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "offercontract_contractdetails",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "deviceType": "mobile"
+}

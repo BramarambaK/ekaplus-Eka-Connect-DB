@@ -1,0 +1,19 @@
+{
+    "_id" : "notifyEmail_tonnageData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "objectAction" : "CREATE",
+    "taskId" : "notifyEmail_tonnageData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "tags" : "FailureNotifyData",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_NOTIFY_EMAIL_TONNAGE_DATA",
+            "appendMsg" : false,
+            "data" : "output.notifyEmail_tonnageData"
+        }
+    ]
+}

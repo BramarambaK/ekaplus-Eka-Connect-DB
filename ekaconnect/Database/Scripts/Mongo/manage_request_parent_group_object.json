@@ -1,0 +1,18 @@
+{
+    "_id" : "manage_request_parent_group_object",
+    "name" : "manage_request_parent_group_object",
+    "label" : "Manage Request Parent Group",
+    "type" : "object",
+    "version" : "1",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "translatableKeys" : [],
+    "uniqueFields" : [],
+    "fields" : {},
+    "sys__UUID" : "fabb0cc8-c2bd-4e0d-8022-d810c9591873"
+}

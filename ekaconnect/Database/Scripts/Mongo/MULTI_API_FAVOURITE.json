@@ -1,0 +1,22 @@
+{
+  "_id": "MULTI_API_FAVOURITE",
+  "componentType": "MULTI_API_TASK",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "MULTI_API_FAVOURITE",
+  "object": "1e6570a0-e47d-492f-ac87-ae7cf91d0682",
+  "type": "workflow",
+  "returnData": "Y",
+  "mergeParams": {
+    "sources": [
+      {
+        "id": "EXTERNAL_TASK_INSIGHT_LIST"
+      },
+      {
+        "id": "ST_CONNECT_FAVOURITE"
+      }
+    ],
+    "query": "select a.primary_id as \"PRIMARY_ID\",a.description as \"description\",a.insightId as \"insightId\",a.name as \"name\",a.chartType as \"chartType\", CASE WHEN b.refObjFavouriteId is null THEN false ELSE true END as \"isFavourite\", a.viewType as \"viewType\", a.functionalCategory as \"functionalCategory\", a.isFeatured as \"isFeatured\" from EXTERNAL_TASK_INSIGHT_LIST a left outer join ST_CONNECT_FAVOURITE b on (a.insightId=b.refObjFavouriteId)"
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "managerequest_workflow",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask", 
+    "objectAction" : "READ",
+    "taskId" : "managerequest",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "chainedTasks" : [],
+	"object" : "acc3b7e8-61f5-4bb3-8119-df24d5d6b19a",
+    "sys_UUID" : "6429ef72-e74d-46fe-8c57-48b5bc307cbe"
+}

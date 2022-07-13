@@ -1,0 +1,41 @@
+{
+  "_id": "inventoryquicklink_workflow",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "inputData": {
+    "type": "menuObject",
+    "config": {
+      "menuId": "d96a40be-032e-4034-89aa-fbe4793d63d2"
+    }
+  },
+  "label": "Quick Link",
+  "labelKey": "Quick Link",
+  "layout": {
+    "name": "flexible-menu",
+    "component": "FlexibleMenuComponent",
+    "header": {
+      "label": "Quick links",
+      "style": {
+        "color": "#3B4047",
+        "font-size": "18px",
+        "font-weight": "600",
+        "padding": "0px 10px 10px 20px",
+        "margin": "0 5px",
+        "border-bottom": "solid 1px #DBE1EB"
+      }
+    },
+    "quickLinkMenuStyle": {
+      "style": {
+        "margin-bottom": "-18px"
+      }
+    }
+  },
+  "object": "f895de3c-5f05-4671-b70d-4c180078fc07",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "inventoryquicklink",
+  "type": "workflow"
+}

@@ -1,0 +1,108 @@
+{
+  "_id": "inventorycharts_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Inventory Charts",
+  "type": "workflow",
+  "layout": {
+    "emptyText": {
+      "message": [
+        "You currently have no inventory.",
+        "All inventory stored at GrainFlow sites will be displayed here."
+      ]
+    },
+    "header": {
+      "label": "Tonnes stored at Cargill sites",
+      "style": {
+        "font-size": "22px",
+        "margin-top": "-4px"
+      }
+    },
+    "getInitialData": false,
+    "name": "chart",
+    "type": "horizontalBar",
+    "xAxesTick": {
+      "display": false
+    },
+    "xAxisMax": true,
+    "xAxisMin": 0,
+    "legend": {
+      "display": false,
+      "position": "top"
+    },
+    "yAxesTick": {
+      "fontFamily": "\"Helvetica Neue LT W05 65 Medium\"",
+      "fontSize": 14
+    },
+    "toolTipHover": {
+      "enable": false,
+      "valueExpression": "let fulfilled, unfullfilled, sum; if('${quantity}'){ sum = ${quantity}; fulfilled = Math.round((${quantity} * 100) / sum); } else { fulfilled = 0; unfulfilled = 100; } unfulfilled = 100 - fulfilled;  return fulfilled + '% fulfilled' + ', ' + unfulfilled + '% unfulfilled' ;"
+    },
+    "chartLayout": {
+      "padding": {
+        "bottom": 0
+      }
+    },
+    "horizontalBarOffset": {
+      "enable": true,
+      "fontColor": "#5D646F"
+    }
+  },
+  "fields": [
+    {
+      "label": "Product",
+      "key": "product",
+      "type": "label",
+      "sortBy": "descending"
+    },
+    {
+      "key": "site",
+      "filterType": "dropdown",
+      "filterBy": "site",
+      "multiple": true,
+      "placeholder": "Select a site",
+      "selectedAll": "All sites"
+    },
+    {
+      "label": "Quantity",
+      "key": "quantity",
+      "backgroundColor": [
+        "#9E2A2F",
+        "#BE531C",
+        "#CF7F00",
+        "#DAAA00",
+        "#ABAD25",
+        "#658D1B",
+        "#279989",
+        "#007681",
+        "#005F86"
+      ],
+      "fontColor": "#FFFFFF",
+      "type": "value",
+      "suffix": "'${quantityUnit}'"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "",
+      "objectAction": "UPDATE",
+      "labelkey": "reset",
+      "decisionName": "reset",
+      "selection": "chart-label",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": "inventorycardview"
+        }
+      ],
+      "label": ""
+    }
+  ],
+  "labelKey": "CHARTS",
+  "taskId": "inventorycharts",
+  "object": "f895de3c-5f05-4671-b70d-4c180078fc07"
+}
