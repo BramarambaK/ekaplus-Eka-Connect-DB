@@ -1,0 +1,39 @@
+{
+  "_id": "menuObject_warrant",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Warrant Management",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "Warrant Management",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "stocklist",
+                  "text": "List of Stocks",
+                  "iconCls": ""
+                },
+                {
+                  "handler": "exchangedeliverylist",
+                  "text": "List of Exchange Delivery",
+                  "iconCls": ""
+                },
+                {
+                  "handler": "stoppingmarketstockslist",
+                  "text": "List of Stopping the Market Stocks",
+                  "iconCls": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "menuObject"
+}

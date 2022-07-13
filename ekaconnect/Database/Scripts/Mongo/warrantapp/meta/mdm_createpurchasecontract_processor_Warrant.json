@@ -1,0 +1,10 @@
+{
+  "_id": "mdm_createpurchasecontract_processor_Warrant",
+  "name": "mdm_createpurchasecontract",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "\r\nlet selectedData = req.body.selectedData;\r\nvar instrumentName = selectedData[0]['instrument_name'];\r\nvar url = req.body.propertyList.platform_url + '/mdmapi/masterdatas/instrumentPriceDetail/' + instrumentName;\r\nvar api = {\r\n    method: 'POST',\r\n    url: url,\r\n    headers: {\r\n        Authorization: req.headers.authorization\r\n    },\r\n    json: true\r\n};\r\nfunction get_data(instrument_name_value) {\r\n    return new Promise(function (resolve, reject) {\r\n        request(api, function (err, response, body) {\r\n            if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n                resolve(body);\r\n            }\r\n            else {\r\n                reject(body);\r\n            }\r\n        });\r\n    });\r\n}\r\nget_data().then(function (result) {\r\n    var data = result;\r\n    var exchange_lots = 0;\r\n    var quantity = 0;\r\n    var ext_stock_ref_no = [];\r\n    var stoppingstocks = req.body.selectedData.stoppingmarketstockslist;\r\n    for (var i = 0; i < stoppingstocks.length; i++) {\r\n        if (stoppingstocks[i]['exchange_lots']) {\r\n            exchange_lots = exchange_lots + stoppingstocks[i]['exchange_lots'];\r\n        }\r\n        if (stoppingstocks[i]['quantity']) {\r\n            stoppingstocks[i]['quantity'] = parseFloat(stoppingstocks[i]['quantity']);\r\n            quantity = quantity + stoppingstocks[i]['quantity'];\r\n        }\r\n        if (stoppingstocks[i]['ext_stock_ref_no']) {\r\n            ext_stock_ref_no.push(stoppingstocks[i]['ext_stock_ref_no']);\r\n        }\r\n    }\r\n    var output = {\r\n        futurePriceUnit: [{ key: data['priceUnitName'], value: data['priceUnitName'] }],\r\n        no_of_lots: exchange_lots,\r\n        quantity: quantity.toFixed(2)\r\n    };\r\n    res.status(200).send(output);\r\n});\r\n",
+  "sys__UUID": "e1c839fe-2ef7-40bc-9835-e2cb1248e213",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

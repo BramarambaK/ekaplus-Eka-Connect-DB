@@ -1,0 +1,10 @@
+{
+    "_id" : "modifycontract_warrant_mdm",
+    "name" : "modifycontract_warrant_mdm",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "snippet" : "\r\n    let mdmProcessorServiceKey = JSON.parse(req.body.mdmProcessorServiceKey);\r\n    if (mdmProcessorServiceKey[0]['serviceKey'] == 'sales_contract_ref_no') {\r\n      var Contract_Ref_No = req.body.selectedData.Contract_Ref_No;\r\n      var mdmData = [];\r\n      mdmData.push({ key: Contract_Ref_No, value: Contract_Ref_No });\r\n\r\n      var mdmData1 = { sales_contract_ref_no: mdmData };\r\n      res.status(200).send(mdmData1);\r\n    } else {\r\n      var futurePriceUnit = req.body.selectedData.futurePriceUnit;\r\n      var futuremdmData = [];\r\n      futuremdmData.push({ key: futurePriceUnit, value: futurePriceUnit });\r\n      var mdmData2 = { futurePriceUnit: futuremdmData };\r\n      res.status(200).send(mdmData2);\r\n    }\r\n  ",
+    "sys__UUID" : "e82e2720-0db8-4baa-b2f1-2eda89d0f4b3",
+    "sys__createdBy" : "ekauser@ekaplus.com"
+}

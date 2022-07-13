@@ -1,0 +1,10 @@
+{
+  "_id": "mdmprocessor_instrument_warrant",
+  "name": "mdmprocessor_instrument",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "\r\nvar instrumentURL = req.body.propertyList.platform_url + '/mdmapi/masterdatas/instrumentGradingType/GRADING';\r\nvar instrument = {\r\n    method: 'POST',\r\n    url: instrumentURL,\r\n    headers: {\r\n        Authorization: req.headers.authorization\r\n    },\r\n    json: true\r\n};\r\nfunction get_instrument() {\r\n    return new Promise(function (resolve, reject) {\r\n        request(instrument, function (err, response, body) {\r\n            if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n                resolve(body);\r\n            }\r\n            else {\r\n                reject(body);\r\n            }\r\n        });\r\n    });\r\n}\r\nPromise.all([get_instrument()]).then(result => {\r\n    var instruments = [];\r\n\r\n    for (const property in result[0]) {\r\n        instruments.push({ key: property, value: result[0][property] })\r\n    }\r\n    var mdmData = { mdmDerInstruments: instruments };\r\n\r\n    res.status(200).send(mdmData);\r\n});\r\n",
+  "sys__UUID": "fcdb284a-e4bb-443a-97e3-ccab9770cec5",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

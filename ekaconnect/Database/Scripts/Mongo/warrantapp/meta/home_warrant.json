@@ -1,0 +1,16 @@
+{
+  "_id": "home_warrant",
+  "layout": {
+    "name": "list"
+  },
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "workflow": "stocklist",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "decisions": [],
+  "type": "workflow",
+  "taskId": "home",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "label": "Home"
+}

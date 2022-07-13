@@ -1,0 +1,171 @@
+{
+  "_id": "modifysalescontract_Workflow_Warrant",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Modify Sales Contract",
+  "type": "workflow",
+  "payLoad": "selected.exchangedeliverylist",
+  "layout": {
+    "processorInfo": {
+      "processorId": "e82e2720-0db8-4baa-b2f1-2eda89d0f4b3"
+    },
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "style": {
+          "width": "205px",
+          "margin-right": "30px"
+        }
+      },
+      {
+        "key": "sales_contract_ref_no",
+        "style": {
+          "width": "205px"
+        }
+      }
+    ],
+    [
+      {
+        "key": "futurePrice",
+        "style": {
+          "width": "120px"
+        }
+      },
+      {
+        "key": "futurePriceUnit",
+        "style": {
+          "width": "87px",
+          "margin-right": "28px"
+        }
+      },
+      {
+        "suffix": "",
+        "style": {
+          "width": "205px"
+        },
+        "key": "warrant_remarks",
+        "warrant_remarks": "Reason for modification"
+      }
+    ],
+    [
+      {
+        "key": "edmarkrefno",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "exchangedeliverylist",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "modifysalescontract",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Sales Purchase Contract has been modified successfully"
+            },
+            "failure": {
+              "message": " Sales contract modification is failing, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract modification is failing, please try once again"
+            }
+          },
+          "data": "output.modifysalescontract",
+          "appendMsg": false,
+          "name": "_ST_CREATE_DELIVERYSTOCK_WRNT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Sales Purchase Contract has been modified successfully"
+            },
+            "failure": {
+              "message": " Sales contract modification is failing, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract modification is failing, please try once again"
+            }
+          },
+          "data": "output.modifysalescontract",
+          "appendMsg": false,
+          "name": "ST_PROCESSOR_MODIFY_SALE_CONTRACT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Sales Purchase Contract has been modified successfully"
+            },
+            "failure": {
+              "message": " Sales contract modification is failing, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract modification is failing, please try once again"
+            }
+          },
+          "name": "ST_UPDATE_CONTRACTS",
+          "appendMsg": true,
+          "data": "output.ST_PROCESSOR_MODIFY_SALE_CONTRACT",
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output.ST_PROCESSOR_MODIFY_SALE_CONTRACT",
+              "value": "contract_ref_no"
+            }
+          ]
+        },
+        {
+          "name": "exchangedeliverylist",
+          "showToaster": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "exchangedeliverylist",
+          "resetForm": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "modifysalescontract",
+  "taskId": "modifysalescontract",
+  "object": "13ef7767-ff43-41ce-a109-fd63ef5b0ddf"
+}

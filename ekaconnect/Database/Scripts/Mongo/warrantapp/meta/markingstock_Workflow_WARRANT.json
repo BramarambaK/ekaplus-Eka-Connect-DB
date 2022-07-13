@@ -1,0 +1,149 @@
+{
+  "_id": "markingstock_Workflow_WARRANT",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Marking for Delivery",
+  "type": "workflow",
+  "payLoad": "selected.stocklist",
+  "processorInfo": {
+    "processorId": "e056968a-7de2-43e3-9fdd-dfe70a043e67"
+  },
+  "layout": {
+    "processorInfo": {
+      "processorId": "38e82c93-93f8-425c-bef1-348e11f9910d"
+    },
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "markingType",
+        "style": {
+          "width": "160px",
+          "margin-right": "20px"
+        }
+      },
+      {
+        "key": "edmarkrefnodropdown",
+        "style": {
+          "width": "160px"
+        }
+      },
+      {
+        "key": "edmarkrefnotextbox",
+        "type": "textbox",
+        "style": {
+          "width": "160px"
+        }
+      }
+    ],
+    [
+      {
+        "key": "activityDate",
+        "value": "currentDate",
+        "style": {
+          "width": "160px",
+          "margin-right": "20px"
+        }
+      },
+      {
+        "key": "warrant_remarks",
+        "style": {
+          "width": "160px"
+        }
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "data_transfer"
+      },
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "edmarkrefno"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "markingstock",
+      "outcomes": [
+        {
+          "data": "output.markingstock",
+          "appendMsg": false,
+          "name": "updatemarkingstock",
+          "result": {
+            "success": {
+              "message": "Marking success to"
+            },
+            "failure": {
+              "message": "Please fix errors"
+            },
+            "successWithWarning": {
+              "message": "Some errors"
+            }
+          },
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output.updatemarkingstock",
+              "value": "edmarkrefno"
+            }
+          ]
+        },
+        {
+          "name": "stocklist",
+          "showToaster": true
+        }
+      ],
+      "label": "OK",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "markingstock",
+  "taskId": "markingstock",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

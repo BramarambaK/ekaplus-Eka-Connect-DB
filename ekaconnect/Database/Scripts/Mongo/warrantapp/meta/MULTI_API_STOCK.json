@@ -1,0 +1,66 @@
+{
+  "_id": "MULTI_API_STOCK",
+  "componentType": "MULTI_API_TASK",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "MULTI_API_STOCK",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "type": "workflow",
+  "returnData": "Y",
+  "mergeParams": {
+    "sources": [
+      {
+        "id": "EXTERNAL_LOGISTIC_WARRANT",
+        "filterBy": [
+          {
+            "fieldName": "Quality",
+            "operator": "in",
+            "value": "${quality}"
+          },
+          {
+            "fieldName": "Grading Status",
+            "operator": "in",
+            "value": "Ungraded,NA",
+            "type": "static"
+          },
+          {
+            "fieldName": "Inventory Status",
+            "operator": "eq",
+            "value": "In",
+            "type": "static"
+          },
+          {
+            "fieldName": "Stock Status",
+            "operator": "eq",
+            "value": "In Warehouse",
+            "type": "static"
+          },
+          {
+            "fieldName": "Stock Type",
+            "operator": "eq",
+            "value": "Discrete Stock",
+            "type": "static"
+          },
+          {
+            "fieldName": "External Stock Ref No",
+            "operator": "ne",
+            "value": "NA",
+            "type": "static"
+          }
+        ]
+      },
+      {
+        "id": "CONNECT_LINKSTOCK",
+        "filterBy": [
+          {
+            "fieldName": "quality",
+            "operator": "in",
+            "value": "${quality}"
+          }
+        ]
+      }
+    ],
+    "query": "select\r\n b.INTERNAL_GRD_DGRD_REF_NO as \"internal_grd_dgrd_ref_no\",\r\n b.ACTUAL_QUANTITY as \"actual_quantity\",\r\n   b.SAMPLE_STATUS as \"sample_status\",\r\n   b.WAREHOUSE_REF_NO as \"warehouse_ref_no\",\r\n  b.WAREHOUSE as \"warehouse\",\r\n   b.STOCK_REF_NO as \"stock_ref_no\",\r\n   b.EXTERNAL_STOCK_REF_NO as \"ext_stock_ref_no\",\r\n   b.CONTAINER_NO as \"container_no\",\r\n   b.GRADING_STATUS as \"grading_status\",\r\n   b.PACKING_TYPE as \"packing_type\",\r\n   b.NO_OF_UNITS as \"no_of_units\",\r\n   b.QUALITY as \"quality\",\r\n   b.PRODUCT as \"product\",\r\n   b.INVENTORY_STATUS as \"inventory_status\",\r\n   b.ORIGIN as \"origin\",\r\n   b.PROFIT_CENTER as \"Profit_Center\",\r\n b.PACKING_SIZE as \"Packing_Size\",\r\n b.CORPORATE as \"corporate\",\r\n   b.STRATEGY as \"Strategy\",\r\n   b.CONTRACT_REF_NO as \"Contract_Ref_No\",\r\n   b.STOCK_STATUS as \"stock_status\",\r\n b.LEGAL_ENTITY as \"legal_entity\",\r\n b.QUANTITY_UOM as \"Quantity_UOM\",\r\n  b.INTERNAL_GMR_REF_NO as \"INTERNAL_GMR_REF_NO\",\r\n b.CROP_YEAR as \"cropyear\",\r\n   b.SHED as \"shed\" \r\nfrom(select * from  EXTERNAL_LOGISTIC_WARRANT c\r\nwhere\r\n   c.CURRENT_QUANTITY = c.UNALLOCATED_QUANTITY \r\n   ) b\r\n left join\r\n(select stock_ref_no from CONNECT_LINKSTOCK ) a \r\non a.stock_ref_no = b.STOCK_REF_NO where a.stock_ref_no is NULL;"
+  }
+}

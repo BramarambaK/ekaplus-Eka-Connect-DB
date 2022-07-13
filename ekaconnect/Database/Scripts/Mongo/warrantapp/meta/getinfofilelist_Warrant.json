@@ -1,0 +1,75 @@
+{
+    "_id" : "getinfofilelist_Warrant",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "label" : "Get File Info",
+    "getDataFromExternalAPI" : false,
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "4c113b25-2986-4b7a-a249-0da13542a63f"
+    },
+    "layout" : {
+        "name" : "list",
+        "selection" : "row",
+        "options" : {
+            "columnFilter" : false,
+            "sortFilter" : false,
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "reset" : false,
+            "export" : false,
+            "sessionStateDisable" : true
+        },
+        "theme" : "theme-grid-white",
+        "scrollHeight" : "336px"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "documentoption"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "Get File Info",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "ColumnName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "DataType"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "Mandatory"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "ColumnDescription"
+        }
+    ],
+    "taskId" : "getfileinfolist",
+    "object" : "cdcbce50-e8c5-457e-aa9e-4546fd651f5a"
+}

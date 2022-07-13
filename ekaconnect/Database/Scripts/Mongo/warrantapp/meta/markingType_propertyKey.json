@@ -1,0 +1,22 @@
+{
+  "_id": "markingType_propertyKey",
+  "type": "property",
+  "name": "markingType",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "20",
+  "defaultValue": [
+    {
+      "key": "New",
+      "value": "New"
+    },
+    {
+      "key": "Existing",
+      "value": "Existing"
+    }
+  ],
+  "label": "Marking Type Dropdown",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "description": "Property is used to show dropdown values(New/Existing)"
+}

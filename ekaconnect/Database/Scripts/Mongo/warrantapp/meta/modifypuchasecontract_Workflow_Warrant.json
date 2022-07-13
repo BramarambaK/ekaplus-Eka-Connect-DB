@@ -1,0 +1,179 @@
+{
+  "_id": "modifypuchasecontract_Workflow_Warrant",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Modify Purchase Contract",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "a3c86e25-0875-4e90-b814-454b83b09a5b"
+  },
+  "layout": {
+    "processorInfo": {
+      "processorId": "c0f2b9ec-d81d-45c1-8f11-98ce2f00f2ac"
+    },
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "style": {
+          "width": "205px",
+          "margin-right": "30px"
+        }
+      },
+      {
+        "key": "purchase_contract_ref_no",
+        "style": {
+          "width": "205px"
+        }
+      }
+    ],
+    [
+      {
+        "key": "futurePrice",
+        "style": {
+          "width": "120px"
+        }
+      },
+      {
+        "key": "futurePriceUnit",
+        "style": {
+          "width": "87px",
+          "margin-right": "28px"
+        }
+      },
+
+      {
+        "suffix": "",
+        "style": {
+          "width": "205px"
+        },
+        "key": "warrant_remarks",
+        "warrant_remarks": "Reason for modification"
+      }
+    ],
+    [
+      {
+        "key": "edmarkrefno",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stoppingmarketstockslist",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "modifypuchasecontract",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Purchase Contract has been modified successfully"
+            },
+            "failure": {
+              "message": " Purchase contract modification is failing, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Purchase contract modification is failing, please try once again"
+            }
+          },
+          "data": "output.modifypuchasecontract",
+          "appendMsg": false,
+          "name": "_ST_MODIFY_PROCESSOR_STOPPINGMARKET_WRNT"
+        },
+        {
+          "data": "output._ST_MODIFY_PROCESSOR_STOPPINGMARKET_WRNT",
+          "appendMsg": false,
+          "name": "_ST_CREATE_STOPPINGMARKET_WRNT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Purchase Purchase Contract has been modified successfully"
+            },
+            "failure": {
+              "message": " Purchase contract modification is failing, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Purchase contract modification is failing, please try once again"
+            }
+          },
+          "data": "output._ST_MODIFY_PROCESSOR_STOPPINGMARKET_WRNT",
+          "appendMsg": false,
+          "name": "ST_PROCESSOR_MODIFY_PURCHASE_CONTRACT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Purchase Purchase Contract has been modified successfully"
+            },
+            "failure": {
+              "message": " Purchase contract modification is failing, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Purchase contract modification is failing, please try once again"
+            }
+          },
+          "name": "ST_UPDATE_CONTRACTS",
+          "appendMsg": true,
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output.ST_PROCESSOR_MODIFY_PURCHASE_CONTRACT",
+              "value": "contract_ref_no"
+            }
+          ],
+          "data": "output.ST_PROCESSOR_MODIFY_PURCHASE_CONTRACT"
+        },
+        {
+          "name": "stoppingmarketstockslist",
+          "showToaster": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stoppingmarketstockslist",
+          "resetForm": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "modifypuchasecontract",
+  "taskId": "modifypuchasecontract",
+  "object": "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}
