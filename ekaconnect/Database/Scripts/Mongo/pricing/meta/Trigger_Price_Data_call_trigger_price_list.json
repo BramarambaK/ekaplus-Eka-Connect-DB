@@ -1,0 +1,17 @@
+{
+    "_id" : "trigger_list_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "Formula_List",
+    "label" : "Formula List",
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "triggerprice_list",
+    "sys__createdOn" : ISODate("2019-12-12T07:12:18.780Z"),
+    "sys__createdBy" : "Bravo"
+}

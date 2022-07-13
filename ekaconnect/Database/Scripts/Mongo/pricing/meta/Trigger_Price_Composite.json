@@ -1,0 +1,133 @@
+{
+    "_id" : "triggerpriceview_composite_newer",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "processorInfo" : {
+        "processorId" : "a0307818-8870-4288-8578-21668b5541be"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Trigger Price",
+    "payLoad" : "selected.createtriggerpricev2",
+    "workflows" : [ 
+        {
+            "data" : "selected.triggerpriceviewv2.listingformula",
+            "header" : "Contract Item Details",
+            "name" : "listingformula"
+        }, 
+        {
+            "data" : "selected.triggerpriceviewv2.lifecycletriggerPrice",
+            "header" : "Price Fixations",
+            "name" : "lifecycletriggerPricev2"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : true,
+        "dropdownDecisions" : false,
+        "preserveSelectedData" : true
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "OK",
+            "btnClass" : "btn-success custom-btn",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOCI",
+                    "name" : "triggerpriceview",
+                    "showPopUp" : false
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn mr-10",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "createtriggerv2composite",
+            "label" : "Add Fixation",
+            "executeDecision" : true,
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "selected.triggerpriceview2",
+                    "name" : "createtriggerv2composite"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn mr-10",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "createtriggerv2composite",
+            "label" : "Cancel Fixation",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.triggerpriceviewv2.cancellableFixation",
+                    "name" : "cancelpopupfixation",
+                    "displayType" : "popup"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn mr-10",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "createtriggerv2composite",
+            "label" : "View All Fixations",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data1" : "selected.triggerpriceview2",
+                    "name" : "pricefixationlistingitem"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn mr-10",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "createtriggerv2composite",
+            "label" : "Formula Details",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.triggerpriceviewv2",
+                    "popupClass" : "triggerpriceFormulaDetails",
+                    "name" : "datalisting"
+                }
+            ]
+        }
+    ],
+    "taskId" : "triggerpriceviewv2",
+    "object" : "formula"
+}

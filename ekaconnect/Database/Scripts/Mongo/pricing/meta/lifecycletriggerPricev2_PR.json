@@ -1,0 +1,25 @@
+{
+    "_id" : "lifecycletriggerPricev2_PR",
+    "componentType" : "UserTask",
+    "decisions" : [],
+    "fields" : [],
+    "label" : "Trigger Info",
+    "labelKey" : "LIMITINFO_EDIT",
+    "layout" : {
+        "name" : "data-view",
+        "useQueryParams" : true,
+        "template" : "#{selected.data *= <div ><div class='flex-container mt-2'><div class='ml-1'>${item.date}</div></div><div><table class='data-view-table table-fixed'>#{item.data *= <tr style='${item.style}'><td title='${item.fixationRefNo}'>${item.fixationRefNo}</td><td title='${item.triggerDate}'>${item.triggerDate}</td><td title='${item.quantity}'>${item.quantity}</td><td title='${item.basePrice}'>${item.basePrice}</td><td title='${item.differential}'>${item.differential}</td><td title='${item.gmrRefNoDisplayName}'>${item.gmrRefNoDisplayName}</td><td title='${item.gmrQty}'>${item.gmrQty}  ${item.gmrQtyUnit}</td><td title='${item.avgPrice}'>${item.avgPrice} ${item.priceUnitIdDisplayName}</td><td title='${item.calculatedPrice}'>${item.calculatedPrice}</td></tr>}</table></div></div>}",
+        "options" : {
+            "hideRowHeader" : false,
+            "columnWidth" : "30px",
+            "popupWidth" : "490px"
+        }
+    },
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4",
+    "objectAction" : "READ",
+    "payLoad" : "completeData",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "lifecycletriggerPricev2",
+    "type" : "workflow"
+}

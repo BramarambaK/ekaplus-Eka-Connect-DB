@@ -1,0 +1,7 @@
+  {    "key": "holidayRule-004",
+    "value": "Next Unique Business Day",
+    "object": "holidayRule",
+    "type": "connectmdm",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "_id": "holidayRule-004"
+  }

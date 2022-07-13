@@ -1,0 +1,13 @@
+{
+    "_id" : "pricingexposure_collectionHeader_property",
+    "type" : "property",
+    "name" : "pricingexposure_collectionHeader",
+    "label" : "pricingexposure CollectionHeader",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "refTypeId":"84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "description": "Collection header for exposures",
+    "defaultValue" : "As Of:Date,Ref No:String,Item Ref No:String,InternalContractRefNo:String,InternalContractItemRefNo:String,Item Unpriced Percentage:Number,Item Priced Percentage:Number,Item Quantity Unit:String,Product:String,Quality:String,Split:String,Curve Name:String,Component:String,Contractual Conversion Factor:Number,Actual Conversion Factor:Number,Curve Quantity Unit:String,Coefficient:Number,Pricing Date:Date,Priced Quantity:Number,Unpriced Quantity:Number,Instrument Contract Month:String,Exposure Unique Filter:String",
+    "length" : "1000"
+}

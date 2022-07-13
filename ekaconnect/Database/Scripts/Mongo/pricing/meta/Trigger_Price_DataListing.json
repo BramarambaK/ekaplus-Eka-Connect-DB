@@ -1,0 +1,53 @@
+{
+    "_id" : "Datalisting",
+    "componentType" : "UserTask",
+    "processorInfo" : {
+        "processorId" : "e6451b42-b665-4dae-b818-35d7f87f5787"
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "triggerpriceviewv2",
+                    "refreshData1" : false
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "category"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "formulaName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "formulaExpression"
+        }
+    ],
+    "label" : "Formula Details",
+    "labelKey" : "Formula_List",
+    "layout" : {
+        "name" : "data-view",
+        "template" : "<div style='font-size:${selected.data.header.style.font-size};'>${selected.data.header.label}</div>#{selected.data.items *= <div style='color:${item.title.style.color};'>${item.title.label}</div><div class='flex-container'><div class='width-50'>Price Quote Rule: ${ item.priceQuoteRule }</div><div class='width-50'>Price Period: ${ item.pricePeriod }</div><div class='width-50'>Offset Rule: ${ item.offset }</div><div class='width-50'>Quoted Period: ${ item.quotedPeriodDate }</div><div class='width-50'>Differential: ${ item.differential }</div><div class='width-50'>Fx Rate ${ item.fxRateConversion }: ${ item.fxInput }</div><div class='width-50'>QTY Unit Conversion ${ item.qtyConversion }: ${ item.qtyUnitConversionFactor }</div></div>}"
+    },
+    "object" : "formula",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "datalisting",
+    "type" : "workflow"
+}

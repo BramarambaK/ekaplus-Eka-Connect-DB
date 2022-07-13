@@ -1,0 +1,44 @@
+{
+    "_id" : "fx_rate_pricing",
+    "componentType" : "UserTask",
+    "labelKey" : "fx_rate",
+    "label" : "FX RATE",
+   "object" : "formula",
+    "objectAction" : "CREATE",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "label" : "CREATE",
+            "labelkey" : "CREATE",
+            "task" : "fx_rate",
+            "outcomes" : [ 
+                {
+                    "data" : "output.fx_rate",
+                    "name" : "_EXT_CALL_FX",
+                    "appendMsg" : true,
+                    "result" : {
+                        "success" : {
+                            "message" : "Formula is Saved"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "Formula is Saved with some errors"
+                        }
+                    }
+                }, 
+                {
+                    "data" : "output._EXT_CALL_FX",
+                    "name" : "fx_rate"
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "fx_rate"
+}

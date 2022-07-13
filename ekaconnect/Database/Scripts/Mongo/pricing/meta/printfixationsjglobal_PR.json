@@ -1,0 +1,53 @@
+{
+    "_id" : "printfixationsjglobal_PR",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "c18260b8-0c65-445b-9065-7c448a5589de"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Preview : ${fixationRefNo}",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "data-view",
+        "template" : "<div class=\"container samp\" id=\"pdfContent\">\r\n  <br />\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6 m-h65 p-5\">\r\n      <img style=\"margin-left: 45px; width: 200px\" src=\"${selected.data.app}\" />\r\n    </div>\r\n    <div class=\"col-md-6 m-h65 p-5\">\r\n      <h5 style=\"font-weight: bold;\">Partial Invoice</h5>\r\n      <div>\r\n          <span class=\"col-md-6\" style=\"float: left;\">Invoice Number:</span>\r\n          <span class=\"col-md-6\" style=\"float: right;\">${selected.data.invoiceno}</span>\r\n      </div>\r\n      <div>\r\n          <span class=\"col-md-6 \" style=\"float: left;\">Invoice Date:</span>\r\n          <span class=\"col-md-6 \" style=\"float: right;\">${selected.data.invoicedate}</span>\r\n      </div>\r\n      <div>\r\n          <span class=\"col-md-6\" style=\"float: left;\">Due Date:</span>\r\n          <span class=\"col-md-6\" style=\"float: right;\">Upon Receipt</span>\r\n      </div>\r\n      <div>\r\n          <span class=\"col-md-6\"style=\"float: left;\">Invoice Amount:</span>\r\n          <span class=\"col-md-6\" style=\"float: right;\">${selected.data.invoiceamount}</span>\r\n      </div>\r\n\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12 m-h65 p-5\">\r\n      ${selected.data.cpName}<br />${selected.data.add1}<br />${selected.data.add2} <br />${selected.data.add3}\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-4 p-5\" style=\"font-weight: bold;font-size: medium;\"> Contract Details</div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12  p-5\">\r\n    <table class=\"table table-borderless\">\r\n        <tr>\r\n            <td class=\"borderless\">Contract Ref No:</td>\r\n            <td class=\"borderless\">${selected.data.contractRefNo}</td>\r\n            <td class=\"borderless\">Vessel:</td>\r\n            <td class=\"borderless\">${selected.data.vessel}</td>\r\n        </tr>\r\n        <tr>\r\n            <td class=\"borderless\">Incoterm:</td>\r\n            <td class=\"borderless\">${selected.data.incoterm}</td>\r\n            <td class=\"borderless\">LoadPort:</td>\r\n            <td class=\"borderless\">${selected.data.landPort}</td>\r\n        </tr>\r\n        <tr>\r\n          <td class=\"borderless\">Quality:</td>\r\n          <td class=\"borderless\">${selected.data.quality}</td>\r\n          <td class=\"borderless\">B/L date:</td>\r\n          <td class=\"borderless\">${selected.data.bldate}</td>\r\n      </tr>\r\n        <tr>\r\n            <td class=\"borderless\">Total Cargo Volume:</td>\r\n            <td class=\"borderless\">${selected.data.gmrqty}</td>\r\n            <td class=\"borderless\">Pricing Month:</td>\r\n            <td class=\"borderless\">${selected.data.pricingmonth}</td>\r\n        </tr>\r\n    </table>\r\n    </div>\r\n  </div>\r\n  <br/>\r\n  <br/>\r\n  <div class=\"row\">\r\n      <div class=\"col-md-12  p-5\">\r\n      <table class=\"table table table-borderless\">\r\n          <tr>\r\n              <td class=\"font-weight-bold borderless\">Invoice Volume</td>\r\n              <td class=\"font-weight-bold borderless\">% of Total</td>\r\n              <td class=\"font-weight-bold borderless\">Unit Price</td>\r\n              <td class=\"font-weight-bold borderless\">Invoice Amount</td>\r\n          </tr>\r\n          <tr>\r\n              <td class=\"borderless\">${selected.data.gmrfixed}</td>\r\n              <td class=\"borderless\">${selected.data.percentageTotal}</td>\r\n              <td class=\"borderless\">${selected.data.avgPrice}  ${selected.data.priceUnit}</td>\r\n              <td class=\"borderless\">${selected.data.invoiceamount}</td>\r\n          </tr>\r\n      </table>\r\n      </div>\r\n    </div>\r\n    <br/>\r\n    <br/> \r\n  <div class=\"row\">\r\n      <div class=\"col-md-12  p-5\">\r\n      <table class=\"table table-borderless\">\r\n          <tr>\r\n              <td class=\"borderless\" style=\"font-weight: bold ;color: darkblue;font-size: medium;\">Priced Volume:</td>\r\n              <td class=\"borderless \"  style = \"font-weight: bold\">${selected.data.priceVolume}</td>\r\n              <td class=\"borderless\" style=\"font-weight: bold ;color: darkblue;font-size: medium;\">Priced Volume Percent:</td>\r\n              <td class=\"borderless\"  style = \"font-weight: bold\">${selected.data.priceVolumePercent}</td>\r\n          </tr>\r\n          <tr>\r\n              <td class=\"borderless\" style=\"font-weight: bold ;color: darkblue;font-size: medium;\">Unpriced Volume:</td>\r\n              <td class=\"borderless\"  style = \"font-weight: bold\">${selected.data.gmrunfixed}</td>\r\n              <td class=\"borderless\" style=\"font-weight: bold ;color: darkblue;font-size: medium;\">Unpriced Volume Percent:</td>\r\n              <td class=\"borderless\"  style = \"font-weight: bold\">${selected.data.unPriceVolumePercent}</td>\r\n          </tr>\r\n      </table>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 p-5\">Please, make sure to reference Invoice Number when making a payment. If remittance information is not provided, your payment will be applied to the oldest open invoice(s). Please ensure bank charges are not deducted from the amount due. Payments should be remitted to:</div>\r\n    </div>\r\n\r\n\r\n  <div></div>\r\n  <br/>\r\n  <div class=\"row\">\r\n      <div class=\"col-md-7 m-h65 p-5\">\r\n          <div class=\"row\">\r\n              <span class=\"col-md-6 \" style=\"float: left;font-weight: bold;\">Beneficiary Bank:</span>\r\n              <span class=\"col-md-6\" style=\"float: right;\">MUFG Union Bank\r\n              </span>\r\n          </div>\r\n          <div class=\"row\">\r\n              <span class=\"col-md-6 \" style=\"float: left;font-weight: bold;\"></span>\r\n              <span class=\"col-md-6\" style=\"float: right;\">350 California St., San Francisco, CA 94104</span>\r\n          </div>\r\n           \r\n          <div class=\"row\">\r\n              <span class=\"col-md-6 \" style=\"float: left;font-weight: bold;\">SWIFT Code:</span>\r\n              <span class=\"col-md-6 \" style=\"float: right;\">BOFCUS33MPK</span>\r\n          </div>\r\n          <div class=\"row\">\r\n              <span class=\"col-md-6\" style=\"float: left;font-weight: bold;\">ABA Number:</span>\r\n              <span class=\"col-md-6\" style=\"float: right;\">122000496</span>\r\n          </div>\r\n          <div class=\"row\">\r\n              <span class=\"col-md-6\"style=\"float: left;font-weight: bold;\">For Further Credit To:</span>\r\n              <span class=\"col-md-6\" style=\"float: right;\">J. GLOBAL ENERGY INC</span>\r\n          </div>\r\n          <div class=\"row\">\r\n              <span class=\"col-md-6\"style=\"float: left;font-weight: bold;\">Account Number:</span>\r\n              <span class=\"col-md-6\" style=\"float: right;\">0021045190</span>\r\n          </div>\r\n      </div>\r\n      <div class=\"col-md-5 m-h65 p-5\"></div>\r\n    </div>\r\n  <br/>\r\n  <div class=\"row\">\r\n      <div class=\"col-md-6 p-5\">Please, remit your payment confirmation to:</div>\r\n      <div class=\"col-md-6 p-5 stretched-link\"><a href=\"#\" class=\"stretched-link\">invoices@jglobalenergy.com </a></div>\r\n    </div>\r\n \r\n  <hr/>\r\n  \r\n  <div class=\"row\">\r\n    <div class=\"col-md-3 m-h65 p-5\">\r\n    </div>\r\n    <div class=\"col-md-6 m-h65 p-5 text-center\">\r\n      ${selected.data.main_add}\r\n    </div>\r\n    <div class=\"col-md-3 m-h65 p-5\"></div>\r\n  </div>\r\n</div>\r\n",
+        "options" : {
+            "hideRowHeader" : false,
+            "columnWidth" : "30px",
+            "popupWidth" : "490px"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-primary",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "action" : "printPDF",
+                    "type" : "client",
+                    "fileName" : "${fixationRefNo}.pdf"
+                }
+            ],
+            "position" : "top",
+            "label" : "Print"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "pricefixationlistingitem"
+                }
+            ],
+            "position" : "top",
+            "style" : {
+                "margin-left" : "10px"
+            },
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "printfixation",
+    "taskId" : "printfixationjglobal",
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67"
+}

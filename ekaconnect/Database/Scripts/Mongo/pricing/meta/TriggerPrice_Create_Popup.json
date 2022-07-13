@@ -1,0 +1,339 @@
+{
+    "_id" : "triggerpricecreate",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "triggerpriceview",
+                    "resetForm" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "objectAction" : "CREATE",
+            "label" : "SAVE",
+            "labelkey" : "REVIEW",
+            "btnClass" : "btn btn-success",
+            "position" : "bottom",
+            "type" : "submit",
+            "task" : "createtriggerprice",
+            "outcomes" : [ 
+                {
+                    "name" : "_ST_VALIDATION_PROCESSOR",
+                    "data" : "output.createtriggerprice",
+                    "appendMsg" : false
+                }, 
+                {
+                    "name" : "_ST_CREATE_TRIGGER_PRICING",
+                    "data" : "output._ST_VALIDATION_PROCESSOR",
+                    "appendMsg" : false
+                }, 
+                {
+                    "name" : "triggerpriceview",
+                    "data" : "output._ST_CREATE_TRIGGER_PRICING",
+                    "resetForm" : true
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "triggerpriceview",
+                    "resetForm" : true
+                }
+            ],
+            "type" : "close",
+            "position" : "header"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "quantity"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "fixationMethod"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "fixationDate"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "indexName",
+                "filter" : true
+            }, 
+            {
+                "suffix" : "",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "price"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "textbox",
+                "hide" : true,
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "priceunitforindex"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "priceU"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none",
+                    "margin-right" : "5px"
+                },
+                "key" : "priceUnitIdDisplayName"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "indexMultiplier"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "type" : "textbox",
+                "key" : "fxrate"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "differential"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "key" : "unitConversion",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "itemQtyUnit",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "priceUnitFormula",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "formulaId",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "latestDate",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "activityDate",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "productId",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "GroupId",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "currencyUnit",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "triggerDate",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalContractItemRefNo",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "unfixedQuantity",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "19%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "contractIssueDate",
+                "type" : "hidden"
+            }
+        ]
+    ],
+    "label" : "Trigger Price",
+    "labelKey" : "Trigger Price",
+    "layout" : {
+        "recommedationNeed" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap"
+        },
+        "processorInfo" : {
+            "processorId" : "be07fc42-7838-49a5-b0a4-3cd02db779d1"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4",
+    "objectAction" : "CREATE",
+    "payLoad" : "selected.triggerpriceview",
+    "processorInfo" : {
+        "processorId" : "2c0c9970-f55c-47d0-a052-9d60a7d7795e"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "createtriggerprice",
+    "type" : "workflow"
+}

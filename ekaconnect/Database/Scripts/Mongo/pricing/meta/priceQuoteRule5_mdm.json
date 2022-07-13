@@ -1,0 +1,8 @@
+{
+    "_id" : "priceQuoteRule-005",
+    "key" : "priceQuoteRule-005",
+    "value" : "Prompt Period Avg",
+    "object" : "priceQuoteRule",
+    "type" : "connectmdm",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a"
+}

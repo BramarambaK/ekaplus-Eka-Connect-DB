@@ -1,0 +1,47 @@
+{
+  "_id": "pricing_result_usertask_workflow",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+  "label": "PricingResult",
+  "type": "workflow",
+  "layout": {},
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "task": "savePricingResult",
+      "label": "SAVE",
+      "type": "submit",
+      "position": "bottom",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "pricing result object saved successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "pricing result are saved with some errors"
+            }
+          },
+          "data": "output.savePricingResult",
+          "appendMsg": true,
+          "name": "_ST_CREATE_PRICING_RESULT_OBJECT"
+        },
+        {
+          "data": "output._ST_CREATE_PRICING_RESULT_OBJECT",
+          "name": "savePricingResult"
+        }
+      ]
+    }
+  ],
+  "labelKey": "PricingResult",
+  "fields": [],
+  "taskId": "savePricingResult",
+  "object": "e9008da5-1659-47ea-bbe6-4d1259978120"
+}

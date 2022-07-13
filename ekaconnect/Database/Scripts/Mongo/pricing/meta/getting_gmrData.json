@@ -1,0 +1,17 @@
+{
+    "_id" : "getting_gmrData",
+    "componentType" : "UserTask",
+    "labelKey" : "getting_gmrData",
+    "label" : "gmr List",
+    "object" : "084d7fa2-f8e9-47ea-bb3c-ebc0bd65f3b1",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "taskId" : "gmr_data_list",
+    "sys__createdOn" : ISODate("2019-12-17T07:26:38.562Z"),
+    "sys__createdBy" : "Bravo"
+}

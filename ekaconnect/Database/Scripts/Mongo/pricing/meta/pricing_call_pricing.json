@@ -1,0 +1,44 @@
+{
+    "componentType": "UserTask",
+    "labelKey": "PRICING_CALL",
+    "label": "Pricing Call",
+    "object" : "formula",
+    "objectAction": "CREATE",
+    "layout": {},
+    "fields": [],
+    "decisions": [
+      {
+        "objectAction": "CREATE",
+        "label": "SAVE",
+        "labelkey": "REVIEW",
+        "task": "pricing_call",
+        "outcomes": [
+          {
+            "name": "_EXT_CALL_PRICING",
+            "data": "output.pricing_call",
+            "appendMsg": true,
+            "result": {
+              "success": {
+                "message": "Profile got created successfully"
+              },
+              "failure": {
+                "message": "Please fix errors in ext"
+              },
+              "successWithWarning": {
+                "message": "Profile got created with some errors"
+              }
+            }
+          },
+          {
+            "name": "pricing_call",
+            "data": "output._EXT_CALL_PRICING"
+          }
+        ]
+      }
+    ],
+    "_id": "pricing_call_pricing",
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId": "pricing_call"
+  }

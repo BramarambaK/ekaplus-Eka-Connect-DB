@@ -1,0 +1,17 @@
+{
+    "_id" : "getting_table_Trigger_manual",
+    "componentType" : "UserTask",
+    "labelKey" : "getting_table_Trigger_manual",
+    "label" : "gmr List",
+    "object" : "f90bdb99-9f27-4c50-a111-ee68ba425728",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "getting_table_Trigger_manual",
+    "sys__createdOn" : ISODate("2019-12-17T07:26:38.562Z"),
+    "sys__createdBy" : "Bravo"
+}

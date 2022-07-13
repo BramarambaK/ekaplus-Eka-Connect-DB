@@ -1,0 +1,13 @@
+{
+    "_id" : "Final_Save_TriggerPrice_PRICING",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "02f2e0ed-ef26-4209-b1af-a0efa992a047"
+    },
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "type" : "workflow",
+    "taskId" : "Processor_Save",
+    "object" : "formula"
+}

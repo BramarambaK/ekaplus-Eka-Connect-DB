@@ -1,0 +1,44 @@
+{
+    "componentType": "UserTask",
+    "labelKey": "SEEDCURVE_CALL",
+    "label": "Pricing Call",
+    "object":"baseCurve",
+    "objectAction": "CREATE",
+    "layout": {},
+    "fields": [],
+    "decisions": [
+      {
+        "objectAction": "CREATE",
+        "label": "SAVE",
+        "labelkey": "REVIEW",
+        "task": "seed_curve",
+        "outcomes": [
+          {
+            "name": "_EXT_CALL_SEEDCURVE",
+            "data": "output.seed_curve",
+            "appendMsg": true,
+            "result": {
+              "success": {
+                "message": "Profile got created successfully"
+              },
+              "failure": {
+                "message": "Please fix errors in ext"
+              },
+              "successWithWarning": {
+                "message": "Profile got created with some errors"
+              }
+            }
+          },
+          {
+            "name": "seed_curve",
+            "data": "output._EXT_CALL_SEEDCURVE"
+          }
+        ]
+      }
+    ],
+    "_id": "seed_curve_pricing",
+    "type": "workflow",
+    "refType": "app",
+    "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId": "seed_curve"
+  }

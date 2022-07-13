@@ -1,0 +1,244 @@
+{
+    "_id" : "modifyFixation_TRIGGERPricing",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "name" : "pricefixationlistingitem",
+                    "clearSelected" : [ 
+                        "selected.pricefixationlistingitem"
+                    ]
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "task" : "updatefixation",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Fixation Updated"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Fixation Updated with some errors"
+                        }
+                    },
+                    "data" : "output.updatefixation",
+                    "appendMsg" : true,
+                    "name" : "Process_task_update",
+                    "clearSelected" : [ 
+                        "selected.pricefixationlistingitem"
+                    ]
+                }, 
+                {
+                    "data" : "output.Process_task_update",
+                    "appendMsg" : false,
+                    "name" : "pricefixationlistingitem"
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "pricefixationlistingitem",
+                    "clearSelected" : [ 
+                        "selected.pricefixationlistingitem"
+                    ]
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "max-height1" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "fixationRefNo"
+            }, 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "max-height1" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "executionDisplayName",
+                "type" : "readOnly"
+            }, 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "max-height1" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "gmrRefNo",
+                "type" : "readOnly"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "max-height1" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "itemFixedQty"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "max-height1" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "basePrice"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "max-height1" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "differential"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "max-height1" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "price"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "margin-right" : "0px"
+                },
+                "event" : "data.price = +(Number(data.avgPrice) + Number(value)).toFixed(12)+ ' ' +data.price.split(' ')[1]",
+                "key" : "kfactor"
+            },
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display1" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "margin-right" : "0px"
+                },
+                "key" : "priceU"
+            }
+        ]
+    ],
+    "label" : "Update Fixation",
+    "labelKey" : "Update_fixation",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "defaultFormLabelStyle" : {
+            "font-weight" : "600"
+        },
+        "name" : "create",
+        "type" : "row",
+        "option" : {
+            "bodyMessage" : "${cancelledFixationQty}",
+            "headerMessage" : "${fixationRefNo}"
+        }
+    },
+    "processorInfo" : {
+        "processorId" : "2d4963cc-541f-4c90-b583-b565196be02a"
+    },
+    "payLoad" : "selected.pricefixationlistingitem",
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "updatefixation",
+    "type" : "workflow"
+}

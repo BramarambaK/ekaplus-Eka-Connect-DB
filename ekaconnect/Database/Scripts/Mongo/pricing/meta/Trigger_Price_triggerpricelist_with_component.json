@@ -1,0 +1,124 @@
+{
+    "_id" : "Listing_triggerPrice_component",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Trigger Price List",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "layout" : {
+        "tableEditing" : true,
+        "selection" : "row",
+        "showCheckbox" : true,
+        "name" : "list",
+        "lazyLoading" : true,
+        "options" : {
+            "filter" : true,
+            "preserveSelectedData" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "getInitialData" : true,
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "pagination" : false,
+        "dropdownDecisions" : true,
+        "limitHeight" : true
+    },
+    "decisions" : [],
+    "labelKey" : "Trigger price List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "component",
+            "width" : "100px",
+            "style" : {
+                "height" : "28px"
+            }
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "quantity",
+            "width" : "100px",
+            "style" : {
+                "height" : "28px"
+            }
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "event" : "if(value === 'Manual'){\r\ndata.indexName = {value: '', disable: true}; data.indexMultiplier = {value : '', disable: true};\r\ndata.differential = {value : '', disable: true};\r\ndata.price = {value : (typeof data.price === 'object' ? data.priceU.value : data.priceU), disable: false}\r\ndata.priceU = {value : (typeof data.priceU === 'object' ? data.priceU.value : data.priceU), disable: false}\r\n\r\n}\r\nelse{\r\ndata.price = {value: 0, disable: true}; data.priceU = {value : (typeof data.priceU === 'object' ? '' : data.priceU), disable: true};\r\ndata.indexName = {value : (typeof data.indexName === 'object' ? data.indexName.value : data.indexName), disable: false}\r\ndata.indexMultiplier = {value : (typeof data.indexMultiplier === 'object' ? data.indexMultiplier.value : data.indexMultiplier), disable: false}\r\ndata.differential = {value : (typeof data.differential === 'object' ? data.differential.value : data.differential), disable: false}\r\n   \r\n}",
+            "key" : "fixationMethod",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "indexName",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "price",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "priceUnitIdDisplayName",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "indexMultiplier",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fxindex",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fxrate",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "differential",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "calculatedPrice",
+            "width" : "100px",
+            "roundoff" : 2
+        }
+    ],
+    "taskId" : "listingtriggerPricecomponent",
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4"
+}

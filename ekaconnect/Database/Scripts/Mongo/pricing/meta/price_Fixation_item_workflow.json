@@ -1,0 +1,292 @@
+{
+  "_id": "price_Fixation_item_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "84d7b167-1d9f-406d-b974-bea406a25f9a",
+  "label": "Price Fixation Listing",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "f20e0350-6934-45da-9bd2-b3840c534df5"
+  },
+  "layout": {
+    "selection": "row",
+    "isPopup": false,
+    "name": "list",
+    "selectAll": true,
+    "preserveSelectedData": true,
+    "showCheckbox": true,
+    "header": {
+      "headerExpression": "return '${triggerpriceviewv2.listingformula.contractRefNo}'",
+      "title": "Price Fixation Listing - "
+    },
+    "layoutProcessor": {
+      "processorId": "c628d365-abbf-49d8-a83a-dbc70187fcf3"
+    },
+    "dropdownDecisions": true,
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "selectionMode": "multiple",
+    "theme": "theme-grid-white"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "triggerpriceviewv2"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Back",
+      "outsideOperations": true,
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "data": "selected.pricefixationlistingitem",
+          "name": "printfixation",
+          "popupClass": "versionpopup",
+          "displayType": "popup"
+        }
+      ],
+      "disabled": "field.fixationStatus == 'Cancelled' ",
+      "style": {
+        "margin-right": "auto"
+      },
+      "selection": "global",
+      "label": "Generate Document",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "data": "selected.pricefixationlistingitem",
+          "name": "updatefixation",
+          "popupClass": "edit-modal907px",
+          "displayType": "popup"
+        }
+      ],
+      "disabled": "field[0].fixationStatus == 'Cancelled' ||field[0].executionDisplayName == 'Pre Execution'||field[0].gmrInvoiceStatus == 'Final' || record.hasOwnProperty('1')",
+      "style": {
+        "margin-right": "auto"
+      },
+      "selection": "global",
+      "label": "Adjustment Factor",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "data": "selected.pricefixationlistingitem",
+          "name": "cancelpostfixation",
+          "displayType": "popup"
+        }
+      ],
+      "disabled": "field[0].fixationStatus == 'Cancelled' ||field[0].executionDisplayName == 'Pre Execution'||field[0].gmrInvoiceStatus == 'Final' || record.hasOwnProperty('1')",
+      "style": {
+        "margin-right": "auto"
+      },
+      "selection": "global",
+      "label": "Cancel Fixation(Post Execution)",
+      "position": "top"
+    }
+  ],
+  "labelKey": "LISTING",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "fixationRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "executionDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "hidden": true,
+      "key": "fixationStatus"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "itemQty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "hidden": true,
+      "key": "itemUnfixedQty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "itemFixedQtyAvailable"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "hidden": true,
+      "key": "cancelledFixationQty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "190px",
+      "key": "basePrice"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "190px",
+      "key": "differential"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "190px",
+      "key": "price"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "190px",
+      "key": "calculatedPrice"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "gmrRefNoDisplayName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "gmrQty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "gmrQtyFixed"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "GMRConvFactor"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "hidden": true,
+      "width": "120px",
+      "key": "gmrQtyAvailable"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "hidden": true,
+      "key": "gmrCancelledQty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "hidden": true,
+      "key": "gmrStatus"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "170px",
+      "key": "triggerDate",
+      "dateformat": "YYYY-MM-DDTHH:MM:SSZ"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "170px",
+      "key": "tableFixationDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "170px",
+      "key": "tableFxrate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "200px",
+      "key": "remarks"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "kfactor"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "width": "120px",
+      "key": "gmrInvoiceStatus"
+    }
+  ],
+  "taskId": "pricefixationlistingitem",
+  "object": "6158fca6-dd9b-4539-a777-67fcf5a0fe67"
+}

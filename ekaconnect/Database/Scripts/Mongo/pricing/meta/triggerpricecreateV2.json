@@ -1,0 +1,409 @@
+{
+    "_id" : "triggerpricecreateV2",
+    "componentType" : "UserTask",
+    "decisions" : [],
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "execution"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "fixationMethod"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "fixationDate",
+                "value" : "currentDate",
+                "disabled" : true
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "gmrRefNo"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "type" : "textbox",
+                "key" : "gmrQtyUnit"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "type" : "textbox",
+                "key" : "gmrQty"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "type" : "textbox",
+                "key" : "gmrQtyFixed"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "type" : "textbox",
+                "key" : "gmrQtyAvailable"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "8%",
+                    "margin-right" : "1px"
+                },
+                "key" : "quantity"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "5%",
+                    "margin-right" : "5px"
+                },
+                "key" : "QTYUNIT"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "priceU",
+                "event" : " for (let i = 0; i < data.listingmanualtable.length; i++) {  \r\n              data.listingmanualtable[i]['fixationDate']\t = ''\r\n              data.listingmanualtable[i]['price']\t = ''\r\n      }\r\n    \r\n    data.createtriggerpricev2.avgPrice = ''\r\n     ",
+                "patchFromValue" : "priceUnitIdDisplayName"
+            }
+        ], 
+        [ 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "conversion"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "textbox",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "quantityunitconversion",
+                "event" : " let total = 0\r\n        let c=0\r\n        for (let i = 0; i < data.listingmanualtable.length; i++) {   \r\n            if(data.listingmanualtable[i].fxrate && data.listingmanualtable[i].price ){\r\n\t\t\t  let subfactor = 1\r\n\t\t\t  if(data.createtriggerpricev2.currencyconversionstring){\r\n\t\t\t    subfactor = data.createtriggerpricev2.currencyconversionstring.split('&')[1]\r\n\t\t\t  }\r\n              total = total + (data.listingmanualtable[i].price)*(data.listingmanualtable[i].fxrate) * (subfactor)\r\n              c = c+1\r\n            }\r\n    }\r\n\tlet differential = 0\t\r\nif(  data.createtriggerpricev2.differential!='') differential = data.createtriggerpricev2.differential\r\nlet qtyunit = data.createtriggerpricev2.execution=='Pre-execution' ? value:1\r\nif(Number(qtyunit)>0){ \r\ndata.createtriggerpricev2.avgPrice = ((total \/( Number(c)*Number(qtyunit)))+ Number(differential)).toFixed(data.createtriggerpricev2.decimalPrecision)\r\nif(isNaN(data.createtriggerpricev2.avgPrice)) data.createtriggerpricev2.avgPrice = ''\r\nelse\r\ndata.createtriggerpricev2.avgPrice = data.createtriggerpricev2.avgPrice.toString()\r\n}\r\nelse{\r\nvalue = ''\r\n"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "currencyconversion",
+                "event" : "  if(value.split(' -> ')[0] != value.split(' -> ')[1]){\r\n for (let i = 0; i < data.listingmanualtable.length; i++) {  \r\n              data.listingmanualtable[i]['fxrate']\t = ''\r\n\t\t\t  data.listingmanualtable[i]['fxConversion'] = 'different'    \r\n      }\t  \r\n\t  }\r\n\t else  if(value.split(' -> ')[0] == value.split(' -> ')[1]){\r\n for (let i = 0; i < data.listingmanualtable.length; i++) {  \r\n              data.listingmanualtable[i]['fxrate']\t = 1\r\n\t\t\t  data.listingmanualtable[i]['fxConversion'] = 'same'    \r\n      }\t  \r\n\t  }\r\n      "
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "fromDate"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "toDate"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "differential",
+                "event" : "let total = 0\r\n        let c=0\r\n\t\t let subfactor = 1\r\n\t\t\t  if(data.createtriggerpricev2.currencyconversionstring){\r\n\t\t\t    subfactor = Number(data.createtriggerpricev2.currencyconversionstring.split('&')[1])\r\n\t\t\t  }\r\n        for (let i = 0; i < data.listingmanualtable.length; i++) {   \r\n            if(data.listingmanualtable[i].fxrate && data.listingmanualtable[i].price ){\r\n              total = total + (data.listingmanualtable[i].price)*(data.listingmanualtable[i].fxrate) * subfactor\r\n              c = c+1\r\n            }\r\n    }\r\nlet differential = 0\t\r\nlet qtyunit = data.createtriggerpricev2.execution=='Pre-execution' ? data.createtriggerpricev2.quantityunitconversion:1\r\nif(value!='') differential = value\r\ndata.createtriggerpricev2.avgPrice = ((total \/( Number(c)*Number(qtyunit))) + Number(differential)).toFixed(data.createtriggerpricev2.decimalPrecision)\r\nif(isNaN(data.createtriggerpricev2.avgPrice)) data.createtriggerpricev2.avgPrice = ''\r\nelse\r\ndata.createtriggerpricev2.avgPrice = data.createtriggerpricev2.avgPrice.toString()"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "decimalPrecision",
+                "event" : "let total = 0\r\n        let c=0\r\n\t\t let subfactor = 1\r\n\t\t\t  if(data.createtriggerpricev2.currencyconversionstring){\r\n\t\t\t    subfactor = Number(data.createtriggerpricev2.currencyconversionstring.split('&')[1])\r\n\t\t\t  }\r\n        for (let i = 0; i < data.listingmanualtable.length; i++) {   \r\n            if(data.listingmanualtable[i].fxrate && data.listingmanualtable[i].price ){\r\n              total = total + (data.listingmanualtable[i].price)*(data.listingmanualtable[i].fxrate) * subfactor\r\n              c = c+1\r\n            }\r\n    }\r\nlet differential = 0\r\nlet qtyunit = data.createtriggerpricev2.execution=='Pre-execution' ? data.createtriggerpricev2.quantityunitconversion:1\t\r\nif(data.createtriggerpricev2.differential &&  data.createtriggerpricev2.differential!='') differential = data.createtriggerpricev2.differential\r\ndata.createtriggerpricev2.avgPrice = ((total \/( Number(c)*Number(qtyunit))) + Number(differential)).toFixed(value)    \r\nif(isNaN(data.createtriggerpricev2.avgPrice)) data.createtriggerpricev2.avgPrice = ''\r\nelse\r\ndata.createtriggerpricev2.avgPrice = data.createtriggerpricev2.avgPrice.toString()"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "avgPrice"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "priceUnitFormula",
+                "disabled" : true
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "20%",
+                    "margin-right" : "5px"
+                },
+                "key" : "remarks"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none",
+                    "margin-right" : "5px"
+                },
+                "key" : "currencyconversionstring"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "hidden",
+                "formItemStyle" : {
+                    "display" : "none",
+                    "margin-right" : "5px"
+                },
+                "key" : "priceUnitIdDisplayName"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "key" : "unitConversion",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "itemQtyUnit",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "latestDate",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "executionDisplayName",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "activityDate",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "productId",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "gmrRefNoDisplayName",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "currencyUnit",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "triggerDate",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "internalContractItemRefNo",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "unfixedQuantity",
+                "type" : "hidden"
+            }, 
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "contractIssueDate",
+                "type" : "hidden"
+            }, 
+             {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "cpName",
+                "type" : "hidden"
+            },
+            {
+                "suffix" : "",
+                "formItemStyle" : {
+                    "width" : "10%",
+                    "margin-right" : "5px"
+                },
+                "style" : {
+                    "display" : "none"
+                },
+                "key" : "contractRefno",
+                "type" : "hidden"
+            }
+        ]
+    ],
+    "label" : "",
+    "labelKey" : "Trigger Price",
+    "layout" : {
+        "recommedationNeed" : false,
+        "defaultFormItemStyle" : {
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap"
+        },
+        "formLayoutStyle" : {
+            "height" : "50%",
+            "padding-left" : "6px"
+        },
+        "processorInfo" : {
+            "processorId" : "71cede37-e716-4aa2-b739-f0c15a27ae27"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4",
+    "objectAction" : "CREATE",
+    "payLoad" : "selected.triggerpriceview",
+    "processorInfo" : {
+        "processorId" : "2c0c9970-f55c-47d0-a052-9d60a7d7795e"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "createtriggerpricev2",
+    "type" : "workflow"
+}

@@ -1,0 +1,3218 @@
+{
+    "refTypeName" : "pricing",
+    "b894039f-c42f-4c67-b1c7-186be7b30659" : {
+        "5d1a04bddc0e820001dcef01" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf67519dc0e820001017fc0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b9023dc0e8200013b9bf7" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c51dedc0e820001dcf0f1" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c1a55dc0e820001dcf0dd" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2f149fdc0e820001dcf18a" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b7b29dc0e8200013b9bed" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce6e8a1dc0e820001012d52" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1c8500dc0e820001dcef41" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287efedc0e820001dcf0cf" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246bfddc0e820001dcf01c" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecffc6dc0e820001012d9d" : {
+            "userGrants" : {
+                "2289" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d273e99dc0e820001dcf0a2" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d280f09dc0e820001dcf0aa" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf6843fdc0e820001017fc6" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf6849bdc0e820001017fc7" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf51ed1dc0e820001017f84" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1610ecdc0e820001dceeb6" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287cb7dc0e820001dcf0cd" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf1282ddc0e8200011a016f" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09d184dc0e820001018129" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf675bedc0e820001017fc2" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d24749bdc0e820001dcf028" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15ff1edc0e820001dceeae" : {
+            "userGrants" : {
+                "2482" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8ed4dc0e8200013b9bf6" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf674a8dc0e820001017fbf" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1612aedc0e820001dceeba" : {
+            "userGrants" : {
+                "2476" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce63fd8dc0e820001012d4b" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d14da0edc0e820001448cd4" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15fa70dc0e820001dceea8" : {
+            "userGrants" : {
+                "2482" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d247285dc0e820001dcf023" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08ae8ddc0e8200010180e4" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10a182dc0e8200013b9c3c" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2839bcdc0e820001dcf0bc" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b7b38dc0e8200013b9bee" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf8d5efdc0e820001017fe1" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15e82fdc0e820001dcee92" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf126dadc0e8200011a016c" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "globalGrants" : {
+            "userGrants" : {},
+            "roleGrants" : {
+                "132" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                },
+                "1245" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                },
+                "1185" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                }
+            }
+        },
+        "5cee4c14dc0e820001012dc2" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce641c1dc0e820001012d4d" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b48e7dc0e820001018180" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08bed0dc0e8200010180f1" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10ae93dc0e8200013b9c3e" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf106bedc0e8200011a015b" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d160f23dc0e820001dceeb3" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d302346dc0e820001dcf19b" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1eede4dc0e820001dcefbc" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246c3fdc0e820001dcf01e" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287951dc0e820001dcf0cc" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246bb0dc0e820001dcf01a" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09ee2ddc0e820001018147" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d22d8cedc0e820001dcefe6" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce3d007cff47e000182db56" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10ba24dc0e8200013b9c47" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10b47cdc0e8200013b9c41" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfe61b5dc0e82000101803e" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf68438dc0e820001017fc5" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c52bcdc0e820001dcf0f2" : {
+            "userGrants" : {
+                "2286" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce3ed3acff47e000182db63" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2474dddc0e820001dcf02a" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c53a8dc0e820001dcf0f3" : {
+            "userGrants" : {
+                "2286" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ceb9056dc0e820001012d6a" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b776bdc0e8200013b9beb" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d280bcbdc0e820001dcf0a7" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d11c0a0dc0e8200013b9c60" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8431dc0e8200013b9bf4" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1c51f1dc0e820001dcef2d" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cff6f9edc0e820001018045" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf67588dc0e820001017fc1" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d235400dc0e820001dcf000" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c87cedc0e820001dcf110" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246c28dc0e820001dcf01d" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf8e9bbdc0e820001017fed" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d134d2adc0e8200013b9c8e" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d14afd8dc0e820001448cd2" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15ff09dc0e820001dceead" : {
+            "userGrants" : {
+                "2476" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecf326dc0e820001012d8f" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b7bcfdc0e8200013b9bef" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf12043dc0e8200011a0168" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c1d62dc0e820001dcf0e0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c1a99dc0e820001dcf0de" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d247480dc0e820001dcf027" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfa5a22dc0e82000101801b" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce2a068cff47e000182db4e" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cde7452fa4f8c000181784c" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d161845dc0e820001dceebe" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08a826dc0e8200010180e2" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1617f8dc0e820001dceebd" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d28266cdc0e820001dcf0b5" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf10376dc0e8200011a0159" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c51d1dc0e820001dcf0f0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cff71a2dc0e820001018047" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf8c3dfdc0e820001017fd9" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce2a00ccff47e000182db4d" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1ef7a6dc0e820001dcefc5" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d282650dc0e820001dcf0b4" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecf697dc0e820001012d95" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfa4797dc0e820001018019" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09db16dc0e82000101812e" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b4a8bdc0e820001018182" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2854c4dc0e820001dcf0c0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09cc25dc0e820001018127" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfe61addc0e82000101803d" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce63f66dc0e820001012d4a" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8221dc0e8200013b9bf1" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d00b319dc0e820001018071" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8168dc0e8200013b9bf0" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d24746fdc0e820001dcf026" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c51c2dc0e820001dcf0ef" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2883c6dc0e820001dcf0d5" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfe5de8dc0e82000101803b" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246e0adc0e820001dcf020" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246b96dc0e820001dcf019" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecf636dc0e820001012d94" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf684b8dc0e820001017fc8" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2474b7dc0e820001dcf029" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf51263dc0e8200011a01d1" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b71dedc0e820001c3b69d" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf4e852dc0e8200011a01c5" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d19f095dc0e820001dceeec" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d19fe78dc0e820001dceefe" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08a72bdc0e8200010180e0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287916dc0e820001dcf0cb" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d088fcfdc0e8200010180d5" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246be2dc0e820001dcf01b" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        }
+    },
+    "name" : "pricingAppPolicy",
+    "refType" : "app",
+    "tenantId" : "boliden",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "8dea09a6-d76c-4ce3-ae89-877f60b93106" : {
+        "5d1a04bddc0e820001dcef01" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf67519dc0e820001017fc0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b9023dc0e8200013b9bf7" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c51dedc0e820001dcf0f1" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c1a55dc0e820001dcf0dd" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2f149fdc0e820001dcf18a" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b7b29dc0e8200013b9bed" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce6e8a1dc0e820001012d52" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1c8500dc0e820001dcef41" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287efedc0e820001dcf0cf" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246bfddc0e820001dcf01c" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecffc6dc0e820001012d9d" : {
+            "userGrants" : {
+                "2289" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d273e99dc0e820001dcf0a2" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d280f09dc0e820001dcf0aa" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf6843fdc0e820001017fc6" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf6849bdc0e820001017fc7" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf51ed1dc0e820001017f84" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1610ecdc0e820001dceeb6" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287cb7dc0e820001dcf0cd" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf1282ddc0e8200011a016f" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09d184dc0e820001018129" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf675bedc0e820001017fc2" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d24749bdc0e820001dcf028" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15ff1edc0e820001dceeae" : {
+            "userGrants" : {
+                "2482" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8ed4dc0e8200013b9bf6" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf674a8dc0e820001017fbf" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1612aedc0e820001dceeba" : {
+            "userGrants" : {
+                "2476" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce63fd8dc0e820001012d4b" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d14da0edc0e820001448cd4" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15fa70dc0e820001dceea8" : {
+            "userGrants" : {
+                "2482" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d247285dc0e820001dcf023" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08ae8ddc0e8200010180e4" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10a182dc0e8200013b9c3c" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2839bcdc0e820001dcf0bc" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b7b38dc0e8200013b9bee" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf8d5efdc0e820001017fe1" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15e82fdc0e820001dcee92" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf126dadc0e8200011a016c" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "globalGrants" : {
+            "userGrants" : {},
+            "roleGrants" : {
+                "132" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                },
+                "1245" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                },
+                "1185" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                }
+            }
+        },
+        "5cee4c14dc0e820001012dc2" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce641c1dc0e820001012d4d" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b48e7dc0e820001018180" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08bed0dc0e8200010180f1" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10ae93dc0e8200013b9c3e" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf106bedc0e8200011a015b" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d160f23dc0e820001dceeb3" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d302346dc0e820001dcf19b" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1eede4dc0e820001dcefbc" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246c3fdc0e820001dcf01e" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287951dc0e820001dcf0cc" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246bb0dc0e820001dcf01a" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09ee2ddc0e820001018147" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d22d8cedc0e820001dcefe6" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce3d007cff47e000182db56" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10ba24dc0e8200013b9c47" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d10b47cdc0e8200013b9c41" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfe61b5dc0e82000101803e" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf68438dc0e820001017fc5" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c52bcdc0e820001dcf0f2" : {
+            "userGrants" : {
+                "2286" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce3ed3acff47e000182db63" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2474dddc0e820001dcf02a" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c53a8dc0e820001dcf0f3" : {
+            "userGrants" : {
+                "2286" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ceb9056dc0e820001012d6a" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b776bdc0e8200013b9beb" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d280bcbdc0e820001dcf0a7" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d11c0a0dc0e8200013b9c60" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8431dc0e8200013b9bf4" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1c51f1dc0e820001dcef2d" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cff6f9edc0e820001018045" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf67588dc0e820001017fc1" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d235400dc0e820001dcf000" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c87cedc0e820001dcf110" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246c28dc0e820001dcf01d" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf8e9bbdc0e820001017fed" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d134d2adc0e8200013b9c8e" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d14afd8dc0e820001448cd2" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d15ff09dc0e820001dceead" : {
+            "userGrants" : {
+                "2476" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecf326dc0e820001012d8f" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b7bcfdc0e8200013b9bef" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf12043dc0e8200011a0168" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c1d62dc0e820001dcf0e0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c1a99dc0e820001dcf0de" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d247480dc0e820001dcf027" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfa5a22dc0e82000101801b" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce2a068cff47e000182db4e" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cde7452fa4f8c000181784c" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d161845dc0e820001dceebe" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08a826dc0e8200010180e2" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1617f8dc0e820001dceebd" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d28266cdc0e820001dcf0b5" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf10376dc0e8200011a0159" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c51d1dc0e820001dcf0f0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cff71a2dc0e820001018047" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf8c3dfdc0e820001017fd9" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce2a00ccff47e000182db4d" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1ef7a6dc0e820001dcefc5" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d282650dc0e820001dcf0b4" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecf697dc0e820001012d95" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfa4797dc0e820001018019" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09db16dc0e82000101812e" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b4a8bdc0e820001018182" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2854c4dc0e820001dcf0c0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d09cc25dc0e820001018127" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfe61addc0e82000101803d" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5ce63f66dc0e820001012d4a" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8221dc0e8200013b9bf1" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d00b319dc0e820001018071" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b8168dc0e8200013b9bf0" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d24746fdc0e820001dcf026" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2c51c2dc0e820001dcf0ef" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2883c6dc0e820001dcf0d5" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cfe5de8dc0e82000101803b" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246e0adc0e820001dcf020" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246b96dc0e820001dcf019" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cecf636dc0e820001012d94" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf684b8dc0e820001017fc8" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d2474b7dc0e820001dcf029" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf51263dc0e8200011a01d1" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b71dedc0e820001c3b69d" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5cf4e852dc0e8200011a01c5" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d19f095dc0e820001dceeec" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d19fe78dc0e820001dceefe" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d08a72bdc0e8200010180e0" : {
+            "userGrants" : {
+                "2266" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d287916dc0e820001dcf0cb" : {
+            "userGrants" : {
+                "2498" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d088fcfdc0e8200010180d5" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d246be2dc0e820001dcf01b" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        }
+    },
+    "type" : "policy",
+    "16e7a6ac-5420-4b42-a765-dc3b41876d32" : {
+        "5d36e26dd27fde4e1c708e84" : {
+            "userGrants" : {
+                "2480" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d0b42d0dc0e82000101817b" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "globalGrants" : {
+            "userGrants" : {},
+            "roleGrants" : {
+                "132" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                },
+                "1245" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                },
+                "1185" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ],
+                    "itemLevelFilters" : [],
+                    "allowedGlobalActions" : [ 
+                        "CREATE", 
+                        "UPLOAD"
+                    ]
+                }
+            }
+        },
+        "5d145a27dc0e820001448cc6" : {
+            "userGrants" : {
+                "2287" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1af995dc0e820001dcef08" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1b00c0dc0e820001dcef0b" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        },
+        "5d1b0073dc0e820001dcef0a" : {
+            "userGrants" : {
+                "2483" : {
+                    "allowedItemLevelActions" : [ 
+                        "READ", 
+                        "UPDATE", 
+                        "DELETE", 
+                        "LISTVIEW"
+                    ]
+                }
+            }
+        }
+    }
+}

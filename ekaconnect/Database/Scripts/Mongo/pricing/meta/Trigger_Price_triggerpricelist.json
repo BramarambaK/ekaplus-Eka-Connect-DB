@@ -1,0 +1,109 @@
+{
+    "_id" : "Listing_triggerPrice",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Trigger Price List",
+    "type" : "workflow",
+    "payLoad" : "completeData",
+    "layout" : {
+        "tableEditing" : true,
+        "selection" : "none",
+        "showCheckbox" : false,
+        "name" : "list",
+        "lazyLoading" : true,
+        "messages" : {
+            "emptyText" : " "
+        },
+        "options" : {
+            "filter" : true,
+            "preserveSelectedData" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : false,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "useQueryParams" : true,
+        "pagination" : false,
+        "dropdownDecisions" : true,
+        "selectionMode" : "none",
+        "limitHeight" : true
+    },
+    "decisions" : [],
+    "labelKey" : "Trigger price List",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "quantity",
+            "width" : "100px",
+            "style" : {
+                "height" : "28px"
+            }
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fixationMethod",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "indexName",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "price",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "priceUnitIdDisplayName",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "indexMultiplier",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fxrate",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "differential",
+            "width" : "100px"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "calculatedPrice",
+            "width" : "100px",
+            "roundoff" : 2
+        }
+    ],
+    "taskId" : "listingtriggerPrice",
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4"
+}

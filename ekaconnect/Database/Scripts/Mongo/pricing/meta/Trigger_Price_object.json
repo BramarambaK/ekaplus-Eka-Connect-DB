@@ -1,0 +1,601 @@
+{
+    "_id" : "triggerPrice",
+    "name" : "triggerprice",
+    "label" : "triggerPrice",
+    "type" : "object",
+    "version" : "3",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [],
+    "fields" : {
+        "triggerDate" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "internalContractItemRefNo" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "unfixedQuantity" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "contractIssueDate" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "quantity" : {
+            "quantity" : "Qty to be Fixed",
+            "labelKey" : "quantity",
+            "type" : "textbox",
+            "isRequired" : true
+        },
+        "date" : {
+            "date" : "Date",
+            "labelKey" : "date",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "component" : {
+            "component" : "Component",
+            "labelKey" : "component",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fixationRefNo" : {
+            "fixationRefNo" : "Fixation Ref No",
+            "labelKey" : "fixationRefNo",
+            "serialNumber" : {
+                "startsWith" : "001",
+                "customFormat" : "return '${contractRefno}' +'-PFN-' +${fixationRefNo}"
+            },
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "contractRefno" : {
+            "contractRefno" : "Contract Item Ref No",
+            "labelKey" : "contractRefno",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fixationMethod" : {
+            "fixationMethod" : "Fixation Method",
+            "labelKey" : "fixationMethod",
+            "isRequired" : true,
+            "dataType" : "String",
+            "type" : "dropdown",
+            "propertyKey" : "fixationMethod",
+            "children" : [ 
+                "indexName", 
+                "price", 
+                "fromDate", 
+                "toDate", 
+                "indexMultiplier", 
+                "differential", 
+                "priceU", 
+                "priceunitforindex"
+            ]
+        },
+        "fixationMethodDisplayName" : {
+            "fixationMethodDisplayName" : "",
+            "labelKey" : "fixationMethodDisplayName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "indexName" : {
+            "indexName" : "Index Name",
+            "labelKey" : "indexName",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "serviceKey1" : "indexCurve",
+            "parent" : [ 
+                "fixationMethod"
+            ],
+            "children" : [ 
+                "price", 
+                "priceunitforindex"
+            ],
+            "UIupdates" : {
+                "disability" : "return '${fixationMethod}' == 'Manual' ? true : false"
+            }
+        },
+        "price" : {
+            "price" : "Price",
+            "labelKey" : "price",
+            "serviceKey1" : "indexCurvePrice",
+            "parent" : [ 
+                "indexName", 
+                "fixationMethod", 
+                "fixationDate"
+            ],
+            "type" : "dropdown",
+            "isRequired" : true,
+            "UIupdates" : {
+                "disability" : "return '${fixationMethod}' == 'Index' ? true : false",
+                "value" : "return '${fixationMethod}' == 'Index' && ${indexName}' == '' ? '' : ${price}"
+            }
+        },
+        "priceunitforindex" : {
+            "priceunitforindex" : "Price Unit",
+            "labelKey" : "priceunitforindex",
+            "serviceKey1" : "priceunitforindex",
+            "parent" : [ 
+                "indexName", 
+                "fixationMethod", 
+                "fixationDate"
+            ],
+            "children" : [ 
+                "fxrate"
+            ],
+            "type" : "dropdown",
+            "isRequired" : false,
+            "UIupdates" : {
+                "visibility" : "return '${fixationMethod}' == 'Index' ? true : false",
+                "disability" : "return '${fixationMethod}' == 'Index' ? true : false",
+                "value" : "return '${fixationMethod}' == 'Index' && ${indexName}' == '' ? '' : ${priceunitforindex}"
+            }
+        },
+        "priceU" : {
+            "priceU" : "Price Unit",
+            "labelKey" : "priceU",
+            "isRequired" : false,
+            "type" : "dropdown",
+            "dropdownValue" : "priceUnitIdDisplayName",
+            "serviceKey" : "productPriceUnit",
+            "children" : [ 
+                "fxrate", 
+                "conversion", 
+                "currencyconversion", 
+                "currencyconversionstring"
+            ],
+            "UIupdates" : {
+                "visibility" : "return ('${execution}' != 'Post- exection' && '${fixationMethod}' != 'Index' ) ? true : false"
+            }
+        },
+        "priceUnitIdDisplayName" : {
+            "priceUnitIdDisplayName" : "Price Unit",
+            "labelKey" : "priceUnitIdDisplayName",
+            "children" : [ 
+                "fxrate", 
+                "currencyconversionstring", 
+                "conversion", 
+                "currencyconversion", 
+                "quantityunitconversion"
+            ],
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "indexMultiplier" : {
+            "indexMultiplier" : "Index Multiplier",
+            "type" : "textbox",
+            "labelKey" : "indexMultiplier",
+            "isRequired" : false,
+            "UIupdates" : {
+                "disability" : "return '${fixationMethod}' == 'Manual' ? true : false",
+                "value" : "return '${fixationMethod}' == 'Manual' ? '':'${indexMultiplier}' "
+            }
+        },
+        "avgPrice" : {
+            "avgPrice" : "Avg Price",
+            "type" : "textbox",
+            "labelKey" : "avgPrice",
+            "isRequired" : false,
+            "UIupdates" : {
+                "disability" : "return  true"
+            }
+        },
+        "fxindex" : {
+            "fxindex" : "Fx Index",
+            "labelKey" : "fxindex",
+            "type" : "dropdown",
+            "serviceKey1" : "fxIndex",
+            "isRequired" : false
+        },
+        "fxrate" : {
+            "fxrate" : "Fx Value",
+            "labelKey" : "fxrate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "UIupdates" : {
+                "value" : "return '${priceUnitIdDisplayName}'.split('/')[0] == '${currencyUnit}' || '${priceunitforindex}'.split('/')[0] == '${currencyUnit}' ? 1 : null",
+                "disability" : "return '${priceUnitIdDisplayName}'.split('/')[0] == '${currencyUnit}' || '${priceunitforindex}'.split('/')[0] == '${currencyUnit}' ? true : false"
+            }
+        },
+        "differential" : {
+            "differential" : "Differential",
+            "labelKey" : "differential",
+            "type" : "textbox",
+            "dataType" : "Number",
+            "isRequired" : false
+        },
+        "calculatedPrice" : {
+            "calculatedPrice" : "Calculated Price",
+            "labelKey" : "calculatedPrice",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "unitConversion" : {
+            "unitConversion" : "",
+            "labelKey" : "unitConversion",
+            "type" : "dropdown",
+            "serviceKey" : "unitConversion",
+            "parent" : [ 
+                "priceU"
+            ],
+            "isRequired" : false
+        },
+        "priceUnitFormula" : {
+            "priceUnitFormula" : "",
+            "labelKey" : "priceUnitFormula",
+            "type" : "textbox",
+            "children" : [ 
+                "conversion"
+            ],
+            "isRequired" : false
+        },
+        "formulaId" : {
+            "formulaId" : "formulaId",
+            "labelKey" : "formulaId",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "GroupId" : {
+            "GroupId" : "GroupId",
+            "labelKey" : "GroupId",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "currencyUnit" : {
+            "currencyUnit" : "currencyUnit",
+            "labelKey" : "currencyUnit",
+            "type" : "textbox",
+            "children" : [ 
+                "currencyconversionstring"
+            ],
+            "isRequired" : false
+        },
+        "productId" : {
+            "productId" : "Product",
+            "labelKey" : "productId",
+            "type" : "textbox",
+            "children" : [ 
+                "quantityunitconversion"
+            ],
+            "isRequired" : false
+        },
+        "time" : {
+            "time" : "Time",
+            "labelKey" : "time",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "fixationDate" : {
+            "labelKey" : "fixationDate",
+            "fixationDate" : "Fixation Date",
+            "isRequired" : true,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "children" : [ 
+                "price", 
+                "priceunitforindex"
+            ],
+            "comparison" : [ 
+                {
+                    "compareTo" : "latestDate",
+                    "operator" : "=>"
+                }, 
+                {
+                    "compareTo" : "activityDate",
+                    "operator" : "=<"
+                }
+            ],
+            "dataType" : "date"
+        },
+        "toDate" : {
+            "labelKey" : "toDate",
+            "toDate" : "Price Period To",
+            "isRequired" : true,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "minimumDate" : "return '${fromDate}' ? '${fromDate}' : false",
+            "UIupdates" : {
+                "visibility" : "return '${fixationMethod}' == 'Index' ? true : false"
+            },
+            "comparison" : [ 
+                {
+                    "compareTo" : "fromDate",
+                    "operator" : "=>"
+                }
+            ],
+            "dataType" : "date"
+        },
+        "fromDate" : {
+            "labelKey" : "fromDate",
+            "fromDate" : "Price Period From",
+            "isRequired" : true,
+            "maximumDate" : "return '${toDate}' ? '${toDate}' : false",
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "UIupdates" : {
+                "visibility" : "return '${fixationMethod}' == 'Index' ? true : false"
+            },
+            "comparison" : [ 
+                {
+                    "compareTo" : "toDate",
+                    "operator" : "=<"
+                }
+            ],
+            "dataType" : "date"
+        },
+        "latestDate" : {
+            "labelKey" : "latestDate",
+            "latestDate" : "",
+            "isRequired" : true,
+            "type" : "hidden",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "activityDate" : {
+            "labelKey" : "activityDate",
+            "activityDate" : "",
+            "isRequired" : true,
+            "type" : "hidden",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "QTYUNIT" : {
+            "QTYUNIT" : " ",
+            "labelKey" : "QTYUNIT",
+            "type" : "textbox",
+            "isRequired" : false,
+            "UIupdates" : {
+                "disability" : "return true",
+                "value" : "if('${execution}' != 'Post- exection') {return '${itemQtyUnit}'} else {return  '${gmrQtyUnit}'}"
+            }
+        },
+        "itemQtyUnit" : {
+            "itemQtyUnit" : " ",
+            "labelKey" : "itemQtyUnit",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "execution" : {
+            "execution" : "Fixation Stage",
+            "labelKey" : "execution",
+            "type" : "dropdown",
+            "dropdownValue" : "executionDisplayName",
+            "propertyKey" : "executionType",
+            "children" : [ 
+                "gmrRefNo", 
+                "priceU", 
+                "currencyconversionstring", 
+                "conversion", 
+                "currencyconversion", 
+                "quantityunitconversion", 
+                "gmrQtyUnit", 
+                "gmrQty", 
+                "gmrQtyFixed", 
+                "gmrQtyAvailable", 
+                "quantityunitconversion"
+            ],
+            "isRequired" : false
+        },
+        "executionDisplayName" : {
+            "executionDisplayName" : "",
+            "labelKey" : "executionDisplayName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "decimalPrecision" : {
+            "decimalPrecision" : "Decimal Precision",
+            "labelKey" : "decimalPrecision",
+            "type" : "dropdown",
+            "children" : [ 
+                "avgPrice"
+            ],
+            "propertyKey" : "decimalPrecision",
+            "isRequired" : false
+        },
+        "event" : {
+            "event" : "Event",
+            "labelKey" : "event",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "dropdownValue" : "eventDisplayName",
+            "isRequired" : false,
+            "serviceKey" : "defineActualsEventType"
+        },
+        "eventDisplayName" : {
+            "eventDisplayName" : "event",
+            "labelKey" : "eventDisplayName",
+            "type" : "hidden",
+            "isRequired" : false
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "GMR Ref No",
+            "labelKey" : "gmrRefNo",
+            "type" : "dropdown",
+            "parent" : [ 
+                "execution"
+            ],
+            "children" : [ 
+                "gmrQtyUnit", 
+                "gmrQtyFixed", 
+                "gmrQty", 
+                "gmrQtyAvailable", 
+                "quantityunitconversion"
+            ],
+            "UIupdates" : {
+                "visibility" : "return  '${execution}' == 'Post- exection' ? true:false"
+            },
+            "isRequired" : false,
+            "dropdownValue" : "gmrRefNoDisplayName",
+            "serviceKey" : "getGMRList"
+        },
+        "gmrRefNoDisplayName" : {
+            "gmrRefNoDisplayName" : "",
+            "labelKey" : "gmrRefNoDisplayName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "gmrQtyUnit" : {
+            "gmrQtyUnit" : "GMR Qty Unit",
+            "labelKey" : "gmrQtyUnit",
+            "parent" : [ 
+                "gmrRefNo"
+            ],
+            "children" : [ 
+                "conversion",
+                "QTYUNIT"
+            ],
+            "type" : "dropdown",
+            "UIupdates" : {
+                "visibility" : "return  '${execution}' == 'Post- exection' ? true:false",
+                "disability" : "return  true"
+            },
+            "isRequired" : false,
+            "serviceKey" : "gmrQtyUnit"
+        },
+        "gmrQty" : {
+            "gmrQty" : "GMR Qty",
+            "labelKey" : "gmrQty",
+            "parent" : [ 
+                "gmrRefNo"
+            ],
+            "children" : [ 
+                "gmrQtyAvailable"
+            ],
+            "type" : "dropdown",
+            "UIupdates" : {
+                "visibility" : "return  '${execution}' == 'Post- exection' ? true:false",
+                "disability" : "return  true"
+            },
+            "isRequired" : false,
+            "serviceKey" : "gmrQty"
+        },
+        "gmrQtyFixed" : {
+            "gmrQtyFixed" : "GMR Fixed Qty",
+            "labelKey" : "gmrQtyFixed",
+            "parent" : [ 
+                "gmrRefNo"
+            ],
+            "type" : "dropdown",
+            "UIupdates" : {
+                "visibility" : "return  '${execution}' == 'Post- exection' ? true:false",
+                "disability" : "return  true"
+            },
+            "children" : [ 
+                "gmrQtyAvailable"
+            ],
+            "isRequired" : false,
+            "serviceKey" : "gmrQtyFixed"
+        },
+        "gmrQtyAvailable" : {
+            "gmrQtyAvailable" : "GMR Unfixed Qty",
+            "labelKey" : "gmrQtyAvailable",
+            "type" : "textbox",
+            "UIupdates" : {
+                "visibility" : "return  '${execution}' == 'Post- exection' ? true:false",
+                "disability" : "return  true",
+                "value" : "return '${gmrQty}'-'${gmrQtyFixed}'"
+            },
+            "isRequired" : false
+        },
+        "quantityunitconversion" : {
+            "quantityunitconversion" : "Qty. Conv. Rate",
+            "labelKey" : "quantityunitconversion",
+            "type" : "dropdown",
+            "parent" : [ 
+                "priceUnitIdDisplayName", 
+                "conversion", 
+                "productId"
+            ],
+            "UIupdates" : {
+                "disability" : "return  ('${execution}' == 'Post- exection' ? true:false)||('${conversion}'.split(' -> ')[0] == '${conversion}'.split(' -> ')[1] ? true:false)"
+            },
+            "isRequired" : false,
+            "serviceKey" : "quantityUnitConversion"
+        },
+        "conversion" : {
+            "conversion" : "Qty Conv.",
+            "labelKey" : "conversion",
+            "type" : "textbox",
+            "dataType" : "String",
+            "children" : [ 
+                "quantityunitconversion"
+            ],
+            "UIupdates" : {
+                "disability" : "return true",
+                "value" : "if('${execution}' != 'Post- exection') {return '${priceUnitIdDisplayName}' != null   ? '${priceUnitIdDisplayName}'.split('/')[1] + ' -> '+'${priceUnitFormula}'.split('/')[1]:''} else {return  '${gmrQtyUnit}' + ' -> '+'${itemQtyUnit}'}"
+            },
+            "isRequired" : false
+        },
+        "currencyconversion" : {
+            "currencyconversion" : "Fx Conv.",
+            "labelKey" : "currencyconversion",
+            "type" : "textbox",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return  '${execution}' == 'Post- exection' ? false:true",
+                "disability" : "return true",
+                "value" : "if('${execution}' != 'Post- exection') {return '${priceUnitIdDisplayName}' != null   ? '${currencyconversionstring}'.split('&')[0]:''} else {return  '${currencyUnit}' + ' -> '+'${currencyUnit}'}"
+            },
+            "isRequired" : false
+        },
+        "currencyconversionstring" : {
+            "currencyconversionstring" : "Qty. Conv. Rate",
+            "labelKey" : "currencyconversionstring",
+            "type" : "dropdown",
+            "parent" : [ 
+                "priceUnitIdDisplayName", 
+                "currencyUnit", 
+                "execution"
+            ],
+            "children" : [ 
+                "currencyconversion"
+            ],
+            "UIupdates" : {
+                "visibility" : "return  false"
+            },
+            "isRequired" : false,
+            "serviceKey" : "currencyconversion"
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "type" : "textarea",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "cpName" : {
+            "cpName" : "CP Name",
+            "labelKey" : "cpName",
+            "type" : "textbox",
+            "isRequired" : false
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4"
+}

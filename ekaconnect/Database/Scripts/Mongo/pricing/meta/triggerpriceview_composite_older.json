@@ -1,0 +1,77 @@
+{
+    "_id" : "triggerpriceview_composite_older",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "processorInfo" : {
+        "processorId" : "a0307818-8870-4288-8578-21668b5541be"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Trigger Price",
+    "payLoad" : "selected.createtriggerprice",
+    "workflows" : [ 
+        {
+            "data" : "selected.triggerpriceview.listingformula",
+            "header" : "Contract Item Details",
+            "name" : "listingformula"
+        }, 
+        {
+            "data" : "selected.triggerpriceview.lifecycletriggerPrice",
+            "header" : "Price Fixations",
+            "name" : "lifecycletriggerPrice"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : true,
+        "dropdownDecisions" : false,
+        "preserveSelectedData" : true
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "OK",
+            "btnClass" : "btn-success custom-btn",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "targetPath" : "${properties.platform_url}/trm/#gridId/LOCI",
+                    "name" : "triggerpriceview",
+                    "showPopUp" : false
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "createtriggerprice",
+            "label" : "Add Fixation",
+            "executeDecision" : true,
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "selected.triggerpriceview",
+                    "name" : "createtriggerprice",
+                    "displayType" : "popup"
+                }
+            ]
+        }
+    ],
+    "taskId" : "triggerpriceview",
+    "object" : "formula"
+}

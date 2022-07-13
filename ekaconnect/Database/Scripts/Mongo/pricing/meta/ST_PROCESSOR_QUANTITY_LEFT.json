@@ -1,0 +1,14 @@
+{
+    "_id" : "ST_PROCESSOR_QUANTITY_LEFT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "0f5daf1e-6e53-4eaa-8dc7-b43687c03810"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "type" : "workflow",
+    "taskId" : "ST_PROCESSOR_QUANTITY_LEFT",
+    "label" : " Quantity to get using Processor",
+    "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4"
+}

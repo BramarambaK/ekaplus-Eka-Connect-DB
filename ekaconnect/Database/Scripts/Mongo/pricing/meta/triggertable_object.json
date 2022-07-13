@@ -1,0 +1,71 @@
+{
+    "_id" : "triggertable_object",
+    "name" : "triggertable_object",
+    "label" : "Trigger",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "translatableKeys" : [],
+    "fields" : {
+        "fixationRefNo" : {
+            "fixationRefNo" : "",
+            "labelKey" : "fixationRefNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxConversion" : {
+            "fixationRefrenceNo" : "",
+            "labelKey" : "fixationRefrenceNo",
+            "type" : "textbox",
+            "children" : [ 
+                "fxrate"
+            ],
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fxrate" : {
+            "fxrate" : "Fx Rate",
+            "labelKey" : "fxrate",
+            "type" : "textbox",
+            "isRequired" : false,
+            "UIupdates" : {
+                "disabled" : "if ('${fxConversion}' == 'same') { return true} else { return false}"
+            },
+            "dataType" : "String"
+        },
+        "price" : {
+            "price" : "Base Price",
+            "labelKey" : "price",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+        "fixationDate" : {
+            "fixationDate" : "Pricing Date",
+            "labelKey" : "fixationDate",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "maximumDate" : "return new Date()",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        }
+    },
+    "sys__UUID" : "f90bdb99-9f27-4c50-a111-ee68ba425728",
+    "additionalProperties" : {},
+    "sys__createdOn" : ISODate("2019-02-07T19:21:17.926Z"),
+    "sys__createdBy" : "admin"
+}

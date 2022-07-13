@@ -1,0 +1,10 @@
+{
+    "_id" : "Trigger_Price_table_processor",
+    "name" : "Trigger_Price_table_processor",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "snippet" : "\r\n    var data = []\r\n\tfor(let i=0;i<1;i++){\r\n\tdata.push({})\r\n}\t\r\n    res.status(200).send(data)\r\n  ",
+    "sys__UUID" : "5086e4a4-7815-4455-9386-7c3f90d058d4",
+    "sys__createdBy" : "avinash.singh@ekaplus.com"
+}

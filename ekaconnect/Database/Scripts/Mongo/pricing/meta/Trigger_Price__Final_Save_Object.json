@@ -1,0 +1,395 @@
+{
+    "_id" : "Trigger_Save_Object",
+    "name" : "trigger",
+    "label" : "Trigger Data",
+    "type" : "object",
+    "version" : "3",
+    "tenantID" : "something",
+    "createdOn" : "Test",
+    "createdBy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiedBy" : "Test",
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "translatableKeys" : [],
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "uniqueFields" : [ 
+        "fixationRefNo"
+    ],
+    "fields" : {
+        "internalContractRefNo" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "fixationRefNo" : {
+            "fixationRefNo" : "Fixation Ref No",
+            "labelKey" : "fixationRefNo",
+            "serialNumber" : {
+                "startsWith" : "001",
+                "customFormat" : "return 'PFN-' +${fixationRefNo}"
+            },
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "avgPrice" : {
+            "avgPrice" : "Average Price",
+            "labelKey" : "avgPrice",
+            "isRequired" : false,
+            "children" : [ 
+                "price"
+            ],
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "fromDate" : {
+            "labelKey" : "fromDate",
+            "fromDate" : "Price Period From",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "comparison" : [ 
+                {
+                    "compareTo" : "toDate",
+                    "operator" : "=<"
+                }
+            ],
+            "dataType" : "date"
+        },
+        "toDate" : {
+            "labelKey" : "toDate",
+            "toDate" : "Price Period To",
+            "isRequired" : false,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "comparison" : [ 
+                {
+                    "compareTo" : "toDate",
+                    "operator" : "=>"
+                }
+            ],
+            "dataType" : "date"
+        },
+        "internalContractItemRefNo" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "calculatedPrice" : {
+            "labelKey" : "calculatedPrice",
+            "calculatedPrice" : "Total Value",
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "differential" : {
+            "labelKey" : "differential",
+            "differential" : "Differential",
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "basePrice" : {
+            "labelKey" : "basePrice",
+            "basePrice" : "Base Price",
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "fxrate" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "indexMultiplier" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "indexName" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "fixationMethod" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "contractRefNo" : {
+            "contractRefNo" : "Contract Item Ref No",
+            "labelKey" : "contractRefNo",
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "GroupId" : {
+            "isRequired" : false,
+            "type" : "hidden"
+        },
+        "quantity" : {
+            "quantity" : "Quantity",
+            "labelKey" : "quantity",
+            "type" : "textbox",
+            "isRequired" : true
+        },
+        "price" : {
+            "price" : "Avg Price",
+            "labelKey" : "price",
+            "UIupdates" : {
+                "value" : "return 'Number(data.avgPrice)' + 'Number(data.avgPrice)'+' '+value.split(' ')[1]"
+            },
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "priceU" : {
+            "priceU" : "",
+            "labelKey" : "priceU",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "priceUnitIdDisplayName" : {
+            "priceUnitIdDisplayName" : "Price Unit Contract",
+            "labelKey" : "priceUnitIdDisplayName",
+            "isRequired" : false,
+            "type" : "textbox"
+        },
+        "triggerDate" : {
+            "labelKey" : "triggerDate",
+            "triggerDate" : "Fixation Date",
+            "isRequired" : true,
+            "type" : "datepicker",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "activityDate" : {
+            "labelKey" : "activityDate",
+            "activityDate" : "Activity Date",
+            "isRequired" : true,
+            "type" : "hidden",
+            "format" : "yyyy-MM-dd",
+            "dataType" : "date"
+        },
+        "execution" : {
+            "execution" : "Fixation Stage",
+            "labelKey" : "execution",
+            "type" : "dropdown",
+            "propertyKey" : "executionType",
+            "isRequired" : false
+        },
+        "decimalPrecision" : {
+            "decimalPrecision" : "Decimal Precision",
+            "labelKey" : "decimalPrecision",
+            "type" : "dropdown",
+            "propertyKey" : "decimalPrecision",
+            "isRequired" : false
+        },
+        "event" : {
+            "event" : "Event",
+            "labelKey" : "event",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "dropdownValue" : "eventDisplayName",
+            "isRequired" : false,
+            "serviceKey" : "defineActualsEventType"
+        },
+        "eventDisplayName" : {
+            "eventDisplayName" : "event",
+            "labelKey" : "eventDisplayName",
+            "type" : "hidden",
+            "isRequired" : false
+        },
+        "gmrRefNo" : {
+            "gmrRefNo" : "GMR Ref No",
+            "labelKey" : "gmrRefNo",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "gmrQtyUnit" : {
+            "gmrQtyUnit" : "GMR QTY Unit",
+            "labelKey" : "gmrQtyUnit",
+            "isRequired" : false
+        },
+        "gmrQty" : {
+            "gmrQty" : "GMR QTY",
+            "labelKey" : "gmrQty",
+            "isRequired" : false,
+            "UIupdates" : {
+                "listValue" : "return '${gmrQtyUnit}' ? '${gmrQty} ${gmrQtyUnit}' : '${gmrQty}'"
+            }
+        },
+        "gmrQtyFixed" : {
+            "gmrQtyFixed" : "GMR Fixed QTY",
+            "labelKey" : "gmrQtyFixed",
+            "isRequired" : false,
+            "UIupdates" : {
+                "listValue" : "return '${gmrQtyUnit}' ? '${gmrQtyFixed} ${gmrQtyUnit}' : '${gmrQtyFixed}'"
+            }
+        },
+        "gmrQtyAvailable" : {
+            "gmrQtyAvailable" : "GMR Unfixed QTY",
+            "labelKey" : "gmrQtyAvailable",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "quantityunitconversion" : {
+            "quantityunitconversion" : "Qty Conversion Rate",
+            "labelKey" : "quantityunitconversion",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "conversion" : {
+            "conversion" : "Qty Unit Conversion",
+            "labelKey" : "conversion",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "currencyconversion" : {
+            "currencyconversion" : "Currency Conversion",
+            "labelKey" : "currencyconversion",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "fixationStatus" : {
+            "fixationStatus" : "Item Price Fixation Status",
+            "labelKey" : "fixationStatus",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "itemQty" : {
+            "itemQty" : "Item QTY",
+            "labelKey" : "itemQty",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "itemFixedQty" : {
+            "itemFixedQty" : "Fixed QTY",
+            "labelKey" : "itemFixedQty",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "itemUnfixedQty" : {
+            "itemUnfixedQty" : "Item Unfixed QTY",
+            "labelKey" : "itemUnfixedQty",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "gmrCancelledQty" : {
+            "gmrCancelledQty" : "GMR Cancelled QTY",
+            "labelKey" : "gmrCancelledQty",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "gmrStatus" : {
+            "gmrStatus" : "GMR Status",
+            "labelKey" : "gmrStatus",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "gmrInvoiceStatus" : {
+            "gmrInvoiceStatus" : "Invoicing Status",
+            "labelKey" : "gmrInvoiceStatus",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "itemQtyUnit" : {
+            "itemQtyUnit" : "",
+            "labelKey" : "itemQtyUnit",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "itemFixedQtyAvailable" : {
+            "itemFixedQtyAvailable" : "Item Fixed QTY Available",
+            "labelKey" : "itemFixedQtyAvailable",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "gmrRefNoDisplayName" : {
+            "gmrRefNoDisplayName" : "GMR Ref No",
+            "labelKey" : "gmrRefNoDisplayName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "cancelledFixationQty" : {
+            "cancelledFixationQty" : "Cancelled Fixed Qty",
+            "labelKey" : "cancelledFixationQty",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "executionDisplayName" : {
+            "executionDisplayName" : "Fixation Stage",
+            "labelKey" : "executionDisplayName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "densityDetailsContract" : {
+            "densityDetailsContract" : "Density",
+            "labelKey" : "densityDetailsContract",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "densityDetailsGmr" : {
+            "densityDetailsGmr" : "Density",
+            "labelKey" : "densityDetailsGmr",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "cpName" : {
+            "cpName" : "CP Name",
+            "labelKey" : "cpName",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "GMRConvFactor" : {
+            "GMRConvFactor" : "GMR Conv. Factor",
+            "labelKey" : "GMRConvFactor",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "tableFixationDate" : {
+            "tableFixationDate" : "Pricing Date",
+            "labelKey" : "tableFixationDate",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "tableFxrate" : {
+            "tableFxrate" : "Fx Rate",
+            "labelKey" : "tableFxrate",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "kfactor" : {
+            "kfactor" : "Adjustment Factor",
+            "labelKey" : "kfactor",
+            "type" : "textbox",
+            "children" : [ 
+                "price"
+            ],
+            "isRequired" : false,
+            "dataType" : "Number"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__UUID" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67"
+}

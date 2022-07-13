@@ -1,0 +1,222 @@
+{
+    "_id" : "Listing_Formula",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Formula List",
+    "type" : "workflow",
+    "layout" : {
+        "recommedationNeed" : false,
+        "defaultFormItemStyle" : {
+            "width" : "25%",
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "100%",
+            "height" : "28px",
+            "font-weight" : "bold"
+        },
+        "header" : {
+            "title" : "Formula List"
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "margin-bottom" : "20px"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "decisions" : [],
+    "labelKey" : "Formula_List",
+    "fields" : [ 
+        [ 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "contractRefNo",
+                "type" : "readOnly"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex",
+                    "padding-right" : "5px"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "cpName"
+            }, 
+            {
+                "suffix" : "",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "type" : "readOnly",
+                "key" : "executedQty"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "contractIssueDate"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "contractCurrencyPrice"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "product"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "fixedQuantity"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "date"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "itemQtyUnit"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "quality"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "unfixedQuantity"
+            }, 
+            {
+                "suffix" : "",
+                "type" : "readOnly",
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "25%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "key" : "latestDate"
+            }
+        ]
+    ],
+    "taskId" : "listingformula",
+    "object" : "formula"
+}

@@ -1,0 +1,17 @@
+{
+    "_id" : "getting_triggerData",
+    "componentType" : "UserTask",
+    "labelKey" : "getting_triggerData",
+    "label" : "Trigger List",
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67",
+    "objectAction" : "READ",
+    "layout" : {},
+    "fields" : [],
+    "decisions" : [],
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "taskId" : "trigger_data_list",
+    "sys__createdOn" : ISODate("2019-12-17T07:26:38.562Z"),
+    "sys__createdBy" : "Bravo"
+}

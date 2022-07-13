@@ -1,0 +1,380 @@
+{
+    "type" : "workflow",
+    "name" : "pricing_workflow",
+    "title" : "pricing Workflow",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "app" : "pricing",
+    "flow" : {
+        "formula_list" : {
+            "componentType" : "UserTask",
+            "labelKey" : "Formula_List",
+            "label" : "Formula List",
+           "object" : "formula",
+            "objectAction" : "READ",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : []
+        },
+        "basecurve_list" : {
+            "componentType" : "UserTask",
+            "labelKey" : "basecurve_list",
+            "label" : "Base Curve List",
+            "object" : "baseCurve",
+            "objectAction" : "READ",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : []
+        },
+        "contract_list" : {
+            "componentType" : "UserTask",
+            "labelKey" : "contract_list",
+            "label" : "Contract List",
+            "object" : "contract",
+            "objectAction" : "READ",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : []
+        },
+        "delete_formula" : {
+            "componentType" : "UserTask",
+            "labelKey" : "Formula_List",
+            "label" : "Formula List",
+           "object" : "formula",
+            "objectAction" : "DELETE",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : [ 
+                {
+                    "objectAction" : "DELETE",
+                    "label" : "Delete",
+                    "labelkey" : "DELETE",
+                    "task" : "delete_formula",
+                    "outcomes" : [ 
+                        {
+                            "data" : "output.delete_formula",
+                            "name" : "_ST_DELETE_FORMULA",
+                            "appendMsg" : true,
+                            "result" : {
+                                "success" : {
+                                    "message" : "Profile got deleted successfully"
+                                },
+                                "failure" : {
+                                    "message" : "Please fix errors "
+                                },
+                                "successWithWarning" : {
+                                    "message" : "Profile got deleted with some errors"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "_ST_DELETE_FORMULA" : {
+            "componentType" : "SystemTask",
+           "object" : "formula",
+            "objectAction" : "DELETE"
+        },
+        "curve_list" : {
+            "componentType" : "UserTask",
+            "labelKey" : "Curve_List",
+            "label" : "Curve List",
+            "object" : "Curve",
+            "objectAction" : "READ",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : []
+        },
+        "formula_save" : {
+            "componentType" : "UserTask",
+            "labelKey" : "formula_save",
+            "label" : "Formula Save",
+           "object" : "formula",
+            "objectAction" : "CREATE",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : [ 
+                {
+                    "objectAction" : "CREATE",
+                    "label" : "CREATE",
+                    "labelkey" : "CREATE",
+                    "task" : "formula_save",
+                    "outcomes" : [ 
+                        {
+                            "data" : "output.formula_save",
+                            "name" : "_ST_CREATE_FORMULA",
+                            "appendMsg" : true,
+                            "result" : {
+                                "success" : {
+                                    "message" : "Formula is Saved"
+                                },
+                                "failure" : {
+                                    "message" : "Please fix errors "
+                                },
+                                "successWithWarning" : {
+                                    "message" : "Formula is Saved with some errors"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "_ST_CREATE_FORMULA" : {
+            "componentType" : "SystemTask",
+           "object" : "formula",
+            "objectAction" : "CREATE"
+        },
+        "curve_save" : {
+            "componentType" : "UserTask",
+            "labelKey" : "curve_save",
+            "label" : "Formula Save",
+            "object" : "Curve",
+            "objectAction" : "CREATE",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : [ 
+                {
+                    "objectAction" : "CREATE",
+                    "label" : "CREATE",
+                    "labelkey" : "CREATE",
+                    "task" : "curve_save",
+                    "outcomes" : [ 
+                        {
+                            "data" : "output.curve_save",
+                            "name" : "_ST_CREATE_CURVE",
+                            "appendMsg" : true,
+                            "result" : {
+                                "success" : {
+                                    "message" : "Formula is Saved"
+                                },
+                                "failure" : {
+                                    "message" : "Please fix errors "
+                                },
+                                "successWithWarning" : {
+                                    "message" : "Formula is Saved with some errors"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "_ST_CREATE_CURVE" : {
+            "componentType" : "SystemTask",
+            "object" : "Curve",
+            "objectAction" : "CREATE"
+        },
+        "formula_edit" : {
+            "componentType" : "UserTask",
+            "labelKey" : "formula_edit",
+            "label" : "Formula Edit",
+           "object" : "formula",
+            "objectAction" : "UPDATE",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : [ 
+                {
+                    "objectAction" : "UPDATE",
+                    "label" : "UPDATE",
+                    "labelkey" : "UPDATE",
+                    "task" : "formula_save",
+                    "outcomes" : [ 
+                        {
+                            "data" : "output.formula_save",
+                            "name" : "_ST_UPDATE_FORMULA",
+                            "appendMsg" : true,
+                            "result" : {
+                                "success" : {
+                                    "message" : "Formula is Saved"
+                                },
+                                "failure" : {
+                                    "message" : "Please fix errors "
+                                },
+                                "successWithWarning" : {
+                                    "message" : "Formula is Saved with some errors"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "_ST_UPDATE_FORMULA" : {
+            "componentType" : "SystemTask",
+           "object" : "formula",
+            "objectAction" : "UPDATE"
+        },
+        "pricing_call" : {
+            "componentType" : "UserTask",
+            "labelKey" : "PRICING_CALL",
+            "label" : "Pricing Call",
+           "object" : "formula",
+            "objectAction" : "CREATE",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : [ 
+                {
+                    "objectAction" : "CREATE",
+                    "label" : "SAVE",
+                    "labelkey" : "REVIEW",
+                    "task" : "pricing_call",
+                    "outcomes" : [ 
+                        {
+                            "name" : "_EXT_CALL_PRICING",
+                            "data" : "output.pricing_call",
+                            "appendMsg" : true,
+                            "result" : {
+                                "success" : {
+                                    "message" : "Profile got created successfully"
+                                },
+                                "failure" : {
+                                    "message" : "Please fix errors in ext"
+                                },
+                                "successWithWarning" : {
+                                    "message" : "Profile got created with some errors"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : "pricing_call",
+                            "data" : "output._EXT_CALL_PRICING"
+                        }
+                    ]
+                }
+            ]
+        },
+        "_EXT_CALL_PRICING" : {
+            "componentType" : "ExtSystemTask",
+           "object" : "formula",
+            "objectAction" : "CREATE",
+            "apiInfo" : {
+                "host" : "${properties.eka_pricing_host}",
+                "path" : "/api/pricing/formula?mode=Detailed",
+                "method" : "POST",
+                "body" : {},
+                "useInputMapping" : false,
+                "inputMapping" : {},
+                "responseDataKey" : "data",
+                "headers" : {
+                    "X-Locale" : "en-US",
+                    "Content-Type" : "application/json"
+                }
+            }
+        },
+        "associated_call" : {
+            "componentType" : "UserTask",
+            "labelKey" : "PRICING_CALL",
+            "label" : "Pricing Call",
+           "object" : "formula",
+            "objectAction" : "READ",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : [ 
+                {
+                    "objectAction" : "CREATE",
+                    "label" : "SAVE",
+                    "labelkey" : "REVIEW",
+                    "task" : "associated_call",
+                    "outcomes" : [ 
+                        {
+                            "name" : "_EXT_CALL_ASSOCIATED",
+                            "data" : "output.associated_call",
+                            "appendMsg" : true,
+                            "result" : {
+                                "success" : {
+                                    "message" : "Profile got created successfully"
+                                },
+                                "failure" : {
+                                    "message" : "Please fix errors in ext"
+                                },
+                                "successWithWarning" : {
+                                    "message" : "Profile got created with some errors"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : "associated_call",
+                            "data" : "output._EXT_CALL_ASSOCIATED"
+                        }
+                    ]
+                }
+            ]
+        },
+        "_EXT_CALL_ASSOCIATED" : {
+            "componentType" : "ExtSystemTask",
+           "object" : "formula",
+            "objectAction" : "READ",
+            "apiInfo" : {
+                "host" : "${properties.eka_pricing_host}",
+                "path" : "/api/pricing/formula/edit",
+                "method" : "GET",
+                "body" : {},
+                "useInputMapping" : false,
+                "inputMapping" : {},
+                "responseDataKey" : "data",
+                "headers" : {
+                    "X-Locale" : "en-US",
+                    "Content-Type" : "application/json"
+                }
+            }
+        },
+        "seed_curve" : {
+            "componentType" : "UserTask",
+            "labelKey" : "SEEDCURVE_CALL",
+            "label" : "Pricing Call",
+           "object" : "formula",
+            "objectAction" : "CREATE",
+            "layout" : {},
+            "fields" : [],
+            "decisions" : [ 
+                {
+                    "objectAction" : "CREATE",
+                    "label" : "SAVE",
+                    "labelkey" : "REVIEW",
+                    "task" : "seed_curve",
+                    "outcomes" : [ 
+                        {
+                            "name" : "_EXT_CALL_SEEDCURVE",
+                            "data" : "output.seed_curve",
+                            "appendMsg" : true,
+                            "result" : {
+                                "success" : {
+                                    "message" : "Profile got created successfully"
+                                },
+                                "failure" : {
+                                    "message" : "Please fix errors in ext"
+                                },
+                                "successWithWarning" : {
+                                    "message" : "Profile got created with some errors"
+                                }
+                            }
+                        }, 
+                        {
+                            "name" : "seed_curve",
+                            "data" : "output._EXT_CALL_SEEDCURVE"
+                        }
+                    ]
+                }
+            ]
+        },
+        "_EXT_CALL_SEEDCURVE" : {
+            "componentType" : "ExtSystemTask",
+           "object" : "formula",
+            "objectAction" : "CREATE",
+            "apiInfo" : {
+                "host" : "${properties.eka_pricing_host}",
+                "path" : "/curve/seedCurveData/pricing/baseCurve",
+                "method" : "POST",
+                "body" : {},
+                "useInputMapping" : false,
+                "inputMapping" : {},
+                "responseDataKey" : "data",
+                "headers" : {
+                    "X-Locale" : "en-US",
+                    "Content-Type" : "application/json"
+                }
+            }
+        }
+    }
+}

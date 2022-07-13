@@ -1,0 +1,73 @@
+{
+    "_id" : "pricing_result_object",
+    "type" : "object",
+    "name" : "pricingresult",
+    "label" : "PricingResult",
+    "label_key" : "PricingResult",
+    "tenantID" : "",
+    "version" : "2",
+    "sys__UUID" : "e9008da5-1659-47ea-bbe6-4d1259978120",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "uniqueFields" : [ 
+        "internalContractRefNo", 
+        "internalContractItemRefNo"
+    ],
+    "translatableKeys" : [ 
+        "internalContractRefNo", 
+        "internalContractItemRefNo"
+    ],
+    "fields" : {
+        "payload" : {
+            "payload" : "Internal Delivery Item",
+            "labelKey" : "payload",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "outputJSON" : {
+            "outputJSON" : "Internal Delivery Item",
+            "labelKey" : "outputJSON",
+            "type" : "textbox",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "internalContractRefNo" : {
+            "internalContractRefNo" : "Internal Delivery Item",
+            "labelKey" : "internalContractRefNo",
+            "isRequired" : true
+        },
+        "internalContractItemRefNo" : {
+            "internalContractItemRefNo" : "Internal Delivery Item",
+            "labelKey" : "internalContractItemRefNo",
+            "isRequired" : true
+        },
+        "contractItemPrice" : {
+            "contractItemPrice" : "Internal Delivery Item",
+            "labelKey" : "contractItemPrice",
+            "isRequired" : true
+        },
+        "gmrPrices" : {
+            "gmrPrices" : "Internal Delivery Item",
+            "labelKey" : "gmrPrices",
+            "isRequired" : true
+        }
+    }
+}

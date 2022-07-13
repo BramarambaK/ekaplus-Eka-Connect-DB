@@ -1,0 +1,11 @@
+{
+    "_id" : "layout_processor_fixation_listing",
+    "name" : "layout_processor_fixation_listing",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "snippet" : " \r\n    var output = {\r\n      appId: req.body.appId,\r\n      flow: req.body.flow,\r\n      object: req.body.object,\r\n      objectMeta: req.body.objectMeta,\r\n      properties: req.body.properties\r\n    };\r\n    if (req.body.properties.document_price_fixation == \"Custom\") {\r\n      output.flow.pricefixationlistingitem.layout['selectAll'] = true;\r\n      output.flow.pricefixationlistingitem.layout['selectionMode'] = \"multiple\";\r\n      output.flow.pricefixationlistingitem.decisions[1].disabled = \"var arrData = record;if(arrData.length > 0){var flag = true;let arr = [ ...new Set(arrData.map((item) =>item.execution))]; if(arr.length > 1){flag = false; }\tflag===false;}\";\r\n    }\r\n    output.flow.pricefixationlistingitem.decisions[1].outcomes = [{\r\n      \"data\": \"selected.pricefixationlistingitem\",\r\n      \"name\": req.body.properties.document_price_fixation !== \"Custom\" ? \"printfixation\" : \"printfixationjglobal\",\r\n      \"popupClass\": \"versionpopup\",\r\n      \"displayType\": \"popup\"\r\n    }];\r\n\r\n    res.status(200).send(output);\r\n  ",
+    "sys__UUID" : "c628d365-abbf-49d8-a83a-dbc70187fcf3",
+    "sys__createdOn" : ISODate("2019-06-24T13:35:31.281Z"),
+    "sys__createdBy" : "avinash@ekaplus.com"
+}

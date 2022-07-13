@@ -1,0 +1,26 @@
+{
+  "_id" : "quantityLeft_V2",
+  "componentType" : "ChainedSystemTask",
+  "taskId" : "quantityleft",
+  "label" : "",
+  "labelKey" : "Trigger Price",
+  "layout" : {},
+  "object" : "75f0d1f4-ceb1-498e-85c0-2eb433b809f4",
+  "objectAction" : "UPDATE",
+ "tags" : "notifyDataChange",
+  "chainedTasks" : [ 
+      {
+          "name" : "ST_PROCESSOR_QUANTITY_LEFT",
+          "data" : "output.quantityleft",
+          "returnData" : "Y"
+      }, 
+      {
+          "name" : "quantityleft",
+          "data" : "output.ST_PROCESSOR_QUANTITY_LEFT"
+      }
+  ],
+  "version" : "V2",
+  "refType" : "app",
+  "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+  "type" : "workflow"
+}

@@ -1,0 +1,136 @@
+{
+    "_id" : "price_Fixation_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Price Fixation Listing",
+    "type" : "workflow",
+    "processorInfo" : {
+        "processorId" : "7bd5effc-1c9f-4e17-a28e-6c012e502174"
+    },
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "decisions" : [],
+    "labelKey" : "LISTING",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fixationRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "execution"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "contractRefNo"
+        }, 
+        
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemFixedQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemUnfixedQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "itemFixedQtyAvailable"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "price"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "calculatedPrice"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "fixationStatus"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "gmrRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "gmrQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "gmrQtyFixed"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "gmrQtyAvailable"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "gmrCancelledQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "gmrStatus"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "key" : "triggerDate",
+            "dateformat" : "YYYY-MM-DDTHH:MM:SSZ"
+        }
+    ],
+    "taskId" : "pricefixationlisting",
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67"
+}

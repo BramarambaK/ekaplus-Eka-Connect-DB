@@ -1,0 +1,10 @@
+{
+    "_id" : "modify_initial_processor",
+    "name" : "modify_initial_processor",
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "snippet" : " req.body.selectedData.data[0]['kfactor']=null;res.status(200).send(req.body.selectedData.data[0]);",
+    "sys__UUID" : "2d4963cc-541f-4c90-b583-b565196be02a",
+    "sys__createdBy" : "avinash.singh@ekaplus.com",
+    "type" : "processor"
+}

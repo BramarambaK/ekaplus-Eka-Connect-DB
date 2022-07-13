@@ -1,0 +1,8 @@
+{
+    "_id" : "priceQuoteRule-006",
+    "key" : "priceQuoteRule-006",
+    "value" : "Settlement Date",
+    "object" : "priceQuoteRule",
+    "type" : "connectmdm",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a"
+}

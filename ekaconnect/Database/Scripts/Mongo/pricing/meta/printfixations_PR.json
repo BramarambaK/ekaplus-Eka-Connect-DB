@@ -1,0 +1,53 @@
+{
+    "_id" : "printfixations_PR",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "bb303008-766f-4194-a276-d6f6a91430d3"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "label" : "Preview : ${fixationRefNo}",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "data-view",
+        "template" : "<div class=\"container samp\" id=\"pdfContent\">\r\n    <br />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-3 m-h65 p-5\">\r\n        <img style=\"margin-left: 45px; width: 165px\" src=\"${selected.data.app}\" />\r\n      </div>\r\n      <div class=\"col-md-5 m-h65 p-5 c\">\r\n          ${selected.data.main_add}\r\n      </div>\r\n      <div class=\"col-md-4 m-h65 p-5 c\">\r\n          ${selected.data.left_side_add}\r\n          <!-- GEA - 204A Tower Rd<br />Sliema, SLM1602<br />Malta <br />\r\n          ph: +356-2766-5831  -->\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-3 m-h65 p-5\"></div>\r\n      <div class=\"col-md-6 m-h65 p-5\"></div>\r\n      <div class=\"col-md-3 m-h65 p-5\">\r\n        Date Of Issue: ${selected.data.issue_date}<br />\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-2 m-h65 p-5\">\r\n        To,<br />${selected.data.cpName}<br />${selected.data.add1}<br />${selected.data.add2} <br />${selected.data.add3}\r\n      </div>\r\n      <div class=\"col-md-8 m-h65 p-5\"></div>\r\n      <div class=\"col-md-2 m-h65 p-5\"></div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-5  p-5\"></div>\r\n      <div class=\"col-md-4  p-5\" style =\"font-weight: bold;\r\n      font-style: italic;\r\n      font-size: larger; color: darkblue;\">Document of Price Fixation</div>\r\n      <div class=\"col-md-4 p-5\"></div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 p-5\">This is to confirm, that <span style=\"font-weight: bold;\">M/s  ${selected.data.clientname} & ${selected.data.cpName}</span> has mutually agreed on the price fixation details ,executed against the Legal Contract signed between both the parties dated  <span style=\"font-weight: bold;\">${selected.data.contractIssueDate1format}</span>   </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4 p-5\" style=\"font-weight: bold ;color: darkblue;font-size: medium;\"> Details of Contract</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12  p-5\">\r\n      <table class=\"table table-borderless\">\r\n          <tr>\r\n              <td class=\"borderless\">Contract Ref No</td>\r\n              <td class=\"borderless\">${selected.data.contractRefNo}</td>\r\n              <td class=\"borderless\">Product</td>\r\n              <td class=\"borderless\">${selected.data.productDisplayValue}</td>\r\n          </tr>\r\n          <tr>\r\n              <td class=\"borderless\">Date of Issue</td>\r\n              <td class=\"borderless\">${selected.data.contractIssueDate}</td>\r\n              <td class=\"borderless\">Quality</td>\r\n              <td class=\"borderless\">${selected.data.quality}</td>\r\n          </tr>\r\n          <tr>\r\n              <td class=\"borderless\">Shipment Period</td>\r\n              <td class=\"borderless\">${selected.data.deliveryPeriod}</td>\r\n              <td class=\"borderless\">Contractual Qty</td>\r\n              <td class=\"borderless\">${selected.data.itemQty}</td>\r\n          </tr>\r\n          <tr>\r\n              <td class=\"borderless\">INCO Term</td>\r\n              <td class=\"borderless\">${selected.data.incoterm}</td>\r\n              <td class=\"borderless\">Contract Price Unit</td>\r\n              <td class=\"borderless\">${selected.data.priceUnit}</td>\r\n          </tr>\r\n          <tr>\r\n              <td class=\"borderless\">Payment Terms</td>\r\n              <td class=\"borderless\">${selected.data.paymentTerm}</td>\r\n              <td class=\"borderless\">Contractual Density@15C</td>\r\n              <td class=\"borderless\">${selected.data.contractDensity}</td>\r\n          </tr>\r\n      </table>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div style=\"font-weight: bold ;color: darkblue;font-size: medium;\" class=\"col-md-4 p-5\"> Details of Price Fixation </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 p-5\">\r\n          <ul >\r\n              <li><span style=\"font-weight: bold;\">Date of Fixation</span> – ${selected.data.fixationDate}</li>\r\n              <li> <span style=\"font-weight: bold;\">Fixation Stage</span> –  ${selected.data.fixationStage}</li>\r\n              <li> <span style=\"font-weight: bold;\">Price Fixed qty from previous Fixations</span> – ${selected.data.previouslyfixed}</li>\r\n              <li> <span style=\"font-weight: bold;\">Pricing Month</span> – ${selected.data.pricingmonth}</li>\r\n            </ul> \r\n      </div>\r\n    </div>\r\n    <div></div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-12 p-5\">  <table>\r\n          <tr><td class=\"font-weight-bold\">${selected.data.gmrQtylabel}</td>\r\n              <td class=\"font-weight-bold\">Priced Cargo Qty</td>\r\n              <td class=\"font-weight-bold\">Unpriced Cargo Qty</td>\r\n              <td class=\"font-weight-bold\">Differential ( ${selected.data.differentialUnit} )</td>\r\n              <!-- <td>Actual Density@15C (MT/Gallon)</td> -->\r\n              <td class=\"font-weight-bold\">Pricing Dates </td>\r\n              <td class=\"font-weight-bold\">Base Price ( ${selected.data.priceU} )</td>\r\n              <td class=\"font-weight-bold\">Fx conversion ${selected.data.currencyconversion}</td>\r\n          </tr>\r\n          <tr>\r\n              <td rowspan=${selected.data.rowspan}> ${selected.data.gmrqty}</td>\r\n              <td rowspan=${selected.data.rowspan}>${selected.data.gmrfixed}</td>\r\n              <td rowspan=${selected.data.rowspan}>${selected.data.gmrunfixed}</td>\r\n              <td rowspan=${selected.data.rowspan}>${selected.data.differential}</td>\r\n              <!-- <td rowspan=${selected.data.rowspan}>${selected.data.gmrdensity}</td> -->\r\n              <td>${selected.data.priceDate}</td>\r\n              <td>${selected.data.price}</td>\r\n              <td>${selected.data.fxrate}</td>\r\n          </tr>\r\n  \r\n          #{selected.data.tableData1 *=\r\n              <tr>\r\n                <td>${item.priceDate}</td>\r\n                <td>${item.price}</td>\r\n                <td>${item.fxrate}</td>\r\n              </tr>\r\n          }\r\n            \r\n      </table></div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-md-8 p-5\" style = \"font-weight: bold\" > Average Fixation Price – ${selected.data.avgPrice}  ${selected.data.priceUnit}</div>\r\n    </div>\r\n    <br />\r\n     <br />\r\n     <br />\r\n     <br />\r\n     <br />\r\n    <div class=\"row\">\r\n      <div class=\"col-md-3 m-h65 p-5\">\r\n        <b>Thank you</b><br /> ${selected.data.greet}\r\n      </div>\r\n      <div class=\"col-md-6 m-h65 p-5\"></div>\r\n      <div class=\"col-md-3 m-h65 p-5\"></div>\r\n    </div>\r\n  </div>\r\n",
+        "options" : {
+            "hideRowHeader" : false,
+            "columnWidth" : "30px",
+            "popupWidth" : "490px"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-primary",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "action" : "printPDF",
+                    "type" : "client",
+                    "fileName" : "${fixationRefNo}.pdf"
+                }
+            ],
+            "position" : "top",
+            "label" : "Print"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "pricefixationlistingitem"
+                }
+            ],
+            "position" : "top",
+            "style" : {
+                "margin-left" : "10px"
+            },
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "printfixation",
+    "taskId" : "printfixation",
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67"
+}

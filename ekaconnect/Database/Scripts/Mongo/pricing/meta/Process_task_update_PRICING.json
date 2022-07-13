@@ -1,0 +1,13 @@
+{
+    "_id" : "Process_task_update_PRICING",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "488279cc-0421-4a92-8d6d-b40b0d04fdbd"
+    },
+    "refType" : "app",
+    "refTypeId" : "84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "type" : "workflow",
+    "taskId" : "Process_task_update",
+    "object" : "6158fca6-dd9b-4539-a777-67fcf5a0fe67"
+}

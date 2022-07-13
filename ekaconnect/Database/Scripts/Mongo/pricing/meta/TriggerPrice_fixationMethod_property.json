@@ -1,0 +1,18 @@
+{
+    "_id" : "TriggerPrice_fixationMethod",
+    "type" : "property",
+    "name" : "fixationMethod",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "refTypeId":"84d7b167-1d9f-406d-b974-bea406a25f9a",
+    "description": "Dropdown value for Fixation Method",
+    "defaultValue" : [ 
+        {
+            "key" : "Manual",
+            "value" : "Manual"
+        }
+    ],
+    "label" : "Fixation Method"
+}

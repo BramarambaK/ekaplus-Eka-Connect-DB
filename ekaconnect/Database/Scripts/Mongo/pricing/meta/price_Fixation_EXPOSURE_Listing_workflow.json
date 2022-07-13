@@ -1,0 +1,208 @@
+{
+    "_id" : "price_Fixation_EXPOSURE_Listing_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "5d907cd2-7785-4d34-bcda-aa84b2158415",
+    "label" : "Exposure Listing",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "isPopup" : false,
+        "name" : "list",
+        "preserveSelectedData" : true,
+        "dropdownDecisions" : false,
+        "options" : {
+            "filter" : true,
+            "lastUpdated" : false,
+            "search" : true,
+            "reload" : true,
+            "columnFilter" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white"
+    },
+    "decisions" : [],
+    "labelKey" : "LISTING",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "contractRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "itemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "internalContractItemRefNo"
+        },
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "profitCenter"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "strategy"
+        },  
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "product"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "quality"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "incoTermName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "locationName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "valuationInstrument"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "190px",
+            "key" : "deliveryDate",
+            "dateformat" : "YYYY-MM-DDTHH:MM:SSZ"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "itemQuantityUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "curveName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "curveQuantityUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "contractualConversionFactor"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "actualConversionFactor"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "baseQuantityUnit"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "exposureTypeBaseQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "curveCoefficient"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "exposureTypeCurveQty"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "instrumentContractMonth"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "status"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "remarks"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "gmrRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "sort" : true,
+            "width" : "120px",
+            "key" : "titleTransferStatus"
+        }
+    ],
+    "taskId" : "exposurelisting",
+    "object" : "dad3b9e4-379e-4dbe-8b28-d7af71ba3c6b"
+}

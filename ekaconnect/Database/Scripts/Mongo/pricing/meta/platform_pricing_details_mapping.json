@@ -1,0 +1,31 @@
+{
+    "_id" : "platform_pricing_details_mapping",
+    "type" : "property",
+    "name" : "platform_pricing_details_mapping",
+    "propertyLevel" : "tenant",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "defaultValue" : {
+        "Seq No" : "seqNo",
+        "Contract Ref No" : "contractRefNo",
+        "Contract Item Ref No" : "contractItemRefNo",
+        "Formula Expression" : "formulaExpression",
+        "Curve Name" : "curveName",
+	"Curve unit" : "curveUnit",
+        "Price Point" : "pricePoint",
+        "Price Type" : "priceType",
+        "Price Quote Rule" : "priceQuotaRule",
+        "Price Period" : "pricePeriod",
+        "Start Date" : "startDate",
+        "End Date" : "endDate",
+        "Quoted Period" : "quotedPeriod",
+        "Event" : "event",
+        "Offset" : "offset",
+        "offset Type" : "OffsetType",
+        "Differential" : "differential",
+        "Fx Type" : "fxType",
+        "Fx Value" : "fxValue",
+	"Differential Type" : "differentialType"
+    },
+    "length" : "1000"
+}
