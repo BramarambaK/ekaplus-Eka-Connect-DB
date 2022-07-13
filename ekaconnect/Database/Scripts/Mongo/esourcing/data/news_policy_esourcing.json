@@ -1,0 +1,20 @@
+{
+	"_id":"news_policy_esourcing",
+    "type" : "policy",
+    "app_UUID" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "refType" : "object",
+    "refTypeId" : "982560fd-ca9c-420d-b8d7-890e5eb42591",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ",                 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                
+            ]
+        }
+    }
+}

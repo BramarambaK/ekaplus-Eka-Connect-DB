@@ -1,0 +1,21 @@
+{
+    "_id" : "Gmr_mappingDataPolicy_esourcing",
+    "app_UUID" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "userGrants" : {
+        "3504" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "LISTVIEW", 
+                "DELETE", 
+                "APPROVE", 
+                "REJECT"
+            ]
+        }
+    },
+    "refType" : "objectdata",
+    "refTypeId" : "fc46da16-67c6-11ec-90d6-0242ac120003",
+    "roleGrants" : {},
+    "type" : "policy",
+    "object" : "d9b99812-67c6-11ec-90d6-0242ac120003"
+}

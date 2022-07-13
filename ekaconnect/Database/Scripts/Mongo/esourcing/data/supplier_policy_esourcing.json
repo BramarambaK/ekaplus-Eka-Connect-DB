@@ -1,0 +1,23 @@
+{
+	"_id":"supplier_policy_esourcing",
+    "type" : "policy",
+    "app_UUID" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "refType" : "object",
+    "refTypeId" : "f9ca5056-8ff8-4142-bfe1-725db3871557",
+    "userGrants" : {},
+    "roleGrants" : {        
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"_id":"invoice_policy_esourcing",
+    "type" : "policy",
+    "app_UUID" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "refType" : "object",
+    "refTypeId" : "80639df1-3bdf-48e0-8dc3-e93ac58fff93",
+    "userGrants" : {},
+    "roleGrants" : {         
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

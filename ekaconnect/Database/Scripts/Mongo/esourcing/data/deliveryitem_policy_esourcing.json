@@ -1,0 +1,23 @@
+{
+	"_id":"deliveryitem_policy_esourcing",
+    "type" : "policy",
+    "app_UUID" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "refType" : "object",
+    "refTypeId" : "0f0df027-6494-4e4d-bb45-242549783003",
+    "userGrants" : {},
+    "roleGrants" : {       
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

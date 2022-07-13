@@ -1,0 +1,21 @@
+{
+  "_id": "finalassay_object_policy_esourcing",
+  "app_UUID": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "refType": "object",
+  "refTypeId": "720be2ae-f8d4-4903-9910-fdf637dd6dac",
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": [
+        "CREATE",
+        "READ",
+        "UPDATE",
+        "DELETE",
+        "LISTVIEW"
+      ],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  },
+  "type": "policy",
+  "userGrants": {}
+}
