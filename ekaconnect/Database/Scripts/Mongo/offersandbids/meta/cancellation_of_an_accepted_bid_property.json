@@ -1,0 +1,16 @@
+{
+    "_id" : "cancellation_of_an_accepted_bid_property",
+    "type" : "property",
+    "name" : "cancellation_of_an_accepted_bid",
+    "propertyLevel" : "app",
+    "dataType" : "boolean",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "visibility" : "public",
+    "defaultValue" : "true",
+    "listOfValues" : "true,false",
+    "label" : "Cancelling the accepted bid for the offer",
+    "editSupportedInUI" : true,
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "description" : "Cancelling the accepted bid for the offer"
+}

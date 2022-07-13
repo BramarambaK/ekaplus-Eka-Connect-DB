@@ -1,0 +1,28 @@
+{
+    "_id" : "_EXT_CALL_TRAIN_OFFERS_RECOMMENDATION_API",
+    "componentType" : "ExtSystemTask",
+    "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/lambdagatewayapi",
+        "method" : "POST",
+        "body" : {
+            "appId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+            "method" : "POST",
+            "workFlowTask" : "offerslisting",
+            "workflowTaskForSave":"saveRecommendationData_offers_and_bids",
+            "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c"
+        },
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "endPoint" : "/train-recommendation-for-all-users/"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "taskId" : "_EXT_CALL_TRAIN_OFFERS_RECOMMENDATION_API"
+}

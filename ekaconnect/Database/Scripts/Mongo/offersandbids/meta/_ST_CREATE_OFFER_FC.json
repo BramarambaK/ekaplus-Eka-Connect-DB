@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_OFFER_FC",
+    "componentType" : "SystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_OFFER_FC",
+    "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c"
+}

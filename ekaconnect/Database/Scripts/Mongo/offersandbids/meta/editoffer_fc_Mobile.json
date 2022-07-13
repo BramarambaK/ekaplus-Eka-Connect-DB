@@ -1,0 +1,179 @@
+{
+  "_id": "editoffer_fc_Mobile",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+  "label": "Edit Offer FC",
+  "type": "workflow",
+  "version": "V2",
+  "layout": {
+    "defaultFormItemStyle": {
+      "background": "white"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "defaultFormValueStyle": {},
+    "processorInfo": {
+      "processorId": "3245a2b7-e411-4d92-872b-97a1f27c2ed3"
+    },
+    "type": "row",
+    "menu": false
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "offerslisting"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Cancel",
+      "position": "TopLeft"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "PUBLISH",
+      "task": "editeofferfc",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Offer got edited successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Price request got created with some errors"
+            }
+          },
+          "data": "output.editofferfc",
+          "appendMsg": true,
+          "name": "_ST_EDIT_OFFER_FC"
+        },
+        {
+          "showPopUp": true,
+          "name": "offerslisting"
+        }
+      ],
+      "label": "Update",
+      "position": "TopRight",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "EDIT_OFFER_FC",
+  "fields": [
+    [
+      {
+        "key": "offerType"
+      },
+      {
+        "key": "product"
+      },
+      {
+        "type": "hidden",
+        "key": "productDisplayName"
+      },
+      {
+        "key": "quality"
+      },
+      {
+        "type": "hidden",
+        "key": "qualityDisplayName"
+      },
+      {
+        "key": "cropYear"
+      },
+      {
+        "type": "hidden",
+        "key": "cropYearDisplayName"
+      },
+      {},
+      {
+        "key": "publishedPrice"
+      },
+      {
+        "key": "priceUnit",
+        "label": "published Price Unit"
+      },
+      {
+        "type": "hidden",
+        "key": "priceUnitDisplayName"
+      },
+      {
+        "key": "quantity"
+      },
+      {
+        "key": "quantityUnit",
+        "label": "Quantity Unit"
+      },
+      {
+        "type": "hidden",
+        "key": "quantityUnitDisplayName"
+      },
+      {
+        "key": "paymentTerms"
+      },
+      {
+        "type": "hidden",
+        "key": "paymentTermsDisplayName"
+      },
+      {
+        "key": "expiryDate"
+      },
+      {},
+      {
+        "key": "location"
+      },
+      {
+        "type": "hidden",
+        "key": "locationDisplayName"
+      },
+      {
+        "key": "incoTerm"
+      },
+      {
+        "type": "hidden",
+        "key": "incoTermDisplayName"
+      },
+      {
+        "key": "packingSize"
+      },
+      {
+        "type": "hidden",
+        "key": "packingSizeDisplayName"
+      },
+      {
+        "key": "packingType"
+      },
+      {
+        "type": "hidden",
+        "key": "packingTypeDisplayName"
+      },
+      {},
+      {
+        "key": "fromDate",
+        "label": "Delivery From"
+      },
+      {
+        "key": "toDate",
+        "label": "Delivery To"
+      }
+    ]
+  ],
+  "taskId": "editofferfc",
+  "object": "93be4018-e634-4df8-ad3e-33d7a69b990c",
+  "deviceType": "mobile"
+}

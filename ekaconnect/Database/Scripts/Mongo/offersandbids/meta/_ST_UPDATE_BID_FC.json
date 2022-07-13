@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_UPDATE_BID_FC",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "type" : "workflow",
+    "taskId" : "_ST_UPDATE_BID",
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8"
+}

@@ -1,0 +1,16 @@
+{
+    "_id" : "home_FC",
+    "layout" : {
+        "name" : "list"
+    },
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "workflow" : "offerslisting",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "decisions" : [],
+    "type" : "workflow",
+    "taskId" : "home",
+    "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c",
+    "label" : "Home"
+}

@@ -1,0 +1,25 @@
+{
+    "_id" : "createoffer_fc_policy",
+    "type" : "policy",
+    "app_UUID" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "refType" : "object",
+    "refTypeId" : "93be4018-e634-4df8-ad3e-33d7a69b990c",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    },
+    "sys__createdOn" : ISODate("2019-12-26T05:17:29.802Z"),
+    "sys__createdBy" : "Bravo"
+}

@@ -1,0 +1,262 @@
+{
+    "_id" : "editoffer_fc",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "label" : "Edit Offer FC",
+    "type" : "workflow",
+    "version" : "V2",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "background" : "white"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {},
+        "defaultFormValueStyle" : {},
+        "processorInfo" : {
+            "processorId" : "3245a2b7-e411-4d92-872b-97a1f27c2ed3"
+        },
+        "type" : "row",
+        "menu" : false
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "offerslisting"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "PUBLISH",
+            "task" : "editeofferfc",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Offer got edited successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Price request got created with some errors"
+                        }
+                    },
+                    "data" : "output.editofferfc",
+                    "appendMsg" : false,
+                    "name" : "_ST_EDIT_OFFER_FC"
+                }, 
+                {
+                    "name" : "offerslisting"
+                }
+            ],
+            "label" : "PUBLISH",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "EDIT_OFFER_FC",
+    "fields" : [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "offerType"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "product"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "quality"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "cropYear"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "100px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px"
+                },
+                "suffix" : "",
+                "key" : "publishedPrice"
+            }, 
+            {
+                "style" : {
+                    "width" : "100px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "priceUnit"
+            }, 
+            {
+                "style" : {
+                    "width" : "100px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px"
+                },
+                "suffix" : "",
+                "key" : "quantity"
+            }, 
+            {
+                "style" : {
+                    "width" : "100px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "quantityUnit"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "paymentTerms"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "expiryDate"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "location"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "incoTerm"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "packingSize"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "packingType"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "fromDate"
+            }, 
+            {
+                "style" : {
+                    "width" : "200px"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "toDate"
+            }
+        ]
+    ],
+    "taskId" : "editofferfc",
+    "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c"
+}

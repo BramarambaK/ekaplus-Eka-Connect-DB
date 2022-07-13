@@ -1,0 +1,273 @@
+{
+    "_id" : "viewcounter_FC",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "type" : "workflow",
+    "label" : "Bidder",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "width" : "50%",
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "50%",
+            "height" : "28px"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "font-size" : "15px",
+            "font-weight" : "700",
+            "margin-bottom" : "0"
+        },
+        "formLayoutStyle" : {
+            "background" : "#f6f6f6",
+            "height" : "150px",
+            "padding" : "1px 8px"
+        },
+        "defaultFormValueStyle" : {
+            "flex" : "1",
+            "height" : "20px"
+        },
+        "type" : "row"
+    },
+    "decisions" : [],
+    "labelKey" : "VIEW_COUNTER",
+    "fields" : [ 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "sys__createdBy"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "label" : "Email:",
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "sys__createdBy"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "label" : "Phone:",
+                "type" : "readOnly",
+                "key" : "phoneno"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "label" : "Role:",
+                "type" : "readOnly",
+                "key" : "roles"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "offerType"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "productDisplayName"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "qualityDisplayName"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "type" : "readOnly",
+                "key" : "cropYearDisplayName"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "locationDisplayName"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "quantity"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "packingTypeDisplayName"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "paymentTermsDisplayName"
+            }
+        ], 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "packingSizeDisplayName"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "20px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "fromDate"
+            }
+        ]
+    ],
+    "taskId" : "viewcounter",
+    "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c"
+}

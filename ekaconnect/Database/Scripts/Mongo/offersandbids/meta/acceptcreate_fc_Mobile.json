@@ -1,0 +1,230 @@
+{
+    "_id" : "acceptcreate_fc_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "label" : "Accept: ${selected.publishedofferslisting.offer_id}",
+    "type" : "workflow",
+    "version" : "V2",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "background" : "white",
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : false
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "max-width" : "100%"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "menu" : false
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewcounter"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "Cancel",
+            "position" : "TopLeft"
+        }, 
+        {
+            "position" : "TopRight",
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "acceptcompositesave",
+            "decisionName" : "acceptcompositesave",
+            "label" : "Accept",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Offer has been accepted."
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.acceptcreate",
+                    "appendMsg" : true,
+                    "name" : "_ST_UPDATE_BID"
+                }, 
+                {
+                    "showPopUp" : true,
+                    "name" : "viewcounter"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CREATE_ACCEPT_FC",
+    "fields" : [ 
+        [ 
+            {
+                "label" : "Bid Id:",
+                "type" : "readOnly",
+                "key" : "offer_id"
+            }, 
+            {
+                "label" : "Published Price:",
+                "type" : "readOnly",
+                "key" : "publishedPrice"
+            }, 
+            {
+                "type" : "readOnly",
+                "key" : "quantity"
+            }, 
+            {
+                "type" : "readOnly",
+                "key" : "quantityUnitDisplayName"
+            }, 
+            {
+                "key" : "fromDate",
+                "type" : "readOnly",
+                "label" : "Delivery From"
+            }, 
+            {
+                "key" : "toDate",
+                "type" : "readOnly",
+                "label" : "Delivery To"
+            }, 
+            {
+                "key" : "remark"
+            }, 
+            {
+                "key" : "offerType",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "product",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "productDisplayName"
+            }, 
+            {
+                "key" : "quality",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "qualityDisplayName"
+            }, 
+            {
+                "key" : "cropYear",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "cropYearDisplayName"
+            }, 
+            {
+                "key" : "publishedPrice",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "priceUnit",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "priceUnitDisplayName"
+            }, 
+            {
+                "key" : "quantity",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "quantityUnit",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "quantityUnitDisplayName"
+            }, 
+            {
+                "key" : "paymentTerms",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "paymentTermsDisplayName"
+            }, 
+            {
+                "key" : "expiryDate",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "location",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "locationDisplayName"
+            }, 
+            {
+                "key" : "incoTerm",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "incoTermDisplayName"
+            }, 
+            {
+                "key" : "packingSize",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "packingSizeDisplayName"
+            }, 
+            {
+                "key" : "packingType",
+                "type" : "hidden"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "packingTypeDisplayName"
+            }, 
+            {
+                "key" : "fromDate",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "toDate",
+                "type" : "hidden"
+            }, 
+            {
+                "value" : "Accepted",
+                "key" : "status",
+                "type" : "hidden"
+            }, 
+            {
+                "key" : "offer_id",
+                "type" : "hidden"
+            }
+        ]
+    ],
+    "taskId" : "acceptcreate",
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8",
+    "deviceType" : "mobile"
+}

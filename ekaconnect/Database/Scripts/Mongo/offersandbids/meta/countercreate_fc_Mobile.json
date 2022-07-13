@@ -1,0 +1,237 @@
+{
+    "_id" : "countercreate_fc_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "label" : "Counter: ${selected.publishedofferslisting.offer_id}",
+    "type" : "workflow",
+    "version" : "V2",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "background" : "white",
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : false
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "max-width" : "100%"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "menu" : false
+    },
+    "decisions" : [ 
+        {
+            "position" : "TopRight",
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "countercompositesave",
+            "decisionName" : "countercompositesave",
+            "label" : "Counter",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Offer has been countered sucessfully."
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.countercreate",
+                    "appendMsg" : true,
+                    "name" : "_ST_UPDATE_BID"
+                }, 
+                {
+                    "showPopUp" : true,
+                    "name" : "viewcounter"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewcounter"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "Cancel",
+            "position" : "TopLeft"
+        }
+    ],
+    "labelKey" : "CREATE_COUNTER_FC",
+    "fields" : [ 
+        [ 
+            {
+                "label" : "Published Price:",
+                "type" : "readOnly",
+                "key" : "publishedPrice"
+            }, 
+            {
+                "label" : "Latest bidder price:",
+                "type" : "readOnly",
+                "value" : "-",
+                "key" : "bidderpricedisplay"
+            }, 
+            {
+                "key" : "quantity"
+            }, 
+            {
+                "type" : "readOnly",
+                "key" : "quantityUnitDisplayName"
+            }, 
+            {
+                "label" : "Counter",
+                "key" : "bidderprice"
+            }, 
+            {
+                "type" : "readOnly",
+                "key" : "priceUnitDisplayName"
+            }, 
+            {
+                "key" : "fromDate",
+                "label" : "Delivery from"
+            }, 
+            {
+                "key" : "toDate",
+                "label" : "Delivery to"
+            }, 
+            {
+                "key" : "remark"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "offerType"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "product"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "productDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "quality"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "qualityDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "cropYear"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "cropYearDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "publishedPrice"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "priceUnit"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "priceUnitDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "quantity"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "quantityUnit"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "quantityUnitDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "paymentTerms"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "paymentTermsDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "expiryDate"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "location"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "locationDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "incoTerm"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "incoTermDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "packingSize"
+            }, 
+            {
+                "type" : "hidden",
+                "type" : "hidden",
+                "key" : "packingSizeDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "packingType"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "packingTypeDisplayName"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "fromDate"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "toDate"
+            }, 
+            {
+                "type" : "hidden",
+                "value" : "Counter",
+                "key" : "status"
+            }, 
+            {
+                "type" : "hidden",
+                "key" : "offer_id"
+            }
+        ]
+    ],
+    "taskId" : "countercreate",
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8",
+    "deviceType" : "mobile"
+}

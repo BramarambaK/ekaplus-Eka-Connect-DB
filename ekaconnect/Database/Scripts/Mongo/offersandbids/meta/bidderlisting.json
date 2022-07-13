@@ -1,0 +1,230 @@
+{
+    "_id" : "bidderlisting_fc",
+    "componentType" : "UserTask",
+    "version" : "V2",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "fcmodal",
+                    "name" : "countercompositebidder"
+                }
+            ],
+            "disabled" : "field.status == 'Accepted' || field.status == 'Cancelled'",
+            "label" : "Counter"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "fcmodal",
+                    "name" : "acceptcompositebidder"
+                }
+            ],
+            "disabled" : "field.status == 'Accepted' || field.status == 'Cancelled'",
+            "label" : "Accept"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "fcmodal",
+                    "name" : "rejectcompositebidder"
+                }
+            ],
+            "disabled" : "field.status == 'Rejected' || field.status == 'Cancelled'",
+            "label" : "Reject"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "top",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.bidderlisting",
+                    "popupClass" : "limitinfopopup",
+                    "name" : "bidlifecycle"
+                }
+            ],
+            "label" : "Info"
+        }
+    ],
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "label" : "Offer Type",
+            "sort" : true,
+            "key" : "offerType"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "label" : "Bid Id",
+            "sort" : true,
+            "key" : "bid_id"
+        }, 
+		 {
+            "filter" : false,
+            "edit" : false,
+            "label" : "Offer Id",
+            "sort" : true,
+            "key" : "offer_id"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Product",
+            "sort" : true,
+            "key" : "productDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Product",
+            "sort" : true,
+            "key" : "qualityDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Packing Size",
+            "sort" : true,
+            "key" : "packingSizeDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Packing Type",
+            "sort" : true,
+            "key" : "packingTypeDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Payment Terms",
+            "sort" : true,
+            "key" : "paymentTermsDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Crop Year",
+            "sort" : true,
+            "key" : "cropYearDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Status",
+            "sort" : true,
+            "key" : "status"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Published Price",
+            "sort" : true,
+            "key" : "publishedPrice"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Price Unit",
+            "sort" : true,
+            "key" : "priceUnitDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Inco Term",
+            "sort" : true,
+            "key" : "incoTermDisplayName"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Quantity",
+            "sort" : true,
+            "key" : "quantity"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Quantity Unit",
+            "sort" : true,
+            "key" : "quantityUnitDisplayName"
+        }, 
+        {
+            "filter" : true,
+            "label" : "From Date",
+            "sort" : true,
+            "key" : "fromDate",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "label" : "To Date",
+            "sort" : true,
+            "key" : "toDate",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Expiry Date",
+            "sort" : true,
+            "key" : "expiryDate"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Expiry Date",
+            "sort" : true,
+            "key" : "bidderprice"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Expiry Date",
+            "sort" : true,
+            "key" : "offererprice"
+        }
+    ],
+    "label" : "Bids - Manage Bids",
+    "labelKey" : "BIDDERLISTING",
+    "layout" : {
+        "selection" : "row",
+        "name" : "list",
+        "options" : {
+            "columnFilter" : true,
+            "sortFilter" : true,
+            "filter" : true,
+            "lastUpdated" : true,
+            "search" : true,
+            "reload" : true,
+            "reset" : true,
+            "export" : true
+        },
+        "theme" : "theme-grid-white",
+        "dropdownDecisions" : true,
+        "showCheckbox" : true
+    },
+    "inputData" : {
+        "type" : "default"
+    },
+    "getDataFromExternalAPI" : false,
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "taskId" : "bidderlisting",
+    "type" : "workflow",
+    "sys__UUID" : "58cc41ae-ec70-4774-ae34-c6114bcecc25"
+}

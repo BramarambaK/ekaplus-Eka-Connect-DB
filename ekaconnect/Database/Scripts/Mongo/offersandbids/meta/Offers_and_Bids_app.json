@@ -1,0 +1,43 @@
+{
+    "_id" : "Offers_and_Bids_app",
+    "title" : "Offers and Bids",
+    "name" : "offersandbids",
+    "platform_id" : "52",
+    "tenantID" : "",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "assets/img/brand/alvean.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Boliden"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {}
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "d44a3b31-6758-4367-b8a2-3808532b0c4a"
+}

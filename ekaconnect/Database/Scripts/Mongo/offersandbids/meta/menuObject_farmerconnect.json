@@ -1,0 +1,51 @@
+{
+    "_id" : "menuObject_farmerconnect",
+    "type" : "menuObject",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Bids & Offers",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "Offers",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "offerslisting",
+                                    "text" : "List Of Offers",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "offererbidderlisting",
+                                    "text" : "Manage Bids",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }, 
+                        {}, 
+                        {
+                            "text" : "Bids",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "publishedofferslisting",
+                                    "text" : "Published Offers",
+                                    "iconCls" : ""
+                                }, 
+                                {
+                                    "handler" : "bidderlisting",
+                                    "text" : "Manage Bids",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

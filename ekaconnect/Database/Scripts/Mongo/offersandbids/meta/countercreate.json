@@ -1,0 +1,459 @@
+{
+    "_id" : "countercreate_FC",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "label" : "",
+    "type" : "workflow",
+    "version" : "V2",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "background" : "white",
+            "justify-content" : "flex-start"
+        },
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : false
+        },
+        "backbutton" : true,
+        "name" : "create",
+        "formStyle" : {
+            "margin" : "auto",
+            "max-width" : "100%"
+        },
+        "defaultFormValueStyle" : {},
+        "type" : "row",
+        "menu" : false
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "countercompositesave",
+            "decisionName" : "countercompositesave",
+            "label" : "SAVE",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Data got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in ext"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Data got created with some errors"
+                        }
+                    },
+                    "data" : "output.countercreate",
+                    "appendMsg" : false,
+                    "name" : "_ST_UPDATE_BID"
+                }, 
+                {
+                    "name" : "publishedofferslisting"
+                }
+            ]
+        }
+    ],
+    "labelKey" : "CREATE_COUNTER_FC",
+    "fields" : [ 
+        [ 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "26px",
+                    "margin-right" : "0px"
+                },
+                "formLabelStyle" : {
+                    "width" : "142px"
+                },
+                "suffix" : "",
+                "label" : "Published Price:",
+                "type" : "readOnly",
+                "key" : "publishedPrice"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {
+                    "justify-content" : "flex-start",
+                    "display" : "flex"
+                },
+                "formItemStyle" : {
+                    "width" : "50%",
+                    "max-height" : "26px",
+                    "margin-right" : "0px"
+                },
+                "formLabelStyle" : {
+                    "width" : "200px"
+                },
+                "suffix" : "",
+                "label" : "Latest bidder price:",
+                "type" : "readOnly",
+                "value" : "-",
+                "key" : "bidderpricedisplay"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "100px"
+                },
+                "formItemStyle" : {},
+                "suffix" : "",
+                "key" : "quantity"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {},
+                "formItemStyle" : {
+                    "width" : "10.5%",
+                    "margin-left" : "3px"
+                },
+                "label" : " ",
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "quantityUnitDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {},
+                "suffix" : "",
+                "label" : "Counter",
+                "key" : "bidderprice"
+            }, 
+            {
+                "style" : {
+                    "width" : "100px"
+                },
+                "formItemStyle" : {},
+                "suffix" : "",
+                "event" : "data.countercreate.bidderprice = value",
+                "key" : "countervalue"
+            }, 
+            {
+                "disabled" : true,
+                "style" : {},
+                "formItemStyle" : {
+                    "width" : "10.5%",
+                    "margin-left" : "3px"
+                },
+                "label" : " ",
+                "suffix" : "",
+                "type" : "readOnly",
+                "key" : "priceUnitDisplayName"
+            }, 
+            {
+                "style" : {
+                    "width" : "140px"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "fromDate"
+            }, 
+            {
+                "style" : {
+                    "width" : "140px"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "toDate"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "343px"
+                },
+                "formItemStyle" : {
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "remark"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "offerType"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "product"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "productDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "quality"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "qualityDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "cropYear"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "cropYearDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px"
+                },
+                "suffix" : "",
+                "key" : "publishedPrice"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "priceUnit"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "priceUnitDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px"
+                },
+                "suffix" : "",
+                "key" : "quantity"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "quantityUnit"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "quantityUnitDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "paymentTerms"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "paymentTermsDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "expiryDate"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "location"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "locationDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "incoTerm"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "incoTermDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "packingSize"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "packingSizeDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "packingType"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "type" : "hidden",
+                "key" : "packingTypeDisplayName"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "fromDate"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "toDate"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "value" : "Counter",
+                "key" : "status"
+            },
+			  {
+                "style" : {
+                    "display" : "none"
+                },
+                "formItemStyle" : {
+                    "margin-top" : "10px",
+                    "margin-right" : "20px"
+                },
+                "suffix" : "",
+                "key" : "offer_id"
+            }
+        ]
+    ],
+    "taskId" : "countercreate",
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8"
+}

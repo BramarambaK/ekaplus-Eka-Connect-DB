@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_ACCEPT_OFFER_FC",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "abe7a0cd-72dc-42ba-8b8e-06a8a4cb39c3"
+    },
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "type" : "workflow",
+    "label" : "Contract Creation for accepted bids",
+    "taskId" : "_ST_ACCEPT_OFFER",
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8"
+}

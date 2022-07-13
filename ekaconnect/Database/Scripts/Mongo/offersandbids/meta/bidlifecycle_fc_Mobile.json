@@ -1,0 +1,61 @@
+{
+    "_id" : "bidlifecycle_fc_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "type" : "workflow",
+    "label" : "Offer: ${selected.publishedofferslisting.offer_id}",
+    "layout" : {
+        "name" : "view",
+        "type" : "row"
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "Cancel",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "position" : "TopLeft",
+            "outcomes" : [ 
+                {
+                    "action" : "Cancel",
+                    "type" : "client"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "TopRight",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.offerslisting",
+                    "name" : "acceptcreate"
+                }
+            ],
+            "label" : "Accept the Bid"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "TopRight",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.offerslisting",
+                    "name" : "countercreate"
+                }
+            ],
+            "label" : "Counter the Bid"
+        }
+    ],
+    "labelKey" : "VIEW_COUNTER",
+    "fields" : [ 
+    ],
+    "taskId" : "bidlifecycle",
+    "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c",
+    "deviceType" : "mobile"
+}

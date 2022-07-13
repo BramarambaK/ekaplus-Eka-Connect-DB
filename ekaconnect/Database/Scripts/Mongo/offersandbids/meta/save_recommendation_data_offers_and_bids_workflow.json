@@ -1,0 +1,26 @@
+{
+    "_id" : "saveRecommendationData_offers_and_bids",
+    "version" : "V2",
+    "componentType" : "UserTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "taskId" : "saveRecommendationData_offers_and_bids",
+    "object" : "75e55d43-3a9f-4240-9916-0716e53ee5ec",
+    "sys__UUID" : "8694e040-f88c-4a98-9937-ccbb14d3f3a7",
+    "type" : "workflow",
+    "decisions" : [ 
+        {
+            "objectAction" : "CREATE",
+            "type" : "submit",
+            "task" : "saveRecommendationData_offers_and_bids",
+            "outcomes" : [ 
+                {
+                    "name" : "saveRecommendatationDataOffersAndBidsSystemTask",
+                    "data" : "output.saveRecommendationData_offers_and_bids",
+                    "appendMsg" : false
+                }
+            ]
+        }
+    ]
+}

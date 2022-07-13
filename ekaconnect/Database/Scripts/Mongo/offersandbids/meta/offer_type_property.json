@@ -1,0 +1,16 @@
+{
+    "_id" : "offer_type_property",
+    "type" : "property",
+    "name" : "offer_type",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "visibility" : "public",
+    "defaultValue" : "basic",
+    "listOfValues" : "basic,advance",
+    "label" : "Offer Type",
+    "editSupportedInUI" : true,
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "description" : "Show/Hide Payment Terms, Packing Type, Packing Size of Offer Listing"
+}

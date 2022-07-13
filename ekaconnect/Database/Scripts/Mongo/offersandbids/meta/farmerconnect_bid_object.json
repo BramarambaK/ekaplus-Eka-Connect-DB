@@ -1,0 +1,307 @@
+{
+    "_id" : "farmerconnect_bid_object",
+    "name" : "farmerconnect_bid",
+    "label" : "Farmer Connect Bid",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "uniqueFields" : [ 
+        "bid_id"
+    ],
+    "translatableKeys" : [],
+    "fields" : {
+        "bid_id" : {
+            "bid_id" : "Bid ID",
+            "labelKey" : "bid_id",
+            "serialNumber" : {
+                "startsWith" : "1",
+                "prefix" : "BID-"
+            },
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "offerType" : {
+            "offerType" : "Offer Type",
+            "labelKey" : "offerType",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "propertyKey" : "offerType"
+        },
+        "product" : {
+            "product" : "Product",
+            "labelKey" : "product",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Product_Values",
+            "dropdownValue" : "productDisplayName"
+        },
+        "productDisplayName" : {
+            "productDisplayName" : "Product",
+            "labelKey" : "productDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quality" : {
+            "quality" : "Quality",
+            "labelKey" : "quality",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Quality_Values",
+            "dropdownValue" : "qualityDisplayName"
+        },
+        "qualityDisplayName" : {
+            "qualityDisplayName" : "Quality",
+            "labelKey" : "qualityDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "cropYear" : {
+            "cropYear" : "Crop Year",
+            "labelKey" : "cropYear",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Crop_Year_Values",
+            "dropdownValue" : "cropYearDisplayName"
+        },
+        "cropYearDisplayName" : {
+            "cropYearDisplayName" : "Crop Year",
+            "labelKey" : "cropYearDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "publishedPrice" : {
+            "publishedPrice" : "Published Price",
+            "labelKey" : "publishedPrice",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String",
+            "children" : [ 
+                "quantity"
+            ]
+        },
+        "priceUnit" : {
+            "priceUnit" : "",
+            "labelKey" : "priceUnit",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Price_Unit_Values",
+            "dropdownValue" : "priceUnitDisplayName"
+        },
+        "priceUnitDisplayName" : {
+            "priceUnitDisplayName" : "Price Unit",
+            "labelKey" : "priceUnitDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "quantity" : {
+            "quantity" : "Quantity",
+            "labelKey" : "quantity",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "UIupdates" : {
+                "disability" : " return '${properties.allow_locking_of_bid_quantity}' == 'true' ? true : false"
+            }
+        },
+        "quantityUnit" : {
+            "quantityUnit" : "",
+            "labelKey" : "quantityUnit",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Quantity_Unit_Values",
+            "dropdownValue" : "quantityUnitDisplayName"
+        },
+        "quantityUnitDisplayName" : {
+            "quantityUnitDisplayName" : "Quantity Unit",
+            "labelKey" : "quantityUnitDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "paymentTerms" : {
+            "paymentTerms" : "Payment Term",
+            "labelKey" : "paymentTerms",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Payment_Terms_Values",
+            "dropdownValue" : "paymentTermsDisplayName"
+        },
+        "paymentTermsDisplayName" : {
+            "paymentTermsDisplayName" : "Payment Term",
+            "labelKey" : "paymentTermsDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "expiryDate" : {
+            "expiryDate" : "Expiry Date",
+            "labelKey" : "expiryDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "format" : "yyyy-MM-dd"
+        },
+        "location" : {
+            "location" : "Location",
+            "labelKey" : "location",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Location_Values",
+            "dropdownValue" : "locationDisplayName"
+        },
+        "locationDisplayName" : {
+            "locationDisplayName" : "Location",
+            "labelKey" : "locationDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "incoTerm" : {
+            "incoTerm" : "Inco Term",
+            "labelKey" : "incoTerm",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Inco_Term_Values",
+            "dropdownValue" : "incoTermDisplayName"
+        },
+        "incoTermDisplayName" : {
+            "incoTermDisplayName" : "Inco Term",
+            "labelKey" : "incoTermDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "packingSize" : {
+            "packingSize" : "Packing Size",
+            "labelKey" : "packingSize",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Packing_Size_Values",
+            "dropdownValue" : "packingSizeDisplayName"
+        },
+        "packingSizeDisplayName" : {
+            "packingSizeDisplayName" : "Packing Size",
+            "labelKey" : "packingSizeDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "packingType" : {
+            "packingType" : "Packing Type",
+            "labelKey" : "packingType",
+            "type" : "dropdown",
+            "dataType" : "String",
+            "serviceKey" : "FC_Packing_Type_Values",
+            "dropdownValue" : "packingTypeDisplayName"
+        },
+        "packingTypeDisplayName" : {
+            "packingTypeDisplayName" : "Packing Type",
+            "labelKey" : "packingTypeDisplayName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "fromDate" : {
+            "fromDate" : "Delivery Period",
+            "labelKey" : "fromDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "format" : "yyyy-MM-dd"
+        },
+        "toDate" : {
+            "toDate" : "",
+            "labelKey" : "toDate",
+            "type" : "datepicker",
+            "isRequired" : true,
+            "format" : "yyyy-MM-dd"
+        },
+        "sys__createdBy" : {
+            "sys__createdBy" : "Name",
+            "labelKey" : "sys__createdBy",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "remark" : {
+            "remark" : "Remark",
+            "labelKey" : "remark",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "countervalue" : {
+            "countervalue" : "Counter",
+            "labelKey" : "countervalue",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "bidderprice" : {
+            "bidderprice" : "Bidder Price",
+            "labelKey" : "bidderprice",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "bidderpricedisplay" : {
+            "bidderpricedisplay" : "Bidder Price",
+            "labelKey" : "bidderpricedisplay",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "offererprice" : {
+            "offererprice" : "Offerer Price",
+            "labelKey" : "offererprice",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "offererpricedisplay" : {
+            "offererpricedisplay" : "Offerer Price",
+            "labelKey" : "offererpricedisplay",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "offer_id" : {
+            "offer_id" : "Offer Id",
+            "labelKey" : "offer_id",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "status" : {
+            "status" : "Status",
+            "labelKey" : "status",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "reason" : {
+            "reason" : "Reason",
+            "labelKey" : "reason",
+            "type" : "textbox",
+            "isRequired" : false
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "7fca5e4f-b554-4141-b347-ee344081ffb8"
+}

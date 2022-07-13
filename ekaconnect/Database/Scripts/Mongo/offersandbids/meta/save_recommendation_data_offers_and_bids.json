@@ -1,0 +1,11 @@
+{
+    "_id" : "saveRecommendatationDataOffersAndBidsSystemTask",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "type" : "workflow",
+    "taskId" : "saveRecommendatationDataOffersAndBidsSystemTask",
+    "object" : "75e55d43-3a9f-4240-9916-0716e53ee5ec",
+    "sys__UUID" : "1102f896-b91a-4302-a36f-a845f16a09cc"
+}

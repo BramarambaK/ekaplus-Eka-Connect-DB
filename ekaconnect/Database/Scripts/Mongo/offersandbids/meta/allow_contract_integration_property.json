@@ -1,0 +1,16 @@
+{
+    "_id" : "allow_contract_integration_property",
+    "type" : "property",
+    "name" : "allow_contract_integration",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "visibility" : "public",
+    "defaultValue" : "true",
+    "listOfValues" : "true,false",
+    "label" : "Allow Contract/Order Integration",
+    "editSupportedInUI" : true,
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "description" : "If this is enabled only contract will be created"
+}

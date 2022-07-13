@@ -1,0 +1,77 @@
+{
+    "_id" : "accept_bidder_composite",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "bidderlisting"
+                }
+            ],
+            "style" : {
+                "margin-left" : "20px",
+                "margin-right" : "auto"
+            },
+            "label" : "CLOSE",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-success custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "acceptbiddercompositesave",
+            "executeDecision" : true,
+            "outcomes" : [ 
+                {
+                    "name" : "bidderlisting"
+                }
+            ],
+            "style" : {
+                "margin-bottom" : "10px",
+                "margin-right" : "10px"
+            },
+            "label" : "Accept",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "bidderlisting"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "label" : "Accept: ${selected.bidderlisting.bid_id}",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : true,
+        "preserveSelectedData" : true,
+        "footer" : false,
+        "isPopUp" : true,
+        "routeOnRefresh" : "bidderlisting"
+    },
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "taskId" : "acceptcompositebidder",
+    "type" : "workflow",
+    "viewAction" : "composite",
+    "workflows" : [ 
+        {
+            "data" : "selected.bidderlisting",
+            "name" : "viewcounter"
+        }, 
+        {
+            "data" : "selected.bidderlisting",
+            "name" : "acceptbiddercreate"
+        }
+    ]
+}

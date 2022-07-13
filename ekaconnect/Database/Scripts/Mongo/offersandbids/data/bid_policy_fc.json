@@ -1,0 +1,24 @@
+{
+    "_id" : ObjectId("5f31dc02e33521b3550a1c28"),
+    "app_UUID" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "userGrants" : {},
+    "refType" : "object",
+    "refTypeId" : "7fca5e4f-b554-4141-b347-ee344081ffb8",
+    "name" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "tenantId" : "fc",
+    "type" : "policy",
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "DELETE", 
+                "READ", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE"
+            ]
+        }
+    }
+}

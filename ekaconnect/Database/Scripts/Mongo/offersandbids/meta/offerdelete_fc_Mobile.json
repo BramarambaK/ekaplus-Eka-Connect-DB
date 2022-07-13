@@ -1,0 +1,59 @@
+{
+  "_id": "offerdelete_fc_Mobile",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "DELETE",
+      "task": "offerdelete",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Offer deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in external task"
+            },
+            "successWithWarning": {
+              "message": "Document deleted with some errors"
+            }
+          },
+          "data": "output.offerdelete",
+          "appendMsg": true,
+          "name": "_ST_DELETE_OFFER"
+        },
+        {
+          "name": "offerslisting",
+          "showPopUp": true
+        }
+      ],
+      "style": {
+        "margin-left": "auto"
+      },
+      "label": "DELETE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "getDataFromExternalAPI": true,
+  "label": "DELETE OFFER",
+  "labelKey": "DELETE_OFFER",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to Delete the Deal with Order Ref Id:?",
+      "headerMessage": "Delete Confirmation"
+    }
+  },
+  "object": "93be4018-e634-4df8-ad3e-33d7a69b990c",
+  "objectAction": "DELETE",
+  "refType": "app",
+  "refTypeId": "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+  "taskId": "offerdelete",
+  "type": "workflow",
+  "deviceType": "mobile"
+}

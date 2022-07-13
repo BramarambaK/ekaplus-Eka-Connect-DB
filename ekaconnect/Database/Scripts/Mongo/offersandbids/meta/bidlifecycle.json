@@ -1,0 +1,38 @@
+{
+    "_id" : "bidlifecycle_CR",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "4f03aa55-2166-4d69-8443-523c2bedc40d"
+    },
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "label" : "Bid Log : ${bid_id}",
+    "type" : "workflow",
+    "layout" : {
+        "name" : "data-view",
+        "template" : "<div><table class='ml-2'>#{selected.data.details *= <tr><td title='${item.name}' class='t-c-w-150'>${item.name}:</td><td title='${item.value}' class='pl-25'>${item.value}</td></tr>}</table><br /><div>#{selected.data.description *= <div class='left-border-dash'><div class='flex-container'><i class='material-icons doticon'>fiber_manual_record</i><div class='mr-a'>${item.timestamp}</div><div>${item.doneBy}</div></div><div class='lc-pb-10-fc'><div class='p-10 bg-grey'>#{item.details *= <div class='lc-fc'><div title='${item.name}'>${item.name}</div></div>}</div></div></div>}</div><div class='lc-msg'>${selected.data.message}</div></div>",
+        "options" : {
+            "hideRowHeader" : false,
+            "columnWidth" : "30px",
+            "popupWidth" : "490px"
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "bidderlisting"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Bid_FC",
+    "taskId" : "bidlifecycle",
+    "object" : "7fca5e4f-b554-4141-b347-ee344081ffb8",
+    "sys__UUID" : "20d1859e-7068-4006-8b4a-0f696816061e"
+}

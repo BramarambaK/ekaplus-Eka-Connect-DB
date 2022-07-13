@@ -1,0 +1,153 @@
+{
+    "_id" : "bidsManageBids_fc_Mobile",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "type" : "workflow",
+    "label" : "Bid: ${selected.bidderlisting.bid_id}",
+    "layout" : {
+        "defaultFormItemStyle" : {
+            "width" : "50%",
+            "justify-content" : "flex-start",
+            "flex-wrap" : "wrap",
+            "margin-right" : "10px"
+        },
+        "defaultFormLabelStyle" : {
+            "width" : "50%",
+            "height" : "28px"
+        },
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "view",
+        "formStyle" : {
+            "margin" : "auto",
+            "font-size" : "15px",
+            "font-weight" : "700",
+            "margin-bottom" : "0"
+        },
+        "formLayoutStyle" : {
+            "background" : "#f6f6f6",
+            "height" : "150px",
+            "padding" : "1px 8px"
+        },
+        "defaultFormValueStyle" : {
+            "flex" : "1",
+            "height" : "20px"
+        },
+        "type" : "row"
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "label" : "Cancel",
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "position" : "TopLeft",
+            "outcomes" : [ 
+                {
+                    "action" : "Cancel",
+                    "type" : "client"
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "TopRight",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.offererbidderlisting",
+                    "name" : "acceptbiddercreate"
+                }
+            ],
+            "displayed" : "field.status == 'Accepted' || field.status == 'Cancelled'",
+            "label" : "Accept the Bid"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "TopRight",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.offererbidderlisting",
+                    "name" : "biddercountercreate"
+                }
+            ],
+            "displayed" : "field.status == 'Cancelled'",
+            "label" : "Counter the Bid"
+        }, 
+        {
+            "btnClass" : "btn-success",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE_OFFER_FC",
+            "selection" : "global",
+            "position" : "TopRight",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.offererbidderlisting",
+                    "name" : "rejectbiddercreate"
+                }
+            ],
+            "displayed" : "field.status == 'Cancelled'",
+            "label" : "Reject the Bid"
+        }
+    ],
+    "labelKey" : "VIEW_COUNTER",
+    "fields" : [ 
+        [ 
+            {
+                "key" : "sys__createdBy"
+            }, 
+            {
+                "label" : "Email",
+                "key" : "sys__createdBy"
+            }, 
+            {
+                "label" : "Phone",
+                "key" : "phoneno"
+            }, 
+            {
+                "label" : "Role",
+                "key" : "roles"
+            }, 
+            {
+                "key" : "offerType"
+            }, 
+            {
+                "key" : "productDisplayName"
+            }, 
+            {
+                "key" : "qualityDisplayName"
+            }, 
+            {
+                "key" : "cropYearDisplayName"
+            }, 
+            {
+                "key" : "locationDisplayName"
+            }, 
+            {
+                "key" : "quantity"
+            }, 
+            {
+                "key" : "packingTypeDisplayName"
+            }, 
+            {
+                "key" : "paymentTermsDisplayName"
+            }, 
+            {
+                "key" : "packingSizeDisplayName"
+            }, 
+            {
+                "key" : "fromDate"
+            }
+        ]
+    ],
+    "taskId" : "bidsManageBids",
+    "object" : "93be4018-e634-4df8-ad3e-33d7a69b990c",
+    "deviceType" : "mobile"
+}

@@ -1,0 +1,22 @@
+{
+    "_id" : "offertype_property",
+    "type" : "property",
+    "name" : "offerType",
+    "label" : "Offer Type",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "purchase",
+            "value" : "Purchase"
+        }, 
+        {
+            "key" : "sale",
+            "value" : "Sale"
+        }
+    ],
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a",
+    "description" : "provide offer type"
+}

@@ -1,0 +1,8 @@
+{
+    "_id" : ObjectId("5f34824ee33521b3551e8761"),
+    "type" : "property",
+    "propertyValue" : true,
+    "propertyLevel" : "app",
+    "propertyName" : "is_versioning_enabled",
+    "refTypeId" : "d44a3b31-6758-4367-b8a2-3808532b0c4a"
+}
