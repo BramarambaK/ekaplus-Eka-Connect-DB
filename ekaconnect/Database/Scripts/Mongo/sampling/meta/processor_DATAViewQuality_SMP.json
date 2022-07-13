@@ -1,0 +1,11 @@
+{
+  "_id": "processor_DATAViewQuality_SMP",
+  "name": "ViewQualityData",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet": " \r\n    if (req && req.body && req.body.selectedData && req.body.selectedData.product_specs) {\r\n      var outputData = [];\r\n      var response = [];\r\n      var customData = req.body.selectedData.custom;\r\n      for (var i = 0; i < customData.length; i++) {\r\n        var key = Object.keys(customData[i])[0];\r\n        outputData.push({\r\n          attributename: Object.keys(customData[i])[0],\r\n          attributevalue: customData[i][key]\r\n        });\r\n      }\r\n      for (var i = 0; i < outputData.length; i++) {\r\n        if (outputData[i]['attributename'].includes('DisplayName')) {\r\n          outputData[i]['attributename'] = outputData[i]['attributename'].replace('DisplayName', '');\r\n        }\r\n      }\r\n      response = outputData.reduce(\r\n        (accumulator, current) =>\r\n          accumulator.some(x => x.attributename === current.attributename) ? accumulator : [...accumulator, current],\r\n        []\r\n      );\r\n      res.status(200).send(response);\r\n    } else res.status(500).send('No attributes available');\r\n ",
+  "sys__UUID": "cdf9d423-d85a-4460-8eac-2ec39d029b86",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}

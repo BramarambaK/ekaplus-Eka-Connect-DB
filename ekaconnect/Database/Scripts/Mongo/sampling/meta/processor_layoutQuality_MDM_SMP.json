@@ -1,0 +1,11 @@
+{
+  "_id": "processor_layoutQuality_MDM_SMP",
+  "name": "QualityMDMLayout",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "bcb79287-04fb-4af2-ae97-61af272b2c45",
+  "snippet": "\r\n    var mdmProcessorServiceKey = [];\r\n    var mdmProcessorServiceKey = JSON.parse(req.body.mdmProcessorServiceKey);\r\n    var mdmproductAttributes = {\r\n      method: 'POST',\r\n      url: req.body.propertyList.platform_url + '/mdmapi/masterdatas/product/property/attribute/values',\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'Content-Type': 'application/json'\r\n      },\r\n      json: true\r\n    };\r\n    async function get_mdmproductAttributes(propertyId) {\r\n      mdmproductAttributes.body = {\r\n        propertyId\r\n      };\r\n      return new Promise(function(resolve, reject) {\r\n        request(mdmproductAttributes, function(err, response, body) {\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n\r\n    let dropdown = {};\r\n    Promise.all(\r\n      mdmProcessorServiceKey.map(async item => {\r\n        return await get_mdmproductAttributes(item.serviceKey);\r\n      })\r\n    ).then(result => {\r\n      let output = {};\r\n      result.forEach((item, i) => {\r\n        output[mdmProcessorServiceKey[i].serviceKey] = item.map(elem => ({\r\n          key: elem.attributeValue,\r\n          value: elem.attributeValue\r\n        }));\r\n      });\r\n      console.log(output);\r\n      res.status(200).send(output);\r\n    });\r\n ",
+  "sys__UUID": "95ed25c3-9c59-49b5-a065-2aeeab64997c",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "sys__createdBy": "srini@ekaplus.com"
+}
