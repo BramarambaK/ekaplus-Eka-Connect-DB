@@ -1,0 +1,81 @@
+{
+  "_id": "accountscomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Accounts Composite",
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "margin": "24px 0"
+              },
+              "workflows": [
+                {
+                  "name": "accountsquery"
+                }
+              ]
+            },
+            {
+              "name": "accountsquicklink"
+            },
+            {
+              "style": {
+                "margin": "41.5px 0 36px"
+              },
+              "workflows": [
+                {
+                  "name": "accountssummary",
+                  "data": "selected.accountscomposite.accountsquery"
+                }
+              ]
+            },
+            {
+              "name": "accountscharts",
+              "data": "selected.accountscomposite.accountsquery"
+            },
+            {
+              "name": "financescardview",
+              "data": "selected.accountscomposite.accountscharts"
+            },
+            {
+              "style": {
+                "padding-left": "6px"
+              },
+              "workflows": [
+                {
+                  "name": "lastupdatedfinance",
+                  "data": "selected.accountscomposite.accountsquery"
+                }
+              ]
+            }
+          ],
+          "style": {
+            "width": "100%"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Accounts"
+    },
+    "name": "customv2",
+    "menu": false,
+    "customScrollBar": true,
+    "clearSelected": ["selected"]
+  },
+  "decisions": [],
+  "taskId": "accountscomposite",
+  "object": "967db9f1-f006-400f-8dee-e81692973390",
+  "deviceType": "mobile"
+}

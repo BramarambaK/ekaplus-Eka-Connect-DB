@@ -1,0 +1,10 @@
+{
+  "_id": "addpricesubmittedby_processor",
+  "name": "addpricesubmittedby_processor",
+  "type": "processor",
+  "refType": "app",
+  "isNode":true,
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const data = req.body.bulkPayLoadData || [];\r\nconst userInfo = `${req.body.propertyList.eka_connect_host}/api/getbpuserinfo`;\r\nconst getData = (url) =>\r\n  new Promise(function (resolve, reject) {\r\n    request(\r\n      {\r\n        method: 'GET',\r\n        url,\r\n        headers: {\r\n          Authorization: req.headers.authorization\r\n        },\r\n        json: true,\r\n      },\r\n      function (err, response, body) {\r\n        if (\r\n          response &&\r\n          response.statusCode >= 200 &&\r\n          response.statusCode <= 299\r\n        ) {\r\n          resolve(body);\r\n        } else {\r\n          reject(body);\r\n        }\r\n      }\r\n    );\r\n  });\r\ngetData(userInfo).then(userDetails => {\r\n  const userName = userDetails.data.firstName + ' ' + userDetails.data.lastName;\r\n  res.status(200).send(data.map(i => ({ ...i, submittedBy: userName})));\r\n})\r\n.catch(err=>{\r\n  console.log(err);\r\n});",
+  "sys__UUID": "11a0d942-a79f-4e06-8655-71174d5e10a9"
+}

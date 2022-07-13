@@ -1,0 +1,24 @@
+{
+    "_id": "allocateticketscargilltnc_property",
+    "type": "property",
+    "name": "allocateticketscargilltnc",
+    "propertyLevel": "app",
+    "dataType": "String",
+    "fieldtype": "textbox",
+    "length": "150",
+    "defaultValue": [
+      {
+        "key": "I agree to transfer the commodity and/or allocated tickets as set out in the summary above and that the Cargill Terms and Conditions will apply to these transactions to and form a part of this transfer. I understand that once submitted and accepted by Cargill all transactions are final and binding and I am responsible for settling such transactions including allocating tickets.",
+        "value": "authorityTnC",
+        "innerHTmlContent":"I agree to transfer the commodity and/or allocated tickets as set out in the summary above and that the <a class='link text-underline' href='https://www.awb.com.au/terms-and-conditions' target='_blank'>Cargill Terms and Conditions</a> will apply to these transactions to and form a part of this transfer. I understand that once submitted and accepted by Cargill all transactions are final and binding and I am responsible for settling such transactions including allocating tickets."
+      },
+      {
+        "key": "I confirm that I have full authority to communicate and transact on behalf of the selected NGR account",
+        "value": "liabilityTnC"
+      }
+    ],
+    "label": "Allocate tickets TnC",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "description": "Property is used to show TnC acceptance form"
+  }
+  

@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_UPDATE_PROCESSOR_LOGS_CST",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_UPDATE_PROCESSOR_LOGS",
+  "label": "Create General in System",
+  "object": "89492129-3a53-40ab-a6f2-cd3cedb33780"
+}

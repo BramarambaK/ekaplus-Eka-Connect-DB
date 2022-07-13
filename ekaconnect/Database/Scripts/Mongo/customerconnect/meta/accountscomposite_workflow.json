@@ -1,0 +1,94 @@
+{
+  "_id": "accountscomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Accounts Composite",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": "accountsquicklink"
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": "accountsquicklink"
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "accountsquery"
+                }
+              ]
+            },
+            {
+              "style": {
+                "margin": "2rem 0 58px"
+              },
+              "workflows": [
+                {
+                  "name": "accountssummary",
+                  "data": "selected.accountscomposite.accountsquery"
+                }
+              ]
+            },
+            {
+              "name": "accountscharts",
+              "data": "selected.accountscomposite.accountsquery"
+            },
+            {
+              "name": "financescardview",
+              "data": "selected.accountscomposite.accountscharts"
+            },
+            {
+              "style": {
+                "display": "flex",
+                "margin-top": "-16px"
+              },
+              "workflows": [
+                {
+                  "name": "lastupdatedfinance",
+                  "data": "selected.accountscomposite.accountsquery"
+                }
+              ]
+            }
+          ],
+          "style": {
+            "width": "100%"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Accounts"
+    },
+    "name": "customv2",
+    "menu": false,
+    "customScrollBar": true,
+    "clearSelected": ["selected"]
+  },
+  "decisions": [],
+  "taskId": "accountscomposite",
+  "object": "967db9f1-f006-400f-8dee-e81692973390"
+}

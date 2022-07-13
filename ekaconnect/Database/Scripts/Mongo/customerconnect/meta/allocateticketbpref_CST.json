@@ -1,0 +1,111 @@
+{
+  "_id": "allocateticketbpref_CST",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Select NGR",
+  "type": "workflow",
+  "layout": {
+    "processorInfo": {
+      "processorId": "248783d1-1167-4d08-808a-43dde17b6100"
+    },
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+      "width": "100%"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "7px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "name": "create",
+    "formStyle": {
+      "padding-bottom": "14px",
+      "margin": "10px",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "cardClass": "cargill-form",
+    "header": "Select NGR",
+    "description": "View available tickets from a single NGR to allocate to this cash bid",
+    "descriptionStyle": {
+      "color": "#3B4047",
+      "font": "normal 15px 'Helvetica Neue LT W05 45 Light'",
+      "padding": "20px 12px 0 12px"
+    }
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "labelkey": "UPDATE",
+      "task": "compositeSave",
+      "label": "",
+      "decisionName": "compositeSave",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.entersellingoptions",
+          "appendMsg": false,
+          "name": "_ST_PROCESS_ALLOCATE_TICKETS"
+        },
+        {
+          "data": "output._ST_PROCESS_ALLOCATE_TICKETS",
+          "name": "_ST_PROCESS_VALIDATE_ALLOCATE_TICKETS"
+        },
+        {
+          "data": "output._ST_PROCESS_VALIDATE_ALLOCATE_TICKETS",
+          "name": "allocateticketquantitycomposite",
+          "dirtyCheckFulfilled": true,
+          "setSelected": [
+            "selected.allocateticketquantitycomposite.warehousedtickets"
+          ]
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "402px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "placeholder": "Select NGR",
+        "key": "account",
+        "event": "external"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "bpRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "maxQuantityToAllocate"
+      }
+    ]
+  ],
+  "taskId": "allocateticketbpref",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "71ef65a4-d7ed-11eb-b8bc-0242ac130003"
+}

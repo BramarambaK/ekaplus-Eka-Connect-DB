@@ -1,0 +1,244 @@
+{
+  "_id": "accountReceivables_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "accountReceivables",
+  "label": "Manage Accounts",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11",
+  "sys__UUID": "3c3272a4-9c0d-4c0b-a5ed-cc3636284849",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. Document ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": false,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "single",
+    "resetSelection": true,
+    "tableEditing": false,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Month and Year",
+      "sort": false,
+      "key": "monthAndYear",
+      "hidden": true,
+      "manageColhidden": true,
+      "primaryKey": {
+        "field": "PRIMARY_ID"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Document ID",
+      "sort": true,
+      "key": "documentId",
+      "hidden": false,
+      "category": "link",
+      "task": "download-link-document"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Document type",
+      "sort": true,
+      "key": "documentType",
+      "primaryFilter": true
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Date issued",
+      "sort": true,
+      "key": "date",
+      "dateformat": "DD/MM/YYYY",
+      "sourceDateFormat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Amount due",
+      "sort": true,
+      "key": "amountDue",
+      "format": "decimal",
+      "roundoff": "2",
+      "UIupdates": {
+        "listValue": "return ('$' + Number('${amountDue}').toLocaleString(undefined, {minimumFractionDigits : 2, maximumFractionDigits : 2}))"
+      },
+      "filterOutput": "return '$' + Number(${start}).format(${extra.filter}) + ' - ' + '$' + Number(${end}).format(${extra.filter})"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Amount received",
+      "sort": true,
+      "key": "amountPaidReceived",
+      "format": "decimal",
+      "roundoff": "2",
+      "UIupdates": {
+        "listValue": "return ('$' + Number('${amountPaidReceived}').toLocaleString(undefined, {minimumFractionDigits : 2, maximumFractionDigits : 2}))"
+      },
+      "filterOutput": "return '$' + Number(${start}).format(${extra.filter}) + ' - ' + '$' + Number(${end}).format(${extra.filter})"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Total amount",
+      "sort": true,
+      "key": "totalAmount",
+      "format": "decimal",
+      "roundoff": "2",
+      "UIupdates": {
+        "listValue": "return ('$' + Number('${totalAmount}').toLocaleString(undefined, {minimumFractionDigits : 2, maximumFractionDigits : 2}))"
+      },
+      "filterOutput": "return '$' + Number(${start}).format(${extra.filter}) + ' - ' + '$' + Number(${end}).format(${extra.filter})"
+    },
+    {
+      "filter": false,
+      "primaryFilter": true,
+      "highlight": {
+        "Fully Received": "cargill-table-listing-status-btn-green",
+        "Partially Received": "cargill-table-listing-status-btn-orange",
+        "Not Received": "cargill-table-listing-status-btn-red",
+        "Paid": "cargill-table-listing-status-btn-green",
+        "Due": "cargill-table-listing-status-btn-orange",
+        "Overdue": "cargill-table-listing-status-btn-red"
+      },
+      "edit": true,
+      "sort": true,
+      "label": "Status",
+      "key": "status",
+      "width": "120px"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract Id",
+      "sort": true,
+      "key": "contractId",
+      "category": "links",
+      "task": "download-link-contract"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Remittance advice ref",
+      "sort": true,
+      "key": "raInvoiceNumber",
+      "category": "links",
+      "task": "download-link-remittance",
+      "width": "175px"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "download-link-action",
+      "type": "download-link",
+      "task": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "outcomes": [
+        {
+          "data": "selected.accountlistingcomposite.accountReceivables",
+          "name": "accountlistingcomposite",
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD"
+        }
+      ],
+      "position": "top",
+      "label": "View document",
+      "disabled": "selected.accountlistingcomposite.accountReceivables.length > 1",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "decisionName": "download-link-document",
+      "task": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "outcomes": [
+        {
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+          "setSelected": ["selected.accountlistingcomposite.accountReceivables"]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "decisionName": "download-link-contract",
+      "task": "EXTERNAL_TICKET_DOWNLOADDOC",
+      "workflowTaskName": "EXTERNAL_TICKET_DOWNLOADDOC",
+      "outcomes": [
+        {
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_TICKET_DOWNLOADDOC",
+          "setSelected": ["selected.accountlistingcomposite.accountReceivables"]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "decisionName": "download-link-remittance",
+      "task": "EXTERNAL_REMITTANCE_ADVICE_DOCUMENT_DOWNLOAD",
+      "workflowTaskName": "EXTERNAL_REMITTANCE_ADVICE_DOCUMENT_DOWNLOAD",
+      "outcomes": [
+        {
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_REMITTANCE_ADVICE_DOCUMENT_DOWNLOAD",
+          "setSelected": ["selected.accountlistingcomposite.accountReceivables"]
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST"
+}

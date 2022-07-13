@@ -1,0 +1,14 @@
+{
+    "_id": "_ST_VIEW_SPLITTICKET_PREPROCESSOR",
+    "componentType": "ProcessTask",
+    "objectAction": "UPDATE",
+    "processorInfo": {
+      "processorId": "09fe6e8c-7131-4b5f-a5d5-088deb68d62e"
+    },
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "type": "workflow",
+    "taskId": "_ST_VIEW_SPLITTICKET_PREPROCESSOR",
+    "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+  }
+  

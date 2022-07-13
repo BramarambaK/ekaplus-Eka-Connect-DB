@@ -1,0 +1,110 @@
+{
+  "_id": "accountssummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Account Summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "decisionName": "navigateReceivable",
+      "task": "navigateReceivable",
+      "outcomes": [
+        {
+          "name": "accountlistingcomposite",
+          "restoreStateQuery": "accountlistingcomposite",
+          "restoreQueryExpression": "return { 'tabIndex': 1, status: ['Not received', 'Partially received'] }",
+          "restoreState": true,
+          "setListingState": [
+            {
+              "setStateQuery": "accountlistingcomposite.accountReceivables",
+              "applyState": {
+                "filter": ["status"]
+              }
+            },
+            {
+              "setStateQuery": "accountlistingcomposite.accountReceivablesDemand",
+              "applyState": {
+                "filter": ["status"]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "decisionName": "navigatePayable",
+      "task": "navigatePayable",
+      "outcomes": [
+        {
+          "name": "accountlistingcomposite",
+          "restoreStateQuery": "accountlistingcomposite",
+          "restoreQueryExpression": "return { 'tabIndex': 2, status: ['Due', 'Overdue'] }",
+          "restoreState": true,
+          "setListingState": [
+            {
+              "setStateQuery": "accountlistingcomposite.accountPayables",
+              "applyState": {
+                "filter": ["status"]
+              }
+            },
+            {
+              "setStateQuery": "accountlistingcomposite.accountPayablesDemand",
+              "applyState": {
+                "filter": ["status"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "key": "documentCount",
+        "label": "return 'Receivable invoices'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${type}' === 'Accounts Payables' && '${openAmount}' != '0' && '${openAmount}' != '' && +'${openAmount}' != 0",
+        "roundOff": "round",
+        "decisionName": "navigateReceivable"
+      },
+      {
+        "key": "openAmount",
+        "label": "return 'Receivable due'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${type}' === 'Accounts Payables' ? true : false",
+        "roundOff": "round",
+        "decisionName": "navigateReceivable"
+      },
+      {
+        "key": "documentCount",
+        "label": "return 'Payable invoices'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${type}' === 'Accounts Receivables' && '${openAmount}' != '0' && '${openAmount}' != '' && +'${openAmount}' != 0",
+        "roundOff": "round",
+        "decisionName": "navigatePayable"
+      },
+      {
+        "key": "openAmount",
+        "label": "return 'Payable due'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${type}' === 'Accounts Receivables' ? true : false",
+        "roundOff": "round",
+        "decisionName": "navigatePayable"
+      }
+    ]
+  ],
+  "labelKey": "ACCOUNT_SUMMARY",
+  "taskId": "accountssummary",
+  "object": "967db9f1-f006-400f-8dee-e81692973390"
+}

@@ -1,0 +1,9 @@
+{
+  "_id": "addvolumelimit_processor",
+  "name": "addvolumelimit_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const data = req.body.bulkPayLoadData || [];\r\ndata.push({\r\n  \"region\": \"\",\r\n  \"product\": \"\",\r\n  \"site\": \"\",\r\n  \"quality\": \"\",\r\n  \"dailypurchased\": \"\",\r\n  \"oldDailylimit\": \"\",\r\n  \"dailyLimit\": \"\"\r\n});\r\nres.status(200).send({\r\n  enterlimits: {\r\n    bpRefNo: data[0].bpRefNo + ' @#@ ' + data[0].bpName + (data[0].bpExternalName ? ' @#@ ' + data[0].bpExternalName : '') + (data[0].bpExternalCode ? ' @#@ ' + data[0].bpExternalCode : ''),\r\n    season: data[0].season,\r\n    tonnagelimits: data\r\n  }\r\n});",
+  "sys__UUID": "6485c16a-1a56-4623-bb3d-5ab489e3aacc"
+}

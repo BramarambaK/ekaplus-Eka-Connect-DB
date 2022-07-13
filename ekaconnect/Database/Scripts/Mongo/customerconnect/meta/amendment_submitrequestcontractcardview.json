@@ -1,0 +1,157 @@
+{
+  "_id": "amendment_submitrequestcontractcardview",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Submit request contract Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "return 'Review you allocation summary for '"
+    },
+    "hideTabs": true,
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 10
+    },
+    "theme": "cargil-request-contract",
+    "cardsListClass": "cargil-request-contract amendment"
+  },
+  "fields": [
+    [
+      {
+        "key": "ticketsCardTypeFormatted",
+        "type": "description",
+        "valueExpression": "return '${cardType}'.toLowerCase() == 'commodity' ? 'Commodity' : '${cardType}'.toLowerCase() == 'grade' ? 'Grade' : '${cardType}'.toLowerCase() == 'season' ? 'Season' : '${cardType}'.toLowerCase() == 'quantity' ? 'Quantity' : '${cardType}'.toLowerCase() == 'price' ? 'Price(/MT)' : '${cardType}'.toLowerCase() == 'paymentterm' ? 'Payment term' : '${cardType}'.toLowerCase() == 'incoterm' ? 'Delivery term' : '${cardType}'.toLowerCase() == 'deliverylocation' ? 'Delivery location' : '${cardType}'.toLowerCase() == 'deliverystart' ? 'Delivery start' : 'Delivery end'",
+        "style": {
+          "font-color": "#5D646F",
+          "line-height": "24px",
+          "height": "24px",
+          "padding": "0",
+          "display": "flex",
+          "flex-direction": "row",
+          "align-items": "center"
+        },
+        "config": {
+          "iconClassExpression": "return ('${cardType}'.toLowerCase() == 'commodity' ? 'commodity' : '${cardType}'.toLowerCase() == 'grade' ? 'grade' : '${cardType}'.toLowerCase() == 'season' ? 'season' : '${cardType}'.toLowerCase() == 'quantity' ? 'total-quantity' : '${cardType}'.toLowerCase() == 'price' ? 'base-price' : '${cardType}'.toLowerCase() == 'paymentterm' ? 'payment-term' : '${cardType}'.toLowerCase() == 'incoterm' ? 'delivery-term' : '${cardType}'.toLowerCase() == 'deliverylocation' ? 'delivery-location' : '${cardType}'.toLowerCase() == 'deliverystart' ? 'delivery-start' : 'delivery-end') + '-icon'"
+        }
+      },
+      {
+        "key": "commodity",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'commodity'"
+      },
+      {
+        "key": "grade",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'grade'"
+      },
+      {
+        "key": "season",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'season'"
+      },
+      {
+        "key": "quantity",
+        "type": "description",
+        "class": "bold suffixed",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px",
+          "display": "flex"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'quantity'"
+      },
+      {
+        "key": "price",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'price'"
+      },
+      {
+        "key": "paymentTerm",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'paymentterm'"
+      },
+      {
+        "key": "incoTerm",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'incoterm'"
+      },
+      {
+        "key": "deliveryLocation",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'deliverylocation'"
+      },
+      {
+        "key": "deliveryStart",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'deliverystart'"
+      },
+      {
+        "key": "deliveryEnd",
+        "type": "description",
+        "class": "bold",
+        "style": {
+          "padding": "0",
+          "margin-top": "4px"
+        },
+        "visibility": "return '${cardType}'.toLowerCase() == 'deliveryend'"
+      }
+    ],
+    [
+      {
+        "key": "dummyTab",
+        "type": "hidden",
+        "filterType": "tabs",
+        "filterBy": "dummyTab",
+        "valueExpression": "return 'tab'"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "amendment_submitrequestcontractcardview",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys_UUID": "7c09b73e-32ec-4524-8355-7d732a44f5ac"
+}

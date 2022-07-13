@@ -1,0 +1,41 @@
+{
+  "_id": "accountsquicklink_workflow",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "inputData": {
+    "type": "menuObject",
+    "config": {
+      "menuId": "efd3aad2-13ae-45d4-9f80-09aa23a1ac7a"
+    }
+  },
+  "label": "Quick link",
+  "labelKey": "Quick Link",
+  "layout": {
+    "name": "flexible-menu",
+    "component": "FlexibleMenuComponent",
+    "header": {
+      "label": "Quick links",
+      "style": {
+        "color": "#3B4047",
+        "font-size": "18px",
+        "font-weight": "600",
+        "padding": "0px 10px 10px 20px",
+        "margin": "0 5px",
+        "border-bottom": "solid 1px #DBE1EB"
+      }
+    },
+    "quickLinkMenuStyle": {
+      "style": {
+        "margin-bottom": "-18px"
+      }
+    }
+  },
+  "object": "967db9f1-f006-400f-8dee-e81692973390",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "accountsquicklink",
+  "type": "workflow"
+}

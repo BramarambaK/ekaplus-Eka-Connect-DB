@@ -1,0 +1,9 @@
+{
+  "_id": "accountlisting_processor",
+  "name": "accountlisting_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "   const connect = {\r\n      method: 'POST',\r\n      url: req.body.propertyList.eka_connect_host + `/workflow/data/`,\r\n      headers: {\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      body: {\r\n        appId: '12325a98-a959-4939-9005-4158d136afcd',\r\n        workFlowTask: 'accountqueryElastic',\r\n        qP: {\r\n          from: 0,\r\n          size: 10000\r\n        }\r\n      },\r\n      json: true\r\n    };\r\n\r\n    function get_elasticData() {\r\n      return new Promise(function(resolve, reject) {\r\n        request(connect, function(error, response, body) {\r\n          if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n            resolve(body);\r\n          } else {\r\n            reject(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n\r\n    get_elasticData()\r\n      .then(records => {\r\n        let result = records.data.filter(i => {\r\n          var val = i.type.toLowerCase();\r\n          if (i.userType.toLowerCase() === 'grower') {\r\n            i.accountStatusAll = 'Statement';\r\n            if (i.type.toLowerCase() === 'accounts payables') {\r\n              i.accountStatus = 'Payables';\r\n            }\r\n            if (i.type.toLowerCase() === 'accounts receivables') {\r\n              i.accountStatus = 'Receivables';\r\n            }\r\n          }\r\n          return i;\r\n        });\r\n        res.status(200).send(result);\r\n      })\r\n      .catch(function(err) {\r\n        return res.status(500).send(err);\r\n      });",
+  "sys__UUID": "5b79be91-e0e5-4288-bcb0-00958ca34741"
+}

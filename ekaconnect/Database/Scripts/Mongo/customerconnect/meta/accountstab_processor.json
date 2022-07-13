@@ -1,0 +1,9 @@
+{
+  "_id": "accountstab_processor",
+  "name": "accountstab_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const data = req.body;\r\n    let index = 1;\r\n    if (data.cardTypeFormatted.toLowerCase() == 'payable invoices') {\r\n      index = 2;\r\n    }\r\n    res.status(200).send({ tabIndex: index, ngrFilter: data.bpRefNo });",
+  "sys__UUID": "2e7dd2bb-bb35-4f49-ab9d-759e1491d3a7"
+}

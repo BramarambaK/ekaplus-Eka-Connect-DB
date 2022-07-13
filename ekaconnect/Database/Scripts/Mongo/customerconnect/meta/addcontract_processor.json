@@ -1,0 +1,9 @@
+{
+  "_id": "addcontract_processor",
+  "name": "addcontract_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const data = req.body.offercontracts || [];\r\ndata.push({\r\n  offercontracttype: \"\",\r\n  offerdeliverterm: \"\",\r\n  offerdeliveryperiod: \"\",\r\n  offerexpiry: \"\",\r\n  offerprice: \"\",\r\n  offerproduct: \"\",\r\n  offerquality: \"\",\r\n  offerquantity: \"\",\r\n  offerregion: \"\",\r\n  offerseason: \"\",\r\n  offersite: \"\",\r\n  offersustainable: \"\"\r\n});\r\nres.status(200).send({\r\n    entercontracts: {\r\n        offerbpdetails: req.body.offerbpdetails,\r\n    offercontracts: data\r\n  }\r\n});",
+  "sys__UUID": "4075dbd6-0800-44ba-b03b-b3a3a392d858"
+}

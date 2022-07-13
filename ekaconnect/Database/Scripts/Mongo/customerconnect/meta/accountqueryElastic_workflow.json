@@ -1,0 +1,31 @@
+{
+  "_id": "accountqueryElastic_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "sys__UUID": "df7ba9a7-69a4-4f86-a295-05bd38fe19b1",
+  "type": "workflow",
+  "rows": 10000,
+  "layout": {
+    "name": "query"
+  },
+  "version": "V2",
+  "inputData": {
+    "type": "SystemTask",
+    "config": {
+      "id": "CRAWLER_ACCOUNTSQUERY_TO_ELASTIC",
+      "userSpecificData": true,
+      "ttl": 3600,
+      "zero_record_ttl": 600,
+      "isAsynchCallRequired": "Y",
+      "isElasticCumSystemTask": true
+    }
+  },
+  "fields": [],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "accountqueryElastic",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11"
+}

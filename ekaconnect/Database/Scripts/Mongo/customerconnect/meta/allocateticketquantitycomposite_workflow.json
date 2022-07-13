@@ -1,0 +1,169 @@
+{
+  "_id": "allocateticketquantitycomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Allocate tickets",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenu_allocate"
+    },
+    {
+      "style": {
+        "padding": "22px 21px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "0px 5px"
+      },
+      "workflows": [
+        {
+          "name": "allocateticketquantitylist",
+          "data": "selected.allocateticketquantitycomposite.warehousedtickets"
+        }
+      ]
+    },
+    {
+      "workflows": [
+        {
+          "name": "allocateticketquantitysummary",
+          "data": "selected.allocateticketquantitycomposite.warehousedtickets"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Allocate quantity"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "menu": false,
+    "customMenu": true,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string",
+        "task": "ticketsmainhome"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketshome"
+      },
+      {
+        "label": "Allocate quantity",
+        "type": "string"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketsmainhome",
+      "outcomes": [
+        {
+          "name": "ticketscomposite",
+          "clearSelected": [
+            "selected.ticketscomposite",
+            "selected",
+            "menuDetails"
+          ]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "ticketshome",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "clearSelected": [
+            "selected.ticketlistingcomposite",
+            "selected",
+            "menuDetails"
+          ]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelallocateticketquantity_popup",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "15px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "allocateticketscomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "12px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "pickSelectedData": {
+        "allocateticketquantitycomposite.warehousedtickets": "selected.allocateticketquantitycomposite.warehousedtickets"
+      },
+      "outcomes": [
+        {
+          "data": "output.allocateticketquantitycomposite",
+          "appendMsg": false,
+          "name": "_ST_PROCESS_VALIDATE_ALLOCATE_TICKETS_QUANTITY"
+        },
+        {
+          "data": "selected.allocateticketquantitycomposite.warehousedtickets",
+          "name": "submitallocatedtickets"
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Next",
+      "position": "bottom",
+      "disabled": "let total = selected.allocateticketquantitycomposite.warehousedtickets.reduce((acc, curr) => acc + parseFloat(curr.tonnesSold), 0); let max = selected.allocateticketquantitycomposite.warehousedtickets[0].sellingOption == 'Contract' ? parseFloat(selected.allocateticketquantitycomposite.warehousedtickets[0].contractQuantity) : parseFloat(selected.allocateticketquantitycomposite.warehousedtickets[0].maxQuantityToAllocate); (total==0 || total>max)"
+    }
+  ],
+  "taskId": "allocateticketquantitycomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "253d7662-c3b4-11eb-8529-0242ac130003"
+}

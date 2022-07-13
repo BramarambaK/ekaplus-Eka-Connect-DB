@@ -1,0 +1,36 @@
+{
+  "_id": "accounts_quicklinkmenu",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "sys__UUID": "efd3aad2-13ae-45d4-9f80-09aa23a1ac7a",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "label": "Manage finances",
+              "handler": "accountlistingcomposite",
+              "hideFromSubmenu": true
+            },
+            {
+              "label": "View all receivable invoices",
+              "handler": "accountlistingcomposite",
+              "restoreStateQuery": "accountlistingcomposite",
+              "restoreQueryExpression": "return { 'tabIndex': 1 }",
+              "restoreState": true
+            },
+            {
+              "label": "View all payable invoices",
+              "handler": "accountlistingcomposite",
+              "restoreStateQuery": "accountlistingcomposite",
+              "restoreQueryExpression": "return { 'tabIndex': 2 }",
+              "restoreState": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

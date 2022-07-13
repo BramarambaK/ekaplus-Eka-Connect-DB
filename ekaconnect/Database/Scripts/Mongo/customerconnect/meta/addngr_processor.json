@@ -1,0 +1,9 @@
+{
+  "_id": "addngr_processor",
+  "name": "addngr_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": " const data = req.body.enterngrs || [];\r\n    let firstObj = data[0];\r\n    let totalQuantity = data[0].totalQuantity;\r\n    let transferMethod = data[0].transferMethod;\r\n    data.push({\r\n      ...firstObj,\r\n      ngr: '',\r\n      ngrtradingname: '',\r\n      transferquantity: '',\r\n      transferMethod: firstObj.transferMethod,\r\n      totalQuantity: firstObj.totalQuantity,\r\n      transferquantitypercentage: '',\r\n      transferqty: '',\r\n      transferqtypercentage: ''\r\n    });\r\n    res.status(200).send({\r\n      enterngrs: {\r\n        ngrdetails: data\r\n      }\r\n    });",
+  "sys__UUID": "fa33606f-0853-4f21-9d11-3797d35ca4f1"
+}

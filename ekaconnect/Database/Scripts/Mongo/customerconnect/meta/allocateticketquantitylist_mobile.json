@@ -1,0 +1,126 @@
+{
+  "_id": "allocateticketquantitylist_worklfow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "getDataFromExternalAPI": false,
+  "label": "Customer Connect App Editable Table",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "header": "Allocate quantity",
+    "description": "Enter a sale quantity for each ticket you wish to allocate and view a projected return for the quantity",
+    "class": "allocate-form",
+    "rowExpand": true
+  },
+  "decisions": [],
+  "labelKey": "EDITABLETABLE",
+  "fields": [
+    {
+      "edit": false,
+      "sort": true,
+      "key": "ticketRefNo",
+      "label": "Ticket",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "cropYear",
+      "label": "Season",
+      "expand": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "location",
+      "label": "GrainFlow site",
+      "expand": true
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedTestResultsShort",
+      "label": "Test results",
+      "expand": true,
+      "UIupdates": {
+        "listValue": "return '${testResultsShort}'=='-' ?'-' : '${testResultsShort}'.replaceAll(',', ',<br>')"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "quantity",
+      "label": "Qty (MT)"
+    },
+    {
+      "edit": true,
+      "sort": false,
+      "key": "tonnesSold",
+      "label": "Allocated (MT)",
+      "cellClass": "cell-icon-class",
+      "children": ["estimatedPrice", "formattedEstimatedPrice"],
+      "placeholder": " ",
+      "UIupdates": {
+        "listValue": "return (${tonnesSold} || ${tonnesSold} > 0) ? '${tonnesSold}' : 0.00"
+      },
+      "UIvalidation": {
+        "errorClass": "return ${tonnesSold} > ${quantity} || ${tonnesSold} < 0 ? 'error-border' : ''",
+        "cellIcon": "return (${tonnesSold} < ${quantity} && ${tonnesSold} > 0) ? 'split' : ''",
+        "icontooltip": "return 'Allocating a portion of this ticket will create a split ticket. The split ticket will be available in your warehoused inventory'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "price",
+      "label": "Price",
+      "expand": true,
+      "tooltip": "Based on price and entered quantity. This calculation is indicative only, excluding GST, fees and charges.",
+      "type": "hidden"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedPrice",
+      "label": "Price",
+      "expand": true,
+      "tooltip": "Based on price and entered quantity. This calculation is indicative only, excluding GST, fees and charges.",
+      "UIupdates": {
+        "listValue": "return '$' + '${price}'"
+      }
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "estimatedPrice",
+      "label": "Est. revenue",
+      "tooltip": "Based on price and entered quantity. This calculation is indicative only, excluding GST, fees and charges.",
+      "UIupdates": {
+        "listValue": "return Number('${tonnesSold}' * '${price}').toFixed(2);"
+      },
+      "expand": true,
+      "type": "hidden"
+    },
+    {
+      "edit": false,
+      "sort": false,
+      "key": "formattedEstimatedPrice",
+      "label": "Est. revenue",
+      "tooltip": "Based on price and entered quantity. This calculation is indicative only, excluding GST, fees and charges.",
+      "UIupdates": {
+        "listValue": "return ('$' + Number('${estimatedPrice}').toLocaleString(undefined, {minimumFractionDigits : 2, maximumFractionDigits : 2}))"
+      },
+      "expand": true
+    }
+  ],
+  "taskId": "allocateticketquantitylist",
+  "deviceType": "mobile",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "9da2ead5-c3b2-4171-b43e-a69de470c607"
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "amend_ticket_warehoused_detail_cancel_popup",
+  "name": "amend_ticket_warehoused_detail_cancel_popup",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Cancel",
+  "type": "workflow",
+  "sys__UUID": "42021749-b167-491f-ba5c-4f5ab70f3675",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to exit this form? ",
+      "headerMessage": "Cancel",
+      "information": "You will lose the data you have entered."
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "amendticketwarehoused",
+          "restoreState": false
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name" : "ticketlistingcomposite",
+          "clearSelected" : [ 
+              "selected.ticketlistingcomposite", 
+              "selected.amendticketwarehoused"
+          ],
+          "restoreState": true
+        }
+      ],
+      "label": "Ok",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "amendticketwarehoused",
+          "restoreState": false
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "fields": [],
+  "taskId": "amend_ticket_warehoused_detail_cancel_popup"
+}

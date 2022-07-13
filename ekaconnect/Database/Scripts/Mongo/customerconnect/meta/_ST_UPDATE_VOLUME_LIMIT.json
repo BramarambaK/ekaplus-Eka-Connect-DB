@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_UPDATE_VOLUME_LIMIT",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "taskId": "_ST_UPDATE_VOLUME_LIMIT",
+  "label": "Update tonnage limits in System",
+  "object": "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}

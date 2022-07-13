@@ -1,0 +1,46 @@
+{
+  "_id": "amendment_requestcontractspread_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request Contract spread  Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "return 'Review you allocation summary for '"
+    },
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1.0
+    },
+    "cardsListClass": "contract-request-spread cargil-contract-details",
+    "theme": "cargill-contract-request-spread cargill-contract-details-card multi-grade"
+  },
+  "version": "V2",
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return ('${amendedSpread}'.toLowerCase().includes('floating') && '${spread}'.toLowerCase().includes('floating')) ? 'Multi-grade spread as at ' + moment().format('DD-MM-YYYY') : ('${amendedSpread}'.toLowerCase().includes('fix') && '${spread}'.toLowerCase().includes('floating') && !'${ekaCCSpreadFixed}') ? 'Multi-grade spread as at ' + moment().format('DD-MM-YYYY') : ('${amendedSpread}'.toLowerCase().includes('fix') || '${spread}'.toLowerCase().includes('fix')) && '${ekaCCSpreadFixed}' ? 'Multi-grade spread as at ' + '${ekaCCSpreadFixed}' : 'Multi-grade spreads fixed'"
+      }
+    ],
+    [
+      {
+        "key": "multiGradeDifferentialDetails",
+        "type": "detailsArray",
+        "class": "multi-grade-details",
+        "valueExpression": " return ${multiGradeDifferentialDetails}.multiGradeDifferentialDetail.map(i => ( { label: i.qualityName, value: i.multiGradeDifferential == null || i.multiGradeDifferential == '' ? '$0.00' : (i.multiGradeDifferential + '').toLowerCase()  == 'base' ? i.multiGradeDifferential : (i.multiGradeDifferential + '').includes('-') ?  '-$' + (-i.multiGradeDifferential).toFixed(2) :  (i.multiGradeDifferential + '').includes('+')  ? '+$' + (+i.multiGradeDifferential).toFixed(2):  '+$' + (+i.multiGradeDifferential).toFixed(2),  class: (i.multiGradeDifferential + '').toLowerCase() == 'base' ? 'base-value' : ''  }))"
+      }
+    ]
+  ],
+  "labelKey": "Cards View",
+  "taskId": "amendment_requestcontractspread",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

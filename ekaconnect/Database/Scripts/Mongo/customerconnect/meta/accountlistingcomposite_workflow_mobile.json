@@ -1,0 +1,304 @@
+{
+  "_id": "accountlistingcomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "style": {
+            "width": "100%"
+          },
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "accountlistingquery"
+                }
+              ]
+            },
+            {
+              "display": "tabs",
+              "styleClass": "tabview-1 financetabview",
+              "visibility": "return '${userInfo.customerType}' !== 'Demand Customer' ? true : false",
+              "show": false,
+              "workflows": [
+                {
+                  "tabHeader": "STATEMENT OF ACCOUNT",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no statement of account",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "accountlistingcomposite.accountlistingquery.Statement",
+                    "tabHeader": "return 'STATEMENT OF ACCOUNT (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "accountStatements",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Statement"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastupdatedfinance",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Statement"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "RECEIVABLES",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no receivables",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "accountlistingcomposite.accountlistingquery.Receivables",
+                    "tabHeader": "return 'RECEIVABLES (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "accountReceivables",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Receivables"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastupdatedfinance",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Receivables"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "PAYABLES",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no payables",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "accountlistingcomposite.accountlistingquery.Payables",
+                    "tabHeader": "return 'PAYABLES (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "accountPayables",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Payables"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastupdatedfinance",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Payables"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "display": "tabs",
+              "styleClass": "tabview-1 financetabview",
+              "visibility": "return '${userInfo.customerType}' === 'Demand Customer' ? true : false",
+              "workflows": [
+                {
+                  "tabHeader": "STATEMENT OF ACCOUNT",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no Statement of account",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "accountlistingcomposite.accountlistingquery.Statement",
+                    "tabHeader": "return 'STATEMENT OF ACCOUNT (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "accountStatementsDemand",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Statement"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastupdatedfinance",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Statement"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "RECEIVABLES",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no receivables",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "accountlistingcomposite.accountlistingquery.Receivables",
+                    "tabHeader": "return 'RECEIVABLES (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "accountReceivablesDemand",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Receivables"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastupdatedfinance",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Receivables"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tabHeader": "PAYABLES",
+                  "showMainContent": true,
+                  "noDataMessage": "You have no payables",
+                  "tabConfigExpressions": {
+                    "getDataFrom": "accountlistingcomposite.accountlistingquery.Payables",
+                    "tabHeader": "return 'PAYABLES (${data.length})'",
+                    "showMainContent": "return '${data.length}' > 0 ? true : false"
+                  },
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "22px 0 55px"
+                      },
+                      "workflows": [
+                        {
+                          "name": "accountPayablesDemand",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Payables"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastupdatedfinance",
+                          "data": "selected.accountlistingcomposite.accountlistingquery.Payables"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "breadcrumbs": [
+      {
+        "label": "Finances",
+        "type": "string",
+        "task": "Financeshome"
+      },
+      {
+        "label": "Manage finances",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "menu": false,
+    "supportCustomization": true,
+    "customScrollBar": true,
+    "clearSelected": ["selected"],
+    "queryParam": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "Financeshome",
+      "outcomes": [
+        {
+          "name": "accountscomposite",
+          "clearSelected": ["selected.accountscomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "accountlistingcomposite",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11",
+  "sys__UUID": "7002c75d-5ed3-44a7-848c-0d8110f3d7bb",
+  "deviceType": "mobile"
+}

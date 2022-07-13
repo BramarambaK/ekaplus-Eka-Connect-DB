@@ -1,0 +1,584 @@
+{
+  "_id": "amendment_requestcontractfreightdetails_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "",
+  "type": "workflow",
+  "version": "V2",
+  "processorInfo": {
+    "processorId": "8e0be89f-561c-4e90-aa52-d8ef2bd5d7de",
+    "isProcessorOnly": true
+  },
+  "inputData": {
+    "type": "processorInfo",
+    "config": {
+      "processorId": "8e0be89f-561c-4e90-aa52-d8ef2bd5d7de"
+    }
+  },
+  "layout": {
+    "mdmPayload": {},
+    "defaultFormItemStyle": {
+      "dirtyBG": "#fff",
+      "untouchedBG": "#fff",
+      "validBG": "#fff",
+      "invalidBG": "#fff",
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+      "width": "100%"
+    },
+    "defaultFormLabelStyle": {
+      "color": "#3B4047",
+      "margin-bottom": "7px",
+      "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "name": "create",
+    "formStyle": {
+      "padding-bottom": "5px",
+      "margin": "10px",
+      "padding-left": "2px",
+      "max-width": "100%"
+    },
+    "defaultFormValueStyle": {
+      "color": "#5D646F",
+      "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+    },
+    "type": "row",
+    "cardClass": "cargill-form freight-details-form"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "task": "compositeSave",
+      "decisionName": "compositeSave",
+      "type": "submit",
+      "label": "next label",
+      "outcomes": [
+        {
+          "data": "output.amendment_requestcontractfreightdetails",
+          "name": "_ST_REQUESTCONTRACT_WORKFLOW_DECISION"
+        },
+        {
+          "data": "output._ST_REQUESTCONTRACT_WORKFLOW_DECISION",
+          "name": "amendment_submitrequestcontractcomposite",
+          "condition": "return (${isFreightDetails} == true)",
+          "setSelected": [
+            "selected.amendment_submitrequestcontractcomposite.data",
+            "selected.requesteddetails.amendment_submitrequestfreightdetails"
+          ]
+        }
+      ],
+      "position1": "bottom"
+    }
+  ],
+  "labelKey": "ENTER_LOCATIONS",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "100%",
+          "margin": "0"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "formLabelStyle": {
+          "white-spaces": "normal !important",
+          "text-overflow": "inherit !important",
+          "overflow": "visible !important",
+          "width": "100%",
+          "word-beak": "break-all",
+          "margin-bottom": "24px",
+          "margin-top": "-8px",
+          "height": "24px"
+        },
+        "suffix": "",
+        "placeholder": "Select",
+        "key": "amendedFreightOrganise",
+        "class": "radio-button-alignment-v2"
+      }
+    ],
+    [
+      {
+        "formItemStyle": {
+          "margin-bottom": "-15px",
+          "margin-top": "15px"
+        },
+        "formLabelStyle": {
+          "line-height": "24px",
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "18px",
+          "margin-bottom": "-11px",
+          "margin-top": "11px",
+          "height": "24px"
+        },
+        "key": "freightFormHeader"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "100%"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px",
+          "margin-bottom": "-14px"
+        },
+        "suffix": "",
+        "placeholder": "Name",
+        "key": "amendedFullname"
+      },
+      {
+        "style": {
+          "width": "100%"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px",
+          "margin-bottom": "-14px"
+        },
+        "suffix": "",
+        "placeholder": "Phone number",
+        "key": "amendedPhonenumber"
+      },
+      {
+        "style": {
+          "width": "100%"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px",
+          "margin-bottom": "-14px"
+        },
+        "suffix": "",
+        "placeholder": "Email",
+        "key": "amendedEmail",
+        "valueExpression": " return '${amendedEmail}'.matches(^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$)"
+      }
+    ],
+    [
+      {
+        "formItemStyle": {
+          "margin-bottom": "-45px",
+          "margin-top": "15px"
+        },
+        "formLabelStyle": {
+          "line-height": "24px",
+          "font-family": "Helvetica Neue LT W05 65 Medium",
+          "font-size": "18px",
+          "margin-bottom": "13px",
+          "height": "24px"
+        },
+        "key": "freightLocationHeader"
+      }
+    ],
+    [
+      {
+        "formItemStyle": {
+          "margin-bottom": "-25px",
+          "margin-top": "-7px"
+        },
+        "key": "googlemaps",
+        "type": "button",
+        "label": "",
+        "btnClass": "link p-0 button-with-content-contract-freight",
+        "redirectLink": "https://www.google.com/maps",
+        "class": "contract-freight-label"
+      }
+    ],
+    [
+      {
+        "key": "amendedPickuplocation",
+        "style": {
+          "display": "inline-block",
+          "flex-wrap": "wrap",
+          "padding": "8px 19px",
+          "padding-bottom": "28px",
+          "border": "1px solid #c8ced3",
+          "border-radius": "0.25rem",
+          "width": "100%"
+        },
+        "type": "formarray",
+        "labelStyle": {
+          "display": "none"
+        },
+        "addButton": {
+          "style": {
+            "background-color": "#00843D",
+            "border-radius": "4px",
+            "color": "#ffffff",
+            "margin-bottom": "-18px"
+          },
+          "label": "Add pick-up location",
+          "maxLength": 10
+        },
+        "fields": [
+          {
+            "style": {
+              "width": "100%",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "longandlat",
+            "placeholder": "Coordinates",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "style": {
+              "width": "100%",
+              "margin-top": "10px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "storagetype",
+            "placeholder": "Select",
+            "appendTo": "null",
+            "layout": "layout1"
+          },
+          {
+            "style": {
+              "width": "100%",
+              "height": "120px",
+              "margin-top": "3px",
+              "margin-right": "20px",
+              "color": "#5D646F",
+              "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+            },
+            "suffix": "",
+            "key": "deliveryinstruction",
+            "placeholder": "Enter pick-up instructions",
+            "appendTo": "null",
+            "layout": "layout1"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "BPRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "product"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "quality"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "cropYear"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "contractItemQuantity"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "contractPrice"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "paymentTerms"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "dischargeLocationType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "dischargeLocationCity"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "shipmentPeriodFrom"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "key": "shipmentPeriodTo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "dischargeLocationCountry"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "isMultiGrade"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "INCOTerm"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "multiGradeDifferentialDetails"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "userType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "submitrequestcontractcardview"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "brokerReferenceNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "PRIMARY_ID"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "approvalStatus"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "brokerRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "PRIMARY_ID"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "approvalStatus"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractItemQuantityInBase"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractItemRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractStatus"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractSubType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "contractType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "gradeCombined"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "modificationDate"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "origin"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "positionStatus"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "requestId"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "requestedBy"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "shipmentPeriodFrom"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "shipmentPeriodTo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "disableDelivery"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "spread"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedCity"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedQuality"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedPrice"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedShipmentFrom"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedShipmentTo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "freightOrganise"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "fullname"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "phonenumber"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "email"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "amendedBrokerRefNo"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "pickuplocation"
+      }
+    ]
+  ],
+  "taskId": "amendment_requestcontractfreightdetails",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "5cf3c3e5-4045-4b85-9e95-c70744ac6761",
+  "deviceType": "mobile"
+}

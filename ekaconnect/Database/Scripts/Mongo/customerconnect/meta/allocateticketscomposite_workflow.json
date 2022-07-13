@@ -1,0 +1,147 @@
+{
+  "_id": "allocateticketscomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Allocate tickets",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "topmenu_allocate"
+    },
+    {
+      "workflows": [
+        {
+          "name": "entersellingoptions",
+          "data": "selected.ticketlistingcomposite"
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Allocate tickets title"
+    },
+    "customClass": true,
+    "name": "customv2",
+    "footerClass": "custom-footer",
+    "menu": false,
+    "customMenu": true,
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string",
+        "task": "ticketsmainhome"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketshome"
+      },
+      {
+        "label": "Allocate tickets",
+        "type": "string"
+      }
+    ],
+    "clearSelected": [
+      "selected.ticketlistingquery",
+      "selected.ticketsquery",
+      "selected.ticketscomposite",
+      "selected.ticketscharts",
+      "selected.ticketlistingcomposite.ticketscharts",
+      "selected.ticketlistingcomposite.ticketsquery",
+      "selected.allocateticketscomposite.ticketlistingquery",
+      "selected.allocateticketscomposite.ticketsquery",
+      "selected.ticketlistingcomposite.ticketlistingquery",
+      "selected.ticketlistingcomposite.contractdomainquery",
+      "selected.contractdomaincomposite",
+      "selected.contractdomainquery"
+    ]
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketsmainhome",
+      "outcomes": [
+        {
+          "name": "ticketscomposite",
+          "clearSelected": [
+            "selected.ticketscomposite",
+            "selected",
+            "menuDetails"
+          ]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "ticketshome",
+      "outcomes": [
+        {
+          "name": "ticketlistingcomposite",
+          "clearSelected": [
+            "selected.ticketlistingcomposite",
+            "selected",
+            "menuDetails"
+          ]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelallocateticket_popup",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "allocateticketquantitycomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "taskId": "allocateticketscomposite",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "bb8a127b-e12b-4bc6-aaf3-6fc3c46a7aa1"
+}

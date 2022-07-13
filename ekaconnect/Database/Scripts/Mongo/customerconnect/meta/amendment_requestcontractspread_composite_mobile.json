@@ -1,0 +1,203 @@
+{
+  "_id": "amendment_requestcontractspread_composite_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request contract amendment",
+  "version": "V2",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "name": "amendment_topmenurequestcontract",
+      "data": "selected.requesteddetails.data"
+    },
+    {
+      "style": {
+        "padding": "1px",
+        "border-left": "1px solid #c8ced3",
+        "border-right": "1px solid #c8ced3",
+        "margin": "0px 10px"
+      },
+      "workflows": [
+        {
+          "name": "amendment_requestcontractspread",
+          "data": "selected.requesteddetails.amendment_requestcontractspreadcomposite"
+        }
+      ]
+    },
+    {
+      "workflows": [
+        {
+          "name": "amendment_requestcontractspreadquestion",
+          "data": "selected.amendment_requestcontractspreadcomposite"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "listinghome",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancelpopup_amendment_requestContract_spread",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "contractslist",
+      "outcomes": [
+        {
+          "name": "contractlistingcomposite",
+          "clearSelected": [
+            "selected.amendment_requestcontractcomposite",
+            "selected.amendment_requestcontractfreightcomposite",
+            "selected.amendment_requestcontractspreadcomposite",
+            "selected.requesteddetails",
+            "selected.amendment_submitrequestcontractcomposite.data",
+            "selected.amendment_submitrequestcontractcomposite.contractlistingquery",
+            "selected.amendment_submitrequestcontractcomposite.contractdomainquery",
+            "selected.amendment_submitrequestcontractcomposite.amendment_submitrequestcontracttnc"
+          ]
+        }
+      ]
+    },
+    {
+      "btnClass": "btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "name": "cancel_amendment_requestContract_spread",
+          "restoreState": true,
+          "popupClass": "cargill-delete-class"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "margin-left": "18px"
+      },
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-outline",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "amendment_requestcontractcomposite"
+        }
+      ],
+      "style": {
+        "margin-right": "15px"
+      },
+      "label": "Previous",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "pickSelectedData": {
+        "amendment_requestcontractspreadcomposite.amendment_requestcontractspreadquestion": "selected.amendment_requestcontractspreadcomposite.amendment_requestcontractspreadquestion",
+        "amendment_requestcontractspreadcomposite.data": "selected.amendment_requestcontractspreadcomposite.data"
+      },
+      "executeDecision": false,
+      "outcomes": [
+        {
+          "data": "output.amendment_requestcontractspreadcomposite",
+          "name": "_ST_AMENDMENT_REQUESTCONTRACT_WORKFLOW_DECISION_STEP2"
+        },
+        {
+          "data": "output._ST_AMENDMENT_REQUESTCONTRACT_WORKFLOW_DECISION_STEP2",
+          "name": "amendment_requestcontractfreightcomposite",
+          "condition": "return (${isFreightDetails} == true)",
+          "restrictQueryStateChange": true,
+          "updateSelected": [
+            "selected.amendment_requestcontractfreightcomposite.data",
+            "selected.amendment_requestcontractfreightcomposite.amendment_requestcontractfreightdetails",
+            "selected.requesteddetails.amendment_requestcontractspreadquestion"
+          ]
+        },
+        {
+          "data": "output._ST_AMENDMENT_REQUESTCONTRACT_WORKFLOW_DECISION_STEP2",
+          "name": "amendment_submitrequestcontractcomposite",
+          "condition": "return (${isFreightDetails} == false)",
+          "restrictQueryStateChange": true,
+          "updateSelected": [
+            "selected.amendment_submitrequestcontractcomposite.data",
+            "selected.requesteddetails.amendment_requestcontractspreadquestion"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "32px"
+      },
+      "label": "Next",
+      "position": "bottom"
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Update tonnage limits"
+    },
+    "customClass": true,
+    "footerClass": "custom-footer",
+    "name": "customv2",
+    "menu": false,
+    "breadcrumbs": [
+      {
+        "label": "Home ",
+        "type": "string",
+        "task": "listinghome"
+      },
+      {
+        "label": "Manage contracts",
+        "type": "string",
+        "task": "contractslist"
+      },
+      {
+        "label": "Request amendment",
+        "type": "string",
+        "value": null
+      }
+    ],
+    "clearSelected": [
+      "selected.amendment_requestcontractspreadcomposite.contractdomainquery",
+      "selected.amendment_requestcontractspreadcomposite.contractlistingquery",
+      "selected.amendment_requestcontractcomposite.contractdomainquery",
+      "selected.amendment_requestcontractcomposite.contractlistingquery",
+      "selected.requesteddetails.amendment_requestcontractdetailsform.contractdomainquery",
+      "selected.requesteddetails.amendment_requestcontractdetailsform.contractlistingquery"
+    ],
+    "queryParam": false
+  },
+  "payLoad": "selected.amendment_requestcontractspreadcomposite.data",
+  "taskId": "amendment_requestcontractspreadcomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "92bc3ac3-cbec-4f37-bbe8-847666a33eb0",
+  "deviceType": "mobile"
+}

@@ -1,0 +1,142 @@
+{
+  "_id": "accountsReceivablePayablelist_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "accountsReceivablePayablelist",
+  "object": "967db9f1-f006-400f-8dee-e81692973390",
+  "label": "accountsReceivablePayablelist",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Accounts",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "getInitialData": true,
+    "options": {},
+    "theme": "theme-grid-white"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "label": "userType",
+      "sort": true,
+      "key": "userType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "BPRefNo",
+      "sort": true,
+      "key": "bpRefNo",
+      "align": "right"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "bpName",
+      "sort": true,
+      "key": "bpName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "payeeID",
+      "sort": true,
+      "key": "payeeId"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "payeeName",
+      "sort": true,
+      "key": "payeeName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "type",
+      "sort": true,
+      "key": "type"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "monthAndYear",
+      "sort": true,
+      "key": "monthAndYear"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "financialYearAndQuarter",
+      "sort": true,
+      "key": "financialYearAndQuarter"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "currency",
+      "sort": true,
+      "key": "currency"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "totalAmount",
+      "sort": true,
+      "key": "totalAmount"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "openAmount",
+      "sort": true,
+      "key": "openAmount"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "documentCount",
+      "sort": true,
+      "key": "documentCount"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "totalAmountInForeignCurrency",
+      "sort": true,
+      "key": "totalAmountInForeignCurrency"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "openAmountInForeignCurrency",
+      "sort": true,
+      "key": "openAmountInForeignCurrency"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "ngrFilter",
+      "sort": true,
+      "key": "ngrFilter"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "LIST",
+  "version": "V2",
+  "inputData": {
+    "type": "elasticSearch",
+    "config": {}
+  }
+}

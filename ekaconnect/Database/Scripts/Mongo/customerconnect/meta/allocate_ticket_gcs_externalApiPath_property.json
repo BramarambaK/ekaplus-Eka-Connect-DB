@@ -1,0 +1,14 @@
+{
+    "_id" : "allocate_ticket_gcs_externalApiPath_property",
+    "type" : "property",
+    "name" : "allocate_ticket_gcs_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "Allocate Ticket GCS Layer 7 URL path",
+    "defaultValue" : "/a004527/casc/eka/gcs/api/allocateticket",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL path to allocate a ticket to GCS system."
+}

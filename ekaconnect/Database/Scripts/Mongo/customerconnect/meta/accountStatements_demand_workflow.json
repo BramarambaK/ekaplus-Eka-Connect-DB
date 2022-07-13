@@ -1,0 +1,145 @@
+{
+  "_id": "accountStatements_demand_workflow",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "accountStatementsDemand",
+  "label": "Manage Accounts",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11",
+  "sys__UUID": "cd0f1c19-16a3-464a-b703-bfd3d592e5ce",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. Document ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": true,
+    "selectAll": false,
+    "theme": "theme-grid-customer-connect",
+    "selectionMode": "single",
+    "resetSelection": true,
+    "tableEditing": false,
+    "freezeColumn": true,
+    "dependentPrimaryFilters": true
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Month and Year",
+      "sort": false,
+      "key": "monthAndYear",
+      "hidden": true,
+      "manageColhidden": true,
+      "primaryKey": {
+        "field": "PRIMARY_ID"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Document ID",
+      "sort": true,
+      "key": "documentId",
+      "hidden": false,
+      "category": "link",
+      "task": "download-link"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Date issued",
+      "sort": true,
+      "key": "date",
+      "dateformat": "DD/MM/YYYY",
+      "sourceDateFormat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Total amount",
+      "sort": true,
+      "key": "totalAmount",
+      "UIupdates": {
+        "listValue": "return ('$' + Number('${totalAmount}').toLocaleString(undefined, {minimumFractionDigits : 2, maximumFractionDigits : 2}))"
+      },
+      "filterOutput": "return '$' + Number(${start}).format(${extra.filter}) + ' - ' + '$' + Number(${end}).format(${extra.filter})"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-link",
+      "objectAction": "READ",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "download-link-action",
+      "type": "download-link",
+      "task": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "outcomes": [
+        {
+          "data": "selected.accountlistingcomposite.accountStatementsdemand",
+          "name": "accountlistingcomposite",
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD"
+        }
+      ],
+      "position": "top",
+      "label": "View document",
+      "disabled": "selected.accountlistingcomposite.accountStatementsdemand.length > 1",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "download-link",
+      "task": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+      "outcomes": [
+        {
+          "type": "downloadCST",
+          "workflowTaskName": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+          "setSelected": [
+            "selected.accountlistingcomposite.accountStatementsdemand"
+          ]
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST"
+}

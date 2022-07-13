@@ -1,0 +1,91 @@
+{
+  "_id": "allocateticketquantitysummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Allocate quantity Summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false,
+    "theme": "allocate-summary"
+  },
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "quantity",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${quantity}'",
+        "roundOff": "0.2-2",
+        "type": "hidden"
+      },
+      {
+        "key": "contractQuantity",
+        "aggregateFunction": "value",
+        "filterExpression": "return '${contractQuantity}'",
+        "type": "hidden"
+      },
+      {
+        "key": "maxQuantityToAllocate",
+        "type": "hidden",
+        "aggregateFunction": "value",
+        "filterExpression": "return '${maxQuantityToAllocate}'"
+      },
+      {
+        "key": "sellingOption",
+        "type": "hidden",
+        "aggregateFunction": "value",
+        "filterExpression": "return '${sellingOption}'"
+      },
+      {
+        "key": "tonnesSold",
+        "label": "return 'Allocated qty'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${tonnesSold}'",
+        "roundOff": "0.2-2",
+        "suffix": "'MT'",
+        "widgets": ["progressBar"],
+        "progressBar": {
+          "aggregateFunction": "sum",
+          "depends": [
+            "contractQuantity",
+            "tonnesSold",
+            "maxQuantityToAllocate",
+            "sellingOption"
+          ],
+          "valueExpression": "return '${tonnesSold}' === '-' ? 0 : parseFloat('${tonnesSold}'.split(',').join(''))",
+          "totalExpression": "return parseFloat(('${sellingOption}' === 'Cash') || ('${sellingOption}' === 'Pool') ? '${maxQuantityToAllocate}': '${contractQuantity}' === '-' ? 0 : '${contractQuantity}')",
+          "footerExpresion": "return ('${tonnesSold}' === '-') ? (('${sellingOption}' === 'Cash') || ('${sellingOption}' === 'Pool')) ? '0.00 MT of ${maxQuantityToAllocate} MT allocated' : '0.00 MT of ${contractQuantity} MT allocated' :(('${sellingOption}' === 'Cash') || ('${sellingOption}' === 'Pool')) ? (parseFloat('${tonnesSold}'.split(',').join('')) <= ${maxQuantityToAllocate} ? '${tonnesSold} of ${maxQuantityToAllocate} MT allocated' : 'Allocate qty exceeds max qty permitted') : parseFloat('${tonnesSold}'.split(',').join('')) <= '${contractQuantity}' ? '${tonnesSold} of ${contractQuantity} MT allocated' : 'Allocate qty exceeds max qty permitted'",
+          "tooltipExpression": "return ('${tonnesSold}' === '-') ? 'Within tolerance level' : (('${sellingOption}' === 'Cash') || ('${sellingOption}' === 'Pool')) ? (parseFloat('${tonnesSold}'.split(',').join('')) <= ${maxQuantityToAllocate} ? 'Within tolerance level' : 'Reduce quantity to ${maxQuantityToAllocate} MT or below') : parseFloat('${tonnesSold}'.split(',').join('')) <= '${contractQuantity}' ? 'Within tolerance level' : 'Reduce quantity to ${contractQuantity} MT or below'"
+        },
+        "style": {
+          "display": "flex",
+          "flex-grow": "1",
+          "flex": "0 0 50%",
+          "align-content": "center",
+          "justify-content": "center"
+        }
+      },
+      {
+        "key": "estimatedPrice",
+        "label": "return 'Total estimated revenue, excluding GST fees and charges'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${estimatedPrice}'",
+        "roundOff": "0.2-2",
+        "style": {
+          "display": "flex",
+          "flex-grow": "1",
+          "flex": "1 1 50%",
+          "align-content": "center",
+          "justify-content": "center"
+        }
+      }
+    ]
+  ],
+  "labelKey": "ACCOUNT_QUANTITY_SUMMARY",
+  "taskId": "allocateticketquantitysummary",
+  "object": "e83d592a-c526-11eb-8529-0242ac130003"
+}

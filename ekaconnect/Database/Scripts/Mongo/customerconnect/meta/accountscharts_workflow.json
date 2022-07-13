@@ -1,0 +1,126 @@
+{
+  "_id": "accountscharts_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Accounts charts",
+  "type": "workflow",
+  "layout": {
+    "emptyText": {
+      "visibility": "return !('${data}' && ${data}.find(i => i.period && i.period.length > 0) || JSON.parse('${selected.financescardview}' || '[]').find(i => i.period && i.period.length > 0 && i.filterKey == ${selected.filter.ngrFilter}[0]))",
+      "fromSelected": "selected.accountscomposite",
+      "message": [
+        "You have no invoices issued in this period.",
+        "All receivable and payable invoices issued in the last 8 quarters will display here."
+      ]
+    },
+    "header": {
+      "label": "Total receivables against payables",
+      "style": {
+        "font-size": "22px",
+        "margin-top": "-2px"
+      }
+    },
+    "getInitialData": false,
+    "name": "chart",
+    "type": "horizontalBar",
+    "xAxesTick": {
+      "display": false
+    },
+    "xAxisMin": 1,
+    "xAxisMax": true,
+    "legend": {
+      "display": false,
+      "position": "top"
+    },
+    "yAxesTick": {
+      "fontFamily": "\"Helvetica Neue LT W05 65 Medium\"",
+      "fontSize": 14
+    },
+    "toolTipHover": {
+      "enable": true,
+      "valueExpression": " return '$'+Math.round(${openAmountPayable}).toLocaleString('en-US')+ ' receivables'+ ', ' + '$'+Math.round(${openAmountReceivable}).toLocaleString('en-US') + ' payables'"
+    },
+    "chartLayout": {
+      "padding": {
+        "bottom": 0
+      }
+    },
+    "dynamicLabelsUsingSelected": "selected.accountscomposite.financeFilters",
+    "defaultNullData": true
+  },
+  "fields": [
+    {
+      "label": "Financial Year And Quarter",
+      "key": "financialYearAndQuarter",
+      "type": "label",
+      "sortBy": "descendingString",
+      "optionsExpression": "return ${selected}[0].periods['${payload}'].map(i => ({key: i}))",
+      "setSelected": "selected.accountscomposite.filter.financialYearAndQuarter"
+    },
+    {
+      "key": "period",
+      "filterType": "dropdown",
+      "filterBy": "period",
+      "multiple": false,
+      "prependOptions": ["Last 8 quarters", "Last 4 quarters"],
+      "sortBy": ["Last 8 quarters", "Last 4 quarters"],
+      "setSelected": "selected.accountscomposite.filter.quarter"
+    },
+    {
+      "label": "Open Amount Payable",
+      "key": "openAmountPayable",
+      "backgroundColor": [
+        "#9E2A2F",
+        "#BE531C",
+        "#CF7F00",
+        "#DAAA00",
+        "#ABAD25",
+        "#658D1B",
+        "#279989",
+        "#007681",
+        "#005F86"
+      ],
+      "fontColor": "#FFFFFF",
+      "type": "value",
+      "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? '+AU$' : '+$'",
+      "valueExpression": "return '${type}' === 'Accounts Payables' ? ${totalAmount} : 0.00"
+    },
+    {
+      "label": "Open Amount Receivable",
+      "key": "openAmountReceivable",
+      "backgroundColor": "#EEF2F5",
+      "fontColor": "#5D646F",
+      "type": "value",
+      "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? '-AU$' : '-$'",
+      "valueExpression": "return '${type}' === 'Accounts Receivables' ? ${totalAmount} : 0.00"
+    },
+    {
+      "key": "filterKey",
+      "type": "hidden",
+      "valueExpression": "return '${userType}' == 'Demand Customer' ? '${AddressBookNumber}' : '${payeeId}'"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "",
+      "objectAction": "READ",
+      "labelkey": "reset",
+      "decisionName": "reset",
+      "selection": "chart-label",
+      "outcomes": [
+        {
+          "name": "RELOADACTION",
+          "action": "reload",
+          "type": "client",
+          "reload": "receivableinvoicecardview"
+        }
+      ],
+      "label": ""
+    }
+  ],
+  "labelKey": "CHARTS",
+  "taskId": "accountscharts",
+  "object": "967db9f1-f006-400f-8dee-e81692973390"
+}

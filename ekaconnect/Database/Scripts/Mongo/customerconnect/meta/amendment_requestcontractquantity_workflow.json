@@ -1,0 +1,42 @@
+{
+  "_id": "amendment_requestcontractquantity_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request Contract quantity Summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false,
+    "cardClass": "contract-quantity-summary",
+    "theme": "contract-quantity-summary"
+  },
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "contractItemQuantity",
+        "filterExpression": "return '${contractItemQuantity}'",
+        "roundOff": "round",
+        "type": "hidden"
+      },
+      {
+        "key": "contractPrice",
+        "label": "return 'Estimated contract value for base grade. Excludes GST, fees and charges'",
+        "aggregateFunction": "product",
+        "prefix": "'$'",
+        "filterExpression": "return  '${contractPrice}' * '${contractItemQuantity}'",
+        "roundOff": "1.2-2",
+        "style": {
+          "display": "block",
+          "text-align": "left"
+        }
+      }
+    ]
+  ],
+  "labelKey": "",
+  "taskId": "amendment_requestcontractquantity",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "7c3175bd-143e-41d2-b44d-2507b704becf"
+}

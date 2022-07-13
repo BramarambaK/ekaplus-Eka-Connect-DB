@@ -1,0 +1,60 @@
+{
+  "_id": "accountlistingquery_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "type": "workflow",
+  "rows": 10000,
+  "layout": {
+    "header": {
+      "label": "Manage finances",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "processorInfo": {
+      "processorId": "c56c4ebf-2c7b-4090-8656-9484468da6e8",
+      "isProcessorOnly": true
+    },
+    "getInitialData": true,
+    "name": "query",
+    "mdmPayload": {},
+    "dataPayload": {}
+  },
+  "version": "V2",
+  "inputData": {
+    "type": "SystemTask",
+    "config": {
+      "id": "chained_combineFinanceDatasAccountStatements",
+      "userSpecificData": true,
+      "ttl": 3600,
+      "zero_record_ttl": 600,
+      "isAsynchCallRequired": "Y",
+      "isElasticCumSystemTask": true
+    }
+  },
+  "fields": [
+    {
+      "key": "ngrFinanceFilter",
+      "filterByExpression": "return ${userInfo}.customerType == 'Demand Customer' ? 'addressBookNumber' : 'payeeId'",
+      "filterBy": "filterKey",
+      "filterType": "dropdown",
+      "multiple": false,
+      "selectedAll": "return '${userInfo.customerType}' !== 'Grower' ? 'All ABNs' : 'All NGRs'",
+      "placeholder": "return '${userInfo.customerType}' !== 'Grower' ? 'Select a ABN' : 'Select a NGR'",
+      "persistInGlobal": true,
+      "useGlobalValue": true
+    },
+    {
+      "key": "tabsView",
+      "filterBy": "accountStatus",
+      "filterType": "tabs"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "accountlistingquery",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11"
+}
