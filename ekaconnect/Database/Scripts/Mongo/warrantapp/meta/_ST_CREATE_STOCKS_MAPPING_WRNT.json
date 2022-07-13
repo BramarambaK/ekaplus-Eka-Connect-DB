@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_CREATE_STOCKS_MAPPING_WRNT",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "5bc26c3c-ca8c-4d09-a416-06b3d7702e04"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_STOCKS_MAPPING_WRNT",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

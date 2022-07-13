@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_PROCESSOR_BULKOPERATIONS_FILE_TASK_WARRANT_PROCESSOR",
+  "name": "_ST_PROCESSOR_BULKOPERATIONS_FILE_TASK_WARRANT_PROCESSOR",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "\r\n    let data = req.body.bulkPayLoadData;\r\n    var responseData = [];\r\n    for (var i = 0; i < data.length; i++) {\r\n      if (data[i]['status'] == true) {\r\n        delete data[i]['_id'];\r\n        if (data[i]['operations'] == 'De-certify') {\r\n          if (data[i]['certification_status'] == 'Certified') {\r\n            data[i]['certification_status'] = 'Not-Certified';\r\n            responseData.push(data[i]);\r\n          }\r\n        } else if (data[i]['operations'] == 'Undo-Decertify') {\r\n          if (data[i]['certification_status'] == 'Not-Certified') {\r\n            data[i]['certification_status'] = 'Certified';\r\n            responseData.push(data[i]);\r\n          }\r\n        } else if (\r\n          data[i]['operations'] == 'Marking for Delivery' ||\r\n          data[i]['operations'] == 'Un-Marking for Delivery'\r\n        ) {\r\n          responseData.push(data[i]);\r\n        } else {\r\n          if (data[i]['grading_status'] == 'Passed') {\r\n            data[i]['grading_status'] = 'Re-grading';\r\n            responseData.push(data[i]);\r\n          } else if (data[i]['grading_status'] == 'Failed') {\r\n            data[i]['grading_status'] = 'Appeal';\r\n            responseData.push(data[i]);\r\n          } else if (data[i]['grading_status'] == 'Pending') {\r\n            data[i]['grading_status'] = 'Ungraded';\r\n            responseData.push(data[i]);\r\n          } else if (data[i]['grading_status'] == 'Appeal') {\r\n            data[i]['grading_status'] = 'Failed';\r\n            responseData.push(data[i]);\r\n          } else if (data[i]['grading_status'] == 'Re-grading') {\r\n            data[i]['grading_status'] = 'Passed';\r\n            responseData.push(data[i]);\r\n          }\r\n        }\r\n      }\r\n    }\r\n    res.status(200).send(responseData);\r\n ",
+  "sys__UUID": "702784dc-033a-442c-97aa-d42500f0f11f",
+  "sys__createdBy": "srini@ekaplus.com",
+  "sys__createdOn": ISODate("2019-05-22T09:51:04.600Z"),
+  "type": "processor"
+}

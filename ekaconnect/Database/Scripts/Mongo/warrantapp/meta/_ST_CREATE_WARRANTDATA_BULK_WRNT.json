@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_WARRANTDATA_BULK_WRNT",
+  "version": "V2",
+  "componentType": "SystemBulkUploadTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_WARRANTDATA_BULK",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

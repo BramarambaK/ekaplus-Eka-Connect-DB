@@ -1,0 +1,23 @@
+{
+    "_id" : "warrant_exchangedelivery_policy",
+    "type" : "policy",
+    "app_UUID" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "refType" : "object",
+    "refTypeId" : "13ef7767-ff43-41ce-a109-fd63ef5b0ddf",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "_id" :"warrant_tender_update_object_Connect_policy",
+    "app_UUID" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "sys__createdBy" : "admin@ekaplus.com",
+    "sys__version" : 1,
+    "refType" : "object",
+    "refTypeId" : "8051b482-5856-4c06-8028-908c26d00a7d",
+    "name" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "tenantId" : "990qa",
+    "type" : "policy",
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "UPDATE"
+            ]
+        }
+    },
+    "sys__createdOn" : ISODate("2021-02-22T08:05:19.925Z"),
+    "sys__UUID" : "6e75bd13-ab23-4632-aefe-e394b3fa8a9a"
+}

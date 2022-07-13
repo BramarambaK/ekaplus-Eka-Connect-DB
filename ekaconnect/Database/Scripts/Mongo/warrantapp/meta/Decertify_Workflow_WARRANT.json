@@ -1,0 +1,108 @@
+{
+  "_id": "Decertify_Workflow_WARRANT",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Request For De-Certification",
+  "type": "workflow",
+  "payLoad": "selected.stocklist",
+  "processorInfo": {
+    "processorId": "6bb17742-1e3b-4e46-9434-7e7ea155668b"
+  },
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "value": "currentDate",
+        "style": {
+          "width": "130px",
+          "margin-right": "20px"
+        }
+      }
+    ],
+    [
+      {
+        "key": "warrant_remarks"
+      }
+    ],
+    [
+      {
+        "suffix": "",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "data_transfer"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "decertifystock",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got deleted with some errors"
+            }
+          },
+          "data": "output.decertifystock",
+          "appendMsg": true,
+          "name": "updatecerificationstatus"
+        },
+        {
+          "name": "stocklist",
+          "showPopUp": false
+        }
+      ],
+      "label": "OK",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "decertify_stock",
+  "taskId": "decertifystock",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

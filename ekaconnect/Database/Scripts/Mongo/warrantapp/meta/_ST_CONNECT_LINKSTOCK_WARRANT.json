@@ -1,0 +1,20 @@
+{
+  "_id": "_ST_CONNECT_LINKSTOCK_WARRANT",
+  "componentType": "SystemTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "CONNECT_LINKSTOCK",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "columns": [
+    {
+      "name": "stock_ref_no",
+      "type": "VARCHAR"
+    },
+    {
+      "name": "quality",
+      "type": "VARCHAR"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "_id": "cancelsalescontract_Workflow_Warrant",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Cancel Sales Contract",
+  "type": "workflow",
+  "payLoad": "selected.exchangedeliverylist",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "value123": "currentDate",
+        "maximumDate": "return new Date()",
+        "minimumDate": "return '${contract_creation_date}' ? '${contract_creation_date}' : false",
+        "style": {
+          "width": "205px",
+          "margin-right": "30px"
+        }
+      },
+      {
+        "key": "reasons_for_cancellation",
+        "style": {
+          "width": "205px"
+        }
+      },
+      {
+        "key": "edmarkrefno",
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden"
+      },
+      {
+        "key": "Contract_Ref_No",
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden"
+      },
+      {
+        "key": "futurePrice",
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden"
+      },
+      {
+        "key": "reasonforcancellationFlag",
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden",
+        "value": "true"
+      },
+      {
+        "key": "title_transfer_status",
+        "value": "In",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "contract_creation_date",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "exchangedeliverylist",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "cancelsalescontract",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Sales contract has been cancelled successfully"
+            },
+            "failure": {
+              "message": " Sales contract cancellation api has failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract cancellation api has failed, please try once again"
+            }
+          },
+          "data": "output.cancelsalescontract",
+          "appendMsg": false,
+          "name": "_ST_CREATE_DELIVERYSTOCK_WRNT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Sales contract has been cancelled successfully"
+            },
+            "failure": {
+              "message": " Sales contract cancellation api has failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract cancellation api has failed, please try once again"
+            }
+          },
+          "data": "output.cancelsalescontract",
+          "appendMsg": false,
+          "name": "ST_PROCESSOR_CANCEL_SALE_CONTRACT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Sales contract has been cancelled successfully"
+            },
+            "failure": {
+              "message": " Sales contract cancellation api has failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Sales contract cancellation api has failed, please try once again"
+            }
+          },
+          "name": "ST_UPDATE_CONTRACTS",
+          "appendMsg": true,
+          "data": "output.ST_PROCESSOR_CANCEL_SALE_CONTRACT"
+        },
+        {
+          "name": "exchangedeliverylist",
+          "showToaster": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "exchangedeliverylist",
+          "resetForm": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "cancelsalescontract",
+  "taskId": "cancelsalescontract",
+  "object": "13ef7767-ff43-41ce-a109-fd63ef5b0ddf"
+}

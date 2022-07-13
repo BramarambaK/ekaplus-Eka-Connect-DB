@@ -1,0 +1,11 @@
+{
+    "_id" : "_ST_DOWNLOAD_SAMPLE_PROCESSOR_BASIC_warrant",
+    "name" : "_ST_DOWNLOAD_SAMPLE_PROCESSOR_warrant",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "snippet" : "\r\n    var samples = [];\r\n    samples = [\r\n  {\r\n    \"External Stock Ref No\": \"EXT-1\"\r\n  },\r\n  {\r\n    \"External Stock Ref No\": \"ExT-TEST-015\" \r\n  }\r\n]\r\n    res.status(200).send(samples);\r\n   ",
+    "sys__UUID" : "cdd69c4e-ff9e-4f9e-a83e-43ed1d82fb75",
+    "sys__createdOn" : ISODate("2020-01-07T09:57:30.305Z"),
+    "sys__createdBy" : "Bravo"
+}

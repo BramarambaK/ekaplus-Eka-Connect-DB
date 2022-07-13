@@ -1,0 +1,75 @@
+{
+  "_id": "getinfofilelist_BULKOPERATION_Warrant",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Get File Info",
+  "getDataFromExternalAPI": false,
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "c6f0d03f-8f76-4d18-bc68-145fe6550d1d"
+  },
+  "layout": {
+    "name": "list",
+    "selection": "row",
+    "options": {
+      "columnFilter": false,
+      "sortFilter": false,
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "reset": false,
+      "export": false,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "scrollHeight": "336px"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bulkoperation"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "Get File Info",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ColumnName"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "DataType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Mandatory"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "ColumnDescription"
+    }
+  ],
+  "taskId": "getfileinfolistbulk",
+  "object": "42232d1b-92ac-487f-8cfd-d522d208b83d"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_CREATE_PROCESSOR_STOPPING_MARKET_WRNT",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "processorInfo": {
+    "processorId": "f20b6339-946b-4111-b7e1-55608f8b00c0"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_PROCESSOR_STOPPING_MARKET_WRNT",
+  "object": "13ef7767-ff43-41ce-a109-fd63ef5b0ddf"
+}

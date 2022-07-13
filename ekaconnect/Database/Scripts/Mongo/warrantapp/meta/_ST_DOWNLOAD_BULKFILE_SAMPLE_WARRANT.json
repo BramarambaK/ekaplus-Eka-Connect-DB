@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_DOWNLOAD_BULKFILE_SAMPLE_WARRANT",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "325c832b-b54a-49e2-bc44-2e2e1853b765"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "_ST_DOWNLOAD_BULKFILE_SAMPLE",
+  "object": "9b3ebdfd-d990-478c-9862-47873bb40792"
+}

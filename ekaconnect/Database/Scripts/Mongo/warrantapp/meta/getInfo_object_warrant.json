@@ -1,0 +1,78 @@
+{
+    "_id" : "getInfo_object_warrant",
+    "name" : "Get_info_Warrant_Object",
+    "label" : "Get Info of Warrant Object",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "uniqueFields" : [],
+    "translatableKeys" : [],
+    "fields" : {
+        "ext_stock_ref_no" : {
+            "ext_stock_ref_no" : "External Stock Ref No",
+            "labelKey" : "ext_stock_ref_no",
+            "type" : "textbox",
+            "isRequired" : true,
+            "dataType" : "String",
+            "description" : "This column is for External Stock Ref No."
+        },
+        "ColumnName" : {
+            "ColumnName" : "Column Name",
+            "labelKey" : "ColumnName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "DataType" : {
+            "DataType" : "Data Type",
+            "labelKey" : "DataType",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Range" : {
+            "Range" : "Range",
+            "labelKey" : "Range",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "Mandatory" : {
+            "Mandatory" : "Mandatory",
+            "labelKey" : "Mandatory",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "ColumnDescription" : {
+            "ColumnDescription" : "Column Description",
+            "labelKey" : "ColumnDescription",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "cdcbce50-e8c5-457e-aa9e-4546fd651f5a"
+}

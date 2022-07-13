@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_APPEAL_WARRANT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "3332208a-6bed-44c3-b2c5-4c48b6f232f7"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "updateappealstatus",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

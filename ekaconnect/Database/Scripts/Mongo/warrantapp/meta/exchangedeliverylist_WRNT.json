@@ -1,0 +1,356 @@
+{
+  "_id": "exchangedeliverylist_WRNT",
+  "componentType": "UserTask",
+  "processorInfo": {
+    "processorId": "0ff7731f-158b-4a60-9cf6-0d3e25808f28"
+  },
+  "payLoad": "selected.exchangedeliverylist",
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "viewedmarkedlist",
+          "popupClass": "edit-modal907px",
+          "displayType": "popup"
+        }
+      ]
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": true,
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "createsalescontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Sales Contract",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "field && field.Contract_Ref_No && field.contract_creation_status && (field.contract_creation_status == 'Approved' || field.contract_creation_status == 'Pending')",
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "createsalescontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Create",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "\r\nvar flag = true;\r\nif(field && field.contract_creation_status && field.contract_creation_status == 'Approved' && field.Contract_Ref_No && !field.GMR_Ref_No){\r\nflag = false;\r\n}\r\nelse{\r\nflag = true;}",
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "modifysalescontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Modify",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "\r\nvar flag = true;\r\nif(field && field.contract_creation_status && field.contract_creation_status == 'Approved' && field.Contract_Ref_No && !field.GMR_Ref_No){\r\nflag = false;\r\n}\r\nelse{\r\nflag = true;}",
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "cancelsalescontract",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Cancel",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": true,
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "salesexecutioncreate",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Sales Execution",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "\r\nvar flag = true;\r\nif(field && field.contract_creation_status && field.contract_creation_status == 'Approved' && field.Contract_Ref_No && !field.GMR_Ref_No){\r\nflag = false;\r\n}\r\nelse{\r\nflag = true;}",
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "salesexecutioncreate",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Create",
+      "position": "top"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "selection": "global",
+      "objectAction": "READ",
+      "disabled": "\r\nvar flag = true;\r\nif(field && field.GMR_Ref_No && !field.invoice_Ref_No){\r\nflag = false;\r\n}\r\nelse{\r\nflag = true;}",
+      "outcomes": [
+        {
+          "data": "selected.exchangedeliverylist",
+          "name": "salesexecutioncancel",
+          "popupClass": "modal-500",
+          "displayType": "popup"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "Cancel",
+      "position": "top"
+    }
+  ],
+  "fields": [
+    {
+      "filter": true,
+      "task": "custom-link",
+      "category": "link",
+      "edit": false,
+      "sort": true,
+      "key": "edmarkrefno"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Contract_Ref_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contract_creation_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "contract_creation_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "CP_Name"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "origin"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "cropyear"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Packing_Size"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "no_of_units"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "corporate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "qty_unit"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "exchange_lot",
+      "label": "No of Lots"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "warehouse"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "shed"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "storage_location"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Profit_Center"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "Strategy"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "legal_entity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "GMR_Ref_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "GMR_creation_date",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "title_transfer_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "invoice_Ref_No"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "current_activity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "activity_status"
+    },
+    {
+      "key": "activityDate",
+      "dateformat23": "DD-MM-YYYY",
+      "hidden": true,
+      "dateformat": "yyyy-MM-dd"
+    }
+  ],
+  "label": "List of Exchange Delivery",
+  "labelKey": "Exchange_Delivery_List",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "showCheckbox": true,
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true,
+      "sessionStateDisable": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "selectAll": false
+  },
+  "object": "13ef7767-ff43-41ce-a109-fd63ef5b0ddf",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "exchangedeliverylist",
+  "type": "workflow"
+}

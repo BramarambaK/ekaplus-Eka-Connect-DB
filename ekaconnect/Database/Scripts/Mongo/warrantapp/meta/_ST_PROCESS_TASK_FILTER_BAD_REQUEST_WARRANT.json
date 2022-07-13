@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESS_TASK_FILTER_BAD_REQUEST_WARRANT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "54ad3490-f6e9-40e9-9f11-310449d69e90"
+    },
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESS_TASK_FILTER_BAD_REQUEST",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

@@ -1,0 +1,248 @@
+{
+  "_id": "bulkoperation_warrant",
+  "version": "V2",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bulkoperation",
+          "data": "selected.bulkoperation",
+          "dirtyCheck": false,
+          "resetForm": false
+        }
+      ],
+      "label": "Upload Document",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "downloadsample",
+      "decisionName": "downloadsample",
+      "outcomes": [
+        {
+          "data": "output.bulkoperation",
+          "name": "_ST_DOWNLOAD_BULKFILE_SAMPLE"
+        },
+        {
+          "data": "output._ST_DOWNLOAD_BULKFILE_SAMPLE",
+          "download": true,
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "pointer-events": "none"
+      },
+      "label": "Generate Sample File",
+      "type": "submit"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "getfileinfo",
+      "decisionName": "getfileinfo",
+      "outcomes": [
+        {
+          "data": "output._ST_DOWNLOAD_BULKFILE_SAMPLE",
+          "name": "getfileinfolistbulk",
+          "popupClass": "edit-modal907px",
+          "displayType": "popup"
+        }
+      ],
+      "label": "Get File Info"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bulkoperationlisting",
+          "data": "selected.bulkoperationlisting",
+          "dirtyCheck": false,
+          "resetForm": false
+        }
+      ],
+      "label": "Review Records",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "bulkoperation",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Validating the file"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "File uploaded with some errors"
+            }
+          },
+          "data": "output.bulkoperation",
+          "appendMsg": true,
+          "name": "WARRANT_ST_CREATE_DOCUMENT_BULKOPERATION"
+        },
+        {
+          "data": "output.WARRANT_ST_CREATE_DOCUMENT_BULKOPERATION",
+          "CSVRecToProcesNum": "25",
+          "name": "FILE_BULKPROCESS_TASK",
+          "returnData": "Y"
+        },
+        {
+          "data": "output.WARRANT_ST_CREATE_DOCUMENT_BULKOPERATION",
+          "name": "_ST_PROCESSOR_BULKFILE_TASK"
+        },
+        {
+          "data": "output._ST_PROCESSOR_BULKFILE_TASK",
+          "name": "bulkoperationlisting",
+          "showToaster": true
+        }
+      ],
+      "label": "Read File",
+      "position": "bottom",
+      "headers": {
+        "storageType": "fileSys",
+        "folderInS3": "warrantDocs",
+        "validExtension": "csv",
+        "fileUploadSuccessMessage": "File uploaded successfully. Validating the file now."
+      },
+      "type": "submit"
+    },
+    {
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "WARRANT_BULKDOCUMENT_UPLOAD_VALIDATE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.bulkoperation",
+          "appendMsg": false,
+          "name": "WARRANT_BULKDOCUMENT_UPLOAD_VALIDATE"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "activityDate",
+        "value": "currentDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "operations"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "warrant_remarks"
+      }
+    ],
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "file"
+      },
+      {
+        "key": "download",
+        "type": "button",
+        "label": "Generate Sample File",
+        "btnClass": "link p-0",
+        "decision": "downloadsample",
+        "style": {
+          "margin-right": "25px",
+          "margin-top": "4px"
+        }
+      },
+      {
+        "key": "getfile",
+        "type": "button",
+        "label": "Get File Info",
+        "btnClass": "link p-0",
+        "decision": "getfileinfo",
+        "style": {
+          "margin-right": "35px",
+          "margin-top": "4px"
+        }
+      }
+    ]
+  ],
+  "label": "Upload Document",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "defaultFormItemStyle": {},
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "Bulk Operations"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "menu": true
+  },
+  "object": "9b3ebdfd-d990-478c-9862-47873bb40792",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "bulkoperation",
+  "type": "workflow"
+}

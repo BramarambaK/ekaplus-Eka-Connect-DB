@@ -1,0 +1,15 @@
+{
+  "_id": "warrant_tender_update_object_policy",
+  "type": "policy",
+  "app_UUID": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "refType": "object",
+  "refTypeId": "852fac87-05a2-49cd-810f-9594924c8da1",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

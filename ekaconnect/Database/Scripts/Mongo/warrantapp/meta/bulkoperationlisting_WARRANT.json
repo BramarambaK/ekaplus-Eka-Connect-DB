@@ -1,0 +1,320 @@
+{
+  "_id": "bulkoperationlisting_WARRANT",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bulkoperation"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bulkoperation",
+          "data": "selected.bulkoperation",
+          "dirtyCheck": false,
+          "resetForm": false
+        }
+      ],
+      "label": "Upload Document",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bulkoperationlisting",
+          "data": "selected.bulkoperationlisting",
+          "dirtyCheck": false,
+          "resetForm": false
+        }
+      ],
+      "label": "Review Records",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn-success",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "bulkoperationlisting",
+      "outcomes": [
+        {
+          "data": "output.bulkoperationlisting",
+          "name": "_ST_PROCESSOR_BULKOPERATIONS_FILE_TASK_WARRANT"
+        },
+        {
+          "data": "output._ST_PROCESSOR_BULKOPERATIONS_FILE_TASK_WARRANT",
+          "name": "_ST_CREATE_GENERAL_WRNT",
+          "appendMsg": false
+        },
+        {
+          "data": "output._ST_PROCESSOR_BULKOPERATIONS_FILE_TASK_WARRANT",
+          "appendMsg": true,
+          "name": "_ST_CREATE_PROCESSOR_STOCKLIST"
+        },
+        {
+          "name": "stocklist"
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "remarks"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "activityDate",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "stock_ref_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "instrument_name_value"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "Contract_Ref_No"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "ext_stock_ref_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "edmarkrefno"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": false,
+      "key": "grading_status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "certification_status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "container_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "warehouse"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "shed"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "warehouse_ref_no"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "inventory_status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "stock_status"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "grading_date"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "open_qty"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "actual_quantity"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "allocation_status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "exchange_id"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "ico_marks"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "storing_from",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "storing_to",
+      "dateformat": "DD-MMM-YYYY"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "sample_status"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "exchange_lot"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "Profit_Center"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "Strategy"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "cropyear"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "origin"
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "sort": false,
+      "key": "product"
+    }
+  ],
+  "label": "Bulk Operations",
+  "labelKey": "WARRANT_COMPONENT",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": true,
+      "headerFilter": {
+        "label": "Select",
+        "field": "status",
+        "options": [
+          {
+            "label": "All",
+            "value": "reset"
+          },
+          {
+            "label": "True",
+            "value": true
+          },
+          {
+            "label": "False",
+            "value": false
+          }
+        ]
+      }
+    },
+    "theme": "theme-grid-white",
+    "preserveSelectedData": true,
+    "getInitialData": true,
+    "menu": true
+  },
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+  "objectAction": "READ",
+  "payLoad": "selected.bulkoperation",
+  "processorInfo": {
+    "processorId": "c9edabb2-a05d-4c8f-8a8a-9690b80fcaf3"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "taskId": "bulkoperationlisting",
+  "type": "workflow"
+}

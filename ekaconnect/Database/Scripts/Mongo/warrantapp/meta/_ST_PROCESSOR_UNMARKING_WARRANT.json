@@ -1,0 +1,13 @@
+{
+    "_id": "_ST_PROCESSOR_UNMARKING_WARRANT",
+    "componentType": "ProcessTask",
+    "objectAction": "READ",
+    "processorInfo": {
+        "processorId": "01e93a48-4475-4efb-8c8d-6d88fa5db826"
+    },
+    "refType": "app",
+    "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type": "workflow",
+    "taskId": "updateunmarkingstock",
+    "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

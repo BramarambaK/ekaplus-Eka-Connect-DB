@@ -1,0 +1,245 @@
+{
+  "_id": "document_Warrant",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategenraldetail",
+          "data": "selected.creategenraldetail"
+        }
+      ],
+      "label": "General Details",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentoption",
+          "data": "selected.documentoption"
+        }
+      ],
+      "label": "Upload Stocks",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "uploadedstocks",
+          "data": "selected.uploadedstocks"
+        }
+      ],
+      "label": "Stock Records",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "link p-0",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "downloadsample",
+      "decisionName": "downloadsample",
+      "outcomes": [
+        {
+          "data": "output.documentoption",
+          "name": "_ST_DOWNLOAD_SAMPLE"
+        },
+        {
+          "data": "output._ST_DOWNLOAD_SAMPLE",
+          "download": true,
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "pointer-events": "none"
+      },
+      "label": "Generate Sample File",
+      "type": "submit"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "getfileinfo",
+      "decisionName": "getfileinfo",
+      "outcomes": [
+        {
+          "data": "output.documentoption",
+          "name": "getfileinfolist",
+          "popupClass": "edit-modal907px",
+          "displayType": "popup"
+        }
+      ],
+      "label": "Get File Info"
+    },
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "documentoption",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Validating the file"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "File uploaded with some errors"
+            }
+          },
+          "data": "output.documentoption",
+          "appendMsg": true,
+          "name": "WARRANT_ST_CREATE_DOCUMENT"
+        },
+        {
+          "data": "output.WARRANT_ST_CREATE_DOCUMENT",
+          "name": "FILE_PROCESS_TASK_WARRANT",
+          "CSVRecToProcesNum": "25",
+          "returnData": "Y"
+        },
+        {
+          "data": "output.WARRANT_ST_CREATE_DOCUMENT",
+          "name": "_ST_PROCESSOR_FILE_TASK_WARRANT"
+        },
+        {
+          "data": "output._ST_PROCESSOR_FILE_TASK_WARRANT",
+          "name": "uploadedstocks",
+          "showToaster": true
+        }
+      ],
+      "label": "Read File",
+      "position": "bottom",
+      "headers": {
+        "storageType": "fileSys",
+        "folderInS3": "warrantDocs",
+        "validExtension": "csv",
+        "fileUploadSuccessMessage": "File uploaded successfully. Validating the file now."
+      },
+      "type": "submit"
+    },
+    {
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "WARRANT_DOCUMENT_UPLOAD_VALIDATE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.documentoption",
+          "appendMsg": false,
+          "name": "WARRANT_DOCUMENT_UPLOAD_VALIDATE"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "200px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "20px"
+        },
+        "suffix": "",
+        "type": "file",
+        "key": "file"
+      },
+      {
+        "key": "download",
+        "type": "button",
+        "label": "Generate Sample File",
+        "btnClass": "link p-0",
+        "decision": "downloadsample",
+        "style": {
+          "margin-right": "25px",
+          "margin-top": "4px"
+        }
+      },
+      {
+        "key": "getfile",
+        "type": "button",
+        "label": "Get File Info",
+        "btnClass": "btn-primary custom-btn oms-blue",
+        "decision": "getfileinfo",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-top": "22px",
+          "margin-left": "-10px"
+        }
+      },
+      {
+        "key": "instrument_name",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "instrument_name_value",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "quality",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "label": "Upload Document",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "defaultFormItemStyle": {},
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "New Grading Request"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "menu": true
+  },
+  "object": "b0895c93-0738-4cd8-a3ce-0546c47c70f5",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "sys__UUID": "67ad8a6a-3107-4d92-af94-8f64ac14eb49",
+  "taskId": "documentoption",
+  "type": "workflow",
+  "version": "V2"
+}

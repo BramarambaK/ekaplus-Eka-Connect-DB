@@ -1,0 +1,85 @@
+{
+  "_id": "connectupdatetender_WRNT",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "New User",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "column"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "connectupdatetender",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.connectupdatetender",
+          "appendMsg": false,
+          "name": "ST_CREATE_TENDER_CONNECT_WRNT"
+        },
+        {
+          "name": "stocklist"
+        }
+      ]
+    }
+  ],
+  "labelKey": "connectupdatetender_WRNT",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "key": "stock_ref_no"
+      },
+      {
+        "suffix": "",
+        "key": "ext_stock_ref_no"
+      },
+      {
+        "suffix": "",
+        "key": "status"
+      },
+      {
+        "suffix": "",
+        "key": "payload"
+      },
+      {
+        "suffix": "",
+        "key": "remarks"
+      }
+    ]
+  ],
+  "taskId": "connectupdatetender",
+  "object": "8051b482-5856-4c06-8028-908c26d00a7d"
+}

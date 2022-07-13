@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_REGRADING_WARRANT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "51ee3277-c896-404f-ba7e-17589b2e0d24"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "updateregradingstatus",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

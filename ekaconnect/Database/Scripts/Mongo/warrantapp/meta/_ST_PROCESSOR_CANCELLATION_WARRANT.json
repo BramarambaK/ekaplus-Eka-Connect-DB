@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_CANCELLATION_WARRANT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "a5428582-341e-4376-b3c1-20afb05eca5b"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "updatecancelstatus",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

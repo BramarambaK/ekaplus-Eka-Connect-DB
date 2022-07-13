@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_CREATE_PROCESSOR_GRADINGSTATUS_STOCKLIST_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "2f5e932b-c2ed-4032-9bd6-695f4a0e4eee"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_PROCESSOR_GRADINGSTATUS_STOCKLIST_WRNT",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESSOR_MARKING_WARRANT",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "4aa8a6bd-668c-425e-97ab-d6744a66b463"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "updatemarkingstock",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

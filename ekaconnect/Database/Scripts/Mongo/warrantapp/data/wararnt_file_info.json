@@ -1,0 +1,23 @@
+{
+    "_id" : "wararnt_file_info",
+    "type" : "policy",
+    "app_UUID" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "refType" : "object",
+    "refTypeId" : "cdcbce50-e8c5-457e-aa9e-4546fd651f5a",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

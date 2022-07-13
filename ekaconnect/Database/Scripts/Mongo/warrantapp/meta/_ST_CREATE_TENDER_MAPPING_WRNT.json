@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_CREATE_TENDER_MAPPING_WRNT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "a2fbc322-30ca-454c-b942-c065f1cec663"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_TENDER_MAPPING_WRNT",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

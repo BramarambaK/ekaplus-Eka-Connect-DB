@@ -1,0 +1,131 @@
+{
+  "_id": "contract_object_warrant",
+  "name": "contract_object_warrant",
+  "label": "Contract Object Warrant",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": ["contract_ref_no"],
+  "translatableKeys": [],
+  "fields": {
+    "title_transfer_status": {
+      "title_transfer_status": "Title Transfer Status",
+      "labelKey": "title_transfer_status",
+      "type": "textbox"
+    },
+    "contract_ref_no": {
+      "contract_ref_no": "Contract Ref No",
+      "labelKey": "contract_ref_no",
+      "type": "textbox"
+    },
+    "contract_status": {
+      "contract_status": "Contract Status",
+      "labelKey": "contract_status",
+      "type": "textbox"
+    },
+    "gmr_creation_date": {
+      "gmr_creation_date": "gmr_creation_date",
+      "labelKey": "gmr_creation_date",
+      "type": "datepicker",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "contract_creation_date": {
+      "contract_creation_date": "Contract Creation Date",
+      "labelKey": "contract_creation_date",
+      "type": "datepicker",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "CP_Name": {
+      "CP_Name": "CP Name",
+      "labelKey": "CP_Name",
+      "type": "textbox"
+    },
+    "Profit_Center": {
+      "Profit_Center": "Profit Center",
+      "labelKey": "Profit_Center",
+      "type": "textbox"
+    },
+    "Strategy": {
+      "Strategy": "Strategy",
+      "labelKey": "Strategy",
+      "type": "textbox"
+    },
+    "ext_stock_ref_no": {
+      "ext_stock_ref_no": "External Stock Ref No",
+      "labelKey": "ext_stock_ref_no",
+      "type": "textbox"
+    },
+    "edmarkrefno": {
+      "edmarkrefno": "ED Mark Ref No",
+      "labelKey": "edmarkrefno",
+      "type": "textbox"
+    },
+    "GMR_Ref_No": {
+      "GMR_Ref_No": "GMR Ref No",
+      "dataType": "String",
+      "isRequired": false,
+      "labelKey": "GMR_Ref_No",
+      "type": "textbox"
+    },
+    "int_stock_ref_no": {
+      "int_stock_ref_no": "Internal Stock Ref No",
+      "labelKey": "int_stock_ref_no",
+      "type": "textbox"
+    },
+    "GMR_creation_date": {
+      "GMR_creation_date": "GMR Creation Date",
+      "labelKey": "GMR_creation_date",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ext_stock_ref_no_array": {
+      "ext_stock_ref_no_array": "External Stock Ref No",
+      "labelKey": "ext_stock_ref_no_array",
+      "type": "textbox"
+    },
+    "internal_grd_dgrd_ref_no": {
+      "internal_grd_dgrd_ref_no": "internal_grd_dgrd_ref_no",
+      "labelKey": "internal_grd_dgrd_ref_no",
+      "type": "textbox"
+    },
+    "internalstock": {
+      "internalstock": "internalstock",
+      "labelKey": "internalstock",
+      "type": "textbox"
+    },
+    "corporate": {
+      "corporate": "Corporate",
+      "labelKey": "corporate",
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "internalContractItemRefNo": {
+      "internalContractItemRefNo": "internalContractItemRefNo",
+      "labelKey": "internalContractItemRefNo",
+      "type": "textbox",
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "5c2d334d-50aa-4194-a7e6-c9055b744c2e"
+}

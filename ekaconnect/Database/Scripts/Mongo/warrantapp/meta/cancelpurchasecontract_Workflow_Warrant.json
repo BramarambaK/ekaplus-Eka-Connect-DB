@@ -1,0 +1,184 @@
+{
+  "_id": "cancelpurchasecontract_Workflow_Warrant",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "Purchase Contract Details",
+  "type": "workflow",
+  "payLoad": "selected.stoppingmarketstockslist",
+  "processorInfo": {
+    "processorId": "ac3e60c3-7db1-458c-8d69-e735daba15a6"
+  },
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "type": "row"
+  },
+  "fields": [
+    [
+      {
+        "key": "activityDate",
+        "minimumDate": "return '${contract_creation_date}' ? '${contract_creation_date}' : false",
+        "maximumDate": "return new Date()",
+        "style": {
+          "width": "205px",
+          "margin-right": "30px"
+        }
+      },
+      {
+        "key": "reasons_for_cancellation",
+        "style": {
+          "width": "205px"
+        }
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "ext_stock_ref_no"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "contract_ref_no"
+      },
+      {
+        "key": "reasonforcancellationFlag",
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden",
+        "value": "true"
+      },
+      {
+        "key": "futurePrice",
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden"
+      },
+      {
+        "key": "title_transfer_status",
+        "value": "In",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "contract_creation_date",
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        }
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stoppingmarketstockslist",
+          "resetForm": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "cancelpurchasecontract",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Purchase contract has been cancelled successfully"
+            },
+            "failure": {
+              "message": " Purchase contract cancellation api has failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Purchase contract cancellation api has failed, please try once again"
+            }
+          },
+          "data": "output.cancelpurchasecontract",
+          "appendMsg": false,
+          "name": "_ST_CANCEL_PROCESSOR_STOPPINGMARKET_WRNT"
+        },
+        {
+          "data": "output._ST_CANCEL_PROCESSOR_STOPPINGMARKET_WRNT",
+          "appendMsg": false,
+          "name": "_ST_CREATE_STOPPINGMARKET_WRNT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Purchase contract has been cancelled successfully"
+            },
+            "failure": {
+              "message": " Purchase contract cancellation api has failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Purchase contract cancellation api has failed, please try once again"
+            }
+          },
+          "data": "output._ST_CANCEL_PROCESSOR_STOPPINGMARKET_WRNT",
+          "appendMsg": false,
+          "name": "ST_PROCESSOR_CANCEL_PURCHASE_CONTRACT"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Purchase contract has been cancelled successfully"
+            },
+            "failure": {
+              "message": " Purchase contract cancellation api has failed, please try once again"
+            },
+            "successWithWarning": {
+              "message": " Purchase contract cancellation api has failed, please try once again"
+            }
+          },
+          "data": "output.ST_PROCESSOR_CANCEL_PURCHASE_CONTRACT",
+          "appendMsg": true,
+          "name": "ST_UPDATE_CONTRACTS"
+        },
+        {
+          "name": "stoppingmarketstockslist",
+          "showToaster": true,
+          "resetForm": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stoppingmarketstockslist",
+          "resetForm": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "cancelpurchasecontract",
+  "taskId": "cancelpurchasecontract",
+  "object": "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : "_ST_PROCESSOR_FILE_TASK_WARRANT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "714afb2e-8dae-4802-b0db-6d99b8149d33"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_FILE_TASK_WARRANT",
+    "label" : "Create Files using Processor",
+    "object" : "b0895c93-0738-4cd8-a3ce-0546c47c70f5"
+}

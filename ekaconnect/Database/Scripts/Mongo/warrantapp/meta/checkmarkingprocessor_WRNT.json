@@ -1,0 +1,13 @@
+{
+  "_id": "checkmarkingprocessor_WRNT",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "3ae049a2-b45c-4758-9442-beb5f089d04a"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "checkmarkingprocessor",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "createpurchaseexecutionMDM_processor",
+  "name": "createpurchaseexecutionMDM_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": " var selectedData = req.body.selectedData[0];\r\n    var mdmData = [];\r\n    mdmData.push({ key: selectedData.contract_ref_no, value: selectedData.contract_ref_no });\r\n    var mdmData1 = { purchase_contract_ref_no: mdmData };\r\n    res.status(200).send(mdmData1);",
+  "sys__UUID": "cbaf9849-7f83-4cc0-a7fe-da783ff63c43",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

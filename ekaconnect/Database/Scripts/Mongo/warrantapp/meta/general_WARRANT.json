@@ -1,0 +1,186 @@
+{
+  "_id": "general_WARRANT",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "label": "General Details",
+  "type": "workflow",
+  "layout": {
+    "processorInfo": {
+      "processorId": "fcdb284a-e4bb-443a-97e3-ccab9770cec5"
+    },
+    "header": {
+      "title": "New Grading Request"
+    },
+    "menu": true,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "background": "white",
+      "justify-content": "flex-start",
+      "padding": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "formLayoutStyle": {
+      "height": "380px",
+      "padding-left": "6px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategenraldetail",
+          "data": "selected.creategenraldetail",
+          "dirtyCheck": true,
+          "resetForm": true
+        }
+      ],
+      "label": "General Details",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stockrecords",
+          "data": "selected.stockrecords",
+          "resetForm": true
+        }
+      ],
+      "label": "Stock Records",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "stocklist"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "documentoption",
+      "outcomes": [
+        {
+          "data": "output.creategenraldetail",
+          "name": "_ST_VALIDATION_CREATE_WARRANT"
+        },
+        {
+          "data": "selected.creategenraldetail",
+          "name": "documentoption"
+        }
+      ],
+      "style": {
+        "margin-right": "12px"
+      },
+      "label": "UPLOAD STOCKS",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-success",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "creategenraldetail",
+      "outcomes": [
+        {
+          "data": "output.creategenraldetail",
+          "name": "_ST_VALIDATION_CREATE_WARRANT"
+        },
+        {
+          "data": "output._ST_VALIDATION_CREATE_WARRANT",
+          "setSelected": ["selected.stocklisttrm"],
+          "name": "stocklisttrm"
+        }
+      ],
+      "label": "SELECT STOCKS",
+      "position": "bottom"
+    }
+  ],
+  "labelKey": "CREATE_GENERAL",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-left": "20px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "activityDate",
+        "value": "currentDate"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px",
+          "margin-right": "25px"
+        },
+        "suffix": "",
+        "key": "instrument_name"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "key": "request_type",
+        "value": "Grading"
+      },
+      {
+        "style": {
+          "width": "219px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        },
+        "suffix": "",
+        "key": "warrant_remarks"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "suffix": "",
+        "type": "hidden",
+        "key": "instrument_name_value"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "type": "hidden",
+        "key": "request_type_value"
+      }
+    ]
+  ],
+  "taskId": "creategenraldetail",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

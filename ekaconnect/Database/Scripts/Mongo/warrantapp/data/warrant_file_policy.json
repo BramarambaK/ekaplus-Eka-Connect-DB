@@ -1,0 +1,23 @@
+{
+    "_id" : "warrant_file_policy",
+    "type" : "policy",
+    "app_UUID" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "refType" : "object",
+    "refTypeId" : "b0895c93-0738-4cd8-a3ce-0546c47c70f5",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

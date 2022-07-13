@@ -1,0 +1,22 @@
+{
+  "_id": "FILE_BULKPROCESS_TASK_WARRANT",
+  "componentType": "FILE_CONTENT_TASK",
+  "version": "V2",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "apiInfo": {
+    "host": "${properties.eka_connect_host}",
+    "path": "/file/download/v2",
+    "headers": {
+      "storageType": "fileSys",
+      "folderInS3": "warrantDocs"
+    },
+    "method": "POST",
+    "responseDataKey": "",
+    "body": {}
+  },
+  "taskId": "FILE_BULKPROCESS_TASK",
+  "object": "9b3ebdfd-d990-478c-9862-47873bb40792"
+}

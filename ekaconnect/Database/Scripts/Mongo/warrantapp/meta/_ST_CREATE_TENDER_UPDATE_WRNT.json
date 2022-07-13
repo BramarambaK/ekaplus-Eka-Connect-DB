@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_TENDER_UPDATE_WRNT",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_TENDER_UPDATE_WRNT",
+  "label": "Create Tender in System",
+  "object": "852fac87-05a2-49cd-810f-9594924c8da1"
+}

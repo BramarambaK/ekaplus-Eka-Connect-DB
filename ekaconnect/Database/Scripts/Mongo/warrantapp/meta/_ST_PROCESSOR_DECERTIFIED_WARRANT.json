@@ -1,0 +1,13 @@
+{
+  "_id": "_ST_PROCESSOR_DECERTIFIED_WARRANT",
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {
+    "processorId": "97f40c2b-a110-4cb2-93fa-846b682b7d9b"
+  },
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "updatecerificationstatus",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}

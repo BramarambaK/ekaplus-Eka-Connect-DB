@@ -1,0 +1,14 @@
+{
+    "_id" : "__ST_VALIDATION_CREATE_WARRANT",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "4d70b285-ee16-444c-803f-1ef93afb4507"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "_ST_VALIDATION_CREATE_WARRANT",
+    "label" : "VALIDATE WARRANT OB",
+    "object" : "00b0627c-e0dd-4530-a765-116ab9748487"
+}

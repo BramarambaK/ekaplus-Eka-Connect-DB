@@ -1,0 +1,12 @@
+{
+    "_id" : "_UT_VIEW_VERSION_HISTORY_WRNT",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "decisions" : [],
+    "type" : "workflow",
+    "taskId" : "_UT_VIEW_VERSION_HISTORY",
+    "object": "00b0627c-e0dd-4530-a765-116ab9748487",
+    "label" : "Version History"
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "checkmarking_processor_Warrant",
+  "name": "checkmarking",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": " var data = {};\r\n    data = req.body.bulkPayLoadData[0];\r\n    res.status(200).send(data);",
+  "sys__UUID": "3ae049a2-b45c-4758-9442-beb5f089d04a",
+  "sys__createdBy": "ekauser@ekaplus.com"
+}

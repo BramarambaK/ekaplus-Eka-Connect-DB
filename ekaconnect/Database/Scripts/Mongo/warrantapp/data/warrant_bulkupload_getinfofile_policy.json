@@ -1,0 +1,15 @@
+{
+  "_id": "warrant_bulkupload_getinfofile_policy",
+  "type": "policy",
+  "app_UUID": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "refType": "object",
+  "refTypeId": "42232d1b-92ac-487f-8cfd-d522d208b83d",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

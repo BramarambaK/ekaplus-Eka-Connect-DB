@@ -1,0 +1,11 @@
+{
+  "_id": "cancelpurchase_datacall_WRNT",
+  "name": "cancelpurchase_datacall_WRNT",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "snippet": "res.status(200).send(req.body.selectedData.data);",
+  "sys__UUID": "ac3e60c3-7db1-458c-8d69-e735daba15a6",
+  "sys__createdOn": ISODate("2019-12-02T01:45:18.385Z"),
+  "sys__createdBy": "Bravo"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "dummyexchangedeliverylist_WRNT",
+    "componentType" : "UserTask",
+    "decisions" : [],
+    "fields" : [],
+    "label" : "List of Exchange Delivery",
+    "labelKey" : "Exchange_Delivery_List",
+    "layout" : {},
+    "object" : "13ef7767-ff43-41ce-a109-fd63ef5b0ddf",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "taskId" : "dummyexchangedeliverylist",
+    "type" : "workflow"
+}

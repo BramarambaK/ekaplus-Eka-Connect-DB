@@ -1,0 +1,23 @@
+{
+  "_id": "contractupdate_warrant",
+  "version": "V2",
+  "componentType": "ChainedSystemTask",
+  "object": "5c2d334d-50aa-4194-a7e6-c9055b744c2e",
+  "objectAction": "CREATE",
+  "taskId": "contractupdate",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "tags": "notifyDataChange",
+  "chainedTasks": [
+    {
+      "name": "ST_PROCESSOR_CONTRACTUPATE",
+      "data": "output.contractupdate",
+      "returnData": "Y"
+    },
+    {
+      "name": "ST_UPDATE_CONTRACTS",
+      "data": "output.ST_PROCESSOR_CONTRACTUPATE"
+    }
+  ]
+}

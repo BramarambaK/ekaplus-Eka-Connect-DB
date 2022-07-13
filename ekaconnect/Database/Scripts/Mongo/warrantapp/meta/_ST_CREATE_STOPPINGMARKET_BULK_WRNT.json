@@ -1,0 +1,11 @@
+{
+  "_id": "_ST_CREATE_STOPPINGMARKET_BULK_WRNT",
+  "version": "V2",
+  "componentType": "SystemBulkUploadTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "taskId": "_ST_CREATE_STOPPINGMARKET_BULK",
+  "object": "6abda3f2-5e71-46c2-9912-a87bc0451410"
+}

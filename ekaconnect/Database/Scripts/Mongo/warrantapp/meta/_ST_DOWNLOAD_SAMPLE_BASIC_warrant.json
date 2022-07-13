@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_DOWNLOAD_SAMPLE_BASIC_warrant",
+    "componentType" : "ProcessTask",
+    "objectAction" : "READ",
+    "processorInfo" : {
+        "processorId" : "cdd69c4e-ff9e-4f9e-a83e-43ed1d82fb75"
+    },
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "type" : "workflow",
+    "taskId" : "_ST_DOWNLOAD_SAMPLE",
+    "object" : "b0895c93-0738-4cd8-a3ce-0546c47c70f5"
+}

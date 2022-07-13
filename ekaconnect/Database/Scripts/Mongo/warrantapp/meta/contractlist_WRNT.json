@@ -1,0 +1,15 @@
+{
+    "_id" : "contractlist_WRNT",
+    "componentType" : "UserTask",
+    "decisions" : [],
+    "fields" : [],
+    "label" : "List",
+    "labelKey" : "List",
+    "layout" : {},
+    "object" : "5c2d334d-50aa-4194-a7e6-c9055b744c2e",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+    "taskId" : "dummycontractlist",
+    "type" : "workflow"
+}

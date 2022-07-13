@@ -1,0 +1,176 @@
+{
+  "_id": "EXTERNAL_LOGISTIC_FOR_WARRANT",
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "ada131db-5171-4b9c-b6d6-caae0c6cd2f5",
+  "type": "workflow",
+  "returnData": "Y",
+  "apiInfo": {
+    "path": "/collectionmapper/ada131db-5171-4b9c-b6d6-caae0c6cd2f5/00b0627c-e0dd-4530-a765-116ab9748487/fetchCollectionRecords",
+    "headers": {
+      "ttl": "60",
+      "Content-Type": "application/json"
+    },
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+    "body": {
+      "collectionName": "Sampling Logistics details",
+      "start": "",
+      "limit": "",
+      "criteria": {},
+      "getAllRecords": true
+    },
+    "columns": [
+      {
+        "name": "Stock_Ref_No",
+        "type": "VARCHAR",
+        "collectionCol": "Stock Ref No"
+      },
+      {
+        "name": "grading_status",
+        "type": "VARCHAR",
+        "collectionCol": "Grading Status"
+      },
+      {
+        "name": "no_of_units",
+        "type": "VARCHAR",
+        "collectionCol": "No Of Units"
+      },
+      {
+        "name": "legal_entity",
+        "type": "VARCHAR",
+        "collectionCol": "Legal Entity"
+      },
+      {
+        "name": "Unallocated_Quantity",
+        "type": "VARCHAR",
+        "collectionCol": "Unallocated Quantity"
+      },
+      {
+        "name": "Contract_Ref_No",
+        "type": "VARCHAR",
+        "collectionCol": "Contract Ref No"
+      },
+      {
+        "name": "Warehouse",
+        "type": "VARCHAR",
+        "collectionCol": "Warehouse"
+      },
+      {
+        "name": "Current_Quantity",
+        "type": "VARCHAR",
+        "collectionCol": "Current Quantity"
+      },
+      {
+        "name": "Profit_Center",
+        "type": "VARCHAR",
+        "collectionCol": "Profit Center"
+      },
+      {
+        "name": "Strategy",
+        "type": "VARCHAR",
+        "collectionCol": "Strategy"
+      },
+      {
+        "name": "Quantity_UOM",
+        "type": "VARCHAR",
+        "collectionCol": "Quantity UOM"
+      },
+      {
+        "name": "INTERNAL_GMR_REF_NO",
+        "type": "VARCHAR",
+        "collectionCol": "INTERNAL GMR REF NO"
+      },
+      {
+        "name": "Shed",
+        "type": "VARCHAR",
+        "collectionCol": "Shed"
+      },
+      {
+        "name": "Product",
+        "type": "VARCHAR",
+        "collectionCol": "Product"
+      },
+      {
+        "name": "Origin",
+        "type": "VARCHAR",
+        "collectionCol": "Origin"
+      },
+      {
+        "name": "Quality",
+        "type": "VARCHAR",
+        "collectionCol": "Quality"
+      },
+      {
+        "name": "Crop_Year",
+        "type": "VARCHAR",
+        "collectionCol": "Crop Year"
+      },
+      {
+        "name": "INTERNAL_GRD_DGRD_REF_NO",
+        "type": "VARCHAR",
+        "collectionCol": "INTERNAL GRD DGRD REF NO"
+      },
+      {
+        "name": "Container_No",
+        "type": "VARCHAR",
+        "collectionCol": "Container No"
+      },
+      {
+        "name": "External_Stock_Ref_No",
+        "type": "VARCHAR",
+        "collectionCol": "External Stock Ref No"
+      },
+      {
+        "name": "Packing_Type",
+        "type": "VARCHAR",
+        "collectionCol": "Packing Type"
+      },
+      {
+        "name": "Packing_Size",
+        "type": "VARCHAR",
+        "collectionCol": "Packing Size Description"
+      },
+      {
+        "name": "INVENTORY_STATUS",
+        "type": "VARCHAR",
+        "collectionCol": "Inventory Status"
+      },
+      {
+        "name": "STOCK_STATUS",
+        "type": "VARCHAR",
+        "collectionCol": "Stock Status"
+      },
+      {
+        "name": "STOCK_TYPE",
+        "type": "VARCHAR",
+        "collectionCol": "Stock Type"
+      },
+      {
+        "name": "ACTUAL_QUANTITY",
+        "type": "VARCHAR",
+        "collectionCol": "Current Quantity"
+      },
+      {
+        "name": "SAMPLE_STATUS",
+        "type": "VARCHAR",
+        "collectionCol": "Reserve Status"
+      },
+      {
+        "name": "WAREHOUSE_REF_NO",
+        "type": "VARCHAR",
+        "collectionCol": "Storage Location Ref No"
+      },
+      {
+        "name": "corporate",
+        "type": "VARCHAR",
+        "collectionCol": "Corporate"
+      }
+    ]
+  },
+  "taskId": "EXTERNAL_LOGISTIC_WARRANT",
+  "object": "00b0627c-e0dd-4530-a765-116ab9748487"
+}
