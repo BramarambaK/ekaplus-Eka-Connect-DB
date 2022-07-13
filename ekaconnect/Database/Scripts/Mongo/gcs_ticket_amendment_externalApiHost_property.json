@@ -1,0 +1,14 @@
+{
+    "_id" : "gcs_ticket_amendment_externalApiHost_property",
+    "type" : "property",
+    "name" : "gcs_ticket_amendment_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "GCS Ticket Amendment URL Host",
+    "defaultValue" : "https://servicesdev.na.cargill.com:8443",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External URL Host to call GCS Ticket Amendment."
+}

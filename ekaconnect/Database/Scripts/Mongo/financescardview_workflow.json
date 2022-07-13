@@ -1,0 +1,282 @@
+{
+  "_id": "financescardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Finances card view",
+  "type": "workflow",
+  "rows": 10000,
+  "layout": {
+    "fallback": "You have no invoices issued in this period.",
+    "header": {
+      "headerExpression": "var sum = ${data}.reduce((a, v) => a + parseInt(v.documentCount), 0); return sum + ' statements'; "
+    },
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 10,
+      "type": "showMoreLess"
+    },
+    "getInitialData": true,
+    "dynamicTabsUsingSelected": "selected.accountscomposite",
+    "dynamicFilterUsingSelected": "selected.accountscomposite.filter",
+    "dynamicDataUsingSelected": "selected.accountscomposite.financeFilters",
+    "hide": "return !${selected.accountscomposite.financescardview}.find(i => i.period && i.period.length > 0 && i.filterKey == ${selected.accountscomposite.filter.ngrFilter}[0])",
+    "cardsListClass": "card-view"
+  },
+  "version": "V2",
+  "inputData": {
+    "type": "SystemTask",
+    "config": {
+      "id": "chained_combineFinances",
+      "userSpecificData": true,
+      "ttl": 3600,
+      "zero_record_ttl": 600,
+      "isAsynchCallRequired": "Y",
+      "isElasticCumSystemTask": true,
+      "defaultOptions": {
+        "sort": [
+          {
+            "column": "cardType.raw",
+            "order": "asc"
+          }
+        ]
+      }
+    }
+  },
+  "fields": [
+    [
+      {
+        "key": "cardTypeFormatted",
+        "type": "heading",
+        "class": "header",
+        "valueExpression": "return '${cardType}'.toLowerCase() == 'payable invoices' ? 'Receivable invoices' : '${cardType}'.toLowerCase() === 'receivable invoices' ? 'Payable invoices' : '${cardType}'.toLowerCase() == 'remittance advice' ? 'Remittance advice' : '${cardType}'"
+      },
+      {
+        "key": "monthAndYearFormated",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "monthAndYearFormated",
+        "sortBy": [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ],
+        "style": {
+          "display": "none"
+        },
+        "optionsExpression": "return ${selected.financeFilters}[0].months['${selected.filter.financialYearAndQuarter}'].map(i => ({key: i}))",
+        "valueExpression": "let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];\r\nif(new Date('${documentDate}' ? '${documentDate}' : '${monthAndYear}') == 'Invalid Date') {\r\n\tconst m = '${monthAndYear}'.toLowerCase().split(\r\n  '${monthAndYear}'.includes('-') ?\r\n  '-' : ' ')[0]\r\n  \r\n  return months.find(i => i.toLowerCase() === m)\r\n} else {\r\nreturn months[new Date('${documentDate}' ? '${documentDate}' : '${monthAndYear}').getMonth()];\r\n}"
+      },
+      {
+        "key": "tabFilter",
+        "filterType": "filterData",
+        "filterExpression": "return ${selected.ngrFilter}[0] == '${filterKey}' && '${selected.financialYearAndQuarter}' == '${financialYearAndQuarter}'",
+        "type": "hidden"
+      }
+    ],
+    [
+      {
+        "label": "Statement",
+        "key": "remittanceNo",
+        "type": "details",
+        "decisionName": "downloadLink",
+        "config": {
+          "decisionNameExpression": "return '${fileId}' ? 'downloadLink' : 'details-value'; ",
+          "classExpression": "return '${fileId}' ? 'link' : ''; "
+        }
+      },
+      {
+        "label": "Document(s)",
+        "key": "documentCount",
+        "type": "details"
+      },
+      {
+        "label": "Date issued",
+        "key": "documentDateFormatted",
+        "type": "details",
+        "visibility": "return '${cardType}'.toLowerCase() == 'remittance advice'",
+        "valueExpression": "if ( '${cardType}'.toLowerCase() === 'remittance advice') {  let str = '${documentDate}' ; let arr = str.split('-'); let res = []; for(let i=arr.length-1;i>=0;i--){ res.push(arr[i]+'/'); } let final = res.toString().replace(/,/g, '').slice(0, -1); return final;  } else {return '${documentDate}' } "
+      },
+      {
+        "label": "Total amount",
+        "key": "totalAmount_remittance",
+        "type": "details",
+        "valueExpression": "return '${cardType}'.toLowerCase() == 'remittance advice'? ${totalAmount} : undefined",
+        "roundOff": "1.2-2",
+        "visibility": "return '${cardType}'.toLowerCase() == 'remittance advice'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "format": "Number"
+      },
+      {
+        "label": "Payables due",
+        "key": "receivablesDue_receivable",
+        "type": "details",
+        "valueExpression": "return '${cardType}'.toLowerCase() == 'receivable invoices'? '${openAmount}' : undefined",
+        "roundOff": "1.2-2",
+        "visibility": "return '${cardType}'.toLowerCase() == 'receivable invoices'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "format": "Number"
+      },
+      {
+        "label": "Payables paid",
+        "key": "receivablesPaid_receivable",
+        "type": "details",
+        "valueExpression": "return '${cardType}'.toLowerCase() === 'receivable invoices' ? ${totalAmount} - '${openAmount}' : undefined",
+        "roundOff": "1.2-2",
+        "visibility": "return '${cardType}'.toLowerCase() == 'receivable invoices'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "format": "Number"
+      },
+      {
+        "label": "Receivables due",
+        "key": "receivablesDue_payable",
+        "type": "details",
+        "valueExpression": "return '${cardType}'.toLowerCase() == 'payable invoices'? '${openAmount}' : undefined",
+        "roundOff": "1.2-2",
+        "visibility": "return '${cardType}'.toLowerCase() == 'payable invoices'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "format": "Number"
+      },
+      {
+        "label": "Receivables paid",
+        "key": "receivablesPaid_payable",
+        "type": "details",
+        "valueExpression": "return '${cardType}'.toLowerCase() === 'payable invoices' ? ${totalAmount} - '${openAmount}' : undefined",
+        "roundOff": "1.2-2",
+        "visibility": "return '${cardType}'.toLowerCase() == 'payable invoices'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "format": "Number"
+      },
+      {
+        "label": "Total payables",
+        "key": "totalAmount_receivable",
+        "type": "details",
+        "valueExpression": "return '${cardType}'.toLowerCase() == 'receivable invoices'? ${totalAmount} : undefined",
+        "roundOff": "1.2-2",
+        "visibility": "return '${cardType}'.toLowerCase() == 'receivable invoices'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "format": "Number"
+      },
+      {
+        "label": "Total receivables",
+        "key": "totalAmount_payable",
+        "type": "details",
+        "valueExpression": "return '${cardType}'.toLowerCase() == 'payable invoices'? ${totalAmount} : undefined",
+        "roundOff": "1.2-2",
+        "visibility": "return '${cardType}'.toLowerCase() == 'payable invoices'",
+        "prefix": "'${userInfo.customerType}' === 'Demand Customer' ? 'AU$' : '$'",
+        "format": "Number"
+      }
+    ],
+    [
+      {
+        "label": "View documents",
+        "type": "footer",
+        "iconClass": "rightGreen-arrow-icon",
+        "decisionName": "navigateTab"
+      }
+    ],
+    [
+      {
+        "type": "hidden",
+        "key": "financialYearAndQuarter",
+        "valueExpression": "if ('${financialYearAndQuarter}') {\r\n  return '${financialYearAndQuarter}'\r\n} else {\r\n  const mapper = {\r\n    3: 'Q1',\r\n    4: 'Q2',\r\n    1: 'Q3',\r\n    2: 'Q4'\r\n  };\r\n\r\n  const d = new Date('${documentDate}');\r\n  const quarter = mapper[Math.floor(d.getMonth() / 3) + 1];\r\n  const year = +('' + d.getFullYear()).substring(2);\r\n  const fy = (quarter == 'Q3' || quarter == 'Q4' ? 'FY' + (year - 1) + '/' + year : \r\n  'FY' + year + '/' + (year + 1)) + ' ' + quarter;\r\n  return fy;\r\n}"
+      },
+      {
+        "type": "hidden",
+        "key": "period",
+        "valueExpression": "return '${selected}[0].financialYears' ? ${selected}[0].financialYears['${financialYearAndQuarter}'] : null"
+      },
+      {
+        "key": "filterKey",
+        "type": "hidden",
+        "valueExpression": "return '${userType}' == 'Demand Customer' ? '${AddressBookNumber}' : '${payeeId}'"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "decisionName": "downloadLink",
+      "task": "EXT_CUSTOMERDOCS_DATA",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "selected.cstdownload",
+          "name": "EXT_CUSTOMERDOCS_DATA"
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "decisionName": "navigateTab",
+      "task": "navigateTab",
+      "outcomes": [
+        {
+          "data": "output.financescardview",
+          "name": "accountlistingcomposite",
+          "restoreStateQuery": "accountlistingcomposite",
+          "restoreQueryExpression": "return { 'cardType': ${data}.cardTypeFormatted.toLowerCase(), 'tabIndex': ${data}.cardTypeFormatted.toLowerCase() == 'payable invoices' ? 2 : 1, 'monthAndYear': ${data}.documentDate ? moment(${data}.documentDate).format('MMM YYYY').toUpperCase() : ${data}.monthAndYear, 'documentId': ${data}.remittanceNo }",
+          "restoreState": true,
+          "setListingState": [
+            {
+              "setStateQuery": "accountlistingcomposite.accountPayables",
+              "applyStateIf": "return ${data}.cardType == 'payable invoices'",
+              "applyState": {
+                "filter": ["monthAndYear"]
+              }
+            },
+            {
+              "setStateQuery": "accountlistingcomposite.accountPayablesDemand",
+              "applyStateIf": "return ${data}.cardType == 'payable invoices'",
+              "applyState": {
+                "filter": ["monthAndYear"]
+              }
+            },
+            {
+              "setStateQuery": "accountlistingcomposite.accountReceivables",
+              "applyStateIf": "return ${data}.cardType == 'receivable invoices'",
+              "applyState": {
+                "filter": ["monthAndYear"]
+              }
+            },
+            {
+              "setStateQuery": "accountlistingcomposite.accountReceivables",
+              "applyStateIf": "return ${data}.cardType == 'remittance advice'",
+              "applyState": {
+                "filter": ["monthAndYear", "documentId"]
+              }
+            },
+            {
+              "setStateQuery": "accountlistingcomposite.accountReceivablesDemand",
+              "applyStateIf": "return ${data}.cardType == 'receivable invoices'",
+              "applyState": {
+                "filter": ["monthAndYear"]
+              }
+            },
+            {
+              "setStateQuery": "accountlistingcomposite.accountReceivablesDemand",
+              "applyStateIf": "return ${data}.cardType == 'remittance advice'",
+              "applyState": {
+                "filter": ["monthAndYear", "documentId"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "financescardview",
+  "object": "d59b8c10-8c94-4b87-a430-f6fd69888a37"
+}

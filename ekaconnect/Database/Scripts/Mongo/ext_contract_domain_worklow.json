@@ -1,0 +1,30 @@
+{
+    "_id" : "EXT_CONTRACT_DOMAIN_COLLECTION_DATA",
+    "componentType" : "ExtSystemTask",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.eka_connect_host}",
+        "path" : "/collectionmapper/12325a98-a959-4939-9005-4158d136afcd/46e84f42-6288-4027-b6d0-fd1c11019259/fetchCollectionRecords",
+        "method" : "POST",
+        "body" : {
+            "collectionName" : "Contract Domain",
+            "start" : "",
+            "limit" : "",
+            "ttl" : "0",
+            "criteria" : {}
+        },
+        "inputMapping" : {},
+        "headers" : {
+            "X-Locale" : "en-US",
+            "Content-Type" : "application/json",
+            "ttl" : "0"
+        },
+        "responseDataKey" : "data"
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXT_CONTRACT_DOMAIN_COLLECTION_DATA",
+"sys__UUID":"fa813c89-3908-4a39-bd8e-94eb3885ca0a"
+}

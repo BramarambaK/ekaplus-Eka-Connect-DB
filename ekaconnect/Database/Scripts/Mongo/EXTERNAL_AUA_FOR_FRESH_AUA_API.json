@@ -1,0 +1,42 @@
+{
+    "_id" : "EXTERNAL_AUA_FOR_FRESH_AUA_API",
+    "componentType" : "ExtSystemTask",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+       "host" : "${properties.external_aua_host}",
+        "path" :  "${properties.external_aua_path_FreshAUA}",
+        "method" : "POST",
+        "mergePayload":true,
+        "body" : {
+            "userId":"##user.name"
+            },
+        "authConfig" : {
+            "type" : "external",
+            "method" : "POST",
+            "authUrl" : "${properties.ext_notification_auth_api_host}${properties.ext_notification_auth_api_path}",
+            "headers" : {
+                "Content-Type" : "application/x-www-form-urlencoded"
+            },
+            "body" : {
+                "client_id" : "${properties.ext_notification_auth_api_details_clientId}",
+                "grant_type" : "client_credentials",
+                "client_secret" : "${properties.ext_notification_auth_api_details_client_secret}",
+                "scope" : "groups"
+            },
+            "tokenExtractKey" : [ 
+                "access_token"
+            ]
+        },
+        "inputMapping" : {},
+        "headers" : {
+			"Content-Type" : "application/json",
+            "Accept" : "application/json",
+            "Accept-Version" : "${properties.external_aua_api_version}"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXTERNAL_AUA_FOR_FRESH_AUA_API"
+}

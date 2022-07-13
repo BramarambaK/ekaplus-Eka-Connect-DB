@@ -1,0 +1,22 @@
+{
+  "_id": "FILE_BULKPROCESS_TASK_CUSTOMERCONNECT",
+  "componentType": "FILE_CONTENT_TASK",
+  "version": "V2",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "type": "workflow",
+  "apiInfo": {
+    "host": "${properties.eka_connect_host}",
+    "path": "/file/download/v2",
+    "headers": {
+      "storageType": "fileSys",
+      "folderInS3": "customerdocs"
+    },
+    "method": "POST",
+    "responseDataKey": "",
+    "body": {}
+  },
+  "taskId": "FILE_BULKPROCESS_TASK_CUSTOMERCONNECT",
+  "object": "900fcf0a-cbc5-4de1-ad8c-c2987f196cd5"
+}

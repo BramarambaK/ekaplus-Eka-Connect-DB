@@ -1,0 +1,27 @@
+{
+  "_id": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD",
+  "componentType": "ExtSystemTask",
+  "object": "c406a257-7104-46ae-9c73-f901a9874d11",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "version": "V2",
+  "objectAction": "LISTVIEW",
+  "apiInfo": {
+    "host": "${cargil_accountDocumentDownload_externalApiHost}",
+    "path": "${cargil_accountDocumentDownload_externalApiPath}",
+    "method": "GET",
+    "body": {},
+    "authConfig": {
+      "type": "graining",
+      "method": "POST",
+      "scope": "api.grainpricing",
+      "authUrl": "${authUrl}"
+    },
+    "inputMapping": {},
+    "headers": {
+      "Content-Type": "application/x-www-form-urlencoded"
+    }
+  },
+  "type": "workflow",
+  "refType": "app",
+  "taskId": "EXTERNAL_ACCOUNT_DOCUMENT_DOWNLOAD"
+}

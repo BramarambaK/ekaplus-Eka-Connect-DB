@@ -1,0 +1,19 @@
+{
+    "_id" : "fetch_offers_to_execute_async_internal",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "46e84f42-6288-4027-b6d0-fd1c11019259",
+    "objectAction" : "UPDATE",
+    "taskId" : "fetch_offers_to_execute_async_internal",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+	"sys__UUID" : "a8ee93c2-9429-4f5b-9399-5bfeca1c2b10",
+    "type" : "workflow",
+    "chainedTasks" : [ 
+	{
+      "name" : "_ST_PROCESSOR_FETCH_OFFERS_TO_EXECUTE",
+      "appendMsg" : false,
+      "data" : "output.fetch_offers_to_execute_async_internal"
+    }
+    ]
+}

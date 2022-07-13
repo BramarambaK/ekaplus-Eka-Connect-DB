@@ -1,0 +1,31 @@
+{
+    "_id" : "EXTERNAL_GCS_TICKET_AMENDMENT_API",
+    "componentType" : "ExtSystemTask",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${properties.gcs_ticket_amendment_externalApiHost}",
+        "path" : "${properties.gcs_ticket_amendment_externalApiPath}",
+        "method" : "POST",
+        "body" : {},
+        "authConfig" : {
+            "type" : "layer7_ticket",
+            "authUrl" : "${properties.layer7_token_externalApiHost}",
+            "method" : "POST",
+            "Content-Type" : "application/x-www-form-urlencoded",
+            "client_id" : "${properties.layer7_externalClientId_ticket}",
+            "scope" : "${properties.layer7_gcs_externalApiScope_ticket}",
+            "grant_type" : "client_credentials",
+            "token_cachettl" : "${properties.layer7_token_cachettl}"
+        },
+        "headers" : {
+			"Content-Type" : "text/json"
+		}
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXTERNAL_GCS_TICKET_AMENDMENT_API",
+	"sys__UUID": "bd2ed25a-b647-11ec-b909-0242ac120002"
+}
+

@@ -1,0 +1,30 @@
+{
+    "_id" : "EXTERNAL_CACP_GET_NGR_DETAILS_API",
+    "componentType" : "ExtSystemTask",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "version" : "V2",
+    "objectAction" : "CREATE",
+    "apiInfo" : {
+        "host" : "${CACP_GetNGRDetails_externalApiHost}",
+        "path" : "${CACP_GetNGRDetails_externalApiPath}",
+        "method" : "POST",
+        "body" : {},
+        "authConfig" : {
+            "type" : "cacp",
+            "authUrl" : "${properties.CACP_token_externalApiHost}",
+            "method" : "POST",
+            "Content-Type" : "application/x-www-form-urlencoded",
+            "client_id" : "${properties.CACP_externalClientId}",
+            "scope" : "${properties.CACP_externalApiScope}",
+            "grant_type" : "client_credentials",
+            "token_cachettl" : "${properties.CACP_token_cachettl}"
+        },
+        "headers" : {
+            "Content-Type" : "text/plain"
+        }
+    },
+    "type" : "workflow",
+    "refType" : "app",
+    "taskId" : "EXTERNAL_CACP_GET_NGR_DETAILS_API",
+    "sys__UUID" : "7093ffa6-b651-11ec-b909-0242ac120002"
+}
