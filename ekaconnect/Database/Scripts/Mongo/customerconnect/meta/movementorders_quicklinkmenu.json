@@ -1,0 +1,35 @@
+{
+  "_id": "movementorders_quicklinkmenu",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "sys__UUID": "20247b6f-6731-4233-adf9-77e9ac2cf89b",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "menu": [
+            {
+              "label": "Manage movement orders",
+              "handler": "movementorderscomposite",
+              "type": "externalLinkSameTab",
+              "data": "selected.movementorderscomposite",
+              "targetPathExpression": "const ngr = Array.isArray(${ngrFilter}) ? ${ngrFilter}[0] : ${ngrFilter}; const name = ${bpNames}.find(i => i.key == ngr).value; const refNo = ${bpNames}.find(i => i.value == name).key; const appHome = ${propertyList}.find(i => i.key == 'app_home').value; return appHome.split('/Landing')[0] + '/toRequestDelivetyOrder?abnNumber=' + refNo + '&gcsName=' + name;"
+            },
+            {
+              "label": "Request grainFlow outturn",
+              "handler": "movementorderscomposite",
+              "type": "externalLinkSameTab",
+              "link": "${app_home}/GrainFlowMovementOrders/RequestOutturn",
+              "linkFromProperty": true
+            },
+            {
+              "label": "Manage tickets",
+              "handler": "ticketscomposite"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

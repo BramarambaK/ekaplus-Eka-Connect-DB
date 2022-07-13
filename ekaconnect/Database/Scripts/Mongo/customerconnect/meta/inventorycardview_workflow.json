@@ -1,0 +1,116 @@
+{
+  "_id": "inventorycardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Inventory Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "var sum = ${data}.reduce((a, v) => a + parseInt(v.quantity), 0); return '${data.length} stacks'; "
+    },
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 10,
+      "type": "showMoreLess"
+    },
+    "cardsListClass": "card-view"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "class": "header",
+        "valueExpression": "return '${product} - ${quality}'"
+      },
+      {},
+      {
+        "key": "siteHeading",
+        "type": "heading",
+        "iconClass": "location-icon",
+        "valueExpression": "return '${site} - ${bulkHandler}'"
+      },
+      {
+        "key": "cropYear",
+        "type": "heading",
+        "filterType": "groups"
+      },
+      {
+        "key": "quality",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "key": "site",
+        "type": "heading",
+        "filterType": "groups",
+        "style": {
+          "display": "none"
+        }
+      }
+    ],
+    [
+      {
+        "label": "Quantity",
+        "key": "quantity",
+        "aggregateFunction": "sum",
+        "type": "details",
+        "suffix": "'${quantityUnit}'",
+        "roundOff": "1.0-2"
+      },
+      {
+        "label": "Stack average",
+        "key": "stackAverageformatted",
+        "aggregateFunction": "display",
+        "type": "details",
+        "class": "white-space",
+        "valueExpression": "return '${stackAverage}'=='-' ?'-' : '${stackAverage}'.replaceAll(',', ',\\n')"
+      }
+    ],
+    [
+      {
+        "label": "Manage inventory",
+        "type": "footer",
+        "iconClass": "rightGreen-arrow-icon",
+        "decisionName": "navigateToCACP"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "labelkey": "REVIEW",
+      "task": "navigate",
+      "type": "submit",
+      "decisionName": "navigateToCACP",
+      "outcomes": [
+        {
+          "data": "output.inventorycardview",
+          "name": "_ST_PROCESS_INVENTORY_TAB"
+        },
+        {
+          "type": "externalLinkSameTab",
+          "data": "output._ST_PROCESS_INVENTORY_TAB",
+          "targetPath": "${appHome}/toManagerInventory?tab=${tab}&abnNumber=${bpRefNo}&gcsName=${bpName}&site=${site}&commodity=${product}&grade=${quality}&season=${cropYear}",
+          "name": "inventorycomposite",
+          "setSelected": "selected.inventorycomposite"
+        }
+      ],
+      "label": "RESET",
+      "position": "bottom",
+      "style": {
+        "margin-right": "auto"
+      }
+    }
+  ],
+  "labelKey": "Cards View",
+  "taskId": "inventorycardview",
+  "object": "f895de3c-5f05-4671-b70d-4c180078fc07"
+}

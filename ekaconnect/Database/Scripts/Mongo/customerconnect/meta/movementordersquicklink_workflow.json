@@ -1,0 +1,41 @@
+{
+  "_id": "movementordersquicklink_workflow",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "inputData": {
+    "type": "menuObject",
+    "config": {
+      "menuId": "20247b6f-6731-4233-adf9-77e9ac2cf89b"
+    }
+  },
+  "label": "Quick Link",
+  "labelKey": "Quick Link",
+  "layout": {
+    "name": "flexible-menu",
+	"component": "FlexibleMenuComponent",
+    "header": {
+      "label": "Quick links",
+      "style": {
+        "color": "#3B4047",
+        "font-size": "18px",
+        "font-weight": "600",
+        "padding": "0px 10px 10px 20px",
+        "margin": "0 5px",
+        "border-bottom": "solid 1px #DBE1EB"
+      }
+    },
+    "quickLinkMenuStyle": {
+   "style": {
+     "margin-bottom": "-18px"
+   } 
+  }
+  },
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "movementordersquicklink",
+  "type": "workflow"
+}

@@ -1,0 +1,15 @@
+{
+	"_id": "layer7_AuthConfigDisabled_property",
+	"type": "property",
+	"name": "layer7_AuthConfigDisabled",
+	"label": "layer7_AuthConfigDisabled",
+	"propertyLevel": "tenant",
+	"dataType": "boolean",
+	"fieldtype": "textbox",
+	"length": "10",
+	"defaultValue": false,
+	"refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+	"description": "AuthConfigDisabled should be false for Prepod and true for QA",
+	"editSupportedInUI": true,
+	"listOfValues": "true,false"
+}

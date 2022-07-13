@@ -1,0 +1,102 @@
+{
+  "_id": "offercontractdetailscomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Offer for contract details page",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "card-contract-details",
+      "workflows": [
+        {
+          "style": {
+            "display": "grid"
+          },
+          "class": "card-ticket-details",
+          "workflows": [
+            {
+              "name": "offercontract_manageoffer",
+              "data": "selected.contractlistingcomposite.contractrequests",
+              "visibility": "return '${contractlistingcomposite.contractrequests[0].approvalStatus}'.toLowerCase() == 'awaiting review'"
+            }
+          ]
+        },
+        {
+          "name": "offercontract_statusdetails",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        },
+        {
+          "name": "offercontract_contractdetails",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        },
+        {
+          "name": "offercontract_offerdetails",
+          "data": "selected.contractlistingcomposite.contractrequests"
+        }
+      ]
+    }
+  ],
+
+  "type": "workflow",
+  "layout": {
+    "breadcrumbs": [
+      {
+        "label": "Manage contracts",
+        "type": "string",
+        "task": "listing"
+      },
+      {
+        "label": "Offer for contract",
+        "type": "string",
+        "value": null
+      }
+    ],
+    "name": "customv2",
+    "menu": false,
+    "customScrollBar": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "contractdomain",
+      "outcomes": [
+        {
+          "name": "contractdomaincomposite",
+          "clearSelected": ["selected.offercontractdetailscomposite"]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "listing",
+      "outcomes": [
+        {
+          "name": "contractlistingcomposite",
+          "clearSelected": ["selected.offercontractdetailscomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "offercontractdetailscomposite",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "3d8d547b-ddd1-465d-9f0e-c814f1c0a7f0",
+  "deviceType": "mobile"
+}

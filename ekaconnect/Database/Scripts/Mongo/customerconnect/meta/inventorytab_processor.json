@@ -1,0 +1,9 @@
+{
+  "_id": "inventorytab_processor",
+  "name": "inventorytab_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "const data = req.body.data ? req.body.data[0] : req.body; res.status(200).send({ appHome: req.body.propertyList.app_home.split('/Landing')[0], tab: 'ENTITLEMENT', bpRefNo: data.bpRefNo, bpName: data.bpName, site: data.site, product: data.product, quality: data.quality, cropYear: data.cropYear });",
+  "sys__UUID": "c16af326-33ba-4bd7-ba40-26109b2f3aee"
+}

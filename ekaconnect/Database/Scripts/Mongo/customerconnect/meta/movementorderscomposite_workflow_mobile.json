@@ -1,0 +1,73 @@
+{
+  "_id": "movementorderscomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "label": "Movement orders composite",
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "margin": "24px 0"
+              },
+              "workflows": [
+                {
+                  "name": "movementordersquery"
+                }
+              ]
+            },
+            {
+              "name": "movementordersquicklink"
+            },
+            {
+              "style": {
+                "margin": "38px 0 34px"
+              },
+              "workflows": [
+                {
+                  "name": "movementorderssummary",
+                  "data": "selected.movementorderscomposite.movementordersquery"
+                }
+              ]
+            },
+            {
+              "name": "movementorderscharts",
+              "data": "selected.movementorderscomposite.movementordersquery"
+            },
+            {
+              "name": "movementorderscardview",
+              "data": "selected.movementorderscomposite.movementorderscharts"
+            },
+            {
+              "name": "lastUpdated",
+              "data": "selected.movementorderscomposite.movementordersquery"
+            }
+          ],
+          "style": {
+            "width": "100%"
+          }
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "title": "Open contracts"
+    },
+    "name": "customv2",
+    "clearSelected": ["selected"],
+    "menu": false
+  },
+  "decisions": [],
+  "taskId": "movementorderscomposite",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+  "deviceType": "mobile"
+}

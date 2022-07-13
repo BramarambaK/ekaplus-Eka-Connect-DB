@@ -1,0 +1,42 @@
+{
+    "_id": "managerequestparentgroup-quicklink_workflow",
+    "componentType": "UserTask",
+    "version": "V2",
+    "decisions": [],
+    "fields": [],
+    "inputData": {
+      "type": "menuObject",
+      "config": {
+        "menuId": "628bc9cf-b8b0-4588-af3d-20c6c6bd0cb5"
+      }
+    },
+    "label": "Quick Link",
+    "labelKey": "Quick Link",
+    "layout": {
+      "name": "flexible-menu",
+      "component": "FlexibleMenuComponent",
+      "header": {
+        "label": "Quick links",
+        "style": {
+          "color": "#3B4047",
+          "font-size": "18px",
+          "font-weight": "600",
+          "padding": "0px 10px 10px 20px",
+          "margin": "0 5px",
+          "border-bottom": "solid 1px #DBE1EB"
+        }
+      },
+      "quickLinkMenuStyle": {
+     "style": {
+       "margin-bottom": "-18px"
+     } 
+    }
+    },
+    "object": "fabb0cc8-c2bd-4e0d-8022-d810c9591873",
+    "objectAction": "READ",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId": "managerequestparentgroup-quicklink",
+    "type": "workflow"
+  }
+  

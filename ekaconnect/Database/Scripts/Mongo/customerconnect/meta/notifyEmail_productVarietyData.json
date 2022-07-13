@@ -1,0 +1,20 @@
+{
+    "_id" : "notifyEmail_productVarietyData",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "c7e068e2-a9ba-11ec-b909-0242ac120002",
+    "objectAction" : "CREATE",
+    "taskId" : "notifyEmail_productVarietyData",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+	"sys__UUID" : "ce8b0458-aa74-11ec-b909-0242ac120002",
+    "type" : "workflow",
+    "tags" : "FailureNotifyData",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_NOTIFY_EMAIL_PRODUCT_VARIETY_DATA",
+            "appendMsg" : false,
+            "data" : "output.notifyEmail_productVarietyData"
+        }
+    ]
+}

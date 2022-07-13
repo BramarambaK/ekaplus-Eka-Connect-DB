@@ -1,0 +1,47 @@
+{
+    "_id" : "movementConfig_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "movementsConfig",
+    "object" : "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b",
+    "label" : "movementsConfig",
+    "type" : "workflow",
+    "tag" : "config",
+    "layout" : {
+        "header" : {
+            "label" : "Movements",
+            "style" : {
+                "font-size" : "22px"
+            }
+        },
+        "name" : "movementsConfig"
+    },
+    "version" : "V2",
+    "inputData" : {
+        "type" : "SystemTask",
+		"defaultBody" : {
+			"payLoadData" : {
+				"pagination" : {
+					"start" : "@requestBody.qP.from",
+					"limit" : "@requestBody.qP.size"
+				}
+			}
+		},
+        "config" : {
+            "id" : "push_movementData",
+            "isAsynchCallRequired" : "Y",
+            "isElasticCumSystemTask" : true,
+            "statusFlagToBeUpdated" : true,
+            "statusFlagWorklowTask" : "movementsConfig",
+			"hasStatusFlag" : true,
+			"backupIndex" : false,
+			"reIndex" : false
+        }
+    },
+    "fields" : [],
+    "decisions" : [],
+    "labelKey" : "movementsConfig",
+    "description" : "Execute to Crawl Movements Data"
+}

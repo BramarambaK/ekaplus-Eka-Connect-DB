@@ -1,0 +1,30 @@
+{
+    "_id" : "MULTI_API_ACCPAYMENT",
+    "componentType" : "MULTI_API_TASK",
+	"userSpecific" : true,
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "taskId" : "MULTI_API_ACCPAYMENT",
+    "object" : "d59b8c10-8c94-4b87-a430-f6fd69888a37",
+    "type" : "workflow",
+    "version" : "V2",
+    "returnData" : "Y",
+    "mergeParams" : {
+        "sources" : [ 
+            {
+                "id" : "EXTERNAL_FINANCE_PAYABLE_ACCOUNTS"
+            }, 
+            {
+                "id" : "EXTERNAL_FINANCE_RECEIVABLE_ACCOUNTS"
+            }, 
+            {
+                "id" : "EXTERNAL_FINANCE_USERINFO"
+            }, 
+            {
+                "id" : "EXTERNAL_FINANCE_REMITTANCE_DATA"
+            }
+        ],
+        "query" : "select b.PRIMARY_ID as \"serialNo\",d.customerType as \"userType\",DECODE(d.customerType,'Grower',b.PAYEEID,b.BPREFNO) as \"filterKey\",Null as \"AggregatedPayableId\",b.AggregatedReceivableId as  \"AggregatedReceivableId\",b.BPREFNO as \"bpRefNo\",b.BPNAME as \"bpName\",b.PAYEEID as \"payeeId\",b.PAYEENAME as \"payeeName\",b.TYPE as \"type\",b.CURRENCY as \"currency\",b.TOTALAMOUNT as \"totalAmount\",b.DOCUMENTCOUNT as \"documentCount\",b.TOTALAMOUNTINFOREIGNCURRENCY as \"totalAmountInForeignCurrency\",b.OPENAMOUNT as \"openAmount\",b.MONTHANDYEAR as \"monthAndYear\",b.FINANCIALYEARANDQUARTER as \"financialYearAndQuarter\",b.OPENAMOUNTINFOREIGNCURRENCY as \"openAmountInForeignCurrency\",b.DOCUMENTVALUES as \"DocumentValues\",b.CDPAYEEID as \"CDPayeeId\",b.CDPAYEENAME as \"CDPayeeName\",Null as \"documentNumber\",Null as \"documentDate\",Null as \"fileId\",Null as \"RemittanceId\",Null as \"remittanceNo\",CASE WHEN b.TYPE='Accounts Payables' THEN 'Payable Invoices' ELSE 'Receivable Invoices' END as \"cardType\",d.userName as \"sys__createdBy\",d.userName as \"sys__updatedBy\",CURRENT_TIMESTAMP() as \"sys__createdOn\",CURRENT_TIMESTAMP() as \"sys__updatedOn\",b.AddressBookNumber as \"AddressBookNumber\" from EXTERNAL_FINANCE_RECEIVABLE_ACCOUNTS b join EXTERNAL_FINANCE_USERINFO d  UNION All select a.PRIMARY_ID as \"serialNo\",c.customerType as \"userType\",DECODE(c.customerType,'Grower',a.PAYEEID,a.BPREFNO) as \"filterKey\",a.AggregatedPayableId as \"AggregatedPayableId\",Null as \"AggregatedReceivableId\",a.BPREFNO as \"bpRefNo\",a.BPNAME as \"bpName\",a.PAYEEID as \"payeeId\",a.PAYEENAME as \"payeeName\",a.TYPE as \"type\",a.CURRENCY as \"currency\",a.TOTALAMOUNT as \"totalAmount\",a.DOCUMENTCOUNT as \"documentCount\",a.TOTALAMOUNTINFOREIGNCURRENCY as \"totalAmountInForeignCurrency\",a.OPENAMOUNT as \"openAmount\",a.MONTHANDYEAR as \"monthAndYear\",a.FINANCIALYEARANDQUARTER as \"financialYearAndQuarter\",a.OPENAMOUNTINFOREIGNCURRENCY as \"openAmountInForeignCurrency\",a.DOCUMENTVALUES as \"DocumentValues\",a.CDPAYEEID as \"CDPayeeId\",a.CDPAYEENAME as \"CDPayeeName\",Null as \"documentNumber\",Null as \"documentDate\",Null as \"fileId\",Null as \"RemittanceId\",Null as \"remittanceNo\",CASE WHEN a.TYPE='Accounts Payables' THEN 'Payable Invoices' ELSE 'Receivable Invoices' END as \"cardType\",c.userName as \"sys__createdBy\",c.userName as \"sys__updatedBy\",CURRENT_TIMESTAMP() as \"sys__createdOn\",CURRENT_TIMESTAMP() as \"sys__updatedOn\",a.AddressBookNumber as \"AddressBookNumber\" from EXTERNAL_FINANCE_PAYABLE_ACCOUNTS a join EXTERNAL_FINANCE_USERINFO c UNION All  select e.PRIMARY_ID as \"serialNo\",f.customerType as \"userType\",DECODE(f.customerType,'Grower',e.PAYEEID,e.BPREFNO) as \"filterKey\",Null as \"AggregatedPayableId\",Null as  \"AggregatedReceivableId\",e.BPREFNO as \"bpRefNo\",e.BPNAME as \"bpName\",e.PAYEEID as \"payeeId\",e.PAYEENAME as \"payeeName\",e.TYPE as \"type\",e.CURRENCY as \"currency\",e.TOTALAMOUNT as \"totalAmount\",e.DOCUMENTCOUNT as \"documentCount\",e.TOTALAMOUNTINFOREIGNCURRENCY as \"totalAmountInForeignCurrency\",Null as \"openAmount\",Null as \"monthAndYear\",Null as \"financialYearAndQuarter\",Null as \"openAmountInForeignCurrency\",e.DOCUMENTVALUES as \"DocumentValues\",e.CDPAYEEID as \"CDPayeeId\",e.CDPAYEENAME as \"CDPayeeName\",e.DOCUMENTNUMBER as \"documentNumber\",e.DOCUMENTDATE as \"documentDate\",e.FILEID as \"fileId\",e.REMITTANCEID as \"RemittanceId\",e.REMITTANCENO as \"remittanceNo\",'Remittance Advice' as \"cardType\",f.userName as \"sys__createdBy\",f.userName as \"sys__updatedBy\",CURRENT_TIMESTAMP() as \"sys__createdOn\",CURRENT_TIMESTAMP() as \"sys__updatedOn\",e.AddressBookNumber as \"AddressBookNumber\"  from EXTERNAL_FINANCE_REMITTANCE_DATA e join EXTERNAL_FINANCE_USERINFO f;"
+    }
+}

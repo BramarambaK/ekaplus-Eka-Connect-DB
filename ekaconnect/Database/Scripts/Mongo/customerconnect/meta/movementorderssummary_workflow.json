@@ -1,0 +1,73 @@
+{
+  "_id": "movementorderssummary_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Movement orders summary",
+  "type": "workflow",
+  "layout": {
+    "name": "summary-tile",
+    "getInitialData": false
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "decisionName": "navigateToCACP",
+      "type": "submit",
+      "task": "navigateToCACP",
+      "outcomes": [
+        {
+          "data": "output.movementorderssummary",
+          "name": "_ST_PROCESS_MOVEMENT_ORDER_TAB"
+        },
+        {
+          "type": "externalLinkSameTab",
+          "data": "output._ST_PROCESS_MOVEMENT_ORDER_TAB",
+          "targetPath": "${appHome}/toMovementOrderTable?abnNumber={bpRefNo}&gcsName={bpName}&tab=DELIVERY ORDERS",
+          "name": "movementorderscomposite"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "key": "userType",
+        "label": "return 'Approved movement orders'",
+        "aggregateFunction": "count",
+        "filterExpression": "return '${status}' === 'Approved' && ${openQuantity} != 0 ? true : false",
+        "decisionName": "navigateToCACP"
+      },
+      {
+        "key": "openQuantity",
+        "label": "return 'Open quantity'",
+        "suffix": "'${quantityUnit}'",
+        "aggregateFunction": "sum",
+        "valueExpression": "return Math.max(${orderedQuantity} - ${movedQuantity}, 0)",
+        "filterExpression": "return '${status}' === 'Approved' && ${openQuantity} !=0 ? true : false",
+        "roundOff": "round",
+        "decisionName": "navigateToCACP"
+      },
+      {
+        "key": "userType",
+        "label": "return 'Requested movement orders'",
+        "aggregateFunction": "count",
+        "filterExpression": "return '${status}' === 'Requested' ? true : false",
+        "decisionName": "navigateToCACP"
+      },
+      {
+        "key": "orderedQuantity",
+        "label": "return 'Total requested quantity'",
+        "suffix": "'${quantityUnit}'",
+        "aggregateFunction": "sum",
+        "filterExpression": "return '${status}' === 'Requested' ? true : false",
+        "roundOff": "round",
+        "decisionName": "navigateToCACP"
+      }
+    ]
+  ],
+  "labelKey": "DERIVATIVE_ORDER_VIEW",
+  "taskId": "movementorderssummary",
+  "object": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b"
+}

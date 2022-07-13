@@ -1,0 +1,40 @@
+{
+  "_id": "locations_object",
+  "name": "locations_object",
+  "label": "Locations Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["locationcityname", "locationgroupname", "locgrouptype"],
+  "fields": {
+    "locationcityname": {
+      "locationcityname": "Location City Name",
+      "labelKey": "locationcityname",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+	"locationgroupname": {
+      "locationgroupname": "Location Group Name",
+      "labelKey": "locationgroupname",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+	"locgrouptype": {
+      "locgrouptype": "Location Group Type",
+      "labelKey": "locgrouptype",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "704d4d38-6ec2-4378-9ec0-639f4237a89a"
+}

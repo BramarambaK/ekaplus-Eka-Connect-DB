@@ -1,0 +1,207 @@
+{
+  "_id": "movementorders_object",
+  "name": "movementorders_object",
+  "label": "Movement orders Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["movementRefNo"],
+  "fields": {
+    "cpContractType": {
+      "cpContractType": "CP Contract Type",
+      "labelKey": "cpContractType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "contractSubType": {
+      "contractSubType": "Contract Sub Type",
+      "labelKey": "contractSubType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "userType": {
+      "userType": "User Type",
+      "labelKey": "userType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpRefNo": {
+      "bpRefNo": "BP Ref No",
+      "labelKey": "bpRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpName": {
+      "bpName": "BP Name",
+      "labelKey": "bpName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "movementRefNo": {
+      "movementRefNo": "Movement Ref No",
+      "labelKey": "movementRefNo",
+      "type": "String",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Product",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "cropYear": {
+      "cropYear": "Crop Year",
+      "labelKey": "cropYear",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "deliveryFromDate": {
+      "deliveryFromDate": "Delivery Date From",
+      "labelKey": "deliveryFromDate",
+      "dataType": "date",
+      "sourceDateFormat": "dd-MM-yyyy"
+    },
+    "deliveryToDate": {
+      "deliveryToDate": "Delivery Date To",
+      "labelKey": "deliveryToDate",
+      "dataType": "date",
+      "sourceDateFormat": "dd-MM-yyyy"
+    },
+    "orderedQuantity": {
+      "orderedQuantity": "Ordered Quantity",
+      "labelKey": "orderedQuantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "movedQuantity": {
+      "movedQuantity": "Moved Quantity",
+      "labelKey": "movedQuantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dispatchedQuantity": {
+      "dispatchedQuantity": "Dispatched Quantity",
+      "labelKey": "dispatchedQuantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "openQuantity": {
+      "openQuantity": "Open Quantity",
+      "labelKey": "openQuantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quantityUnit": {
+      "quantityUnit": "Quantity Unit",
+      "labelKey": "quantityUnit",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "transportMode": {
+      "transportMode": "Transport",
+      "labelKey": "transportMode",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "location": {
+      "location": "Location",
+      "labelKey": "location",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "movementOrder": {
+      "movementOrder": "Movement Order",
+      "labelKey": "movementOrder",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "lastUpdatedTime": {
+      "lastUpdatedTime": "Last Updated Time",
+      "labelKey": "lastUpdatedTime",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bulkHandler": {
+      "bulkHandler": "Bulk Handler",
+      "labelKey": "bulkHandler",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ngrFilter": {
+      "ngrFilter": "Filter",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey"
+    },
+    "ngrMOFilter": {
+      "ngrMOFilter": "Filter",
+      "labelKey": "ngrMOFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrMOFilterKey"
+    },
+    "dateCollector": {
+      "dateCollector": "Date Collector",
+      "labelKey": "dateCollector",
+      "type": "multiselect"
+    },
+    "bpSubGroupRefNo": {
+      "bpSubGroupRefNo": "BP Sub Group Ref No",
+      "labelKey": "bpSubGroupRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "propertyList": {
+      "propertyList": "Filter",
+      "labelKey": "propertyList",
+      "type": "multiselect",
+      "serviceKey": "propertyList"
+    },
+    "bpNames": {
+      "bpNames": "Filter",
+      "labelKey": "bpNames",
+      "type": "multiselect",
+      "serviceKey": "bpNames"
+    }
+  },
+  "sys__UUID": "0b2d91ec-e3e8-45e2-9bb6-5e0d17cd499b"
+}

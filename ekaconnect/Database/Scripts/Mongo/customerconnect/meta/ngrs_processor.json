@@ -1,0 +1,9 @@
+{
+  "_id": "ngrs_processor",
+  "name": "ngrs_processor",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": " const dataToSend = {\r\n      ngrdetails: req.body.selectedData.selectedtickets ? [req.body.selectedData.selectedtickets[0]] : []\r\n    };\r\n    let data = {};\r\n    data = req.body.selectedData.ngrdetails ? { ...req.body.selectedData } : dataToSend;\r\n    res.status(200).send(data);",
+  "sys__UUID": "415736ee-ac7a-4469-83e6-a0c6a566b3aa"
+}

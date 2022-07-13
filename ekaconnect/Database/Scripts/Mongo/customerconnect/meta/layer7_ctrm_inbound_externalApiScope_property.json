@@ -1,0 +1,15 @@
+{
+    "_id" : "layer7_ctrm_inbound_externalApiScope_property",
+    "type" : "property",
+    "name" : "layer7_ctrm_inbound_externalApiScope",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "Layer 7 ctrm_inbound token scope",
+    "defaultValue" : "api://9868b097-b65d-4668-88d4-84f0cdbe5b1c/.default",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External scope to generate token from Layer 7 ctrm_inbound system.",
+	"sys__UUID": "0a6e3b64-c870-489f-9d62-49ea9a91d4be"
+}
