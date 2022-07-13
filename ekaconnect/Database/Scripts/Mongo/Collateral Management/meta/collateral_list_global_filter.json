@@ -1,0 +1,142 @@
+{
+    "_id" : "collateral_list_global_filter",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "UPDATE",
+            "labelkey" : "CREATE",
+            "outcomes" : [ 
+                {
+                    "clearSelected" : [ 
+                        "selected.collaterallistglobalfilter"
+                    ],
+                    "name" : "collaterallist"
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "globalfilter",
+            "type" : "submit",
+            "position" : "bottom",
+            "outcomes" : [ 
+                {
+                    "setSelected" : [ 
+                        "selected.collaterallistglobalfilter"
+                    ],
+                    "result" : {
+                        "success" : {
+                            "message" : "data got replaced successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "appendMsg" : false,
+                    "data" : "selected.collaterallistglobalfilter",
+                    "name" : "collaterallist"
+                }
+            ],
+            "label" : "UPDATE"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "UPDATE",
+            "outcomes" : [ 
+                {
+                    "clearSelected" : [ 
+                        "selected.collaterallistglobalfilter"
+                    ],
+                    "name" : "collaterallist"
+                }
+            ],
+            "position" : "header",
+            "type" : "close"
+        }
+    ],
+    "fields" : [ 
+        [ 
+            {
+                "key" : "collateralType",
+                "label" : "Collateral Type",
+                "style" : {
+                    "width" : "170px",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "20px"
+                }
+            }, 
+            {
+                "key" : "counterparty",
+                "label" : "Counterparty",
+                "style" : {
+                    "width" : "170px",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "20px"
+                },
+                "virtualScroll" : true,
+                "filter" : true
+            }, 
+            {
+                "key" : "contractRefNo",
+                "label" : "Contract Ref No",
+                "style" : {
+                    "width" : "170px",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "20px"
+                }
+            }
+        ], 
+        [ 
+            {
+                "key" : "gmrId",
+                "label" : "GMR Id",
+                "style" : {
+                    "width" : "170px",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "20px"
+                }
+            }, 
+            {
+                "key" : "invoiceId",
+                "label" : "Invoice Id",
+                "style" : {
+                    "width" : "170px",
+                    "margin-bottom" : "30px",
+                    "margin-right" : "20px"
+                }
+            }
+        ]
+    ],
+    "label" : "Global Filter",
+    "layout" : {
+        "defaultFormItemStyle" : {},
+        "defaultFormLabelStyle" : {},
+        "topLine" : {
+            "display" : true
+        },
+        "processorInfo" : {
+            "processorId" : "4644b666-c166-4d1d-abfc-0d0d40d1ca83"
+        },
+        "name" : "create",
+        "formLayoutStyle" : {},
+        "defaultFormValueStyle" : {},
+        "type" : "row"
+    },
+    "object" : "0754d5b7-8462-49c6-b30c-c20e1ad8ac1e",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "taskId" : "collaterallistglobalfilter",
+    "type" : "workflow"
+}

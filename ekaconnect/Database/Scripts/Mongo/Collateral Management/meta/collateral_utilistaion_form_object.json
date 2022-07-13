@@ -1,0 +1,138 @@
+{
+  "_id": "collateral_utilization_form_object",
+  "name": "collateral_utilization_form_object",
+  "label": "Collateral Utilization Form",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": [],
+  "translatableKeys": [],
+  "fields": {
+    "allocatedTo": {
+      "allocatedTo": "Allocated To",
+      "labelKey": "allocatedTo",
+      "type": "dropdown",
+      "serviceKey": "allocatedToService",
+      "isRequired": false,
+      "children": [
+        "allocatedAmount"
+      ],
+      "dataType": "String"
+    },
+    "allocatedAmount": {
+      "allocatedAmount": "Allocated Amount",
+      "labelKey": "allocatedAmount",
+      "type": "dropdown",
+      "serviceKey": "allocatedAmount",
+      "parent": [
+        "allocatedTo"
+      ],
+      "isRequired": false,
+      "UIupdates": {
+        "disability": "return true"
+      }
+    },
+    "utilizedAmount": {
+      "utilizedAmount": "Utilized Amount",
+      "labelKey": "utilizedAmount",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "Number"
+    },
+    "date": {
+      "date": "Date",
+      "labelKey": "date",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String",
+      "format": "yyyy-MM-dd",
+      "yearRange" : "2000:2030",
+      "showButtonBar" : true,
+      "yearNavigator" : true,
+      "monthNavigator" : true
+    },
+    "updatedDate": {
+      "updatedDate": "Updated Date",
+      "labelKey": "updatedDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "updatedBy": {
+      "style": {
+        "display": "none"
+      },
+      "updatedBy": "Updated By",
+      "labelKey": "updatedBy",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "userName": {
+      "userName": "Updated By",
+      "labelKey": "userName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "utilization": {
+      "utilization": "",
+      "labelKey": "updatedBy",
+      "type": "formarray",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "remarks": {
+      "remarks": "Remarks",
+      "labelKey": "remarks",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "refNo": {
+      "refNo": "Ref No",
+      "labelKey": "refNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "action": {
+      "action": "",
+      "labelKey": "action",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "labelExpression": "return ${utilization.length} > 1 ? 'Action' : ' '"
+    },
+    "id" : {
+      "id" : "Id",
+      "labelKey" : "id",
+      "isRequired" : false,
+      "dataType" : "String",
+      "type" : "hidden"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "8784684d-4208-448c-b2b6-b3ebe43a5ed2"
+}

@@ -1,0 +1,110 @@
+{
+  "_id": "basicedit_wf",
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "3c78d193-3a87-454c-9e6f-376575c39dc8",
+  "label": "Edit",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "edit",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "column"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "basiclisting"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "basicedit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got replaced successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got replaced with some errors"
+            }
+          },
+          "data": "output.basicedit",
+          "appendMsg": true,
+          "name": "_ST_BASIC_EDIT",
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_BASIC_EDIT",
+              "value": "itemReferenceNo"
+            }
+          ]
+        },
+        {
+          "name": "basiclisting",
+          "showPopUp": "true"
+        }
+      ],
+      "label": " Update",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "basiclisting"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "EDIT",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "key": "quality"
+      },
+      {
+        "suffix": "",
+        "key": "quantity"
+      },
+      {
+        "suffix": "",
+        "key": "deliveryDate"
+      }
+    ]
+  ],
+  "taskId": "basicedit",
+  "object": "a8a05647-813c-496b-a30c-c748412f442c"
+}

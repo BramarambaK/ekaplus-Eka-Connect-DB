@@ -1,0 +1,40 @@
+{
+    "_id" : "Collateral_app",
+    "title" : "Trade Finance",
+    "name" : "collateral",
+    "platform_id" : "8",
+    "tenantID" : "",
+    "type" : "app",
+    "appType" : "CONNECT",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },
+            "clientLogo" : {
+                "src" : "assets"
+            },
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {}
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    },
+    "sys__UUID" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b"
+}

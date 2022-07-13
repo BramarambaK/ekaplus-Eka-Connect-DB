@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_COLLATERAL_Utilisation_ID",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_COLLATERAL_Utilisation_ID",
+    "object" : "495caae7-caad-46b4-930a-c0abf635e8b6"
+}

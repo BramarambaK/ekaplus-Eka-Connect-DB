@@ -1,0 +1,332 @@
+{
+    "_id" : "collateral_edit_details",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "label" : "Instrument Details",
+    "type" : "workflow",
+    "layout" : {
+        "defaultFormItemStyle1" : {
+            "dirtyBG" : "#fff",
+            "untouchedBG" : "#fff",
+            "validBG" : "#fff",
+            "invalidBG" : "#fff",
+            "color" : "#5D646F",
+            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "processorInfo" : {
+            "processorId" : "58349419-6ae4-4cfb-8259-4bcd552fe3ed"
+        },
+        "defaultFormLabelStyle1" : {
+            "color" : "#3B4047",
+            "margin-bottom" : "7px",
+            "font" : "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "menu" : true,
+        "header" : {
+            "headerExpression" : "let c = '${collateraleditdetails.refNo}'; if('${collateraleditdetails}' && '${collateraleditdetails.refNo}') {return 'Collateral: ' +c} else {return 'Collateral'}"
+        },
+        "name" : "create",
+        "formStyle" : {
+            "padding" : "7px",
+            "margin" : "auto",
+            "max-width" : "100%"
+        },
+        "defaultFormValueStyle1" : {
+            "color" : "#5D646F",
+            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "type" : "row",
+        "cardClass" : "trm-form striped-rows"
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collateraleditdetails",
+                    "data" : "selected.collateraleditdetails"
+                }
+            ],
+            "label" : "Instrument Details",
+            "position" : "leftMenu",
+            "disabled" : false
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collateraldocumentuploadedit",
+                    "data" : "selected.collateraldocumentuploadedit",
+                    "setSelected" : [ 
+                        "selected.generaldocumentlisting"
+                    ]
+                }
+            ],
+            "label" : "Document Upload",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collateralAllocations",
+                    "data" : "selected.collateralAllocations"
+                }
+            ],
+            "label" : "Allocations",
+            "position" : "leftMenu",
+            "disabled" : true,
+            "type" : "hidden"
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collateralutilization",
+                    "data" : "selected.collateralutilization"
+                }
+            ],
+            "label" : "Utilization",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "btnClass" : "btn btn-outline-dark treasury-btn",
+            "objectAction" : "READ",
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "outcomes" : [ 
+                {
+                    "clearSelected" : [ 
+                        "selected.collaterallist", 
+                        "selected.collateralallocations", 
+                        "selected.generaldetails", 
+                        "selected.collateralutilization"
+                    ],
+                    "name" : "collaterallist"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary treasury-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "UPDATE",
+            "task" : "generaldetails",
+            "type" : "submit",
+            "outcomes" : [ 
+                {
+                    "data": "output.collateraleditdetails",
+                    "name": "collateral_add_new_user_wf",
+                    "appendMsg": true
+                },
+                {
+                    "data" : "output.collateral_add_new_user_wf",
+                    "name" : "_ST_VALIDATE_COLLATERAL_ADD_NEW", 
+                    "appendMsg" : false
+                }, 
+                {
+                    "data" : "output.collateral_add_new_user_wf",
+                    "result" : {
+                        "success" : {
+                            "message" : "Status",
+                            "messageExpression" : "return 'Successfully updated ' + '${refNo}' "
+                        },
+                        "failure" : {
+                            "message" : "Status"
+                        },
+                        "successWithWarning" : {
+                            "message" : ""
+                        }
+                    },
+                    "name" : "_ST_CREATE_COLLATERAL_ADD_NEW",
+                    "appendMsg" : true
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors "
+                        },
+                        "successWithWarning" : {
+                            "message" : "data got replaced with some errors"
+                        }
+                    },
+                    "setSelected" : [ 
+                        "selected.collateraleditdetails"
+                    ],
+                    "appendMsg" : true,
+                    "name" : "collateraldocumentuploadedit",
+                    "data" : "output._ST_CREATE_COLLATERAL_ADD_NEW",
+                    "showToaster" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom"
+        }
+    ],
+    "labelKey" : "Additional Details",
+    "fields" :  [ 
+        [ 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "collateralType",
+                "disabled" : true,
+                "type" : "readOnly"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "entityKeyDisplay",
+                "disabled" : true,
+                "type" : "readOnly"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "counterpartyDisplay",
+                "virtualScroll" : true,
+                "filter" : true,
+                "disabled" : true,
+                "type" : "readOnly"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "bank/guarantor"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "issueDate",
+                "value" : "currentDate",
+                "type" : "readOnly",
+                "disabled" : true
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "effectiveDate",
+                "value" : "currentDate"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "expiryDate"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "documentNumber"
+            }
+        ], 
+        [ 
+            {
+                "style" : {
+                    "width" : "150px",
+                    "margin-right" : "0px"
+                },
+                "suffix" : "",
+                "key" : "amount",
+                "disabled" : true,
+                "type" : "readOnly"
+            }, 
+            {
+                "style" : {
+                    "width" : "70px"
+                },
+                "key" : "amountCurrency",
+                "formLabelStyle" : {
+                    "opacity" : "0"
+                },
+                "disabled" : true,
+                "type" : "readOnly"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "issued/obtained",
+                "disabled" : true,
+                "type" : "readOnly"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "revocability"
+            }, 
+            {
+                "style" : {
+                    "width" : "220px"
+                },
+                "suffix" : "",
+                "key" : "remarks"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "key" : "status",
+                "value" : "Active"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "key" : "counterparty"
+            }, 
+            {
+                "style" : {
+                    "display" : "none"
+                },
+                "suffix" : "",
+                "type" : "hidden",
+                "key" : "entity"
+            },
+            {
+              "style": {
+                "display": "none"
+              },
+              "suffix": "",
+              "type": "hidden",
+              "key": "userName"
+            }
+        ]
+    ],
+    "taskId" : "collateraleditdetails",
+    "object" : "39106262-1aab-4eb4-a3c1-73422bc7b4a8"
+}

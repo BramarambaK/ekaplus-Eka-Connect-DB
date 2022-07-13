@@ -1,0 +1,234 @@
+{
+  "_id": "collateral_document_upload_popup",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateraldocumentupload",
+          "clearSelected": ["selected.collateraldocumentuploadpopup"]
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "collateraldocumentuploadpopup",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "File uploaded successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "File uploaded with some errors"
+            }
+          },
+          "data": "output.collateraldocumentuploadpopup",
+          "appendMsg": false,
+          "name": "_ST_CREATE_COLLATERAL_DOCUMENT_UPLOAD"
+        },
+        {
+          "data": "output._ST_CREATE_COLLATERAL_DOCUMENT_UPLOAD",
+          "name": "collateraldocumentupload",
+          "clearSelected": ["selected.collateraldocumentuploadpopup"],
+          "showToaster": false
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "headers": {
+        "storageType": "awsS3",
+        "folderInS3": "collateralDocs"
+      },
+      "type": "submit"
+    },
+    {
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "COLLATERAL_DOCUMENT_UPLOAD_VALIDATE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.collateraldocumentuploadpopup",
+          "appendMsg": false,
+          "name": "COLLATERAL_DOCUMENT_UPLOAD_VALIDATE"
+        }
+      ]
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateraldocumentupload",
+          "clearSelected": ["selected.collateraldocumentuploadpopup"]
+        }
+      ],
+      "position": "header",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "key": "file",
+        "style": {
+          "width": "450px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        }
+      },
+      {
+        "suffix": "",
+        "key": "documentName",
+        "style": {
+          "width": "300px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        }
+      },
+      {
+        "style": {
+          "width": "300px"
+        },
+        "key": "types",
+        "formItemStyle": {
+          "margin-top": "10px"
+        }
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "fileName"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "documentId"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "uploadedBy"
+      },
+      {
+        "key": "uploadedDate",
+        "style": {
+          "width": "300px",
+          "display": "none"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        }
+      },
+      {
+        "key": "documentDate",
+        "style": {
+          "width": "300px"
+        },
+        "formItemStyle": {
+          "margin-top": "10px"
+        }
+      },
+      {
+        "style": {
+          "width": "450px"
+        },
+        "suffix": "",
+        "key": "layoutdescription",
+        "formItemStyle": {
+          "margin-top": "10px"
+        }
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "fileContentType"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "id"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "type"
+      },
+      {
+        "style": {
+          "display": "none"
+        },
+        "key": "size"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "refObject"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "refObjectId"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "refNo",
+        "event": "value=selectedData.collateraladdnew.refNo"
+      }
+    ]
+  ],
+  "getDataFromExternalAPI": false,
+  "label": "Add Document",
+  "labelKey": "DOCUMENT_UPLOAD",
+  "layout": {
+    "defaultFormItemStyle": {},
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "eventingRequired": false,
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": "Document Upload - "
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "object": "877bc6e0-e2de-48ff-bdae-f75e14499982",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "taskId": "collateraldocumentuploadpopup",
+  "type": "workflow"
+}

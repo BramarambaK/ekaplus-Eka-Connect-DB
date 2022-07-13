@@ -1,0 +1,13 @@
+{
+    "_id" : "UPDATESTATUS_CALL_COLLATERAL",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "cb68f06f-b8ed-4894-87aa-1f66c590ed54"
+    },
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "type" : "workflow",
+    "taskId" : "UPDATE_STATUS_PROCESSOR",
+    "object" : "39106262-1aab-4eb4-a3c1-73422bc7b4a8"
+}

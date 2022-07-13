@@ -1,0 +1,22 @@
+{
+    "_id" : "typeofallocation_property_collatoral",
+    "type" : "property",
+    "name" : "typeofallocation",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "150",
+    "defaultValue" : [ 
+        {
+            "key" : "Physicals",
+            "value" : "Physicals"
+        }, 
+        {
+            "key" : "Derivatives",
+            "value" : "Derivatives"
+        }
+    ],
+    "label" : "Type of Allocation",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "description" : "Property is used to show type of allocation"
+}

@@ -1,0 +1,375 @@
+{
+  "_id": "collateral_list",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "taskId": "collaterallist",
+  "label": "List of Collateral",
+  "object": "39106262-1aab-4eb4-a3c1-73422bc7b4a8",
+  "type": "workflow",
+  "payLoad": "selected.collaterallistglobalfilter",
+  "lazyLoading": false,
+  "rows": 20,
+  "header": {
+    "label": "List of Collateral",
+    "style": {
+      "font-size": "18px"
+    }
+  },
+  "processorInfo": {
+    "processorId": "dcfec714-f8a0-4ab1-a009-180ca5c41cfd"
+  },
+  "layout": {
+    "name": "list",
+    "getInitialData": true,
+    "dropdownDecisions": true,
+    "showCheckbox": true,
+    "preserveSelectedData": true,
+    "rows": 20,
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": true,
+      "export": false
+    },
+    "lazyLoading": false,
+    "theme": "theme-grid-white"
+  },
+  "fields": [
+    {
+      "filter": true,
+      "sort": true,
+      "sortColumn": "refno_hidden",
+      "width1": "7%",
+      "label": "Ref No",
+      "key": "refNo",
+      "category": "link",
+      "task": "custom-link"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "10%",
+      "label": "Collateral Type",
+      "key": "collateralType"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "9%",
+      "label": "Issue Date",
+      "dateformat": "DD-MMM-YYYY",
+      "key": "issueDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "9%",
+      "label": "Effective Date",
+      "dateformat": "DD-MMM-YYYY",
+      "key": "effectiveDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "8%",
+      "label": "Expiry Date",
+      "dateformat": "DD-MMM-YYYY",
+      "key": "expiryDate"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "10%",
+      "label": "Corporate",
+      "key": "entityKeyDisplay",
+      "dataType": "String"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "10%",
+      "label": "Currency",
+      "key": "amountCurrency"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "10%",
+      "label": "Total Amount",
+      "key": "amount"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "6%",
+      "label": "Unutilized Amount",
+      "key": "availableAmount"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "6%",
+      "label": "Counterparty",
+      "key": "counterpartyDisplay"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "6%",
+      "label": "Bank/Guarantor",
+      "key": "bank/guarantor"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "6%",
+      "label": "Document Number",
+      "key": "documentNumber"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "6%",
+      "label": "Issued/Obtained",
+      "key": "issued/obtained"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "6%",
+      "label": "Revocability",
+      "key": "revocability"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "6%",
+      "label": "Status",
+      "key": "status"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "9%",
+      "label": "Updated By",
+      "key": "userName"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "8%",
+      "label": "Updated Date",
+      "key": "sys__updatedOn"
+    },
+    {
+      "filter": true,
+      "sort": true,
+      "width1": "10%",
+      "label": "Remarks",
+      "key": "remarks",
+      "dataType": "String"
+    }
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "name": "collateraladdnew"
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "ADD",
+      "position": "top",
+      "task": "collateraladdnew",
+      "outsideOperations": true,
+      "disabled": "selected.collaterallist"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "selection": "global",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "data": "selected.collaterallist",
+          "name": "collateraleditdetails",
+          "resetForm": true,
+          "setSelected": [
+            "selected.collateraleditdetails",
+            "selected.additionaldetailsComposite.additionaldetails",
+            "selected.generaldocumentlisting",
+            "selected.syndicate"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "Edit",
+      "position": "top",
+      "disabled": "selected.collaterallist.status.toLowerCase() != 'active'"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.collaterallist",
+          "popupClass": "deleteclass",
+          "name": "deletecollaterallistitem"
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "Delete",
+      "position": "top",
+      "task": "deletecollaterallistitem",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "selection": "global",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.collaterallist",
+          "popupClass": "deleteclass",
+          "name": "activationcollateral"
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "Activate/Deactivate",
+      "position": "top",
+      "task": "activationcollateral",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "selection": "global",
+      "objectAction": "UPDATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "data": "selected.collaterallist",
+          "name": "collateralallocations",
+          "setSelected": [
+            "selected.collateraladdnew"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "Update Allocation",
+      "position": "top",
+      "task": "collateralallocations"
+    },
+    {
+      "btnClass": "btn-primary",
+      "iconClass": "cr-edit-icon",
+      "selection": "global",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "data": "selected.collaterallist",
+          "name": "collateralutilization",
+          "resetForm": true,
+          "setSelected": [
+            "selected.collateraladdnew"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "5px"
+      },
+      "label": "Update Utilization",
+      "position": "top",
+      "task": "collateralutilization"
+    },
+    {
+      "btnClass": "cr-edi-icon-treasury treasury-order-third",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "globalfilter",
+          "name": "collaterallistglobalfilter"
+        }
+      ],
+      "style": {
+        "margin-right": "auto",
+        "border-right": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-left": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-right-radius": "3px",
+        "border-bottom-right-radius": "3px",
+        "padding": "0 5px",
+        "height": "35px",
+        "width": "30px"
+      },
+      "label": "",
+      "position": "top",
+      "task": "text",
+      "outsideOperations": true
+    },
+    {
+      "btnClass": "link p-0 treasury-order-first",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "labelExpression" : "let glFilter=${collaterallistglobalfilter} ;let c = 0; var filterFields = ['collateralType', 'counterparty', 'contractRefNo', 'gmrId', 'invoiceId']; if(glFilter){ for(let key in filterFields) { if (glFilter[filterFields[key]]) c++; }} return 'Global Filter: ' + c",      "label": "Global Filter: 0",
+      "position": "top",
+      "style": {
+        "pointer-events": "none",
+        "border-left": "1px solid  #CCCCCC",
+        "border-top": "1px solid  #CCCCCC",
+        "border-bottom": "1px solid  #CCCCCC",
+        "border-top-left-radius": "3px",
+        "border-bottom-left-radius": "3px",
+        "padding": "0 5px",
+        "height": "35px"
+      },
+      "task": "text",
+      "outsideOperations": true
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "data": "selected.collaterallist",
+          "name": "collateraleditdetails",
+          "setSelected": [
+            "selected.collateraleditdetails"
+          ]
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST"
+}

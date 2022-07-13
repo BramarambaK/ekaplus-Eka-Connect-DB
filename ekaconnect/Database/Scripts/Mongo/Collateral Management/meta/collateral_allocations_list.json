@@ -1,0 +1,105 @@
+{
+  "_id": "collateral_allocations_list",
+  "componentType": "UserTask",
+  "label": "Allocation",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "28ba5cd4-a5de-47f3-aae2-57abc242887b"
+  },
+  "payLoad": "completeData",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "columnFilter": false,
+      "filter": false,
+      "lastUpdated": true,
+      "search": false,
+      "reload": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white collateral-allocations-list",
+    "dropdownDecisions": true,
+    "lazyLoading": false,
+    "limitHeight": true,
+    "showCheckbox": false,
+    "pagination": false,
+    "footer": false,
+    "label": "Collateral Allocations List",
+    "selectionMode": "none",
+    "header": {
+      "label": "List of ",
+      "style": {
+        "font-size": "10px",
+        "background-color": "white"
+      }
+    }
+  },
+  "labelKey": "Collateral Allocations List",
+  "fields": [
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "collateralType"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "entity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "counterparty"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "dateformat": "DD-MMM-YYYY",
+      "key": "effectiveDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "dateformat": "DD-MMM-YYYY",
+      "label": "Maturity Date",
+      "key": "expiryDate"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "amountCurrency"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "amount"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "unallocatedAmount"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "sort": true,
+      "key": "unutilizedAmount"
+    }
+  ],
+  "decisions": [],
+  "taskId": "collateralallocationslist",
+  "object": "39106262-1aab-4eb4-a3c1-73422bc7b4a8"
+}

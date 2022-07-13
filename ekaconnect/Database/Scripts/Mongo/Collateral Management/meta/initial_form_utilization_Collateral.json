@@ -1,0 +1,9 @@
+{
+    "_id" : "initial_form_utilization_Collateral",
+    "name" : "initial_form_utilization_Collateral",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "snippet" : "var moment = require('moment');\r\n\r\nvar collateraldata = {\r\n  method: 'GET',\r\n  url: `${req.body.propertyList.eka_connect_host}\/data\/${req.body.appId}\/495caae7-caad-46b4-930a-c0abf635e8b6?refNo=${req.body.selectedData.refNo}`,\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    'X-TenantID': req.headers['x-tenantid']\r\n  },\r\n\r\n  json: true\r\n};\r\n\r\nfunction get_collateralDetails() {\r\n  return new Promise(function (resolve, reject) {\r\n    request(collateraldata, function (err, response, body) {\r\n      if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n        resolve(body);\r\n      } else {\r\n        reject(body);\r\n      }\r\n    });\r\n  });\r\n}\r\nget_collateralDetails().then(data => {\r\n\r\n  data.map((item) => {\r\n    item.updatedDate = moment(item.sys__updatedOn ? item.sys__updatedOn : item.sys__createdOn).format('DD-MMM-YYYY');\r\n    item.updatedBy = item.sys__createdBy;\r\n    item.date = moment(item.date).format('DD-MMM-YYYY');\r\n    item.id=item._id;\r\n  })\r\n  let modifiedData = {\r\n    utilization: data\r\n  }\r\n  res.status(200).send(modifiedData);\r\n});",
+    "sys__UUID" : "93350ae9-3d30-4700-b29a-e9ae131c3a65"
+}

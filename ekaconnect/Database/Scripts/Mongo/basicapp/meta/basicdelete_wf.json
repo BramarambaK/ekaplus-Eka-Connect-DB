@@ -1,0 +1,79 @@
+{
+  "_id": "basicdelete_wf",
+  "componentType": "UserTask",
+  "objectAction": "DELETE",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "3c78d193-3a87-454c-9e6f-376575c39dc8",
+  "label": "Delete",
+  "type": "workflow",
+  "apiInfo": {
+    "responseDataKey": ""
+  },
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "bodyMessage": "Do you want to delete ${itemReferenceNo}?",
+      "headerMessage": "Remove: ${itemReferenceNo}"
+    }
+  },
+  "input": ["itemReferenceNo"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "basiclisting"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "task": "basicdelete",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got deleted successfully"
+            },
+            "failure": {
+              "message": "Please fix errors "
+            },
+            "successWithWarning": {
+              "message": "Data got deleted with some errors"
+            }
+          },
+          "data": "output.basicdelete",
+          "appendMsg": true,
+          "name": "_ST_BASIC_DELETE"
+        },
+        {
+          "name": "basiclisting",
+          "showPopUp": "true"
+        }
+      ],
+      "label": "Delete",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "labelKey": "Delete",
+  "fields": [
+    {
+      "heading": "itemReferenceNo"
+    }
+  ],
+  "taskId": "basicdelete",
+  "object": "a8a05647-813c-496b-a30c-c748412f442c"
+}

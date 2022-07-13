@@ -1,0 +1,22 @@
+{
+    "_id" : "collateral_revocability_propertyKey",
+    "type" : "property",
+    "name" : "revocability",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Irrevocable",
+            "value" : "Irrevocable"
+        }, 
+        {
+            "key" : "Revocable",
+            "value" : "Revocable"
+        }
+    ],
+    "label" : "Collateral Revocability Dropdown",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "description" : "Property is used to show dropdown values for Collateral Revocability"
+}

@@ -1,0 +1,259 @@
+{
+  "_id": "collateral_allocations_form_object",
+  "name": "collateral_allocations_form",
+  "label": "Collateral Allocations Form",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "versionHistory": [
+    {
+      "version": "",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "uniqueFields": [
+    "refNo"
+  ],
+  "translatableKeys": [],
+  "fields": {
+    "refNo": {
+      "labelKey": "refNo",
+      "refNo": "Ref No",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "typeofallocation": {
+      "labelKey": "typeofallocation",
+      "typeofallocation": "",
+      "isRequired": false,
+      "type": "hidden",
+      "propertyKey": "typeofallocation",
+      "dataType": "String",
+      "children": [
+        "assetClass",
+        "derivativeType",
+        "derivativeId",
+        "contractRefNo",
+        "gmrId",
+        "invoiceId"
+      ]
+    },
+    "allocationId": {
+      "allocationId": "Allocation Id",
+      "labelKey": "allocationId",
+      "type": "readOnly",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "counterparty": {
+      "counterparty": "Counterparty",
+      "labelKey": "counterparty",
+      "type": "dropdown",
+      "isRequired": false,
+      "serviceKey": "counterpartyKey",
+      "dataType": "String",
+      "children": [
+        "contractRefNo"
+      ]
+    },
+    "counterParty": {
+      "counterParty": "CounterParty",
+      "labelKey": "counterParty",
+      "type": "dropdown",
+      "isRequired": false,
+      "serviceKey": "counterpartyKey",
+      "dropdownValue" : "counterpartyDisplay",
+      "dataType": "String",
+      "children": [
+        "contractRefNo"
+      ]
+    },
+    "counterpartyDisplay" : {
+      "labelKey" : "counterpartyDisplay",
+      "counterpartyDisplay" : "CounterParty",
+      "isRequired" : false,
+      "type" : "textbox",
+      "dataType" : "String"
+    },
+    "derivativeType": {
+      "derivativeType": "Derivative Type",
+      "labelKey": "derivativeType",
+      "type": "dropdown",
+      "isRequired": false,
+      "propertyKey": "counterparty",
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return ('${typeofallocation}' == 'Physicals' ) ? true : false"
+      }
+    },
+    "derivativeId": {
+      "derivativeId": "Derivative Id",
+      "labelKey": "derivativeId",
+      "type": "dropdown",
+      "isRequired": false,
+      "propertyKey": "counterparty",
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return ('${typeofallocation}' == 'Physicals' ) ? true : false"
+      }
+    },
+    "contractRefNo": {
+      "contractRefNo": "Contract Ref No",
+      "labelKey": "contractRefNo",
+      "type": "dropdown",
+      "isRequired": false,
+      "serviceKey": "contractRefNoKey",
+      "dropdownValue" : "contractRefNoDisplay",
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return ('${typeofallocation}' == 'Derivatives' ) ? false : true"
+      },
+      "parent": [
+        "counterParty"
+      ],
+      "children": [
+        "gmrId"
+      ]
+    },
+    "contractRefNoDisplay" : {
+      "labelKey" : "contractRefNoDisplay",
+      "contractRefNoDisplay" : "ContractRefNo",
+      "isRequired" : false,
+      "type" : "textbox",
+      "dataType" : "String"
+    },
+    "gmrId": {
+      "gmrId": "GMR Id",
+      "labelKey": "gmrId",
+      "type": "dropdown",
+      "isRequired": false,
+      "serviceKey": "gmrIdKey",
+      "dropdownValue" : "gmrIdDisplay",
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return ('${typeofallocation}' == 'Derivatives' ) ? false : true"
+      },
+      "parent": [
+        "contractRefNo"
+      ],
+      "children": [
+        "invoiceId"
+      ]
+    },
+    "gmrIdDisplay" : {
+      "labelKey" : "gmrIdDisplay",
+      "gmrIdDisplay" : "GmrId",
+      "isRequired" : false,
+      "type" : "textbox",
+      "dataType" : "String"
+    },
+    "invoiceId": {
+      "invoiceId": "Invoice Id",
+      "labelKey": "invoiceId",
+      "type": "dropdown",
+      "isRequired": false,
+      "serviceKey": "invoiceIdKey",
+      "dropdownValue" : "invoiceIdDisplay",
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return ('${typeofallocation}' == 'Derivatives' ) ? false : true"
+      },
+      "parent": [
+        "contractRefNo",
+        "gmrId"
+      ]
+    },
+    "invoiceIdDisplay" : {
+      "labelKey" : "invoiceIdDisplay",
+      "invoiceIdDisplay" : "InvoiceIdDisplay",
+      "isRequired" : false,
+      "type" : "textbox",
+      "dataType" : "String"
+    },
+    "allocatedAmount": {
+      "allocatedAmount": "Allocated Amt",
+      "labelKey": "allocatedAmount",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "utilizedAmount": {
+      "utilizedAmount": "Utilized Amt",
+      "labelKey": "utilizedAmount",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "userName": {
+      "userName": "Updated By",
+      "labelKey": "userName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "updatedBy": {
+      "updatedBy": "Updated By",
+      "labelKey": "updatedBy",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "updatedDate": {
+      "updatedDate": "Updated Date",
+      "labelKey": "updatedDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "DD-MMM-YYYY",
+      "dataType": "String"
+    },
+    "physicals": {
+      "physicals": "",
+      "labelKey": "physicals",
+      "type": "formarray",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "derivatives": {
+      "derivatives": "",
+      "labelKey": "derivatives",
+      "type": "formarray",
+      "isRequired": false,
+      "dataType": "String",
+      "UIupdates": {
+        "visibility": "return ('${typeofallocation}' == 'Physicals' ) ? false : true"
+      }
+    },
+    "remarks": {
+      "remarks": "Remarks",
+      "labelKey": "remarks",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "action": {
+      "action": "",
+      "labelKey": "action",
+      "type": "hidden",
+      "isRequired": false,
+      "dataType": "String",
+      "labelExpression": "return '${physicals.length}' > '1' ? 'Action' : ' '"
+    }
+  },
+  "additionalProperties": {},
+  "sys__createdBy": "admin",
+  "sys__UUID": "5e6a81d6-1a86-4cc9-bdf7-a59190278be3"
+}

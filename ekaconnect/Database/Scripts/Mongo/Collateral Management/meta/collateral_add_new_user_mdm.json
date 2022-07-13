@@ -1,0 +1,9 @@
+{
+  "_id": "collateral_add_new_user_mdm",
+  "name": "collateral_add_new_user_mdm",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "snippet": "var getData = function getData(requestBody) {\r\n  return new Promise(function (resolve, reject) {\r\n    request(requestBody, function (err, response, body) {\r\n      if (response.statusCode >= 200 && response.statusCode <= 299) {\r\n        resolve(body);\r\n      } else {\r\n        reject(body);\r\n      }\r\n    });\r\n  });\r\n};\r\n\r\nvar userData = req.body;\r\n\r\nvar user = {\r\n  method: 'GET',\r\n  url: req.body.propertyList.eka_connect_host + '/api/userinfo',\r\n  headers: {\r\n    Authorization: req.headers.authorization,\r\n    'X-TenantID': req.headers['x-tenantid']\r\n  },\r\n  json: true\r\n};\r\ngetData(user).then(function (userinfo) {\r\n  userData.userName = userinfo.firstName + ' ' + userinfo.lastName;\r\n  console.log(userData);\r\n  res.status(200).send(userData);\r\n}).catch(function (err) {\r\n  res.status(500).send(err);\r\n});",
+  "sys__UUID": "998cfd80-fd15-44d9-823e-3d13709b5215"
+}

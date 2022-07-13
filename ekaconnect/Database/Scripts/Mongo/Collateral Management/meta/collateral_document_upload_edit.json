@@ -1,0 +1,257 @@
+{
+  "_id": "collateral_document_upload_edit",
+  "componentType": "UserTask",
+  "label": "Document Upload",
+  "payLoad": "selected.collateraleditdetails",
+  "decisions": [
+    {
+      "btnClass": "link p-0 ui-btn-link-collateral-document",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "popupClass": "uploadpopupcss",
+          "name": "collateraldocumentuploadeditpopup"
+        }
+      ],
+      "label": "+Add Document",
+      "position": "header"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "EDIT_GMR_BASIC",
+      "selection": "row",
+      "outcomes": [
+        {
+          "data": "selected.collateraldocumentuploadedit",
+          "name": "collateraldocumentuploadedit",
+          "headers": {
+            "storageType": "awsS3",
+            "folderInS3": "collateralDocs"
+          },
+          "forceDownload": true,
+          "type": "downloadLink"
+        }
+      ],
+      "label": "Download",
+      "iconClass": "download-icon"
+    },
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "DELETE",
+      "labelkey": "DELETE",
+      "selection": "row",
+      "outcomes": [
+        {
+          "data": "selected.collateraldocumentuploadedit",
+          "name": "documentdeleteeditcollateral",
+          "displayType": "popup",
+          "popupClass": "uploadpopupcss"
+        }
+      ],
+      "label": "Delete",
+      "iconClass": "delete-icon"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateraleditdetails",
+          "data": "selected.collateraleditdetails"
+        }
+      ],
+      "label": "Instrument Details",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateraldocumentuploadedit",
+          "data": "selected.collateraldocumentuploadedit"
+        }
+      ],
+      "label": "Document Upload",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateralallocations",
+          "data": "selected.collateralallocations"
+        }
+      ],
+      "label": "Allocations",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateralutilization",
+          "data": "selected.collateralutilization"
+        }
+      ],
+      "label": "Utilization",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn btn-outline-dark treasury-btn",
+      "objectAction": "READ",
+      "style": {
+        "margin-right": "auto"
+      },
+      "outcomes": [
+        {
+          "name": "collaterallist",
+          "clearSelected" : [ 
+            "selected.collateraleditdetails", 
+            "selected.collaterallist", 
+            "selected.collateralallocations", 
+            "selected.generaldetails", 
+            "selected.collateralutilization", 
+            "selected.generaldocumentlisting", 
+            "selected.syndicate"
+        ]
+        }
+      ],
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "READ",
+      "labelkey": "CREATE",
+      "outcomes": [
+        {
+          "name": "collaterallist",
+          "clearSelected" : [ 
+            "selected.collateraleditdetails", 
+            "selected.collaterallist", 
+            "selected.collateralallocations", 
+            "selected.generaldetails", 
+            "selected.collateralutilization", 
+            "selected.generaldocumentlisting", 
+            "selected.syndicate"
+        ]
+        }
+      ],
+      "label": "BACK TO LISTING",
+      "position": "bottom",
+      "disabled": false
+    }
+  ],
+  "fields": [
+    {
+      "filter" : true,
+      "edit" : false,
+      "label" : "Ref.no",
+      "sort" : true,
+      "key" : "refNo",
+      "width" : "13%"
+  },
+  
+    {
+      "filter": true,
+      "edit": false,
+      "label": "File",
+      "sort": true,
+      "key": "fileName",
+      "width": "13%"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Document Name",
+      "sort": true,
+      "key": "documentName",
+      "width": "13%"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Document Date",
+      "sort": true,
+      "key": "documentDate",
+      "dateformat": "DD-MMM-YYYY",
+      "width": "13%"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Description",
+      "sort": true,
+      "key": "layoutdescription",
+      "width": "13%"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Uploaded By",
+      "sort": true,
+      "key": "uploadedBy",
+      "width": "13%"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Uploaded Date",
+      "sort": true,
+      "key": "sys__createdOn",
+      "dateformat": "DD-MMM-YYYY",
+      "width": "13%"
+    }
+  ],
+  "getDataFromExternalAPI": false,
+  "layout": {
+    "footer": false,
+    "getInitialData" : {
+      "filterBy" : {
+          "payLoadData" : [
+              "refNo"
+          ]
+      }
+  },
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": false,
+      "lastUpdated": false,
+      "search": false,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": false,
+    "menu": true,
+    "refreshData": true,
+    "showErrorInPopUp": {
+      "navigateURL": "creditfacility",
+      "buttonLabel": "Update Later"
+    },
+    "header": {
+      "headerExpression": "let c = '${collateraleditdetails.refNo}'; if('${collateraleditdetails}' && '${collateraleditdetails.refNo}') {return 'Collateral: ' +c} else {return 'Collateral'}"
+    },
+    "preserveSelectedData": true
+  },
+  "object": "877bc6e0-e2de-48ff-bdae-f75e14499982",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "rows": "100",
+  "taskId": "collateraldocumentuploadedit",
+  "theme": "theme-grid-light",
+  "type": "workflow"
+}

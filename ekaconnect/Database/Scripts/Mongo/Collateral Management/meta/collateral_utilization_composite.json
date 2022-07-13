@@ -1,0 +1,128 @@
+{
+  "_id": "collateral_utilization_composite",
+  "componentType": "UserTask",
+  "label": "Collateral:",
+  "layout": {
+    "name": "customv2",
+    "header": {
+      "headerExpression": "let c = '${collateraladdnew.refNo}'; if('${collateraladdnew}' && '${collateraladdnew.refNo}') {return 'Collateral: ' +c} else {return 'Collateral'}"
+    },
+    "menu": true,
+    "preserveSelectedData": true
+  },
+  "object": "39106262-1aab-4eb4-a3c1-73422bc7b4a8",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "taskId": "collateralutilization",
+  "type": "workflow",
+  "viewAction": "composite",
+  "workflows": [
+    {
+      "data": "selected.collateraladdnew",
+      "name": "collateralutilizationlist"
+    },
+    {
+      "data": "selected.collateraladdnew",
+      "name": "collateralutilizationform"
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateraladdnew",
+          "data": "selected.collateraladdnew"
+        }
+      ],
+      "label": "Instrument Details",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateraldocumentupload",
+          "data": "selected.collateraldocumentupload"
+        }
+      ],
+      "label": "Document Upload",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateralallocations",
+          "data": "selected.collateralallocations"
+        }
+      ],
+      "label": "Allocations",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateralutilization",
+          "data": "selected.collateralutilization"
+        }
+      ],
+      "label": "Utilization",
+      "position": "leftMenu",
+      "disabled": false
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collaterallist",
+          "clearSelected": [
+            "selected.collateraladdnew",
+            "selected.collaterallist",
+            "selected.collateralallocations",
+            "selected.generaldetails",
+            "selected.collateralutilization"
+          ]
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-primary",
+      "objectAction": "UPDATE",
+      "labelkey": "UPDATE",
+      "task": "collateralutilizationcomposite",
+      "executeDecision": true,
+      "outcomes": [
+        {
+          "name": "collaterallist",
+          "clearSelected" : [ 
+            "selected.collateraladdnew", 
+            "selected.collaterallist", 
+            "selected.collateralallocations", 
+            "selected.generaldetails", 
+            "selected.collateralutilization", 
+            "selected.generaldocumentlisting", 
+            "selected.syndicate", 
+            "selected.collateraleditdetails", 
+            "selected.additionaldetailsComposite.additionaldetails"
+        ]
+         
+        }
+      ],
+      "label": "Save",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ]
+}

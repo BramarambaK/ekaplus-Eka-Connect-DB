@@ -1,0 +1,252 @@
+{
+  "_id": "collateral_list_object",
+  "name": "collaterallistobject",
+  "label": "collateral Data",
+  "type": "object",
+  "version": "1",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "issueDate": {
+      "labelKey": "issueDate",
+      "issueDate": "Issue Date",
+      "isRequired": true,
+      "type": "datepicker",
+      "format": "yyyy-MM-dd",
+      "yearRange" : "2000:2030",
+      "showButtonBar" : true,
+      "yearNavigator" : true,
+      "monthNavigator" : true,
+      "valueCheck": "if('${issueDate}'){return true;} else {return false;}",
+      "dataType": "date"
+    },
+    "expiryDate": {
+      "labelKey": "expiryDate",
+      "expiryDate": "Expiry Date",
+      "isRequired": false,
+      "type": "datepicker",
+      "valueCheck": "if(new Date('${expiryDate}').getTime() >  new Date('${effectiveDate}').getTime()){return true} else {return false}",
+      "format": "yyyy-MM-dd",
+      "yearRange" : "2000:2030",
+      "showButtonBar" : true,
+      "yearNavigator" : true,
+      "monthNavigator" : true,
+      "dataType": "date"
+    },
+    "sys__updatedOn": {
+      "labelKey": "sys__updatedOn",
+      "sys__updatedOn": "Updated Date",
+      "isRequired": false,
+      "type": "datepicker",
+      "dataType": "date"
+    },
+    "effectiveDate": {
+      "labelKey": "effectiveDate",
+      "effectiveDate": "Effective Date",
+      "isRequired": true,
+      "type": "datepicker",
+      "valueCheck": "if(new Date('${effectiveDate}').getTime() >=  new Date('${issueDate}').getTime()){return true} else {return false}",
+      "format": "yyyy-MM-dd",
+      "yearRange" : "2000:2030",
+      "showButtonBar" : true,
+      "yearNavigator" : true,
+      "monthNavigator" : true,
+      "dataType": "date"
+    },
+    "refNo": {
+      "labelKey": "refNo",
+      "refNo": "Ref No.",
+      "isRequired": false,
+      "type": "textbox",
+      "serialNumber": {
+        "startsWith": "001",
+        "customFormat": "return 'COL-' +${refNo}"
+      },
+      "dataType": "String"
+    },
+    "refno_hidden": {
+      "labelKey": "refno_hidden",
+      "refno_hidden": "Ref No. Hidden",
+      "isRequired": false,
+      "type": "hidden",
+      "dataType": "Number"
+    },
+    "entity": {
+      "labelKey": "entity",
+      "entity": "Corporate",
+      "isRequired": true,
+      "type": "dropdown",
+      "dropdownValue": "entityKeyDisplay",
+      "serviceKey": "entityKey",
+      "dataType": "String"
+    },
+    "entityKeyDisplay": {
+      "labelKey": "entityKeyDisplay",
+      "entityKeyDisplay": "Corporate",
+      "isRequired": false,
+      "type": "textbox",
+      "dropdownValue": "entityKeyDisplay",
+      "dataType": "String"
+    },
+    "collateralType": {
+      "labelKey": "collateralType",
+      "collateralType": "Collateral Type",
+      "type": "dropdown",
+      "propertyKey": "collateralType",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "currency": {
+      "labelKey": "currency",
+      "currency": "Currency",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "currency",
+      "dataType": "String"
+    },
+    "availableAmount": {
+      "labelKey": "availableAmount",
+      "availableAmount": "Unutilized Amount",
+      "isRequired": false,
+      "type": "dropdown",
+      "dataType": "String"
+    },
+    "counterparty": {
+      "labelKey": "counterparty",
+      "counterparty": "Counterparty",
+      "isRequired": true,
+      "type": "dropdown",
+      "dropdownValue": "counterpartyDisplay",
+      "serviceKey": "counterparty",
+      "dataType": "String"
+    },
+    "counterpartyDisplay": {
+      "labelKey": "counterpartyDisplay",
+      "counterpartyDisplay": "Counterparty",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "bank/guarantor": {
+      "labelKey": "bank/guarantor",
+      "bank/guarantor": "Bank/Guarantor",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "String"
+    },
+    "documentNumber": {
+      "labelKey": "documentNumber",
+      "documentNumber": "Document Number",
+      "isRequired": false,
+      "type": "textbox",
+      "dataType": "Number"
+    },
+    "revocability": {
+      "revocability": "Revocability",
+      "labelKey": "revocability",
+      "dataType": "String",
+      "isRequired": false,
+      "type": "dropdown",
+      "propertyKey": "revocability"
+    },
+    "remarks": {
+      "remarks": "Remarks",
+      "labelKey": "remarks",
+      "dataType": "String",
+      "type": "textbox",
+      "isRequired": false
+    },
+    "issued/obtained": {
+      "issued/obtained": "Issued/Obtained",
+      "labelKey": "issued/obtained",
+      "isRequired": true,
+      "type": "dropdown",
+      "propertyKey": "issued/obtained"
+    },
+    "sys__createdBy": {
+      "sys__createdBy": "Updated By",
+      "labelKey": "sys__createdBy",
+      "type": "String",
+      "serviceKey": "ngrFilterKey",
+      "isRequired": false
+    },
+    "amount": {
+      "amount": "Total Amount",
+      "labelKey": "amount",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String",
+      "validationRegex": "^[0-9]*$",
+      "autocomplete": "off"
+    },
+    "unallocatedAmount": {
+      "unallocatedAmount": "Unallocated Amount",
+      "labelKey": "unallocatedAmount",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "autocomplete": "off"
+    },
+    "unutilizedAmount": {
+      "unutilizedAmount": "Unutilized Amount",
+      "labelKey": "unutilizedAmount",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String",
+      "autocomplete": "off"
+    },
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "userName": {
+      "userName": "userName",
+      "labelKey": "userName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "amountCurrency": {
+      "labelKey": "amountCurrency",
+      "amountCurrency": "Currency",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "amountCurrencyKey",
+      "dataType": "String"
+    },
+    "currencyhidden": {
+      "labelKey": "currencyhidden",
+      "currencyhidden": "",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "currencyhidden",
+      "dataType": "String"
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "39106262-1aab-4eb4-a3c1-73422bc7b4a8"
+}

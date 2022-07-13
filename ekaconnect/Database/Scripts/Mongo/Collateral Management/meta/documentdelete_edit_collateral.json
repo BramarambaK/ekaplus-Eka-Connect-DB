@@ -1,0 +1,85 @@
+{
+    "_id" : "documentdelete_edit_collateral",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark custom-btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collateraldocumentuploadedit"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "task" : "documentdeleteeditcollateral",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "Document deleted successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Document deleted with some errors"
+                        }
+                    },
+                    "data" : "output.documentdeleteeditcollateral",
+                    "appendMsg" : true,
+                    "name" : "_EXT_DELETE_DOCUMENT"
+                }, 
+                {
+                    "data" : "output.documentdeleteeditcollateral",
+                    "appendMsg" : false,
+                    "name" : "_ST_DELETE_DOCUMENT"
+                }, 
+                {
+                    "name" : "collateraldocumentuploadedit",
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "DELETE",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collateraldocumentuploadedit"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "getDataFromExternalAPI" : true,
+    "label" : "DELETE DOCUMENT",
+    "labelKey" : "DELETE_DOCUMENT",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Do you want to delete the  ${documentName}?",
+            "headerMessage" : "Delete Document: ${documentName}"
+        }
+    },
+    "object" : "877bc6e0-e2de-48ff-bdae-f75e14499982",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "taskId" : "documentdeleteeditcollateral",
+    "type" : "workflow"
+}

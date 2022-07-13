@@ -1,0 +1,164 @@
+{
+  "_id": "collateral_document_upload_object",
+  "createdBy": "Test",
+  "createdOn": "",
+  "fields": {
+    "refObject": {
+      "refObject": "refObject",
+      "labelKey": "refObject",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedBy": {
+      "uploadedBy": "uploadedBy",
+      "labelKey": "uploadedBy",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "uploadedDate": {
+      "uploadedDate": "Upload Date",
+      "labelKey": "uploadedDate",
+      "type": "datepicker",
+      "dataType": "date",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "class": "treasury-date"
+    },
+    "documentDate": {
+      "documentDate": "Document Date",
+      "labelKey": "documentDate",
+      "type": "datepicker",
+      "dataType": "date",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "yearRange" : "2000:2030",
+      "showButtonBar" : true,
+      "yearNavigator" : true,
+      "monthNavigator" : true,
+      "minimumDate" : "return new Date()",
+      "class": "treasury-date"
+    },
+    "refObjectId": {
+      "refObjectId": "refObjectId",
+      "labelKey": "refObjectId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileContentType": {
+      "fileContentType": "fileContentType",
+      "labelKey": "fileContentType",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "fileName": {
+      "fileName": "Document",
+      "labelKey": "fileName",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "documentId": {
+      "documentId": "documentId",
+      "labelKey": "documentId",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "id": {
+      "id": "Id",
+      "labelKey": "id",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "type": {
+      "labelKey": "type",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "types": {
+      "types": "",
+      "labelKey": "types",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false,
+      "propertyKey": "fileuploadTypes"
+      
+    },
+    "size": {
+      "size": "size",
+      "labelKey": "size",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "file": {
+      "file": "File",
+      "labelKey": "file",
+      "type": "file",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "layoutdescription": {
+      "layoutdescription": "Description",
+      "labelKey": "layoutdescription",
+      "type": "textarea",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "documentName": {
+      "documentName": "Document Name",
+      "labelKey": "documentName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true,
+      "class":"doc-name"
+    },
+    "description": {
+      "description": "Description",
+      "labelKey": "description",
+      "type": "textbox",
+      "dataType": "String"
+      
+    },
+    "refNo": {
+      "refNo": "Ref No",
+      "labelKey": "refNo",
+      "type": "hidden",
+      "dataType": "String",
+      "isRequired": true
+     
+    }
+  },
+  "label": "DOCUMENT_UPLOAD_WCM_FILE_FOR_COLLATERAL",
+  "uniqueFields" : [ 
+    "documentName"
+],
+  "label_key": "",
+  "lastModifiedOn": "",
+  "lastModifiey": "Test",
+  "layout": {
+    "fields": [[]]
+  },
+  "name": "DOCUMENT_UPLOAD_WCM_FILE_FOR_COLLATERAL",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "sys__UUID": "877bc6e0-e2de-48ff-bdae-f75e14499982",
+  "tenantID": "",
+  "translatableKeys": [],
+  "type": "object",
+  "version": "1",
+  "versionHistory": []
+}

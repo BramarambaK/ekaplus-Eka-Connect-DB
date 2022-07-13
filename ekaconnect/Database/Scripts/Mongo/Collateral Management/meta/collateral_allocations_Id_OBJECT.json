@@ -1,0 +1,186 @@
+{
+    "_id" : "collateral_allocations_Id_OBJECT",
+    "name" : "collateral_allocations_Id",
+    "label" : "Collateral collateral_allocations_Id",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "uniqueFields" : [ 
+        "allocationId"
+    ],
+    "translatableKeys" : [],
+    "fields" : {
+        "refNo" : {
+            "labelKey" : "refNo",
+            "refNo" : "Ref No",
+            "isRequired" : false,
+            "type" : "textbox",
+            "dataType" : "String"
+        },
+        "allocationId" : {
+            "allocationId" : "Allocation Id",
+            "labelKey" : "allocationId",
+            "type" : "readOnly",
+            "serialNumber" : {
+                "startsWith" : "0001",
+                "customFormat" : "return '${refNo}' +'_ALLC-' +${allocationId}"
+            },
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "counterparty" : {
+            "counterparty" : "Counterparty",
+            "labelKey" : "counterparty",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterparty",
+            "dataType" : "String"
+        },
+        "counterParty" : {
+            "counterParty" : "Counterparty",
+            "labelKey" : "counterParty",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterParty",
+            "dataType" : "String"
+        },
+        "assetClass" : {
+            "assetClass" : "Asset Class",
+            "labelKey" : "assetClass",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterparty",
+            "dataType" : "String"
+        },
+        "derivativeType" : {
+            "derivativeType" : "Derivative Type",
+            "labelKey" : "derivativeType",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterparty",
+            "dataType" : "String"
+        },
+        "derivativeId" : {
+            "derivativeId" : "Derivative Id",
+            "labelKey" : "derivativeId",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterparty",
+            "dataType" : "String"
+        },
+        "contractRefNo" : {
+            "contractRefNo" : "Contract Ref No",
+            "labelKey" : "contractRefNo",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterparty",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return ('${typeofallocation}' == 'Derivatives' ) ? false : true"
+            }
+        },
+        "gmrId" : {
+            "gmrId" : "GMR Id",
+            "labelKey" : "gmrId",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterparty",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return ('${typeofallocation}' == 'Derivatives' ) ? false : true"
+            }
+        },
+        "invoiceId" : {
+            "invoiceId" : "Invoice Id",
+            "labelKey" : "invoiceId",
+            "type" : "dropdown",
+            "isRequired" : false,
+            "propertyKey" : "counterparty",
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return ('${typeofallocation}' == 'Derivatives' ) ? false : true"
+            }
+        },
+        "allocatedAmount" : {
+            "allocatedAmount" : "Allocated Amount",
+            "labelKey" : "allocatedAmount",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "utilizedAmount" : {
+            "utilizedAmount" : "Utilized Amount",
+            "labelKey" : "utilizedAmount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+        "userName" : {
+            "userName" : "Updated By",
+            "labelKey" : "userName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "updatedBy" : {
+            "updatedBy" : "Updated By",
+            "labelKey" : "updatedBy",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "updatedDate" : {
+            "updatedDate" : "Updated Date",
+            "labelKey" : "updatedDate",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "physicals" : {
+            "physicals" : "",
+            "labelKey" : "physicals",
+            "type" : "formarray",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "derivatives" : {
+            "derivatives" : "",
+            "labelKey" : "derivatives",
+            "type" : "formarray",
+            "isRequired" : false,
+            "dataType" : "String",
+            "UIupdates" : {
+                "visibility" : "return ('${typeofallocation}' == 'Physicals' ) ? false : true"
+            }
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "c8498a82-6e01-41d9-ba49-5976b6193b10"
+}

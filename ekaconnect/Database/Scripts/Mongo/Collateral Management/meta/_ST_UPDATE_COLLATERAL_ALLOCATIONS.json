@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_UPDATE_COLLATERAL_ALLOCATIONS",
+    "componentType" : "SystemTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "type" : "workflow",
+    "taskId" : "_ST_UPDATE_COLLATERAL_ALLOCATIONS",
+    "object" : "5e6a81d6-1a86-4cc9-bdf7-a59190278be3"
+}

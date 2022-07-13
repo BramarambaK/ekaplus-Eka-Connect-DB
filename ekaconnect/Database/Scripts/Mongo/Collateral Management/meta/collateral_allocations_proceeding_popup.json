@@ -1,0 +1,86 @@
+{
+  "_id": "collateral_allocations_proceeding_popup",
+  "componentType": "UserTask",
+  "decisions": [
+    {
+      "btnClass": "btn-outline-dark custom-btn-liquidity-app-cancel",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateralallocations"
+        }
+      ],
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn-liquidity-app-confirm",
+      "iconClass": "cr-edit-icon",
+      "objectAction": "CREATE",
+      "task": "collateralAllocationFormProceedPopup",
+      "outcomes": [
+        {
+          "data": "output.collateralAllocationFormProceedPopup",
+          "appendMsg": true,
+          "name": "VALIDATE_ALLOCATIONS"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.VALIDATE_ALLOCATIONS",
+          "appendMsg": true,
+          "name": "_ST_UPDATE_COLLATERAL_ALLOCATIONS"
+        },
+        {
+          "name": "collateralutilization",
+          "showToaster": true
+        }
+      ],
+      "style": {
+        "margin-left": "auto"
+      },
+      "label": "PROCEED",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "collateralallocations"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "label": "Activate Collateral List Item",
+  "labelKey": "DELETE_COLLATERAL_LISTITEM",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cancelpopup",
+    "option": {
+      "execute": "true",
+      "bodyMessage": "Total Allocation Amount is more than Collateral Amount, please confirm to proceed",
+      "headerMessage": "Warning"
+    }
+  },
+  "object": "5e6a81d6-1a86-4cc9-bdf7-a59190278be3",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "taskId": "collateralAllocationFormProceedPopup",
+  "type": "workflow"
+}

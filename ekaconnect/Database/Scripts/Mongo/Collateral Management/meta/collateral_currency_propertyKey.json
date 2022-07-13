@@ -1,0 +1,26 @@
+{
+    "_id" : "collateral_currency_propertyKey",
+    "type" : "property",
+    "name" : "amountCurrency",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "USD",
+            "value" : "USD"
+        }, 
+        {
+            "key" : "INR",
+            "value" : "INR"
+        }, 
+        {
+            "key" : "EUR",
+            "value" : "EUR"
+        }
+    ],
+    "label" : "Collateral Currency Dropdown",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "description" : "Property is used to show dropdown values for Collateral Currency"
+}

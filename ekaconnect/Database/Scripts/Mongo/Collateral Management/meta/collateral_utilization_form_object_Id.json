@@ -1,0 +1,105 @@
+{
+    "_id" : "collateral_utilization_form_object_Id",
+    "name" : "collateral_utilization_form_object_Id",
+    "label" : "Collateral Utilization Form",
+    "type" : "object",
+    "version" : "1",
+    "tenantID" : "",
+    "createdOn" : "",
+    "createdBy" : "",
+    "lastModifiedOn" : "",
+    "lastModifiedBy" : "",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "",
+            "fields" : "[{}]",
+            "additionalProperties" : {}
+        }
+    ],
+    "uniqueFields" : [],
+    "translatableKeys" : [],
+    "fields" : {
+        "allocatedTo" : {
+            "allocatedTo" : "Allocated To",
+            "labelKey" : "allocatedTo",
+            "type" : "dropdown",
+            "propertyKey" : "collateralType",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "allocatedAmount" : {
+            "allocatedAmount" : "Allocated Amount",
+            "labelKey" : "allocatedAmount",
+            "type" : "textbox",
+            "isRequired" : false
+        },
+        "utilizedAmount" : {
+            "utilizedAmount" : "Utilized Amount",
+            "labelKey" : "utilizedAmount",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "Number"
+        },
+        "date" : {
+            "date" : "Date",
+            "labelKey" : "date",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "updatedDate" : {
+            "updatedDate" : "Updated Date",
+            "labelKey" : "updatedDate",
+            "type" : "datepicker",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "updatedBy" : {
+            "updatedBy" : "Updated By",
+            "labelKey" : "updatedBy",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "userName" : {
+            "userName" : "userName",
+            "labelKey" : "userName",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "utilization" : {
+            "utilization" : "",
+            "labelKey" : "updatedBy",
+            "type" : "formarray",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "remarks" : {
+            "remarks" : "Remarks",
+            "labelKey" : "remarks",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        },
+        "refNo" : {
+            "refNo" : "Ref No",
+            "labelKey" : "refNo",
+            "type" : "textbox",
+            "isRequired" : false,
+            "dataType" : "String"
+        }
+    },
+    "additionalProperties" : {},
+    "sys__createdBy" : "admin",
+    "sys__UUID" : "495caae7-caad-46b4-930a-c0abf635e8b6"
+  }

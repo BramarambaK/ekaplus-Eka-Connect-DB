@@ -1,0 +1,2 @@
+db.getCollection('<TENANT>_Data').remove({object:{$in:["contract","baseCurve","formula","curve","recommendation"]}})
+db.getCollection('<TENANT>_Data').remove({object:{$in:["fb40488f-e9bb-4c92-8299-618177d8da99","6158fca6-dd9b-4539-a777-67fcf5a0fe67","a17ad3d2-8c98-461d-98c7-d91e953aa819","0a58c051-99ad-491d-8d05-400bd90bffe9","084d7fa2-f8e9-47ea-bb3c-ebc0bd65f3b1"]}})

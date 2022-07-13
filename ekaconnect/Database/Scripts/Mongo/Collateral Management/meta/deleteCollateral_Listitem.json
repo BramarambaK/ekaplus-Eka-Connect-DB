@@ -1,0 +1,81 @@
+{
+    "_id" : "deleteCollateral_Listitem",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-outline-dark custom-btn-liquidity-app-cancel",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collaterallist"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn-liquidity-app-confirm",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "DELETE",
+            "task" : "deletecollaterallistitem",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "",
+                            "messageExpression" : "return 'Deleted ' + '${refNo}' + ' Succesfully' "
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "collateral deleted with some errors"
+                        }
+                    },
+                    "data" : "output.deletecollaterallistitem",
+                    "appendMsg" : true,
+                    "name" : "_ST_DELETE_COLLATERAL_LIST_PAGE"
+                }, 
+                {
+                    "name" : "collaterallist",
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "label" : "CONFIRM",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collaterallist"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "label" : "Delete Collateral List Item",
+    "labelKey" : "DELETE_COLLATERAL_LISTITEM",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "bodyMessage" : "Are you sure you want to Delete Collateral Item Ref. No. ${refNo}?",
+            "headerMessage" : "Delete Collateral"
+        }
+    },
+    "object" : "39106262-1aab-4eb4-a3c1-73422bc7b4a8",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "taskId" : "deletecollaterallistitem",
+    "type" : "workflow"
+}

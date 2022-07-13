@@ -1,0 +1,26 @@
+{
+    "_id" : "collateral_entity_propertyKey",
+    "type" : "property",
+    "name" : "entity",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Bank",
+            "value" : "Bank"
+        }, 
+        {
+            "key" : "Blank endorsed",
+            "value" : "Blank endorsed"
+        }, 
+        {
+            "key" : "Buyer",
+            "value" : "Buyer"
+        }
+    ],
+    "label" : "Collateral Entity Dropdown",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "description" : "Property is used to show dropdown values for Collateral Entity"
+}

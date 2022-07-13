@@ -1,0 +1,60 @@
+{
+  "_id": "basic_eka_object",
+  "name": "basicekaobject",
+  "label": "Basic-eka-Object",
+  "type": "object",
+  "version": "1",
+  "tenantID": "",
+  "createdOn": "",
+  "createdBy": "",
+  "lastModifiedOn": "",
+  "lastModifiedBy": "",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "translatableKeys": [],
+
+  "fields": {
+    "itemReferenceNo": {
+      "itemReferenceNo": "Item Reference No",
+      "labelKey": "itemReferenceNo",
+      "serialNumber": {
+        "startsWith": "1",
+        "prefix": "IRN-"
+      }
+    },
+    "quality": {
+      "quality": "Quality",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+
+    "quantity": {
+      "quantity": "Quantity",
+      "labelKey": "quantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Number"
+    },
+    "deliveryDate": {
+      "deliveryDate": "Delivery Date",
+      "labelKey": "deliveryDate",
+      "type": "datepicker",
+      "isRequired": false,
+      "format": "yyyy-MM-dd",
+      "dataType": "date"
+    }
+  },
+  "sys__UUID": "a8a05647-813c-496b-a30c-c748412f442c",
+  "additionalProperties": {},
+  "sys__createdOn": ISODate("2019-02-07T19:21:17.926Z"),
+  "sys__createdBy": "admin"
+}

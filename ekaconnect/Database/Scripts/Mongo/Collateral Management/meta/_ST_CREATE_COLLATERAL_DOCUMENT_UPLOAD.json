@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_COLLATERAL_DOCUMENT_UPLOAD",
+    "componentType" : "SystemTask",
+    "object" : "877bc6e0-e2de-48ff-bdae-f75e14499982",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "taskId" : "_ST_CREATE_COLLATERAL_DOCUMENT_UPLOAD",
+    "type" : "workflow"
+}

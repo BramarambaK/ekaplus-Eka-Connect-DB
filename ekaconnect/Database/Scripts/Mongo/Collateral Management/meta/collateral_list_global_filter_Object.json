@@ -1,0 +1,80 @@
+{
+  "_id": "collateral_list_global_filter_Object",
+  "name": "collateralfilter",
+  "label": "Collateral Filter",
+  "type": "object",
+  "version": "1",
+  "tenantID": "something",
+  "createdOn": "Test",
+  "createdBy": "Test",
+  "lastModifiedOn": "Test",
+  "lastModifiedBy": "Test",
+  "versionHistory": [
+    {
+      "version": "1",
+      "fields": "[{}]",
+      "additionalProperties": {}
+    }
+  ],
+  "translatableKeys": [],
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE",
+    "APPROVE": "PUT",
+    "REJECT": "PUT"
+  },
+  "uniqueFields": [],
+  "fields": {
+    "contractRefNo": {
+      "contractRefNo": "Contract Ref No",
+      "labelKey": "contractRefNo",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "contractRefNoKey",
+      "parent": ["counterparty"],
+      "children": ["gmrId"]
+    },
+    "gmrId": {
+      "gmrId": "GMR Id",
+      "labelKey": "gmrId",
+      "isRequired": false,
+      "dataType": "String",
+      "type": "dropdown",
+      "serviceKey": "gmrIdKey",
+      "parent": ["contractRefNo"],
+      "children": ["invoiceId"]
+    },
+    "collateralType": {
+      "labelKey": "collateralType",
+      "collateralType": "Collateral Type",
+      "isRequired": false,
+      "type": "dropdown",
+      "propertyKey": "collateralType",
+      "dataType": "String"
+    },
+    "counterparty": {
+      "labelKey": "counterparty",
+      "counterparty": "Counterparty",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "counterpartyKey",
+      "dataType": "String",
+      "children": ["contractRefNo"]
+    },
+    "invoiceId": {
+      "labelKey": "invoiceId",
+      "invoiceId": "Invoice Id",
+      "isRequired": false,
+      "type": "dropdown",
+      "serviceKey": "invoiceIdKey",
+      "dataType": "String",
+      "parent": ["contractRefNo", "gmrId"]
+    }
+  },
+  "additionalProperties": {},
+  "sys__UUID": "0754d5b7-8462-49c6-b30c-c20e1ad8ac1e"
+}

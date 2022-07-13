@@ -1,0 +1,29 @@
+{
+  "_id": "menuObject_basicapp",
+  "type": "menuObject",
+  "refType": "app",
+  "refTypeId": "3c78d193-3a87-454c-9e6f-376575c39dc8",
+  "navbar": [
+    {
+      "apiMenuData": [
+        {
+          "label": "Basic App",
+          "iconCls": "insights-icon",
+          "menuItems": [
+            {
+              "text": "List",
+              "iconCls": "",
+              "items": [
+                {
+                  "handler": "/app/basicapp/basiclisting",
+                  "text": "Basic App Listing",
+                  "iconCls": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

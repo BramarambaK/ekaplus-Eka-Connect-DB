@@ -1,0 +1,38 @@
+{
+    "_id" : "collateral_propertyKey",
+    "type" : "property",
+    "name" : "collateralType",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Letter of Credit",
+            "value" : "Letter of Credit"
+        }, 
+        {
+            "key" : "Bill of Exchange",
+            "value" : "Bill of Exchange"
+        }, 
+        {
+            "key" : "Promissory Note",
+            "value" : "Promissory Note"
+        }, 
+        {
+            "key" : "Bank Guarantee",
+            "value" : "Bank Guarantee"
+        }, 
+        {
+            "key" : "Corporate Guarantee",
+            "value" : "Corporate Guarantee"
+        }, 
+        {
+            "key" : "Credit Insurance",
+            "value" : "Credit Insurance"
+        }
+    ],
+    "label" : "Collateral Type Dropdown",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "description" : "Property is used to show dropdown values for Collateral Type"
+}

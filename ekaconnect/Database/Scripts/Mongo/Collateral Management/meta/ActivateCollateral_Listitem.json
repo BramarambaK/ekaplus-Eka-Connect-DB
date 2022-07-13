@@ -1,0 +1,103 @@
+{
+    "_id" : "ActivateCollateral_Listitem",
+    "componentType" : "UserTask",
+    "decisions" : [ 
+        {
+            "btnClass" : "btn-outline-dark custom-btn-liquidity-app-cancel",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collaterallist"
+                }
+            ],
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn-liquidity-app-confirm",
+            "iconClass" : "cr-edit-icon",
+            "objectAction" : "DELETE",
+            "task" : "activationcollateral",
+            "outcomes" : [ 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : "",
+                            "messageExpression" : "return '${status}'=='Inactive' ? 'Succesfully deactivated ${refNo}' : 'Succesfully activated ${refNo}'"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Collateral deleted with some errors"
+                        }
+                    },
+                    "data" : "output.activationcollateral",
+                    "appendMsg" : true,
+                    "name" : "UPDATE_STATUS_PROCESSOR"
+                }, 
+                {
+                    "result" : {
+                        "success" : {
+                            "message" : ""
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Collateral deleted with some errors"
+                        }
+                    },
+                    "data" : "output.UPDATE_STATUS_PROCESSOR",
+                    "appendMsg" : true,
+                    "name" : "_ST_CREATE_COLLATERAL_ADD_NEW"
+                }, 
+                {
+                    "data" : "output._ST_CREATE_COLLATERAL_ADD_NEW",
+                    "name" : "collaterallist",
+                    "clearSelected" : [ 
+                        "selected.activationcollateral", 
+                        "selected.collaterallist"
+                    ],
+                    "showToaster" : true
+                }
+            ],
+            "style" : {
+                "margin-left" : "auto"
+            },
+            "labelExpression" : "return '${collaterallist.status}'=='Active' ? 'Deactivate' : 'Activate'",
+            "position" : "bottom",
+            "type" : "submit"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "collaterallist"
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "label" : "Activate Collateral List Item",
+    "labelKey" : "DELETE_COLLATERAL_LISTITEM",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cancelpopup",
+        "option" : {
+            "execute" : "true",
+            "bodyMessage" : "return '${status}'=='Active' ? 'Are you sure you want to De-Activate Collateral Ref. No. ${refNo}?' : 'Are you sure you want to Activate Collateral Ref. No. ${refNo}?'",
+            "headerMessage" : "return '${status}'=='Active' ? 'De-Activate Collateral' : 'Activate Collateral'"
+        }
+    },
+    "object" : "39106262-1aab-4eb4-a3c1-73422bc7b4a8",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "taskId" : "activationcollateral",
+    "type" : "workflow"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "collateral_add_new_user_wf",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "processorInfo" : {
+        "processorId" : "998cfd80-fd15-44d9-823e-3d13709b5215"
+    },
+    "type" : "workflow",
+    "taskId" : "collateral_add_new_user_wf",
+    "object" : "39106262-1aab-4eb4-a3c1-73422bc7b4a8"
+}

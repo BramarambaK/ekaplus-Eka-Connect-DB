@@ -1,0 +1,11 @@
+{
+    "_id" : "processor_delete_collateral_list_item",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_COLLATERAL_LIST_PAGE",
+    "label" : "Delete using Processor",
+    "object" : "39106262-1aab-4eb4-a3c1-73422bc7b4a8"
+}

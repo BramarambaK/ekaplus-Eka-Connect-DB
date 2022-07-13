@@ -1,0 +1,111 @@
+{
+  "_id": "basiccreate_wf",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "3c78d193-3a87-454c-9e6f-376575c39dc8",
+  "label": "Create",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "column"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "basiclisting"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "basiccreate",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.basiccreate",
+          "appendMsg": true,
+          "name": "_ST_BASIC_CREATE",
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._ST_BASIC_CREATE",
+              "value": "itemReferenceNo"
+            }
+          ]
+        },
+        {
+          "data": "output.basiccreate",
+          "name": "basiclisting",
+          "showPopUp": true
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "basiclisting"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "CREATE",
+  "fields": [
+    [
+      {
+        "suffix": "",
+        "key": "quality"
+      },
+      {
+        "suffix": "",
+        "key": "quantity"
+      },
+      {
+        "suffix": "",
+        "key": "deliveryDate"
+      }
+    ]
+  ],
+  "taskId": "basiccreate",
+  "object": "a8a05647-813c-496b-a30c-c748412f442c"
+}

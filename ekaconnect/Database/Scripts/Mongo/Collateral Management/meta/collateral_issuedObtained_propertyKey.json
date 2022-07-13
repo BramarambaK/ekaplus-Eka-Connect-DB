@@ -1,0 +1,22 @@
+{
+    "_id" : "collateral_issued/obtained_propertyKey",
+    "type" : "property",
+    "name" : "issued/obtained",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "defaultValue" : [ 
+        {
+            "key" : "Issued",
+            "value" : "Issued"
+        }, 
+        {
+            "key" : "Obtained",
+            "value" : "Obtained"
+        }
+    ],
+    "label" : "Collateral Issued/Obtained Dropdown",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "description" : "Property is used to show dropdown values for Collateral Issued/Obtained"
+}

@@ -1,0 +1,245 @@
+{
+  "_id": "collateral_utilization_form",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "label": "",
+  "type": "workflow",
+  "processorInfo": {
+    "processorId": "93350ae9-3d30-4700-b29a-e9ae131c3a65"
+  },
+  "layout": {
+    "processorInfo": {
+      "processorId": "e8d49eff-b93a-48fe-b152-7bf8c8ab5378"
+    },
+    "valueMouseHover": true,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start"
+    },
+    "formLayoutStyle": {
+      "padding-left": "6px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": ""
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "cardClass": "trm-form formlist-label collateral-allocations-form"
+  },
+  "labelKey": "Collateral Utilization Form",
+  "fields": [
+    [
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "refNo",
+        "event": "value=selectedData.collateraladdnew.refNo"
+      },
+      {
+        "key": "utilization",
+        "style": {
+          "display": "flex",
+          "flex-wrap": "wrap"
+        },
+        "type": "formarray",
+        "isCollateralAllocationformarray": true,
+        "labelStyle": {
+          "color": "#333333",
+          "font": "normal 16px 'Proxima Nova SemiBold'",
+          "padding-bottom": "13px"
+        },
+        "descriptionStyle": {
+          "margin": "16px auto 32px",
+          "color": "#23282c",
+          "font": "normal 15px 'Proxima Nova'",
+          "font-weight": "600"
+        },
+        "addButton": {
+          "style": {
+            "border": "none",
+            "margin": "0px",
+            "padding": "10px 0"
+          },
+          "label": "+ Add more",
+          "disableExp" : "this.dropdownOptions['allocatedTo'].options.length === 1",
+          "maxLength": 10
+        },
+        "fields": [
+          {
+            "style": {
+              "width": "125px",
+              "margin-right": "2px",
+              "font-weight": "600"
+            },
+            "suffix": "",
+            "key": "allocatedTo",
+            "removeEmptyOption": true
+          },
+          {
+            "style": {
+              "width": "150px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "type": "textbox",
+            "disabled": true,
+            "key": "allocatedAmount"
+          },
+          {
+            "style": {
+              "width": "130px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "utilizedAmount"
+          },
+          {
+            "style": {
+              "width": "130px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "date",
+            "class": "treasury-date"
+          },
+          {
+            "style": {
+              "display": "none",
+              "width": "130px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "type": "readOnly",
+            "key": "updatedBy",
+            "disabled": true
+          },
+          {
+            "style": {
+              "width": "130px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "type": "readOnly",
+            "key": "userName"
+          },
+          {
+            "style": {
+              "width": "130px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "type": "readOnly",
+            "key": "updatedDate",
+            "disabled": true
+          },
+          {
+            "style": {
+              "width": "170px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "remarks"
+          },
+          {
+            "style": {
+              "width": "100px",
+              "display": "block",
+              "margin-right": "2px",
+              "position": "absolute",
+              "top": "-28px"
+            },
+            "suffix": "",
+            "key": "action"
+          },
+          {
+            "style" : {
+                "width" : "170px",
+                "margin-right" : "2px",
+                "display" : "none"
+            },
+            "suffix" : "",
+            "key" : "id"
+        }
+        ]
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "CREATE",
+      "labelkey": "UPDATE",
+      "task": "collateralutilizationcomposite",
+      "decisionName": "collateralutilizationcomposite",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.collateralutilizationform",
+          "appendMsg": false,
+          "name": "VALIDATE_Utilisation"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Allocaton id created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Allocaton id got created with some errors"
+            }
+          },
+          "data": "output.VALIDATE_Utilisation",
+          "appendMsg": false,
+          "name": "_ST_UPDATE_COLLATERAL_UTILIZATION"
+        },
+        {
+          "data": "selected.collateraleditdetails",
+          "name": "collateral_add_new_user_wf",
+          "appendMsg": false
+        },
+        {
+          "data": "output.collateral_add_new_user_wf",
+          "name": "_ST_VALIDATE_COLLATERAL_ADD_NEW",
+          "appendMsg": false
+        },
+        {
+          "data": "output.collateral_add_new_user_wf",
+          "name": "_ST_CREATE_COLLATERAL_ADD_NEW",
+          "appendMsg": false
+        },
+        {
+          "data": "output._ST_UPDATE_COLLATERAL_UTILIZATION",
+          "name": "collaterallist",
+          "clearSelected" : [ 
+            "selected.collateraladdnew", 
+            "selected.collaterallist", 
+            "selected.collateralallocations", 
+            "selected.generaldetails", 
+            "selected.collateralutilization", 
+            "selected.generaldocumentlisting", 
+            "selected.syndicate", 
+            "selected.collateraleditdetails", 
+            "selected.additionaldetailsComposite.additionaldetails"
+        ]
+        }
+      ]
+    }
+  ],
+  "taskId": "collateralutilizationform",
+  "object": "8784684d-4208-448c-b2b6-b3ebe43a5ed2"
+}

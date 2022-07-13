@@ -1,0 +1,32 @@
+{
+    "_id" : "menuObject_Collateral",
+    "navbar" : [ 
+        {
+            "apiMenuData" : [ 
+                {
+                    "label" : "Transactions",
+                    "iconCls" : "insights-icon",
+                    "menuItems" : [ 
+                        {
+                            "text" : "Collateral Instruments",
+                            "iconCls" : "",
+                            "items" : [ 
+                                {
+                                    "handler" : "collaterallist",
+                                    "clearSelected" : [ 
+                                        "selected.collaterallist"
+                                    ],
+                                    "text" : "List All",
+                                    "iconCls" : ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "type" : "menuObject"
+}

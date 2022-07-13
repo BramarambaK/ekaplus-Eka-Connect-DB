@@ -1,0 +1,23 @@
+{
+    "_id" : "collateral_policy_ID",
+    "type" : "policy",
+    "app_UUID" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "refType" : "object",
+    "refTypeId" : "c8498a82-6e01-41d9-ba49-5976b6193b10",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

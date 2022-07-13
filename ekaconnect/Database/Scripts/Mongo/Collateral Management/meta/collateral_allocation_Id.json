@@ -1,0 +1,70 @@
+{
+  "_id": "collateral_allocation_Id",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "label": "",
+  "type": "workflow",
+  "layout": {
+    "valueMouseHover": false,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "padding": "10px"
+    },
+    "formLayoutStyle": {
+      "padding-left": "6px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": ""
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "labelKey": "Collateral Utilization Form",
+  "fields": [],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "CREATE",
+      "labelkey": "UPDATE",
+      "task": "savealloctaionrealobj",
+      "decisionName": "savealloctaionrealobj",
+      "label": "SAVE",
+      "type": "submit",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Data got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.savealloctaionrealobj",
+          "appendMsg": false,
+          "name": "_ST_CREATE_COLLATERAL_ALLOCATION_ID"
+        },
+        {
+          "data": "output._ST_CREATE_COLLATERAL_ALLOCATION_ID",
+          "name": "collaterallist"
+        }
+      ]
+    }
+  ],
+  "taskId": "savealloctaionrealobj",
+  "object": "c8498a82-6e01-41d9-ba49-5976b6193b10"
+}

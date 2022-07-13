@@ -1,0 +1,381 @@
+{
+  "_id": "collateral_allocations_form",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "getDataFromExternalAPI": false,
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "label": "",
+  "processorInfo": {
+    "processorId": "22d70c24-625b-4ff5-9946-43bbb0501824"
+  },
+  "type": "workflow",
+  "layout": {
+    "processorInfo": {
+      "processorId": "4644b666-c166-4d1d-abfc-0d0d40d1ca83"
+    },
+    "valueMouseHover": true,
+    "useQueryParams": false,
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start"
+    },
+    "formLayoutStyle": {
+      "padding-left": "6px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "backbutton": true,
+    "name": "create",
+    "formStyle": {},
+    "header": {
+      "title": ""
+    },
+    "defaultFormValueStyle": {},
+    "type": "row",
+    "cardClass": "trm-form formlist-label collateral-allocations-form"
+  },
+  "labelKey": "Collateral Allocations Form",
+  "fields": [
+    [
+      {
+        "style": {
+          "width": "125px",
+          "margin-right": "2px",
+          "font-weight": "600",
+          "height": "30px",
+          "margin-top": "-24px"
+        },
+        "suffix": "",
+        "key": "typeofallocation"
+      },
+      {
+        "type": "hidden",
+        "style": {
+          "display": "none"
+        },
+        "key": "refNo",
+        "event": "value=selectedData.collateraladdnew.refNo"
+      }
+    ],
+    [
+      {
+        "key": "physicals",
+        "style": {
+          "display": "flex",
+          "flex-wrap": "wrap"
+        },
+        "type": "formarray",
+        "isCollateralAllocationformarray": true,
+        "labelStyle": {
+          "color": "#333333",
+          "font": "normal 16px 'Proxima Nova SemiBold'",
+          "padding-bottom": "13px"
+        },
+        "descriptionStyle": {
+          "margin": "16px auto 32px",
+          "color": "#23282c",
+          "font": "normal 15px 'Proxima Nova'",
+          "font-weight": "600"
+        },
+        "addButton": {
+          "style": {
+            "border": "none",
+            "margin": "0px",
+            "padding": "10px 0"
+          },
+          "label": "+ Add more",
+          "maxLength": 10
+        },
+        "removeButton": {
+          "style": {
+            "border": "none",
+            "margin-left": "6px"
+          },
+          "label": "Actions"
+        },
+        "fields": [
+          {
+            "suffix": "",
+            "type": "readOnly",
+            "disabled": true,
+            "style": {
+              "width": "auto",
+              "justify-content": "flex-start"
+            },
+            "formItemStyle": {
+              "width": "100px",
+              "max-height": "20px",
+              "margin-right": "2px"
+            },
+            "key": "allocationId"
+          },
+          {
+            "style": {
+              "width": "120px",
+              "margin-right": "2px",
+              "display": "none"
+            },
+            "suffix": "",
+            "key": "counterparty",
+            "virtualScroll": true,
+            "filter": true
+          },
+          {
+            "style": {
+              "width": "120px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "counterParty",
+            "virtualScroll": true,
+            "filter": true,
+            "formArrayDifferentKeyHover" : true
+          },
+          {
+            "style" : {
+                "display" : "none"
+            },
+            "suffix" : "",
+            "type" : "hidden",
+            "key" : "counterpartyDisplay"
+          }, 
+          {
+            "style": {
+              "width": "100px",
+              "margin-right": "2px",
+              "display" : "none"
+            },
+            "suffix": "",
+            "key": "derivativeType"
+          },
+          {
+            "style": {
+              "width": "100px",
+              "margin-right": "2px",
+              "display" : "none"
+            },
+            "suffix": "",
+            "key": "derivativeId"
+          },
+          {
+            "style": {
+              "width": "100px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "contractRefNo",
+            "formArrayDifferentKeyHover" : true
+          },
+          {
+            "style" : {
+                "display" : "none"
+            },
+            "suffix" : "",
+            "type" : "hidden",
+            "key" : "contractRefNoDisplay"
+          }, 
+          {
+            "style": {
+              "width": "100px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "gmrId",
+            "formArrayDifferentKeyHover" : true
+          },
+          {
+            "style" : {
+                "display" : "none"
+            },
+            "suffix" : "",
+            "type" : "hidden",
+            "key" : "gmrIdDisplay"
+          },
+          {
+            "style": {
+              "width": "100px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "invoiceId",
+            "formArrayDifferentKeyHover" : true
+          },
+          {
+            "style" : {
+                "display" : "none"
+            },
+            "suffix" : "",
+            "type" : "hidden",
+            "key" : "invoiceIdDisplay"
+          }, 
+          {
+            "style": {
+              "width": "100px",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "allocatedAmount"
+          },
+          {
+            "suffix": "",
+            "type": "readOnly",
+            "disabled": true,
+            "style": {
+              "width": "100px",
+              "justify-content": "flex-start",
+              "padding-right": "5px"
+            },
+            "formItemStyle": {
+              "width": "100px",
+              "max-height": "20px",
+              "margin-right": "0px"
+            },
+            "key": "utilizedAmount"
+          },
+          {
+            "suffix": "",
+            "type": "readOnly",
+            "disabled": true,
+            "style": {
+              "width": "100px",
+              "justify-content": "flex-start",
+              "padding-right": "5px"
+            },
+            "formItemStyle": {
+              "width": "100px",
+              "max-height": "20px",
+              "margin-right": "0px"
+            },
+            "key": "userName"
+          },
+          {
+            "suffix": "",
+            "type": "hidden",
+            "disabled": true,
+            "style": {
+              "display": "none",
+              "width": "100px",
+              "justify-content": "flex-start",
+              "padding-right": "5px"
+            },
+            "formItemStyle": {
+              "width": "100px",
+              "max-height": "20px",
+              "margin-right": "0px"
+            },
+            "key": "updatedBy"
+          },
+          {
+            "suffix": "",
+            "type": "readOnly",
+            "disabled": true,
+            "style": {
+              "width": "auto",
+              "justify-content": "flex-start",
+              "padding-right": "5px"
+            },
+            "formItemStyle": {
+              "width": "100px",
+              "max-height": "20px",
+              "margin-right": "0px"
+            },
+            "key": "updatedDate"
+          },
+          {
+            "style": {
+              "width": "100px",
+              "display": "block",
+              "margin-right": "2px",
+              "position": "absolute",
+              "top": "-28px"
+            },
+            "suffix": "",
+            "key": "action"
+          },
+          {
+            "style": {
+              "width": "100px",
+              "display": "none",
+              "margin-right": "2px"
+            },
+            "suffix": "",
+            "key": "remarks"
+          }
+        ]
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "btnClass": "btn-success custom-btn",
+      "objectAction": "CREATE",
+      "labelkey": "UPDATE",
+      "task": "collateralallocationscomposite",
+      "decisionName": "collateralallocationscomposite",
+      "label": "SAVE",
+      "type": "submit",
+      "additionalSelectedData": {
+        "allocationcomposite": "selected.collateralallocations.collateralallocationslist"
+      },
+      "outcomes": [
+        {
+          "data": "output.collateralallocationsform",
+          "appendMsg": true,
+          "name": "VALIDATE_ALLOCATIONS_VALUE"
+        },
+        {
+          "condition": "return ${isOpen}==true",
+          "displayType": "popup",
+          "data": "output.VALIDATE_ALLOCATIONS_VALUE",
+          "popupClass": "deleteclass",
+          "name": "collateralAllocationFormProceedPopup"
+        },
+        {
+          "data": "output.collateralallocationsform",
+          "appendMsg": true,
+          "name": "VALIDATE_ALLOCATIONS"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "Allocation id created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Data got created with some errors"
+            }
+          },
+          "data": "output.VALIDATE_ALLOCATIONS",
+          "appendMsg": true,
+          "name": "_ST_UPDATE_COLLATERAL_ALLOCATIONS"
+        },
+        {
+          "data": "selected.collateraleditdetails",
+          "name": "collateral_add_new_user_wf",
+          "appendMsg": false
+        },
+        {
+          "data": "output.collateral_add_new_user_wf",
+          "name": "_ST_VALIDATE_COLLATERAL_ADD_NEW",
+          "appendMsg": false
+        },
+        {
+          "data": "output.collateral_add_new_user_wf",
+          "name": "_ST_CREATE_COLLATERAL_ADD_NEW",
+          "appendMsg": false
+        },
+        {
+          "name": "collateralutilization",
+          "data" : "output.collateralallocationsform",
+          "showToaster": true
+        }
+      ]
+    }
+  ],
+  "taskId": "collateralallocationsform",
+  "object": "5e6a81d6-1a86-4cc9-bdf7-a59190278be3"
+}

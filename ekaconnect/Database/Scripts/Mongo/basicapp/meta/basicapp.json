@@ -1,0 +1,51 @@
+{
+  "_id": "basic_app",
+  "title": "Basic Eka App",
+  "name": "basicapp",
+  "tenantID": "",
+  "type": "app",
+  "appType": "CONNECT",
+  "platform_id": "43",
+  "config": {
+    "header": {
+      "brand": {
+        "src": "assets/img/brand/eka-login-logo.png",
+        "width": 60,
+        "height": 20,
+        "alt": "Eka"
+      },
+      "clientLogo": {
+        "src": "assets/img/brand/manuchar.png",
+        "width": 60,
+        "height": 20,
+        "alt": "Boliden"
+      },
+      "sidebarToggler": true,
+      "asideMenuToggler": false
+    },
+    "sidebar": {
+      "fixed": true,
+      "display": false
+    },
+    "navbar": [
+      {
+        "apiMenuData": [
+          {
+            "menu": [
+              {
+                "handler": "/app/basicapp/basiclisting",
+                "text": "Basic App Listing",
+                "iconCls": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "aside": {
+      "fixed": true,
+      "display": false
+    }
+  },
+  "sys__UUID": "3c78d193-3a87-454c-9e6f-376575c39dc8"
+}

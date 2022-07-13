@@ -1,0 +1,10 @@
+{
+  "_id": "_ST_BASIC_EDIT_BA",
+  "componentType": "SystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "3c78d193-3a87-454c-9e6f-376575c39dc8",
+  "type": "workflow",
+  "taskId": "_ST_BASIC_EDIT",
+  "object": "a8a05647-813c-496b-a30c-c748412f442c"
+}

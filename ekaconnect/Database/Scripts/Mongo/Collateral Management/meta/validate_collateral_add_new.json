@@ -1,0 +1,11 @@
+{
+    "_id" : "validate_collateral_add_new",
+    "componentType" : "ValidateTask",
+    "objectAction" : "UPDATE",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "type" : "workflow",
+    "taskId" : "_ST_VALIDATE_COLLATERAL_ADD_NEW",
+    "object" : "39106262-1aab-4eb4-a3c1-73422bc7b4a8",
+    "label" : "System Validate Task"
+}

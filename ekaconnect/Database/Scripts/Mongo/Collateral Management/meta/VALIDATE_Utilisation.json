@@ -1,0 +1,14 @@
+{
+    "_id" : "VALIDATE_Utilisation",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "processorInfo" : {
+        "processorId" : "c0fc1ed9-5e99-4cd7-9efa-45d756ef3e72"
+    },
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "type" : "workflow",
+    "taskId" : "VALIDATE_Utilisation",
+    "label" : "Validate Alloaction in Collateral Management",
+    "object" : "8784684d-4208-448c-b2b6-b3ebe43a5ed2"
+}

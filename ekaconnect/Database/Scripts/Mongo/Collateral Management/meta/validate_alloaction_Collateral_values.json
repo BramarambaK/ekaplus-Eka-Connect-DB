@@ -1,0 +1,9 @@
+{
+  "_id": "validate_alloaction_Collateral_values",
+  "name": "validate_alloaction_Collateral_values",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+  "snippet": "req.body.physicals.forEach((item) => {\r\n  if (!item.counterParty) {\r\n    return res.status(500).send('Counter Party filed is require to be filled!');\r\n  } else if (!item.allocatedAmount) {\r\n    return res.status(500).send('Allocated Amount filed are require to be filled!');\r\n  }\r\n})\r\nlet isOpen=false\r\nif(!req.body.disableAllocationPopup){\r\nvar allocationAmount = 0;\r\nreq.body.physicals.forEach(function (item) {\r\n  allocationAmount += Number(item.allocatedAmount);\r\n});\r\n\r\nlet totalAmount = req.body.allocationcomposite[0].amount;\r\nwhile (totalAmount.indexOf(',') > 0) {\r\n  totalAmount = totalAmount.replace(',', '');\r\n}\r\n\r\n isOpen = allocationAmount > Number(totalAmount);\r\n}\r\nres.status(200).send({\r\n  isOpen: isOpen,\r\n  physicals: req.body.physicals,\r\n  refNo: req.body.refNo,\r\n  typeofallocation: req.body.typeofallocation\r\n});",
+  "sys__UUID": "b9f34f1d-656e-405d-a5a3-a2a86fd7f4c2"
+}

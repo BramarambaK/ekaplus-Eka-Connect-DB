@@ -1,0 +1,10 @@
+{
+    "_id" : "update_status_Collatoral",
+    "name" : "update_status_Collatoral",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "00ca04e8-5ca5-4c2f-8636-23b1d79fab5b",
+    "snippet" : "var moment = require(\"moment\");\r\nasync function main() {\r\n  const data = req.body;\r\n  if (data.issueDate) data.issueDate = moment(data.issueDate).format('YYYY-MM-DD');\r\n  if (data.effectiveDate) data.effectiveDate = moment(data.effectiveDate).format('YYYY-MM-DD');\r\n  if (data.expiryDate) data.expiryDate = moment(data.expiryDate).format('YYYY-MM-DD');\r\n  data[\"status\"] = data.status === \"Active\" ? \"Inactive\" : \"Active\";\r\n  delete data.appId;\r\n  delete data.object;\r\n  delete data.processorDetails;\r\n  delete data.processorId;\r\n  delete data.propertyList;\r\n  delete data.queryParams;\r\n  delete data.sys__UUID;\r\n  delete data.taskId;\r\n  delete data.userId;\r\n  delete data.refType;\r\n  delete data.refTypeId;\r\n  delete data.sys__state;\r\n  return data;\r\n}\r\nmain().then((message) => {\r\n  res.status(200).send(message);\r\n});",
+    "sys__UUID" : "cb68f06f-b8ed-4894-87aa-1f66c590ed54",
+    "sys__createdBy" : "avinash@ekaplus.com"
+}
