@@ -1,0 +1,137 @@
+{
+  "_id": "buyersellertickets_object",
+  "name": "buyersellertickets_object",
+  "label": "Tickets-Buyer/Seller Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["product", "quality", "cropYear", "deliverylocation"],
+  "fields": {
+    "userType": {
+      "userType": "User Type",
+      "labelKey": "userType",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpRefNo": {
+      "bpRefNo": "BP Ref No",
+      "labelKey": "bpRefNo",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "bpName": {
+      "bpName": "BP Name",
+      "labelKey": "bpName",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ticketRefNo": {
+      "ticketRefNo": "Ticket Ref No",
+      "labelKey": "ticketRefNo",
+      "type": "String",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "product": {
+      "product": "Commodity",
+      "labelKey": "product",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quality": {
+      "quality": "Grade",
+      "labelKey": "quality",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "quantity": {
+      "quantity": "Quantity",
+      "labelKey": "quantity",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "season": {
+      "season": "Season",
+      "labelKey": "season",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "dispatchlocation": {
+      "dispatchlocation": "Dispatch location",
+      "labelKey": "dispatchlocation",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "deliverylocation": {
+      "deliverylocation": "Delivery location",
+      "labelKey": "deliverylocation",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "datedelivered": {
+      "datedelivered": "Date Delivered",
+      "labelKey": "datedelivered",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "Date",
+      "customDateFilter": "datefilter"
+    },
+    "purchaseContractNumber": {
+      "purchaseContractNumber": "Contract ID",
+      "labelKey": "purchaseContractNumber",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "customerReference": {
+      "customerReference": "Customer Reference",
+      "labelKey": "customerReference",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "movementorderID": {
+      "movementorderID": "Movement Order ID",
+      "labelKey": "movementorderID",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "vehicleID": {
+      "vehicleID": "Vehicle ID",
+      "labelKey": "vehicleID",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "ngrFilter": {
+      "ngrFilter": "Filter",
+      "labelKey": "ngrFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrFilterKey"
+    },
+    "ngrCTRMFilter": {
+      "ngrFilter": "Filter",
+      "labelKey": "ngrCTRMFilter",
+      "type": "multiselect",
+      "serviceKey": "ngrCTRMFilterKey"
+    }
+  },
+  "sys__UUID": "1829cee8-2546-40ed-9642-6172876913d8"
+}

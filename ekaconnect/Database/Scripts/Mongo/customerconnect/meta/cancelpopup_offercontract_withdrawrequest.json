@@ -1,0 +1,90 @@
+{
+  "_id": "cancelpopup_offercontract_withdrawrequest",
+  "name": "cancelpopup_offercontract_withdrawrequest",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Withdraw request",
+  "type": "workflow",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to withdraw ${requestId}?",
+      "headerMessage": "Withdraw request",
+      "information": ""
+    },
+    "showErrorInToastr": true
+  },
+  "input": ["approvalStatus,requestId"],
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "cancelpopup_offercontract_withdrawrequest",
+      "executeDecision": false,
+      "outcomes": [
+        {
+          "data": "output.cancelpopup_offercontract_withdrawrequest",
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Contract has been successfully withdrawn.",
+              "messageExpression": "return '${requestId}' + ' has been successfully withdrawn'"
+            },
+            "failure": {
+              "message": "This request cannot be actioned at this time. Please try again later."
+            },
+            "successWithWarning": {
+              "message": "Contract has been successfully withdrawn with some errors"
+            }
+          },
+          "name": "_ST_PROCESS_OFFER_CONTRACT_WITHDRAW"
+        },
+        {
+          "name": "contractlistingcomposite",
+          "showToaster": true,
+          "restoreState": true
+        }
+      ],
+      "label": "Withdraw request",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "fields": [
+    {
+      "heading": "requestId"
+    }
+  ],
+  "labelKey": "Cancel",
+  "taskId": "cancelpopup_offercontract_withdrawrequest"
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : "CACP_externalApiScope_property",
+    "type" : "property",
+    "name" : "CACP_externalApiScope",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CACP token scope",
+    "defaultValue" : "groups",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External scope to generate token from CACP.",
+	"sys__UUID": "9fb5ea24-b651-11ec-b909-0242ac120002"
+}

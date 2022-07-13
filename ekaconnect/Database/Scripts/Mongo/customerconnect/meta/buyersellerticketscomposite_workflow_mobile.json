@@ -1,0 +1,117 @@
+{
+  "_id": "buyersellerticketscomposite_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "clearLeftMenu": true,
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "style": {
+            "width": "100%"
+          },
+          "workflows": [
+            {
+              "style": {
+                "margin": "0 0 2rem 0"
+              },
+              "workflows": [
+                {
+                  "name": "buyersellerticketquery"
+                }
+              ]
+            },
+            {
+              "display": "tabs",
+              "styleClass": "tabview-1",
+              "workflows": [
+                {
+                  "tabHeader": "",
+                  "showMainContent": true,
+                  "workflows": [
+                    {
+                      "style": {
+                        "margin": "0 0 0 0"
+                      },
+                      "workflows": [
+                        {
+                          "name": "buyersellerticketlisting",
+                          "data": "selected.buyersellerticketcomposite.buyersellerticketquery.data"
+                        }
+                      ]
+                    },
+                    {
+                      "style": {
+                        "display": "flex"
+                      },
+                      "workflows": [
+                        {
+                          "name": "lastUpdated",
+                          "data": "selected.buyersellerticketcomposite.buyersellerticketgquery.data"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "breadcrumbs": [
+      {
+        "label": "Contracts",
+        "type": "string",
+        "task": "contractshome"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "menu": false,
+    "clearSelected": ["selected"],
+    "customScrollBar": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "contractshome",
+      "outcomes": [
+        {
+          "name": "contractdomaincomposite",
+          "clearSelected": ["selected.contractdomaincomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "buyersellerticketscomposite",
+  "object": "1829cee8-2546-40ed-9642-6172876913d8",
+  "sys__UUID": "84f17098-9394-4d4a-9585-d283b59da6cc",
+  "deviceType": "mobile"
+}

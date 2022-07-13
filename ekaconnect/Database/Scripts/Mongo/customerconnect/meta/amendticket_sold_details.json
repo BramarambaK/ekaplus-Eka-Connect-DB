@@ -1,0 +1,289 @@
+{
+    "_id": "amendticket_sold_details",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "getDataFromExternalAPI": false,
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "label": "Amend details",
+    "type": "workflow",
+    "layout": {
+        "processorInfo": {
+            "processorId": "0b6fad53-3e42-4110-8ab5-3ad436fa1ecf"
+        },
+        "defaultFormItemStyle": {
+            "dirtyBG": "#fff",
+            "untouchedBG": "#fff",
+            "validBG": "#fff",
+            "invalidBG": "#fff",
+            "color": "#5D646F",
+            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'",
+            "width": "100%"
+        },
+        "defaultFormLabelStyle": {
+            "color": "#3B4047",
+            "margin-bottom": "7px",
+            "font": "normal 13px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "name": "create",
+        "formStyle": {
+            "padding-bottom": "12.5px",
+            "margin" : "0 10px 0",
+            "max-width" : "100%"
+        },
+        "defaultFormValueStyle": {
+            "color": "#5D646F",
+            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+        },
+        "type": "row",
+        "cardClass": "cargill-form amend-ticket-form"
+    },
+    "decisions": [],
+    "labelKey": "ENTER_LIMITS",
+    "fields": [
+        [
+            {
+                "key": "amendticketlist",
+                "style" : {
+                    "display" : "flex",
+                    "flex-wrap" : "wrap",
+                    "padding" : "19px 20px 9px 20px",
+                    "margin-bottom" : "20px",
+                    "border" : "1px solid #dbe1eb",
+                    "border-radius" : "0.25rem",
+                    "width" : "100%"
+                },
+                "type": "formarray",
+                "labelStyle": {
+                    "color": "#3B4047",
+                    "font-weight": "normal",
+                    "font-size": "18px",
+                    "font-family": "'Helvetica Neue LT W05 65 Medium'",
+                    "padding-bottom": "20px"
+                },
+                "addButton": {
+                    "style": {
+                        "display": "none"
+                    }
+                },
+                "removeButton": {
+                    "style": {
+                        "display": "none"
+                    }
+                },
+                "fields": [
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "ticketRefNo",
+                        "label": "Ticket ID",
+                        "type": "readOnly",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "amendProduct",
+                        "type": "readOnly",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "varietyNameList",
+                        "placeholder": "Select",
+                        "errorTooltip": true
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "quality",
+                        "label" : "Grade",
+                        "type": "readOnly",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "amendCropYear",
+                        "type": "readOnly",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "quantity",
+                        "type": "readOnly",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "location",
+                        "label" : "Site",
+                        "type": "readOnly",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "amendedPaddockLocation",
+                        "errorTooltip": true
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "amendedTruckRegistration",
+                        "errorTooltip": true
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "basePrice",
+                        "type": "readOnly",
+                        "label":"Price (MT)",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "marketType",
+                        "type": "readOnly",
+                        "label":"Selling option",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style" : {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color" : "#5D646F",
+                            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix" : "",
+                        "label" : "Contract number",
+                        "key" : "amendedContractId",
+                        "errorTooltip" : true
+                    }, 
+                    {
+                        "style" : {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color" : "#5D646F",
+                            "font" : "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix" : "",
+                        "type" : "readOnly",
+                        "label" : "Contract number",
+                        "key" : "amendedContractIdDisabled",
+                        "class" : [ 
+                            "form-input-readonly"
+                        ]
+                    },
+                    {
+                        "style": {
+                            "width" : "150px",
+                            "margin-bottom" : "10px",
+                            "margin-right" : "58px",
+                            "color": "#5D646F",
+                            "font": "normal 15px 'Helvetica Neue LT W05 65 Medium'"
+                        },
+                        "suffix": "",
+                        "key": "ticketHandlerName",
+                        "type": "readOnly",
+                        "label":"Acquirer",
+                        "class": [
+                            "form-input-readonly"
+                        ]
+                    }
+                ]
+            }
+        ]
+    ],
+    "taskId": "amendticket_sold_details",
+    "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "sys__UUID": "d9e50196-ffa7-487c-a109-559348a85627"
+}

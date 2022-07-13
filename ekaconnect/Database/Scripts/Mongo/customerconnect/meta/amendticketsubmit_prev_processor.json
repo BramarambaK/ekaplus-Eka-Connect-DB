@@ -1,0 +1,10 @@
+{
+    "_id": "amendticket_prev_processor",
+    "name": "amendticket_prev_processor",
+    "type": "processor",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "snippet": " if(req.body.submitamendticketcomposite && req.body.submitamendticketcomposite.submitamendtickettableview){\r\n      let data = req.body.submitamendticketcomposite.submitamendtickettableview;\r\n      res.status(200).send(data);\r\n    }else if(req.body.submitamendticketsoldcomposite && req.body.submitamendticketsoldcomposite.submitamendsoldtickettableview){\r\n      let data = req.body.submitamendticketsoldcomposite.submitamendsoldtickettableview;\r\n      res.status(200).send(data);\r\n    } else{\r\n      res.status(400).send(\"No data available\");\r\n    }",
+    "sys__UUID": "9224b20f-2616-45f1-88eb-198e9bf579f2"
+  }
+  

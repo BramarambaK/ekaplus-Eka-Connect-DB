@@ -1,0 +1,15 @@
+{
+    "_id" : "CACP_GetNGRDetails_externalApiPath_property",
+    "type" : "property",
+    "name" : "CACP_GetNGRDetails_externalApiPath",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CACP GetNGRDetails Api Path",
+    "defaultValue" : "/api/cacp-r2/v1/signup/cd/getNgrDetails?ngrnumber=#{body.ngrnumber}",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "CACP External URL path to Call NGR API.",
+	"sys__UUID" : "043119a2-b949-11ec-8422-0242ac120002"
+}

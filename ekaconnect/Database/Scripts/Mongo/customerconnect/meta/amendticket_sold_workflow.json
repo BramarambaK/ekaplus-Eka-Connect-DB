@@ -1,0 +1,151 @@
+{
+    "_id": "amendticket_sold_workflow",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "viewAction": "composite",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "label": "Amend tickets",
+    "template": [
+        {
+            "deviceType": "web",
+            "template": "cargill-web",
+            "config": {
+                "aside": ""
+            }
+        }
+    ],
+    "workflows": [
+        {
+            "name": "topmenu_amendticket_sold"
+        },
+        {
+            "style" : {
+                "padding" : "2px 21px",
+                "border-left" : "1px solid #c8ced3",
+                "border-right" : "1px solid #c8ced3",
+                "margin" : "0px 10px"
+            },
+            "workflows" : [ 
+                {
+                    "name" : "amendticket_warehousedheading"
+                }
+            ]
+        },
+        {
+            "name": "amendticket_sold_details",
+            "data": "selected.amendticketsold.amendticket_sold_details"
+        }
+    ],
+    "type": "workflow",
+    "layout": {
+        "header": {
+            "title": "Add price limits"
+        },
+        "customClass": true,
+        "footerClass": "price-limits-footer",
+        "name": "customv2",
+        "menu": false,
+        "breadcrumbs": [
+            {
+                "label": "Home",
+                "type": "string"
+            },
+            {
+                "label": "Manage tickets",
+                "type": "string",
+                "task": "ticketslist"
+            },
+            {
+                "label": "Amend tickets",
+                "type": "string"
+            }
+        ],
+        "clearSelected":[
+            "selected.amendticketsold.ticketlistingquery"
+        ]
+    },
+    "decisions": [
+        {
+            "objectAction": "READ",
+            "selection": "ticketslist",
+            "outcomes": [
+                {
+                    "name": "ticketlistingcomposite",
+                    "clearSelected": [
+                        "selected.ticketlistingcomposite",
+                        "selected.amendticketwarehoused",
+                        "selected.amendticketsold"
+                    ]
+                }
+            ]
+        },
+        {
+            "objectAction": "READ",
+            "selection": "ticketshome",
+            "outcomes": [
+                {
+                    "name": "ticketscomposite",
+                    "clearSelected": [
+                        "selected.viewticketwarehousedcomposite",
+                        "selected.ticketlistingcomposite"
+                    ]
+                }
+            ]
+        },
+        {
+            "btnClass": "btn-cargill btn-empty",
+            "objectAction": "READ",
+            "outcomes": [
+                {
+                    "displayType": "popup",
+                    "popupClass": "cargill-delete-class",
+                    "name": "amend_ticket_sold_detail_cancel_popup",
+                    "restoreState": true
+                }
+            ],
+            "style": {
+                "margin-right": "auto",
+                "margin-left": "37px"
+            },
+            "label": "Cancel",
+            "position": "bottom"
+        },
+        {
+            "btnClass": "btn-cargill btn-primary",
+            "objectAction": "UPDATE",
+            "type": "submit",
+            "task": "amendticketsold",
+            "executeDecision": false,
+            "pickSelectedData": {
+                "amendticketsold": "selected.amendticketsold",
+                "ticketlistingcomposite": "selected.ticketlistingcomposite"
+            },
+            "outcomes": [
+                {
+                    "data": "output.amendticketsold",
+                    "appendMsg": false,
+                    "name": "_ST_PROCESS_AMEND_TICKET_DETAIL_VALIDADE"
+                },
+                {
+                    "data": "output._ST_PROCESS_AMEND_TICKET_DETAIL_VALIDADE",
+                    "setSelected": [
+                        "selected.submitamendticketsoldcomposite.submitamendsoldtickettableview"
+                    ],
+                    "clearSelected": [
+                        "selected.amendticketsold"
+                    ],
+                    "name": "submitamendticketsoldcomposite"
+                }
+            ],
+            "style": {
+                "margin-right": "36px"
+            },
+            "label": "Next",
+            "position": "bottom"
+        }
+    ],
+    "taskId": "amendticketsold",
+    "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "sys__UUID": "af76ab2f-1b6a-4fab-af73-6eb880576d53"
+}

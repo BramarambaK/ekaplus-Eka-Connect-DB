@@ -1,0 +1,167 @@
+{
+  "_id": "buyersellerticketlisting_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "buyersellerticketlisting_mobile",
+  "label": "Manage tickets",
+  "object": "1829cee8-2546-40ed-9642-6172876913d8",
+  "sys__UUID": "74de1144-f1ad-4e14-9ba1-4201b24f4f8a",
+  "type": "workflow",
+  "lazyLoading": false,
+  "rows": 20,
+  "layout": {
+    "name": "list",
+    "getInitialData": false,
+    "searchPlaceHolder": "Search e.g. Ticket ID",
+    "messages": {
+      "emptyText": "<span>No results found</span><br><span>Try adjusting your filters to broaden your search</span>"
+    },
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "columnFilter": true,
+      "search": true,
+      "reload": true,
+      "reset": true,
+      "export": true,
+      "operationV2": true,
+      "customization": true
+    },
+    "lazyLoading": false,
+    "showCheckbox": false,
+    "theme": "theme-grid-customer-connect",
+    "resetSelection": true,
+    "tableEditing": true,
+    "selectionMode": "none",
+    "selection": "row",
+    "dependentPrimaryFilters": true,
+    "style": {
+      "display": "inline-table"
+    }
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo",
+      "hidden": false,
+      "category": "link",
+      "task": "custom-link",
+      "primaryKey": {
+        "field": "sys__UUID"
+      }
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Commodity",
+      "sort": true,
+      "key": "product"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Grade",
+      "sort": true,
+      "key": "quality"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Season",
+      "sort": true,
+      "key": "cropYear"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Quantity (MT)",
+      "sort": true,
+      "key": "quantity"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Dispatch location",
+      "sort": true,
+      "key": "dispatchlocation"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Delivery location",
+      "sort": true,
+      "key": "deliverylocation"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Date Delivered",
+      "sort": true,
+      "key": "datedelivered",
+      "dateformat": "DD/MM/YYYY"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Contract ID",
+      "sort": true,
+      "key": "purchaseContractNumber"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Customer Reference",
+      "sort": true,
+      "key": "customerReference"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Movement Order ID",
+      "sort": true,
+      "key": "movementorderID"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Vehicle ID",
+      "sort": true,
+      "key": "vehicleID"
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "name": "buyersellerviewticketcomposite",
+          "data": "selected.buyersellerticketcomposite"
+        }
+      ]
+    }
+  ],
+  "labelKey": "LIST",
+  "deviceType": "mobile"
+}

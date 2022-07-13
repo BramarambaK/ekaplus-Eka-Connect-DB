@@ -1,0 +1,15 @@
+{
+  "_id": "app_home",
+  "type": "property",
+  "name": "app_home",
+  "propertyLevel": "app",
+  "dataType": "String",
+  "fieldtype": "textbox",
+  "length": "200",
+  "editSupportedInUI": true,
+  "visibility" : "public",
+  "label": "Application Homepage URL",
+  "defaultValue": "https://cacpui.dev.dev-cglcloud.com/Landing",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Cargill Dashboard Homepage URL"
+}

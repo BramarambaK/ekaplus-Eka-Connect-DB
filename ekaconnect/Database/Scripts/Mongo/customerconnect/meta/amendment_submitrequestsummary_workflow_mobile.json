@@ -1,0 +1,34 @@
+{
+  "_id": "amendment_submitrequestsummary_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Submit request contract Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "descriptionExpression": "const grade = (${data}[0].isMultiGrade == true) ? '(multi-grade)' : '(fixed-grade)'; return 'Review request details for <b>'  + ${data}[0].counterPartyName + ' - ' + ${data}[0].BPRefNo + '</b> for ' + ${data}[0].product + ' - ' + ${data}[0].quality + ' ' +  grade + ' contract.' ",
+      "label": "Summary",
+      "style": {
+        "margin-bottom": "16px"
+      }
+    },
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 10,
+      "type": "showMoreLess"
+    },
+    "cardsListClass": "submit-summary",
+    "theme": "submit-summary"
+  },
+  "version": "V2",
+  "decisions": [],
+  "fields": [],
+  "labelKey": "Cards View",
+  "taskId": "amendment_submitrequestsummary",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "sys__UUID": "74208526-0fbd-11ec-82a8-0242ac130003",
+  "deviceType": "mobile"
+}

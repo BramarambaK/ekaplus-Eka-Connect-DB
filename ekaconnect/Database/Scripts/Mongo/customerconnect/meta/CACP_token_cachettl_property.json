@@ -1,0 +1,15 @@
+{
+    "_id" : "CACP_token_cachettl_property",
+    "type" : "property",
+    "name" : "CACP_token_cachettl",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CACP token cache ttl",
+    "defaultValue" : "3300",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External cache ttl for CACP token.",
+	"sys__UUID" : "57721c2e-b949-11ec-8422-0242ac120002"
+}

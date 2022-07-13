@@ -1,0 +1,104 @@
+{
+  "_id": "bpref_season_details_master_data_object",
+  "name": "bpref_season_details_master_data_object",
+  "label": "BPRef Seasons Details Master Data Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["bpRefNo","season","bpExternalCode","marketType","pricingOption"],
+  "fields": {
+    "bpRefNo": {
+      "bpRefNo": "BP Ref No",
+      "labelKey": "bpRefNo",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+	"bpName": {
+      "bpName": "BP Name",
+      "labelKey": "bpName",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+	"bpExternalCode": {
+      "bpExternalCode": "BP External Code",
+      "labelKey": "bpExternalCode",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+	"isInternalBp": {
+      "isInternalBp": "Is Internal BP",
+      "labelKey": "isInternalBp",
+      "type": "textbox",
+	  "sourceTextFormat": {
+        "textFormatLabel": "Y/N",
+        "textFormat": "^$|\\s*$|Y|N"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "signed": {
+      "signed": "Signed",
+      "labelKey": "signed",
+      "type": "textbox",
+	  "sourceTextFormat": {
+        "textFormatLabel": "Y/N",
+        "textFormat": "^$|\\s*$|Y|N"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "season": {
+      "season": "Season",
+      "labelKey": "season",
+      "type": "textbox",
+	  "sourceTextFormat" : {
+            "textFormatLabel": "yyyy/yyyy",
+            "textFormat": "[0-9]{4}/[0-9]{4}$"
+	  },
+      "isRequired": true,
+      "dataType": "String"
+    },
+	"pricingOption": {
+      "pricingOption": "Pricing Option",
+      "labelKey": "pricingOption",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+	"marketType": {
+      "marketType": "Market Type",
+      "labelKey": "marketType",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+	"isActive": {
+      "isActive": "isActive",
+      "labelKey": "isActive",
+      "type": "textbox",
+	  "sourceTextFormat": {
+        "textFormatLabel": "Y/N",
+        "textFormat": "^$|\\s*$|Y|N"
+      },
+      "isRequired": false,
+      "dataType": "String"
+    },
+	"paymentTerm": {
+      "paymentTerm": "Payment Term",
+      "labelKey": "paymentTerm",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID": "6d10c2dd-c5c5-451e-88f5-3de80e151bc3"
+}

@@ -1,0 +1,69 @@
+{
+    "_id" : "canceloutturnhome_popup",
+    "name" : "canceloutturnhome_popup",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Exit form",
+    "type" : "workflow",
+    "sys__UUID" : "33a62509-99e3-4840-bc3a-59fb349a5c8f",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "layout" : {
+        "topLine" : {
+            "display" : true
+        },
+        "name" : "cargillcancelpopup",
+        "option" : {
+            "bodyMessage" : "Are you sure you want to exist this form",
+            "headerMessage" : "Exit form"
+        },
+        "showErrorInToastr" : true
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-cargill btn-empty",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "type" : "popup",
+                    "close" : true
+                }
+            ],
+            "label" : "Cancel",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn btn-cargill btn-primary",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "type" : "externalLinkSameTab",
+                    "targetPath" : "${outTurnQuantitycomposite}",
+                    "restoreState" : true,
+                    "clearSelected" : [ 
+                        "selected", 
+                        "menuDetails"
+                    ]
+                }
+            ],
+            "label" : "Exit",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "close-icon btn",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "type" : "popup",
+                    "close" : true
+                }
+            ],
+            "position" : "top",
+            "type" : "close"
+        }
+    ],
+    "labelKey" : "Cancel",
+    "fields" : [],
+    "taskId" : "canceloutturnhome_popup"
+}

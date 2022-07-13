@@ -1,0 +1,18 @@
+{
+  "_id": "aua_object",
+  "name": "aua_object",
+  "label": "AuA Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": [],
+  "fields": {},
+  "sys__UUID": "86cda9e9-9f15-4b1b-b051-f9153442021e"
+}

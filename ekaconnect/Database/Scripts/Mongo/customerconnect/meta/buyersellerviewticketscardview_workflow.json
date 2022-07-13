@@ -1,0 +1,94 @@
+{
+  "_id": "buyersellerviewticketscardview_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Tickets details  Card View",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "pagination": {
+      "rowCount": 10000
+    },
+    "hideTabs": true
+  },
+  "fields": [
+    [
+      {
+        "label": "Ticket ID",
+        "type": "details",
+        "key": "ticketRefNo",
+        "filterType": "tabs",
+        "filterBy": "ticketRefNo",
+        "style": {
+          "display": "none"
+        }
+      },
+      {
+        "label": "Commodity",
+        "type": "details",
+        "key": "product"
+      },
+      {
+        "label": "Grade",
+        "type": "details",
+        "key": "quality"
+      },
+      {
+        "label": "Season",
+        "type": "details",
+        "key": "cropYear"
+      },
+      {
+        "label": "Quantity (MT)",
+        "type": "details",
+        "key": "quantity"
+      },
+      {
+        "label": "Dispatch location",
+        "type": "details",
+        "key": "dispatchlocation"
+      },
+      {
+        "label": "Delivery location",
+        "type": "details",
+        "key": "deliverylocation"
+      },
+      {
+        "label": "Date Delivered",
+        "type": "details",
+        "key": "formattedDelivereddate",
+        "valueExpression": "return moment('${datedelivered}').format('DD/MM/YYYY')"
+      },
+      {
+        "label": "Customer Reference",
+        "type": "details",
+        "key": "customerReference"
+      },
+      {
+        "label": "Movement Order ID",
+        "type": "details",
+        "key": "movementOrderID"
+      },
+      {
+        "label": "Vehicle ID",
+        "type": "details",
+        "key": "vehicleID"
+      },
+      {
+        "label": "Trading name",
+        "type": "details",
+        "key": "bpName"
+      },
+      {
+        "label": "Contract ID",
+        "key": "contractId"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "buyersellerviewticketscardview",
+  "object": "1829cee8-2546-40ed-9642-6172876913d8"
+}

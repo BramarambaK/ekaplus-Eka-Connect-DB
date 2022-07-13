@@ -1,0 +1,107 @@
+{
+  "_id": "cancelpopup_contractdetails_approverequest",
+  "name": "cancelpopup_contractdetails_approverequest",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Approve contract details",
+  "type": "workflow",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to approve ${requestId}?",
+      "headerMessage": "Approve contract details",
+      "information": "A contract with the approved details will be created."
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "cancelpopup_contractdetails_approverequest",
+      "executeDecision": false,
+      "pickSelectedData": {
+        "data": "selected.contractrequestdetailscomposite.data"
+      },
+      "disableButtonTime": 3000,
+      "outcomes": [
+        {
+          "data": "output.cancelpopup_contractdetails_approverequest",
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Contract has been successfully approved.",
+              "messageExpression": "return '${requestId}' + ' has been successfully approved.'"
+            },
+            "failure": {
+              "message": "This request cannot be actioned at this time. Please try again later."
+            },
+            "successWithWarning": {
+              "message": "Contract has been successfully approved with some errors"
+            }
+          },
+          "name": "_ST_PROCESS_APPROVE_REQUEST"
+        }, 
+      	{
+            "name" : "EXT_NOTIFICATION_APPROVE_GROWER_CONTRACT_AMENDMENT",
+            "data" : "output.cancelpopup_contractdetails_approverequest",
+            "condition" : "return '${data.requestType}'=='Amendment'"
+        }, 
+        {
+            "name" : "EXT_NOTIFICATION_APPROVE_GROWER_CONTRACT",
+            "data" : "output._ST_PROCESS_APPROVE_REQUEST",
+            "condition" : "return '${requestType}'.toLowerCase() =='new contract'"
+        },
+        {
+          "data": "output._ST_PROCESS_APPROVE_REQUEST",
+          "name": "enterpriselistingcomposite",
+          "showToaster": true,
+          "isDelay": true
+        }
+      ],
+      "label": "Approve details",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "fields": [
+    {
+      "style": {
+        "display": "none"
+      },
+      "key": "shipmentPeriodFrom"
+    }
+  ],
+  "taskId": "cancelpopup_contractdetails_approverequest"
+}

@@ -1,0 +1,158 @@
+{
+    "_id" : "amendticket_warehoused_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "Amend tickets",
+    "template" : [ 
+        {
+            "deviceType" : "web",
+            "template" : "cargill-web",
+            "config" : {
+                "aside" : ""
+            }
+        }, 
+        {
+            "deviceType" : "mobile",
+            "template" : "cargill-mobile",
+            "config" : {
+                "aside" : ""
+            }
+        }
+    ],
+    "workflows" : [ 
+        {
+            "name" : "topmenu_amendticket_warehoused"
+        }, 
+        {
+            "style" : {
+                "padding" : "2px 21px",
+                "border-left" : "1px solid #c8ced3",
+                "border-right" : "1px solid #c8ced3",
+                "margin" : "0px 10px"
+            },
+            "workflows" : [ 
+                {
+                    "name" : "amendticket_warehousedheading"
+                }
+            ]
+        },
+        {
+            "name" : "amendticket_warehoused_details",
+            "data" : "selected.amendticketwarehoused.amendticket_warehoused_details"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "header" : {
+            "title" : "Add price limits"
+        },
+        "customClass" : true,
+        "footerClass" : "price-limits-footer",
+        "name" : "customv2",
+        "menu" : false,
+        "breadcrumbs" : [ 
+            {
+                "label" : "Home",
+                "type" : "string"
+            }, 
+            {
+                "label" : "Manage tickets",
+                "type" : "string",
+                "task" : "ticketslist"
+            }, 
+            {
+                "label" : "Amend tickets",
+                "type" : "string"
+            }
+        ],
+        "clearSelected":[
+            "selected.amendticketwarehoused.ticketlistingquery",
+            "selected.amendticketwarehoused.contractdomainquery"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "selection" : "ticketslist",
+            "outcomes" : [ 
+                {
+                    "name" : "ticketlistingcomposite",
+                    "clearSelected" : [ 
+                        "selected.ticketlistingcomposite", 
+                        "selected.amendticketwarehoused"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "objectAction" : "READ",
+            "selection" : "ticketshome",
+            "outcomes" : [ 
+                {
+                    "name" : "ticketscomposite",
+                    "clearSelected" : [ 
+                        "selected.viewticketwarehousedcomposite", 
+                        "selected.ticketlistingcomposite"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "btnClass" : "btn-cargill btn-empty",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "popupClass" : "cargill-delete-class",
+                    "name" : "amend_ticket_warehoused_detail_cancel_popup",
+                    "restoreState" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto",
+                "margin-left" : "37px"
+            },
+            "label" : "Cancel",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-cargill btn-primary",
+            "objectAction" : "UPDATE",
+            "type" : "submit",
+            "task" : "amendticketwarehoused",
+            "executeDecision" : false,
+            "pickSelectedData": {
+                "amendticketwarehoused": "selected.amendticketwarehoused",
+                "ticketlistingcomposite": "selected.ticketlistingcomposite"
+              },
+            "outcomes" : [ 
+                {
+                    "data" : "output.amendticketwarehoused",
+                    "appendMsg" : false,
+                    "name" : "_ST_PROCESS_AMEND_TICKET_DETAIL_VALIDADE"
+                }, 
+                {
+                    "data" : "output._ST_PROCESS_AMEND_TICKET_DETAIL_VALIDADE",
+                    "setSelected" : [ 
+                        "selected.submitamendticketcomposite.submitamendtickettableview"
+                    ],
+                    "clearSelected":[
+                        "selected.amendticketwarehoused"
+                    ],
+                    "name" : "submitamendticketcomposite"
+                }
+            ],
+            "style" : {
+                "margin-right" : "36px"
+            },
+            "label" : "Next",
+            "position" : "bottom"
+        }
+    ],
+    "taskId" : "amendticketwarehoused",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "sys__UUID" : "f55e48b5-c2d7-413c-979a-7ad2e1619014"
+}

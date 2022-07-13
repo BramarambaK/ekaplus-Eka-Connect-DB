@@ -1,0 +1,29 @@
+{
+    "_id" : "amendticket_warehousedheading_workflow",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "label" : "header summary",
+    "type" : "workflow",
+    "layout" : {
+        "header" : {
+            "descriptionExpression" : " return 'Provide the new details for each ticket you wish to amend.'",
+            "label" : "Amend details",
+            "style" : {
+                "margin-bottom" : "16px",
+                "margin-top" : "30px"
+            }
+        },
+        "name" : "cards-view",
+        "cardsListClass" : "submit-summary",
+        "theme" : "submit-summary"
+    },
+    "version" : "V2",
+    "decisions" : [],
+    "fields" : [],
+    "labelKey" : "Cards View",
+    "taskId" : "amendticket_warehousedheading",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "sys__UUID" : "25975d04-4115-41f7-9dfd-819329a40e19"
+}

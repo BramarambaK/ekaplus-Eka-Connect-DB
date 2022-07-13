@@ -1,0 +1,15 @@
+{
+  "_id": "AuA_Flag_Switch",
+  "type": "property",
+  "name": "AuA_Flag_Switch",
+  "propertyLevel": "app",
+  "dataType": "boolean",
+  "length": "10",
+  "label": "Is AUA Enabled/Disabled",
+  "visibility": "public",
+  "editSupportedInUI": true,
+  "defaultValue": false,
+  "listOfValues": "true,false",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "description": "Is AuA mode Enabled."
+}

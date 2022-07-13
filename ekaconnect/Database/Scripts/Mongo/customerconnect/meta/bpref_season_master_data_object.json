@@ -1,0 +1,47 @@
+{
+  "_id": "bpRefNo_season_master_data_object",
+  "name": "bpRefNo_season_master_data_object",
+  "label": "BPRefNo Season Master Data Object",
+  "type": "object",
+  "version": "1",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "uniqueFields": ["bpRefNo","bpExternalCode"],
+  "fields": {
+    "bpRefNo": {
+      "bpRefNo": "BP Ref No",
+      "labelKey": "bpRefNo",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+	"bpExternalCode": {
+      "bpExternalCode": "BP External Code",
+      "labelKey": "bpExternalCode",
+      "type": "textbox",
+      "isRequired": true,
+      "dataType": "String"
+    },
+    "currentSeason": {
+      "currentSeason": "Current Season",
+      "labelKey": "currentSeason",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    },
+    "previousSeason": {
+      "previousSeason": "Previous Season",
+      "labelKey": "previousSeason",
+      "type": "textbox",
+      "isRequired": false,
+      "dataType": "String"
+    }
+  },
+  "sys__UUID" : "1f3e680b-f3dd-418a-8fd4-888e38714cc3"
+}

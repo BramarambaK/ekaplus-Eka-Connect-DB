@@ -1,0 +1,15 @@
+{
+    "_id": "app_contactus",
+    "type": "property",
+    "name": "app_contactus",
+    "propertyLevel": "app",
+    "dataType": "String",
+    "fieldtype": "textbox",
+    "length": "200",
+    "editSupportedInUI": true,
+    "visibility" : "public",
+    "label": "Application Contact Us URL",
+    "defaultValue": "https://cacpuirtwo.dev.dev-cglcloud.com/Landing/ContactUs",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "description": "Cargill Dashboard Contact Us URL"
+  }

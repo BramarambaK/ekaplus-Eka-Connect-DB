@@ -1,0 +1,123 @@
+{
+  "_id": "cancelpopup_contractdetails_rejectrequest",
+  "name": "cancelpopup_contractdetails_rejectrequest",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Reject contract details",
+  "type": "workflow",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "version":"V2",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to reject ${requestId}?",
+      "headerMessage": "Reject contract details",
+      "information": "Details in your existing contract will not be updated.",
+      "config": {
+        "bodyMessageExpression": "return 'Are you sure you want to reject ${requestId}?'",
+        "headerMessageExpression": "return 'Reject contract details'",
+        "informationExpression": "return  '${requestType}'.toLowerCase() == 'new contract' ? 'You will not proceed with this contract request.' : 'Details in your existing contract will not be updated.'"
+      }
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": false,
+      "disableButtonTime": 3000,
+      "outcomes": [
+        {
+          "data": "output.cancelpopup_contractdetails_rejectrequest",
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Contract has been successfully rejected.",
+              "messageExpression": "return '${requestId}' + ' has been successfully rejected.'"
+            },
+            "failure": {
+              "message": "This request cannot be actioned at this time. Please try again later."
+            },
+            "successWithWarning": {
+              "message": "Contract has been successfully rejected with some errors"
+            }
+          },
+          "name": "_ST_PROCESS_REJECT_REQUEST"
+        },
+		{
+          "name" : "EXT_NOTIFICATION_REJECT_GROWER_CONTRACT_AMENDMENT",
+          "data" : "output.cancelpopup_contractdetails_rejectrequest",
+           "condition" : "return '${requestType}'=='Amendment'"
+         }, 
+         {
+           "name" : "EXT_NOTIFICATION_REJECT_GROWER_CONTRACT",
+           "data" : "output.cancelpopup_contractdetails_rejectrequest",
+            "condition" : "return '${requestType}'.toLowerCase() == 'new contract'"
+          },
+        {
+          "data": "output._ST_PROCESS_REJECT_REQUEST",
+          "name": "enterpriselistingcomposite",
+          "showToaster": true,
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Contract has been successfully rejected.",
+              "messageExpression": "return '${requestId}' + ' has been successfully rejected.'"
+            },
+            "failure": {
+              "message": "This request cannot be actioned at this time. Please try again later."
+            },
+            "successWithWarning": {
+              "message": "Contract has been successfully rejected with some errors"
+            }
+          },
+          "isDelay": true
+        }
+      ],
+      "label": "Reject details",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "fields": [
+    {
+      "style": {
+        "display": "none"
+      },
+      "key": "shipmentPeriodFrom"
+    }
+  ],
+  "taskId": "cancelpopup_contractdetails_rejectrequest"
+}

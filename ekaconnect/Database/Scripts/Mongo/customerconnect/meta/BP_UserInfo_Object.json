@@ -1,0 +1,86 @@
+{
+  "_id": "BP_UserInfo_Object",
+  "name": "BP_USERINFO",
+  "type": "object",
+  "sys__UUID": "6fe87690-d960-4201-8a44-c1a9a0c6ee04",
+  "objectAction": {
+    "CREATE": "POST",
+    "UPDATE": "PUT",
+    "READ": "GET",
+    "LISTVIEW": "GET",
+    "DELETE": "DELETE"
+  },
+  "translatableKeys": [],
+  "fields": {
+    "status": {
+      "status": "Status",
+      "labelKey": "status",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "userName": {
+      "userName": "User Name",
+      "labelKey": "userName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "emailId": {
+      "emailId": "Email Id",
+      "labelKey": "emailId",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "firstName": {
+      "firstName": "First Name",
+      "labelKey": "firstName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "lastName": {
+      "lastName": "Last Name",
+      "labelKey": "lastName",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "referenceNumber": {
+      "referenceNumber": "Reference Number",
+      "labelKey": "referenceNumber",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "userType": {
+      "userType": "userType",
+      "labelKey": "userType",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    },
+    "accessRoles": {
+      "accessRoles": "Access & Roles",
+      "labelKey": "accessRoles",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "businessPartner": {
+      "businessPartner": "Business Partner",
+      "labelKey": "businessPartner",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": true
+    },
+    "activeStatus": {
+      "activeStatus": "Active Status",
+      "labelKey": "activeStatus",
+      "type": "textbox",
+      "dataType": "String",
+      "isRequired": false
+    }
+  }
+}

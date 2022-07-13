@@ -1,0 +1,14 @@
+{
+    "_id" : "appDeepLinkUrl",
+    "type" : "property",
+    "name" : "appDeepLinkUrl",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+	"editSupportedInUI" : true,
+    "length" : "120",
+    "label" : "Customer Connect Deep Link Url",
+    "defaultValue" : "/tpapp/#app=22&loc=deeplink?navigateTo=<encodedData>",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "Customer Connect Deep Link Url"
+}

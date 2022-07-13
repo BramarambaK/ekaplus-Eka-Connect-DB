@@ -1,0 +1,76 @@
+{
+  "_id": "amendment_submitrequestfreightdetails_workflow_mobile",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Freight details card view",
+  "type": "workflow",
+  "layout": {
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "cargil-contract-details submit-freight-mobile",
+    "theme": "cargill-contract-details-card amendment-submitrequest-frightdetails"
+  },
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return '${amendedFreightOrganise}'.includes('Cargill') ? 'Farm contact person' : 'Freight and logistics'"
+      }
+    ],
+    [
+      {
+        "label": "Full name",
+        "type": "detailsFlex",
+        "key": "amendedFullname",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${amendedFullname}'.length==0?'-':'${amendedFullname}'"
+      },
+      {
+        "label": "Email",
+        "type": "detailsFlex",
+        "key": "amendedEmail",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${amendedEmail}'.length==0?'-':'${amendedEmail}'"
+      },
+      {
+        "label": "Phone Number",
+        "type": "detailsFlex",
+        "key": "amendedPhonenumber",
+        "style": {
+          "width": "100%",
+          "font-size": "15px",
+          "height": "24px",
+          "margin-bottom": "16px"
+        },
+        "class": "mobile-full-width",
+        "valueExpression": " return '${amendedPhonenumber}'.length==0?'-':'${amendedPhonenumber}'"
+      }
+    ]
+  ],
+  "decisions": [],
+  "labelKey": "Cards View",
+  "taskId": "amendment_submitrequestfreightdetails",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "deviceType": "mobile"
+}

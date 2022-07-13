@@ -1,0 +1,89 @@
+{
+  "_id": "bpuserlisting_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "BP User Listing",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "list",
+    "tableStyle": {
+      "width": "100%",
+      "min-height": "300px"
+    },
+    "searchPlaceHolder": "Search BP User ID",
+    "options": {
+      "filter": true,
+      "lastUpdated": true,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-success",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE",
+      "selection": "default",
+      "position": "top",
+      "outcomes": [
+        {
+          "popupClass": "edit-modal700px",
+          "name": "bpusercreate",
+          "displayType": "popup"
+        }
+      ],
+      "label": "Create",
+      "iconClass": "fa fa-plus"
+    }
+  ],
+  "labelKey": "LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "sort": true,
+      "key": "userName"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "firstName"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "lastName"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "emailId"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "accessRoles"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "sort": true,
+      "key": "businessPartner"
+    }
+  ],
+  "taskId": "bpuserlisting",
+  "object": "6fe87690-d960-4201-8a44-c1a9a0c6ee04"
+}

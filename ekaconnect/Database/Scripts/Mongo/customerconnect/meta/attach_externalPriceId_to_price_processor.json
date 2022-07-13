@@ -1,0 +1,9 @@
+{
+  "_id": "attach_externalPriceId_to_price_processor",
+  "name": "attach_externalPriceId_to_price_processor",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "snippet": "var payloadData;\r\n\/\/Format payload into object array\r\nif (!Array.isArray(req.body.bulkPayLoadData)) {\r\n  payloadData = [{ ...req.body }];\r\n  delete payloadData[0]['processorDetails'];\r\n  delete payloadData[0]['propertyList'];\r\n} else {\r\n  payloadData = req.body.bulkPayLoadData;\r\n}\r\n\r\nfor (let i = 0; i < payloadData.length; i++) {\r\n  payloadData[i].externalPriceId = payloadData[i].priceId;\r\n}\r\n\/\/ console.log(payloadData);\r\nres.status(200).send(payloadData);",
+  "sys__UUID": "3a729c96-07e3-479f-8bc0-21d0f8edc8af",
+  "type": "processor"
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "amendsolddetailsemployeetable_worklfow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Contract details Card View",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "header": "Amended sold ticket details",
+    "name": "editable-table",
+    "theme": "theme-grid-white",
+    "rowGroup": true,
+    "class": "submitamend-detailtickettable"
+  },
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Ticket ID",
+      "sort": true,
+      "key": "ticketRefNo",
+      "hidden": false
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Variety",
+      "sort": true,
+      "key": "varietyName",
+      "primaryFilter": false,
+      "UIupdates": {
+        "listValue": "return '${varietyName}' != '${originalVarietyName}' ? '${varietyName}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Paddock location",
+      "sort": true,
+      "key": "paddockLocation",
+      "UIupdates": {
+        "listValue": "return '${paddockLocation}' != '${originalPaddockLocation}' ? '${paddockLocation}' : '-'"
+      }
+    },
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Truck registration",
+      "sort": true,
+      "key": "truckRegistration",
+      "primaryFilter": false,
+      "UIupdates": {
+        "listValue": "return '${truckRegistration}' != '${originalTruckRegistration}' ? '${truckRegistration}' : '-'"
+      }
+    }
+  ],
+  "decisions": [],
+  "labelKey": "EDITABLETABLE",
+  "taskId": "amendsolddetailsemployeetable",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "sys__UUID": "b09cde52-7949-4ff0-83b1-a1d8280c6cb9"
+}

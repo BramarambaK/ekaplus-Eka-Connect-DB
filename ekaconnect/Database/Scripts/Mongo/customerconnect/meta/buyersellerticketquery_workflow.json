@@ -1,0 +1,43 @@
+{
+  "_id": "buyersellerticketquery_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Query",
+  "sys__UUID": "055719f3-6b7c-4eca-8d73-8dc8e7f16111",
+  "type": "workflow",
+  "rows": 10000,
+  "layout": {
+    "header": {
+      "label": "Manage tickets",
+      "style": {
+        "font-size": "22px"
+      }
+    },
+    "processorInfo": {
+      "processorId": "248783d1-1167-4d08-808a-43dde17b6100",
+      "isProcessorOnly": true
+    },
+    "getInitialData": true,
+    "name": "query"
+  },
+  "fields": [
+    {
+      "key": "ngrCTRMFilter",
+      "filterBy": "bpRefNo",
+      "filterType": "dropdown",
+      "multiple": false,
+      "selectedAll": "return '${userInfo.customerType}' !== 'Grower' ? 'All ABNs' : 'All NGRs'",
+      "placeholder": "return '${userInfo.customerType}' !== 'Grower' ? 'Select a ABN' : 'Select a NGR'"
+    },
+    {
+      "key": "tabsView",
+      "filterType": "tabs"
+    }
+  ],
+  "decisions": [],
+  "labelKey": "QUERY",
+  "taskId": "buyersellerticketquery",
+  "object": "1829cee8-2546-40ed-9642-6172876913d8"
+}

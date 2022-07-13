@@ -1,0 +1,100 @@
+{
+  "_id": "cancelpopup_outturn_ticketdetails_rejectrequest",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Reject request",
+  "type": "workflow",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "version": "V2",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to reject ${requestId}?",
+      "headerMessage": "Reject request",
+      "config": {
+        "bodyMessageExpression": "return 'Are you sure you want to reject ${requestId}?'",
+        "headerMessageExpression": "return 'Reject request'"
+      }
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "type": "submit",
+      "task": "compositeSave",
+      "executeDecision": false,
+      "outcomes": [
+        {
+          "data": "output.cancelpopup_outturn_ticketdetails_rejectrequest",
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Request has been successfully rejected.",
+              "messageExpression": "return '${requestId}' + ' has been successfully rejected.'"
+            },
+            "failure": {
+              "message": "This request cannot be actioned at this time. Please try again later."
+            },
+            "successWithWarning": {
+              "message": "Request has been successfully rejected with some errors"
+            }
+          },
+          "name": "_ST_PROCESS_REJECT_REQUEST_TICKETS"
+        },
+        {
+          "data": "output._ST_PROCESS_REJECT_REQUEST_TICKETS",
+          "name": "enterpriselistingcomposite",
+          "showToaster": true,
+          "appendMsg": true,
+          "result": {
+            "success": {
+              "message": "Request has been successfully rejected.",
+              "messageExpression": "return '${requestId}' + ' has been successfully rejected.'"
+            },
+            "failure": {
+              "message": "This request cannot be actioned at this time. Please try again later."
+            },
+            "successWithWarning": {
+              "message": "Request has been successfully rejected with some errors"
+            }
+          }
+        }
+      ],
+      "label": "Reject request",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "taskId": "cancelpopup_outturn_ticketdetails_rejectrequest"
+}

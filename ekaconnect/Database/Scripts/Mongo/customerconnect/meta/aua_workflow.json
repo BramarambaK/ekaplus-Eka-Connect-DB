@@ -1,0 +1,45 @@
+{
+  "_id": "aua_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "taskId": "AuA",
+  "object": "86cda9e9-9f15-4b1b-b051-f9153442021e",
+  "sys__UUID": "0d423919-069f-4709-b16b-cf9b3f43a6fd",
+  "type": "workflow",
+  "version": "V2",
+  "layout": {},
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "task": "manageUser",
+      "type": "submit",
+      "outcomes": [
+        {
+          "data": "output.AuA",
+          "name": "_ST_PROCESS_MANAGE_USER_AUA"
+        },
+        {
+          "name": "AuA"
+        }
+      ]
+    }
+  ]
+}

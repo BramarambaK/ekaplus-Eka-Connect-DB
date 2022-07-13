@@ -1,0 +1,101 @@
+{
+  "_id": "bpusercreate_workflow",
+  "componentType": "UserTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Create",
+  "type": "workflow",
+  "layout": {
+    "defaultFormItemStyle": {
+      "justify-content": "flex-start",
+      "flex-wrap": "wrap",
+      "margin-right": "10px"
+    },
+    "defaultFormLabelStyle": {},
+    "topLine": {
+      "display": true
+    },
+    "name": "create",
+    "formStyle": {
+      "margin": "auto",
+      "margin-bottom": "20px"
+    },
+    "defaultFormValueStyle": {},
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bpuserlisting"
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn oms-blue",
+      "objectAction": "CREATE",
+      "labelkey": "REVIEW",
+      "task": "bpusercreate",
+      "outcomes": [
+        {
+          "data": "output.bpusercreate",
+          "appendMsg": false,
+          "name": "_ST_BPUSER_CREATE"
+        },
+        {
+          "data": "output.bpusercreate",
+          "name": "bpuserlisting"
+        }
+      ],
+      "label": "SAVE",
+      "position": "bottom",
+      "type": "submit"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "bpuserlisting"
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "CREATE",
+  "fields": [
+    [
+      {
+        "key": "userName"
+      },
+      {
+        "key": "firstName"
+      },
+      {
+        "key": "lastName"
+      }
+    ],
+    [
+      {
+        "key": "emailId"
+      },
+      {
+        "key": "accessRoles"
+      },
+      {
+        "key": "businessPartner"
+      }
+    ]
+  ],
+  "taskId": "bpusercreate",
+  "object": "6fe87690-d960-4201-8a44-c1a9a0c6ee04"
+}

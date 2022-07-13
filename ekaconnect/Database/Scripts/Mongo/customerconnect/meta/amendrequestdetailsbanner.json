@@ -1,0 +1,109 @@
+{
+  "_id": "amendrequestdetailsbanner_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request to response",
+  "type": "workflow",
+  "version": "V2",
+  "payLoad": "selected.amendrequestdetailscomposite.data",
+  "layout": {
+    "name": "create",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "type": "row",
+    "cardClass": "allocate-banner contract-request-details-banner contract-request-banner-details",
+    "theme": "horizontal-details contract-details-padding-32"
+  },
+  "fields": [
+    [
+      {
+        "style": {
+          "display": "flex",
+          "margin": 0
+        },
+        "key": "allocateHeader",
+        "type": "hidden",
+        "class": "banner-card-dropdown request-response-header",
+        "label": "Joe Bloggs has sent you a contract amendment request. Review the amendment details and approve if no modifications are required or reject.",
+        "formLabelStyle": {
+          "font": "normal 15px 'Helvetica Neue LT W05 45 Light'",
+          "width": "755px",
+          "white-space": "normal",
+          "flex": "0 0 755px",
+          "margin-top": "10px",
+          "height": "48px"
+        },
+        "labelExpression": "return '${requestBy} has sent you a ticket amendment request. Review the amended details and approve if no modifications are required or reject.'"
+      },
+      {
+        "class": "banner-card-button",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {},
+        "key": "rejectButton",
+        "type": "button",
+        "label": "Reject",
+        "btnClass": "allocate-banner-button allocate-banner-button-reject",
+        "decision": "amendrejectrequest"
+      },
+      {
+        "class": "banner-card-button",
+        "formLabelStyle": {
+          "display": "none"
+        },
+        "formItemStyle": {},
+        "key": "applyButton",
+        "type": "button",
+        "label": "Approve",
+        "btnClass": "allocate-banner-button",
+        "decision": "amendapproverequesttask"
+      }
+    ]
+  ],
+  "decisions": [
+    {
+      "objectAction": "DELETE",
+      "task": "amendrejectrequest",
+      "decisionName": "amendrejectrequest",
+      "outcomes": [
+        {
+          "name": "cancelpopup_ticketdetails_rejectrequest",
+          "popupClass": "cargill-delete-class",
+          "restoreState": true,
+          "displayType": "popup",
+          "data": "selected.enterpriselistingcomposite.enterprisegrowertickets"
+        }
+      ]
+    },
+    {
+      "objectAction": "CREATE",
+      "task": "amendapproverequesttask",
+      "decisionName": "amendapproverequesttask",
+      "type": "submit",
+      "additionalSelectedData": {
+        "ticketapprovecomposite": "selected.enterpriselistingcomposite.enterprisegrowertickets"
+      },
+      "outcomes": [
+        {
+          "data": "output.amendrequestdetailsbanner",
+          "name": "_ST_PROCESS_APPROVE_AMEND_TICKETS"
+        },
+        {
+          "data": "output._ST_PROCESS_APPROVE_AMEND_TICKETS",
+          "name": "enterpriselistingcomposite",
+          "showToaster": true,
+          "restoreState": false,
+          "appendMsg": true
+        }
+      ]
+    }
+  ],
+  "taskId": "amendrequestdetailsbanner",
+  "labelKey": "Cards View",
+  "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a"
+}

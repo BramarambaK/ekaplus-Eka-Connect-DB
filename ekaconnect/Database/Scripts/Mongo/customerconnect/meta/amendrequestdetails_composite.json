@@ -1,0 +1,158 @@
+{
+    "_id" : "amendrequestdetails_composite",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "processorInfo" : {
+        "processorId" : "616c3f0d-1183-4822-855b-c79c5d6888ed"
+    },
+    "label" : "Ticket Request",
+    "template" : [ 
+        {
+            "deviceType" : "web",
+            "template" : "cargill-web",
+            "config" : {
+                "aside" : ""
+            }
+        }, 
+        {
+            "deviceType" : "mobile",
+            "template" : "cargill-mobile",
+            "config" : {
+                "aside" : ""
+            }
+        }
+    ],
+    "workflows" : [ 
+        {
+            "workflows" : [ 
+                {
+                    "style" : {
+                        "display" : "grid",
+                        "margin-left" : "10px",
+                        "margin-right" : "-6px",
+                        "margin-bottom" : "16px"
+                    },
+                    "class" : "card-ticket-details amend-request-details-banner",
+                    "visibility" : "return '${enterpriselistingcomposite.enterprisegrowertickets.requestStatus}'.toLowerCase() == 'awaiting review'",
+                    "workflows" : [ 
+                        {
+                            "name" : "amendrequestdetailsbanner",
+                            "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets"
+                        }
+                    ]
+                }, 
+                {
+                    "name" : "amendrequestdetailsrequestid",
+                    "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets"
+                }, 
+                {
+                    "style" : {
+                        "margin-top" : "12px"
+                    },
+                    "visibility" : "return ('${enterpriselistingcomposite.enterprisegrowertickets.requestType}'.toLowerCase() == 'amendment') && ('${enterpriselistingcomposite.enterprisegrowertickets.currentTicketList[0].ticketStatus}'.toLowerCase() == 'warehoused')",
+                    "workflows" : [ 
+                        {
+                            "name" : "amenddetailsemployeetable",
+                            "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets.currentTicketList"
+                        }
+                    ]
+                }, 
+                {
+                    "style" : {
+                        "margin-top" : "32px"
+                    },
+                    "visibility" : "return ('${enterpriselistingcomposite.enterprisegrowertickets.requestType}'.toLowerCase() == 'amendment') && ('${enterpriselistingcomposite.enterprisegrowertickets.currentTicketList[0].ticketStatus}'.toLowerCase() == 'warehoused')",
+                    "workflows" : [ 
+                        {
+                            "name" : "originaldetailsemployeetable",
+                            "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets.previousTicketList"
+                        }
+                    ]
+                }, 
+                {
+                    "style" : {
+                        "margin-top" : "-9px"
+                    },
+                    "visibility" : "return ('${enterpriselistingcomposite.enterprisegrowertickets.requestType}'.toLowerCase() == 'amendment') && ('${enterpriselistingcomposite.enterprisegrowertickets.currentTicketList[0].ticketStatus}'.toLowerCase() == 'complete')",
+                    "workflows" : [ 
+                        {
+                            "name" : "amendsolddetailsemployeetable",
+                            "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets.currentTicketList"
+                        }
+                    ]
+                }, 
+                {
+                    "style" : {
+                        "margin-top" : "45px"
+                    },
+                    "visibility" : "return ('${enterpriselistingcomposite.enterprisegrowertickets.requestType}'.toLowerCase() == 'amendment') && ('${enterpriselistingcomposite.enterprisegrowertickets.currentTicketList[0].ticketStatus}'.toLowerCase() == 'complete')",
+                    "workflows" : [ 
+                        {
+                            "name" : "originalsolddetailsemployeetable",
+                            "data" : "selected.enterpriselistingcomposite.enterprisegrowertickets.previousTicketList"
+                        }
+                    ]
+                },
+                {
+                    "style" : {
+                        "display" : "grid",
+                        "grid-template-columns" : "50%",
+                        "margin-top" : "22px"
+                    },
+                    "workflows" : [ 
+                        {
+                            "name" : "amendrequestemployeedetails",
+                            "data" : "selected.amendrequestdetailscomposite.amendrequestemployeedetails"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "header" : {
+            "label" : "Ticket request"
+        },
+        "breadcrumbs" : [ 
+            {
+                "label" : "Home",
+                "type" : "string"
+            }, 
+            {
+                "label" : "Manage tickets",
+                "type" : "string",
+                "task" : "enterprise"
+            }, 
+            {
+                "label" : "Ticket request details",
+                "type" : "string"
+            }
+        ],
+        "name" : "customv2",
+        "customScrollBar" : true,
+        "setSelected" : [ 
+            "selected.ticketlistingcomposite.ticketlistingrequests"
+        ]
+    },
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "selection" : "enterprise",
+            "outcomes" : [ 
+                {
+                    "name" : "enterpriselistingcomposite",
+                    "clearSelected" : [ 
+                        "selected.enterpriselistingcomposite"
+                    ]
+                }
+            ]
+        }
+    ],
+    "taskId" : "amendrequestdetailscomposite",
+    "object" : "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "sys_UUID" : "e4888b0a-24c0-4fd3-8227-2ead7336b97d"
+}

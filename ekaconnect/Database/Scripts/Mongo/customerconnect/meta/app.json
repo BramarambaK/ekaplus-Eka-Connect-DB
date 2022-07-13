@@ -1,0 +1,116 @@
+{
+  "_id": "customerconnect_app",
+  "title": "Customer Hub",
+  "name": "customerconnect",
+  "type": "app",
+  "appType": "CONNECT",
+  "platform_id": "54",
+  "toastrConfig": {
+    "closeButton": true,
+    "toastClass": "ngx-toastr cargill-toastr"
+  },
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": { "header": "headerWorkflow", "footer": "footerWorkflow" }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": { "header": "headerMobileWorkflow", "footer": "footerWorkflow" }
+    }
+  ],
+  "config": {
+    "deeplinks": {
+      "enable": true,
+      "workflow": "deeplink",
+      "task": "navigateTo"
+    },
+    "aua": {
+      "enable": true,
+      "banner": {
+        "enable": true,
+        "message": "return `You are viewing ${headers.username}`",
+        "workflow": "AuA",
+        "task": "manageUser"
+      }
+    },
+    "notification": {
+      "enable": true,
+      "socket": { "enable": true, "uri": "/connect/notification" },
+      "decisions": [
+        {
+          "type": "fetch",
+          "action": "load",
+          "workflow": "poll_notification_messages"
+        },
+        {
+          "type": "submit",
+          "action": "message-read",
+          "workflow": "ext_notification_mark_message_read"
+        },
+        {
+          "type": "fetch",
+          "action": "load-more",
+          "workflow": "poll_notification_messages"
+        },
+        {
+          "type": "submit",
+          "action": "message-all-read",
+          "workflow": "ext_notification_mark_message_read"
+        },
+        {
+          "type": "poll",
+          "action": "poll",
+          "workflow": "poll_new_notification_message"
+        },
+        {
+          "type": "fetch",
+          "action": "load-new",
+          "workflow": "poll_notification_messages"
+        }
+      ]
+    },
+    "header": {
+      "brand": {
+        "src": "assets/img/brand/eka-login-logo.png",
+        "width": 60,
+        "height": 20,
+        "alt": "Eka"
+      },
+      "clientLogo": {
+        "src": "assets/customer-connect/logo.svg",
+        "width": 63,
+        "height": 63,
+        "alt": "Cargill"
+      },
+      "favicon": {
+        "src": "assets/favicon/cargill-favicon.ico",
+        "width": 60,
+        "height": 20,
+        "alt": "Cargill"
+      },
+      "sidebarToggler": true,
+      "asideMenuToggler": false
+    },
+    "sidebar": { "fixed": true, "display": false },
+    "navbar": [
+      {
+        "apiMenuData": [
+          {
+            "menu": [
+              {
+                "handler": "/app/customerconnect/customerconnectlisting",
+                "text": "Customer Connect App Listing",
+                "iconCls": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "aside": { "fixed": true, "display": false }
+  },
+  "sys__UUID": "12325a98-a959-4939-9005-4158d136afcd"
+}

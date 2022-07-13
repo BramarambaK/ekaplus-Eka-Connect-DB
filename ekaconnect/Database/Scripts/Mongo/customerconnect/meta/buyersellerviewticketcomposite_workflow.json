@@ -1,0 +1,100 @@
+{
+  "_id": "buyersellerviewticketcomposite_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "viewAction": "composite",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Ticket Details",
+  "template": [
+    {
+      "deviceType": "web",
+      "template": "cargill-web",
+      "config": {
+        "aside": ""
+      }
+    },
+    {
+      "deviceType": "mobile",
+      "template": "cargill-mobile",
+      "config": {
+        "aside": ""
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "class": "composite-row",
+      "workflows": [
+        {
+          "workflows": [
+            {
+              "style": {
+                "display": "flex"
+              },
+              "workflows": [
+                {
+                  "name": "buyersellerviewticketscardview",
+                  "data": "selected.buyersellerticketcomposite"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "label": "Ticket Details"
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "type": "string"
+      },
+      {
+        "label": "Tickets",
+        "type": "string",
+        "task": "ticketshome"
+      },
+      {
+        "label": "Manage tickets",
+        "type": "string",
+        "task": "ticketslist"
+      },
+      {
+        "label": "Ticket Details",
+        "type": "string"
+      }
+    ],
+    "name": "customv2",
+    "customScrollBar": true
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "selection": "ticketslist",
+      "outcomes": [
+        {
+          "name": "buyersellerticketcomposite",
+          "clearSelected": ["selected.buyersellerticketcomposite"]
+        }
+      ]
+    },
+    {
+      "objectAction": "READ",
+      "selection": "ticketshome",
+      "outcomes": [
+        {
+          "name": "ticketscomposite",
+          "clearSelected": ["selected.ticketscomposite"]
+        }
+      ]
+    }
+  ],
+  "taskId": "buyersellerviewticketcomposite",
+  "object": "1829cee8-2546-40ed-9642-6172876913d8",
+  "sys__UUID": "ec8c0097-e688-4e14-9ba4-3de7f857dd5c"
+}

@@ -1,0 +1,63 @@
+{
+  "_id": "cancelpopup_offercontract_workflow",
+  "name": "cancelpopup_offercontract",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Exit form",
+  "type": "workflow",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to exit this form?",
+      "headerMessage": "Exit form"
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-cargill btn-empty",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn btn-cargill btn-primary",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "contractdomaincomposite",
+          "restoreState": true,
+          "clearSelected": ["selected.offerforcontractcomposite"]
+        }
+      ],
+      "label": "Exit",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "type": "popup",
+          "close": true
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Cancel",
+  "taskId": "cancelpopup_offercontract"
+}

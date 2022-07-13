@@ -1,0 +1,15 @@
+{
+    "_id" : "CACP_externalClientId_property",
+    "type" : "property",
+    "name" : "CACP_externalClientId",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "CACP client Id",
+    "defaultValue" : "0oaw09dslqI7A7ieP0h7",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "External client Id to generate token from CACP system.",
+	"sys__UUID" : "35b9f110-b949-11ec-8422-0242ac120002"
+}

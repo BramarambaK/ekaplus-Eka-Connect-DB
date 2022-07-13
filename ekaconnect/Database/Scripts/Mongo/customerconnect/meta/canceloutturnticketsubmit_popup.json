@@ -1,0 +1,67 @@
+{
+    "_id": "canceloutturnticketsubmit_popup",
+    "name": "canceloutturnticketsubmit_popup",
+    "componentType": "UserTask",
+    "objectAction": "READ",
+    "refType": "app",
+    "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+    "label": "Cancel",
+    "type": "workflow",
+    "sys__UUID": "6776d19a-bb8a-441b-80d1-f5c11c48ab09",
+    "object": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+    "layout": {
+      "topLine": {
+        "display": true
+      },
+      "name": "cargillcancelpopup",
+      "option": {
+        "bodyMessage": "Are you sure you want to cancel this outturn? ",
+        "headerMessage": "Cancel",
+        "information": "You will lose all information entered."
+      },
+      "showErrorInToastr": true
+    },
+    "decisions": [
+      {
+        "btnClass": "btn btn-cargill btn-empty",
+        "objectAction": "READ",
+        "outcomes": [
+          {
+            "name": "submitOutTurntickets",
+            "restoreState": false
+          }
+        ],
+        "label": "Cancel",
+        "position": "bottom"
+      },
+      {
+        "btnClass": "btn btn-cargill btn-primary",
+        "objectAction": "READ",
+        "outcomes": [
+          {
+            "name": "ticketlistingcomposite",
+            "restoreState": true,
+            "clearSelected": ["selected", "menuDetails"]
+          }
+        ],
+        "label": "Ok",
+        "position": "bottom"
+      },
+      {
+        "btnClass": "close-icon btn",
+        "objectAction": "READ",
+        "outcomes": [
+          {
+            "name": "submitOutTurntickets",
+            "restoreState": false
+          }
+        ],
+        "position": "top",
+        "type": "close"
+      }
+    ],
+    "labelKey": "Cancel",
+    "fields": [],
+    "taskId": "canceloutturnticketsubmit_popup"
+  }
+  

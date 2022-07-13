@@ -1,0 +1,49 @@
+{
+  "_id": "amendment_submitrequestlocationdetails_workflow",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Request Contract spread  Card View",
+  "type": "workflow",
+  "layout": {
+    "header": {
+      "headerExpression": "return 'Review you allocation summary for '"
+    },
+    "name": "cards-view",
+    "hideTabs": true,
+    "pagination": {
+      "rowCount": 1
+    },
+    "cardsListClass": "contract-request-spread cargil-contract-details",
+    "theme": "cargill-contract-request-spread cargill-contract-details-card location-details"
+  },
+  "version": "V2",
+  "decisions": [],
+  "fields": [
+    [
+      {
+        "key": "productHeading",
+        "type": "heading",
+        "filterType": "tabs",
+        "filterBy": "quality",
+        "class": "header",
+        "valueExpression": "return 'Pick up details' "
+      }
+    ],
+    [
+      {
+        "key": "amendedPickuplocation",
+        "type": "detailsArray",
+        "class": "location-details",
+        "valueExpression": "return ${amendedPickuplocation}.map(i => ({ label: i.longandlat, value: i.storagetype + '<br>' + i.deliveryinstruction }))",
+        "style": {
+          "line-height": "24px"
+        }
+      }
+    ]
+  ],
+  "labelKey": "Cards View",
+  "taskId": "amendment_submitrequestlocationdetails",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259"
+}

@@ -1,0 +1,73 @@
+{
+  "_id": "cancel_amendment_requestContract_spread",
+  "name": "cancel_amendment_requestContract_spread",
+  "componentType": "UserTask",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "label": "Cancel",
+  "type": "workflow",
+  "sys__UUID": "b9f39fb0-e56f-11ec-8fea-0242ac120002",
+  "object": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "layout": {
+    "topLine": {
+      "display": true
+    },
+    "name": "cargillcancelpopup",
+    "option": {
+      "bodyMessage": "Are you sure you want to exit this form? ",
+      "headerMessage": "Exit form",
+      "information": "You will lose all data entered."
+    },
+    "showErrorInToastr": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn cargill-outline-btn request-contract-cancel",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "amendment_requestcontractspreadcomposite",
+          "restoreState": false
+        }
+      ],
+      "label": "Cancel",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn cargill-outline-btn request-contract-ok",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "contractlistingcomposite",
+          "restoreState": true,
+          "clearSelected": [
+            "menuDetails",
+            "selected.amendment_requestcontractcomposite",
+            "selected.amendment_requestcontractspreadcomposite",
+            "selected.amendment_requestcontractfreightcomposite",
+            "selected.amendment_submitrequestcontractcomposite",
+            "selected.requesteddetails"
+          ]
+        }
+      ],
+      "label": "Exit",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "amendment_requestcontractspreadcomposite",
+          "restoreState": false
+        }
+      ],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "labelKey": "Exit",
+  "fields": [],
+  "taskId": "cancel_amendment_requestContract_spread"
+}
