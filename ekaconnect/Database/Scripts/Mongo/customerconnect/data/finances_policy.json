@@ -1,0 +1,15 @@
+{
+  "_id": "finances_policy",
+  "type": "policy",
+  "app_UUID": "12325a98-a959-4939-9005-4158d136afcd",
+  "refType": "object",
+  "refTypeId": "d59b8c10-8c94-4b87-a430-f6fd69888a37",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

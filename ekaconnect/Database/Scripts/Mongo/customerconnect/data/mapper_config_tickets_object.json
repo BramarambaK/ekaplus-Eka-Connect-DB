@@ -1,0 +1,46 @@
+{
+  "_id": "mapper_config_tickets_object",
+  "refTypeId": "12325a98-a959-4939-9005-4158d136afcd",
+  "propertyLevel": "app",
+  "type": "property",
+  "propertyName": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a_mapperConfig",
+  "propertyValue": [
+    {
+      "fieldNameReceived": "acquirerABN",
+      "fieldNameConverted": "ticketHandlerBpRefNo",
+      "defaultValue": "Default ticketHandlerBpRefNo"
+    },
+    {
+      "fieldNameReceived": "acquirerName",
+      "fieldNameConverted": "ticketHandlerName"
+    },
+    {
+      "fieldNameReceived": "recievalDate",
+      "fieldNameConverted": "receivalDate",
+      "defaultValue": "01-01-1970"
+    },
+    {
+      "fieldNameReceived": "acquisitionDate",
+      "fieldNameConverted": "allocationDate"
+    },
+    {
+      "fieldNameReceived": "growerPrice",
+      "fieldNameConverted": "pickUpFee"
+    },
+    {
+      "fieldNameReceived": "payementMethod",
+      "fieldNameConverted": "pricingOption"
+    },
+    {
+      "fieldNameReceived": "price",
+      "fieldNameConverted": "receivalFee"
+    },
+    {
+      "fieldNameReceived": "purchaseContractNumber",
+      "fieldNameConverted": "contractId"
+    }
+  ],
+  "sys__createdOn": "2021-06-18T00:00:00.000Z",
+  "sys__updatedOn": "2021-06-18T00:00:00.000Z",
+  "sys__createdBy": "Joseph@mail.com"
+}

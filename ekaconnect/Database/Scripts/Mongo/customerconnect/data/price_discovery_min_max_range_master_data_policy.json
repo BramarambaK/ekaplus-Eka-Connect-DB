@@ -1,0 +1,15 @@
+{
+  "_id": "price_discovery_min_max_range_master_data_policy",
+  "type": "policy",
+  "app_UUID": "12325a98-a959-4939-9005-4158d136afcd",
+  "refType": "object",
+  "refTypeId": "8f13785a-0475-47c5-ab59-f42c132d6a33",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

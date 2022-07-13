@@ -1,0 +1,15 @@
+{
+  "_id": "bpRefNo_season_master_data_policy",
+  "type": "policy",
+  "app_UUID": "12325a98-a959-4939-9005-4158d136afcd",
+  "refType": "object",
+  "refTypeId": "1f3e680b-f3dd-418a-8fd4-888e38714cc3",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "contractdomain_policy",
+  "type": "policy",
+  "app_UUID": "12325a98-a959-4939-9005-4158d136afcd",
+  "refType": "object",
+  "refTypeId": "46e84f42-6288-4027-b6d0-fd1c11019259",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "tickets_policy",
+  "type": "policy",
+  "app_UUID": "12325a98-a959-4939-9005-4158d136afcd",
+  "refType": "object",
+  "refTypeId": "a26737b3-a5a9-4fe9-b6f7-29218a3bc45a",
+  "userGrants": {},
+  "roleGrants": {
+    "AUTHENTICATED_USERS": {
+      "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+      "itemLevelFilters": [],
+      "allowedGlobalActions": ["CREATE", "UPLOAD"]
+    }
+  }
+}

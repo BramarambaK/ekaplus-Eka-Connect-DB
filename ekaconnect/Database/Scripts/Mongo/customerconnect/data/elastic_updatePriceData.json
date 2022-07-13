@@ -1,0 +1,27 @@
+{
+    "_id" : "elastic_updatePriceData",
+    "componentType" : "ChainedSystemTask",
+    "version" : "V2",
+    "objectAction" : "UPDATE",
+    "taskId" : "elastic_updatePriceData",
+    "refType" : "app",
+    "object" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "config" : {
+        "listingWorkflow" : "pricelistingquery"
+    },
+    "tags" : "notifyDataChange",
+    "chainedTasks" : [ 
+        {
+            "name" : "_ST_UPDATE_PRICE_LIMIT",
+            "appendMsg" : false,
+            "data" : "output.elastic_updatePriceData"
+        }, 
+        {
+            "name" : "ELASTIC_BULK_UPLOAD_PRICE",
+            "appendMsg" : false,
+            "data" : "output._ST_UPDATE_PRICE_LIMIT"
+        }
+    ]
+}

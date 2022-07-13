@@ -1,0 +1,32 @@
+{
+    "_id":"volumelimits_mappingData",
+    "targetObject" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "typeOfData" : "mapping",
+    "mappingData" : {
+        "harvestseason": {
+            "2018/19":"2019/2019",
+            "2020/21":"2020/2021"
+        },
+        "site": {
+            "surat": "Surat",
+            "talwood": "Talwood",
+            "the gums":"The Gums",
+            "the Gums":"The Gums"
+        },
+        "portzone": {
+            "victoria":"Victoria",
+            "south australia":"South Australia"
+        },
+        "grade": {
+            "aph1":"APH1",
+            "ca1":"CA1"
+        }
+    },
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "aa8c374c-810d-457f-92d7-4e29b37bea3e",
+    "sys__data__state" : "Create"
+}

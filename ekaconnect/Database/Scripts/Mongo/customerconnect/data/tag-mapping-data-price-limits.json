@@ -1,0 +1,28 @@
+{
+    "_id":"pricelimits_mappingData",
+    "targetObject" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "typeOfData" : "mapping",
+    "mappingData" : {
+        "harvestseason": {
+            "2018/19":"2019/2019",
+            "2020/21":"2020/2021"
+        },
+        "site": {
+            "surat": "Surat",
+            "talwood": "Talwood",
+            "Queensland":"Queensland"
+        },
+        "portzone":{
+            "victoria":"Victoria",
+            "elizabeth":"Elizabeth"
+
+        }
+    },
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "4914a1d8-92b3-4268-a4cb-dca1266aae0e",
+    "sys__data__state" : "Create"
+}

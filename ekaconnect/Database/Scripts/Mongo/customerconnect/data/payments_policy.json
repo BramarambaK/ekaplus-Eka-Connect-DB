@@ -1,0 +1,16 @@
+{
+    "_id": "payments_policy",
+    "type": "policy",
+    "app_UUID": "12325a98-a959-4939-9005-4158d136afcd",
+    "refType": "object",
+    "refTypeId": "4465c36c-84ab-403b-a61e-cf73a37705fe",
+    "userGrants": {},
+    "roleGrants": {
+      "AUTHENTICATED_USERS": {
+        "allowedItemLevelActions": ["READ", "UPDATE", "DELETE", "LISTVIEW"],
+        "itemLevelFilters": [],
+        "allowedGlobalActions": ["CREATE", "UPLOAD"]
+      }
+    }
+  }
+  

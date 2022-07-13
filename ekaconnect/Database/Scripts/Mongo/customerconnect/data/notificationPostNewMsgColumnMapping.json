@@ -1,0 +1,83 @@
+{
+    "_id" : "notificationPostNewMsgColumnMapping",
+    "type" : "property",
+    "name" : "notificationPostNewMsgColumnMapping",
+    "propertyLevel" : "app",
+    "dataType" : "JSON",
+    "fieldtype" : "textbox",
+    "length" : "20",
+    "visibility" : "public",
+    "defaultValue" : {
+        "N22" : {
+            "sourceSystem" : "GPS2.0",
+            "contactId" : "74852622115",
+            "triggerCode" : "N22",
+            "createTime" : "<dateTime,yyyy-MM-dd HH:mm:ss>",
+            "contentType" : "txt",
+            "content" : "test is test message",
+            "linkSystem" : "GPS2.0",
+            "link" : "<deepLink>",
+            "transactionId" : "<generateId,EKACC>"
+        },
+        "N23" : {
+            "sourceSystem" : "GPS2.0",
+            "contactId" : "74852622115",
+            "triggerCode" : "N23",
+            "createTime" : "<dateTime,yyyy-MM-dd HH:mm:ss>",
+            "contentType" : "txt",
+            "content" : "test is test message",
+            "linkSystem" : "GPS2.0",
+            "link" : "<deepLink>",
+            "transactionId" : "<generateId,EKACC>"
+        },
+        "N24" : {
+            "sourceSystem" : "GPS2.0",
+            "contactId" : "74852622115",
+            "triggerCode" : "N24",
+            "createTime" : "<dateTime,yyyy-MM-dd HH:mm:ss>",
+            "contentType" : "txt",
+            "content" : "test is test message",
+            "linkSystem" : "GPS2.0",
+            "link" : "<deepLink>",
+            "transactionId" : "<generateId>,'EKACC'"
+        },
+        "N25" : {
+            "sourceSystem" : "GPS2.0",
+            "contactId" : "74852622115",
+            "triggerCode" : "N25",
+            "createTime" : "<dateTime,yyyy-MM-dd HH:mm:ss>",
+            "contentType" : "txt",
+            "content" : "test is test message",
+            "linkSystem" : "GPS2.0",
+            "link" : "<deepLink>",
+            "transactionId" : "<generateId,EKACC>"
+        },
+        "N26" : {
+            "sourceSystem" : "GPS2.0",
+            "contactId" : "74852622115",
+            "triggerCode" : "N26",
+            "createTime" : "<dateTime,yyyy-MM-dd HH:mm:ss>",
+            "contentType" : "txt",
+            "content" : "test is test message",
+            "linkSystem" : "GPS2.0",
+            "link" : "<deepLink>",
+            "transactionId" : "<generateId,EKACC>"
+        },
+        "N27" : {
+            "sourceSystem" : "GPS2.0",
+            "contactId" : "74852622115",
+            "triggerCode" : "N27",
+            "createTime" : "<dateTime,yyyy-MM-dd HH:mm:ss>",
+            "contentType" : "txt",
+            "content" : "test is test message",
+            "linkSystem" : "GPS2.0",
+            "link" : "<deepLink>",
+            "transactionId" : "<generateId,EKACC>"
+        }
+    },
+    "listOfValues" : "",
+    "label" : "Notification Post New Msg Column Mapping",
+    "editSupportedInUI" : true,
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "description" : "Display Name to Java POJO mapping"
+}

@@ -1,0 +1,23 @@
+{
+    "_id" : "pricelistingobject_policy",
+    "type" : "policy",
+    "app_UUID" : "12325a98-a959-4939-9005-4158d136afcd",
+    "refType" : "object",
+    "refTypeId" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "userGrants" : {},
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "READ", 
+                "UPDATE", 
+                "DELETE", 
+                "LISTVIEW"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE", 
+                "UPLOAD"
+            ]
+        }
+    }
+}

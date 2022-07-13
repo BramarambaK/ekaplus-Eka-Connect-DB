@@ -1,0 +1,23 @@
+{
+    "_id" : "notification_object_policy_all_users",
+    "app_UUID" : "12325a98-a959-4939-9005-4158d136afcd",
+    "userGrants" : {},
+    "refType" : "object",
+    "refTypeId" : "49fb78ec-7d3a-11ec-90d6-0242ac120003",
+    "name" : "12325a98-a959-4939-9005-4158d136afcd",
+    "tenantId" : "account28",
+    "type" : "policy",
+    "roleGrants" : {
+        "AUTHENTICATED_USERS" : {
+            "allowedItemLevelActions" : [ 
+                "UPDATE", 
+                "READ", 
+                "DELETE"
+            ],
+            "itemLevelFilters" : [],
+            "allowedGlobalActions" : [ 
+                "CREATE"
+            ]
+        }
+    }
+}

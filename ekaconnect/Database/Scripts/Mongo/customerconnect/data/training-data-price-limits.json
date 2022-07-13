@@ -1,0 +1,26 @@
+{
+    "_id":"pricelimits_trainingData",
+    "targetObject" : "ab3fc628-ecbc-43e0-81cb-aa2d5b6e5c40",
+    "trainingData" : [
+        {
+            "sentence": "2018/2019 harvest from Surat for port Victoria.",
+            "harvestseason": "2018/2019",
+            "site": "Surat",
+            "portzone":"Victoria"
+        },
+        {
+            "sentence": "2020/21 harvest from Queensland for port Elizabeth.",
+            "harvestseason": "2020/21",
+            "site": "Queensland",
+            "portzone":"Elizabeth"
+        }
+    ],
+    "typeOfData" : "training",
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "b72d10f2-da06-4503-939b-90e9c0a79956",
+    "sys__data__state" : "Create"
+}

@@ -1,0 +1,28 @@
+{
+    "_id":"volumelimits_trainingData",
+    "targetObject" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3",
+    "trainingData" : [
+        {
+            "sentence": "2018/2019 harvest of grade aph1 from the gums for port Victoria.",
+            "harvestseason": "2018/2019",
+            "site": "the gums",
+            "portzone":"Victoria",
+            "grade" : "aph1"
+        },
+        {
+            "sentence": "2020/21 harvest of grade ca1 from site 3 for port South Australia.",
+            "harvestseason": "2020/21",
+            "site": "site 3",
+            "portzone":"South Australia",
+            "grade" : "ca1"
+        }
+    ],
+    "typeOfData" : "training",
+    "userId" : "3504",
+    "sys__createdBy" : "qa@ekaplus.com",
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "object" : "088d4fab-1461-4bcb-b820-9267fcf7ce46",
+    "sys__UUID" : "4aa75122-73fe-44c3-a956-f9ed25aa9bd6",
+    "sys__data__state" : "Create"
+}

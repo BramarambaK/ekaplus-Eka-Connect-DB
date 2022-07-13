@@ -1,0 +1,11 @@
+{
+  "_id": "external_notification_host",
+  "propertyValue": "https://api-dev.dev.dev-cglcloud.com",
+  "propertyLevel": "tenant",
+  "type": "property",
+  "propertyName": "external_notification_host",
+  "sys__createdOn": "2021-07-06T07:00:30.525Z",
+  "sys__createdBy": "gaurav.khandelwal@ekaplus.com",
+  "sys__UUID": "c4e7f2ad-4ce6-48be-9d63-83f4fc33fab2",
+  "sys__version": 1
+}

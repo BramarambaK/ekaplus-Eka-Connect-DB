@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_UPDATE_NOTIFY_PRICE_DATA_PROCESSOR",
+    "componentType" : "ProcessTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "4536a35a-509d-40da-9edc-3f149230ebe7"
+    },
+    "refType" : "app",
+    "refTypeId" : "12325a98-a959-4939-9005-4158d136afcd",
+    "type" : "workflow",
+    "taskId" : "_ST_UPDATE_NOTIFY_PRICE_DATA_PROCESSOR",
+    "object" : "c98119db-1f7c-4802-b72a-6678f1ecc0f3"
+}
