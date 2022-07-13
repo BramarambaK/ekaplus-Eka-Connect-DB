@@ -1,0 +1,161 @@
+{
+    "_id" : "documentlisting_esourcing_V2",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "payLoad" : "selected.assayinglisting",
+	"inputData" : {
+        "type" : "processorInfo",
+		 "config" : {
+            "processorId" : "e327ead5-024f-48fd-a53f-f1c05988caf6"
+        }
+    },
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "rows" : "100",
+	"label": "Documents",
+    "layout" : {
+        "name" : "list",
+		"header": true,
+		"footer": false,
+        "preserveSelectedData" : true,
+        "options" : {
+            "filter" : false,
+            "lastUpdated" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "reset" : false,
+            "export" : false
+        },
+        "header" : {
+            "field" : "deliveryItemRefNo",
+            "title" : "Advice Delivery - "
+        },
+        "theme" : "theme-grid-white",
+        "menu" : true,
+        "refreshData" : true,
+        "showErrorInPopUp" : {
+            "navigateURL" : "supplierlisting",
+            "buttonLabel" : "Update Later"
+        }
+    },
+    "theme" : "theme-grid-light",
+    "decisions" : [ 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "creategmrbasic",
+                    "data" : "selected.creategmrbasic"
+                }
+            ],
+            "label" : "Shipping Details",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "createpackaging",
+                    "data" : "selected.createpackaging"
+                }
+            ],
+            "label" : "Packaging Details",
+            "position" : "leftMenu",
+            "disabled" : true
+        }, 
+        {
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "documentlisting",
+                    "data" : "selected.documentlisting"
+                }
+            ],
+            "label" : "Documents",
+            "position" : "leftMenu"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "CREATE",
+            "labelkey" : "CREATE",
+            "selection" : "default",
+            "outcomes" : [ 
+                {
+                    "displayType" : "popup",
+                    "data" : "selected.assayinglisting",
+                    "popupClass" : "uploadpopupcss",
+                    "name" : "documentupload"
+                }
+            ],
+            "label" : "Add Document",
+            "position" : "header",
+            "iconClass" : "fa fa-plus"
+        }, 
+        {
+            "btnClass" : "btn-primary",
+            "objectAction" : "READ",
+            "labelkey" : "EDIT_GMR_BASIC",
+            "selection" : "row",
+            "outcomes" : [ 
+                {
+                    "data" : "selected.documentlisting",
+                    "name" : "documentdownload",
+                    "forceDownload" : true,
+                    "type" : "downloadLink"
+                }
+            ],
+            "label" : "Download",
+            "iconClass" : "download-icon"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "READ",
+            "labelkey" : "Done",
+            "task" : "documentlisting",
+            "outcomes" : [ 
+                {
+                    "data" : "output.documentlisting",
+                    "name" : "_ST_PROCESSOR_DOCUMENT_UPLOAD"
+                }, 
+                {
+                    "data" : "output._ST_PROCESSOR_DOCUMENT_UPLOAD",
+                    "appendMsg" : false,
+                    "name" : "supplierlisting",
+					"cache": false
+                }
+            ],
+            "label" : "Done",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "GMR_LISTING",
+    "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Type",
+            "sort" : true,
+            "key" : "types"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Document",
+            "sort" : true,
+            "key" : "fileName"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Description",
+            "sort" : true,
+            "key" : "description"
+        }
+    ],
+    "taskId" : "documentlisting_V2",
+    "object" : "386e7d80-25ab-4ca0-bdb6-a01e3cd9345c"
+}

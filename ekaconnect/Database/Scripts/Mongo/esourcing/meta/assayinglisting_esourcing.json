@@ -1,0 +1,176 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {
+    "processorId": "5393d0ee-67cc-11ec-90d6-0242ac120003"
+  },
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Assaying Listing",
+  "type": "workflow",
+  "layout": {
+    "selection": "row",
+    "name": "assay",
+    "menu": true,
+    "options": {
+      "filter": false,
+      "search": false,
+      "view": true,
+      "reload": false,
+      "columnFilter": false,
+      "reset": false,
+      "export": false
+    },
+    "header": {
+      "field": "deliveryItemRefNo",
+      "title": "Advice Delivery - "
+    }
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategmrbasic",
+          "data": "selected.creategmrbasic"
+        }
+      ],
+      "label": "Delivery Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createpackaging",
+          "data": "selected.createpackaging"
+        }
+      ],
+      "label": "Packaging Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "assayinglisting",
+          "data": "selected.assayinglisting"
+        }
+      ],
+      "label": "Assay Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentlisting",
+          "data": "selected.documentlisting"
+        }
+      ],
+      "label": "Documents",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "deliveryItemlisting",
+          "cache": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "assayinglisting",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "Assaying got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Price request got created with some errors"
+            }
+          },
+          "data": "output.assayinglisting",
+          "appendMsg": false,
+          "name": "_ST_CREATE_ASSAYING"
+        },
+        {
+          "result": {
+            "success": {
+              "message": "GMR got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in external task"
+            },
+            "successWithWarning": {
+              "message": "Order got created with some errors"
+            }
+          },
+          "data": "output.assayinglisting",
+          "appendMsg": true,
+          "name": "_EXT_CREATE_GMR",
+          "appendPlaceHolderToPopUpMsg": [
+            {
+              "outputTask": "output._EXT_CREATE_GMR",
+              "value": "gmrRefNo"
+            }
+          ]
+        },
+        {
+          "data": "output._EXT_CREATE_GMR",
+          "name": "documentlisting",
+          "showToaster": false
+        }
+      ],
+      "label": "SUBMIT",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "assayinglisting_esourcing",
+  "labelKey": "Assaying_LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "label": "Element",
+      "sort": true,
+      "key": "Element"
+    },
+    {
+      "filter": false,
+      "label": "Type",
+      "sort": true,
+      "key": "Type"
+    },
+    {
+      "filter": false,
+      "label": "Assay Rule",
+      "sort": true,
+      "key": "AssayRule"
+    },
+    {
+      "filter": false,
+      "edit": true,
+      "label": "Provisional Assay",
+      "sort": true,
+      "key": "EstimatedValue"
+    }
+  ],
+  "taskId": "assayinglisting",
+  "object": "e3e37b66-f739-4a1b-9f31-90e0d38eba90"
+}

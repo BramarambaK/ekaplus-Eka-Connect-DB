@@ -1,0 +1,105 @@
+{
+    "_id" : "editassayinglistinggmrdetails_esourcing",
+    "componentType" : "UserTask",
+    "objectAction" : "UPDATE",
+    "processorInfo" : {
+        "processorId" : "1c8f1a9b-9798-4693-ad7f-432c4d3cc073"
+    },
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "label" : "Edit Assaying Listing",
+    "type" : "workflow",
+    "layout" : {
+        "selection" : "row",
+        "name" : "assay",
+        "menu" : false,
+        "details" : true,
+        "options" : {
+            "filter" : false,
+            "search" : false,
+            "reload" : false,
+            "columnFilter" : false,
+            "edit" : true,
+            "reset" : false,
+            "export" : false
+        },
+        "header" : {
+            "field" : "gmrRefNo",
+            "title" : "Edit Assay - "
+        }
+    },
+    "decisions" : [ 
+        {
+            "btnClass" : "btn btn-outline-dark",
+            "objectAction" : "READ",
+            "outcomes" : [ 
+                {
+                    "name" : "viewgmrbasic",
+                    "cache" : true
+                }
+            ],
+            "style" : {
+                "margin-right" : "auto"
+            },
+            "label" : "CANCEL",
+            "position" : "bottom"
+        }, 
+        {
+            "btnClass" : "btn-primary custom-btn",
+            "objectAction" : "UPDATE",
+            "labelkey" : "REVIEW",
+            "task" : "editassayinglistinggmrdetails",
+            "outcomes" : [ 
+                {
+                    "name" : "_UPDATE_ASSAYPROCESSOR_esourcing",
+                    "data" : "output.editassayinglistinggmrdetails"
+                }, 
+                {
+                    "data" : "output.editassayinglistinggmrdetails",
+                    "name" : "viewgmrbasic",
+                    "showToaster" : false,
+                    "restoreState" : true
+                }
+            ],
+            "label" : "SAVE",
+            "position" : "bottom",
+            "type" : "submit"
+        }
+    ],
+    "labelKey" : "Edit_Assaying_LISTING",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "label" : "Element",
+            "sort" : true,
+            "key" : "Element"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Type",
+            "sort" : true,
+            "key" : "Type"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Assay Rule",
+            "sort" : true,
+            "key" : "AssayRule"
+        }, 
+        {
+            "filter" : false,
+            "edit" : true,
+            "label" : "Provisional Assay",
+            "sort" : true,
+            "key" : "EstimatedValue"
+        }, 
+        {
+            "filter" : false,
+            "label" : "Supplier Assay",
+            "sort" : true,
+            "key" : "SupplierAssay"
+        }
+    ],
+    "taskId" : "editassayinglistinggmrdetails",
+    "object" : "e3e37b66-f739-4a1b-9f31-90e0d38eba90"
+}

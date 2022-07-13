@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_CREATE_GENERAL_DOCUMENT_esourcing",
+    "componentType" : "SystemTask",
+    "object" : "a2de750a-f462-448b-ab1f-e3ab1be0127d",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "taskId" : "_ST_CREATE_GENERAL_DOCUMENT",
+    "type" : "workflow"
+}

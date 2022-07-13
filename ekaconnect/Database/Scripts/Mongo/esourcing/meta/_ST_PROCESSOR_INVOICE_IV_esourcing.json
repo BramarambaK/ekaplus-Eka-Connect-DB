@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_INVOICE_IV_esourcing",
+    "componentType" : "ProcessTask",
+    "objectAction" : "LISTVIEW",
+    "processorInfo" : {
+        "processorId" : "5e43c82d-ee7a-4b50-b4e8-6ae111ded6f6"
+    },
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_INVOICE",
+    "object" : "80639df1-3bdf-48e0-8dc3-e93ac58fff93"
+}

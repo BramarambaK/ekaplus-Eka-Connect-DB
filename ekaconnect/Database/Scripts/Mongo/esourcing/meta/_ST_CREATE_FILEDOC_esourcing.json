@@ -1,0 +1,21 @@
+{
+  "componentType": "SystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "_id": "_ST_CREATE_FILEDOC_esourcing",
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "UPDATE",
+      "outcomes": [{"name": "_ST_CREATE_FILEDOC_esourcing", "resetForm": true}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    }
+  ],
+  "type": "workflow",
+  "taskId": "_ST_CREATE_FILEDOC_esourcing",
+ "object": "f7fc85e8-67c9-11ec-90d6-0242ac120003"
+ }
+

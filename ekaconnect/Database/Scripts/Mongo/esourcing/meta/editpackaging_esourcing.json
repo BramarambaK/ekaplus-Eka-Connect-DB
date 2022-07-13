@@ -1,0 +1,95 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "processorInfo": {"processorId": "3c49286a-dd77-4029-9880-cf2e2b5a9b0c"},
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Packaging Details",
+  "type": "workflow",
+  "layout": {
+    "name": "pack",
+    "menu": true,
+    "options": {"readonly": true},
+    "header": {
+      "field": "gmrRefNo",
+      "title": "Update Advice - "
+    },
+    "type": "row"
+  },
+  "decisions": [
+      {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editgmrbasic",
+                "data" : "selected.editgmrbasic"
+            }
+        ],
+        "label" : "Delivery Details",
+        "position" : "leftMenu"
+    }, 
+    {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editpackaging",
+                "data" : "selected.editpackaging"
+            }
+        ],
+        "label" : "Packaging Details",
+        "position" : "leftMenu"
+    }, 
+    {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editassayinglisting",
+                "data" : "selected.editassayinglisting"
+            }
+        ],
+        "label" : "Assay Details",
+        "position" : "leftMenu",
+		"disabled" : true
+    }, 
+    {
+        "objectAction" : "READ",
+        "outcomes" : [ 
+            {
+                "name" : "editdocumentlisting",
+                "data" : "selected.editdocumentlisting"
+            }
+        ],
+        "label" : "Documents",
+        "position" : "leftMenu",
+		"disabled" : true
+    }, 
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [{"name": "supplierlisting" , "cache": true}],
+      "style": {"margin-right": "auto"},
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "editpackaging",
+      "outcomes": [{
+        "data": "output.editpackaging",
+        "name": "editassayinglisting",
+		"operator" : "or",
+        "nextWorkflowTask" : "editdocumentlisting"
+      }],
+      "label": "NEXT",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "editpackaging_esourcing",
+  "labelKey": "EDIT_PACKAGING",
+  "fields": [],
+  "taskId": "editpackaging",
+  "object": "9f254e8f-3f45-4de8-b366-7469c7f2f623"
+}

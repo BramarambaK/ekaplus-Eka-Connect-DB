@@ -1,0 +1,10 @@
+{
+    "_id" : "Elastic_Bulk_Upload_GMRLIST_esourcing",
+    "componentType" : "ElasticSearchBulkTask",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "Elastic_Bulk_Upload_GMRLIST",
+    "object" : "f9ca5056-8ff8-4142-bfe1-725db3871557",
+    "refType" : "app",
+    "objectAction" : "LISTVIEW"
+}

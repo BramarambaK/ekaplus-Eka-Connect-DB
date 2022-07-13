@@ -1,0 +1,14 @@
+{
+    "_id" : "_UPDATE_ASSAYPROCESSOR_esourcing",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "979b3249-72d7-4d01-8cc6-22628ea22e1d"
+    },
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "_UPDATE_ASSAYPROCESSOR_esourcing",
+    "object" : "e3e37b66-f739-4a1b-9f31-90e0d38eba90",
+    "sys__UUID" : "979b3249-72d7-4d01-8cc6-22628ea22e1d"
+}

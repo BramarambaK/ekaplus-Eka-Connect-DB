@@ -1,0 +1,14 @@
+{
+    "_id" : "deliveryItem_list_externalApiHost_property",
+    "type" : "property",
+    "name" : "deliveryItem_externalApiHost",
+    "propertyLevel" : "app",
+    "dataType" : "String",
+    "fieldtype" : "textbox",
+    "length" : "1000",
+    "editSupportedInUI" : true,
+    "label" : "Delivery Item List URL Host",
+    "defaultValue" : "https://esourcing.ekaplus.com",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "description" : "External URL host to fetch delivery item list."
+}

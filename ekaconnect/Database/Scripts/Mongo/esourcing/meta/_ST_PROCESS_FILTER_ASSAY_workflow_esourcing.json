@@ -1,0 +1,14 @@
+{
+  "_id": "_ST_PROCESS_FILTER_ASSAY_esourcing",
+  "componentType": "ProcessTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "processorInfo": {
+    "processorId": "841aae00-623a-46c2-a54c-e311fc9bac3d"
+  },
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "type": "workflow",
+  "taskId": "_ST_PROCESS_FILTER_ASSAY",
+  "object": "720be2ae-f8d4-4903-9910-fdf637dd6dac",
+  "sys__UUID": "396502d2-f046-47f9-9426-db5ce3323746"
+}

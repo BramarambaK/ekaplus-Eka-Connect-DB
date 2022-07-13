@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_CREATE_PACKAGING_SAVE",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "e9fb4ae3-920a-4bbf-9273-c1707e734349"
+    },
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "_ST_CREATE_PACKAGING_SAVE",
+    "object" : "9f254e8f-3f45-4de8-b366-7469c7f2f623"
+}

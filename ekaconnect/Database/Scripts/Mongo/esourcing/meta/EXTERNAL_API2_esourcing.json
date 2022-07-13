@@ -1,0 +1,77 @@
+{
+    "_id" : "EXTERNAL_API2_esourcing",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.eka_ctrm_host}",
+        "path" : "/api/logistic/assayListing",
+        "headers" : {},
+        "method" : "POST",
+        "responseDataKey" : "",
+        "body" : {},
+        "columns" : [ 
+            {
+                "name" : "gmrRefNo",
+                "type" : "VARCHAR",
+                "primary" : "y"
+            }, 
+            {
+                "name" : "supplierReferenceId",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "quality",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "contractDeliveryItem",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "avisedNetWeight",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "weightUnit",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "arrivalDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "wnsDate",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "wetWeight",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "dryWeight",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "moisture",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "latestAssayType",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "supplier",
+                "type" : "VARCHAR"
+            }, 
+            {
+                "name" : "internalGmrRefNo",
+                "type" : "VARCHAR"
+            }
+        ]
+    },
+    "taskId" : "EXTERNAL_API2",
+    "object" : "a786f57f-123c-45cc-b013-fe82d9396929"
+}

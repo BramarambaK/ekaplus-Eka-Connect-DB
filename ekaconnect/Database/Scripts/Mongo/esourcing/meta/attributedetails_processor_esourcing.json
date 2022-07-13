@@ -1,0 +1,11 @@
+{
+  "_id": "attributedetails_processor_esourcing",
+  "name": "attributedetails",
+  "type": "processor",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "snippet": "var pcdiId = req.body.selectedData['pcdiId'];\r\n  var collection = {\r\n    method: 'POST',\r\n    url:\r\n      req.body.propertyList.eka_connect_host +\r\n      '/common/7e484cae-36aa-46dc-b9ae-33c8d246f056/0f0df027-6494-4e4d-bb45-242549783003/getContractInfo',\r\n    headers: {\r\n      'Content-Type': 'application/json',\r\n      Accept: 'application/json',\r\n      username: 'e-bolprpa',\r\n      Authorization: req.headers.authorization,\r\n      'X-TenantID': req.headers['x-tenantid']\r\n    },\r\n    body: {\r\n      pcdiId: pcdiId\r\n    },\r\n    json: true\r\n  };\r\n  function get_collection() {\r\n    return new Promise(function(resolve, reject) {\r\n      console.log('Request - ' + collection.url);\r\n      request(collection, function(err, response, body) {\r\n        console.log('Response - ' + body);\r\n        if (err || body.error) reject(body);\r\n        else {\r\n          console.log('Success');\r\n          resolve(body);\r\n        }\r\n      });\r\n    });\r\n  }\r\n\r\n  get_collection()\r\n    .then(result => {\r\n      res.status(200).send(result);\r\n    })\r\n    .catch(err => {\r\n      res.status(500).send(err);\r\n    });",
+  "sys__UUID": "cb87e934-8d2e-40d0-a316-f635dd2cc173",
+  "sys__createdOn": ISODate("2019-06-26T08:50:01.556Z"),
+  "sys__createdBy": "Bravo"
+}

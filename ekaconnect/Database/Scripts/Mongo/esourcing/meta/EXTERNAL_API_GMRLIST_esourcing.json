@@ -1,0 +1,21 @@
+{
+    "_id" : "EXTERNAL_API_GMRLIST_esourcing",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.gmrlist_externalApiHost}",
+        "path" : "${properties.gmrlist_externalApiPath}",
+        "headers" : {
+            "username" : "e-bolprpa"
+        },
+        "method" : "GET",
+        "responseDataKey" : "data",
+        "body" : {},
+        "columns" : []
+    },
+    "taskId" : "EXTERNAL_API_GMRLIST",
+    "object" : "f9ca5056-8ff8-4142-bfe1-725db3871557"
+}

@@ -1,0 +1,13 @@
+{
+    "_id" : "_bolidenCheckWorkflow_esourcing",
+    "componentType" : "ProcessTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "processorInfo" : {
+        "processorId" : "9c3cb1e4-fe0e-410e-b9b9-f4d2e105ec09"
+    },
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "_UPDATE_BOLIDENCHECKBOX_esourcing",
+    "object" : "e3e37b66-f739-4a1b-9f31-90e0d38eba90"
+}

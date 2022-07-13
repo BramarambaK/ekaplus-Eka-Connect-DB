@@ -1,0 +1,174 @@
+{
+  "componentType": "ExtSystemTask",
+  "objectAction": "CREATE",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "_id": "_EXT_CREATE_GMR_esourcing",
+  "type": "workflow",
+  "apiInfo": {
+    "path": "/collectionmapper/7e484cae-36aa-46dc-b9ae-33c8d246f056/f9ca5056-8ff8-4142-bfe1-725db3871557/addToCollectionV2",
+    "headers": {"X-ObjectAction": "CREATE"},
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+    "host": "${properties.eka_connect_host}",
+    "body": {},
+	"collectionName" : "SAP_GMR_",
+        "isCollectionOps" : "Y",
+        "columns" : [ 
+            {
+                "name" : "SupplierReference",
+                "type" : "String",
+                "collectionCol" : "senderRefNo"
+            }, 
+			{
+                "name" : "gmrRefNo",
+                "type" : "String",
+                "collectionCol" : "gmrRefNo"
+            }, 
+            {
+                "name" : "qualityName",
+                "type" : "String",
+                "collectionCol" : "qualityName"
+            }, 
+            {
+                "name" : "deliveryItemRefNo",
+                "type" : "String",
+                "collectionCol" : "deliveryItemRefNo"
+            }, 
+            {
+                "name" : "advicedNetweight",
+                "type" : "String",
+                "collectionCol" : "quantity"
+            }, 
+            {
+                "name" : "quantityUnit",
+                "type" : "String",
+                "collectionCol" : "quantityUnit"
+            }, 
+            {
+                "name" : "LoadingDate",
+                "type" : "String",
+                "collectionCol" : "shipmentdate"
+            }, 
+            {
+                "name" : "LoadingLocationCountryDisplayName",
+                "type" : "String",
+                "collectionCol" : "loadingCountry"
+            }, 
+            {
+                "name" : "CountryOfOriginDisplayName",
+                "type" : "String",
+                "collectionCol" : "countryOfOrigin"
+            }, 
+            {
+                "name" : "modeOfTransport",
+                "type" : "String",
+                "collectionCol" : "modeOfTransport"
+            }, 
+            {
+                "name" : "ExpectedArrivalDate",
+                "type" : "String",
+                "collectionCol" : "eta"
+            }, 
+            {
+                "name" : "location",
+                "type" : "String",
+                "collectionCol" : "incoLocation_concat"
+            }, 
+            {
+                "name" : "containerNo",
+                "type" : "String",
+                "collectionCol" : "containerNo"
+            }, 
+            {
+                "name" : "containerSize",
+                "type" : "String",
+                "collectionCol" : "containerSize"
+            }, 
+            {
+                "name" : "landingDate",
+                "type" : "String",
+                "collectionCol" : "landingDate"
+            }, 
+            {
+                "name" : "assayDueDate",
+                "type" : "String",
+                "collectionCol" : "assayDueDate"
+            }, 
+            {
+                "name" : "assayRule",
+                "type" : "String",
+                "collectionCol" : "assayRule"
+            }, 
+            {
+                "name" : "bolidenAssayAsFinalDisplay",
+                "type" : "String",
+                "collectionCol" : "bolidenAssayAsFinalDisplay"
+            }, 
+            {
+                "name" : "latestAssayType",
+                "type" : "String",
+                "collectionCol" : "latestAssayType"
+            }, 
+            {
+                "name" : "currentPricingStatus",
+                "type" : "String",
+                "collectionCol" : "currentPricingStatus"
+            }, 
+            {
+                "name" : "earliestPriceFixation",
+                "type" : "String",
+                "collectionCol" : "earliestPriceFixation"
+            }, 
+            {
+                "name" : "markedForUmpireDisplay",
+                "type" : "String",
+                "collectionCol" : "markedForUmpireDisplay"
+            }, 
+            {
+                "name" : "gmrDueDate",
+                "type" : "String",
+                "collectionCol" : "gmrDueDate"
+            }, 
+            {
+                "name" : "latestInvoiceType",
+                "type" : "String",
+                "collectionCol" : "latestInvoiceType"
+            },            
+            {
+                "name" : "invoiceDueDate",
+                "type" : "String",
+                "collectionCol" : "invoiceDueDate"
+            }, 
+            {
+                "name" : "cpName",
+                "type" : "String",
+                "collectionCol" : "cpName"
+            }, 
+            {
+                "name" : "currentDate",
+                "type" : "String",
+                "collectionCol" : "gmrCreatedDate"
+            }, 
+            {
+                "name" : "sys__createdBy",
+                "type" : "String",
+                "collectionCol" : "createdBy"
+            }, 
+            {
+                "name" : "updatedDate",
+                "type" : "String",
+                "collectionCol" : "updatedDate"
+            }, 
+            {
+                "name" : "updatedBy",
+                "type" : "String",
+                "collectionCol" : "updatedBy"
+            }
+			
+        ]
+  },
+  "taskId": "_EXT_CREATE_GMR",
+  "object": "0534be84-2f20-468d-86d7-6117ccd3f566"
+}

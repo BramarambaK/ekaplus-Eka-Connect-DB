@@ -1,0 +1,32 @@
+{
+    "_id" : "EXT_SC_HEALTH_API_esourcing",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "tags" : "healthCheck",
+    "objectAction" : "READ",
+    "version" : "V2",
+    "inputData" : {
+        "type" : "externalApi",
+        "config" : {
+            "path" : "/supplierconnect/healthcheck",
+            "headers" : {
+                "Content-Type" : "application/json",
+                "Accept" : "application/json"
+            },
+            "inputMapping" : {},
+            "method" : "POST",
+            "useInputMapping" : false,
+            "host" : "${properties.eka_connect_host}",
+            "body" : {},
+            "object" : "26f44ce0-67da-11ec-90d6-0242ac120003",
+            "responseDataKey" : "data"
+        }
+    },
+    "decisions" : [],
+    "taskId" : "EXT_SC_HEALTH_API",
+    "object" : "26f44ce0-67da-11ec-90d6-0242ac120003",
+    "sys__UUID" : "c24c6ca7-42fa-400b-9dd8-1bbedfcdc27a"
+}

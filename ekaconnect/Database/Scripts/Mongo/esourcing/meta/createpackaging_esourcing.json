@@ -1,0 +1,122 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Packaging Details",
+  "type": "workflow",
+  "version" : "V2",
+  "layout": {
+    "name": "pack",
+    "menu": true,
+    "header": {
+      "field": "deliveryItemRefNo",
+      "title": "Advice Delivery - "
+    },
+    "type": "row"
+  },
+  "decisions": [
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "creategmrbasic",
+          "data": "selected.creategmrbasic"
+        }
+      ],
+      "label": "Shipping Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "createpackaging",
+          "data": "selected.createpackaging"
+        }
+      ],
+      "label": "Packaging Details",
+      "position": "leftMenu"
+    },
+    {
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "documentlisting",
+          "data": "selected.documentlisting"
+        }
+      ],
+      "label": "Documents",
+      "position": "leftMenu",
+      "disabled": true
+    },
+    {
+      "btnClass": "btn btn-outline-dark",
+      "objectAction": "READ",
+      "outcomes": [
+        {
+          "name": "deliveryItemlisting",
+          "cache": true
+        }
+      ],
+      "style": {
+        "margin-right": "auto"
+      },
+      "label": "CANCEL",
+      "position": "bottom"
+    },
+    {
+      "btnClass": "btn-primary custom-btn",
+      "objectAction": "UPDATE",
+      "labelkey": "REVIEW",
+      "task": "createpackaging",
+      "outcomes": [
+        {
+          "result": {
+            "success": {
+              "message": "GMR basic got created successfully"
+            },
+            "failure": {
+              "message": "Please fix errors in ext"
+            },
+            "successWithWarning": {
+              "message": "Price request got created with some errors"
+            }
+          },
+          "data": "output.createpackaging",
+          "appendMsg": false,
+          "name": "_ST_CREATE_PACKAGING"
+        },
+        {
+                    "result" : {
+                        "success" : {
+                            "message" : "GMR got created successfully"
+                        },
+                        "failure" : {
+                            "message" : "Please fix errors in external task"
+                        },
+                        "successWithWarning" : {
+                            "message" : "Order got created with some errors"
+                        }
+                    },
+                    "data" : "output.createpackaging",
+                    "appendMsg" : true,
+                    "name" : "_EXT_CREATE_GMR"
+                }, 
+                {
+                    "data" : "output._EXT_CREATE_GMR",
+                    "name" : "documentlisting",
+                    "showToaster" : false
+                }
+      ],
+      "label": "SUBMIT",
+      "position": "bottom",
+      "type": "submit"
+    }
+  ],
+  "_id": "createpackaging_esourcing",
+  "labelKey": "CREATE_PACKAGING",
+  "fields": [],
+  "taskId": "createpackaging",
+  "object": "9f254e8f-3f45-4de8-b366-7469c7f2f623"
+}

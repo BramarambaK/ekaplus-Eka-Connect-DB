@@ -1,0 +1,30 @@
+{
+    "_id" : "contact_info_object_esourcing",
+    "name" : "contactinfo_esourcing",
+    "type" : "object",
+    "sys__UUID" : "0bc6b722-cc87-4fa8-b73d-8d6d875cce58",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE"
+    },
+    "fields" : {
+        "Functiion" : {
+            "Functiion" : "Functiion",
+            "labelKey" : "Functiion"
+        },
+        "Contact Information" : {
+            "Contact Information" : "Contact Information",
+            "labelKey" : "Contact Information"
+        },
+        "Contact Information 1" : {
+            "Contact Information 1" : "Contact Information 1",
+            "labelKey" : "Contact Information 1"
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

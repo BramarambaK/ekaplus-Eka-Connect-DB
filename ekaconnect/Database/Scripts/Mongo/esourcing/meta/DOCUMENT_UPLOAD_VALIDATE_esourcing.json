@@ -1,0 +1,10 @@
+{
+    "_id" : "DOCUMENT_UPLOAD_VALIDATE_esourcing",
+    "componentType" : "ValidateTask",
+    "object" : "a2de750a-f462-448b-ab1f-e3ab1be0127d",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "taskId" : "DOCUMENT_UPLOAD_VALIDATE",
+    "type" : "workflow"
+}

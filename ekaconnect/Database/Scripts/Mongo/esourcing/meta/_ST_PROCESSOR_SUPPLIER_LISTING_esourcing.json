@@ -1,0 +1,13 @@
+{
+    "_id" : "_ST_PROCESSOR_SUPPLIER_LISTING_esourcing",
+    "componentType" : "ProcessTask",
+    "objectAction" : "LISTVIEW",
+    "processorInfo" : {
+        "processorId" : "0ac2c195-835b-413e-9e25-864d1273b1da"
+    },
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "_ST_PROCESSOR_SUPPLIER_LISTING",
+    "object" : "f9ca5056-8ff8-4142-bfe1-725db3871557"
+}

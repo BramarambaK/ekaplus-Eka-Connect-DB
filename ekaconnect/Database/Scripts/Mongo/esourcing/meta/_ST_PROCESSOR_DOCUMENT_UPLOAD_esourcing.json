@@ -1,0 +1,11 @@
+{
+  "componentType": "ProcessTask",
+  "objectAction": "READ",
+  "processorInfo": {"processorId": "4bbc37cd-2bd4-4101-9d28-7dfec7a126e0"},
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "_id": "_ST_PROCESSOR_DOCUMENT_UPLOAD_esourcing",
+  "type": "workflow",
+  "taskId": "_ST_PROCESSOR_DOCUMENT_UPLOAD",
+  "object": "0534be84-2f20-468d-86d7-6117ccd3f566"
+}

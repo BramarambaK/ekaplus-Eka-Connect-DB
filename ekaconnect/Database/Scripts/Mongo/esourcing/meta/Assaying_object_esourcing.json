@@ -1,0 +1,65 @@
+{
+    "_id" : "assaying_object_esourcing",
+    "type" : "object",
+    "name" : "Assaying_esourcing",
+    "label" : "ASSAYING",
+    "sys__UUID" : "e3e37b66-f739-4a1b-9f31-90e0d38eba90",
+    "label_key" : "",
+    "tenantID" : "",
+    "version" : "2",
+    "createdOn" : "Test",
+    "createy" : "Test",
+    "lastModifiedOn" : "Test",
+    "lastModifiey" : "Test",
+    "objectAction" : {
+        "CREATE" : "POST",
+        "UPDATE" : "PUT",
+        "READ" : "GET",
+        "LISTVIEW" : "GET",
+        "DELETE" : "DELETE",
+        "APPROVE" : "PUT",
+        "REJECT" : "PUT",
+        "SWITCH" : "SWITCH"
+    },
+    "versionHistory" : [ 
+        {
+            "version" : "1",
+            "fields" : "[{}]"
+        }
+    ],
+    "translatableKeys" : [],
+    "fields" : {
+        "Element" : {
+            "Element" : "Element",
+            "labelKey" : "Element",
+            "type" : "hidden",
+            "dataType" : "String",
+            "serviceKey" : "Element",
+            "isRequired" : false
+        },
+        "Type" : {
+            "Type" : "Type",
+            "labelKey" : "Type",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "AssayRule" : {
+            "AssayRule" : "Assay Rule",
+            "labelKey" : "AssayRule",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        },
+        "EstimatedValue" : {
+            "EstimatedValue" : "Provisional Assay",
+            "labelKey" : "EstimatedValue",
+            "type" : "hidden",
+            "dataType" : "String",
+            "isRequired" : false
+        }
+    },
+    "layout" : {
+        "fields" : []
+    }
+}

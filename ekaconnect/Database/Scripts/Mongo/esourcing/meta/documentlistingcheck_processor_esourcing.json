@@ -1,0 +1,11 @@
+{
+    "_id" : "document_uploaded_check_esourcing",
+    "name" : "documentListingCheck",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "snippet" : "\r\n    var internalRefNo = req.body.internalGMRRefNo;\r\n    var platform = {\r\n      method: 'POST',\r\n      url: req.body.propertyList.eka_connect_host + '\/file/list/v2',\r\n      headers: {\r\n        'Content-Type': 'application\/json',\r\n        Authorization: req.headers.authorization,\r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n      body: {\r\n        otherAttributes: {\r\n          internalRefNo: internalRefNo\r\n        }\r\n      },\r\n      json: true\r\n    };\r\n    function get_platform() {\r\n      return new Promise(function(resolve, reject) {\r\n        console.log('Request - ' + platform.url);\r\n        console.log('Payload -' + JSON.stringify(platform));\r\n        request(platform, function(err, response, body) {\r\n          console.log('Request Body - ' + JSON.stringify(body));\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n\r\n    get_platform()\r\n      .then(function(result) {\r\n        if (result.length === 0) {\r\n          return res.status(500).send('Without document the GMR cannot be processed.');\r\n        } else res.status(200).send(result);\r\n      })\r\n      .catch(err => {\r\n        console.log('Error Executing Processor -' + err);\r\n        res.status(500).send(err);\r\n      });\r\n ",
+    "sys__UUID" : "4bbc37cd-2bd4-4101-9d28-7dfec7a126e0",
+    "sys__createdOn" : ISODate("2019-06-24T13:35:31.281Z"),
+    "sys__createdBy" : "ekauser@ekaplus.com"
+}

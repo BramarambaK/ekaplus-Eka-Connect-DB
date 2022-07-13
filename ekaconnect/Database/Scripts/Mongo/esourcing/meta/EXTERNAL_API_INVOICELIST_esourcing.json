@@ -1,0 +1,21 @@
+{
+    "_id" : "EXTERNAL_API_INVOICELIST_esourcing",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "CREATE",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "apiInfo" : {
+        "host" : "${properties.invoices_externalApiHost}",
+        "path" : "${properties.invoices_externalApiPath}",
+        "headers" : {
+            "username" : "e-bolprpa"
+        },
+        "method" : "GET",
+        "responseDataKey" : "data",
+        "body" : {},
+        "columns" : []
+    },
+    "taskId" : "EXTERNAL_API_INVOICELIST",
+    "object" : "80639df1-3bdf-48e0-8dc3-e93ac58fff93"
+}

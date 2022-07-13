@@ -1,0 +1,27 @@
+{
+    "_id" : "editgmr_composite_esourcing",
+    "componentType" : "UserTask",
+    "objectAction" : "READ",
+    "viewAction" : "composite",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "label" : "Edit GMR",
+    "workflows" : [ 
+        {
+            "name" : "deliverydetails_tab"
+        }, 
+        {
+            "name" : "assaydetails_tab"
+        }
+    ],
+    "type" : "workflow",
+    "layout" : {
+        "name" : "customv2",
+        "useQueryParams" : true,
+        "dropdownDecisions" : false,
+        "preserveSelectedData" : true
+    },
+    "decisions" : [],
+    "taskId" : "editgmr_composite",
+    "object" : "0534be84-2f20-468d-86d7-6117ccd3f566"
+}

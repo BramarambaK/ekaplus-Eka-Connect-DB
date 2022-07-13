@@ -1,0 +1,26 @@
+{
+    "_id" : "elastic_pushgmrlist_esourcing",
+    "version" : "V2",
+    "componentType" : "ChainedSystemTask",
+    "object" : "f9ca5056-8ff8-4142-bfe1-725db3871557",
+    "objectAction" : "LISTVIEW",
+    "taskId" : "elastic_pushgmrlist",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+	"tags" : "notifyDataChange",    
+    "chainedTasks" : [         
+        {
+            "name" : "_ST_PROCESSOR_SUPPLIER_LISTING",
+            "data" : "output.elastic_pushgmrlist",
+            "returnData" : "Y"
+        }, 
+        {
+            "name" : "Elastic_Bulk_Upload_GMRLIST",
+            "data" : "output._ST_PROCESSOR_SUPPLIER_LISTING",
+            "config" : {
+                "primaryKeyColumn" : "gmrRefNo"
+            }
+        }
+    ]
+}

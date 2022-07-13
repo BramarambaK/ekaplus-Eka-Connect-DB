@@ -1,0 +1,47 @@
+{
+    "_id" : "contact_info_workflow_esourcing",
+    "componentType" : "UserTask",
+    "objectAction" : "LISTVIEW",
+    "getDataFromExternalAPI" : false,
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "label" : "Contact Information",
+    "type" : "workflow",
+    "rows" : "100",
+    "layout" : {
+        "name" : "list",
+        "cache" : false,
+        "options" : {},
+		"footer": false,
+        "theme" : "theme-no-border-white",
+        "toggleheader" : true,
+        "pagination" : false,
+        "limitHeight" : true
+    },
+    "theme" : "theme-grid-light",
+    "decisions" : [],
+    "labelKey" : "contactinfo",
+    "fields" : [ 
+        {
+            "filter" : false,
+            "edit" : false,
+            "label" : "Contact Information",
+            "sort" : true,
+            "width" : "30%",
+            "key" : "Contact Information"
+        }, 
+        {
+            "filter" : false,
+            "edit" : false,
+            "label" : "Contact Information 1",
+            "sort" : true,
+            "width" : "70%",
+            "key" : "Contact Information 1"
+        }
+    ],
+    "processorInfo" : {
+        "processorId" : "547a3e12-8f9a-4e81-84a6-e52b713884ee"
+    },
+    "taskId" : "contactinformationlisting",
+    "object" : "0bc6b722-cc87-4fa8-b73d-8d6d875cce58"
+}

@@ -1,0 +1,10 @@
+{
+    "_id" : "_ST_DELETE_DOCUMENT_esourcing",
+    "componentType" : "SystemTask",
+    "objectAction" : "DELETE",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "taskId" : "_ST_DELETE_DOCUMENT",
+    "object" : "a2de750a-f462-448b-ab1f-e3ab1be0127d"
+}

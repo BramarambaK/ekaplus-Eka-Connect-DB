@@ -1,0 +1,161 @@
+{
+  "_id": "deliveryItemlisting_esourcing_V2",
+  "componentType": "UserTask",
+  "version": "V2",
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.deliveryItemlisting",
+          "name": "creategmrbasic"
+        }
+      ],
+      "position": "top",
+      "label": "Create ASN",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.deliveryItemlisting",
+          "popupClass": "edit-modal",
+          "name": "attributedetails"
+        }
+      ]
+    }
+  ],
+  "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "PO/Contract No",
+            "sort" : true,
+            "key" : "deliveryItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Item",
+            "sort" : true,
+            "key" : "qualityName"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Total Quantity",
+            "sort" : true,
+            "sortColumn" : "openQtySubStr",
+            "key" : "openQty",
+            "align" : "right",
+            "sortExp" : "return '${value}'.split(' ')[0]"
+        }, 
+        {
+            "filter" : false,
+            "task" : "custom-link",
+            "label" : "Item Description",
+            "sort" : true,
+            "category" : "link",
+            "key" : "attributes"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Ordered Date",
+            "sort" : true,
+            "key" : "fromDate",
+            "sourceDateFormat" : "DD-MMM-YYYY",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Required Date",
+            "sort" : true,
+            "key" : "toDate",
+            "sourceDateFormat" : "DD-MMM-YYYY",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Facility Location",
+            "sort" : true,
+            "key" : "delLocation"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Supplier",
+            "sort" : true,
+            "key" : "cpName"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Currency",
+            "sort" : true,
+            "key" : "payInCurrency"
+        }
+    ],
+  "inputData": {
+    "type": "SystemTask",
+    "queryParamMapping": {
+      "from": "start",
+      "size": "limit"
+    },
+    "config": {
+      "id": "crawler_chainedDeliveryItemList",
+      "ttl": 0,
+      "isAsynchCallRequired": "Y",
+      "isElasticCumSystemTask": true
+    }
+  },
+  "listingDataOptions": {
+    "filterOptions": {
+      "type": "elasticSearch"
+    }
+  },
+  "label": "Purchase Order - Select Purchase Order",
+  "labelKey": "DELIVER_IEM_LISTING",
+  "layout": {
+    "cache": false,
+    "selection": "row",
+    "lazyLoading": true,
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "serverSearch": true,
+      "columnFilter": true,
+      "serverFilter": true,
+      "sortFilter": true,
+      "reset": true,
+      "export": true,
+      "customization": true,
+      "showFilterHeader": true
+    },
+    "optionsOrder": [
+      "outcome",
+      "customization",
+      "search",
+      "reload",
+      "reset",
+      "columnFilter",
+      "filter",
+      "export"
+    ],
+    "theme": "theme-grid-white",
+    "disabledDecision": true,
+    "showCheckbox": true
+  },
+  "object": "0f0df027-6494-4e4d-bb45-242549783003",
+  "objectAction": "LISTVIEW",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "taskId": "deliveryItemlisting",
+  "type": "workflow",
+  "sys__UUID": "1758dda8-67cd-11ec-90d6-0242ac120003"
+}

@@ -1,0 +1,137 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Contract Items Open for Advice",
+  "type": "workflow",
+  "apiInfo": {
+    "responseDataKey": "data",
+    "path": "/collection/fetchDeliveryItems",
+    "headers": {
+      "username": "e-bolprpa"
+    },
+    "method": "GET",
+    "host": "${eka_utility_host}"
+  },
+  "layout": {
+    "cache": false,
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "row",
+      "outcomes": [
+        {
+          "data": "selected.deliveryItemlisting",
+          "name": "creategmrbasic"
+        }
+      ],
+      "label": "Create ASN",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.deliveryItemlisting",
+          "popupClass": "edit-modal",
+          "name": "attributedetails"
+        }
+      ]
+    }
+  ],
+  "_id": "deliveryItemlisting_esourcing_Mobile",
+  "labelKey": "DELIVER_IEM_LISTING",
+  "fields": [
+    {
+      "filter": false,
+      "edit": false,
+      "label": "Contract Delivery Item",
+      "sort": true,
+      "key": "deliveryItemRefNo"
+    },
+    {
+      "filter": true,
+      "edit": false,
+      "label": "Quality",
+      "sort": true,
+      "key": "qualityName",
+      "placement":"Row1"
+    },
+    {
+      "filter": true,
+      "label": "Open Qty",
+      "sort": true,
+      "key": "openQty"
+    },
+    {
+      "filter": true,
+      "label": "Executable Qty",
+      "sort": true,
+      "key": "executableQty"
+    },
+    {
+      "filter": false,
+      "task": "custom-link",
+      "label": "Attributes",
+      "sort": true,
+      "category": "link",
+      "key": "attributes"
+    },
+    {
+      "filter": true,
+      "label": "From Date",
+      "sort": true,
+      "key": "fromDate",
+      "sourceDateFormat": "MMM YYYY",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "label": "To Date",
+      "sort": true,
+      "key": "toDate",
+      "sourceDateFormat": "MMM YYYY",
+      "dateformat": "DD-MM-YYYY"
+    },
+    {
+      "filter": true,
+      "label": "Location",
+      "sort": true,
+      "key": "delLocation"
+    },
+    {
+      "filter": true,
+      "label": "Supplier Name",
+      "sort": true,
+      "key": "cpName"
+    },
+    {
+      "filter": true,
+      "label": "Currency",
+      "sort": true,
+      "key": "payInCurrency"
+    }
+  ],
+  "taskId": "deliveryItemlistingMobile",
+  "object": "0f0df027-6494-4e4d-bb45-242549783003",
+  "deviceType": "mobile"
+}

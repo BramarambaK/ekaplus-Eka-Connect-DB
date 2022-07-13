@@ -1,0 +1,75 @@
+{
+    "_id" : "app_esourcing",
+    "title" : "Supplier 360",
+    "name" : "esourcing",
+    "tenantID" : "",
+    "type" : "app",
+    "sys__UUID" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "platform_id" : "36",
+    "appType" : "CONNECT",
+    "config" : {
+        "header" : {
+            "brand" : {
+                "src" : "assets/img/brand/eka-login-logo.png",
+                "width" : 60.0,
+                "height" : 20.0,
+                "alt" : "Eka"
+            },           
+            "sidebarToggler" : true,
+            "asideMenuToggler" : false
+        },
+        "sidebar" : {
+            "fixed" : true,
+            "display" : false
+        },
+        "navbar" : [ 
+            {
+                "apiMenuData" : [ 
+                    {
+                        "menu" : [  
+                            {
+                                "handler" : "/app/esourcing/news",
+                                "text" : "News",
+                                "iconCls" : "app-menu-icon"
+                            },
+							{
+                                "handler" : "/app/esourcing/supplierlisting",
+                                "text" : "Deliveries",
+                                "iconCls" : "app-menu-icon"
+                            }, 
+							{
+                                "handler" : "/app/esourcing/invoicelisting",
+                                "text" : "Invoices",
+                                "iconCls" : "app-menu-icon"
+                            },							
+							{
+                                "handler" : "/app/esourcing/deliveryWeightsListing/list",
+                                "text" : "Delivery Weights",
+                                "iconCls" : "app-menu-icon"
+                            },
+                            {
+                                "handler" : "/app/esourcing/deliveryItemlisting/list",
+                                "text" : "Contract Items Open for Advice",
+                                "iconCls" : "app-menu-icon"
+                            },  							
+			    {
+				"handler" : "/app/esourcing/generaldocumentlisting/list",
+				"text" : "General Documents & Templates",
+				"iconCls" : "templates-icon"
+			     },
+				 {
+					"handler" : "/app/esourcing/contactinformationlisting/list",
+					"text" : "Contact Information",
+					"iconCls" : "contact-icon"
+                 }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "aside" : {
+            "fixed" : true,
+            "display" : false
+        }
+    }
+}

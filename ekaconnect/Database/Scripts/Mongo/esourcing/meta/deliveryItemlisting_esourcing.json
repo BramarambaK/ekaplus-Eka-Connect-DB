@@ -1,0 +1,135 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "getDataFromExternalAPI": true,
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Purchase Order - Select Purchase Order",
+  "type": "workflow",
+  "apiInfo": {
+    "responseDataKey": "data",
+    "path": "/collection/fetchDeliveryItems",
+    "headers": {
+      "username": "e-bolprpa"
+    },
+    "method": "GET",
+    "host": "${properties.eka_utility_host}"
+  },
+  "layout": {
+    "cache": false,
+    "selection": "row",
+    "name": "list",
+    "options": {
+      "filter": true,
+      "lastUpdated": false,
+      "search": true,
+      "reload": true,
+      "columnFilter": true,
+      "reset": true,
+      "export": true
+    },
+    "theme": "theme-grid-white",
+    "dropdownDecisions": true,
+    "showCheckbox": true
+  },
+  "decisions": [
+    {
+      "btnClass": "btn-primary",
+      "objectAction": "CREATE",
+      "labelkey": "CREATE_GMR_BASIC",
+      "selection": "global",
+      "outcomes": [
+        {
+          "data": "selected.deliveryItemlisting",
+          "name": "creategmrbasic"
+        }
+      ],
+      "position": "top",
+      "label": "Create ASN",
+      "iconClass": "createicon"
+    },
+    {
+      "objectAction": "READ",
+      "selection": "custom-link",
+      "outcomes": [
+        {
+          "displayType": "popup",
+          "data": "selected.deliveryItemlisting",
+          "popupClass": "edit-modal",
+          "name": "attributedetails"
+        }
+      ]
+    }
+  ],
+  "_id": "deliveryItemlisting_esourcing",
+  "labelKey": "DELIVER_IEM_LISTING",
+  "fields" : [ 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "PO/Contract No",
+            "sort" : true,
+            "key" : "deliveryItemRefNo"
+        }, 
+        {
+            "filter" : true,
+            "edit" : false,
+            "label" : "Item",
+            "sort" : true,
+            "key" : "qualityName"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Total Quantity",
+            "sort" : true,
+            "sortColumn" : "openQtySubStr",
+            "key" : "openQty",
+            "align" : "right",
+            "sortExp" : "return '${value}'.split(' ')[0]"
+        }, 
+        {
+            "filter" : false,
+            "task" : "custom-link",
+            "label" : "Item Description",
+            "sort" : true,
+            "category" : "link",
+            "key" : "attributes"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Ordered Date",
+            "sort" : true,
+            "key" : "fromDate",
+            "sourceDateFormat" : "DD-MMM-YYYY",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Required Date",
+            "sort" : true,
+            "key" : "toDate",
+            "sourceDateFormat" : "DD-MMM-YYYY",
+            "dateformat" : "DD-MMM-YYYY"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Facility Location",
+            "sort" : true,
+            "key" : "delLocation"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Supplier",
+            "sort" : true,
+            "key" : "cpName"
+        }, 
+        {
+            "filter" : true,
+            "label" : "Currency",
+            "sort" : true,
+            "key" : "payInCurrency"
+        }
+    ],
+  "taskId": "deliveryItemlistingV1",
+  "object": "0f0df027-6494-4e4d-bb45-242549783003"
+}

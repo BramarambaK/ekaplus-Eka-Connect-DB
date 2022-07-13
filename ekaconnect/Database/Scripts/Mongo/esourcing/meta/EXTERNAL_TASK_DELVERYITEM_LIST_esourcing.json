@@ -1,0 +1,21 @@
+{
+    "_id" : "EXTERNAL_TASK_DELVERYITEM_LIST_esourcing",
+    "componentType" : "ExtSystemTask",
+    "objectAction" : "LISTVIEW",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "type" : "workflow",
+    "version" : "V2",
+    "apiInfo" : {
+        "host" : "${properties.deliveryItem_externalApiHost}",
+        "path" : "${properties.deliveryItem_externalApiPath}",
+        "headers" : {
+            "username" : "e-bolprpa"
+        },
+        "method" : "GET",        
+        "body" : {},
+        "columns" : []
+    },
+    "taskId" : "EXTERNAL_TASK_DELVERYITEM_LIST",
+    "object" : "0f0df027-6494-4e4d-bb45-242549783003"
+}

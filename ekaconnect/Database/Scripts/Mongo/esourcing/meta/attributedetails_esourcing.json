@@ -1,0 +1,72 @@
+{
+  "componentType": "UserTask",
+  "objectAction": "LISTVIEW",
+  "getDataFromExternalAPI": false,
+  "processorInfo": {"processorId": "cb87e934-8d2e-40d0-a316-f635dd2cc173"},
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "label": "Attributes",
+  "type": "workflow",
+  "layout": {
+    "topLine": {"display": true},
+    "name": "detailspopup",
+    "sys__UUID": "7e484cae-36aa-46dc-b9ae-33c8d246f056"
+  },
+  "decisions": [
+    {
+      "btnClass": "btn btn-outline-dark custom-btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "deliveryItemlisting", "cache": true}],
+      "style": {"margin-right": "auto"},
+      "label": "Close",
+      "position": "bottom",
+      "type": "close"
+    },
+    {
+      "btnClass": "close-icon btn",
+      "objectAction": "READ",
+      "outcomes": [{"name": "deliveryItemlisting", "cache": true}],
+      "position": "top",
+      "type": "close"
+    }
+  ],
+  "_id": "attributedetails_esourcing",
+  "labelKey": "DETAILS_DERIVATIVE_ORDER",
+  "fields": [
+    {
+      "placement": "navbar",
+      "key": "Chemical"
+    },
+    {
+      "placement": "navbar",
+      "key": "Physical"
+    },
+    {
+      "label": "Element Name",
+      "placement": "ptableChemical",
+      "key": "elementName"
+    },
+    {
+      "label": "Min Value",
+      "placement": "ptableChemical",
+      "key": "minValue"
+    },
+    {
+      "label": "Max Value",
+      "placement": "ptableChemical",
+      "key": "maxValue"
+    },
+    {
+      "label": "Attribute Name",
+      "placement": "ptablePhysical",
+      "key": "attributeName"
+    },
+    {
+      "label": "Attribute Value",
+      "placement": "ptablePhysical",
+      "key": "attributeValue"
+    }
+  ],
+  "taskId": "attributedetails",
+  "object": "0f0df027-6494-4e4d-bb45-242549783003"
+}

@@ -1,0 +1,11 @@
+{
+  "componentType": "client",
+  "objectAction": "READ",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "action": "downloadLink",
+  "_id": "documentdownload_esourcing",
+  "type": "workflow",
+  "taskId": "documentdownload",
+  "object": "386e7d80-25ab-4ca0-bdb6-a01e3cd9345c"
+}

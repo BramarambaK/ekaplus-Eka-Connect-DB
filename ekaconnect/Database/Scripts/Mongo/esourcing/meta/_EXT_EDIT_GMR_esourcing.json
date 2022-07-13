@@ -1,0 +1,18 @@
+{
+  "componentType": "ExtSystemTask",
+  "objectAction": "UPDATE",
+  "refType": "app",
+  "refTypeId": "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+  "_id": "_EXT_EDIT_GMR_esourcing",
+  "type": "workflow",
+  "apiInfo": {
+    "path": "/api/logistic/shipment",
+    "inputMapping": {},
+    "method": "POST",
+    "useInputMapping": false,
+	"host": "${properties.eka_ctrm_host}",
+    "body": {}
+  },
+  "taskId": "_EXT_EDIT_GMR",
+  "object": "0534be84-2f20-468d-86d7-6117ccd3f566"
+}

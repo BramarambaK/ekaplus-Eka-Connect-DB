@@ -1,0 +1,11 @@
+{
+    "_id" : "assayinglisting_processor_esourcing",
+    "name" : "assayinglisting",
+    "type" : "processor",
+    "refType" : "app",
+    "refTypeId" : "7e484cae-36aa-46dc-b9ae-33c8d246f056",
+    "snippet" : "if (req.body.selectedData.selected['createpackaging']) {\r\n    function get_assaylist() {\r\n      return new Promise(function(resolve, reject) {\r\n        console.log('Request - ' + assayList.url);\r\n        request(assayList, function(err, response, body) {\r\n          console.log('Response - ' + body);\r\n          if (err || body.error) reject(body);\r\n          else {\r\n            console.log('Success');\r\n            resolve(body);\r\n          }\r\n        });\r\n      });\r\n    }\r\n\r\n    var assayList = {\r\n      method: 'POST',\r\n      url: req.body.propertyList.eka_supplierconnect_host + '/collection/assayList',\r\n      headers: {\r\n        'Content-Type': 'application/json',\r\n        Accept: 'application/json',\r\n        Authorization: req.headers.authorization, \r\n        'X-TenantID': req.headers['x-tenantid']\r\n      },\r\n       body: { \r\n         \"pcdiId\": req.body.selectedData.selected['createpackaging'].pcdiId, \"qualityId\": req.body.selectedData.selected['createpackaging'].Quality \r\n       },\r\n      json: true\r\n    };\r\n\r\n    get_assaylist().then(function (result) {\r\n      res.status(200).send(result);\r\n    });\r\n  }",
+    "sys__UUID" : "5393d0ee-67cc-11ec-90d6-0242ac120003",
+    "sys__createdOn" : ISODate("2019-06-24T13:35:31.281Z"),
+    "sys__createdBy" : "ekauser@ekaplus.com"
+}
